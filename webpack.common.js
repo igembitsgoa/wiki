@@ -8,10 +8,14 @@ module.exports = {
     },
     devtool: "none",                            // avoid eval statements
     plugins: [new HTMLWebpackPlugin({
-        template: "./src/templates/template.html"
+        template: "./src/index.pug"
     })],
     module: {
         rules: [
+            {
+                test: /\.pug$/i,
+                use: ['pug-loader']
+            },
             {
                 test: /\.html$/i,
                 use: ["html-loader"]
