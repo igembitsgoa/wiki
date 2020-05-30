@@ -1,0 +1,52 @@
+- var logo = "iGEM BITS Goa";
+- 
+  var navItems = [
+    {
+      'title': 'Overview', 
+      'items': ['Description', 'Design', 'Results']
+    },
+    {
+      'title': 'Project',
+      'items': ['Experiments', 'Notebook', 'Contribution', 'Demonstrate', 'Improve']
+    },
+    {
+      'title': 'Parts',
+      'items': ['Overview', 'Basic Parts', 'Composite Parts', 'Parts Collection']
+    },
+    {
+      'title': 'Human Practices',
+      'items': ['Overview', 'Outreach and Engagement']
+    },
+    {
+      'title': 'Team',
+      'items': ['Team Members', 'Attributions', 'Collaborations']
+    },
+    {
+      'title': 'Awards',
+      'items': ['Entrepreneurship', 'Hardware', 'Measurement', 'Model', 'Plant', 'Software']
+    }
+  ]
+
+nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-dark
+
+  .ml-4
+    a.navbar-brand.d-lg-inline-block.text-white(href="#")= logo
+
+  .mr-3.mb-2
+    #menuArea
+      input#menuToggle(type='checkbox')
+      label.menuOpen(for='menuToggle')
+        .open
+      .menu.menuEffects
+        label.mr-3(for='menuToggle')
+        .container.w-100.h-100
+          .menuContent.d-flex.flex-column.justify-content-center.h-100
+            .row.w-100.mb-4
+              each header in navItems
+                .col
+                  ul 
+                    li.navHead= header.title
+                    hr
+                    each item in header.items
+                      li
+                        a(href='/' + item)= item
