@@ -1,4 +1,4 @@
-- var logo = "iGEM BITSGoa ";
+- var logoText = "iGEM BITS Goa ";
 - 
   var navItems = [
     {
@@ -30,17 +30,17 @@
 nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-dark
 
   .ml-4
-    a.navbar-brand.d-lg-inline-block.text-white(href="#")= logo
+    a.navbar-brand.d-lg-inline-block.text-white(href="#")= logoText
 
   .mr-3.mb-2
-    #menuArea
+    #fullscreenMenuWrapper
       input#menuToggle(type='checkbox')
-      label.menuOpen(for='menuToggle')
-        .open
-      .menu.menuEffects
+      label(for='menuToggle')
+        #menuSwitch
+      #fullscreenMenu
         label.mr-3(for='menuToggle')
         .container.w-100.h-100
-          .menuContent.d-flex.flex-column.justify-content-center.h-100
+          #menuContent.d-flex.flex-column.justify-content-center.h-100
             .row.w-100.mb-4
               each header in navItems
                 .col
