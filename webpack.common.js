@@ -28,7 +28,7 @@ module.exports = {
                         name: "[path][name].[ext]",
                         context: path.resolve(__dirname, "src/"),
                         outputPath: ".",
-                        publicPath: "../",
+                        publicPath: ".",
                         useRelativePaths: true,
                     }
                 }
