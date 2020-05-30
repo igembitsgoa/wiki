@@ -1,2 +1,15 @@
-header
-    
+header {
+  background: 
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    /* bottom, image */ 
+    url(../assets/img/josh-withers-lZ4xZZuk8iA-unsplash.tiny.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
