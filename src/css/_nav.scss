@@ -5,12 +5,12 @@
 .navbar-brand {
   font-size: 2.25rem !important;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
   z-index: 200;
 
   span {
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
@@ -77,11 +77,14 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: #4abf66;
   z-index: 100;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
 
   label {
     width: 25px;
@@ -171,7 +174,8 @@
       font-family: "Lato", sans-serif;
       font-weight: 900;
       font-size: 3.5vmin;
-      color: #2a2f2f;
+      // color: #2a2f2f;
+      background-color: #4abf66;
     }
 
     ~ hr {
