@@ -4,9 +4,10 @@
       'title': 'Overview', 
       'items': ['Description', 'Design', 'Results']
     },
+    // removed Demonstrate for aesthetics for now
     {
       'title': 'Project',
-      'items': ['Experiments', 'Notebook', 'Contribution', 'Demonstrate', 'Improve']
+      'items': ['Experiments', 'Notebook', 'Contribution', 'Improve']
     },
     {
       'title': 'Parts',
@@ -45,11 +46,11 @@ nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none
           #menuContent.d-flex.flex-column.justify-content-center.h-100
             .row.w-100.mb-4
               each header in navItems
-                .col-12.col-md-4.col-sm-6.pt-4
+                .col-12.col-md-4.col-sm-6.py-3
                   ul 
                     li
                       a(href='#').navHead= header.title
                     hr
                     each item in header.items
-                      li
+                      li.py-1
                         a(href='/' + item)= item

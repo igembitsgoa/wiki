@@ -81,10 +81,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 
   label {
     width: 25px;
@@ -152,6 +149,10 @@
  * Fullscreen Menu Items
 **/
 
+// $red: #F37272;
+$green: #4abf66;
+$whitey: #f0f0f0;
+
 #menuContent {
   position: relative;
   text-align: center;
@@ -164,9 +165,51 @@
       font-weight: 500;
       font-size: 2.5vmin;
       color: white;
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 8px;
+    }
 
-      &:hover {
-        text-decoration: none;
+    a:not(.navHead) {
+      // from https://codepen.io/devilishalchemist/pen/ZYLZay
+
+      $duration: 0.2s;
+      $distance: 8px;
+      $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $green;
+      }
+      &:before {
+        opacity: 0;
+        transform: translateY(-$distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+      }
+      &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:hover,
+      &:focus {
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
       }
     }
 
@@ -175,14 +218,15 @@
       font-weight: 900;
       font-size: 3.5vmin;
       // color: #2a2f2f;
-      background-color: #4abf66;
+      // background-color: #4abf66;
+      color: $whitey;
     }
 
     ~ hr {
       width: 60%;
       height: 1px;
       margin-top: 0.5rem;
-      border-color: black;
+      border-color: $green;
     }
   }
 }
