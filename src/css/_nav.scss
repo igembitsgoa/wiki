@@ -4,10 +4,14 @@
 
 .navbar-brand {
   font-size: 2.25rem !important;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   position: relative;
   z-index: 200;
+
+  span {
+    font-weight: 700;
+  }
 }
 
 /**
@@ -69,6 +73,7 @@
 #fullscreenMenu {
   position: fixed;
   width: 100vw;
+  height: stretch;
   height: 100vh;
   top: 0;
   left: 0;
@@ -117,26 +122,26 @@
 #menuToggle:checked ~ label {
   #menuSwitch {
     background-color: transparent;
-  }
 
-  #menuSwitch:before {
-    content: "";
-    background-color: white;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 200;
-  }
+    &:before {
+      content: "";
+      background-color: white;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 200;
+    }
 
-  #menuSwitch:after {
-    content: "";
-    background-color: white;
-    transform: rotate(-45deg);
-    position: relative;
-    top: 0px;
-    right: 0;
-    z-index: 200;
+    &:after {
+      content: "";
+      background-color: white;
+      transform: rotate(-45deg);
+      position: relative;
+      top: 0px;
+      right: 0;
+      z-index: 200;
+    }
   }
 }
 
@@ -144,37 +149,58 @@
  * Fullscreen Menu Items
 **/
 
-.navHead {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-size: 2rem;
-  color: #2a2f2f;
-  cursor: default;
-}
-
-.navHead ~ hr {
-  width: 60%;
-  height: 1px;
-  margin-top: 0.5rem;
-  border-color: black;
-}
-
 #menuContent {
   position: relative;
   text-align: center;
-  
+
   li {
     padding-bottom: 5px;
-    
+
     a {
       font-family: "Lato", sans-serif;
       font-weight: 500;
-      font-size: 1.5rem;
+      font-size: 2.5vmin;
       color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
-    
-    a:hover {
-      text-decoration: none;
+
+    a.navHead {
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+      font-size: 3.5vmin;
+      color: #2a2f2f;
+    }
+
+    ~ hr {
+      width: 60%;
+      height: 1px;
+      margin-top: 0.5rem;
+      border-color: black;
+    }
+  }
+}
+
+@include respond-below(md) {
+  #menuContent li {
+    .navHead {
+      font-size: 2.7vmax !important;
+    }
+    a {
+      font-size: 2.2vmax;
+    }
+  }
+}
+
+@include respond-below(xs) {
+  #menuContent li {
+    a:not(.navHead) {
+      display: none;
+    }
+    ~ hr {
+      width: 25%;
     }
   }
 }

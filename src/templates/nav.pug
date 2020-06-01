@@ -1,4 +1,3 @@
-- var logoText = "iGEM BITS Goa ";
 - 
   var navItems = [
     {
@@ -13,24 +12,27 @@
       'title': 'Parts',
       'items': ['Overview', 'Basic Parts', 'Composite Parts', 'Parts Collection']
     },
+    // Outreach and Engagement
     {
       'title': 'Human Practices',
-      'items': ['Overview', 'Outreach and Engagement']
+      'items': ['Overview', 'Outreach']
     },
     {
       'title': 'Team',
       'items': ['Team Members', 'Attributions', 'Collaborations']
     },
+    // removed Hardware and Measurement for aesthetics for now
     {
       'title': 'Awards',
-      'items': ['Entrepreneurship', 'Hardware', 'Measurement', 'Model', 'Plant', 'Software']
+      'items': ['Entrepreneurship', 'Model', 'Plant', 'Software']
     }
   ]
 
 nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none
 
   .ml-4
-    a.navbar-brand.d-lg-inline-block.text-white(href="#")= logoText
+    a.navbar-brand.d-lg-inline-block.text-white(href="#") iGEM 
+      span BITS Goa
 
   .mr-3.mb-2
     #fullscreenMenuWrapper
@@ -43,9 +45,10 @@ nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none
           #menuContent.d-flex.flex-column.justify-content-center.h-100
             .row.w-100.mb-4
               each header in navItems
-                .col
+                .col-12.col-md-4.col-sm-6
                   ul 
-                    li.navHead= header.title
+                    li
+                      a(href='#').navHead= header.title
                     hr
                     each item in header.items
                       li
