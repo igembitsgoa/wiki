@@ -1,15 +1,28 @@
 header {
   background: 
-    /* top, transparent black, faked with gradient */ 
-    linear-gradient(
+    /* top, transparent black, faked with gradient */ linear-gradient(
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    /* bottom, image */ 
-    url(../assets/img/josh-withers-lZ4xZZuk8iA-unsplash.tiny.jpg);
+    /* bottom, image */
+      url(../assets/img/josh-withers-lZ4xZZuk8iA-unsplash.tiny.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+
+  h1 {
+    color: $whitey;
+    font-family: "Dancing Script";
+    font-weight: 700;
+    font-size: 6rem;
+  }
+  .heading {
+    // background: url("../assets/vectors/white-frame-brush-strokes/16-1.1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 160px;
+  }
 }

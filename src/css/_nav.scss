@@ -176,7 +176,7 @@ $whitey: #f0f0f0;
       $duration: 0.2s;
       $distance: 8px;
       $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      
+
       &:before,
       &:after {
         content: "";
@@ -224,9 +224,16 @@ $whitey: #f0f0f0;
 
     ~ hr {
       width: 60%;
-      height: 1px;
+      height: 0px;
       margin-top: 0.5rem;
-      border-color: $green;
+    }
+
+    &:first-of-type {
+
+      background: url("../assets/vectors/white-frame-brush-strokes/16-1.1.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
   }
 }
