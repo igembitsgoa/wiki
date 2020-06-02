@@ -155,7 +155,44 @@ $whitey: #f0f0f0;
 
 #menuContent {
   position: relative;
-  text-align: center;
+  // text-align: center;
+
+  .col-12 {
+    padding-left: 8%;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 3.5vmin;
+    line-height: 5.5vmin;
+    // color: #2a2f2f;
+    // background-color: #4abf66;
+    color: $green;
+    margin: 0;
+    margin-bottom: 8px;
+
+    // &:after {
+    //   content: "";
+    //   background-color: $green;
+    //   height: 100%;
+    //   width: 100%;
+    // }
+
+    // span {
+    //   background-image: linear-gradient(120deg, #84fab0 0%, $green 100%);
+    //   background-repeat: no-repeat;
+    //   background-size: 100% 0.2em;
+    //   background-position: 0 88%;
+    //   transition: background-size 0.25s ease-in;
+    //   background-size: 100% 40%;
+    //   rotate: 30;
+    // }
+  }
 
   li {
     padding-bottom: 5px;
@@ -168,9 +205,8 @@ $whitey: #f0f0f0;
       position: relative;
       text-decoration: none;
       padding-bottom: 8px;
-    }
+      transition: color 0.5s;
 
-    a:not(.navHead) {
       // from https://codepen.io/devilishalchemist/pen/ZYLZay
 
       $duration: 0.2s;
@@ -199,6 +235,7 @@ $whitey: #f0f0f0;
       }
       &:hover,
       &:focus {
+        color: $green;
         &:before,
         &:after {
           opacity: 1;
@@ -213,34 +250,17 @@ $whitey: #f0f0f0;
       }
     }
 
-    a.navHead {
-      font-family: "Lato", sans-serif;
-      font-weight: 900;
-      font-size: 3.5vmin;
-      // color: #2a2f2f;
-      // background-color: #4abf66;
-      color: $whitey;
-    }
-
-    ~ hr {
-      width: 60%;
-      height: 0px;
-      margin-top: 0.5rem;
-    }
-
-    &:first-of-type {
-
-      background: url("../assets/vectors/white-frame-brush-strokes/16-1.1.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
+    // ~ hr {
+    //   width: 60%;
+    //   height: 0px;
+    //   margin-top: 0.5rem;
+    // }
   }
 }
 
 @include respond-below(md) {
-  #menuContent li {
-    .navHead {
+  #menuContent {
+    h1 {
       font-size: 2.7vmax !important;
     }
     a {
@@ -251,7 +271,7 @@ $whitey: #f0f0f0;
 
 @include respond-below(xs) {
   #menuContent li {
-    a:not(.navHead) {
+    a {
       display: none;
     }
     ~ hr {

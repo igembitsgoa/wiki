@@ -47,10 +47,8 @@ nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none
             .row.w-100.mb-4
               each header in navItems
                 .col-12.col-md-4.col-sm-6.py-3
-                  ul 
-                    li
-                      a(href='#').navHead= header.title
-                    hr
+                  h1= header.title
+                  ul
                     each item in header.items
                       li.py-1
                         a(href='/' + item)= item
