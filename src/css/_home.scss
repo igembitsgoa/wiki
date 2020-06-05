@@ -38,8 +38,11 @@ header {
 ******************************/
 $pink: #ea178c;
 $green: #0fc488;
+$green-background: #11d694;
 $white: #ffffff;
-$yellow: #FFD749;
+$yellow: #ffdb59;
+// $orange: #FFBA60;
+$orange: #FFB454;
 $black: #3d3d3d;
 
 @include respond-above(xl) {
@@ -55,11 +58,13 @@ section {
 
   h3 {
     font-family: "Lato", sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1.25rem;
     border-top: 1px solid;
     padding-top: 10px;
     margin-top: 10px;
+    word-spacing: 0.2em;
+    line-height: 1.3em;
   }
 
   .content {
@@ -124,9 +129,6 @@ section {
         color: $green;
       }
     }
-    .circle {
-      background-color: $pink;
-    }
   }
 
   &.yellow {
@@ -140,15 +142,95 @@ section {
         color: $pink;
       }
     }
-    .circle {
-      background-color: $pink;
+  }
+
+  &.green {
+    background-color: $green-background;
+    h3 {
+      border-color: black;
+    }
+    h2 {
+      color: $black;
+      span {
+        color: $white;
+      }
+    }
+    button.read-more {
+      .circle {
+        background-color: $white !important;
+        .icon {
+          &.arrow {
+            background-color: none !important;
+            &::before {
+              border-color: $pink !important;
+            }
+          }
+        }
+      }
+      .button-text {
+        color: white !important;
+        font-weight: 900 !important;
+      }
+      &:hover {
+        .circle {
+          .icon {
+            &.arrow {
+              background: $pink !important;
+            }
+          }
+        }
+        .button-text {
+          color: $pink !important;
+        }
+      }
+    }
+  }
+
+  &.orange {
+    background-color: $orange;
+    h3 {
+      border-color: black;
+    }
+    h2 {
+      color: $black;
+      span {
+        color: $white;
+      }
+    }
+    button.read-more {
+      .circle {
+        background-color: $white !important;
+        .icon {
+          &.arrow {
+            background-color: none !important;
+            &::before {
+              border-color: $pink !important;
+            }
+          }
+        }
+      }
+      .button-text {
+        color: $black !important;
+        font-weight: 900 !important;
+      }
+      &:hover {
+        .circle {
+          .icon {
+            &.arrow {
+              background: $pink !important;
+            }
+          }
+        }
+        .button-text {
+          color: $pink !important;
+        }
+      }
     }
   }
 }
 
 // button from
 // https://codepen.io/kathykato/pen/rZRaNe
-
 
 @mixin transition(
   $property: all,
@@ -179,7 +261,7 @@ button.read-more {
     margin: 0;
     width: 2.5rem;
     height: 2.5rem;
-    // background: $pink;
+    background: $pink;
     border-radius: 1.354rem;
     .icon {
       @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
@@ -235,15 +317,19 @@ button.read-more {
       }
     }
     .button-text {
-      color: $white; 
+      color: $white;
     }
   }
 
-  &.description {
+  &.super-long {
+    width: 14.7rem;
+  }
+
+  &.long {
     width: 12rem;
   }
 
-  &.design {
+  &.short {
     width: 9rem;
   }
 }
