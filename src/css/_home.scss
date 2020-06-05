@@ -34,50 +34,114 @@ header {
 }
 
 /******************************
- * Introduction
- ******************************/
+* Sections
+******************************/
 $pink: #ea178c;
+$green: #0fc488;
+$white: #ffffff;
+$yellow: #FFD749;
+$black: #3d3d3d;
 
 @include respond-above(xl) {
-  #introduction {
+  section {
     .container {
       max-width: 1380px;
     }
   }
 }
 
-#introduction {
-  padding: 100px 0;
+section {
+  padding: 100px 0 50px 0;
 
-  // to select all column elements
-  .sidebar {
-    padding: 0 100px 0 0;
-
-    h3 {
-      font-family: "Lato", sans-serif;
-      font-weight: 900;
-      font-size: 1.25rem;
-      border-top: 1px solid black;
-      padding-top: 10px;
-    }
+  h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    border-top: 1px solid;
+    padding-top: 10px;
+    margin-top: 10px;
   }
 
   .content {
-    padding: 0 0 0 100px;
     font-family: "Merriweather", serif;
 
     h2 {
-      font-weight: 300;
-      font-size: 3rem;
+      font-family: "Merriweather";
+      font-weight: 400;
+      font-size: 2.65rem;
       padding-bottom: 30px;
-      word-spacing: 0.4rem;
+      word-spacing: 0.3rem;
+
+      span {
+        color: $green;
+        font-weight: 400;
+      }
     }
 
     p {
-      font-weight: 300;
-      font-size: 1.1rem;
+      font-weight: 400;
+      font-size: 1.2rem;
       line-height: 1.75;
-      word-spacing: 0.2rem;
+      word-spacing: 0.1rem;
+      color: #3d3d3d;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    .sidebar {
+      padding: 0 100px 0 0;
+      h3 {
+        text-align: left;
+      }
+    }
+
+    .content {
+      padding: 0 0 0 25px;
+    }
+  }
+
+  &:nth-of-type(even) {
+    .sidebar {
+      padding: 0 0 0 100px;
+      h3 {
+        text-align: right;
+      }
+    }
+
+    .content {
+      padding: 0 25px 0 0;
+    }
+  }
+
+  &.white {
+    background-color: white;
+    h3 {
+      border-color: black;
+    }
+    h2 {
+      color: $black;
+      span {
+        color: $green;
+      }
+    }
+    .circle {
+      background-color: $pink;
+    }
+  }
+
+  &.yellow {
+    background-color: $yellow;
+    h3 {
+      border-color: black;
+    }
+    h2 {
+      color: $black;
+      span {
+        color: $pink;
+      }
+    }
+    .circle {
+      background-color: $pink;
     }
   }
 }
@@ -85,7 +149,6 @@ $pink: #ea178c;
 // button from
 // https://codepen.io/kathykato/pen/rZRaNe
 
-$white: #fff;
 
 @mixin transition(
   $property: all,
@@ -107,7 +170,6 @@ button.read-more {
   padding: 0;
   font-size: inherit;
   font-family: "Lato";
-  width: 12rem;
   height: auto;
 
   .circle {
@@ -117,7 +179,7 @@ button.read-more {
     margin: 0;
     width: 2.5rem;
     height: 2.5rem;
-    background: $pink;
+    // background: $pink;
     border-radius: 1.354rem;
     .icon {
       @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
@@ -153,13 +215,14 @@ button.read-more {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0.625rem 0;
+    padding: 0.625rem 0 0.625rem 2.1rem;
     margin: 0 0 0 1.54rem;
     color: $black;
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
+    width: fit-content;
   }
   &:hover {
     .circle {
@@ -172,7 +235,15 @@ button.read-more {
       }
     }
     .button-text {
-      color: $white;
+      color: $white; 
     }
+  }
+
+  &.description {
+    width: 12rem;
+  }
+
+  &.design {
+    width: 9rem;
   }
 }
