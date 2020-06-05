@@ -3,8 +3,8 @@ var HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: "./src/index.js",
-        vendor: "./src/js/vendor.js"
+        vendor: "./src/js/vendor.js",
+        main: "./src/index.js"
     },
     devtool: "none",                            // avoid eval statements
     plugins: [new HTMLWebpackPlugin({
@@ -21,7 +21,7 @@ module.exports = {
                 use: ["html-loader"]
             },
             {
-                test: /\.(svg|png|jpg|gif|ttf|woff2|woff|eot|)$/i,
+                test: /\.(svg|png|jpg|jpeg|gif|ttf|woff2|woff|eot|)$/i,
                 use: {
                     loader: "file-loader",
                     options: {
