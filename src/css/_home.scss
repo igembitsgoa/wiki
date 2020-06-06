@@ -89,7 +89,7 @@ section {
     &:hover {
       text-decoration: none;
       color: $black;
-      
+
       &::before {
         width: 100%;
       }
@@ -238,10 +238,13 @@ section {
       border-color: black;
     }
     h2 {
-      color: $black;
+      color: black;
       span {
         color: $white;
       }
+    }
+    p {
+      color: black;
     }
     button.read-more {
       .circle {
@@ -256,8 +259,8 @@ section {
         }
       }
       .button-text {
-        color: $black !important;
-        font-weight: 900 !important;
+        color: black !important;
+        font-weight: 700 !important;
       }
       &:hover {
         .circle {
