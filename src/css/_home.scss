@@ -42,7 +42,7 @@ $green-background: #11d694;
 $white: #ffffff;
 $yellow: #ffdb59;
 // $orange: #FFBA60;
-$orange: #FFB454;
+$orange: #ffb454;
 $black: #3d3d3d;
 
 @include respond-above(xl) {
@@ -55,6 +55,52 @@ $black: #3d3d3d;
 
 section {
   padding: 100px 0 50px 0;
+
+  a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $green;
+      height: 10%;
+    }
+
+    &:before {
+      width: 0%;
+      left: 0;
+      bottom: 0;
+      transition: width ease 0.4s;
+    }
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      transition: all ease 0.6s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $black;
+      
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+      }
+    }
+  }
 
   h3 {
     font-family: "Lato", sans-serif;
