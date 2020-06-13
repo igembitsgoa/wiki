@@ -1,0 +1,283 @@
+@import "_main.scss";
+
+/******************************
+ * Header
+ ******************************/
+
+$whitey: #f0f0f0;
+
+header {
+  background: 
+    /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4)
+    ),
+    /* bottom, image */
+      url(../assets/img/josh-withers-lZ4xZZuk8iA-unsplash.tiny.cropped.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 70vh;
+
+  .container {
+    padding: 0;
+  }
+
+  .heading {
+    // background: url("../assets/ vectors/white-frame-brush-strokes/16-1.1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 160px;
+    margin-bottom: 6em;
+
+    h1 {
+      color: $whitey;
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 8rem;
+      height: 250px;
+    }
+  }
+}
+
+@include respond-above(xxl) {
+  header {
+    .container {
+      max-width: 1420px;
+    }
+  }
+}
+
+@include respond-between(xl, xxl) {
+  header {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@include respond-between(lg, xl) {
+  header {
+    .container {
+      max-width: 1000px;
+    }
+  }
+}
+
+/******************************
+* Main
+******************************/
+$pink: #ea178c;
+$green: #0fc488;
+$green-background: #11d694;
+$white: #ffffff;
+$yellow: #ffdb59;
+$orange: #ffb454;
+$black: #3d3d3d;
+$grey: #dadada;
+
+@include respond-above(xxl) {
+  main .container {
+    max-width: 1380px;
+  }
+}
+
+@include respond-between(xl, xxl) {
+  main .container {
+    max-width: 1140px;
+  }
+}
+
+@include respond-between(lg, xl) {
+  main .container {
+    max-width: 1000px;
+  }
+}
+
+main {
+  padding: 100px 0 50px 0;
+
+  .sidebar {
+    padding: 0 100px 0 0;
+
+    #contents {
+      position: sticky;
+      top: 120px;
+      font-size: 1.2rem;
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+
+      ul {
+        list-style: none;
+
+        li {
+          margin: 15px 0;
+
+          .circle {
+            @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+            width: 1.5rem;
+            height: 1.5rem;
+            background: $grey;
+            border-radius: 1.354rem;
+            margin-top: 0.1rem;
+
+            .icon {
+              @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+              margin: auto;
+              background: black;
+              &.arrow {
+                @include transition(
+                  all,
+                  0.45s,
+                  cubic-bezier(0.65, 0, 0.076, 1)
+                );
+                width: 0.9375rem;
+                height: 0.104rem;
+                background: none;
+                &::before {
+                  display: block;
+                  content: "";
+                  margin: 0.5rem 0.4rem;
+                  width: 0.521rem;
+                  height: 0.521rem;
+                  border-top: 0.125rem solid black;
+                  border-right: 0.125rem solid black;
+                  transform: rotate(45deg);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      a {
+        margin-left: 10px;
+        position: relative;
+        text-decoration: none;
+        padding-bottom: 6px;
+        transition: color 0.5s;
+
+        // from https://codepen.io/devilishalchemist/pen/ZYLZay
+
+        $duration: 0.2s;
+        $distance: 8px;
+        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: $green;
+        }
+        &:before {
+          opacity: 0;
+          transform: translateY(-$distance);
+          transition: transform 0s $easeOutBack, opacity 0s;
+        }
+        &:after {
+          opacity: 0;
+          transform: translateY($distance/2);
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:hover,
+        &:focus {
+          &:before,
+          &:after {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          &:before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+          }
+          &:after {
+            transition: transform 0s $duration $easeOutBack,
+              opacity 0s $duration;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    font-family: "Merriweather", serif;
+    padding: 0 0 0 25px;
+
+    h1 {
+      font-family: "Merriweather";
+      font-weight: 400;
+      font-size: 2.65rem;
+      padding-bottom: 30px;
+      word-spacing: 0.3rem;
+
+      span {
+        color: $green;
+        font-weight: 400;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.75;
+      word-spacing: 0.1rem;
+      color: #3d3d3d;
+    }
+  }
+
+  /**
+   *   Links
+   **/
+
+  a:not(.button) {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $green;
+      height: 10%;
+    }
+
+    &:before {
+      width: 0%;
+      left: 0;
+      bottom: 0;
+      transition: width ease 0.4s;
+    }
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      transition: all ease 0.6s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $black;
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+      }
+    }
+  }
+}

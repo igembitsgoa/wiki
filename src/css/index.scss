@@ -1,3 +1,5 @@
+@import "_main.scss";
+
 /******************************
  * Header
  ******************************/
@@ -45,7 +47,7 @@ $yellow: #ffdb59;
 $orange: #ffb454;
 $black: #3d3d3d;
 
-@include respond-above(xl) {
+@include respond-above(xxl) {
   section {
     .container {
       max-width: 1380px;
@@ -53,10 +55,30 @@ $black: #3d3d3d;
   }
 }
 
+@include respond-between(xl, xxl) {
+  section {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@include respond-between(lg, xl) {
+  section {
+    .container {
+      max-width: 1000px;
+    }
+  }
+}
+
 section {
   padding: 100px 0 50px 0;
 
-  a {
+  /**
+   * Section Button
+   */
+
+  a:not(.button) {
     position: relative;
     text-decoration: none;
     display: inline-block;
@@ -102,6 +124,10 @@ section {
     }
   }
 
+  /**
+   * Section subtitle/aside
+   */
+
   h3 {
     font-family: "Lato", sans-serif;
     font-weight: 700;
@@ -115,6 +141,10 @@ section {
 
   .content {
     font-family: "Merriweather", serif;
+
+  /**
+   * Section Title
+  **/
 
     h2 {
       font-family: "Merriweather";
@@ -201,7 +231,7 @@ section {
         color: $white;
       }
     }
-    button.read-more {
+    a.button.read-more {
       .circle {
         background-color: $white !important;
         .icon {
@@ -246,7 +276,7 @@ section {
     p {
       color: black;
     }
-    button.read-more {
+    a.button.read-more {
       .circle {
         background-color: $white !important;
         .icon {
@@ -275,110 +305,5 @@ section {
         }
       }
     }
-  }
-}
-
-// button from
-// https://codepen.io/kathykato/pen/rZRaNe
-
-@mixin transition(
-  $property: all,
-  $duration: 0.45s,
-  $ease: cubic-bezier(0.65, 0, 0.076, 1)
-) {
-  transition: $property $duration $ease;
-}
-
-button.read-more {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: "Lato";
-  height: auto;
-
-  .circle {
-    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: $pink;
-    border-radius: 1.354rem;
-    .icon {
-      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      background: $white;
-      &.arrow {
-        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-        left: 0.521rem;
-        width: 0.9375rem;
-        height: 0.104rem;
-        background: none;
-        &::before {
-          position: absolute;
-          content: "";
-          top: -0.21rem;
-          right: 0.052rem;
-          width: 0.521rem;
-          height: 0.521rem;
-          border-top: 0.125rem solid #fff;
-          border-right: 0.125rem solid #fff;
-          transform: rotate(45deg);
-        }
-      }
-    }
-  }
-  .button-text {
-    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.625rem 0 0.625rem 2.1rem;
-    margin: 0 0 0 1.54rem;
-    color: $black;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-    text-transform: uppercase;
-    width: fit-content;
-  }
-  &:hover {
-    .circle {
-      width: 100%;
-      .icon {
-        &.arrow {
-          background: $white;
-          transform: translate(1rem, 0);
-        }
-      }
-    }
-    .button-text {
-      color: $white;
-    }
-  }
-
-  &.super-long {
-    width: 14.7rem;
-  }
-
-  &.long {
-    width: 12rem;
-  }
-
-  &.short {
-    width: 9rem;
   }
 }
