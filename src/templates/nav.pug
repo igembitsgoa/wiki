@@ -51,4 +51,4 @@ nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none.nav
                   ul
                     each item in header.items
                       li.py-1
-                        a(href='/wiki/' + item)= item
+                        a(href='/wiki/' + item.replace(/ /g,''))= item
