@@ -4,8 +4,20 @@
 
 nav {
   height: 80px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, transform 0.5s ease;
 }
+
+.scroll-down nav {
+  transform: translate3d(0, -100%, 0);
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+ 
+.scroll-up nav {
+  transform: none;
+}
+ 
 
 nav.nav-colored {
   background-color: #ffffff;
@@ -115,7 +127,7 @@ nav.nav-transparent {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
 
   label {
     width: 25px;
@@ -296,3 +308,4 @@ $whitey: #f0f0f0;
     }
   }
 }
+

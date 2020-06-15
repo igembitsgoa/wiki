@@ -38,10 +38,11 @@ html(lang="en")
                             a(href)
                         .d-flex.justify-content-end.mt-5
                             // remember to add a class to the button
-                            a.button.read-more.long
+                            - var buttonTitle = "Description"
+                            a.button.read-more.long(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Description
+                                span.button-text= buttonTitle
         section#design.yellow
             .container
                 .row
@@ -57,10 +58,12 @@ html(lang="en")
                             Also talk about the delivery mechanism. Maybe this is the right place to mention why we went 
                             with a syn bio solution instead of just injecting the inhibitor.
                         .d-flex.justify-content-end.mt-5
-                            a.button.read-more.short
+                            // remember to add a class to the button
+                            - var buttonTitle = "Design"
+                            a.button.read-more.short(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Design
+                                span.button-text= buttonTitle
                     .sidebar.col-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
@@ -87,10 +90,11 @@ html(lang="en")
                             not on the home page.
                         .d-flex.justify-content-end.mt-5
                             // remember to add a class to the button
-                            a.button.read-more.short
+                            - var buttonTitle = "Safety"
+                            a.button.read-more.short(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Safety
+                                span.button-text= buttonTitle
         section#human-practices.green
             .container
                 .row
@@ -105,10 +109,12 @@ html(lang="en")
                             ethics, safety, security, and sustainability of your project, and to show how this exploration 
                             feeds back into your project purpose, design, and execution.
                         .d-flex.justify-content-end.mt-5
-                            a.button.read-more.super-long
+                            // remember to add a class to the button
+                            - var buttonTitle = "Human Practices"
+                            a.button.read-more.super-long(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Human Practices
+                                span.button-text= buttonTitle
                     .sidebar.col-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
@@ -131,10 +137,12 @@ html(lang="en")
                             From the iGEM docs: Sharing and collaboration are core values of iGEM. We encourage you to 
                             reach out and work with other teams on difficult problems that you can more easily solve together.
                         .d-flex.justify-content-end.mt-5
-                            a.button.read-more.super-long
+                            // remember to add a class to the button
+                            - var buttonTitle = "Collaborations"
+                            a.button.read-more.super-long(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Collaborations
+                                span.button-text= buttonTitle
         section#science-communication.orange
             .container
                 .row
@@ -152,10 +160,12 @@ html(lang="en")
                             Also write about Abhighyan insta posts? Is that sci-comn or public engagement? 
                             I'll just call the button Communication for now.
                         .d-flex.justify-content-end.mt-5
-                            a.button.read-more.super-long
+                            // remember to add a class to the button
+                            - var buttonTitle = "Communication"
+                            a.button.read-more.super-long(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Communication
+                                span.button-text= buttonTitle
                     .sidebar.col-3
                         h3.
                             Maybe an important highlight from the text itself?
