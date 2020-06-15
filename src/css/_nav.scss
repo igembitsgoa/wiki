@@ -2,19 +2,19 @@
  * Navbar 
 **/
 
-nav {
+.navbar {
   height: 80px;
   transition: all 0.3s ease, transform 0.5s ease;
 }
 
-.scroll-down nav {
+.scroll-down .navbar {
   transform: translate3d(0, -100%, 0);
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
 }
  
-.scroll-up nav {
+.scroll-up .navbar {
   transform: none;
 }
  

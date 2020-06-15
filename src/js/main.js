@@ -1,4 +1,8 @@
-var navbar = document.querySelector('nav');
+import "bootstrap"
+import "jquery"
+import $ from 'jquery';
+
+var navbar = document.querySelector('.navbar');
 var menuToggle = document.getElementById('menuToggle');
 var scrollHeight = 100; // make navbar colored/hidden beyond this
 
@@ -46,7 +50,7 @@ window.addEventListener("scroll", () => {
                 // down
                 body.classList.remove(scrollUp);
                 body.classList.add(scrollDown);
-            } 
+            }
             else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
                 // up
                 body.classList.remove(scrollDown);
@@ -71,3 +75,22 @@ window.addEventListener("scroll", () => {
 //         navbar.classList.remove('nav-colored');
 //     }
 // };
+
+$('.content .internal').tooltip();
+
+$('.content .internal').click(function () {
+    $(this)
+        .tooltip('hide')
+        .attr("data-original-title", "Copied!")
+        .tooltip('show');
+});
+
+$('.content .internal').mouseout(function () {
+    $(this)
+        .attr("data-original-title", "Copy a link to this section!");
+});
+
+
+
+
+

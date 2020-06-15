@@ -73,7 +73,7 @@ header {
 $pink: #ea178c;
 $green: #0fc488;
 $green-background: #11d694;
-$dark-green: #12BC84;
+$dark-green: #12bc84;
 $white: #ffffff;
 $yellow: #ffdb59;
 $orange: #ffb454;
@@ -110,6 +110,8 @@ main {
       font-size: 1.2rem;
       font-family: "Lato", sans-serif;
       font-weight: 500;
+      height: auto;
+      transition: none;
 
       ul {
         list-style: none;
@@ -160,6 +162,7 @@ main {
         text-decoration: none;
         padding-bottom: 6px;
         transition: color 0.5s;
+        color: black;
 
         // from https://codepen.io/devilishalchemist/pen/ZYLZay
 
@@ -203,14 +206,16 @@ main {
           }
         }
       }
-      
     }
   }
 
   .content {
     font-family: "Merriweather", serif;
-    padding: 0 35px 35px 35px;
-    background-color: #f7f7f7;
+
+    article {
+      padding: 0 35px 35px 35px;
+      background-color: #f7f7f7;
+    }
 
     h1 {
       font-family: "Merriweather";
@@ -238,14 +243,19 @@ main {
       margin-top: 1.5rem;
     }
 
-    a.internal {
-        font-size: 2rem;
-        color: #bdbdbd;
+    button.internal {
+      font-size: 2rem;
+      color: #bdbdbd;
+      padding: 0;
 
-        &:hover {
-            text-decoration: none;
-            color: #828282;
-        }
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: #828282;
+      }
     }
 
     p {
@@ -262,7 +272,7 @@ main {
    *   Links
    **/
 
-  a:not(.button):not(.internal) {
+  a.in-text {
     position: relative;
     text-decoration: none;
     display: inline-block;
@@ -306,5 +316,37 @@ main {
         transition: all ease 0.2s;
       }
     }
+  }
+}
+
+.tooltip {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#references {
+  ol {
+    padding-inline-start: 30px;
+  }
+
+  li {
+    padding: 0 0 20px 10px;
+  }
+
+  p {
+    text-align: left;
+    margin-bottom: 0.2rem;
+
+    &.title {
+      font-weight: 600;
+    }
+
+    .journalTitle {
+      font-style: italic;
+    }
+  }
+  a {
+    margin-right: 15px;
   }
 }

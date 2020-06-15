@@ -1,2 +1,1 @@
 import "../css/content.scss";
-
