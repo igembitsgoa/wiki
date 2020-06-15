@@ -1,3 +1,23 @@
+mixin heading(sectionTitle)
+    h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
+        //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
+        button.btn.internal(data-toggle="tooltip" data-placement="right"
+            title="Copy link to this section!")= '#'
+
+mixin button(buttonTitle)
+    if buttonTitle.length <= 7
+        - var length = "short"
+    else if buttonTitle <= 11
+        - var length = "long"
+    else
+        - var length = "super-long"
+    .d-flex.justify-content-end.my-5
+        a.button.read-more(class=length
+                           href='' + buttonTitle.replace(/ /g,''))
+            span.circle(aria-hidden=true)
+                span.icon.arrow
+            span.button-text= buttonTitle
+
 html(lang="en")
     block headVars
     head
@@ -5,7 +25,7 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title #{title} | SugarGain | iGEM BITS Goa
     body
-        
+
         include nav.pug
         header.d-flex.justify-content-center
             .container.d-flex.align-items-end
@@ -25,152 +45,10 @@ html(lang="en")
                                         // regex to remove spaces
                     .content.col-9
                         article
-                            - var sectionTitle = "Problem"
-                            h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-                                //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-                                button.btn.internal(data-toggle="tooltip" data-placement="right"
-                                    title="Copy link to this section!")= '#'
-                            p.
-                                The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-                                of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-                                product loss, lack of reusability, and environmental concerns.
-                            h2 Level 2 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-                            h3 Level 3 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
+                            block article
 
-                            - var sectionTitle = "Project Design"
-                            h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-                                //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-                                button.btn.internal(data-toggle="tooltip" data-placement="right"
-                                    title="Copy link to this section!")= '#'
-                            p.
-                                The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-                                of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-                                product loss, lack of reusability, and environmental concerns.
-                            h2 Level 2 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-                            h3 Level 3 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
+                        block nextButton
 
-                            - var sectionTitle = "Part Design"
-                            h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-                                //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-                                button.btn.internal(data-toggle="tooltip" data-placement="right"
-                                    title="Copy link to this section!")= '#'
-                            p.
-                                The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-                                of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-                                product loss, lack of reusability, and environmental concerns.
-                            h2 Level 2 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-                            h3 Level 3 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-
-                            - var sectionTitle = "Results"
-                            h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-                                //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-                                button.btn.internal(data-toggle="tooltip" data-placement="right"
-                                    title="Copy link to this section!")= '#'
-                            p.
-                                The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-                                of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-                                product loss, lack of reusability, and environmental concerns.
-                            h2 Level 2 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-                            h3 Level 3 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-
-                            - var sectionTitle = "Future Directions"
-                            h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-                                //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-                                button.btn.internal(data-toggle="tooltip" data-placement="right"
-                                    title="Copy link to this section!")= '#'
-                            p.
-                                The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-                                of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-                                product loss, lack of reusability, and environmental concerns.
-                            h2 Level 2 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-                            h3 Level 3 Heading
-                            p.
-                                The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-                                resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-                                chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-                                increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-                                released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-                                for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-                                three issues presented by AACs.
-                        .d-flex.justify-content-end.my-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Design"
-                            a.button.read-more.short(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
 
                         article#references
                             - var sectionTitle = "References"
