@@ -194,7 +194,8 @@ html(lang="en")
                             a(href)
                         .d-flex.justify-content-end.mt-5
                             // remember to add a class to the button
-                            a.button.read-more.long
+                            - var buttonTitle = "Design"
+                            a.button.read-more.short(href='' + buttonTitle.replace(/ /g,''))
                                 span.circle(aria-hidden=true)
                                     span.icon.arrow
-                                span.button-text Description
+                                span.button-text= buttonTitle
