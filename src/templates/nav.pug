@@ -1,3 +1,6 @@
+- urlPrefix = "https://igembitsgoa.github.io/wiki/"
+//- - urlPrefix = "/"
+
 - 
   var navItems = [
     {
@@ -51,4 +54,4 @@ nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none.nav
                   ul
                     each item in header.items
                       li.py-1
-                        a(href='/wiki/' + item.replace(/ /g,''))= item
+                        a(href= urlPrefix + item.replace(/ /g,'_'))= item

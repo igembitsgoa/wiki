@@ -1,3 +1,17 @@
+mixin button(buttonTitle)
+    if buttonTitle.length <= 7
+        - var length = "short"
+    else if buttonTitle.length <= 11
+        - var length = "long"
+    else
+        - var length = "super-long"
+    .d-flex.justify-content-end.my-5
+        a.button.read-more(class=length
+                           href='' + buttonTitle.replace(/ /g,'_'))
+            span.circle(aria-hidden=true)
+                span.icon.arrow
+            span.button-text= buttonTitle
+
 html(lang="en")
     head
         meta(charset="UTF-8")
@@ -36,13 +50,7 @@ html(lang="en")
                             |  with all this text so you guys can edit. 
                         p 
                             a(href)
-                        .d-flex.justify-content-end.mt-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Description"
-                            a.button.read-more.long(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
+                        +button("Description")
         section#design.yellow
             .container
                 .row
@@ -57,13 +65,9 @@ html(lang="en")
                         p.
                             Also talk about the delivery mechanism. Maybe this is the right place to mention why we went 
                             with a syn bio solution instead of just injecting the inhibitor.
-                        .d-flex.justify-content-end.mt-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Design"
-                            a.button.read-more.short(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
+                        
+                        +button("Design")
+
                     .sidebar.col-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
@@ -88,13 +92,9 @@ html(lang="en")
                         p.
                             Unusual safety issues (like the one on the left?) also have to be mentioned but probably
                             not on the home page.
-                        .d-flex.justify-content-end.mt-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Safety"
-                            a.button.read-more.short(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
+                        
+                        +button("Safety")
+        
         section#human-practices.green
             .container
                 .row
@@ -108,13 +108,9 @@ html(lang="en")
                             From the iGEM docs: explore issues relating (but not limited) to the 
                             ethics, safety, security, and sustainability of your project, and to show how this exploration 
                             feeds back into your project purpose, design, and execution.
-                        .d-flex.justify-content-end.mt-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Human Practices"
-                            a.button.read-more.super-long(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
+
+                        +button("Human Practices")
+
                     .sidebar.col-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
@@ -136,13 +132,7 @@ html(lang="en")
                         p.
                             From the iGEM docs: Sharing and collaboration are core values of iGEM. We encourage you to 
                             reach out and work with other teams on difficult problems that you can more easily solve together.
-                        .d-flex.justify-content-end.mt-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Collaborations"
-                            a.button.read-more.super-long(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
+                        +button("Collaborations")
         section#science-communication.orange
             .container
                 .row
@@ -159,13 +149,9 @@ html(lang="en")
                             communication is necessary, specially keeping the current situation in mind.
                             Also write about Abhighyan insta posts? Is that sci-comn or public engagement? 
                             I'll just call the button Communication for now.
-                        .d-flex.justify-content-end.mt-5
-                            // remember to add a class to the button
-                            - var buttonTitle = "Communication"
-                            a.button.read-more.super-long(href='' + buttonTitle.replace(/ /g,''))
-                                span.circle(aria-hidden=true)
-                                    span.icon.arrow
-                                span.button-text= buttonTitle
+                        
+                        +button("Communication")
+                    
                     .sidebar.col-3
                         h3.
                             Maybe an important highlight from the text itself?
