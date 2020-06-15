@@ -81,7 +81,7 @@ $('.content .internal').tooltip();
 $('.content .internal').click(function () {
     $(this)
         .tooltip('hide')
-        .attr("data-original-title", "Copied!")
+        .attr("data-original-title", "Doesn't work yet :/")
         .tooltip('show');
 });
 
