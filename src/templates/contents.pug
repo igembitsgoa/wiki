@@ -1,22 +1,4 @@
-mixin heading(sectionTitle)
-    h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-        //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-        button.btn.internal(data-toggle="tooltip" data-placement="right"
-            title="Copy link to this section!")= '#'
-
-mixin button(buttonTitle)
-    if buttonTitle.length <= 7
-        - var length = "short"
-    else if buttonTitle.length <= 11
-        - var length = "long"
-    else
-        - var length = "super-long"
-    .d-flex.justify-content-end.my-5
-        a.button.read-more(class=length
-                           href='' + buttonTitle.replace(/ /g,'_'))
-            span.circle(aria-hidden=true)
-                span.icon.arrow
-            span.button-text= buttonTitle
+include mixins
 
 html(lang="en")
     block headVars
@@ -25,7 +7,6 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title #{title} | SugarGain | iGEM BITS Goa
     body
-
         include nav.pug
         header.d-flex.justify-content-center
             .container.d-flex.align-items-end

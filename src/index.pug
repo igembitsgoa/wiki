@@ -1,16 +1,4 @@
-mixin button(buttonTitle)
-    if buttonTitle.length <= 7
-        - var length = "short"
-    else if buttonTitle.length <= 11
-        - var length = "long"
-    else
-        - var length = "super-long"
-    .d-flex.justify-content-end.my-5
-        a.button.read-more(class=length
-                           href='' + buttonTitle.replace(/ /g,'_'))
-            span.circle(aria-hidden=true)
-                span.icon.arrow
-            span.button-text= buttonTitle
+include templates/mixins
 
 html(lang="en")
     head
