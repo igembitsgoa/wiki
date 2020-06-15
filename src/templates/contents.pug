@@ -1,43 +1,28 @@
-
-- 
-  var citations = [
-    {
-      'MLA': 'Rosano, Aldo, et al. "Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14–2016/17 seasons)." International Journal of Infectious Diseases 88 (2019): 127-134.', 
-      'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003'
-    },
-    {
-      'MLA': 'Allen, Michael J., and Scott C. Sheridan. "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model." International journal of biometeorology 62.1 (2018): 57-67.', 
-      'doi': 'https://doi.org/10.1007/s00484-015-1117-4'
-    }
-  ]
-
 html(lang="en")
+    block headVars
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title iGEM BITS Goa
-        - pageLink = "https://igembitsgoa.github.io/wiki/Description"
+        title #{title} | SugarGain | iGEM BITS Goa
     body
-        include ../templates/nav.pug
+        
+        include nav.pug
         header.d-flex.justify-content-center
             .container.d-flex.align-items-end
                 #heading
-                    h1 Description
+                    h1 #{title}
         main
             .container
                 .row
                     .sidebar.col-3
                         .nav#contents
                             ul
-                                - var list = ['Problem', 'Project Design', 'Part Design', 'Results', 'Future Directions', 'References']
-                                each item in list
+                                each item in contents
                                     li.d-flex.justify-content-left
                                         span.circle(aria-hidden=true)
                                             span.icon.arrow
                                         a(href='#' + item.replace(/ /g,'') )= item 
                                         // regex to remove spaces
-
-
                     .content.col-9
                         article
                             - var sectionTitle = "Problem"
@@ -194,6 +179,7 @@ html(lang="en")
                                 button.btn.internal(data-toggle="tooltip" data-placement="right"
                                     title="Copy link to this section!")= '#'
                             ol
+                                block citations
                                 each citation in citations
                                     - var parts = citation.MLA.split('"')
                                     - var authors = parts[0]

@@ -1,0 +1,19 @@
+extends ../../templates/contents.pug
+
+block headVars
+    - var title = "Description"
+    - var contents = ['Problem', 'Project Design', 'Part Design', 'Results', 'Future Directions', 'References']
+
+
+block citations
+    - 
+        var citations = [
+            {
+            'MLA': 'Rosano, Aldo, et al. "Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14–2016/17 seasons)." International Journal of Infectious Diseases 88 (2019): 127-134.', 
+            'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003'
+            },
+            {
+            'MLA': 'Allen, Michael J., and Scott C. Sheridan. "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model." International journal of biometeorology 62.1 (2018): 57-67.', 
+            'doi': 'https://doi.org/10.1007/s00484-015-1117-4'
+            }
+        ]

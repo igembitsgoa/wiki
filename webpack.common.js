@@ -17,7 +17,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             filename: 'Description/index.html',
-            template: "./src/contents/Description.pug",
+            template: "./src/pages/Description/index.pug",
             excludeChunks: ['index']
         })
         // new HTMLWebpackPlugin({
