@@ -21,3 +21,10 @@ mixin button(buttonTitle)
                 span.icon.arrow
             span.button-text= buttonTitle
 
+//- Function for in-text citation
+-
+    var intext = function(num, text) {
+        var link = "<a href=\"#citation" + num + "\">" + text + "</a>";
+        var wrapper = "<span id=\"intext" + num + "\">(" + link + ")</span>"
+        return wrapper;
+    }

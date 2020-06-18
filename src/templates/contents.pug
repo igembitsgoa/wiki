@@ -39,6 +39,7 @@ html(lang="en")
                                     title="Copy link to this section!")= '#'
                             ol
                                 block citations
+                                - var counter = 0
                                 each citation in citations
                                     - var parts = citation.MLA.split('"')
                                     - var authors = parts[0]
@@ -47,7 +48,8 @@ html(lang="en")
                                     - var journalTitle = journal[1]
                                     - var journalInfo  = journal[2]
                                     - var scholar = "https://scholar.google.com/scholar?q=" + title 
-                                    li
+                                    - counter = counter + 1
+                                    li(id= 'citation' + counter)
                                         p.author= authors
                                         p.title= title
                                         p
@@ -56,6 +58,6 @@ html(lang="en")
                                             span.journalInfo= journalInfo
                                         a(href=citation.doi target="_blank") CrossRef
                                         a(href=scholar target="_blank") Google Scholar
-                                        a() Back to text
+                                        a(href="#intext" + counter) Back to text
 
 

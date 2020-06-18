@@ -265,6 +265,10 @@ main {
       word-spacing: 0.1rem;
       color: #3d3d3d;
       text-align: justify;
+
+      span {
+        scroll-margin-top: 200px;
+      }
     }
   }
 
@@ -332,6 +336,27 @@ main {
 
   li {
     padding: 0 0 20px 10px;
+
+    &:target {
+      animation: target-fade 2s 1;
+    }
+
+    @keyframes target-fade {
+      0% {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      100% {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+    // @keyframes target-fade {
+    //   0% {
+    //     background-color: rgba(0, 0, 0, 0.1);
+    //   }
+    //   100% {
+    //     background-color: rgba(0, 0, 0, 0);
+    //   }
+    // }
   }
 
   p {
