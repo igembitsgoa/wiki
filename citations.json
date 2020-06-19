@@ -1,0 +1,181 @@
+{
+  "indexed": {
+    "date-parts": [[2020, 5, 8]],
+    "date-time": "2020-05-08T08:24:16Z",
+    "timestamp": 1588926256592
+  },
+  "reference-count": 44,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "URL": "https:\\/\\/www.elsevier.com\\/tdm\\/userlicense\\/1.0\\/",
+      "start": {
+        "date-parts": [[2019, 11, 1]],
+        "date-time": "2019-11-01T00: 00: 00Z",
+        "timestamp": 1572566400000
+      },
+      "delay-in-days": 0,
+      "content-version": "tdm"
+    },
+    {
+      "URL": "http:\\/\\/creativecommons.org\\/licenses\\/by-nc-nd\\/4.0\\/",
+      "start": {
+        "date-parts": [[2019, 8, 5]],
+        "date-time": "2019-08-05T00: 00: 00Z",
+        "timestamp": 1564963200000
+      },
+      "delay-in-days": 0,
+      "content-version": "vor"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "ijidonline.com",
+      "clinicalkey.jp",
+      "clinicalkey.com",
+      "clinicalkey.es",
+      "clinicalkey.fr",
+      "clinicalkey.com.au",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [[2019, 11]]
+  },
+  "DOI": "10.1016\\/j.ijid.2019.08.003",
+  "type": "article-journal",
+  "created": {
+    "date-parts": [[2019, 8, 8]],
+    "date-time": "2019-08-08T16: 49: 59Z",
+    "timestamp": 1565282999000
+  },
+  "page": "127-134",
+  "update-policy": "http:\\/\\/dx.doi.org\\/10.1016\\/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 3,
+  "title": "Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013\\/14\\u20132016\\/17 seasons)",
+  "prefix": "10.1016",
+  "volume": "88",
+  "author": [
+    {
+      "ORCID": "http:\\/\\/orcid.org\\/0000-0002-5453-2294",
+      "authenticated-orcid": false,
+      "given": "Aldo",
+      "family": "Rosano",
+      "sequence": "first",
+      "affiliation": []
+    },
+    {
+      "given": "Antonino",
+      "family": "Bella",
+      "sequence": "additional",
+      "affiliation": []
+    },
+    {
+      "given": "Francesco",
+      "family": "Gesualdo",
+      "sequence": "additional",
+      "affiliation": []
+    },
+    {
+      "given": "Anna",
+      "family": "Acampora",
+      "sequence": "additional",
+      "affiliation": []
+    },
+    {
+      "given": "Patrizio",
+      "family": "Pezzotti",
+      "sequence": "additional",
+      "affiliation": []
+    },
+    {
+      "given": "Stefano",
+      "family": "Marchetti",
+      "sequence": "additional",
+      "affiliation": []
+    },
+    {
+      "given": "Walter",
+      "family": "Ricciardi",
+      "sequence": "additional",
+      "affiliation": []
+    },
+    {
+      "given": "Caterina",
+      "family": "Rizzo",
+      "sequence": "additional",
+      "affiliation": []
+    }
+  ],
+  "member": "78",
+  "container-title": "International Journal of Infectious Diseases",
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https:\\/\\/api.elsevier.com\\/content\\/article\\/PII:S1201971219303285?httpAccept=text\\/xml",
+      "content-type": "text\\/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https:\\/\\/api.elsevier.com\\/content\\/article\\/PII:S1201971219303285?httpAccept=text\\/plain",
+      "content-type": "text\\/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [[2019, 11, 3]],
+    "date-time": "2019-11-03T07: 18: 05Z",
+    "timestamp": 1572765485000
+  },
+  "score": 1.0,
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [[2019, 11]]
+  },
+  "references-count": 44,
+  "alternative-id": ["S1201971219303285"],
+  "URL": "http:\\/\\/dx.doi.org\\/10.1016\\/j.ijid.2019.08.003",
+  "relation": {},
+  "ISSN": ["1201-9712"],
+  "subject": [
+    "Microbiology (medical)",
+    "Infectious Diseases",
+    "General Medicine"
+  ],
+  "container-title-short": "International Journal of Infectious Diseases",
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013\\/14\\u20132016\\/17 seasons)",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "International Journal of Infectious Diseases",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https:\\/\\/doi.org\\/10.1016\\/j.ijid.2019.08.003",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    { "value": "article", "name": "content_type", "label": "Content Type" },
+    {
+      "value": "\\u00a9 2019 The Authors. Published by Elsevier Ltd on behalf of International Society for Infectious Diseases.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

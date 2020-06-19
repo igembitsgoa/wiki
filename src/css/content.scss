@@ -67,6 +67,15 @@ header {
   }
 }
 
+@keyframes target-fade {
+  0% {
+    background-color: rgba(255, 255, 0, 0.2);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
 /******************************
 * Main
 ******************************/
@@ -79,6 +88,10 @@ $yellow: #ffdb59;
 $orange: #ffb454;
 $black: #3d3d3d;
 $grey: #dadada;
+$light-grey: #f7f7f7;
+$selection-color: rgba(255, 233, 0, 0.4);
+
+
 
 @include respond-above(xxl) {
   main .container {
@@ -214,7 +227,7 @@ main {
 
     article {
       padding: 0 35px 35px 35px;
-      background-color: #f7f7f7;
+      background-color: $light-grey;
     }
 
     h1 {
@@ -243,6 +256,12 @@ main {
       margin-top: 1.5rem;
     }
 
+    h1, h2, h3 {
+      &::selection {
+        background-color: $selection-color;
+      }
+    }
+
     button.internal {
       font-size: 2rem;
       color: #bdbdbd;
@@ -268,6 +287,20 @@ main {
 
       span {
         scroll-margin-top: 200px;
+
+        &:target {
+          animation: target-fade 3s 1;
+        }
+      }
+
+      &::selection {
+        background-color: $selection-color;
+      }
+    }
+
+    a, span {
+      &::selection {
+        background-color: $selection-color;
       }
     }
   }
@@ -338,25 +371,8 @@ main {
     padding: 0 0 20px 10px;
 
     &:target {
-      animation: target-fade 2s 1;
+      animation: target-fade 3s 1;
     }
-
-    @keyframes target-fade {
-      0% {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-      100% {
-        background-color: rgba(0, 0, 0, 0);
-      }
-    }
-    // @keyframes target-fade {
-    //   0% {
-    //     background-color: rgba(0, 0, 0, 0.1);
-    //   }
-    //   100% {
-    //     background-color: rgba(0, 0, 0, 0);
-    //   }
-    // }
   }
 
   p {

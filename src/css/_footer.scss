@@ -1,0 +1,111 @@
+/**
+ * Footer
+ **/
+
+$grey: #616161;
+$light-grey: #878787;
+
+@include respond-above(xxl) {
+  footer {
+    .container {
+      max-width: 1380px;
+    }
+  }
+}
+
+@include respond-between(xl, xxl) {
+  footer {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@include respond-between(lg, xl) {
+  footer {
+    .container {
+      max-width: 1000px;
+    }
+  }
+}
+
+footer {
+  padding: 50px;
+
+  .separator {
+    height: 80px;
+    display: block;
+    width: 100%;
+  }
+}
+
+
+
+#footerLogo {
+  background-image: url("../assets/img/logo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+  background-size: contain;
+  margin: 0 0 35px 0;
+
+}
+
+#footerIcons {
+  width: 100%;
+  height: 25px;
+  margin: 0;
+
+  a {
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin: 0 25px;
+    transition: all 0.2s;
+
+    filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(2%)
+      hue-rotate(36deg) brightness(94%) contrast(88%);
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(39%) sepia(0%) saturate(0%)
+        hue-rotate(208deg) brightness(94%) contrast(87%);
+    }
+  }
+
+  a.gmail {
+    background-image: url(../assets/icons/envelope-open-text-solid.svg);
+  }
+
+  a.insta {
+    background-image: url(../assets/icons/instagram-brands.svg);
+  }
+
+  a.twitter {
+    background-image: url(../assets/icons/twitter-brands.svg);
+  }
+}
+
+#footerNav {
+  width: 100%;
+  font-family: "Lato";
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: $grey;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    a {
+      color: $light-grey;
+    }
+  }
+}

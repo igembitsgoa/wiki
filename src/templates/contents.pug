@@ -41,21 +41,15 @@ html(lang="en")
                                 block citations
                                 - var counter = 0
                                 each citation in citations
-                                    - var parts = citation.MLA.split('"')
-                                    - var authors = parts[0]
-                                    - var title = parts[1]
-                                    - var journal = parts[2].match(/([\D]*)(.*)/)
-                                    - var journalTitle = journal[1]
-                                    - var journalInfo  = journal[2]
-                                    - var scholar = "https://scholar.google.com/scholar?q=" + title 
+                                    - var scholar = "https://scholar.google.com/scholar?q=" + citation.title 
                                     - counter = counter + 1
                                     li(id= 'citation' + counter)
-                                        p.author= authors
-                                        p.title= title
+                                        p.author= citation.authors
+                                        p.title= citation.title
                                         p
-                                            span.journalTitle= journalTitle
+                                            span.journalTitle= citation.journal
                                             | 
-                                            span.journalInfo= journalInfo
+                                            span.journalInfo= citation.numbers
                                         a(href=citation.doi target="_blank") CrossRef
                                         a(href=scholar target="_blank") Google Scholar
                                         a(href="#intext" + counter) Back to text
