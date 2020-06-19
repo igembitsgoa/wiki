@@ -33,23 +33,14 @@
     }
   ]
 
-footer
-  #footerBrand
-    .container
-      .row
-        #footerLogo
-      .row#footerIcons.justify-content-center
-        a.gmail(href='mailto:igembitsgoa@gmail.com') 
-        a.insta(href='https://instagram.com/igem_bits')
-        a.twitter(href='https://twitter.com/igembitsgoa')
-  div.separator
-  #footerNav
-    .container
-      .row.justify-content-between
-        each header in navItems
-          .col
-            h1= header.title
-            ul
-              each item in header.items
-                li.py-1
-                  a(href= urlPrefix + item.replace(/ /g,'_'))= item
+
+#footerNav
+  .container
+    .row.justify-content-between
+      each header in navItems
+        .col
+          h1= header.title
+          ul
+            each item in header.items
+              li.py-1
+                a(href= urlPrefix + item.replace(/ /g,'_'))= item

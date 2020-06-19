@@ -91,8 +91,6 @@ $grey: #dadada;
 $light-grey: #f7f7f7;
 $selection-color: rgba(255, 233, 0, 0.4);
 
-
-
 @include respond-above(xxl) {
   main .container {
     max-width: 1380px;
@@ -256,7 +254,9 @@ main {
       margin-top: 1.5rem;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       &::selection {
         background-color: $selection-color;
       }
@@ -298,7 +298,8 @@ main {
       }
     }
 
-    a, span {
+    a,
+    span {
       &::selection {
         background-color: $selection-color;
       }
@@ -389,5 +390,18 @@ main {
   }
   a {
     margin-right: 15px;
+  }
+}
+
+footer {
+  #footerNav {
+    background-color: $green-background;
+
+    h1 {
+      color: $black;
+    }
+    a {
+      color: $black;
+    }
   }
 }
