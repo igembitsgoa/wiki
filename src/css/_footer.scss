@@ -33,8 +33,6 @@ $light-grey: #878787;
   padding: 75px 0;
 }
 
-
-
 #footerLogo {
   background-image: url("../assets/img/logo.jpg");
   background-position: center;
@@ -43,7 +41,6 @@ $light-grey: #878787;
   width: 100%;
   background-size: contain;
   margin: 0 0 35px 0;
-
 }
 
 #footerIcons {
@@ -86,7 +83,10 @@ $light-grey: #878787;
 #footerNav {
   width: 100%;
   font-family: "Lato";
-  padding: 75px 0;
+
+  .container {
+    padding: 75px 0 75px 50px;
+  }
 
   h1 {
     font-weight: 600;
