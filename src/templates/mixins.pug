@@ -4,7 +4,7 @@
 mixin heading(sectionTitle)
     h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
         //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-        button.btn.internal(data-toggle="tooltip" data-placement="right"
+        button.btn.section(data-toggle="tooltip" data-placement="right"
             title="Copy link to this section!")= '#'
 
 mixin button(buttonTitle)
@@ -16,15 +16,38 @@ mixin button(buttonTitle)
         - var length = "super-long"
     .d-flex.justify-content-end.my-5
         a.button.read-more(class=length
-                           href=urlPrefix + buttonTitle.replace(/ /g,'_'))
+            href=urlPrefix + buttonTitle.replace(/ /g,'_'))
             span.circle(aria-hidden=true)
                 span.icon.arrow
             span.button-text= buttonTitle
+
+mixin img(n, url, caption, width)
+    - var url = "../src/assets/img/" + url
+    .image
+        img(src=url alt=caption width=width)
+        p= "Figure " + n + ": " + caption
+
+//- Function for links
+-   
+    var link = function(text, url) {
+        var attributes = 'class="in-text" href="' + url + '"'
+        var wrapper = '<a ' + attributes + '>' + text + '</a>'
+        return wrapper
+    }
+
+
+//- Function for tooltip definitions
+-   
+    var defn = function(term, definition) {
+        var attributes = 'class="definition in-text" data-toggle="tooltip" title="' + definition + '"'
+        var wrapper = '<span ' + attributes + '>' + term + '</span>'
+        return wrapper
+    }
 
 //- Function for in-text citation
 -
     var intext = function(num, text) {
         var link = "<a href=\"#citation" + num + "\">" + text + "</a>";
-        var wrapper = "<span id=\"intext" + num + "\">(" + link + ")</span>"
+        var wrapper = "<span id=\"intext" + num + "\" class=\"citation\">(" + link + ")</span>"
         return wrapper;
     }

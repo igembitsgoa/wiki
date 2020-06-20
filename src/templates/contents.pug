@@ -32,11 +32,7 @@ html(lang="en")
 
 
                         article#references
-                            - var sectionTitle = "References"
-                            h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-                                //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-                                button.btn.internal(data-toggle="tooltip" data-placement="right"
-                                    title="Copy link to this section!")= '#'
+                            +heading("References")
                             ol
                                 block citations
                                 - var counter = 0
@@ -50,9 +46,9 @@ html(lang="en")
                                             span.journalTitle= citation.journal
                                             | 
                                             span.journalInfo= citation.numbers
-                                        a(href=citation.doi target="_blank") CrossRef
-                                        a(href=scholar target="_blank") Google Scholar
-                                        a(href="#intext" + counter) Back to text
+                                        a.in-text(href=citation.doi target="_blank") CrossRef
+                                        a.in-text(href=scholar target="_blank") Google Scholar
+                                        a.in-text(href="#intext" + counter) Back to text
         footer 
             include footer_nav.pug
             include footer_brand.pug

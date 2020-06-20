@@ -76,21 +76,19 @@ window.addEventListener("scroll", () => {
 //     }
 // };
 
-$('.content .internal').tooltip();
+$('.content .section').tooltip();
 
-$('.content .internal').click(function () {
+$('.content .definition').tooltip();
+
+$('.content .section').click(function () {
     $(this)
         .tooltip('hide')
         .attr("data-original-title", "Doesn't work yet :/")
         .tooltip('show');
 });
 
-$('.content .internal').mouseout(function () {
+$('.content .section').mouseout(function () {
     $(this)
         .attr("data-original-title", "Copy a link to this section!");
 });
-
-
-
-
 

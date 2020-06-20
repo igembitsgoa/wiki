@@ -5,6 +5,22 @@
  ******************************/
 
 $whitey: #f0f0f0;
+$pink: #ea178c;
+$green: #0fc488;
+$green-background: #11d694;
+$dark-green: #12bc84;
+$white: #ffffff;
+$yellow: #ffdb59;
+$orange: #ffb454;
+$black: #3d3d3d;
+$grey: #dadada;
+$light-grey: #f7f7f7;
+$dark-grey: #8e8e8e;
+$selection-color: rgba(255, 233, 0, 0.4);
+
+::selection {
+  background-color: $selection-color;
+}
 
 header {
   background: 
@@ -79,17 +95,6 @@ header {
 /******************************
 * Main
 ******************************/
-$pink: #ea178c;
-$green: #0fc488;
-$green-background: #11d694;
-$dark-green: #12bc84;
-$white: #ffffff;
-$yellow: #ffdb59;
-$orange: #ffb454;
-$black: #3d3d3d;
-$grey: #dadada;
-$light-grey: #f7f7f7;
-$selection-color: rgba(255, 233, 0, 0.4);
 
 @include respond-above(xxl) {
   main .container {
@@ -254,15 +259,7 @@ main {
       margin-top: 1.5rem;
     }
 
-    h1,
-    h2,
-    h3 {
-      &::selection {
-        background-color: $selection-color;
-      }
-    }
-
-    button.internal {
+    button.section {
       font-size: 2rem;
       color: #bdbdbd;
       padding: 0;
@@ -292,66 +289,87 @@ main {
           animation: target-fade 3s 1;
         }
       }
+    }
 
-      &::selection {
-        background-color: $selection-color;
+    .image {
+      text-align: center;
+
+      img {
+        padding: 20px;
+      }
+
+      p {
+        text-align: center;
+        font-style: italic;
+        color: $black;
       }
     }
 
-    a,
-    span {
-      &::selection {
-        background-color: $selection-color;
+    table {
+      caption {
+        text-align: center;
+        font-style: italic;
+        margin-top: 15px;
+        font-family: "Merriweather", serif;
       }
     }
-  }
 
-  /**
-   *   Links
-   **/
 
-  a.in-text {
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    padding: 0 1px;
-    transition: color ease 0.3s;
-
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      background-color: $green;
-      height: 10%;
-    }
-
-    &:before {
-      width: 0%;
-      left: 0;
-      bottom: 0;
-      transition: width ease 0.4s;
-    }
-
-    &:after {
-      width: 100%;
-      left: 0;
-      bottom: 0;
-      transition: all ease 0.6s;
-    }
-
-    &:hover {
-      text-decoration: none;
+    .in-text {
       color: $black;
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 1px;
+      transition: color ease 0.3s;
 
-      &::before {
-        width: 100%;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: $green;
+        height: 3px;
       }
 
-      &::after {
-        left: 100%;
+      &:before {
         width: 0%;
-        transition: all ease 0.2s;
+        left: 0;
+        bottom: 0;
+        transition: width ease 0.4s;
+      }
+
+      &:after {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transition: all ease 0.6s;
+      }
+
+      &:hover {
+        text-decoration: none;
+        // color: $black;
+
+        &::before {
+          width: 100%;
+        }
+
+        &::after {
+          left: 100%;
+          width: 0%;
+          transition: all ease 0.2s;
+        }
+      }
+    }
+
+    span.in-text:hover {
+      cursor: pointer;
+    }
+
+    span.citation {
+      color:$dark-grey;
+
+      a {
+        color: $dark-grey;
       }
     }
   }
@@ -390,6 +408,11 @@ main {
   }
   a {
     margin-right: 15px;
+
+    &:after {
+      height: 2px;
+    }
+
   }
 }
 
