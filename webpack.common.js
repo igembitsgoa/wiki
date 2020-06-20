@@ -31,7 +31,7 @@ module.exports = {
             excludeChunks: ['index']
         }),
         new HTMLWebpackPlugin({
-            filename: 'Samplw/index.html',
+            filename: 'Sample/index.html',
             template: "./src/pages/Sample.pug"
         })
         // new HTMLWebpackPlugin({
