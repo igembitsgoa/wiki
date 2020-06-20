@@ -29,11 +29,11 @@ module.exports = {
             filename: 'Human_Practices/index.html',
             template: "./src/pages/Human_Practices.pug",
             excludeChunks: ['index']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'Samplw/index.html',
+            template: "./src/pages/Sample.pug"
         })
-        // new HTMLWebpackPlugin({
-        //     filename: 'Design/index.html',
-        //     template: "./src/contents/Design.pug"
-        // }),
         // new HTMLWebpackPlugin({
         //     filename: 'Results/index.html',
         //     template: "./src/contents/Results.pug"
