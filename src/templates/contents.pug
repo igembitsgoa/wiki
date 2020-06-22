@@ -50,7 +50,7 @@ html(lang="en")
                                         
                                         li(id= 'citation' + counter)
                                             p.author= citation.authors
-                                            p.title= citation.title
+                                            cite= citation.title
                                             p
                                                 span.journalTitle= citation.journal
                                                 | 
@@ -106,16 +106,18 @@ html(lang="en")
                                         li(id= 'citation' + counter)
                                             if citation.authors != ""
                                                 p.author= citation.authors + " " + citation.published
-                                                p.title= citation.title + " " + citation.site_name
+                                                cite= citation.title + " " + citation.site_name
                                                 p
                                                     span.details= "Retrieved " + citation.accessed + ", from "
                                                     a.in-text(href=citation.url target="_blank")= citation.url
+                                                a.in-text(href="#intext" + counter) Back to text
                                             else
-                                                p.title= citation.title + " " + citation.site_name
+                                                cite= citation.title + " " + citation.site_name
                                                 p
                                                     span.details= citation.published + " Retrieved " + citation.accessed + ", from "
                                                     a.in-text(href=citation.url target="_blank")= citation.url
-                                
+                                                a.in-text(href="#intext" + counter) Back to text
+
                                 if citations_books
                                     each citation in citations_books
                                         - counter = counter + 1
@@ -152,10 +154,12 @@ html(lang="en")
 
                                         li(id= 'citation' + counter)
                                             p.author= citation.authors + " " + citation.year_published
-                                            p.title= citation.title
+                                            cite= citation.title
                                             p
                                                 span.details= citation.publisher
-                                                
+                                            if citation.Google_Books_URL != ""
+                                                a.in-text(href=citation.Google_Books_URL target="_blank") Google Books
+                                            a.in-text(href="#intext" + counter) Back to text    
 
         footer 
             include footer_nav.pug

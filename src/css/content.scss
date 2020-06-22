@@ -314,7 +314,6 @@ main {
       }
     }
 
-
     .in-text {
       color: $black;
       position: relative;
@@ -366,7 +365,7 @@ main {
     }
 
     span.citation {
-      color:$dark-grey;
+      color: $dark-grey;
 
       a {
         color: $dark-grey;
@@ -398,13 +397,18 @@ main {
     text-align: left;
     margin-bottom: 0.2rem;
 
-    &.title {
-      font-weight: 600;
-    }
-
     .journalTitle {
       font-style: italic;
     }
+  }
+  cite {
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
   }
   a {
     margin-right: 15px;
@@ -412,7 +416,6 @@ main {
     &:after {
       height: 2px;
     }
-
   }
 }
 
