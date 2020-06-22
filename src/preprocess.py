@@ -1,5 +1,5 @@
 import os
-files = ['/src/templates/mixins.pug']
+files = ['/templates/mixins.pug']
 
 for filename in files:
     path = os.getcwd() + filename
