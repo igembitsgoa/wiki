@@ -5,7 +5,6 @@ cache: npm
 
 install:
   - npm ci
-  - python3
 
 before_script:
   - cd src
