@@ -5,9 +5,14 @@ cache: npm
 
 install:
   - npm ci
+  - python3
+
+before_script:
+  - cd src
+  - python3 preprocess.py
+  - python3 citations.py
 
 script:
-  - npm test
   - npm run build
 
 deploy:
