@@ -22,10 +22,10 @@ def main():
         for line in lines:
             stripped = line.rstrip()
             # read mode if citations
-            if stripped == '//- Citations':
+            if stripped == '//- Citations DOI Start':
                 mode = 'read'
                 continue
-            elif stripped == '//- ALSO DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.':
+            elif stripped == '//- Citations DOI End':
                 break
             
             if mode == 'read' and stripped is not '':
@@ -44,15 +44,11 @@ def main():
 
                 f.write(line)
                 # write mode if second warning line, after so that warning is written anyway
-                if stripped == '//- ALSO DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.':
+                if stripped == '//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.':
                     mode = 'write'
-                    f.write("prepend citations\n    -\n        var citations = [\n")
+                    f.write("prepend citations_doi\n    -\n        var citations_doi = [\n")
 
                 
-    # for doi in dois:
-    #     citation = getCitation(doi)
-
-
 def etiquette():
 
     app_name = 'iGEM BITS Goa Wiki'
@@ -86,7 +82,7 @@ def getCitation(doi):
 
     length = len(title)//2
     authors = response_text.split(title[:length])[0].replace('', '')
-    numbers = response_text.split(journal + ", ")[1]
+    numbers = response_text.split(journal + ", ")[1].replace('', '')
 
     citation = {
         'authors': authors,
@@ -111,6 +107,7 @@ def writeCitations(f, dois):
         f.write("            'numbers': '" + citation['numbers'] + "',\n")
         f.write("            'doi': '" + citation['doi'] + "',\n")
         f.write("        },\n")
+        counter += 1
 
 if __name__ == "__main__":
     main()

@@ -15,10 +15,12 @@ block article
     h2 Level 2 Heading
     p.
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-        increases the amount of !{intext(1, "Rosano et al., 2019")} waste produced by the system. The waste is mixed into animal feed and 
-        released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
+        resulting in a 20% loss of oil during processing.
+    p.
+        The irreversible binding between the AACs and chlorophyll prevents reuse of the AACs, leading
+        to increased costs for the manufacturer. This also increases the amount of 
+        !{intext(1, "Rosano et al., 2019")} waste produced by the system. The waste is mixed into animal feed 
+        and released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
     h3 Level 3 Heading
@@ -135,9 +137,8 @@ block article
                 td Mark
                 td Otto
                 td @mdo
-
     p.
-        The current industry practices for chlorophyll removal from green seed canola oil involve the use 
+        The current industry #[strong #[em practices]] for chlorophyll removal from green seed canola oil involve the use 
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
     h3 Level 3 Heading
@@ -154,39 +155,69 @@ append nextButton
     //- mind the quotes and the plus sign
     +button("Design")
 
-//- https://guides.libraries.psu.edu/apaquickguide/intext
-//- DO NOT MODIFY THE NEXT LINE. OR THIS LINE.
-//- Citations
+//- DO NOT MODIFY START AND END LINES.
+//- Citations DOI Start
     1. https://doi.org/10.1016/j.ijid.2019.08.003
     2. https://doi.org/10.1007/s00484-015-1117-4
     3. https://doi.org/10.1007/s00484-015-1117-4
+//- Citations DOI End
 
-//- ALSO DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
-prepend citations
+prepend citations_url
     -
-        var citations = [
+        var citations_url = [
+            {
+                // 4
+                "authors": "",
+                "title": "Agriculture: Crop production: Sugarcane. ",
+                "published": "",
+                "accessed": "July 2, 2020",
+                "url": "https://google.com"
+            }
+        ]
+
+//- prepend citations_books
+//-     -
+//-         var citations_books = [
+//-             {
+//-                 // 5
+//-                 "authors": 
+//-             }
+//-         ]
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+prepend citations_doi
+    -
+        var citations_doi = [
         {
             'id': '1',
             'authors': 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ',
             'title': 'Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).',
             'journal': 'International Journal of Infectious Diseases',
-            'numbers': '88, 127-134. ',
+            'numbers': '88, 127-134. ',
             'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003',
         },
         {
-            'id': '1',
+            'id': '2',
             'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
             'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
             'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
+            'numbers': '62(1), 57-67. ',
             'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
         },
         {
-            'id': '1',
+            'id': '3',
             'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
             'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
             'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
+            'numbers': '62(1), 57-67. ',
             'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
+        },
+        {
+            'id': '4',
+            'authors': '',
+            'title': 'Mathematical modeling in systems biology: an introduction.',
+            'journal': 'Choice Reviews Online',
+            'numbers': '51(07), 51-3830-51-3830. ',
+            'doi': 'https://doi.org/10.5860/choice.51-3830',
         },
         ]

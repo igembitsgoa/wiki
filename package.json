@@ -27,6 +27,7 @@
     "html-webpack-plugin": "^4.3.0",
     "jquery": "^3.5.1",
     "jstransformer-katex": "0.0.1",
+    "jstransformer-markdown-it": "^2.1.0",
     "jstransformer-verbatim": "^1.1.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
