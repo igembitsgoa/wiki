@@ -67,6 +67,7 @@ html(lang="en")
                                         - citation.published = citation.published.trim()
                                         - citation.accessed = citation.accessed.trim()
                                         - citation.url = citation.url.trim()
+                                        - citation.site_name = citation.site_name.trim()
                                         -
                                             if (citation.authors != "" && citation.authors[citation.authors.length - 1] != ".")
                                             {
@@ -93,13 +94,69 @@ html(lang="en")
                                             {
                                                 citation.title = citation.title + ".";
                                             }
+                                        -
+                                            if (citation.site_name != "")
+                                            {
+                                                if (citation.site_name[citation.site_name.length - 1] != ".")
+                                                {
+                                                    citation.site_name = citation.site_name + ".";
+                                                }
+                                            }
 
                                         li(id= 'citation' + counter)
-                                            p.author= citation.authors + " " + citation.published
+                                            if citation.authors != ""
+                                                p.author= citation.authors + " " + citation.published
+                                                p.title= citation.title + " " + citation.site_name
+                                                p
+                                                    span.details= "Retrieved " + citation.accessed + ", from "
+                                                    a.in-text(href=citation.url target="_blank")= citation.url
+                                            else
+                                                p.title= citation.title + " " + citation.site_name
+                                                p
+                                                    span.details= citation.published + " Retrieved " + citation.accessed + ", from "
+                                                    a.in-text(href=citation.url target="_blank")= citation.url
+                                
+                                if citations_books
+                                    each citation in citations_books
+                                        - counter = counter + 1
+                                        - citation.authors = citation.authors.trim()
+                                        - citation.title = citation.title.trim()
+                                        - citation.year_published = citation.year_published.trim()
+                                        - citation.publisher = citation.publisher.trim()
+                                        -
+                                            if (citation.authors != "" && citation.authors[citation.authors.length - 1] != ".")
+                                            {
+                                                citation.authors = citation.authors + ".";
+                                            }
+                                        -
+                                            if (citation.year_published != "")
+                                            {
+                                                if (citation.year_published[0] != "(")
+                                                {
+                                                    citation.year_published = "(" + citation.year_published + ")";
+                                                }
+                                                if (citation.year_published[citation.year_published.length - 1] != ".")
+                                                {
+                                                    citation.year_published = citation.year_published + ".";
+                                                }
+                                            }
+                                            else 
+                                            {
+                                                citation.year_published = "(n.d.)."
+                                            }
+                                        -
+                                            if (citation.title[citation.title.length - 1] != ".")
+                                            {
+                                                citation.title = citation.title + ".";
+                                            }
+
+                                        li(id= 'citation' + counter)
+                                            p.author= citation.authors + " " + citation.year_published
                                             p.title= citation.title
                                             p
-                                                span.accessedAndURL= "Retrieved " + citation.accessed + ", from "
-                                                a.in-text(href=citation.url target="_blank")= citation.url
+                                                span.details= citation.publisher
+                                                
+
         footer 
             include footer_nav.pug
             include footer_brand.pug
