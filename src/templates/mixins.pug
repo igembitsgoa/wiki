@@ -38,8 +38,8 @@ mixin image(n, url, caption, width)
 //- Function for tooltip definitions
 -   
     var defn = function(term, definition) {
-        var attributes = 'class="definition in-text" data-toggle="tooltip" title="' + definition + '"'
-        var wrapper = '<span ' + attributes + '>' + term + '</span>'
+        var attributes = 'data-toggle="tooltip" title="' + definition + '"'
+        var wrapper = '<dfn ' + attributes + '>' + term + '</dfn>'
         return wrapper
     }
 

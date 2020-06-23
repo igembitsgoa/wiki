@@ -78,7 +78,7 @@ window.addEventListener("scroll", () => {
 
 $('.content .section').tooltip();
 
-$('.content .definition').tooltip();
+$('dfn').tooltip();
 
 $('.content .section').click(function () {
     $(this)
