@@ -4,8 +4,7 @@ node_js:
 cache: npm
 
 before_install:
-  - git diff --name-only HEAD...$TRAVIS_BRANCH
-  - sh list_modified_files.sh
+  - bash list_modified_files.sh
 
 install:
   - npm ci
