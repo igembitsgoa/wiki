@@ -21,7 +21,7 @@ mixin button(buttonTitle)
             span.button-text= buttonTitle
 
 mixin image(n, url, caption, width)
-    - var url = "./src/assets/img/" + url
+    - var url = "../assets/img/" + url
     .image
         img(src=url alt=caption width=width)
         p= "Figure " + n + ": " + caption
