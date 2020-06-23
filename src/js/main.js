@@ -62,33 +62,3 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
-// change navbar background based on scroll
-// window.onscroll = function () {
-//     "use strict";
-//     if ((document.body.scrollTop >= scrollHeight || document.documentElement.scrollTop >= scrollHeight)
-//         && menuToggle.checked == false) {
-//         navbar.classList.add('nav-colored');
-//         navbar.classList.remove('nav-transparent');
-//     }
-//     else {
-//         navbar.classList.add('nav-transparent');
-//         navbar.classList.remove('nav-colored');
-//     }
-// };
-
-$('.content .section').tooltip();
-
-$('dfn').tooltip();
-
-$('.content .section').click(function () {
-    $(this)
-        .tooltip('hide')
-        .attr("data-original-title", "Doesn't work yet :/")
-        .tooltip('show');
-});
-
-$('.content .section').mouseout(function () {
-    $(this)
-        .attr("data-original-title", "Copy a link to this section!");
-});
-

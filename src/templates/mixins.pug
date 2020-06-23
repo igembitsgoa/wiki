@@ -2,7 +2,6 @@
 
 mixin heading(sectionTitle)
     h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-        //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
         button.btn.section(data-toggle="tooltip" data-placement="right"
             title="Copy link to this section!")= '#'
 
