@@ -7,6 +7,6 @@ for filename in files:
         lines = file.readlines()
 
     with open(path, 'w') as file:
-        file.write("- urlPrefix = \"https:///igembitsgoa.github.io/wiki/\"\n//- ")
+        file.write("- urlPrefix = \"/wiki/\"\n//- ")
         for line in lines:
             file.write(line)
