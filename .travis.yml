@@ -4,6 +4,7 @@ node_js:
 cache: npm
 
 before_install:
+  - echo $TRAVIS_COMMIT
   - bash list_modified_files.sh
 
 install:
@@ -15,6 +16,7 @@ before_script:
   - python3 citations.py
 
 script:
+  - npm test
   - npm run build
 
 deploy:
