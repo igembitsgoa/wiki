@@ -1,5 +1,4 @@
-- urlPrefix = "https:///igembitsgoa.github.io/wiki/"
-//- - urlPrefix = "/"
+- urlPrefix = "/"
 
 mixin heading(sectionTitle)
     h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
@@ -22,7 +21,7 @@ mixin button(buttonTitle)
             span.button-text= buttonTitle
 
 mixin image(n, url, caption, width)
-    - var url = "./src/assets/img/" + url
+    - var url = "../assets/img/" + url
     .image
         img(src=url alt=caption width=width)
         p= "Figure " + n + ": " + caption
@@ -39,8 +38,8 @@ mixin image(n, url, caption, width)
 //- Function for tooltip definitions
 -   
     var defn = function(term, definition) {
-        var attributes = 'class="definition in-text" data-toggle="tooltip" title="' + definition + '"'
-        var wrapper = '<span ' + attributes + '>' + term + '</span>'
+        var attributes = 'data-toggle="tooltip" title="' + definition + '"'
+        var wrapper = '<dfn ' + attributes + '>' + term + '</dfn>'
         return wrapper
     }
 

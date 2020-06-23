@@ -1,0 +1,4 @@
+
+> wiki@1.0.0 build /home/pranav/code/igem-wiki/wiki
+> webpack --config webpack.production.js
+

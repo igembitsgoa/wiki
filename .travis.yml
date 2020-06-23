@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - 12.16.3
+cache: npm
+
+install:
+  - npm ci
+
+before_script:
+  - cd src
+  - python3 preprocess.py
+  - python3 citations.py
+
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: dist
+  on:
+    branch: master

@@ -142,7 +142,7 @@ section {
   .content {
     font-family: "Merriweather", serif;
 
-  /**
+    /**
    * Section Title
   **/
 
@@ -203,6 +203,35 @@ section {
       color: $black;
       span {
         color: $green;
+      }
+    }
+    a.button.read-more {
+      .circle {
+        background-color: $green !important;
+        .icon {
+          &.arrow {
+            background-color: none !important;
+            &::before {
+              border-color: $white !important;
+            }
+          }
+        }
+      }
+      .button-text {
+        color: black !important;
+        // font-weight: 900 !important;
+      }
+      &:hover {
+        .circle {
+          .icon {
+            &.arrow {
+              background: $white !important;
+            }
+          }
+        }
+        .button-text {
+          color: $white !important;
+        }
       }
     }
   }

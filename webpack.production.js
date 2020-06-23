@@ -12,7 +12,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new MiniCSSExtractPlugin({
-            filename: "[name].css"
+            filename: "css/[name].css"
         }),
         new CleanWebpackPlugin()
     ],
@@ -21,20 +21,45 @@ module.exports = merge(common, {
             {
                 test: /\.scss$/i,
                 use: [
-                    MiniCSSExtractPlugin.loader,
-                    'css-loader', 
-                    'sass-loader'
+                    {
+                        loader: MiniCSSExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        },
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ],
             },
             {
-                test: /\.(svg|png|jpg|jpeg|gif|ttf|woff2|woff|eot|)$/i,
+                test: /\.(svg|gif|ttf|woff2|woff|eot)$/i,
                 use: {
                     loader: "file-loader",
                     options: {
                         name: "[path][name].[ext]",
                         context: path.resolve(__dirname, "src/"),
                         outputPath: ".",
-                        publicPath: ".",
+                        publicPath: "../",
+                        useRelativePaths: true,
+                    }
+                }
+            },
+            {
+                test: /\.(png|jpg|jpeg)$/i,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[ext]",
+                        context: path.resolve(__dirname, "src/"),
+                        outputPath: ".",
+                        publicPath: "../",
                         useRelativePaths: true,
                     }
                 }

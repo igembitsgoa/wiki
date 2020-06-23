@@ -306,14 +306,53 @@ main {
     }
 
     table {
+      border: 1px solid #dee2e6;
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
+      border-collapse: collapse;
+
+      thead {
+        th,
+        td {
+          vertical-align: bottom;
+          border-bottom: 2px solid #dee2e6;
+        }
+      }
+
+      tbody {
+        th,
+        td {
+          border: 1px solid #dee2e6;
+        }
+      }
+
+      tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
+        vertical-align: center;
+        border: 1px solid #dee2e6;
+      }
+
+      a {
+        color: $dark-green;
+      }
+
       caption {
         text-align: center;
         font-style: italic;
         margin-top: 15px;
         font-family: "Merriweather", serif;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        color: #6c757d;
+        caption-side: bottom;
       }
     }
-
 
     .in-text {
       color: $black;
@@ -366,11 +405,15 @@ main {
     }
 
     span.citation {
-      color:$dark-grey;
+      color: $dark-grey;
 
       a {
         color: $dark-grey;
       }
+    }
+
+    dfn {
+      border-bottom: 1px solid black;
     }
   }
 }
@@ -398,13 +441,18 @@ main {
     text-align: left;
     margin-bottom: 0.2rem;
 
-    &.title {
-      font-weight: 600;
-    }
-
     .journalTitle {
       font-style: italic;
     }
+  }
+  cite {
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
   }
   a {
     margin-right: 15px;
@@ -412,7 +460,6 @@ main {
     &:after {
       height: 2px;
     }
-
   }
 }
 
