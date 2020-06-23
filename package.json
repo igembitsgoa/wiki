@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.development.js --open",
-    "build": "webpack --config webpack.production.js"
+    "build": "webpack --config webpack.production.js",
+    "test": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "crossref": "^1.2.1",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
+    "glob-exec": "^0.1.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "jquery": "^3.5.1",
@@ -49,6 +51,7 @@
   "private": true,
   "dependencies": {
     "js-yaml": "^3.14.0",
+    "pug-lint": "^2.6.0",
     "websocket-extensions": "^0.1.4"
   }
 }
