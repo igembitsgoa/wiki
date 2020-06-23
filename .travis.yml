@@ -4,7 +4,6 @@ node_js:
 cache: npm
 
 before_install:
-  - echo $TRAVIS_COMMIT
   - bash list_modified_files.sh
 
 install:

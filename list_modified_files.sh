@@ -8,3 +8,4 @@ for CHANGED_FILE in $CHANGED_FILES; do
   echo $CHANGED_FILE
 done
 
+exit 1
