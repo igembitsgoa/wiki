@@ -16,12 +16,12 @@ module.exports = merge(common, {
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(svg|png|jpg|jpeg|gif|ttf|woff2|woff|eot|)$/i,
+                test: /\.(svg|png|jpg|jpeg|gif|ttf|woff2|woff|eot)$/i,
                 use: {
                     loader: "file-loader",
                     options: {
                         name: "[path][name].[ext]",
-                        // context: path.resolve(__dirname, "src/"),
+                        context: path.resolve(__dirname, "src/"),
                         outputPath: ".",
                         publicPath: ".",
                         useRelativePaths: true,

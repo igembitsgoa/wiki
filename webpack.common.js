@@ -60,12 +60,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.pug$/i,
-                use: ['pug-loader']
-            },
-            {
-                test: /\.html$/i,
-                use: ["html-loader"]
+                test: /\.pug$/,
+                use: ['html-loader', 'pug-html-loader']
             }
         ],
     },
