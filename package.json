@@ -29,12 +29,15 @@
     "html-webpack-plugin": "^4.3.0",
     "jquery": "^3.5.1",
     "jstransformer-markdown-it": "^2.1.0",
+    "jstransformer-mathjax": "0.0.3",
     "jstransformer-verbatim": "^1.1.1",
+    "markdown-it": "^11.0.0",
+    "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-multimd-table": "^4.0.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
-    "pug": "^3.0.0",
+    "pug": "^2.0.4",
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "sass": "^1.26.8",
@@ -47,7 +50,10 @@
   },
   "private": true,
   "dependencies": {
+    "@gerhobbelt/markdown-it-attrs": "^3.0.3-18",
+    "@gerhobbelt/markdown-it-regexp": "^0.5.0-3",
     "js-yaml": "^3.14.0",
+    "markdown-it-attrs": "^3.0.3",
     "pug-lint": "^2.6.0",
     "websocket-extensions": "^0.1.4"
   }

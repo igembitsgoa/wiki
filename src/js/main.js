@@ -1,6 +1,4 @@
-import "bootstrap"
-import "jquery"
-import $ from 'jquery';
+
 
 var navbar = document.querySelector('.navbar');
 var menuToggle = document.getElementById('menuToggle');

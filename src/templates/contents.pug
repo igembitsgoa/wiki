@@ -6,6 +6,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title #{title} | SugarGain | iGEM BITS Goa
+        if requireMathJax
+            script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
     body
         include nav.pug
         header.d-flex.justify-content-center
@@ -32,7 +34,8 @@ html(lang="en")
 
 
                         article#references
-                            +heading("References")
+                            h1 References
+                            
                             ol
                                 block citations_doi
                                 block citations_url

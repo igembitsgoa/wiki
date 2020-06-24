@@ -242,8 +242,9 @@ main {
       color: $dark-green;
       scroll-margin-top: 100px;
 
-      span {
+      button {
         font-weight: 400;
+        margin-right: 25px;
       }
     }
 
@@ -291,6 +292,18 @@ main {
       }
     }
 
+    li {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      word-spacing: 0.1rem;
+      color: #3d3d3d;
+    }
+
+    mark {
+      background: $selection-color;
+    }
+
     .image {
       text-align: center;
 
@@ -303,6 +316,41 @@ main {
         font-style: italic;
         color: $black;
       }
+    }
+
+    blockquote {
+      font-size: 1.4em;
+      width: 60%;
+      margin: 50px auto;
+      font-style: italic;
+      color: #555555;
+      padding: 1.2em 30px 0.7em 75px;
+      border-left: 8px solid #78c0a8;
+      line-height: 1.6;
+      position: relative;
+      // background:#EDEDED;
+    }
+
+    blockquote::before {
+      font-family: Arial;
+      content: "\201C";
+      color: #78c0a8;
+      font-size: 4em;
+      position: absolute;
+      left: 10px;
+      top: -10px;
+    }
+
+    blockquote::after {
+      content: "";
+    }
+
+    blockquote strong {
+      display: block;
+      color: #333333;
+      font-style: normal;
+      font-weight: bold;
+      margin-top: 1em;
     }
 
     table {
@@ -340,6 +388,10 @@ main {
 
       a {
         color: $dark-green;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       caption {
@@ -354,61 +406,16 @@ main {
       }
     }
 
-    .in-text {
-      color: $black;
-      position: relative;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 1px;
-      transition: color ease 0.3s;
-
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        background-color: $green;
-        height: 3px;
-      }
-
-      &:before {
-        width: 0%;
-        left: 0;
-        bottom: 0;
-        transition: width ease 0.4s;
-      }
-
-      &:after {
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        transition: all ease 0.6s;
-      }
-
-      &:hover {
-        text-decoration: none;
-        // color: $black;
-
-        &::before {
-          width: 100%;
-        }
-
-        &::after {
-          left: 100%;
-          width: 0%;
-          transition: all ease 0.2s;
-        }
-      }
-    }
-
     span.in-text:hover {
       cursor: pointer;
     }
 
-    span.citation {
+    a.citation {
       color: $dark-grey;
+      scroll-margin-top: 200px;
 
-      a {
-        color: $dark-grey;
+      &:target {
+        animation: target-fade 3s 1;
       }
     }
 
@@ -422,8 +429,57 @@ main {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  margin-left: 5px;
 }
 
+.content p,
+#references li {
+  a:not(.citation) {
+    color: $black;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $green;
+      height: 3px;
+    }
+
+    &:before {
+      width: 0%;
+      left: 0;
+      bottom: 0;
+      transition: width ease 0.4s;
+    }
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      transition: all ease 0.6s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      // color: $black;
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+      }
+    }
+  }
+}
 #references {
   ol {
     padding-inline-start: 30px;
@@ -431,6 +487,7 @@ main {
 
   li {
     padding: 0 0 20px 10px;
+    scroll-margin-top: 100px;
 
     &:target {
       animation: target-fade 3s 1;
@@ -457,8 +514,9 @@ main {
   a {
     margin-right: 15px;
 
+    &:before,
     &:after {
-      height: 2px;
+      height: 2px !important;
     }
   }
 }
