@@ -480,6 +480,10 @@ main {
     }
   }
 }
+
+nobr .math span {
+  border-left-width: 0px !important;
+}
 #references {
   ol {
     padding-inline-start: 30px;

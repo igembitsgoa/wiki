@@ -8,17 +8,17 @@ import $ from 'jquery';
 
 // format links
 $('.content h1').each(function () {
-        var text = $(this).text();
-        $(this).text(text + ' ');
-        text = text.trim().replace(/ /g,'');
-        $(this).attr('id', text);
-        var button = document.createElement('button');
-        button.classList.add('btn', 'section');
-        $(button).attr('data-toggle', 'tooltip');
-        $(button).attr('data-placement', 'right');
-        $(button).attr('title', 'Copy link to this section!');
-        $(button).text('# ');
-        $(this).append(button);
+    var text = $(this).text();
+    $(this).text(text + ' ');
+    text = text.trim().replace(/ /g, '');
+    $(this).attr('id', text);
+    var button = document.createElement('button');
+    button.classList.add('btn', 'section');
+    $(button).attr('data-toggle', 'tooltip');
+    $(button).attr('data-placement', 'right');
+    $(button).attr('title', 'Copy link to this section!');
+    $(button).text('# ');
+    $(this).append(button);
 });
 
 // format in-text citations
@@ -26,8 +26,7 @@ $('.content a').each(function () {
     var link = $(this).prop('href');
     var matches = link.match('#citation(.*)')
     console.log(matches);
-    if (matches)
-    {
+    if (matches) {
         $(this).addClass('citation');
         $(this).attr('id', 'intext' + matches[1]);
         var text = $(this).text();
@@ -48,8 +47,6 @@ $('dfn').each(function () {
 
 $('.content .section').tooltip();
 
-
-
 $('.content .section').click(function () {
     $(this)
         .tooltip('hide')
@@ -61,3 +58,12 @@ $('.content .section').mouseout(function () {
     $(this)
         .attr("data-original-title", "Copy a link to this section!");
 });
+
+spans = document.querySelectorAll('nobr .math span')
+for (i = 0; i < spans.length; i++) {
+    spans[i].style.borderLeftWidth = '0px';
+}
+
+window.onload = function(){
+    alert("It's loaded!")
+};

@@ -38,7 +38,9 @@ html(lang="en")
                             |  with all this text so you guys can edit. 
                         p 
                             a(href)
-                        +button("Description")
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Description")
         section#design.yellow
             .container
                 .row
@@ -54,7 +56,9 @@ html(lang="en")
                             Also talk about the delivery mechanism. Maybe this is the right place to mention why we went 
                             with a syn bio solution instead of just injecting the inhibitor.
                         
-                        +button("Design")
+                        
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Design")
 
                     .sidebar.col-3
                         h3.
@@ -81,7 +85,9 @@ html(lang="en")
                             Unusual safety issues (like the one on the left?) also have to be mentioned but probably
                             not on the home page.
                         
-                        +button("Safety")
+                        
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Safety")  
         
         section#human-practices.green
             .container
@@ -97,7 +103,9 @@ html(lang="en")
                             ethics, safety, security, and sustainability of your project, and to show how this exploration 
                             feeds back into your project purpose, design, and execution.
 
-                        +button("Human Practices")
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Human Practices")
 
                     .sidebar.col-3
                         h3.
@@ -120,7 +128,10 @@ html(lang="en")
                         p.
                             From the iGEM docs: Sharing and collaboration are core values of iGEM. We encourage you to 
                             reach out and work with other teams on difficult problems that you can more easily solve together.
-                        +button("Collaborations")
+                        
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Collaborations")
         section#science-communication.orange
             .container
                 .row
@@ -138,7 +149,9 @@ html(lang="en")
                             Also write about Abhighyan insta posts? Is that sci-comn or public engagement? 
                             I'll just call the button Communication for now.
                         
-                        +button("Communication")
+                        
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Communication")
                     
                     .sidebar.col-3
                         h3.
