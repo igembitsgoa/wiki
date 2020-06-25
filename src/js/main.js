@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
             navbar.classList.remove(colored);
         }
 
-        if (currentScroll >= 2 * scrollHeight) {
+        if (currentScroll >= scrollHeight) {
             if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
                 // down
                 body.classList.remove(scrollUp);
