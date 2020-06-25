@@ -3,7 +3,7 @@
 **/
 
 .navbar {
-  height: 80px;
+  // height: 80px;
   transition: all 0.3s ease, transform 0.5s ease;
 }
 
@@ -47,7 +47,7 @@ nav.nav-transparent {
 }
 
 .navbar-brand {
-  font-size: 2.25rem !important;
+  font-size: 2.25rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   position: relative;
@@ -277,12 +277,27 @@ $whitey: #f0f0f0;
         }
       }
     }
+  }
+}
 
-    // ~ hr {
-    //   width: 60%;
-    //   height: 0px;
-    //   margin-top: 0.5rem;
-    // }
+@include respond-below(xs) {
+  .navbar-brand {
+    font-size:1.75rem;
+  }
+  
+  #menuSwitch {
+    height: 2px;
+    width: 22px;
+    &:before {
+      top: -6px;
+      width:18px;
+      height: 2px;
+    }
+    &:after {
+      top: 4px;
+      width: 18px;
+      height: 2px;
+    }
   }
 }
 
