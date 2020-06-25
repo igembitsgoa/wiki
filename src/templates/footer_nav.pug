@@ -36,7 +36,7 @@ include mixins.pug
   .container
     .row.justify-content-between
       each header in navItems
-        .col
+        .col-sm-6.col-md-4.col-lg-2
           h1= header.title
           ul
             each item in header.items
