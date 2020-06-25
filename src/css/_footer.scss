@@ -84,6 +84,10 @@ $light-grey: #878787;
   width: 100%;
   font-family: "Lato";
 
+  .row {
+    margin-right: 0;
+  }
+
   .container {
     padding: 75px 0 75px 50px;
   }
