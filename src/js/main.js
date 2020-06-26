@@ -8,6 +8,7 @@ var navbar = document.querySelector('.navbar');
 var menuToggle = document.getElementById('menuToggle');
 var scrollHeight = 100; // make navbar colored/hidden beyond this
 var sm = 768; // small viewport width
+var xs = 576; // medium viewport width
 
 // make navbar transparent when fullscreen menu is opened
 function makeNavbarTransparent() {
@@ -96,7 +97,7 @@ $('#menuSwitch').on('click', function () {
 
 // show/hide footer on mobile
 $('.footer-heading').on('click', function () {
-    if (getWidth() <= sm) {
+    if (getWidth() <= xs) {
         if ($(this).siblings('ul').css('display') === 'none') {
             $('#footerNav ul').slideUp();
             $(this).siblings('ul').slideDown();
