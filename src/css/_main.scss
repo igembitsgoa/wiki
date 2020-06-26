@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+// * + * {
+//   margin-top: 0;
+// }
+
 @import "_fonts.scss";
 @import "_media_queries.scss";
 @import "_nav.scss";

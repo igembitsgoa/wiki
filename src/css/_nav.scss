@@ -2,7 +2,6 @@
 * Navbar 
 **/
 
-
 .navbar {
   // height: 80px;
   transition: all 0.3s ease, transform 0.5s ease;
@@ -36,7 +35,7 @@ nav.nav-colored {
   -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
-  
+
   .navbar-brand {
     color: black;
   }
@@ -58,7 +57,6 @@ nav.nav-transparent {
     color: white;
   }
 }
-
 
 /**
  * Fullscreen Nav Styles
@@ -204,7 +202,9 @@ $whitey: #f0f0f0;
 
 #menuContent {
   position: relative;
-  // text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
 
   .col-12 {
     padding-left: 8%;
@@ -214,25 +214,23 @@ $whitey: #f0f0f0;
     padding: 0;
   }
 
-  h1 {
+  a.nav-heading {
     font-family: "Lato", sans-serif;
     font-weight: 900;
-    font-size: 3.5vmin;
+    font-size: 2rem;
     line-height: 5.5vmin;
-    // color: #2a2f2f;
-    // background-color: #4abf66;
     color: $green;
-    margin: 0;
-    margin-bottom: 8px;
+    padding: 0 0 1.25rem 0;
+    cursor: default;
   }
 
   li {
-    padding-bottom: 5px;
+    padding: 0.25rem 0;
 
     a {
       font-family: "Lato", sans-serif;
       font-weight: 500;
-      font-size: 2.5vmin;
+      font-size: 1.5rem;
       color: white;
       position: relative;
       text-decoration: none;
@@ -284,7 +282,7 @@ $whitey: #f0f0f0;
   }
 }
 
-@include respond-below(xs) {
+@include respond-below(sm) {
   .navbar-brand {
     font-size: 1.75rem;
     margin-left: 0.75rem;
@@ -308,26 +306,45 @@ $whitey: #f0f0f0;
       height: 2px;
     }
   }
-}
-
-@include respond-below(md) {
   #menuContent {
-    h1 {
-      font-size: 2.7vmax !important;
+    a.nav-heading {
+      font-size: 1.65rem;
+      font-weight: 600;
+      cursor: pointer;
     }
-    a {
-      font-size: 2.2vmax;
+
+    ul {
+      padding: 0.75rem 0 0 0;
+      display: none;
+      margin-bottom: 0;
+
+      a {
+        font-size: 1.4rem;
+      }
+
+      ~ hr {
+        width: 25%;
+      }
     }
   }
 }
 
 @include respond-below(xs) {
-  #menuContent li {
-    a {
-      display: none;
+
+  #menuContent {
+    margin-left: 0.9rem;
+
+    a.nav-heading {
+      font-size: 1.5rem;
+      font-weight: 600;
     }
-    ~ hr {
-      width: 25%;
+
+    ul {
+
+      a {
+        font-size: 1.25rem;
+      }
     }
   }
 }
+

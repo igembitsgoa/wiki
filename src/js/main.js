@@ -1,4 +1,8 @@
 
+import "bootstrap";
+var $ = require('jquery');
+window.jQuery = $;
+window.$ = $;
 
 var navbar = document.querySelector('.navbar');
 var menuToggle = document.getElementById('menuToggle');
@@ -60,3 +64,25 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
+function getWidth() {
+    return Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+    );
+}
+
+// show/hide nav on mobile
+$('.nav-heading').on('click', function () {
+    if (getWidth() <= 768) {
+        if ($(this).siblings('ul').css('display') === 'none') {
+            $('#menuContent ul').slideUp();
+            $(this).siblings('ul').slideDown();
+        }
+        else {
+            $('#menuContent ul').slideUp();
+        }
+    }
+})

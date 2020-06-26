@@ -1,11 +1,6 @@
 import "../css/content.scss";
 import "./main";
 
-import "bootstrap";
-import "jquery";
-import $ from 'jquery';
-
-
 // format links
 $('.content h1').each(function () {
     var text = $(this).text();
@@ -64,6 +59,3 @@ for (i = 0; i < spans.length; i++) {
     spans[i].style.borderLeftWidth = '0px';
 }
 
-window.onload = function(){
-    alert("It's loaded!")
-};

@@ -8,6 +8,10 @@ module.exports = {
     },
     devtool: "none",                            // avoid eval statements
     plugins: [
+        // new webpack.ProvidePlugin({
+        //     $: "jquery",
+        //     jQuery: "jquery"
+        // }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: "./src/index.pug",
