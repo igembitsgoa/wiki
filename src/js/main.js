@@ -7,6 +7,7 @@ window.$ = $;
 var navbar = document.querySelector('.navbar');
 var menuToggle = document.getElementById('menuToggle');
 var scrollHeight = 100; // make navbar colored/hidden beyond this
+var sm = 768; // small viewport width
 
 // make navbar transparent when fullscreen menu is opened
 function makeNavbarTransparent() {
@@ -76,13 +77,32 @@ function getWidth() {
 
 // show/hide nav on mobile
 $('.nav-heading').on('click', function () {
-    if (getWidth() <= 768) {
+    if (getWidth() <= sm) {
         if ($(this).siblings('ul').css('display') === 'none') {
             $('#menuContent ul').slideUp();
             $(this).siblings('ul').slideDown();
         }
         else {
             $('#menuContent ul').slideUp();
+        }
+    }
+})
+
+$('#menuSwitch').on('click', function () {
+    if (getWidth() <= sm) {
+        $('#menuContent ul').slideUp();
+    }
+})
+
+// show/hide footer on mobile
+$('.footer-heading').on('click', function () {
+    if (getWidth() <= sm) {
+        if ($(this).siblings('ul').css('display') === 'none') {
+            $('#footerNav ul').slideUp();
+            $(this).siblings('ul').slideDown();
+        }
+        else {
+            $('#footerNav ul').slideUp();
         }
     }
 })
