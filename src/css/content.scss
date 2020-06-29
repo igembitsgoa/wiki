@@ -35,7 +35,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 70vh;
+  min-height: 70vh;
 
   .container {
     padding: 0;
@@ -46,15 +46,13 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 160px;
-    margin-bottom: 6em;
+    margin-bottom: 6rem;
 
     h1 {
       color: $whitey;
       font-family: "Montserrat";
       font-weight: 700;
-      font-size: 8rem;
-      height: 250px;
+      font-size: calc(3rem + 4.5vw);
     }
   }
 }
@@ -115,7 +113,7 @@ header {
 }
 
 main {
-  padding: 70px 0 50px 0;
+  padding: 3rem 0 2rem 0;
 
   .sidebar {
     padding: 30px 100px 0 5px;
@@ -134,6 +132,8 @@ main {
 
         li {
           margin: 15px 0;
+          display: flex;
+          justify-content: left;
 
           .circle {
             @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
@@ -229,7 +229,8 @@ main {
     font-family: "Merriweather", serif;
 
     article {
-      padding: 0 35px 35px 35px;
+      padding: calc(1rem + 0.2vw);
+      padding-top: 0;
       background-color: $light-grey;
     }
 
@@ -240,11 +241,34 @@ main {
       padding: 30px 0 15px 0;
       word-spacing: 0.3rem;
       color: $dark-green;
-      scroll-margin-top: 100px;
-
+      
       button {
         font-weight: 400;
         margin-right: 25px;
+      }
+    }
+    
+    h1,
+    h2 {
+      scroll-margin-top: 100px;
+      .anchor {
+        float: left;
+        // padding-right: 4px;
+        line-height: 2;
+        opacity: 0.01;
+        background-image: url(../assets/icons/link-solid.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
+          brightness(87%) contrast(84%);
+        border: 0px transparent solid;
+        transition: all ease 0.2s;
+      }
+
+      &:hover .anchor {
+        opacity: 100;
       }
     }
 
@@ -534,6 +558,48 @@ footer {
     }
     a {
       color: $black;
+    }
+  }
+}
+
+@include respond-below(md) {
+  header {
+    min-height: 55vh;
+    #heading {
+      margin-left: 1.75rem;
+    }
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+}
+
+@include respond-below(sm) {
+  header {
+    min-height: 40vh;
+    #heading {
+      h1 {
+        font-size: calc(3rem + 1.75vw);
+      }
+    }
+  }
+
+  main {
+    padding: 0;
+
+    .content {
+      padding-left: 0;
+      padding-right: 0;
+
+      article {
+        padding: calc(1.5rem + 0.2vw);
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
     }
   }
 }
