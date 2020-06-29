@@ -2,9 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Description"
-    - var contents = ['Problem', 'Project Design', 'Dummy Section', 'References']
     - var requireMathJax = true
-    //- Don't forget References
 
 block article
     //- mind the quotes and the plus sign
@@ -18,7 +16,7 @@ block article
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
 
-        ## Level 2 Heading
+        ## Level 2 Heading1
 
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing.
@@ -51,7 +49,7 @@ block article
 
     :markdown-it(html)
 
-        ## Level 2 Heading
+        ## Level 2 Heading2
 
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
@@ -99,26 +97,7 @@ block article
             y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
         $$
         
-        $$
-            \left(\beta mc^{2}+c\left(\sum_{n{\mathop {=}}1}^{3}\alpha _{n}p_{n}\right)\psi (x,t)=i\hbar 
-            {\frac{\partial \psi (x,t)}{\partial t}})
-        $$
-        
     :markdown-it(html)
-        * hello
-        * h1
-
-        ---
-
-
-
-
-        1. hello
-            1. hi
-                * what's up
-        1. welcome
-        1. hello
-
         <mark>here be dragons</mark>
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])

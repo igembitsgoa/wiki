@@ -17,16 +17,17 @@ html(lang="en")
         main
             .container
                 .row
-                    .sidebar.col-3
+                    .sidebar.col-lg-3
                         .nav#contents
                             ul
-                                each item in contents
-                                    li.d-flex.justify-content-left
-                                        span.circle(aria-hidden=true)
-                                            span.icon.arrow
-                                        a(href='#' + item.replace(/ /g,'') )= item 
+                                //- Filled automatically from js
+                                //- each item in contents
+                                //-     li
+                                //-         span.circle(aria-hidden=true)
+                                //-             span.icon.arrow
+                                //-         a(href='#' + item.replace(/ /g,'') )= item 
                                         // regex to remove spaces
-                    .content.col-9
+                    .content.col-lg-9
                         article
                             block article
 

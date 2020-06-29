@@ -2,19 +2,53 @@ import "../css/content.scss";
 import "./main";
 
 // format links
-$('.content h1').each(function () {
+$('.content h1, .content h2').each(function () {
     var text = $(this).text();
     $(this).text(text + ' ');
-    text = text.trim().replace(/ /g, '');
-    $(this).attr('id', text);
-    var button = document.createElement('button');
-    button.classList.add('btn', 'section');
-    $(button).attr('data-toggle', 'tooltip');
-    $(button).attr('data-placement', 'right');
-    $(button).attr('title', 'Copy link to this section!');
-    $(button).text('# ');
-    $(this).append(button);
+    var id = text.trim().replace(/ /g, '');
+    
+    if ($(this).prop('tagName') == 'H2') {
+        id = $(this).prevAll('h1:first').attr('id') + "-" + id;
+    }
+    
+    $(this).attr('id', id);
+    
+    var height = $(this).height();
+    var link = document.createElement('a');
+    link.classList.add('anchor');
+    $(link).attr('href', "#" + id);
+    $(link).attr('aria-hidden', "true");
+    $(link).css('margin-left', -height*0.5);
+    $(link).css('margin-top', height*0.265);
+    $(link).css('border-right-width', height*0.1);
+    $(link).css('height', height*0.5);
+    $(link).css('width', height*0.5);
+    $(this).prepend(link);
+
+    // add to table of contents if h1
+    if ($(this).prop('tagName') == 'H1') {
+        var item = document.createElement('li');
+        
+        var span1 = document.createElement('span');
+        span1.classList.add('circle');
+        $(span1).attr('aria-hidden', 'true');
+
+        var span2 = document.createElement('span');
+        span2.classList.add('icon', 'arrow');
+        span1.append(span2);
+        item.append(span1);
+
+        var a = document.createElement('a');
+        $(a).attr('href', '#' + id);
+        $(a).text(text);
+
+        item.append(a);
+
+        $('#contents ul').append(item);
+    }
+
 });
+
 
 // format in-text citations
 $('.content a').each(function () {
