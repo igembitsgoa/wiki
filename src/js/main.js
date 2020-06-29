@@ -11,19 +11,20 @@ var sm = 768; // small viewport width
 var xs = 576; // medium viewport width
 
 // reset iGEM
-var ids = ['HQ_page', 'content', 'bodyContent', 'mw-content-text']
-for (var i = 0; i < ids.length; i++)
-    document.querySelector('#' + ids[i]).removeAttribute('id');
-var classes = ['mw-content-ltr']
-for (var i = 0; i < classes.length; i++)
-{
-    var elements = document.querySelectorAll('.' + classes[i]);
-    for (var j = 0; j < elements.length; j++)
+if (window.location.href.includes('igem')) {
+    var ids = ['HQ_page', 'content', 'bodyContent', 'mw-content-text']
+    for (var i = 0; i < ids.length; i++)
+        document.querySelector('#' + ids[i]).removeAttribute('id');
+    var classes = ['mw-content-ltr']
+    for (var i = 0; i < classes.length; i++)
     {
-        elements[j].classList.remove(classes[i]);
+        var elements = document.querySelectorAll('.' + classes[i]);
+        for (var j = 0; j < elements.length; j++)
+        {
+            elements[j].classList.remove(classes[i]);
+        }
     }
 }
-
 
 
 // make navbar transparent when fullscreen menu is opened
