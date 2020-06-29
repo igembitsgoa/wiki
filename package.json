@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
     "build": "webpack --config webpack.production.js",
+    "igem": "webpack --config webpack.igem.js",
     "test": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\""
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/igembitsgoa/wiki#readme",
   "devDependencies": {
     "bootstrap": "^4.5.0",
+    "bootstrap-reboot": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
     "crossref": "^1.2.1",
     "css-loader": "^3.5.3",

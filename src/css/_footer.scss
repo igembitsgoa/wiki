@@ -118,7 +118,7 @@ $light-grey: #878787;
   #footerNav {
     .container {
       text-align: center;
-    //   padding: 40px 0;
+      padding-left: 0;
 
       a.footer-heading {
         cursor: pointer;
@@ -147,7 +147,6 @@ $light-grey: #878787;
       text-align: center;
       padding: 40px 0;
     }
-
 
     .col {
       line-height: 0.75rem 0;
