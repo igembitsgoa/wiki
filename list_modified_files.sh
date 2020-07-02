@@ -12,7 +12,7 @@ CHANGED_FILES=
 
 if [ -z "${TRAVIS_COMMIT_RANGE}" ]; then
   echo This is a new branch.
-  :  
+  :
 else
   echo This is not a new branch.
   if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
@@ -20,7 +20,6 @@ else
 
     echo "This is a 'normal' build."
     CHANGED_FILES="$(git diff --name-only ${COMMIT_RANGE} --)"
-  fi
   else
     echo This is a PR build.
     CHANGED_FILES="$(git diff --name-only ${TRAVIS_BRANCH}..HEAD --)"
