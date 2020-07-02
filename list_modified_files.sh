@@ -8,6 +8,7 @@ echo $TRAVIS_RANGE
 echo $TRAVIS_BRANCH
 
 # from https://dev.to/ahferroin7/skip-ci-stages-in-travis-based-on-what-files-changed-3a4k
+COMMIT_RANGE="$(echo ${TRAVIS_COMMIT_RANGE} | cut -d '.' -f 1,4 --output-delimiter '..')"
 CHANGED_FILES=
 
 if [ -z "${TRAVIS_COMMIT_RANGE}" ]; then
