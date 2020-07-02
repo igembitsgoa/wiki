@@ -11,26 +11,27 @@ echo $TRAVIS_BRANCH
 CHANGED_FILES=
 
 if [ -z "${TRAVIS_COMMIT_RANGE}" ]; then
-  # This is a new branch.
-  :
+  echo This is a new branch.
+  
 else
-  # This isn't a new branch.
+  echo This is not a new branch.
   if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
-    # This isn't a PR build.
+    echo This is not a PR build.
 
-    # We need the individual commits to detect force pushes.
+    echo We need the individual commits to detect force pushes.
     COMMIT1="$(echo ${TRAVIS_COMMIT_RANGE} | cut -f 1 -d '.')"
     COMMIT2="$(echo ${TRAVIS_COMMIT_RANGE} | cut -f 4 -d '.')"
-
+    echo $COMMIT1
+    echo $COMMIT2
     if [ "$(git cat-file -t ${COMMIT1} 2>/dev/null)" = commit -a "$(git cat-file -t ${COMMIT2} 2>/dev/null)" = commit ]; then
-      # This was a history rewrite.
+      echo "This was a history rewrite."
       :
     else
-      # This is a 'normal' build.
+      echo "This is a 'normal' build."
       CHANGED_FILES="$(git diff --name-only ${COMMIT_RANGE} --)"
     fi
   else
-    # This is a PR build.
+    echo This is a PR build.
     CHANGED_FILES="$(git diff --name-only ${TRAVIS_BRANCH}..HEAD --)"
   fi
 fi
