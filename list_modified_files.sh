@@ -2,6 +2,11 @@
 
 set -e
 
+echo $TRAVIS_COMMIT_RANGE
+echo $TRAVIS_PULL_REQUEST
+echo $TRAVIS_RANGE
+echo $TRAVIS_BRANCH
+
 # from https://dev.to/ahferroin7/skip-ci-stages-in-travis-based-on-what-files-changed-3a4k
 CHANGED_FILES=
 
