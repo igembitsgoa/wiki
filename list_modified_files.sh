@@ -18,10 +18,11 @@ else
   else
     echo This is a PR build.
     PR_BUILD="true"
-    CHANGED_FILES="$(git diff --name-only HEAD...$TRAVIS_BRANCH)"
+    CHANGED_FILES="$(git diff --name-only HEAD...${TRAVIS_BRANCH})"
   fi
 fi
 
+echo $TRAVIS_BRANCH
 echo $CHANGED_FILES
 echo $PR_BUILD
 
