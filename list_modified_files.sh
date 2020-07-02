@@ -2,11 +2,6 @@
 
 set -e
 
-echo $TRAVIS_COMMIT_RANGE
-echo $TRAVIS_PULL_REQUEST
-echo $TRAVIS_RANGE
-echo $TRAVIS_BRANCH
-
 # from https://dev.to/ahferroin7/skip-ci-stages-in-travis-based-on-what-files-changed-3a4k
 COMMIT_RANGE="$(echo ${TRAVIS_COMMIT_RANGE} | cut -d '.' -f 1,4 --output-delimiter '..')"
 CHANGED_FILES=
@@ -23,20 +18,20 @@ else
   else
     echo This is a PR build.
     PR_BUILD="true"
-    CHANGED_FILES="$(git diff --name-only ${TRAVIS_BRANCH}..HEAD --)"
+    CHANGED_FILES="$(git diff --name-only HEAD...$TRAVIS_BRANCH)"
   fi
 fi
 
 echo $CHANGED_FILES
 echo $PR_BUILD
 
-if [ "${PR_BUILD}" = "true" ]; then
-  for CHANGED_FILE in $CHANGED_FILES; do
-    echo $CHANGED_FILE
-    if ! [[ $CHANGED_FILE =~ ^src\/\(assets\/img\/|pages\/\) ]]; then
-      echo You have modified $CHANGED_FILE.
-      echo "Please don't modify files outside src/assets/img/ and src/pages/"
-      exit 1
-    fi
-  done
-fi
+# if [ "${PR_BUILD}" = "true" ]; then
+#   for CHANGED_FILE in $CHANGED_FILES; do
+#     echo $CHANGED_FILE
+#     if ! [[ $CHANGED_FILE =~ ^src\/\(assets\/img\/|pages\/\) ]]; then
+#       echo You have modified $CHANGED_FILE.
+#       echo "Please don't modify files outside src/assets/img/ and src/pages/"
+#       exit 1
+#     fi
+#   done
+# fi
