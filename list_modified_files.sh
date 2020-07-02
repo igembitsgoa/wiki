@@ -7,7 +7,7 @@ CHANGED_FILES=
 
 if [ -z "${TRAVIS_COMMIT_RANGE}" ]; then
   # This is a new branch.
-  break
+  :
 else
   # This isn't a new branch.
   if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
@@ -19,7 +19,7 @@ else
 
     if [ "$(git cat-file -t ${COMMIT1} 2>/dev/null)" = commit -a "$(git cat-file -t ${COMMIT2} 2>/dev/null)" = commit ]; then
       # This was a history rewrite.
-      break
+      :
     else
       # This is a 'normal' build.
       CHANGED_FILES="$(git diff --name-only ${COMMIT_RANGE} --)"
