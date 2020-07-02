@@ -35,6 +35,8 @@ else
   fi
 fi
 
+echo $CHANGED_FILES
+
 for CHANGED_FILE in $CHANGED_FILES; do
   echo $CHANGED_FILE
   if ! [[ $CHANGED_FILE =~ ^src\/\(assets\/img\/|pages\/\) ]]; then
