@@ -28,6 +28,7 @@ else
 fi
 
 echo $CHANGED_FILES
+echo $PR_BUILD
 
 if [ "${PR_BUILD}" = "true" ]; then
   for CHANGED_FILE in $CHANGED_FILES; do
