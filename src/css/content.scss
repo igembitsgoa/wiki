@@ -30,12 +30,12 @@ header {
       rgba(0, 0, 0, 0.4)
     ),
     /* bottom, image */
-      url(../assets/img/josh-withers-lZ4xZZuk8iA-unsplash.tiny.cropped.jpg);
+      url(../assets/img/Description--josh-withers.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 70vh;
+  min-height: 70vh;
 
   .container {
     padding: 0;
@@ -46,15 +46,13 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 160px;
-    margin-bottom: 6em;
+    margin-bottom: 6rem;
 
     h1 {
       color: $whitey;
       font-family: "Montserrat";
       font-weight: 700;
-      font-size: 8rem;
-      height: 250px;
+      font-size: calc(3rem + 4.5vw);
     }
   }
 }
@@ -115,7 +113,7 @@ header {
 }
 
 main {
-  padding: 70px 0 50px 0;
+  padding: 3rem 0 2rem 0;
 
   .sidebar {
     padding: 30px 100px 0 5px;
@@ -134,6 +132,8 @@ main {
 
         li {
           margin: 15px 0;
+          display: flex;
+          justify-content: left;
 
           .circle {
             @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
@@ -229,7 +229,8 @@ main {
     font-family: "Merriweather", serif;
 
     article {
-      padding: 0 35px 35px 35px;
+      padding: calc(1rem + 0.2vw);
+      padding-top: 0;
       background-color: $light-grey;
     }
 
@@ -240,10 +241,34 @@ main {
       padding: 30px 0 15px 0;
       word-spacing: 0.3rem;
       color: $dark-green;
-      scroll-margin-top: 100px;
-
-      span {
+      
+      button {
         font-weight: 400;
+        margin-right: 25px;
+      }
+    }
+    
+    h1,
+    h2 {
+      scroll-margin-top: 100px;
+      .anchor {
+        float: left;
+        // padding-right: 4px;
+        line-height: 2;
+        opacity: 0.01;
+        background-image: url(../assets/icons/link-solid.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
+          brightness(87%) contrast(84%);
+        border: 0px transparent solid;
+        transition: all ease 0.2s;
+      }
+
+      &:hover .anchor {
+        opacity: 100;
       }
     }
 
@@ -291,6 +316,18 @@ main {
       }
     }
 
+    li {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      word-spacing: 0.1rem;
+      color: #3d3d3d;
+    }
+
+    mark {
+      background: $selection-color;
+    }
+
     .image {
       text-align: center;
 
@@ -303,6 +340,41 @@ main {
         font-style: italic;
         color: $black;
       }
+    }
+
+    blockquote {
+      font-size: 1.4em;
+      width: 60%;
+      margin: 50px auto;
+      font-style: italic;
+      color: #555555;
+      padding: 1.2em 30px 0.7em 75px;
+      border-left: 8px solid #78c0a8;
+      line-height: 1.6;
+      position: relative;
+      // background:#EDEDED;
+    }
+
+    blockquote::before {
+      font-family: Arial;
+      content: "\201C";
+      color: #78c0a8;
+      font-size: 4em;
+      position: absolute;
+      left: 10px;
+      top: -10px;
+    }
+
+    blockquote::after {
+      content: "";
+    }
+
+    blockquote strong {
+      display: block;
+      color: #333333;
+      font-style: normal;
+      font-weight: bold;
+      margin-top: 1em;
     }
 
     table {
@@ -340,6 +412,10 @@ main {
 
       a {
         color: $dark-green;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       caption {
@@ -354,61 +430,16 @@ main {
       }
     }
 
-    .in-text {
-      color: $black;
-      position: relative;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 1px;
-      transition: color ease 0.3s;
-
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        background-color: $green;
-        height: 3px;
-      }
-
-      &:before {
-        width: 0%;
-        left: 0;
-        bottom: 0;
-        transition: width ease 0.4s;
-      }
-
-      &:after {
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        transition: all ease 0.6s;
-      }
-
-      &:hover {
-        text-decoration: none;
-        // color: $black;
-
-        &::before {
-          width: 100%;
-        }
-
-        &::after {
-          left: 100%;
-          width: 0%;
-          transition: all ease 0.2s;
-        }
-      }
-    }
-
     span.in-text:hover {
       cursor: pointer;
     }
 
-    span.citation {
+    a.citation {
       color: $dark-grey;
+      scroll-margin-top: 200px;
 
-      a {
-        color: $dark-grey;
+      &:target {
+        animation: target-fade 3s 1;
       }
     }
 
@@ -422,8 +453,61 @@ main {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  margin-left: 5px;
 }
 
+.content p,
+#references li {
+  a:not(.citation) {
+    color: $black;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $green;
+      height: 3px;
+    }
+
+    &:before {
+      width: 0%;
+      left: 0;
+      bottom: 0;
+      transition: width ease 0.4s;
+    }
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      transition: all ease 0.6s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      // color: $black;
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+      }
+    }
+  }
+}
+
+nobr .math span {
+  border-left-width: 0px !important;
+}
 #references {
   ol {
     padding-inline-start: 30px;
@@ -431,6 +515,7 @@ main {
 
   li {
     padding: 0 0 20px 10px;
+    scroll-margin-top: 100px;
 
     &:target {
       animation: target-fade 3s 1;
@@ -457,8 +542,9 @@ main {
   a {
     margin-right: 15px;
 
+    &:before,
     &:after {
-      height: 2px;
+      height: 2px !important;
     }
   }
 }
@@ -472,6 +558,48 @@ footer {
     }
     a {
       color: $black;
+    }
+  }
+}
+
+@include respond-below(md) {
+  header {
+    min-height: 55vh;
+    #heading {
+      margin-left: 1.75rem;
+    }
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+}
+
+@include respond-below(sm) {
+  header {
+    min-height: 40vh;
+    #heading {
+      h1 {
+        font-size: calc(3rem + 1.75vw);
+      }
+    }
+  }
+
+  main {
+    padding: 0;
+
+    .content {
+      padding-left: 0;
+      padding-right: 0;
+
+      article {
+        padding: calc(1.5rem + 0.2vw);
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
     }
   }
 }

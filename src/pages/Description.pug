@@ -2,29 +2,34 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Description"
-    - var contents = ['Problem', 'Project Design', 'Dummy Section', 'References']
-    //- Don't forget References
+    - var requireMathJax = true
 
 block article
     //- mind the quotes and the plus sign
-    +heading("Problem")
-    p.
-        The current industry practices for chlorophyll removal from green seed canola oil involve the use 
+
+    :markdown-it(html)
+
+        # Problem
+
+
+        The <dfn>current ~ ongoing</dfn> industry practices for chlorophyll removal from green seed canola oil involve the use 
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
-    h2 Level 2 Heading
-    p.
+
+        ## Level 2 Heading1
+
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing.
-    p.
+
         The irreversible binding between the AACs and chlorophyll prevents reuse of the AACs, leading
         to increased costs for the manufacturer. This also increases the amount of 
-        !{intext(1, "Rosano et al., 2019")} waste produced by the system. The waste is mixed into animal feed 
+        [Rosano et al., 2019](#citation1) waste produced by the system. The waste is mixed into animal feed 
         and released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
-    h3 Level 3 Heading
-    p.
+
+        ### Level 3 Heading
+
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
         chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
@@ -33,14 +38,19 @@ block article
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
 
-    +heading("Project Design")
-    p.
+        # Project Design
+
         The current industry practices for chlorophyll removal from green seed canola oil involve the use 
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
-    +image(1, "calgary.jpg", "hello", 600)
-    h2 Level 2 Heading
-    p.
+
+    +image(1, "Description--calgary.jpg", "hello", 600)
+    +image(2, "Description--giphy.gif", "trump", 400)
+
+    :markdown-it(html)
+
+        ## Level 2 Heading2
+
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
         chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
@@ -48,22 +58,31 @@ block article
         released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
-    h3 Level 3 Heading
-    p.
+
+        > Creativity is just connecting things. When you ask creative people how they did something, they feel a 
+        > little guilty because they didn't really do it, they just saw something. It seemed obvious to them after 
+        > a while. That's because they were able to connect experiences they've had and synthesize new things.
+        >
+        > **Steve Jobs**
+
+        ### Level 3 Heading
+
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of !{intext(2, "Allen & Sheridan, 2015")} oil during processing. The irreversible binding between the AACs and 
+        resulting in a 20% loss of [Allen & Sheridan, 2015](#citation2) oil during processing. The irreversible binding between the AACs and 
         chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
         increases the amount of waste produced by the system. The waste is mixed into animal feed and 
         released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
-    +heading("Dummy Section")
-    p.
+
+        # Dummy Section
+
         The current industry practices for chlorophyll removal from green seed canola oil involve the use 
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
-    h2 Level 2 Heading
-    p.
+
+        ## Level 2 Heading
+
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
         chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
@@ -71,7 +90,28 @@ block article
         released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
-    :markdown-it(plugins=['markdown-it-multimd-table'])
+
+        $$  
+            J(\theta) =\frac{1}{2m}
+            [\sum^m_{i=1}(h_\theta(x^{(i)}) - 
+            y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
+        $$
+        
+    :markdown-it(html)
+        <mark>here be dragons</mark>
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | This is      | the table     | header row   |
+        | -----------  | ------------- | ------------ |
+        | 1            | 2             | 3            |
+        | 4            | 5             | 6            |
+        |Content       |   **Cell**    |         Cell |                                               
+        |New section   |     More      |[Data](https://google.com) |
+        |And more      | With an escaped '\|'       ||
+        
+        [Table 1: Caption goes here.]
+
+
         |              |          Grouping           ||
         |First Header  | Second Header | Third Header |
         | ------------ | :-----------: | -----------: |
@@ -79,33 +119,34 @@ block article
         |Content       |   **Cell**    |         Cell |                                               
         |New section   |     More      |[Data](https://google.com) |
         |And more      | With an escaped '\|'       ||
-        [Prototype table]                             
-    p.
+        
+        [Table 1: Caption goes here.]
+
+    :markdown-it(html)
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
         resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        !{defn("chlorophyll", "green pigment")} prevents reuse of the AACs, leading to increased costs for the
+        <dfn>chlorophyll ~ green pigment</dfn> prevents reuse of the AACs, leading to increased costs for the
         manufacturer. This also increases the amount of waste produced by the system. The waste is mixed into
         animal feed and released into the ecosystem, where it has the potential to alter soil pH and nutrient 
-        !{link("here is a link", "https://google.com")} availability for future crops. Our team sought to find
+        [here is a link](https://google.com) availability for future crops. Our team sought to find
         an alternative method of oil-processing that addresses all three issues presented by AACs.
-    :markdown-it(plugins=['markdown-it-mathjax'])
-        $1 *2* 3$
-    p.
-        The current industry #[strong #[em practices]] for chlorophyll removal from green seed canola oil involve the use 
+
+        The current industry ***practices*** for chlorophyll removal from green seed canola oil involve the use 
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
-    p.
+
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of !{intext(2, "hello again")} oil during processing. The irreversible binding between the AACs and 
+        resulting in a 20% loss of [hello again](#citation2) oil during processing. The irreversible binding between the AACs and 
         chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
         increases the amount of waste produced by the system. The waste is mixed into animal feed and 
         released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
         for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
         three issues presented by AACs.
 
-append nextButton
+append buttons
     //- mind the quotes and the plus sign
-    +button("Design")
+    +buttonLeft("Previous")
+    +buttonRight("Sample")
 
 //- DO NOT MODIFY START AND END LINES.
 //- Citations DOI Start
@@ -156,19 +197,19 @@ prepend citations_doi
         var citations_doi = [
         {
             'id': '1',
-            'authors': 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ',
-            'title': 'Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).',
-            'journal': 'International Journal of Infectious Diseases',
-            'numbers': '88, 127-134. ',
-            'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003',
-        },
-        {
-            'id': '2',
             'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
             'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
             'journal': 'International Journal of Biometeorology',
             'numbers': '62(1), 57-67. ',
             'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
+        },
+        {
+            'id': '2',
+            'authors': 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ',
+            'title': 'Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).',
+            'journal': 'International Journal of Infectious Diseases',
+            'numbers': '88, 127-134. ',
+            'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003',
         },
         {
             'id': '3',
@@ -177,5 +218,5 @@ prepend citations_doi
             'journal': 'International Journal of Biometeorology',
             'numbers': '62(1), 57-67. ',
             'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
-        }
+        },
         ]

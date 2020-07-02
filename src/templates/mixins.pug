@@ -1,24 +1,37 @@
 - urlPrefix = "/"
 
-mixin heading(sectionTitle)
-    h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-        //- a.internal(href=pageLink + '#' + sectionTitle.replace(/ /g,'') 
-        button.btn.section(data-toggle="tooltip" data-placement="right"
-            title="Copy link to this section!")= '#'
+//- mixin heading(sectionTitle)
+//-     h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
+//-         button.btn.section(data-toggle="tooltip" data-placement="right"
+//-             title="Copy link to this section!")= '#'
 
-mixin button(buttonTitle)
+mixin buttonLeft(buttonTitle)
+    if buttonTitle.length <= 7
+        - var length = "short"
+    else if buttonTitle.length <= 9
+        - var length = "medium"
+    else if buttonTitle.length <= 11
+        - var length = "long"
+    else
+        - var length = "super-long"
+    a.button.prev.flex.justify-content-end(class=length
+        href=urlPrefix + buttonTitle.replace(/ /g,'_'))
+        span.circle(aria-hidden=true)
+            span.icon.arrow
+        span.button-text= buttonTitle
+
+mixin buttonRight(buttonTitle)
     if buttonTitle.length <= 7
         - var length = "short"
     else if buttonTitle.length <= 11
         - var length = "long"
     else
         - var length = "super-long"
-    .d-flex.justify-content-end.my-5
-        a.button.read-more(class=length
-            href=urlPrefix + buttonTitle.replace(/ /g,'_'))
-            span.circle(aria-hidden=true)
-                span.icon.arrow
-            span.button-text= buttonTitle
+    a.button.next(class=length
+        href=urlPrefix + buttonTitle.replace(/ /g,'_'))
+        span.circle(aria-hidden=true)
+            span.icon.arrow
+        span.button-text= buttonTitle
 
 mixin image(n, url, caption, width)
     - var url = "../assets/img/" + url

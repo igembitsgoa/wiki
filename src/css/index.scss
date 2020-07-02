@@ -48,31 +48,25 @@ $orange: #ffb454;
 $black: #3d3d3d;
 
 @include respond-above(xxl) {
-  section {
-    .container {
-      max-width: 1380px;
-    }
+  section .container {
+    max-width: 1380px;
   }
 }
 
 @include respond-between(xl, xxl) {
-  section {
-    .container {
-      max-width: 1140px;
-    }
+  section .container {
+    max-width: 1140px;
   }
 }
 
 @include respond-between(lg, xl) {
-  section {
-    .container {
-      max-width: 1000px;
-    }
+  section .container {
+    max-width: 1000px;
   }
 }
 
 section {
-  padding: 100px 0 50px 0;
+  padding: 5rem 0 1.5rem 0;
 
   /**
    * Section Button
@@ -128,7 +122,7 @@ section {
    * Section subtitle/aside
    */
 
-  h3 {
+  .sidebar h3 {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
@@ -149,14 +143,24 @@ section {
     h2 {
       font-family: "Merriweather";
       font-weight: 400;
-      font-size: 2.65rem;
+      font-size: calc(1.625rem + 1vw);
       padding-bottom: 30px;
       word-spacing: 0.3rem;
+      line-height: 1.5;
 
       span {
         color: $green;
         font-weight: 400;
       }
+    }
+
+    h3 {
+      font-style: italic;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-family: "Merriweather", serif;
+      padding-bottom: 10px;
+      display: none;
     }
 
     p {
@@ -205,7 +209,7 @@ section {
         color: $green;
       }
     }
-    a.button.read-more {
+    a.button {
       .circle {
         background-color: $green !important;
         .icon {
@@ -260,7 +264,7 @@ section {
         color: $white;
       }
     }
-    a.button.read-more {
+    a.button {
       .circle {
         background-color: $white !important;
         .icon {
@@ -305,7 +309,7 @@ section {
     p {
       color: black;
     }
-    a.button.read-more {
+    a.button {
       .circle {
         background-color: $white !important;
         .icon {
@@ -333,6 +337,44 @@ section {
           color: $pink !important;
         }
       }
+    }
+  }
+}
+
+@include respond-below(lg) {
+  section {
+    .content {
+      h2 {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+@include respond-below(md) {
+  section {
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      padding: 0 10px !important;
+
+      h3 {
+        display: block;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xs) {
+  section {
+    .content {
+      padding: 0 25px !important;
     }
   }
 }

@@ -5,7 +5,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title #{title} | SugarGain | iGEM BITS 
+        title #{title} | SugarGain | iGEM BITS Goa
+        if requireMathJax
+            script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
     body
         include nav.pug
         header.d-flex.justify-content-center
@@ -15,24 +17,28 @@ html(lang="en")
         main
             .container
                 .row
-                    .sidebar.col-3
+                    .sidebar.col-lg-3
                         .nav#contents
                             ul
-                                each item in contents
-                                    li.d-flex.justify-content-left
-                                        span.circle(aria-hidden=true)
-                                            span.icon.arrow
-                                        a(href='#' + item.replace(/ /g,'') )= item 
+                                //- Filled automatically from js
+                                //- each item in contents
+                                //-     li
+                                //-         span.circle(aria-hidden=true)
+                                //-             span.icon.arrow
+                                //-         a(href='#' + item.replace(/ /g,'') )= item 
                                         // regex to remove spaces
-                    .content.col-9
+                    .content.col-lg-9
                         article
                             block article
 
-                        block nextButton
+
+                        .d-flex.justify-content-between.my-5
+                            block buttons
 
 
                         article#references
-                            +heading("References")
+                            h1 References
+                            
                             ol
                                 block citations_doi
                                 block citations_url

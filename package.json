@@ -4,8 +4,9 @@
   "description": "Wiki for iGEM 2020 BITS Goa",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.development.js --open",
+    "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
     "build": "webpack --config webpack.production.js",
+    "igem": "webpack --config webpack.igem.js",
     "test": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\""
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/igembitsgoa/wiki#readme",
   "devDependencies": {
     "bootstrap": "^4.5.0",
+    "bootstrap-reboot": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
     "crossref": "^1.2.1",
     "css-loader": "^3.5.3",
@@ -27,17 +29,18 @@
     "glob-exec": "^0.1.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
     "jquery": "^3.5.1",
-    "jstransformer-katex": "0.0.1",
     "jstransformer-markdown-it": "^2.1.0",
+    "jstransformer-mathjax": "0.0.3",
     "jstransformer-verbatim": "^1.1.1",
-    "markdown-it-katex": "^2.0.3",
-    "markdown-it-mathjax": "^2.0.0",
+    "markdown-it": "^11.0.0",
+    "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-multimd-table": "^4.0.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
-    "pug": "^3.0.0",
+    "pug": "^2.0.4",
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "sass": "^1.26.8",
@@ -50,7 +53,10 @@
   },
   "private": true,
   "dependencies": {
+    "@gerhobbelt/markdown-it-attrs": "^3.0.3-18",
+    "@gerhobbelt/markdown-it-regexp": "^0.5.0-3",
     "js-yaml": "^3.14.0",
+    "markdown-it-attrs": "^3.0.3",
     "pug-lint": "^2.6.0",
     "websocket-extensions": "^0.1.4"
   }

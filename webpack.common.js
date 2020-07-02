@@ -3,13 +3,15 @@ var HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        vendor: "./src/js/vendor.js",
-        main: "./src/js/main.js",
         index: "./src/index.js",
         content: "./src/js/content.js"
     },
     devtool: "none",                            // avoid eval statements
     plugins: [
+        // new webpack.ProvidePlugin({
+        //     $: "jquery",
+        //     jQuery: "jquery"
+        // }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: "./src/index.pug",
@@ -21,23 +23,8 @@ module.exports = {
             excludeChunks: ['index']
         }),
         new HTMLWebpackPlugin({
-            filename: 'Design/index.html',
-            template: "./src/pages/Design.pug",
-            excludeChunks: ['index']
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'Human_Practices/index.html',
-            template: "./src/pages/Human_Practices.pug",
-            excludeChunks: ['index']
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'Sample1/index.html',
-            template: "./src/pages/Sample1.pug",
-            excludeChunks: ['index']
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'Sample2/index.html',
-            template: "./src/pages/Sample2.pug",
+            filename: 'Sample/index.html',
+            template: "./src/pages/Sample.pug",
             excludeChunks: ['index']
         })
         // new HTMLWebpackPlugin({

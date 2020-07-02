@@ -1,10 +1,31 @@
-import "bootstrap"
-import "jquery"
-import $ from 'jquery';
+
+import "bootstrap";
+var $ = require('jquery');
+window.jQuery = $;
+window.$ = $;
 
 var navbar = document.querySelector('.navbar');
 var menuToggle = document.getElementById('menuToggle');
 var scrollHeight = 100; // make navbar colored/hidden beyond this
+var sm = 768; // small viewport width
+var xs = 576; // medium viewport width
+
+// reset iGEM
+if (window.location.href.includes('igem')) {
+    var ids = ['HQ_page', 'content', 'bodyContent', 'mw-content-text']
+    for (var i = 0; i < ids.length; i++)
+        document.querySelector('#' + ids[i]).removeAttribute('id');
+    var classes = ['mw-content-ltr']
+    for (var i = 0; i < classes.length; i++)
+    {
+        var elements = document.querySelectorAll('.' + classes[i]);
+        for (var j = 0; j < elements.length; j++)
+        {
+            elements[j].classList.remove(classes[i]);
+        }
+    }
+}
+
 
 // make navbar transparent when fullscreen menu is opened
 function makeNavbarTransparent() {
@@ -45,7 +66,7 @@ window.addEventListener("scroll", () => {
             navbar.classList.remove(colored);
         }
 
-        if (currentScroll >= 2 * scrollHeight) {
+        if (currentScroll >= scrollHeight) {
             if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
                 // down
                 body.classList.remove(scrollUp);
@@ -62,33 +83,44 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
-// change navbar background based on scroll
-// window.onscroll = function () {
-//     "use strict";
-//     if ((document.body.scrollTop >= scrollHeight || document.documentElement.scrollTop >= scrollHeight)
-//         && menuToggle.checked == false) {
-//         navbar.classList.add('nav-colored');
-//         navbar.classList.remove('nav-transparent');
-//     }
-//     else {
-//         navbar.classList.add('nav-transparent');
-//         navbar.classList.remove('nav-colored');
-//     }
-// };
+function getWidth() {
+    return Math.max(
+        // document.body.scrollWidth,
+        // document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+    );
+}
 
-$('.content .section').tooltip();
+// show/hide nav on mobile
+$('.nav-heading').on('click', function () {
+    if (getWidth() <= sm) {
+        if ($(this).siblings('ul').css('display') === 'none') {
+            $('#menuContent ul').slideUp();
+            $(this).siblings('ul').slideDown();
+        }
+        else {
+            $('#menuContent ul').slideUp();
+        }
+    }
+})
 
-$('dfn').tooltip();
+$('#menuSwitch').on('click', function () {
+    if (getWidth() <= sm) {
+        $('#menuContent ul').slideUp();
+    }
+})
 
-$('.content .section').click(function () {
-    $(this)
-        .tooltip('hide')
-        .attr("data-original-title", "Doesn't work yet :/")
-        .tooltip('show');
-});
-
-$('.content .section').mouseout(function () {
-    $(this)
-        .attr("data-original-title", "Copy a link to this section!");
-});
-
+// show/hide footer on mobile
+$('.footer-heading').on('click', function () {
+    if (getWidth() <= xs) {
+        if ($(this).siblings('ul').css('display') === 'none') {
+            $('#footerNav ul').slideUp();
+            $(this).siblings('ul').slideDown();
+        }
+        else {
+            $('#footerNav ul').slideUp();
+        }
+    }
+})

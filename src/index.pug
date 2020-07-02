@@ -14,11 +14,12 @@ html(lang="en")
         section#introduction.white
             .container
                 .row
-                    .sidebar.col-3
+                    .sidebar.col-lg-3
                         h3 About our project
-                    .content.col-9
+                    .content.col-lg-9
                         h2 Tonnes of sugar are lost every year as post-harvest losses. 
                             span We're here to change that.
+                        h3 About our project
                         p.
                             Describe how the sugar industry is doomed and how revolutionary our project is. Basically a 
                             textual description of the problem and our solution, essentially repeating content from 
@@ -34,17 +35,22 @@ html(lang="en")
                             mentioned somewhere prominent. Not sure where though.
                         p
                             | Maybe we'll move to a more sustainable solution later, but for now, 
-                            a(href='https://docs.google.com/document/d/1rIz6781r7rfrTbcgEW1J4UNyr1bBL3hShowc-FcC2Ow/edit?usp=sharing'  target="_blank") here's a Google doc
+                            a(href='https://docs.google.com/document/d/1rIz6781r7rfrTbcgEW1J4UNyr1bBL3hShowc-FcC2Ow/edit?usp=sharing' target="_blank") here's a Google doc
                             |  with all this text so you guys can edit. 
                         p 
                             a(href)
-                        +button("Description")
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Description")
         section#design.yellow
             .container
                 .row
-                    .content.col-9
+                    .content.col-lg-9
                         h2 Design caption goes here. 
                             span Optional hype.
+                        h3.
+                            Not sure what goes here but removing this makes it too empty.
+                            Maybe an important highlight from the text itself?
                         p.
                             Summarize the genetic circuit and models. From the iGEM docs: "Explanation of the engineering
                             principles used" and "Experimental plan to test your designs." It also asks for design iterations
@@ -53,23 +59,28 @@ html(lang="en")
                         p.
                             Also talk about the delivery mechanism. Maybe this is the right place to mention why we went 
                             with a syn bio solution instead of just injecting the inhibitor.
-                        
-                        +button("Design")
 
-                    .sidebar.col-3
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Design")
+
+                    .sidebar.col-lg-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
                             Maybe an important highlight from the text itself?
         section#safety.white
             .container
                 .row
-                    .sidebar.col-3
+                    .sidebar.col-lg-3
                         h3.
                             Maybe an important highlight from the text?
                             Or some helpful warnings about (not) leaving plastic tip boxes in the oven.
-                    .content.col-9
+                    .content.col-lg-9
                         h2 Safety caption goes here. 
                             span Optional hype.
+                        h3.
+                            Maybe an important highlight from the text?
+                            Or some helpful warnings about (not) leaving plastic tip boxes in the oven.
                         p.
                             Talk about the killswitch. The whole thing about toxins and anaerobic environment.
                             From the iGEM docs: choosing a non-pathogenic chassis, 
@@ -80,15 +91,20 @@ html(lang="en")
                         p.
                             Unusual safety issues (like the one on the left?) also have to be mentioned but probably
                             not on the home page.
-                        
-                        +button("Safety")
-        
+
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Safety")  
+
         section#human-practices.green
             .container
                 .row
-                    .content.col-9
+                    .content.col-lg-9
                         h2 Human-centered design. 
                             span Optional hype.
+                        h3.
+                            Not sure what goes here but removing this makes it too empty.
+                            Maybe an important highlight from the text itself?
                         p.
                             Summarize our human practices approach. Write about how we conducted detailed discussions with stakeholders at every step. Also write about how we changed various aspects of the design based 
                             on feedback, and how our product solves different issues for different belts across India and the world.
@@ -97,22 +113,27 @@ html(lang="en")
                             ethics, safety, security, and sustainability of your project, and to show how this exploration 
                             feeds back into your project purpose, design, and execution.
 
-                        +button("Human Practices")
 
-                    .sidebar.col-3
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Human Practices")
+
+                    .sidebar.col-lg-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
                             Maybe an important highlight from the text itself?
         section#collaborations.white
             .container
                 .row
-                    .sidebar.col-3
+                    .sidebar.col-lg-3
                         h3.
                             Not sure what goes here but removing this makes it too empty.
                             Maybe an important highlight from the text itself?
-                    .content.col-9
+                    .content.col-lg-9
                         h2 Collaborating for the win. 
                             span Optional hype.
+                        h3.
+                            Not sure what goes here but removing this makes it too empty.
+                            Maybe an important highlight from the text itself?
                         p.
                             Summarize our collaborations, including various surveys and the language project.
                             Also summarize some conclusions from surveys we created and the impact of the language project
@@ -120,13 +141,19 @@ html(lang="en")
                         p.
                             From the iGEM docs: Sharing and collaboration are core values of iGEM. We encourage you to 
                             reach out and work with other teams on difficult problems that you can more easily solve together.
-                        +button("Collaborations")
+
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Collaborations")
         section#science-communication.orange
             .container
                 .row
-                    .content.col-9
+                    .content.col-lg-9
                         h2 Engaging with the scientists of tomorrow. 
                             span Optional hype.
+                        h3.
+                            Maybe an important highlight from the text itself?
+                            Scroll up for an inverted Indian flag.
                         p.
                             Headline too cringey? Questionable color choice? Apparently orange is the color of 
                             communication. It's a really hard color to work with, though. Increasing saturation any
@@ -137,14 +164,15 @@ html(lang="en")
                             communication is necessary, specially keeping the current situation in mind.
                             Also write about Abhighyan insta posts? Is that sci-comn or public engagement? 
                             I'll just call the button Communication for now.
-                        
-                        +button("Communication")
-                    
-                    .sidebar.col-3
+
+
+                        .d-flex.justify-content-end.my-5
+                            +buttonRight("Communication")
+
+                    .sidebar.col-lg-3
                         h3.
                             Maybe an important highlight from the text itself?
                             Scroll up for an inverted Indian flag.
         footer 
             include templates/footer_brand.pug
             include templates/footer_nav.pug
-            

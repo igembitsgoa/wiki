@@ -31,26 +31,24 @@ include mixins.pug
     }
   ]
 
-nav.navbar.navbar-expand-lg.fixed-top.d-flex.justify-content-between.bg-none.nav-transparent
+nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transparent.fixed-top
 
-  .ml-4
-    a.navbar-brand.d-lg-inline-block(href=urlPrefix) iGEM 
-      span BITS Goa
+  a.navbar-brand.d-lg-inline-block(href=urlPrefix) iGEM 
+    span BITS Goa
 
-  .mr-3.mb-2
-    #fullscreenMenuWrapper
-      input#menuToggle(type='checkbox' onclick='makeNavbarTransparent()')
-      label(for='menuToggle')
-        #menuSwitch
-      #fullscreenMenu
-        label.mr-3(for='menuToggle')
-        .container.w-100.h-100
-          #menuContent.d-flex.flex-column.justify-content-center.h-100
-            .row.w-100.mb-4
-              each header in navItems
-                .col-12.col-md-4.col-sm-6.py-3
-                  h1= header.title
-                  ul
-                    each item in header.items
-                      li.py-1
-                        a(href= urlPrefix + item.replace(/ /g,'_'))= item
+  #fullscreenMenuWrapper
+    input#menuToggle(type='checkbox')
+    label(for='menuToggle')
+      #menuSwitch
+    #fullscreenMenu
+      label.mr-3(for='menuToggle')
+      .container.w-100.h-100
+        #menuContent.h-100
+          .row.w-100.mb-4
+            each header in navItems
+              .col-md-4.col-sm-12.py-3
+                a.nav-heading= header.title
+                ul
+                  each item in header.items
+                    li
+                      a(href= urlPrefix + item.replace(/ /g,'_'))= item

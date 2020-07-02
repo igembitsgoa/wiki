@@ -3,6 +3,9 @@ node_js:
   - 12.16.3
 cache: npm
 
+git:
+  depth: false
+
 before_install:
   - bash list_modified_files.sh
 
