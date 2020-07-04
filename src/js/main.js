@@ -11,7 +11,7 @@ var sm = 768; // small viewport width
 var xs = 576; // medium viewport width
 
 // reset iGEM
-if (window.location.href.includes('igem')) {
+if (window.location.href.includes('igem.org')) {
     var ids = ['HQ_page', 'content', 'bodyContent', 'mw-content-text']
     for (var i = 0; i < ids.length; i++)
         document.querySelector('#' + ids[i]).removeAttribute('id');
