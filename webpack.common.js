@@ -26,6 +26,11 @@ module.exports = {
             filename: 'Sample/index.html',
             template: "./src/pages/Sample.pug",
             excludeChunks: ['index']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'Design/index.html',
+            template: "./src/pages/Design.pug",
+            excludeChunks: ['index']
         })
         // new HTMLWebpackPlugin({
         //     filename: 'Results/index.html',
