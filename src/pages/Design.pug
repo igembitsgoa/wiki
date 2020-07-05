@@ -2,14 +2,12 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Design"
-    - var requireMathJax = true
+    - var requireMathJax = false
 
 block article
-
     :markdown-it(html)
 
         # Problem Statement
-
 
         The <dfn>current ~ ongoing</dfn> industry practices for chlorophyll removal from green seed canola oil involve the use 
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
@@ -44,7 +42,7 @@ block article
         product loss, lack of reusability, and environmental concerns.
 
     +image(1, "Description--calgary.jpg", "hello")
-    +image(2, "Description--giphy.gif", "trump", 40)
+    +image(2, "Description--giphy.gif", "ser", 40)
     :markdown-it(html)
         # Genetic Design of Biosensor
         
