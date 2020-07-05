@@ -7,7 +7,7 @@ git:
   depth: false
 
 before_install:
-  - bash list_modified_files.sh
+  # - bash list_modified_files.sh
 
 install:
   - npm ci

@@ -88,8 +88,3 @@ $('.content .section').mouseout(function () {
         .attr("data-original-title", "Copy a link to this section!");
 });
 
-spans = document.querySelectorAll('nobr .math span')
-for (i = 0; i < spans.length; i++) {
-    spans[i].style.borderLeftWidth = '0px';
-}
-
