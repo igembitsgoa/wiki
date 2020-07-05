@@ -1,5 +1,13 @@
 const path = require("path");
+const fs = require('fs');
 var HTMLWebpackPlugin = require('html-webpack-plugin');
+
+const pages =
+    fs
+        .readdirSync(path.resolve(__dirname, 'src/pages'))
+        .filter(fileName => fileName.endsWith('.pug'));
+
+console.log(pages);
 
 module.exports = {
     entry: {
@@ -7,42 +15,23 @@ module.exports = {
         content: "./src/js/content.js"
     },
     devtool: "none",                            // avoid eval statements
+    // https://stackoverflow.com/questions/44557802/how-to-create-multiple-pages-in-webpack
     plugins: [
-        // new webpack.ProvidePlugin({
-        //     $: "jquery",
-        //     jQuery: "jquery"
-        // }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: "./src/index.pug",
             excludeChunks: ['content']
         }),
-        new HTMLWebpackPlugin({
-            filename: 'Description/index.html',
-            template: "./src/pages/Description.pug",
+        ...pages.map(page => new HTMLWebpackPlugin({
+            template: "./src/pages/" + page,
+            filename: page.slice(0, -4) + "/index.html",
             excludeChunks: ['index']
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'Sample/index.html',
-            template: "./src/pages/Sample.pug",
-            excludeChunks: ['index']
-        })
+        }))
         // new HTMLWebpackPlugin({
-        //     filename: 'Results/index.html',
-        //     template: "./src/contents/Results.pug"
+        //     filename: 'Description/index.html',
+        //     template: "./src/pages/Description.pug",
+        //     excludeChunks: ['index']
         // }),
-        // new HTMLWebpackPlugin({
-        //     filename: 'Contribution/index.html',
-        //     template: "./src/contents/Contribution.pug"
-        // }),
-        // new HTMLWebpackPlugin({
-        //     filename: 'Engineering/index.html',
-        //     template: "./src/contents/Engineering.pug"
-        // }),
-        // new HTMLWebpackPlugin({
-        //     filename: 'Experiments/index.html',
-        //     template: "./src/contents/Experiments.pug"
-        // })
     ],
     module: {
         rules: [
