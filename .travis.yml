@@ -1,4 +1,8 @@
-language: node_js
+language: python
+
+python: 
+  - 3.7
+
 node_js:
   - 12.16.3
 cache: npm
@@ -11,11 +15,13 @@ before_install:
 
 install:
   - npm ci
+  - pip install -r requirements.txt
 
 before_script:
+  - python test.py
   - cd src
-  - python3 preprocess.py
-  - python3 citations.py
+  - python preprocess.py
+  - python citations.py
 
 script:
   - npm test
