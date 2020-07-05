@@ -13,10 +13,10 @@ install:
   - npm ci
 
 before_script:
-  - python3 test.py
+  - python3.7 test.py
   - cd src
-  - python3 preprocess.py
-  - python3 citations.py
+  - python3.7 preprocess.py
+  - python3.7 citations.py
 
 script:
   - npm test
