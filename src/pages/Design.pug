@@ -2,7 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Design"
-    - var requireMathJax = true
+    - var requireMathJax = false
 
 block article
     :markdown-it(html)
@@ -89,6 +89,7 @@ prepend citations_url
                 "url": "https://google.com"
             }
         ]
+//- Citations URL End
 
 prepend citations_books
     -
@@ -102,6 +103,7 @@ prepend citations_books
                 "Google_Books_URL": "https://books.google.co.in/books?id=OYr6AQAAQBAJ"
             }
         ]
+//- Citations Books End
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 prepend citations_doi
