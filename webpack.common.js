@@ -15,6 +15,7 @@ module.exports = {
         content: "./src/js/content.js"
     },
     devtool: "none",                            // avoid eval statements
+    // https://stackoverflow.com/questions/44557802/how-to-create-multiple-pages-in-webpack
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
