@@ -1,5 +1,1 @@
-os
-re
-sys
-pathlib
 requests
