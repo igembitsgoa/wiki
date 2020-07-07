@@ -25,7 +25,7 @@ for root, directories, files in os.walk('src/pages'):
     for filename in files:
         filename = root + '/' + filename
 
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding="utf8", errors="ignore") as file:
             contents = [line.rstrip() for line in file.readlines()]
 
             citations_doi = []
