@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-include mixins.pug
-
 - 
   var navItems = [
     {
@@ -31,19 +28,3 @@ include mixins.pug
       'items': ['Entrepreneurship', 'Model', 'Plant', 'Software']
     }
   ]
-=======
-include mixins
->>>>>>> cffb029f84eb3bbad6b9dee3fb32487d72997562
-
-include nav_list
-
-#footerNav
-  .container
-    .row.justify-content-between
-      each header in navItems
-        .col-sm-6.col-md-4.col-lg-2.py-2
-          a.footer-heading= header.title
-          ul
-            each item in header.items
-              li.py-1
-                a(href= urlPrefix + item.replace(/ /g,'_'))= item
