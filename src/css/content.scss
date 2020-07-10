@@ -233,8 +233,13 @@ main {
       background-color: $light-grey;
     }
 
-    h1 {
+    h1,
+    h2,
+    h3 {
       font-family: "Merriweather";
+    }
+
+    h1 {
       font-weight: 400;
       font-size: 2.65rem;
       padding: 30px 0 15px 0;
@@ -259,6 +264,7 @@ main {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        overflow: visible;
 
         filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
           brightness(87%) contrast(84%);
@@ -589,7 +595,6 @@ footer {
   }
 
   main {
-
     .content {
       padding-left: 0;
       padding-right: 0;
