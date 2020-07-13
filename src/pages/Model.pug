@@ -1,7 +1,7 @@
 extends ../templates/contents.pug
 
 block headVars
-    - var title = "Modelling"
+    - var title = "Model"
     - var requireMathJax = true
 
 block article
@@ -163,6 +163,19 @@ append buttons
     2. https://doi.org/10.1016/j.ijid.2019.08.003
     3. https://doi.org/10.1007/s00484-015-1117-4
 //- Citations DOI End
+
+prepend citations_doi_manual
+    -
+        var citations_doi_manual = [
+            {
+                "id"     : "4",
+                "authors": "Allen, M. J., & Sheridan, S. C. (2015).",
+                "title"  : "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.",
+                "journal": "International Journal of Biometeorology",
+                "numbers": "62(1), 57-67."
+            }
+        ]
+
 
 prepend citations_url
     -
