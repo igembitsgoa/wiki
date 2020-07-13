@@ -13,6 +13,7 @@ block article
         on non-existent access to a laboratory environment due to COVID-19, these models are the cornerstone 
         of our project — they lend it legitimacy and validity in the absence of experimental proofs. 
         Our project consists of four individual models which collectively complete our project. These would be discussed in the following sections. 
+        
         (We also enlisted the help of the majestic Deep Thought to formulate our models, but forty-two was a rather difficult model to realise without any help from pan-dimensional, hyper-intelligent beings.)
 
         # Growth Curve
@@ -44,7 +45,7 @@ block article
     :markdown-it(html)
 
         The optical density was subsequently converted to population size (in the units cfu/mL) using the conversion
-        ratio 1 OD = \(10^{-6}\) cfu/mL. Then, the data was converted to the semi log domain by caluclating the log (base 10) of
+        ratio 1 OD = \\( 10^{-6} \\) cfu/mL. Then, the data was converted to the semi log domain by caluclating the log (base 10) of
         the OD while retaining the time series as it is. 
 
         We selected a simple logistic equation to model the growth of the bacteria. At this moment, we would also like to state that
@@ -70,20 +71,20 @@ block article
             \frac{dN}{dt} = r_0 N \left(1 - \frac{N}{N_{\text{max}}}\right)
         $$
 
-        Here, \(r_0\) is the maximum possible rate of population growth and \(N_{\text{max}}\) is the carrying capacity of the medium. 
+        Here, \\( r_0 \\) is the maximum possible rate of population growth and \\( N_{\text{max}} \\) is the carrying capacity of the medium. 
         Solving the above ODE, we obtain the following closed-form solution for the population size as a function of time
 
         $$
             N(t) = \frac{N_0N_{\text{max}}}{N_0 + (N_{\text{max}} - N_0)\cdot exp(-r_0 t)}
         $$
     :markdown-it(html)
-        We initially solve the ODE using SciPy's `solve_ivp` method with an initial guess of the parameter \(r_0\) set to 1. 
-        We do not consider the carrying capacity \(N_{\text{max}}\) to be a variable parameter and set it to \(1 + 10^{-6}\) times the maximum 
+        We initially solve the ODE using SciPy's `solve_ivp` method with an initial guess of the parameter \\( r_0 \\) set to 1. 
+        We do not consider the carrying capacity \\( N_{\text{max}} \\) to be a variable parameter and set it to \\( 1 + 10^{-6} \\) times the maximum 
         population size in the data series.
 
-        Once a solution is obtained with these parameter values, we run an optimiser using SciPy's `minimize` method to modify the values of the parameter \(r_0\) 
+        Once a solution is obtained with these parameter values, we run an optimiser using SciPy's `minimize` method to modify the values of the parameter \\( r_0 \\) 
         to minimise the least-squares sum between the predictions and the actual population size (this serves as the cost function).
-        When a minimum value for the parameter \(r\) is obtained, we plot the final curve. Fitting the data to our curve, we obtain the growth function
+        When a minimum value for the parameter \\( r_0 \\) is obtained, we plot the final curve. Fitting the data to our curve, we obtain the growth function
 
         $$
             N(t) = \frac{4.9777}{1 + 0.6592\cdot exp(-1.2017t)}
@@ -103,7 +104,7 @@ append buttons
     +buttonRight("Contribution")
 
 //- DO NOT MODIFY START AND END LINES.
-//- Citations DOI Start
+//- Citations DOI
     1. https://doi.org/10.1007/s00484-015-1117-4
     2. https://doi.org/10.1016/j.ijid.2019.08.003
     3. https://doi.org/10.1007/s00484-015-1117-4
@@ -123,7 +124,7 @@ prepend citations_doi_manual
             {
                 "id"     : "2",
                 "authors": "Verhulst, Pierre-François (1838).",
-                "title"  : "Notice sur la loi que la population porsuit dans son accroissement",
+                "title"  : "Notice sur la loi que la population poursuit dans son accroissement",
                 "journal": "Correspondance Mathématique et Physique",
                 "numbers": "10, 113-121"
             }
