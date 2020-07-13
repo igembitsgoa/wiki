@@ -41,9 +41,13 @@ html(lang="en")
                             
                             ol
                                 block citations_doi
+                                block citations_doi_manual
                                 block citations_url
                                 block citations_books
                                 - var counter = 0
+                                //- if citations_doi_manual
+                                //-     if citations_doi
+                                //-         - var citations_doi = citations_doi.concat(citations_doi_manual)
                                 if citations_doi
                                     each citation in citations_doi
                                         - counter = counter + 1
@@ -53,6 +57,7 @@ html(lang="en")
                                         - citation.journal = citation.journal.trim()
                                         - citation.numbers = citation.numbers.trim()
                                         - citation.doi = citation.doi.trim()
+                                        - scholar = "https://scholar.google.com/scholar?q=" + citation.title
                                         
                                         li(id= 'citation' + counter)
                                             p.author= citation.authors
@@ -65,6 +70,26 @@ html(lang="en")
                                             a.in-text(href=scholar target="_blank") Google Scholar
                                             a.in-text(href="#intext" + counter) Back to text
                                 
+                                if citations_doi_manual
+                                    each citation in citations_doi_manual
+                                        - counter = counter + 1
+                                        - citation.id = citation.id.trim()
+                                        - citation.authors = citation.authors.trim()
+                                        - citation.title = citation.title.trim()
+                                        - citation.journal = citation.journal.trim()
+                                        - citation.numbers = citation.numbers.trim()
+                                        - scholar = "https://scholar.google.com/scholar?q=" + citation.title
+                                        
+                                        li(id= 'citation' + counter)
+                                            p.author= citation.authors
+                                            cite= citation.title
+                                            p
+                                                span.journalTitle= citation.journal
+                                                | 
+                                                span.journalInfo= citation.numbers
+                                            a.in-text(href=scholar target="_blank") Google Scholar
+                                            a.in-text(href="#intext" + counter) Back to text
+
                                 if citations_url
                                     each citation in citations_url
                                         - counter = counter + 1
