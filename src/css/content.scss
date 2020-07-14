@@ -511,10 +511,6 @@ main {
   }
 }
 
-// mathjax adds right border for some reason
-nobr .math span {
-  border-left-width: 0px !important;
-}
 
 #references {
   ol {
