@@ -98,7 +98,72 @@ block article
 
         The codebase for this model can be found [here](https://github.com/igembitsgoa/modelling).
 
-        # Kill Switch
+        # Proposed Implementation Models
+
+        The models in this section provide mathematical validation to the proposed implementation of our project. The models listed below are the viscosity model
+        (for the inoculant) and a docking model.
+
+        ## Viscosity model
+        In this model, we aim to determine the optimum kinematic viscosity (also known as "momentum diffusivity", is equal to the ratio of the viscosity to the density of the fluid)
+        of the polymer-based liquid inoculant suspension of the bacteria that is introduced into the plant system. Furthermore, we would also like to prove that this inoculant is 
+        transported throughout the plant system by the vascular bundle. Henceforth, we shall be using the term ‘viscosity’ to refer to the kinematic viscosity of the liquid, unless stated otherwise.
+
+        To allow for the inoculant to be viscous enough for viable vascular transport, we make the assumption that its viscosity lies between certain permissible values. The viscosity is assumed to lie
+        within a certain interval from the kinematic viscosity of water. Let \\( \sigma \\) represent this range and \\( \nu_w \\) represent the viscosity of water, then the viscosity of the inoculant, 
+        \\( \nu \\), lies within the range
+
+        $$
+            \nu_w - \sigma \leq \nu \leq \nu_w + \sigma
+        $$
+
+        Suppose our polymer-based inoculant consists of \\( N \\) components, we can determine the Viscosity Blending Number (VBN) of each component [Refutas, 2000](#citation3). The VBN of a particular solvent with 
+        viscosity \\( \nu_i \)) is
+
+        $$
+            \text{VBN}_i = 14.534\cdot\ln(\ln(\nu_i + 0.8)) + 10.975
+        $$
+
+        The VBN of the N-component solvent is then calculates as
+
+        $$
+            \text{VBN} = \sum_{i=1}^{N} \chi_i \cdot \text{VBN}_i
+        $$
+
+        Where \\( \chi_i \\) is the mass fraction of each component. Given the VBN of the mixture, the viscosity can be calculated as:
+        $$
+            \nu = \exp\left(\exp\left(\frac{\text{VBN} - 10.975}{14.534}\right)\right) - 0.8
+        $$
+
+        Imposing the assumption we made about the viscosity of the inoculant, we obtain the following constraint on the viscosity:
+
+        $$
+            14.534\ln(\ln(\nu_w + 0.8 -\sigma)) + 10.975 \leq \sum_{i = 1}^{N} \chi_i \cdot \text{VBN}_i \leq 14.534\ln(\ln(\nu_w + 0.8 +\sigma)) + 10.975
+        $$
+        
+        If we use the toxicity of the inoculant as a cost function (a reasonable choice since the inoculant is going to be introduced into a food product), we can then set up a linear progamming problem
+        to determine the viscosity of the inoculant. Using the LD50 (Rat, oral) values for each component (reprented by \\(T_i\\)), we set up the cost function 
+        $$
+            C =  \sum_{i=1}^{N} \chi_i \cdot T_i
+        $$
+
+        We now state the components of the incoulant: Luria-Bertrani Broth, Carboxymethyl Cellulose, Bentonite, Triton X 100, Sorbic Acid, and Potassium Sorbate. These components were used for their 
+        low toxicity and relative ease of availability [](#citation4). We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
+        we solved the probelem to find the optimum composition of the inoculant. The result, along with the LD50 values of each component is tabulated. 
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Component               | LD50 (Rats, oral) (g/kg) | Optimised Concentration (w/w)|
+        | :---------:             | :----------------------: | :--------------------------: |
+        | Culture Broth (LB)      | —                        | 95                           |
+        | Triton X 100            | 4.19                     | 3.1                          |
+        | Carboxymethyl Cellulose | 27                       | 0.1                          |
+        | Bentonite               | —                        | 1.4                          |
+        | Sorbic Acid             | 7.36                     | 0.2                          |
+        | Potassium Sorbate       | 4.34                     | 0.2                          |
+        [Table 2: Optimal concentration of each component in the inoculant]
+
+    :markdown-it(html)
+        
+
 
 append buttons
     //- mind the quotes and the plus sign
@@ -158,42 +223,26 @@ prepend citations_doi_manual
         ]
 //- Citations URL End
 
-    prepend citations_books
+prepend citations_books
     -
         var citations_books = [
             {
-                // 5
-                "authors": "Ingalls, B. P.",
-                "year_published": "2013",
-                "title": "Mathematical modeling in systems biology: An introduction.",
-                "publisher": "MIT Press",
-                "Google_Books_URL": "https://books.google.co.in/books?id=OYr6AQAAQBAJ"
+                // 3
+                "authors": "Maples, R. E.",
+                "year_published": "2000",
+                "title": "Petroleum Refinery Process Economics.",
+                "publisher": "PennWell Books",
+                "Google_Books_URL": "https://books.google.co.in/books?id=Gsate978w5MC"
             }
         ]
 //- Citations Books End
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
-    prepend citations_doi
+prepend citations_doi
     -
         var citations_doi = [
         {
-            'id': '1',
-            'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
-            'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
-            'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
-            'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
-        },
-        {
-            'id': '2',
-            'authors': 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ',
-            'title': 'Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).',
-            'journal': 'International Journal of Infectious Diseases',
-            'numbers': '88, 127-134. ',
-            'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003',
-        },
-        {
-            'id': '3',
+            'id': '4',
             'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
             'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
             'journal': 'International Journal of Biometeorology',
