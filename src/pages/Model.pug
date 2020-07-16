@@ -117,13 +117,13 @@ block article
         $$
 
         Suppose our polymer-based inoculant consists of \\( N \\) components, we can determine the Viscosity Blending Number (VBN) of each component [Refutas, 2000](#citation3). The VBN of a particular solvent with 
-        viscosity \\( \nu_i \)) is
+        viscosity \\( \nu_i \\) is
 
         $$
             \text{VBN}_i = 14.534\cdot\ln(\ln(\nu_i + 0.8)) + 10.975
         $$
 
-        The VBN of the N-component solvent is then calculates as
+        The VBN of the N-component solvent is then calculated as
 
         $$
             \text{VBN} = \sum_{i=1}^{N} \chi_i \cdot \text{VBN}_i
@@ -137,31 +137,49 @@ block article
         Imposing the assumption we made about the viscosity of the inoculant, we obtain the following constraint on the viscosity:
 
         $$
-            14.534\ln(\ln(\nu_w + 0.8 -\sigma)) + 10.975 \leq \sum_{i = 1}^{N} \chi_i \cdot \text{VBN}_i \leq 14.534\ln(\ln(\nu_w + 0.8 +\sigma)) + 10.975
+            14.534\ln(\ln(\nu_w + 0.8 -\sigma)) + 10.975 \leq \sum_{i = 1}^{N} \chi_i \cdot \text{VBN}_i \leq 14.534\ln(\ln(\nu_w + 0.8 +\sigma)) \\
+            + 10.975
         $$
         
-        If we use the toxicity of the inoculant as a cost function (a reasonable choice since the inoculant is going to be introduced into a food product), we can then set up a linear progamming problem
+        If we use the toxicity of the inoculant as a cost function (a reasonable choice as the inoculant is going to be introduced into a food product), we can then set up a linear progamming problem
         to determine the viscosity of the inoculant. Using the LD50 (Rat, oral) values for each component (reprented by \\(T_i\\)), we set up the cost function 
         $$
             C =  \sum_{i=1}^{N} \chi_i \cdot T_i
         $$
 
-        We now state the components of the incoulant: Luria-Bertrani Broth, Carboxymethyl Cellulose, Bentonite, Triton X 100, Sorbic Acid, and Potassium Sorbate. These components were used for their 
+        The term \\( \sigma \\) was set to 15% of the viscosity of water.
+
+        We now state the components of the inoculant: Luria-Bertani Broth, Carboxymethyl cellulose (CMC), Bentonite, Triton X 100, Sorbic Acid, and Potassium Sorbate. These components were used for their 
         low toxicity and relative ease of availability [](#citation4). We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
-        we solved the probelem to find the optimum composition of the inoculant. The result, along with the LD50 values of each component is tabulated. 
+        we solved the problem to find the optimal composition of the inoculant. The result, along with the LD50 values of each component is tabulated. 
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
         | Component               | LD50 (Rats, oral) (g/kg) | Optimised Concentration (w/w)|
         | :---------:             | :----------------------: | :--------------------------: |
         | Culture Broth (LB)      | —                        | 95                           |
         | Triton X 100            | 4.19                     | 3.1                          |
-        | Carboxymethyl Cellulose | 27                       | 0.1                          |
+        | Carboxymethyl cellulose | 27                       | 0.1                          |
         | Bentonite               | —                        | 1.4                          |
         | Sorbic Acid             | 7.36                     | 0.2                          |
         | Potassium Sorbate       | 4.34                     | 0.2                          |
         [Table 2: Optimal concentration of each component in the inoculant]
 
     :markdown-it(html)
+
+        Using the VBN approach stated above, we obtain that the viscosity of the inoculant is 1.266 cSt (= 1.266 \\( \cross 10^{-6} m^2s^{-1}\\)).
+        This viscosity now serves as an ansatz and can be plugged into the equation for water transport in xylem tissues and a velocity of transport for the solvent can be obtained.
+
+        The Reynolds number for transport in xylem tissue is 0.05 [Rand, 1983](#citation5) and the xylem diameter is 50 μm [Evans and Morris, 2017](#citation6). The expression for the Reynolds number 
+        for a xylem of diameter \\( D \\) and a fluid with flow rate \\( V \\) and viscosity \\( \nu \\) is
+        $$ 
+            R = \frac{VD}{\nu}
+        $$
+        
+        Plugging in the values, we obtain that the velocity of flow of the inoculant is \\(1.2 \cross 10^{-3} m s^{-1} \\). This value is consitent with values in literature [Evans and Morris, 2017](#citation6).
+        This proves that our ansatz was correct.  
+
+        Therefore, in this model, we have found the optimal viscosity and composition of our inoculant, and using that as an anstaz, we have proven that the inoculant is capable of being transported through the 
+        xylem tissue.  
         
 
 
@@ -242,11 +260,19 @@ prepend citations_doi
     -
         var citations_doi = [
         {
-            'id': '4',
-            'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
-            'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
-            'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
-            'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
+            'id': '5',
+            'authors': 'Rand, R. H. (1983). ',
+            'title': 'Fluid Mechanics of Green Plants. ',
+            'journal': 'Annual Review of Fluid Mechanics',
+            'numbers': '15, 29-45 .',
+            'doi': 'https://doi.org/10.1146/annurev.fl.15.010183.000333',
+        },
+        {
+            'id': '6',
+            'authors': 'Evans, M. J., & Morris, R. J. (2017). ',
+            'title': 'Chemical agents transported by xylem mass flow propagate variation potentials. ',
+            'journal': 'The Plant journal : for cell and molecular biology',
+            'numbers': '91(6), 1029–1037.',
+            'doi': 'https://doi.org/10.1111/tpj.13624',
         },
         ]
