@@ -150,7 +150,7 @@ block article
         The term \\( \sigma \\) was set to 15% of the viscosity of water.
 
         We now state the components of the inoculant: Luria-Bertani Broth, Carboxymethyl cellulose (CMC), Bentonite, Triton X 100, Sorbic Acid, and Potassium Sorbate. These components were used for their 
-        low toxicity and relative ease of availability [](#citation4). We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
+        low toxicity and relative ease of availability (cite). We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
         we solved the problem to find the optimal composition of the inoculant. The result, along with the LD50 values of each component is tabulated. 
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
@@ -166,16 +166,16 @@ block article
 
     :markdown-it(html)
 
-        Using the VBN approach stated above, we obtain that the viscosity of the inoculant is 1.266 cSt (= 1.266 \\( \cross 10^{-6} m^2s^{-1}\\)).
+        Using the VBN approach stated above, we obtain that the viscosity of the inoculant is \\(1.266 cSt \\) (= \\( 1.266 \times 10^{-6} m^2s^{-1}\\)).
         This viscosity now serves as an ansatz and can be plugged into the equation for water transport in xylem tissues and a velocity of transport for the solvent can be obtained.
 
-        The Reynolds number for transport in xylem tissue is 0.05 [Rand, 1983](#citation5) and the xylem diameter is 50 μm [Evans and Morris, 2017](#citation6). The expression for the Reynolds number 
+        The Reynolds number for transport in xylem tissue is 0.05 [Rand, 1983](#citation4) and the xylem diameter is 50 μm [Evans and Morris, 2017](#citation5). The expression for the Reynolds number 
         for a xylem of diameter \\( D \\) and a fluid with flow rate \\( V \\) and viscosity \\( \nu \\) is
         $$ 
             R = \frac{VD}{\nu}
         $$
         
-        Plugging in the values, we obtain that the velocity of flow of the inoculant is \\(1.2 \cross 10^{-3} m s^{-1} \\). This value is consitent with values in literature [Evans and Morris, 2017](#citation6).
+        Plugging in the values, we obtain that the velocity of flow of the inoculant is \\(1.2 \times 10^{-3} m s^{-1} \\). This value is consitent with values in literature [Evans and Morris, 2017](#citation6).
         This proves that our ansatz was correct.  
 
         Therefore, in this model, we have found the optimal viscosity and composition of our inoculant, and using that as an anstaz, we have proven that the inoculant is capable of being transported through the 
@@ -260,7 +260,7 @@ prepend citations_doi
     -
         var citations_doi = [
         {
-            'id': '5',
+            'id': '4',
             'authors': 'Rand, R. H. (1983). ',
             'title': 'Fluid Mechanics of Green Plants. ',
             'journal': 'Annual Review of Fluid Mechanics',
@@ -268,7 +268,7 @@ prepend citations_doi
             'doi': 'https://doi.org/10.1146/annurev.fl.15.010183.000333',
         },
         {
-            'id': '6',
+            'id': '5',
             'authors': 'Evans, M. J., & Morris, R. J. (2017). ',
             'title': 'Chemical agents transported by xylem mass flow propagate variation potentials. ',
             'journal': 'The Plant journal : for cell and molecular biology',
