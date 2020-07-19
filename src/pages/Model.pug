@@ -28,7 +28,7 @@ block article
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
         | **Time Elapsed** (h)      | **Optical Density** (at 600nm)     | 
-        | -----------  | ------------- |
+        | :-----------:  | :-----------: |
         | 1            | 0.001         |
         | 2            | 0.019         |
         | 3            | 0.050         |                                              
@@ -45,7 +45,7 @@ block article
     :markdown-it(html)
 
         The optical density was subsequently converted to population size (in the units cfu/mL) using the conversion
-        ratio 1 OD = \\( 10^{-6} \\) cfu/mL. Then, the data was converted to the semi log domain by caluclating the log (base 10) of
+        ratio 1 OD = \\( 10^{-6} \\) cfu/mL. Then, the data was converted to the semi log domain by calculating the log (base 10) of
         the OD while retaining the time series as it is. 
 
         We selected a simple logistic equation to model the growth of the bacteria. At this moment, we would also like to state that
@@ -54,7 +54,7 @@ block article
         ## Logistic Model
 
         Developed in 1838 by Belgian mathematician Pierre  François Verhulst, a logistic model makes the assumption that the rate of population 
-        growth is limited and is dependent on the size of the population at any particular instant of time. Specifically, the rate of growth r is equal to
+        growth is limited and is dependent on the size of the population at any particular instant of time. Specifically, the rate of growth \\( r \\) is equal to
 
         $$
             r = r_0\left(1 - \frac{N}{N_{\text{max}}}\right)
@@ -96,7 +96,92 @@ block article
         With this model, we have proved that our organism is able to survive and replicate within the sugarcane matrix with a nontrivial growth rate and 
         reaches a sufficiently large population size.
 
-        # Kill Switch
+        The codebase for this model can be found [here](https://github.com/igembitsgoa/modelling).
+
+        # Proposed Implementation Models
+
+        The models in this section provide mathematical validation to the proposed implementation of our project. The models listed below are the viscosity model
+        (for the inoculant) and a docking model.
+
+        ## Viscosity model
+        In this model, we aim to determine the optimum kinematic viscosity (also known as "momentum diffusivity", is equal to the ratio of the viscosity to the density of the fluid)
+        of the polymer-based liquid inoculant suspension of the bacteria that is introduced into the plant system. Furthermore, we would also like to prove that this inoculant is 
+        transported throughout the plant system by the vascular bundle. Henceforth, we shall be using the term ‘viscosity’ to refer to the kinematic viscosity of the liquid, unless stated otherwise.
+
+        To allow for the inoculant to be viscous enough for viable vascular transport, we make the assumption that its viscosity lies between certain permissible values. The viscosity is assumed to lie
+        within a certain interval from the kinematic viscosity of water. Let \\( \sigma \\) represent this range and \\( \nu_w \\) represent the viscosity of water, then the viscosity of the inoculant, 
+        \\( \nu \\), lies within the range
+
+        $$
+            \nu_w - \sigma \leq \nu \leq \nu_w + \sigma
+        $$
+
+        Suppose our polymer-based inoculant consists of \\( N \\) components, we can determine the Viscosity Blending Number (VBN) of each component [Refutas, 2000](#citation3). The VBN of a particular solvent with 
+        viscosity \\( \nu_i \\) is
+
+        $$
+            \text{VBN}_i = 14.534\cdot\ln(\ln(\nu_i + 0.8)) + 10.975
+        $$
+
+        The VBN of the N-component solvent is then calculated as
+
+        $$
+            \text{VBN} = \sum_{i=1}^{N} \chi_i \cdot \text{VBN}_i
+        $$
+
+        Where \\( \chi_i \\) is the mass fraction of each component. Given the VBN of the mixture, the viscosity can be calculated as:
+        $$
+            \nu = \exp\left(\exp\left(\frac{\text{VBN} - 10.975}{14.534}\right)\right) - 0.8
+        $$
+
+        Imposing the assumption we made about the viscosity of the inoculant, we obtain the following constraint on the viscosity:
+
+        $$
+            14.534\ln(\ln(\nu_w + 0.8 -\sigma)) + 10.975 \leq \sum_{i = 1}^{N} \chi_i \cdot \text{VBN}_i \leq 14.534\ln(\ln(\nu_w + 0.8 +\sigma)) \\
+            + 10.975
+        $$
+        
+        If we use the toxicity of the inoculant as a cost function (a reasonable choice as the inoculant is going to be introduced into a food product), we can then set up a linear progamming problem
+        to determine the viscosity of the inoculant. Using the LD50 (Rat, oral) values for each component (reprented by \\(T_i\\)), we set up the cost function 
+        $$
+            C =  \sum_{i=1}^{N} \chi_i \cdot T_i
+        $$
+
+        The term \\( \sigma \\) was set to 15% of the viscosity of water.
+
+        We now state the components of the inoculant: Luria-Bertani Broth, Carboxymethyl cellulose (CMC), Bentonite, Triton X 100, Sorbic Acid, and Potassium Sorbate. These components were used for their 
+        low toxicity and relative ease of availability (cite). We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
+        we solved the problem to find the optimal composition of the inoculant. The result, along with the LD50 values of each component is tabulated. 
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Component               | LD50 (Rats, oral) (g/kg) | Optimised Concentration (w/w)|
+        | :---------:             | :----------------------: | :--------------------------: |
+        | Culture Broth (LB)      | —                        | 95                           |
+        | Triton X 100            | 4.19                     | 3.1                          |
+        | Carboxymethyl cellulose | 27                       | 0.1                          |
+        | Bentonite               | —                        | 1.4                          |
+        | Sorbic Acid             | 7.36                     | 0.2                          |
+        | Potassium Sorbate       | 4.34                     | 0.2                          |
+        [Table 2: Optimal concentration of each component in the inoculant]
+
+    :markdown-it(html)
+
+        Using the VBN approach stated above, we obtain that the viscosity of the inoculant is \\(1.266 cSt \\) (= \\( 1.266 \times 10^{-6} m^2s^{-1}\\)).
+        This viscosity now serves as an ansatz and can be plugged into the equation for water transport in xylem tissues and a velocity of transport for the solvent can be obtained.
+
+        The Reynolds number for transport in xylem tissue is 0.05 [Rand, 1983](#citation4) and the xylem diameter is 50 μm [Evans and Morris, 2017](#citation5). The expression for the Reynolds number 
+        for a xylem of diameter \\( D \\) and a fluid with flow rate \\( V \\) and viscosity \\( \nu \\) is
+        $$ 
+            R = \frac{VD}{\nu}
+        $$
+        
+        Plugging in the values, we obtain that the velocity of flow of the inoculant is \\(1.2 \times 10^{-3} m s^{-1} \\). This value is consitent with values in literature [Evans and Morris, 2017](#citation6).
+        This proves that our ansatz was correct.  
+
+        Therefore, in this model, we have found the optimal viscosity and composition of our inoculant, and using that as an anstaz, we have proven that the inoculant is capable of being transported through the 
+        xylem tissue.  
+        
+
 
 append buttons
     //- mind the quotes and the plus sign

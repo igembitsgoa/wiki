@@ -12,14 +12,12 @@ def main():
     # TODO: read every file in citations
     for root, _, files in os.walk('citations'):
 
-        parsed_citations = []
-
         for filename in files:
             with open(root + '/' + filename, 'r') as file:
                 citations = yaml.safe_load(file)
 
+            parsed_citations = []
             for citation in citations:
-
                 if 'doi' in citation.keys():
                     parsed_citation = parse_DOI(citation['doi'])
                     parsed_citation['type'] = 'article'
