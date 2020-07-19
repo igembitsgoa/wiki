@@ -1,0 +1,28 @@
+#1
+- article:
+	authors: "Zwietering, M. H., Jongenburger, I., Rombouts, F. M. & van 't Riet, K. "
+	year_published: 1990
+	title: "Modeling of the Bacterial Growth Curve"
+	journal: "Applied and environmental microbiology"
+	numbers: "56(6), 1875-1881."
+
+#2
+- article:
+	authors: "Verhulst, Pierre-François. "
+	year_published: 1838
+	title: "Notice sur la loi que la population poursuit dans son accroissement"
+	journal: "Correspondance Mathématique et Physique"
+	numbers: "10, 113-121."
+#3
+- book:
+	authors: "Maples, R. E."
+	year_published: 2000
+	title: "Petroleum Refinery Process Economics."
+	publisher: "PennWell Books"
+	Google_Books_URL: "https://books.google.co.in/books?id=Gsate978w5MC"
+
+#4
+- doi: https://doi.org/10.1146/annurev.fl.15.010183.000333
+
+#5
+- doi: https://doi.org/10.1111/tpj.13624
