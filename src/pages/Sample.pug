@@ -60,7 +60,7 @@ block article
         #### This is a level 4 heading. 
         [This is a link](google.com)
 
-    +image(1, "Sample--calgary.jpg", "caption", 600)
+    +image(1, "Sample--calgary.jpg", "Caption", 60)
 
     :markdown-it(html)
         Back to regular text.
@@ -139,81 +139,6 @@ append buttons
     +buttonLeft("Description")
     +buttonRight("Next")
 
-//- DO NOT MODIFY START AND END LINES.
-//- Citations DOI Start
-    1. https://doi.org/10.1007/s00484-015-1117-4
-    2. https://doi.org/10.1016/j.ijid.2019.08.003
-//- Citations DOI End
-
-prepend citations_doi_manual
-    -
-        var citations_doi_manual = [
-            {
-                "id"     : "4",
-                "authors": "Allen, M. J., & Sheridan, S. C. (2015).",
-                "title"  : "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.",
-                "journal": "International Journal of Biometeorology",
-                "numbers": "62(1), 57-67."
-            }
-        ]
-
-
-prepend citations_url
-    -
-        var citations_url = [
-            {
-                // 3
-                "authors": "",
-                "title": "Agriculture: Crop production: Sugarcane. ",
-                "published": "",
-                "accessed": "June 22, 2020",
-                "site_name": "TNAU Agritech Portal",
-                "url": "https://google.com"
-            },
-            {
-                // 4
-                "authors": "Pranav",
-                "title": "Agriculture: Crop production: Sugarcane. ",
-                "published": "",
-                "accessed": "June 22, 2020",
-                "site_name": "TNAU Agritech Portal",
-                "url": "https://google.com"
-            }
-        ]
-//- Citations URL End
-
-prepend citations_books
-    -
-        var citations_books = [
-            {
-                // 5
-                "authors": "Ingalls, B. P.",
-                "year_published": "2013",
-                "title": "Mathematical modeling in systems biology: An introduction.",
-                "publisher": "MIT Press",
-                "Google_Books_URL": "https://books.google.co.in/books?id=OYr6AQAAQBAJ"
-            }
-        ]
-//- Citations Books End
-
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
-prepend citations_doi
-    -
-        var citations_doi = [
-        {
-            'id': '1',
-            'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
-            'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
-            'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
-            'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
-        },
-        {
-            'id': '2',
-            'authors': 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ',
-            'title': 'Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).',
-            'journal': 'International Journal of Infectious Diseases',
-            'numbers': '88, 127-134. ',
-            'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003',
-        }
-        ]
+prepend citations
+    - var citations = [{"authors": "Allen, M. J., & Sheridan, S. C. (2015). ", "doi": "https://doi.org/10.1007/s00484-015-1117-4", "journal": "International Journal of Biometeorology", "numbers": "62(1), 57-\u009367. ", "title": "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.", "type": "article"}, {"authors": "Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ", "doi": "https://doi.org/10.1016/j.ijid.2019.08.003", "journal": "International Journal of Infectious Diseases", "numbers": "88, 127-\u0093134. ", "title": "Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).", "type": "article"}, {"authors": "Allen, M. J., & Sheridan, S. C. (2015).", "journal": "International Journal of Biometeorology.", "numbers": "62(1), 57-67.", "title": "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.", "type": "article", "year_published": 2015}, {"details": "(n.d.). Retrieved on June 22, 2020. from ", "title": "Agriculture: Crop production: Sugarcane. TNAU Agritech Portal.", "type": "webpage", "url": "https://google.com"}, {"details": "(March 15, 2019). Retrieved on June 22, 2020. from ", "title": "Agriculture: Crop production: Sugarcane. TNAU Agritech Portal.", "type": "webpage", "url": "https://google.com"}, {"Google_Books_URL": "https://books.google.co.in/books?id=OYr6AQAAQBAJ", "authors": "Ingalls, B. P.", "publisher": "MIT Press.", "title": "Mathematical modeling in systems biology: An introduction.", "type": "book", "year_published": "(2013)."}]
