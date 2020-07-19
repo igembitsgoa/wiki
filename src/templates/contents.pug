@@ -30,13 +30,11 @@ html(lang="en")
                             block buttons
 
 
-                        article#references
-                            h1 References
-                            
-                            ol
-                                block citations
-
-                                if citations
+                        block citations
+                        if citations
+                            article#references
+                                h1 References
+                                ol
                                     - counter = 1
                                     each citation in citations
                                         if citation.type == 'article'
