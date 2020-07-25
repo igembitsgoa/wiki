@@ -52,5 +52,5 @@ after_script:
   - git status
   - git branch --list
   - git fetch
-  - git log --oneline --decorate
+  - git log --oneline --decorate -10
   - git push origin "${TRAVIS_BRANCH}"
