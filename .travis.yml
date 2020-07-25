@@ -10,14 +10,12 @@ cache: npm
 git:
   depth: false
 
-before_install:
-  # - bash list_modified_files.sh
-
 install:
   - npm ci
   - pip install -r requirements.txt
 
 before_script:
+  - git checkout "${TRAVIS_BRANCH}"
   - python test.py
   - cd src
   - python preprocess.py
@@ -27,6 +25,9 @@ script:
   - npm test
   - npm run build
 
+after_script:
+  - git status
+
 deploy:
   provider: pages
   skip-cleanup: true
@@ -34,3 +35,4 @@ deploy:
   local_dir: dist
   on:
     branch: master
+
