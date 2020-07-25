@@ -26,6 +26,8 @@ script:
   - npm run build
 
 after_script:
+  - git branch --show-current
+  - git add .
   - git status
 
 deploy:
