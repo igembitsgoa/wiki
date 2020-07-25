@@ -45,4 +45,4 @@ after_script:
   # Add new "origin" with access token in the git URL for authentication
   - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
   - git status
-  - git push origin master 
+  - git push origin "${TRAVIS_BRANCH}" 
