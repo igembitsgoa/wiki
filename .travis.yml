@@ -51,6 +51,6 @@ after_script:
   - 'git commit -m "Travis build" -m "[skip ci]"'
   - git status
   - git branch --list
-  - git pull origin "${TRAVIS_BRANCH}"
+  # - git pull origin "${TRAVIS_BRANCH}"
   - git log --oneline --decorate
-  - git push origin "${TRAVIS_BRANCH}"
+  # - git push origin "${TRAVIS_BRANCH}"
