@@ -37,8 +37,10 @@ deploy:
 after_script:
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "Travis CI"
+  - python igem-wikisync.py
   - git status
-  - git add dist
+  - git add .
+  - git rm src
   - 'git commit -m "Travis build: $TRAVIS_BUILD_NUMBER" -m "[skip ci]"'
   # Remove existing "origin"
   - git remote rm origin
