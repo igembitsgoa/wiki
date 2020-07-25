@@ -38,13 +38,19 @@ after_script:
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "Travis CI"
   - python igem-wikisync.py
+  - cat upload_map.yml
   - git status
-  - git add .
-  - git rm src
-  - 'git commit -m "Travis build: $TRAVIS_BUILD_NUMBER" -m "[skip ci]"'
   # Remove existing "origin"
   - git remote rm origin
   # Add new "origin" with access token in the git URL for authentication
   - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
   - git status
-  - git push origin "${TRAVIS_BRANCH}" 
+  - git add *.*
+  - git add igem
+  - git add dist
+  - 'git commit -m "Travis build" -m "[skip ci]"'
+  - git status
+  - git branch --list
+  - git pull origin "${TRAVIS_BRANCH}"
+  - git log --oneline --decorate
+  - git push origin "${TRAVIS_BRANCH}"
