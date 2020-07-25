@@ -345,7 +345,7 @@ html:
     md5: de37345e082c5e41334fbc2e15dbc0a7
   index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
-    md5: 93471a909c741d0cb6cc2deb6ab32b5c
+    md5: aece5ff6f9499bea7a47ef875d402d75
 js:
   content.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/content-bundleJS?action=raw&ctype=text/javascript
