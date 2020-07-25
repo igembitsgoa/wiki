@@ -26,11 +26,6 @@ script:
   - npm test
   - npm run build
 
-after_script:
-  - git branch --show-current
-  - git add .
-  - git status
-
 deploy:
   provider: pages
   skip-cleanup: true
@@ -39,3 +34,15 @@ deploy:
   on:
     branch: master
 
+after_script:
+  - git config --global user.email "travis@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - git status
+  - git add dist
+  - 'git commit -m "Travis build: $TRAVIS_BUILD_NUMBER" -m "[skip ci]"'
+  # Remove existing "origin"
+  - git remote rm origin
+  # Add new "origin" with access token in the git URL for authentication
+  - git remote add origin https://ballaneypranav:${GH_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
+  - git status
+  - git push origin master 
