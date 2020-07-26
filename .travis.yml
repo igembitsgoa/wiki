@@ -20,10 +20,8 @@ jobs:
       before_script:
         - git checkout "${TRAVIS_BRANCH}"
         - python test.py
-        - cd src
         - python preprocess.py
         - python citations.py
-        - cd ..
       script:
         - npm test
         - npm run build

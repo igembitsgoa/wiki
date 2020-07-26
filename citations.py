@@ -10,7 +10,7 @@ import yaml
 def main():
 
     # TODO: read every file in citations
-    for root, _, files in os.walk('citations'):
+    for root, _, files in os.walk('src/citations'):
 
         for filename in files:
             with open(root + '/' + filename, 'r') as file:
