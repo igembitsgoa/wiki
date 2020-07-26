@@ -41,7 +41,7 @@ def main():
 
                 parsed_citations.append(parsed_citation)
 
-            pugfile = 'pages/' + os.path.splitext(filename)[0] + '.pug'
+            pugfile = 'src/pages/' + os.path.splitext(filename)[0] + '.pug'
 
             with open(pugfile, 'r') as file:
                 lines = file.readlines()
