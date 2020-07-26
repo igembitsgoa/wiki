@@ -52,7 +52,7 @@ jobs:
         - git push origin "${TRAVIS_BRANCH}" -f
 
     - stage: Deploy to iGEM
-      if: commit_message ~ /iGEM-deploy/
+      if: commit_message =~ /iGEM-deploy/
       script:
         - git checkout "${TRAVIS_BRANCH}"
         - git config --global user.email "travis@travis-ci.com"
