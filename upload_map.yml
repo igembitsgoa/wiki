@@ -345,11 +345,11 @@ html:
     md5: de37345e082c5e41334fbc2e15dbc0a7
   index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
-    md5: a3c187360bb4667ebbbc9be331c14720
+    md5: 93471a909c741d0cb6cc2deb6ab32b5c
 js:
   content.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/content-bundleJS?action=raw&ctype=text/javascript
-    md5: aacb28612ff6063a0ebcfac43a4b76b0
+    md5: bc9127f06fe84f902af639d1db914328
   index.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/index-bundleJS?action=raw&ctype=text/javascript
-    md5: 8a6acd588cbf91b35829de7961c51d45
+    md5: 639e9a7f92d89cb5f7a277007ad99d80
