@@ -49,7 +49,7 @@ jobs:
         - git status
         - git fetch
         - git log --oneline --decorate -10
-        - git push origin "${TRAVIS_BRANCH}"
+        - git push origin "${TRAVIS_BRANCH}" -f
 
     - stage: Deploy to iGEM
       if: commit_message ~ /iGEM-deploy/
@@ -73,4 +73,4 @@ jobs:
         - git branch --list
         - git fetch
         - git log --oneline --decorate -10
-        - git push origin "${TRAVIS_BRANCH}"
+        - git push origin "${TRAVIS_BRANCH}" -f
