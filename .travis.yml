@@ -17,12 +17,11 @@ install:
 jobs:
   include:
     - stage: Build and Push to Github Pages
-      before_script:
-        - git checkout "${TRAVIS_BRANCH}"
-        - python test.py
-        - python preprocess.py
-        - python citations.py
       script:
+        # Custom tests and preprocessing
+        - python test.py
+        - python citations.py
+        - python preprocess.py # This changes URLs for github.io
         - npm test
         - npm run build
       deploy:
@@ -32,30 +31,24 @@ jobs:
         local_dir: dist
         on:
           branch: master
-      after_script:
-        - git config --global user.email "travis@travis-ci.com"
-        - git config --global user.name "Travis CI"
-        - git status
-        # Remove existing "origin"
-        - git remote rm origin
-        # Add new "origin" with access token in the git URL for authentication
-        - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
-        - git status
-        - git add *.*
-        - git add dist
-        - 'git commit -m "Travis: Build and deploy to Github Pages" -m "[skip ci]"'
-        - git status
-        - git fetch
-        - git log --oneline --decorate -10
-        - git push origin "${TRAVIS_BRANCH}" -f
 
-    - stage: Deploy to iGEM
+    - stage: Build and Deploy to iGEM
       if: commit_message =~ /iGEM-deploy/
-      script:
+      before_script:
+        # Git setup
         - git checkout "${TRAVIS_BRANCH}"
         - git config --global user.email "travis@travis-ci.com"
         - git config --global user.name "Travis CI"
+      script:
+        # Custom tests and preprocessing
+        - python test.py
+        - python citations.py
+        - npm test
+        - npm run build
+        # Push to iGEM
+        - pip install igem-wikisync
         - python igem-wikisync.py
+        # Print upload map in case pushing back to Github doesn't work
         - cat upload_map.yml
         - git status
         # Remove existing "origin"
