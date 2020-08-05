@@ -23,9 +23,9 @@ jobs:
         - python citations.py
         - python preprocess.py # This changes URLs for github.io
         - cat src/templates/mixins.pug
-        - head -c 1000 dist/index.html 
         - npm test
         - npm run build
+        - head -c 1000 dist/index.html 
       deploy:
         provider: pages
         github-token: $GITHUB_TOKEN
