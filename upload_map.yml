@@ -315,41 +315,7 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/2/27/T--BITSPilani-Goa_India--img--Sample--calgary.jpg
     md5: ced876de70f9b1d2de818881a2f5ae77
     upload_filename: T--BITSPilani-Goa_India--img--Sample--calgary.jpg
-  assets/img/logo.jpg:
-    link_URL: https://2020.igem.org/wiki/images/1/11/T--BITSPilani-Goa_India--img--logo.jpg
-    md5: d47d3629a83090c33e94c961e03a03d2
-    upload_filename: T--BITSPilani-Goa_India--img--logo.jpg
   assets/img/photo-1513360371669-4adf3dd7dff8.jpeg:
     link_URL: https://2020.igem.org/wiki/images/5/5a/T--BITSPilani-Goa_India--img--photo-1513360371669-4adf3dd7dff8.jpeg
     md5: 2da789f00c9e266e254660f991c42d47
     upload_filename: T--BITSPilani-Goa_India--img--photo-1513360371669-4adf3dd7dff8.jpeg
-css:
-  css/content.css:
-    link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/contentCSS?action=raw&ctype=text/css
-    md5: 3e455ee3aa6aa6728423ffd6c6fb8753
-  css/index.css:
-    link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/indexCSS?action=raw&ctype=text/css
-    md5: 44d0ddbf9e4c2f4f8c53e299b55f03b0
-html:
-  Description/index.html:
-    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Description
-    md5: 7c191c900b5e34781b6857666e714514
-  Design/index.html:
-    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Design
-    md5: 484fe0597c21deaa2afc49fcb721cda5
-  Model/index.html:
-    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model
-    md5: e61471fbcae8113a09a5142391427472
-  Sample/index.html:
-    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Sample
-    md5: f4679e89ed45933be92fd1ef935c3615
-  index.html:
-    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
-    md5: 3656044fc74edd6c2687eaf03c8ea5b7
-js:
-  content.bundle.js:
-    link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/content-bundleJS?action=raw&ctype=text/javascript
-    md5: bc9127f06fe84f902af639d1db914328
-  index.bundle.js:
-    link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/index-bundleJS?action=raw&ctype=text/javascript
-    md5: 639e9a7f92d89cb5f7a277007ad99d80
