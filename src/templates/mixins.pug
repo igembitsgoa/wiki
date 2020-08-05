@@ -78,8 +78,8 @@ mixin citation_article(citation, count)
             | 
             span.journalInfo= citation.numbers
         if citation.doi
-            a.in-text(href=citation.doi target="_blank") CrossRef
-        a.in-text(href=scholar target="_blank") Google Scholar
+            a.in-text(href=citation.doi target="_blank" rel="noopener") CrossRef
+        a.in-text(href=scholar target="_blank" rel="noopener") Google Scholar
         a.in-text(href="#intext" + count) Back to text
 
 mixin citation_webpage(citation, count)
@@ -91,7 +91,7 @@ mixin citation_webpage(citation, count)
         cite= citation.title
         p
             span.details= citation.details
-            a.in-text(href=citation.url target="_blank")= citation.url
+            a.in-text(href=citation.url target="_blank" rel="noopener")= citation.url
         a.in-text(href="#intext" + count) Back to text
 
 mixin citation_book(citation, count)
@@ -101,5 +101,5 @@ mixin citation_book(citation, count)
         p
             span.details= citation.publisher
         if citation.Google_Books_URL != ""
-            a.in-text(href=citation.Google_Books_URL target="_blank") Google Books
+            a.in-text(href=citation.Google_Books_URL target="_blank" rel="noopener") Google Books
         a.in-text(href="#intext" + counter) Back to text    
