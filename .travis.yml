@@ -55,9 +55,7 @@ jobs:
         # Add new "origin" with access token in the git URL for authentication
         - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
         - git status
-        - git add *.*
-        - git add igem
-        - git add dist
+        - git add upload_map.yml wikisync.log dist igem
         - 'git commit -m "Travis: Build and deploy to iGEM" -m "[skip ci]"'
         - git status
         - git branch --list
