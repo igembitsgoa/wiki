@@ -22,6 +22,8 @@ jobs:
         - python test.py
         - python citations.py
         - python preprocess.py # This changes URLs for github.io
+        - cat src/templates/mixins.pug
+        - head -c 1000 dist/index.html 
         - npm test
         - npm run build
       deploy:
