@@ -26,12 +26,12 @@ jobs:
         - npm run build
         - head -c 1000 dist/index.html
       deploy:
+        skip-cleanup: true
         provider: pages
         github-token: $GITHUB_TOKEN
         local_dir: dist
         on:
           branch: master
-        cleanup: false
 
     - stage: Build and Deploy to iGEM
       if: commit_message =~ /iGEM-deploy/
