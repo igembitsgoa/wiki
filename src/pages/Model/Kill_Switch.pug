@@ -1,4 +1,4 @@
-extends ../templates/contents.pug
+extends ../../templates/contents.pug
 
 block headVars
     - var title = "Kill Switch"
@@ -37,7 +37,7 @@ block article
         the stable TA complex binds to the operator of the corresponding <dfn>TAS ~ Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses 
         its transcription [Makarova et al., 2009; Tam & Kline, 1989](#citation2, #citation3).
     
-    +image(1, "Kill_Switch--type2ks.jpg", "Transcriptional regulation of type II toxin-antitoxin systems [Fraikin et al., 2020](#citation4)")
+    +image(1, "../../assets/img/Kill_Switch--type2ks.jpg", "Transcriptional regulation of type II toxin-antitoxin systems [Fraikin et al., 2020](#citation4)")
 
     :markdown-it(html)
 
@@ -56,3 +56,7 @@ block article
 
         As our product would be introduced into a plant which is later converted into a consumable item, we decided to use the ccdA-ccdB toxin-antitoxin system as the kill switch for its 
         relative non-toxicity towards humans and more generally, mammalian cells [Reschner et al., 2013](#citation8).
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+prepend citations
+    - var citations = [{"authors": "Stirling, F., Bitzan, L., O-\u0099Keefe, S., Redfield, E., Oliver, J. W. K., Way, J., & Silver, P. A. (2017). ", "doi": "https://doi.org/10.1016/j.molcel.2017.10.033", "journal": "Molecular Cell", "numbers": "68(4), 686-\u0093697.e3. ", "title": "Rational Design of Evolutionarily Stable Microbial Kill Switches.", "type": "article"}, {"authors": "Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). ", "doi": "https://doi.org/10.1186/1745-6150-4-19", "journal": "Biology Direct", "numbers": "4(1), 19. ", "title": "Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems and related mobile stress response systems in prokaryotes.", "type": "article"}, {"authors": "Tam, J. E., & Kline, B. C. (1989). ", "doi": "https://doi.org/10.1007/BF00261153", "journal": "Molecular and General Genetics MGG", "numbers": "219(1-2), 26-\u009332. ", "title": "The F plasmid ccd autorepressor is a complex of CcdA and CcdB proteins.", "type": "article"}, {"authors": "Fraikin, N., Goormaghtigh, F., & Van Melderen, L. (2020). ", "doi": "https://doi.org/10.1128/JB.00763-19", "journal": "Journal of Bacteriology", "numbers": "202(7). ", "title": "Type II Toxin-Antitoxin Systems: Evolution and Revolutions.", "type": "article"}, {"authors": "Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). ", "doi": "https://doi.org/10.1046/j.1365-2958.2001.02492.x", "journal": "Molecular Microbiology", "numbers": "41(1), 73-\u009382. ", "title": "The ratio between CcdA and CcdB modulates the transcriptional repression of the ccd poison-antidote system.", "type": "article"}, {"authors": "Dao-Thi, M.-H., Van Melderen, L., De Genst, E., Afif, H., Buts, L., Wyns, L., & Loris, R. (2005). ", "doi": "https://doi.org/10.1016/j.jmb.2005.03.049", "journal": "Journal of Molecular Biology", "numbers": "348(5), 1091-\u00931102. ", "title": "Molecular Basis of Gyrase Poisoning by the Addiction Toxin CcdB.", "type": "article"}, {"authors": "Syed, M. A., & L\u00c3\u00a9vesque, C. M. (2012). ", "doi": "https://doi.org/10.1139/w2012-025", "journal": "Canadian Journal of Microbiology", "numbers": "58(5), 553-\u0093562. ", "title": "Chromosomal bacterial type II toxin-antitoxin systems.", "type": "article"}, {"authors": "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C., Michel, B., ... & Szpirer, C. (2013). Use of Staby\u00c2\u00aetechnology for development and production of DNA vaccines free of antibiotic resistance gene. Human Vaccines & Immunotherapeutics, 9(10), 2203-\u00932210. ", "doi": "https://doi.org/10.4161/hv.25086", "journal": "Human Vaccines & Immunotherapeutics", "numbers": "9(10), 2203-\u00932210. ", "title": "Use of Staby\u00aetechnology for development and production of DNA vaccines free of antibiotic resistance gene.", "type": "article"}]

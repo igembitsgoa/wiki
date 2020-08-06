@@ -34,7 +34,6 @@ mixin buttonRight(buttonTitle)
         span.button-text= buttonTitle
 
 mixin image(n, url, caption, width)
-    - var url = "../assets/img/" + url
     .image
         if width
             img(src=url alt=caption style="width: " + width + "%")
