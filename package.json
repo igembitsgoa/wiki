@@ -4,7 +4,7 @@
   "description": "Wiki for iGEM 2020 BITS Goa",
   "main": "index.js",
   "scripts": {
-    "start": "python3 preprocess.py && webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
+    "start": "python3 preprocess.py && python3 nav.py && webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
     "build": "python3 preprocess.py && webpack --config webpack.production.js",
     "test": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\""
   },

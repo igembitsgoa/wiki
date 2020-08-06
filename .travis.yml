@@ -19,9 +19,11 @@ jobs:
     - stage: Build and Push to Github Pages
       script:
         # Custom tests and preprocessing
+        - sh github.io_fix.sh # This changes URLs for github.io
         - python test.py
         - python citations.py
-        - sh github.io_fix.sh # This changes URLs for github.io
+        - python preprocess.py
+        - python nav.py
         - npm test
         - npm run build
         - head -c 1000 dist/index.html
@@ -44,6 +46,8 @@ jobs:
         # Custom tests and preprocessing
         - python test.py
         - python citations.py
+        - python preprocess.py
+        - python nav.py
         - npm test
         - npm run build
         # Push to iGEM
