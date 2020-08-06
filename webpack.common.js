@@ -13,15 +13,19 @@ const walkSync = (dir, filelist = []) => {
   return filelist;
 };
 
-const dir = "src/pages"
+const dir = "src/pages";
 const pages = walkSync(dir).map((el) => el.slice(dir.length + 1));
 
-console.log(pages)
+console.log(pages);
 
 module.exports = {
   entry: {
     index: "./src/index.js",
     content: "./src/js/content.js",
+  },
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   devtool: "none", // avoid eval statements
   // https://stackoverflow.com/questions/44557802/how-to-create-multiple-pages-in-webpack
