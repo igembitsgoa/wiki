@@ -41,6 +41,16 @@ mixin image(n, url, caption, width)
             img(src=url alt=caption)
         p= "Figure " + n + ": " + caption
 
+//- -
+//-     var findimg = function(url) {
+//-         return (__filename)
+
+//-     }
+
+mixin imgCitation(name, number)
+    p.text-center
+        a(href="#citation" + number)= name
+
 mixin citation_article(citation, count)
     // year_published is present in the authors field
     - scholar = "https://scholar.google.com/scholar?q=" + citation.title
