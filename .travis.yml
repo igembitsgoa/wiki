@@ -24,9 +24,10 @@ jobs:
         - python preprocess.py # This changes URLs for github.io
         - npm test
         - npm run build
+        - head -c 1000 dist/index.html
       deploy:
-        provider: pages
         skip-cleanup: true
+        provider: pages
         github-token: $GITHUB_TOKEN
         local_dir: dist
         on:
@@ -47,7 +48,7 @@ jobs:
         - npm run build
         # Push to iGEM
         - pip install igem-wikisync
-        - python igem-wikisync.py
+        - python wikisync.py
         # Print upload map in case pushing back to Github doesn't work
         - cat upload_map.yml
         - git status
@@ -56,12 +57,15 @@ jobs:
         # Add new "origin" with access token in the git URL for authentication
         - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
         - git status
-        - git add *.*
-        - git add igem
-        - git add dist
+        - git add upload_map.yml wikisync.log dist igem
         - 'git commit -m "Travis: Build and deploy to iGEM" -m "[skip ci]"'
         - git status
         - git branch --list
         - git fetch
         - git log --oneline --decorate -10
         - git push origin "${TRAVIS_BRANCH}" -f
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always

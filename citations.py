@@ -6,7 +6,6 @@ import requests
 import yaml
 
 
-
 def main():
 
     # TODO: read every file in citations
@@ -23,11 +22,13 @@ def main():
                     parsed_citation['type'] = 'article'
 
                 elif 'article' in citation.keys():
-                    parsed_citation = parse_article_citation(citation['article'])
+                    parsed_citation = parse_article_citation(
+                        citation['article'])
                     parsed_citation['type'] = 'article'
 
                 elif 'webpage' in citation.keys():
-                    parsed_citation = parse_webpage_citation(citation['webpage'])
+                    parsed_citation = parse_webpage_citation(
+                        citation['webpage'])
                     parsed_citation['type'] = 'webpage'
 
                 elif 'book' in citation.keys():
@@ -61,6 +62,7 @@ def main():
             with open(pugfile, 'a') as file:
                 json.dump(parsed_citations, file, sort_keys=True)
 
+
 def etiquette():
 
     app_name = 'iGEM BITS Goa Wiki'
@@ -68,7 +70,7 @@ def etiquette():
     app_url = 'https://igembitsgoa.github.io'
     email = 'ballaneypranav@gmail.com'
 
-    return app_name + '/' + app_version + " (" + app_url + "; mailto:" + email + ")"
+    return f"{app_name}/{app_version} ({app_url}; mailto:{email})"
 
 
 def parse_DOI(doi):
@@ -127,9 +129,9 @@ def parse_article_citation(citation):
 
     if 'year_published' not in citation.keys() or \
             (
-                not isinstance(citation['year_published'], int) and \
+                not isinstance(citation['year_published'], int) and
                 not isinstance(citation['year_published'], str)
-            ) or \
+    ) or \
             citation['year_published'] == "":
 
         pprint(citation)
@@ -186,7 +188,7 @@ def parse_webpage_citation(citation):
             pprint(citation)
             print("'authors' has an invalid value.")
             raise SystemExit
-        
+
         if citation['authors'] != "":
             citation['authors'] = citation['authors'].strip()
             if citation['authors'][-1] != ".":
@@ -223,9 +225,9 @@ def parse_book_citation(citation):
 
     if 'year_published' not in citation.keys() or \
             (
-                not isinstance(citation['year_published'], int) and \
+                not isinstance(citation['year_published'], int) and
                 not isinstance(citation['year_published'], str)
-            ) or \
+    ) or \
             citation['year_published'] == "":
 
         pprint(citation)

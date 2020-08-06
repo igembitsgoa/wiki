@@ -1,6 +1,6 @@
-from igem_wikisync import wikisync
+import igem_wikisync as sync
 
-wikisync.run(
+sync.run(
     team='BITSPilani-Goa_India',
     src_dir='dist',
     build_dir='igem'
