@@ -51,12 +51,5 @@
     "webpack-merge": "^4.2.2"
   },
   "private": true,
-  "dependencies": {
-    "@gerhobbelt/markdown-it-attrs": "^3.0.3-18",
-    "@gerhobbelt/markdown-it-regexp": "^0.5.0-3",
-    "js-yaml": "^3.14.0",
-    "markdown-it-attrs": "^3.0.3",
-    "pug-lint": "^2.6.0",
-    "websocket-extensions": "^0.1.4"
-  }
+  "dependencies": {}
 }
