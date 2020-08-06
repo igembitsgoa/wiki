@@ -117,17 +117,9 @@ for root, directories, files in os.walk('src/pages'):
                         sys.exit(1)
 
                     # Test: Image captions
-                    imageCaption = re.search(r'\"(.*?)\"', arguments[2])
-                    if imageCaption is None:
+                    if len(arguments) <= 2:
                         print(filename, "failed test.")
-                        print("Check image caption on line", i+1,
-                              ". Did you forget to provide one? Is it within double quotes?")
-                        sys.exit(1)
-                    imageCaption = imageCaption.group(1)
-                    if imageCaption == "":
-                        print(filename, "failed test.")
-                        print(
-                            "Did you forget to provide an image caption on line {i+1}?")
+                        print(f"Image caption missing on line {i+1}.")
                         sys.exit(1)
 
                 elif "$$" in line:
