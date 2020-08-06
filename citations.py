@@ -4,6 +4,7 @@ import json
 from pprint import pprint
 import requests
 import yaml
+from pathlib import Path
 
 
 def main():
@@ -42,7 +43,9 @@ def main():
 
                 parsed_citations.append(parsed_citation)
 
-            pugfile = 'src/pages/' + os.path.splitext(filename)[0] + '.pug'
+            pugfile = (Path(root) / Path(filename)).relative_to('src/citations')
+
+            pugfile = 'src/pages/' + os.path.splitext(pugfile)[0] + '.pug'
 
             with open(pugfile, 'r') as file:
                 lines = file.readlines()
