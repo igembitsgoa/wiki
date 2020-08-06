@@ -1,44 +1,56 @@
 const path = require("path");
-const fs = require('fs');
-var HTMLWebpackPlugin = require('html-webpack-plugin');
+const fs = require("fs");
+var HTMLWebpackPlugin = require("html-webpack-plugin");
 
-const pages =
-    fs
-        .readdirSync(path.resolve(__dirname, 'src/pages'))
-        .filter(fileName => fileName.endsWith('.pug'));
+// List all files in a directory in Node.js recursively in a synchronous fashion
+// https://gist.github.com/kethinov/6658166#gistcomment-1976458
+const walkSync = (dir, filelist = []) => {
+  fs.readdirSync(dir).forEach((file) => {
+    filelist = fs.statSync(path.join(dir, file)).isDirectory()
+      ? walkSync(path.join(dir, file), filelist)
+      : filelist.concat(path.join(dir, file));
+  });
+  return filelist;
+};
 
-console.log(pages);
+const dir = "src/pages"
+const pages = walkSync(dir).map((el) => el.slice(dir.length + 1));
+
+console.log(pages)
 
 module.exports = {
-    entry: {
-        index: "./src/index.js",
-        content: "./src/js/content.js"
-    },
-    devtool: "none",                            // avoid eval statements
-    // https://stackoverflow.com/questions/44557802/how-to-create-multiple-pages-in-webpack
-    plugins: [
+  entry: {
+    index: "./src/index.js",
+    content: "./src/js/content.js",
+  },
+  devtool: "none", // avoid eval statements
+  // https://stackoverflow.com/questions/44557802/how-to-create-multiple-pages-in-webpack
+  plugins: [
+    new HTMLWebpackPlugin({
+      filename: "index.html",
+      template: "./src/index.pug",
+      excludeChunks: ["content"],
+    }),
+    ...pages.map(
+      (page) =>
         new HTMLWebpackPlugin({
-            filename: 'index.html',
-            template: "./src/index.pug",
-            excludeChunks: ['content']
-        }),
-        ...pages.map(page => new HTMLWebpackPlugin({
-            template: "./src/pages/" + page,
-            filename: page.slice(0, -4) + "/index.html",
-            excludeChunks: ['index']
-        }))
-        // new HTMLWebpackPlugin({
-        //     filename: 'Description/index.html',
-        //     template: "./src/pages/Description.pug",
-        //     excludeChunks: ['index']
-        // }),
+          template: "./src/pages/" + page,
+          filename: page.slice(0, -4) + "/index.html",
+          excludeChunks: ["index"],
+        })
+    ),
+    // new HTMLWebpackPlugin({
+    //     filename: 'Description/index.html',
+    //     template: "./src/pages/Description.pug",
+    //     excludeChunks: ['index']
+    // }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.pug$/,
+        use: ["html-loader", "pug-html-loader"],
+      },
     ],
-    module: {
-        rules: [
-            {
-                test: /\.pug$/,
-                use: ['html-loader', 'pug-html-loader']
-            }
-        ],
-    },
-}
+  },
+};
