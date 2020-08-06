@@ -99,29 +99,6 @@ for root, directories, files in os.walk('src/pages'):
                         sys.exit(1)
                     image_count += 1
 
-                    # # Test: Image paths
-                    # imagePath = re.search(r'\"(.*?)\"', arguments[1])
-                    # if imagePath is None:
-                    #     print(filename, "failed test.")
-                    #     print("Check line", i+1,
-                    #           ". Did you provide an image path?")
-                    #     sys.exit(1)
-                    # imagePath = imagePath.group(1)
-                    # imagePath = pathlib.Path(imagePath)
-                    # imagePath = (pathlib.Path(
-                    #     'src/assets/img') / imagePath).resolve()
-                    # if not os.path.exists(imagePath):
-                    #     print(filename, "failed test.")
-                    #     print("Check image path on line",
-                    #           i+1, ". Does the file exist?")
-                    #     sys.exit(1)
-
-                    # # Test: Image captions
-                    # if len(arguments) <= 2:
-                    #     print(filename, "failed test.")
-                    #     print(f"Image caption missing on line {i+1}.")
-                    #     sys.exit(1)
-
                 elif "$$" in line:
                     contains_mathjax = True
                     if requireMathJax != "true":
