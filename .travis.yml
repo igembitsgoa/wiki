@@ -21,7 +21,7 @@ jobs:
         # Custom tests and preprocessing
         - python test.py
         - python citations.py
-        - python preprocess.py # This changes URLs for github.io
+        - sh github.io_fix.sh # This changes URLs for github.io
         - npm test
         - npm run build
         - head -c 1000 dist/index.html
