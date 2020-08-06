@@ -1,10 +1,5 @@
 - urlPrefix = "/"
 
-//- mixin heading(sectionTitle)
-//-     h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-//-         button.btn.section(data-toggle="tooltip" data-placement="right"
-//-             title="Copy link to this section!")= '#'
-
 mixin buttonLeft(buttonTitle)
     if buttonTitle.length <= 7
         - var length = "short"

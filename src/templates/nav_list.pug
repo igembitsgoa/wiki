@@ -1,30 +1,4 @@
-- 
-  var navItems = [
-    {
-      'title': 'Overview', 
-      'items': ['Description', 'Design', 'Results']
-    },
-    // removed Demonstrate for aesthetics for now
-    {
-      'title': 'Project',
-      'items': ['Engineering Success', 'Notebook', 'Model', 'Contribution']
-    },
-    {
-      'title': 'Parts',
-      'items': ['Overview', 'Basic Parts', 'Composite Parts', 'Parts Collection']
-    },
-    // Outreach and Engagement
-    {
-      'title': 'Human Practices',
-      'items': ['Human Practices', 'Outreach']
-    },
-    {
-      'title': 'Team',
-      'items': ['Team Members', 'Attributions', 'Collaborations']
-    },
-    // removed Hardware and Measurement for aesthetics for now
-    {
-      'title': 'Awards',
-      'items': ['Entrepreneurship', 'Model', 'Plant', 'Software']
-    }
-  ]
+- var navItems = [{'section': 'Project', 'items': [{'title': 'Description', 'link': 'Description'}, {'title': 'Design', 'link': 'Design'}, {'title': 'Model', 'link': 'Model'}, {'title': 'Engineering', 'link': 'Engineering'}, {'title': 'Safety', 'link': 'Safety'}, {'title': 'Implementation', 'link': 'Implementation'}]}, {'section': 'Human Practices', 'items': [{'title': 'Human-Centered Design', 'link': 'Human Practices'}, {'title': 'Science Communication', 'link': 'Education'}, {'title': 'Humans of iGEM', 'link': 'Humans of iGEM'}, {'title': 'Accessibility', 'link': 'Accessibility'}, {'title': 'All India iGEM Meet', 'link': 'All India iGEM Meet'}]}, {'section': 'Contribution', 'items': [{'title': 'Overview', 'link': 'Contribution'}, {'title': 'Wiki Software', 'link': 'Software/Wiki'}, {'title': 'Golden Gate Web App', 'link': 'Software/Golden_Gate'}, {'title': 'PyMol Guide', 'link': 'Contribution/PyMol'}]}, {'section': 'Parts', 'items': [{'title': 'Part Collection', 'link': 'Part Collection'}, {'title': 'Parts', 'link': 'Parts'}]}, {'section': 'Journal', 'items': [{'title': 'Notebook', 'link': 'Notebook'}, {'title': 'Experiments', 'link': 'Experiments'}, {'title': 'Appendix', 'link': 'Appendix'}]}, {'section': 'Team', 'items': [{'title': 'Attributions', 'link': 'Attributions'}, {'title': 'Collaborations', 'link': 'Collaborations'}, {'title': 'Inclusion', 'link': 'Inclusion'}]}, {'section': 'Excellence', 'items': [{'title': 'Overview', 'link': 'Excellence'}, {'title': 'Dance', 'link': 'Dance'}, {'title': 'Entrepreneurship', 'link': 'Entrepreneurship'}]}, {'section': 'Judging', 'items': [{'title': 'Bronze', 'link': 'Judging/Bronze'}, {'title': 'Silver', 'link': 'Judging/Silver'}, {'title': 'Gold', 'link': 'Judging/Gold'}]}]
+
+mixin fakemixin()
+    p
