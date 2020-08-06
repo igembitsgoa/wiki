@@ -41,31 +41,6 @@ mixin image(n, url, caption, width)
             img(src=url alt=caption)
         p= "Figure " + n + ": " + caption
 
-//- Function for links
--   
-    var link = function(text, url) {
-        var attributes = 'class="in-text" href="' + url + '"'
-        var wrapper = '<a ' + attributes + '>' + text + '</a>'
-        return wrapper
-    }
-
-
-//- Function for tooltip definitions
--   
-    var defn = function(term, definition) {
-        var attributes = 'data-toggle="tooltip" title="' + definition + '"'
-        var wrapper = '<dfn ' + attributes + '>' + term + '</dfn>'
-        return wrapper
-    }
-
-//- Function for in-text citation
--
-    var intext = function(num, text) {
-        var link = "<a href=\"#citation" + num + "\">" + text + "</a>";
-        var wrapper = "<span id=\"intext" + num + "\" class=\"citation\">(" + link + ")</span>"
-        return wrapper;
-    }
-
 mixin citation_article(citation, count)
     // year_published is present in the authors field
     - scholar = "https://scholar.google.com/scholar?q=" + citation.title
