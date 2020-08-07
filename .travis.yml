@@ -31,18 +31,12 @@ jobs:
         - python nav.py
         - npm test
         - npm run build
-        - git status
-        # Remove existing "origin"
-        - git remote rm origin
         # Add new "origin" with access token in the git URL for authentication
+        - git remote rm origin
         - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
         - git status
         - git add src/citations/cache.yml
-        - 'git commit -m "Travis: Build and deploy to iGEM" -m "[skip ci]"'
-        - git status
-        - git branch --list
-        - git fetch
-        - git log --oneline --decorate -10
+        - 'git commit -m "Travis: Build and deploy to Github" -m "[skip ci]" || echo "No changes to commit"'
         - git push origin "${TRAVIS_BRANCH}" -f
       deploy:
         skip-cleanup: true
