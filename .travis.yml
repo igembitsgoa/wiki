@@ -17,6 +17,11 @@ install:
 jobs:
   include:
     - stage: Build and Push to Github Pages
+      before_script:
+        # Git setup
+        - git checkout "${TRAVIS_BRANCH}"
+        - git config --global user.email "travis@travis-ci.com"
+        - git config --global user.name "Travis CI"
       script:
         # Custom tests and preprocessing
         - sh github.io_fix.sh # This changes URLs for github.io
@@ -26,7 +31,19 @@ jobs:
         - python nav.py
         - npm test
         - npm run build
-        - head -c 1000 dist/index.html
+        - git status
+        # Remove existing "origin"
+        - git remote rm origin
+        # Add new "origin" with access token in the git URL for authentication
+        - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
+        - git status
+        - git add src/citations/cache.yml
+        - 'git commit -m "Travis: Build and deploy to iGEM" -m "[skip ci]"'
+        - git status
+        - git branch --list
+        - git fetch
+        - git log --oneline --decorate -10
+        - git push origin "${TRAVIS_BRANCH}" -f
       deploy:
         skip-cleanup: true
         provider: pages
