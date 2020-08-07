@@ -5,21 +5,39 @@ from pprint import pprint
 import requests
 import yaml
 from pathlib import Path
+import string
+
+# TODO: Cache citations
 
 
 def main():
 
-    # TODO: read every file in citations
+    # load cache
+    cache_file = 'src/citations/cache.yml'
+    if os.path.exists(cache_file):
+        with open(cache_file, 'r') as file:
+            cache = yaml.safe_load(file)
+    else:
+        cache = {}
+
+    if cache is None:
+        cache = {}
+
     for root, _, files in os.walk('src/citations'):
 
         for filename in files:
+
+            # skip cache
+            if filename == 'cache.yml':
+                continue
+
             with open(root + '/' + filename, 'r') as file:
                 citations = yaml.safe_load(file)
 
             parsed_citations = []
             for citation in citations:
                 if 'doi' in citation.keys():
-                    parsed_citation = parse_DOI(citation['doi'])
+                    parsed_citation, cache = parse_DOI(citation['doi'], cache)
                     parsed_citation['type'] = 'article'
 
                 elif 'article' in citation.keys():
@@ -43,7 +61,8 @@ def main():
 
                 parsed_citations.append(parsed_citation)
 
-            pugfile = (Path(root) / Path(filename)).relative_to('src/citations')
+            pugfile = (Path(root) / Path(filename)
+                       ).relative_to('src/citations')
 
             pugfile = 'src/pages/' + os.path.splitext(pugfile)[0] + '.pug'
 
@@ -65,6 +84,10 @@ def main():
             with open(pugfile, 'a') as file:
                 json.dump(parsed_citations, file, sort_keys=True)
 
+    # write cache
+    with open('src/citations/cache.yml', 'w') as file:
+        yaml.safe_dump(cache, file)
+
 
 def etiquette():
 
@@ -76,42 +99,59 @@ def etiquette():
     return f"{app_name}/{app_version} ({app_url}; mailto:{email})"
 
 
-def parse_DOI(doi):
+def parse_DOI(doi, cache):
     # returns split APA citation
 
-    response_json = requests.get(doi, headers={
-        'user-agent': etiquette(),
-        'Accept': 'application/citeproc+json'
-    }).json()
+    if doi in cache:
+        return cache[doi], cache
 
-    title = response_json['title'].replace('–', '-') + '.'
-    journal = response_json['container-title']
+    else:
+        response_json = requests.get(doi, headers={
+            'user-agent': etiquette(),
+            'Accept': 'application/citeproc+json'
+        }).json()
 
-    response_text = requests.get(doi, headers={
-        'user-agent': etiquette(),
-        'Accept': 'text/bibliography; style=apa; locale=en-US'
-    }).text
+        response_text = requests.get(doi, headers={
+            'user-agent': etiquette(),
+            'Accept': 'text/bibliography; style=apa; locale=en-US'
+        }).text
 
-    response_text = response_text.replace('â', '-')
-    response_text = response_text.replace('¦', '... &')
-    response_text = re.sub(' -', ' ', response_text)
-    response_text = response_text.split('doi')[0]
+        title = response_json['title']
+        journal = response_json['container-title']
 
-    length = len(title)//2
-    authors = response_text.split(title[:length])[0].replace('', '')
-    numbers = response_text.split(journal + ", ")[1].replace('', '')
+        response_text = response_text.replace('â', '-')
+        response_text = response_text.replace('¦', '... &')
+        response_text = re.sub(' -', ' ', response_text)
+        response_text = response_text.split('doi')[0]
 
-    # TODO: check for special characters
+        length = len(title)//2
+        authors = response_text.split(title[:length])[0].replace('', '')
+        numbers = response_text.split(journal + ", ")[1].replace('', '')
 
-    citation = {
-        'authors': authors,
-        'title': title,
-        'journal': journal,
-        'numbers': numbers,
-        'doi': doi
-    }
+        # this might still have some special characters
+        original_citation = {
+            'authors': authors,
+            'title': title,
+            'journal': journal,
+            'numbers': numbers,
+            'doi': doi
+        }
 
-    return citation
+        filtered_citation = {}
+
+        printable = set(string.printable)
+        for key in original_citation:
+            filtered_citation[key] = ""
+            original = original_citation[key]
+            for i in range(len(original)):
+                if original[i] in printable:
+                    filtered_citation[key] += original[i]
+                else:
+                    filtered_citation[key] += ' '
+
+        cache[doi] = filtered_citation
+
+        return filtered_citation, cache
 
 
 def parse_article_citation(citation):
@@ -166,8 +206,6 @@ def parse_webpage_citation(citation):
     for key in ['title', 'accessed', 'site_name']:
         if citation[key][-1] != '.':
             citation[key] += '.'
-
-    # TODO: validateDate(citation['accessed'])
 
     parsed_citation['details'] = f"Retrieved on {citation['accessed']} from "
 
