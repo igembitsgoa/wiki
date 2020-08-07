@@ -1,10 +1,6 @@
 """
     nav.py
 """
-
-import os
-import json
-from pprint import pprint
 import yaml
 
 
@@ -40,22 +36,6 @@ def main():
     with open('src/templates/nav_list.pug', 'w') as file:
         file.write(line)
         file.write('\n\nmixin fakemixin()\n    p')
-
-
-    # # write file with updated citations
-    # with open(pugfile, 'w') as file:
-    #     for line in lines:
-    #         stripped = line.rstrip()
-
-    #         file.write(line)
-    #         # write mode if second warning line, after so that warning is written anyway
-    #         if stripped == '//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.':
-    #             file.write(
-    #                 "prepend citations\n    - var citations = ")
-    #             break
-
-    # with open(pugfile, 'a') as file:
-    #     json.dump(parsed_citations, file, sort_keys=True)
 
 
 if __name__ == "__main__":
