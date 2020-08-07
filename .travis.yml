@@ -33,7 +33,7 @@ jobs:
         - npm run build
         # Add new "origin" with access token in the git URL for authentication
         - git remote rm origin
-        - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
+        - git remote add origin https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git > /dev/null 2>&1
         - git status
         - git add src/citations/cache.yml
         - 'git commit -m "Travis: Build and deploy to Github" -m "[skip ci]" || echo "No changes to commit"'
@@ -70,7 +70,7 @@ jobs:
         # Remove existing "origin"
         - git remote rm origin
         # Add new "origin" with access token in the git URL for authentication
-        - git remote add origin https://ballaneypranav:${GITHUB_TOKEN}@github.com/igembitsgoa/wiki.git > /dev/null 2>&1
+        - git remote add origin https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git > /dev/null 2>&1
         - git status
         - git add upload_map.yml wikisync.log dist igem
         - 'git commit -m "Travis: Build and deploy to iGEM" -m "[skip ci]"'
