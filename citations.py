@@ -116,7 +116,7 @@ def parse_DOI(doi, cache):
             'Accept': 'text/bibliography; style=apa; locale=en-US'
         }).text
 
-        title = response_json['title']
+        title = response_json['title'].replace('–', '-') + '.'
         journal = response_json['container-title']
 
         response_text = response_text.replace('â', '-')
@@ -137,8 +137,8 @@ def parse_DOI(doi, cache):
             'doi': doi
         }
 
+        # so replace all of them with spaces
         filtered_citation = {}
-
         printable = set(string.printable)
         for key in original_citation:
             filtered_citation[key] = ""
@@ -148,6 +148,10 @@ def parse_DOI(doi, cache):
                     filtered_citation[key] += original[i]
                 else:
                     filtered_citation[key] += ' '
+
+        # fix some common errors
+        for key in filtered_citation:
+            filtered_citation[key] = filtered_citation[key].replace('- ', '-')
 
         cache[doi] = filtered_citation
 
