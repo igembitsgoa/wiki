@@ -93,6 +93,10 @@ header {
 * Main
 ******************************/
 
+main {
+  padding: 3rem 0 2rem 0;
+}
+
 @include respond-above(xxl) {
   main .container {
     max-width: 1380px;
@@ -111,63 +115,34 @@ header {
   }
 }
 
-main {
-  padding: 3rem 0 2rem 0;
 
-  .sidebar {
-    padding: 30px 100px 0 5px;
+.sidebar {
+  padding: 30px 100px 0 5px;
 
-    #contents {
-      position: sticky;
-      top: 150px;
-      font-size: 1.2rem;
-      font-family: "Lato", sans-serif;
-      font-weight: 500;
-      height: auto;
-      transition: none;
+  #contents {
+    position: sticky;
+    top: 150px;
+    font-size: 1.2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    height: auto;
+    transition: none;
 
-      ul {
-        list-style: none;
+    li {
+      margin: 15px 0;
+      justify-content: left;
+      list-style: none;
+      display: flex;
 
-        li {
-          margin: 15px 0;
-          display: flex;
-          justify-content: left;
+      span {
+        padding-top: 2px;
 
-          .circle {
-            @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-            width: 1.5rem;
-            height: 1.5rem;
-            background: $grey;
-            border-radius: 1.354rem;
-            margin-top: 0.1rem;
-
-            .icon {
-              @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-              margin: auto;
-              background: black;
-              &.arrow {
-                @include transition(
-                  all,
-                  0.45s,
-                  cubic-bezier(0.65, 0, 0.076, 1)
-                );
-                width: 0.9375rem;
-                height: 0.104rem;
-                background: none;
-                &::before {
-                  display: block;
-                  content: "";
-                  margin: 0.5rem 0.4rem;
-                  width: 0.521rem;
-                  height: 0.521rem;
-                  border-top: 0.125rem solid black;
-                  border-right: 0.125rem solid black;
-                  transform: rotate(45deg);
-                }
-              }
-            }
-          }
+        div {
+          background: no-repeat url(../assets/icons/contents-arrow.svg);
+          width: 1.4rem;
+          height: 1.4rem;
+          background-size: contain;
+          margin: auto;
         }
       }
 
@@ -204,6 +179,7 @@ main {
           opacity: 0;
           transform: translateY($distance/2);
           transition: transform $duration $easeOutBack, opacity $duration;
+          width: 100%;
         }
         &:hover,
         &:focus {
