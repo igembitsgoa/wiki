@@ -25,12 +25,12 @@ jobs:
       script:
         # Custom tests and preprocessing
         - sh github.io_fix.sh # This changes URLs for github.io
+        - ls
         - python test.py
         - python citations.py
         - python preprocess.py
         - python nav.py
         - npm test
-        - ls
         - npm run build
         # Add new "origin" with access token in the git URL for authentication
         - git remote rm origin
