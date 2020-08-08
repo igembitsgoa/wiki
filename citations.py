@@ -78,7 +78,7 @@ def main():
                     # write mode if second warning line, after so that warning is written anyway
                     if stripped == '//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.':
                         file.write(
-                            "prepend citations\n    - var citations = ")
+                            "\nprepend citations\n    - var citations = ")
                         break
 
             with open(pugfile, 'a') as file:
