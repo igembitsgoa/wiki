@@ -28,6 +28,7 @@ jobs:
         - ls
         - python test.py
         - python citations.py
+        - ls
         - python preprocess.py
         - python nav.py
         - npm test
