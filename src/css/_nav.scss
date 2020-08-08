@@ -330,7 +330,12 @@ $whitey: #f0f0f0;
 }
 
 @include respond-below(xs) {
-
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  
   #menuContent {
     margin-left: 0.9rem;
 
@@ -340,11 +345,9 @@ $whitey: #f0f0f0;
     }
 
     ul {
-
       a {
         font-size: 1.25rem;
       }
     }
   }
 }
-

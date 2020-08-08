@@ -116,7 +116,6 @@ main {
   }
 }
 
-
 .sidebar {
   padding: 30px 100px 0 5px;
 
@@ -292,6 +291,7 @@ main {
     word-spacing: 0.1rem;
     color: #3d3d3d;
     text-align: justify;
+    overflow-x: scroll;
 
     span {
       scroll-margin-top: 200px;
@@ -435,7 +435,6 @@ main {
   }
 }
 
-
 .tooltip {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -553,11 +552,11 @@ footer {
     }
 
     h2 {
-      font-size: 1.75;
+      font-size: 1.75rem;
     }
 
     h3 {
-      font-size: 1.25;
+      font-size: 1.5rem;
     }
 
     p {
@@ -573,15 +572,14 @@ footer {
     }
 
     h2 {
-      font-size: 1.25;
+      font-size: 1.5rem;
     }
 
     h3 {
-      font-size: 1.15;
+      font-size: 1.25rem;
     }
   }
 }
-
 
 @include respond-below(md) {
   header {
@@ -600,9 +598,10 @@ footer {
   header {
     min-height: 40vh;
     #heading {
-      margin-left: 1rem;
+      margin-left: calc(1.5rem + 0.2vw);
+      margin-bottom: calc(1.5rem + 0.2vw);
       h1 {
-        // font-size: calc(3rem + 1.75vw);
+        font-size: calc(3rem + 1.75vw);
       }
     }
   }
@@ -617,7 +616,7 @@ footer {
       }
 
       h1 {
-        // font-size: 2.3rem;
+        font-size: 2.3rem;
       }
     }
   }
@@ -626,5 +625,23 @@ footer {
 @include respond-below(xs) {
   main {
     padding: 0;
+  }
+
+  header #heading h1 {
+    font-size: 4rem;
+  }
+}
+
+
+@include respond-below(xxs) {
+  header #heading h1 {
+    font-size: 3rem;
+  }
+}
+
+
+@include respond-below(xxxs) {
+  header #heading h1 {
+    font-size: 2.5rem;
   }
 }
