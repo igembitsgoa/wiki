@@ -30,6 +30,7 @@ jobs:
         - python preprocess.py
         - python nav.py
         - npm test
+        - ls
         - npm run build
         # Add new "origin" with access token in the git URL for authentication
         - git remote rm origin
