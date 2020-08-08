@@ -41,7 +41,7 @@ for root, _, files in os.walk('src/pages'):
                     templines.append(newline)
 
                 else:
-                    print("file doesn't exist")
+                    print(f"{img_path} doesn't exist")
                     sys.exit(1)
 
             else:
