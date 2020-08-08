@@ -27,9 +27,7 @@ for root, directories, files in os.walk('src/pages'):
             contents = [line.rstrip() for line in file.readlines()]
 
             # Test: Template line
-            # TODO: Check if template file actually exists 
-            pattern = re.compile(r"extends (\.\.\/)+templates\/contents.pug")
-            if not pattern.match(contents[0].strip()):
+            if "extends" not in contents[0]:
                 print(filename, "failed test.")
                 print("Template string must be the first line!")
                 sys.exit(1)
