@@ -41,13 +41,16 @@ block article
         of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
         product loss, lack of reusability, and environmental concerns.
 
-    +image(1, "Description--calgary.jpg", "hello")
-    +image(2, "Description--giphy.gif", "ser", 40)
+    - var imgpath = "" + require("../assets/img/Description--calgary.jpg")["default"]
+    +image(1, imgpath, "hello")
+    - var imgpath = "" + require("../assets/img/Description--giphy.gif")["default"]
+    +image(2, imgpath, "ser", 40)
     :markdown-it(html)
         # Genetic Design of Biosensor
         
         This is the genetic circuit brooooo look how cool!
-    +image(3, "biosensor.png", "Genetic Circuit of Biosensor")
+    - var imgpath = "" + require("../assets/img/biosensor.png")["default"]
+    +image(3, imgpath, "Genetic Circuit of Biosensor")
 
     :markdown-it(html)
 

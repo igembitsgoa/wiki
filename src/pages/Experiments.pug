@@ -1,18 +1,23 @@
 extends ../templates/contents.pug
 
 block headVars
-    - var title = "Sample"
+    - var title = "Experiments"
     - var requireMathJax = true
 
 block article
 
     :markdown-it(html)
 
-        # Headings
-        ## Level 2 Heading
-        ### Level 3 Heading
-        #### Level 4 Heading
+        # Sugarcane Processing
 
+    - var imgpath = "" + require("../assets/img/Experiments--SugarcaneProcessing.png")["default"]
+    +image(1, imgpath, "Sugarcane Processing", 100)
+
+
+    :markdown-it(html)
+        Most of the degradation of LB, Sorbic Acid, Potassium Sorbate is expected to be done by the second clarifier stage. 
+        We will be trying to replicate this in the following experiments and characterizing to show that they are considerably degraded. 
+        And, Bentonite is assumed to be removed in the first clarifier stage as filter cake along with other residues.
         # Emphasis
         This is regular text.
 
@@ -60,7 +65,9 @@ block article
         #### This is a level 4 heading. 
         [This is a link](google.com)
 
-    +image(1, "Sample--calgary.jpg", "Caption", 60)
+    - var imgpath2 = "" + require("../assets/img/Sample--calgary.jpg")["default"]
+    +image(2, imgpath2, "Caption", 60)
+
 
     :markdown-it(html)
         Back to regular text.
