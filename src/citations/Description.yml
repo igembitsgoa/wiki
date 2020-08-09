@@ -1,0 +1,19 @@
+# 1
+- article:
+    authors: "Shukla, S. K., Sharma, L., Awasthi, S. K. & Pathak, A. D."
+    year_published: 2017
+    title: "Sugarcane in India: Package of Practices for Different Agro-clamatic Zones."
+    journal: "AICRP (S) Technical Bulletin"
+    numbers: "1, 1-64."
+# 2
+- webpage:
+    title: "Sugarcane Statistics."
+    accessed: "August 09, 2020"
+    site_name: "ICAR-Sugarcane Breeding Institute"
+    url: "https://sugarcane.icar.gov.in/index.php/en/sugar-stats/sugarcane-statistics"
+# 3
+- book:
+    authors: "Central Board of Secondary Education (CBSE)."
+    year_published: 2010
+    title: "Basic Agriculture (Student Handbook) Class-X."
+    publisher: "CBSE"

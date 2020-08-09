@@ -2,7 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Description"
-    - var requireMathJax = true
+    - var requireMathJax = false
     - var backgroundImage = "Description--josh-withers.jpg"
     - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
     - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
@@ -10,155 +10,59 @@ block headVars
 block article
     :markdown-it(html)
 
-        # Problem Statement
+        # Introduction
 
-        The <dfn>current ~ ongoing</dfn> industry practices for chlorophyll removal from green seed canola oil involve the use 
-        of acid-activated (AACs). However, AACs are associated with a variety of problems, including 
-        product loss, lackusability, and environmental concerns.
+        India is primarily an agarian economy with around 58.6% of the population engaged in some form of agriculatural activity. 
+        Sugarcane is one of the most widely-grown commercial crops in India covering 3 belts spanning the Northern, Southern, 
+        and Western parts of the country; occupying around 5 million hectares of land [Shukla, S. K. et al., 2017](#citation1). 
+        Sugarcane acts as the primary input in not only the sugar industry but also in ethanol production and power generation (Figure 1). 
+        The sugar industry contributes to the socio-economic development of the regions in which it is based and is also one of the largest employers 
+        of the rural Indian population, providing around 500,000 jobs and impacting the livelihoods of around 50 million farmers.
 
-        ## Level 2 Heading1
-
-        Naman: The molecular  causes them to bind to chlorophyll and retain large volumes of oil, 
-
-        Suhas: The molecular xyz of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-
-        resulting in a 20% loss of oil during processing.
-
-        Srxlmp says: Ur face sucks The irreversible binding between the AACs and chlorophyll prevents reuse of the AACs, leading
-
-        SShastri says: The **BOOM GOES THE DYNAMITE** the AACs and chlorophyll prevents reuse of the AACs, leading
-
-        to increased costs for the manufacturer. This also increases the amount of 
-        [Rosano et al., 2019](#citation1) waste produced by the system. The waste is mixed into animal feed 
-        and released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by.
-
-        ### Level 3 Heading
-
-        causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-        increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-        released into the #ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by AACs. whatever
-
-        # Project Design
-
-        The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-        of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-        product loss, lack of reusability, and environmental concerns.
-
-    +image(1, "Description--calgary.jpg", "hello")
-    +image(2, "Description--giphy.gif", "trump", 40)
-    :markdown-it(html)
-        # Genetic Design of Biosensor
-
-        This is the genetic circuit brooooo look how cool!
-    +image(3, "biosensor.png", "Genetic Circuit of Biosensor")
+    +image(1, "Description--sugarandothers.png", "Uses of sugarcane in the sugar and allied industries")
 
     :markdown-it(html)
+        # The Problem
 
-        ## Level 2 Heading2
+        The sucrose present in the stem of the sugarcane exists in a dynamic balance between its synthesis and utilisation. Following 
+        the harvest of the crop, this equilibrium is disturbed. Instead of maintaining the level of sucrose, the sugarcane plant cells 
+        under stress hastily break down the sucrose into its components: fructose and glucose, causing huge losses in the sugar industry. 
+        The main enzyme responsible for this degradation is invertase. To put things into perspective, the action of invertase results in 
+        a reduction in the cane weight by 7.4 to 17.0 percent and reduces sugar recovery by about 10 percent (depending on the place of 
+        cultivation) [ICAR-SBI, 2020](#citation2) due to the long transport times and the staling of cane in the mills, waiting to be processed. 
 
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-        increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-        released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by AACs.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+        We remember being taught in high school that the retrieval rate of sugar is just 10.25% [Basic Agriculture, 2010](#citation3) and how it is one of the major 
+        issues that affects the sugar industry. This is remarkably low —  especially for a country like ours that is heavily dependent on agriculture. 
+        The income, and therefore the livelihoods, of a plethora of farmers depend directly on the quality of the cane they grow, thus making them the 
+        silent victims of post-harvest sugar deterioration. We decided it was time to do something to finally increase that number in our textbooks. 
+        We wanted to devise a solution that effectuates grassroot changes for farmers like [Swaminathan](Human_Practices).
 
-        > Creativity is just connecting things. When you ask creative people how they did something, they feel a 
-        > little guilty because they didn't really do it, they just saw something. It seemed obvious to them after 
-        > a while. That's because they were able to connect experiences they've had and synthesize new things.
-        >
-        > **Steve Jobs**
+        Hence SugarGain was born.
 
-        ### Level 3 Heading
+        # Our Solution
 
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of [Allen & Sheridan, 2015](#citation2) oil during processing. The irreversible binding
-        between the AACs and 
-        chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-        increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-        released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by AACs.
+        Our project focuses on targeting the invertase enzyme. The farmer would administer our genetically-engineered bacteria (which would be in our 
+        novel polymer-based inoculant) into the stem of the sugarcane using an injector mechanism. Once inside, our genetic circuit inside the bacterial 
+        chassis is designed to exhibit anti-invertase activity, regulated by the amount of fructose and glucose (the products formed upon the degradation 
+        of sucrose) inside the sugarcane in a continuous and controlled manner. Since our bacteria is closely involved with a consumable product: one that you 
+        probably ingested before/while reading this wiki, we kept in mind the significance of biosafety and designed a robust three-tier fail-safe mechanism. 
+        At every stage we have tried our best to consult with various stakeholders and subsequently revised our project design to make it one step closer to 
+        being deployable in the market.
 
-        # Dummy Section
+        Recently, of course, the COVID-19 pandemic has led to widespread economic damages, including to the sugar industry. Mills have been non-operational 
+        for a significant amount of time and even when restrictions ease, it would be a while before they reach their optimal operational efficiency. The 
+        cane that had already been harvested is currently being stored and thereby [compounding the problem of post-harvest deterioration](Human_Practices). 
+        This has added a deeper relevance to our product and motivated us to work even harder to achieve a user-friendly and effective solution for the farmer.  
 
-        The current industry practices for chlorophyll removal from green seed canola oil involve the use 
-        of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-        product loss, lack of reusability, and environmental concerns.
+        Through our surveys and webinars we have tried to make people increasingly aware of this issue, and stressing how this age-old problem can be solved by 
+        the tools synthetic biology offers. We also introduced synthetic biology to high school students by conducting a webinar — to which we received an overwhelming 
+        response, in hopes of encouraging them, as we were, to solve other long-standing problems arounf them.
 
-        ## Level 2 Heading
+        SugarGain is our way of making the world a sweeter place (quite literally!).
 
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-        increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-        released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by AACs.
-
-        $$  
-            J(\theta) =\frac{1}{2m}
-            [\sum^m_{i=1}(h_\theta(x^{(i)}) - 
-            y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
-        $$
-
-    :markdown-it(html)
-        <mark>here be dragons</mark>
-
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | This is      | the table     | header row   |
-        | -----------  | ------------- | ------------ |
-        | 1            | 2             | 3            |
-        | 4            | 5             | 6            |
-        |Content       |   **Cell**    |         Cell |                                               
-        |New section   |     More      |[Data](https://google.com) |
-        |And more      | With an escaped '\|'       ||
-
-        [Table 1: Caption goes here.]
-
-
-        |              |          Grouping           ||
-        |First Header  | Second Header | Third Header |
-        | ------------ | :-----------: | -----------: |
-        |Content       |          *Long Cell*        ||
-        |Content       |   **Cell**    |         Cell |                                               
-        |New section   |     More      |[Data](https://google.com) |
-        |And more      | With an escaped '\|'       ||
-
-        [Table 1: Caption goes here.]
-
-    :markdown-it(html)
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        <dfn>chlorophyll ~ green pigment</dfn> prevents reuse of the AACs, leading to increased costs for the
-        manufacturer. This also increases the amount of waste produced by the system. The waste is mixed into
-        animal feed and released into the ecosystem, where it has the potential to alter soil pH and nutrient 
-        [here is a link](https://google.com) availability for future crops. Our team sought to find
-        an alternative method of oil-processing that addresses all three issues presented by AACs.
-
-        The current industry ***practices*** for chlorophyll removal from green seed canola oil involve the use 
-        of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-        product loss, lack of reusability, and environmental concerns.
-
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of [hello again](#citation2) oil during processing. The irreversible binding between the AACs and 
-        chlorophyll prevents reuse of the , leading to increased costs for the manufacturer. This also 
-        increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-        released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by AACs.
 
 append buttons
     //- mind the quotes and the plus sign
-    +buttonLeft("Previous")
-    +buttonRight("Sample")
+    +buttonRight("Design")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
