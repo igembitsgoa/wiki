@@ -27,7 +27,7 @@ block article
             \nu_w - \sigma \leq \nu \leq \nu_w + \sigma
         $$
 
-        Suppose our polymer-based inoculant consists of \\( N \\) components, we can determine the Viscosity Blending Number  
+        Suppose our polymer-based inoculant consists of \\( N \\) components, we can determine the Viscosity Blending Number 
         of each component [Refutas, 2000](#citation1). The <dfn> VBN ~ Viscosity Blending Number </dfn> of a particular solvent 
         with viscosity \\( \nu_i \\) is
 
@@ -60,15 +60,17 @@ block article
             C =  \sum_{i=1}^{N} \chi_i \cdot T_i
         $$
 
-        The term \\( \sigma \\) is set to 15% of the viscosity of water.
+        The term \\( \sigma \\) is set to 15% of the viscosity of water. This means that we have allowed the numerical value of the viscosity of the inocluant 
+        to lie within 15% of that of water. 
 
         We now state the components of the inoculant: Luria-Bertani Broth, Carboxymethyl cellulose (CMC), Bentonite, Triton X 100, Sorbic Acid, and Potassium Sorbate. 
         These components were selected for their low toxicity and relative ease of availability (cite). Another reason for choosing these set of components was that 
         they can easily be removed from the juice during its processing by methods that are already used in the sugar manufacturing process. For a detailed 
-        description of the removal process and the sugar manufactuing process, look at our Experiments page. 
+        description of the removal process and the sugar manufactuing process, look at our [Experiments](Experiments) page. 
         
         We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
-        we solved the problem to find the optimal composition of the inoculant. The result, along with the LD50 values of each component is tabulated. 
+        we solved the problem to find the optimal composition of the inoculant. The resultling optimal concentrations of each component, along with their LD50 values 
+        are tabulated below. 
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
         | Component               | LD50 (Rats, oral) (g/kg) | Optimised Concentration (w/w)|
@@ -94,9 +96,9 @@ block article
         $$
         
         Plugging in the values, we obtain that the velocity of flow of the inoculant is \\(1.2 \times 10^{-3} m s^{-1} \\). This value is consitent with values 
-        in literature [Evans & Morris, 2017](#citation3). This proves that our ansatz was correct.  
+        found in literature [Evans & Morris, 2017](#citation3). This proves that our ansatz was correct.  
 
-        Hence, in this model, we have found the optimal viscosity and composition of our inoculant, and using that as an anstaz, we have proven that the inoculant 
+        Therefore, in this model, we have found the optimal viscosity and composition of our inoculant, and using that as an anstaz, we have proven that the inoculant 
         is capable of being transported through the xylem tissue in the plant.  
 
 
