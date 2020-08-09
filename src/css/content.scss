@@ -33,7 +33,6 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
   min-height: 70vh;
 
   .container {
@@ -54,6 +53,19 @@ header {
       font-size: calc(3rem + 4.5vw);
       // font-size: 9rem;
     }
+  }
+
+  #bg-attribution {
+    height: 1.25rem;
+    width: 1.25rem;
+    display: block;
+    background-image: url(../assets/icons/link-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(225deg)
+      brightness(112%) contrast(100%);
+    margin: 0 15px 30px 0;
   }
 }
 
@@ -218,12 +230,12 @@ main {
   h1 {
     font-weight: 400;
     font-size: 2.65rem;
-    padding: 30px 0 15px 0;
+    margin: 1rem 0 0.5rempx 0;
     word-spacing: 0.3rem;
     color: $dark-green;
 
     &:first-of-type {
-      padding-top: 0;
+      margin-top: 0;
     }
 
     button {
@@ -291,7 +303,10 @@ main {
     word-spacing: 0.1rem;
     color: #3d3d3d;
     text-align: justify;
-    overflow-x: scroll;
+
+    .MathJax_Display {
+      overflow-x: scroll;
+    }
 
     span {
       scroll-margin-top: 200px;
@@ -566,17 +581,19 @@ footer {
 }
 
 @include respond-below(lg) {
-  .content {
-    h1 {
-      font-size: 2rem;
-    }
+  main {
+    .content {
+      h1 {
+        font-size: 2rem;
+      }
 
-    h2 {
-      font-size: 1.5rem;
-    }
+      h2 {
+        font-size: 1.5rem;
+      }
 
-    h3 {
-      font-size: 1.25rem;
+      h3 {
+        font-size: 1.25rem;
+      }
     }
   }
 }
@@ -589,8 +606,16 @@ footer {
     }
   }
 
-  .sidebar {
-    display: none;
+  main {
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
   }
 }
 
@@ -604,6 +629,9 @@ footer {
         font-size: calc(3rem + 1.75vw);
       }
     }
+    #bg-attribution {
+      margin: 0 15px 15px 0;
+    }
   }
 
   main {
@@ -614,10 +642,6 @@ footer {
       article {
         padding: calc(1.5rem + 0.2vw);
       }
-
-      h1 {
-        font-size: 2.3rem;
-      }
     }
   }
 }
@@ -625,20 +649,42 @@ footer {
 @include respond-below(xs) {
   main {
     padding: 0;
+
+    .content {
+      article {
+        padding: calc(1.25rem + 0.2vw);
+        padding-top: calc(1.75rem + 0.2vw);
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+      }
+    }
   }
 
-  header #heading h1 {
-    font-size: 4rem;
+  header #heading {
+    margin-left: calc(1.25rem + 0.2vw);
+    margin-bottom: calc(1.5rem + 0.2vw);
+
+    h1 {
+      font-size: 4rem;
+    }
   }
 }
-
 
 @include respond-below(xxs) {
   header #heading h1 {
     font-size: 3rem;
   }
 }
-
 
 @include respond-below(xxxs) {
   header #heading h1 {
