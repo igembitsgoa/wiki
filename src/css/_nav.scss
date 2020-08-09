@@ -145,10 +145,6 @@ nav.nav-transparent {
     transform: translateY(0%);
     transition: transform 0.5s;
     transition: opacity 0 !important;
-
-    li a {
-      color: white;
-    }
   }
 }
 
@@ -200,67 +196,115 @@ nav.nav-transparent {
 $green: #4abf66;
 $whitey: #f0f0f0;
 
+$blue: #2c2fe8;
+$darkblue: darken($blue, 30%);
+
 #desktop-nav {
   position: relative;
   justify-content: center;
   display: flex;
 
   #nav-headings {
-    li.active {
+    li {
+      margin-bottom: 1rem;
       a {
-        $duration: 0.2s;
-        $distance: 8px;
-        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        color: $green;
-        &:before,
-        &:after {
-          opacity: 1;
-          transform: translateY(0);
+        transition: color 0.5s ease;
+        color: white;
+        text-decoration: none;
+        line-height: 3rem;
+        font-family: "Lato";
+        font-size: 2.5rem;
+
+        position: relative;
+
+        &::before {
+          width: 0;
+          content: "";
+          height: 2px;
+          background-color: $green;
+          display: inline-block;
+          bottom: 0.3em;
+          position: relative;
+          transition: width 0.25s, margin-right 0.25s;
         }
-        &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+
+        &:hover::before {
+          width: 30px !important;
         }
       }
+
+      // span {
+      //   position: relative;
+      //   display: inline-block;
+      //   &::before {
+      //     position: absolute;
+      //     content: attr(data-content);
+      //     color: $green;
+      //     clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+      //     transition: clip-path 275ms ease;
+      //   }
+      // }
     }
 
-    a {
-      line-height: 3.75rem;
-      font-family: "Lato";
-      font-size: 2.75rem;
+    li.active {
+      a {
+        color: $green;
+        &::before {
+          width: 20px;
+          margin-right: 5px;
+        }
+      }
+
+      // span::before {
+      //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      // }
+
+      // & + hr {
+      //   background-color: $green;
+      //   width: 100%;
+      // }
     }
+
+    li.inactive a {
+      color: #bfbfbf;
+    }
+
+    // hr {
+    //   height: 1px;
+    //   width: 0;
+    //   margin: 0 0 0.75rem 0;
+    //   transition: width 0.3s ease-out 0s;
+    // }
+  }
+}
+
+.tab-content {
+  color: white;
+
+  .tab-pane {
+    visibility: hidden;
+    opacity: 0;
   }
 
-  .tab-content {
-    color: white;
+  .active {
+    visibility: visible;
+    opacity: 1;
+    animation: opac 0.5s;
+  }
+}
 
-    .tab-pane {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    .active {
-      visibility: visible;
-      opacity: 1;
-      animation: opac 0.5s;
-    }
+@keyframes opac {
+  from {
+    opacity: 0;
   }
 
-  @keyframes opac {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}
 
-  #nav-items {
-    transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+#nav-items {
+  transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   li {
     padding: 0.25rem 0;

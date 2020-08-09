@@ -44,8 +44,10 @@ $("#nav-headings li").hover(
   function () {
     $("#nav-headings li").each(function () {
       $(this).removeClass("active");
+      $(this).addClass("inactive");
     });
 
+    $(this).removeClass("inactive");
     $(this).addClass("active");
 
     var id = $(this).find("a").attr("id");
@@ -73,6 +75,7 @@ $(document).keyup(function (e) {
 $("label[for='menuToggle']").click(function () {
   $("#nav-headings li").each(function () {
     $(this).removeClass("active");
+    $(this).removeClass("inactive");
   });
 
   $("#nav-items .tab-pane").each(function () {

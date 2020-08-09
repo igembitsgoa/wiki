@@ -23,7 +23,9 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
                   each section in navItems  
                     li
                       - var underscored = section['section'].replace(/ /g,'_')
-                      a(id= underscored.concat('-tab'))= section['section']
+                      a(href="" id= underscored.concat('-tab'))= section['section']
+                    //- hr
+
               .col-4#nav-items
                 //- <!-- Tab panes -->
                 .tab-content
