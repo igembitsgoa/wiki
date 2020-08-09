@@ -62,12 +62,6 @@ for root, directories, files in os.walk('src/pages'):
                 sys.exit(1)
             contains_mathjax = False  # change this later if MathJax is found
 
-            # Test: article line
-            if contents[6].strip() != "block article":
-                print(filename, "failed test.")
-                print("`block article` missing on line 7.")
-                sys.exit(1)
-
             image_count = 0   # keeps track of image numbers
             for i in range(len(contents)):
                 line = contents[i]
