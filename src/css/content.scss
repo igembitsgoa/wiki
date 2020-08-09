@@ -33,7 +33,6 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
   min-height: 70vh;
 
   .container {
@@ -54,6 +53,19 @@ header {
       font-size: calc(3rem + 4.5vw);
       // font-size: 9rem;
     }
+  }
+
+  #bg-attribution {
+    height: 1.25rem;
+    width: 1.25rem;
+    display: block;
+    background-image: url(../assets/icons/link-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(225deg)
+      brightness(112%) contrast(100%);
+    margin: 0 15px 30px 0;
   }
 }
 
@@ -616,6 +628,9 @@ footer {
       h1 {
         font-size: calc(3rem + 1.75vw);
       }
+    }
+    #bg-attribution {
+      margin: 0 15px 15px 0;
     }
   }
 

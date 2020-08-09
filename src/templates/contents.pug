@@ -10,10 +10,12 @@ html(lang="en")
             script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
     body
         include nav.pug
-        header.d-flex.justify-content-center
-            .container.d-flex.align-items-end
+        header.d-flex.justify-content-center(style="background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)), url(../assets/img/" + backgroundImage + ");")
+            .container.d-flex.align-items-end.justify-content-between
                 #heading
                     h1 #{title}
+                a(href= backgroundAttributionLink)
+                    #bg-attribution(title=backgroundAttribution data-placement="top")
         main
             .container
                 .row
