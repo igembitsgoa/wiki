@@ -42,11 +42,11 @@ window.makeNavbarTransparent = makeNavbarTransparent;
 $("#nav-headings li").hover(
   // handler in
   function () {
-    $('#nav-headings li').each(function() {
-      $(this).removeClass('active');
+    $("#nav-headings li").each(function () {
+      $(this).removeClass("active");
     });
 
-    $(this).addClass('active');
+    $(this).addClass("active");
 
     var id = $(this).find("a").attr("id");
 
@@ -54,12 +54,31 @@ $("#nav-headings li").hover(
       $(this).removeClass("active");
     });
 
-    var tab_name = id.split('-')[0]
-    $('#' + tab_name + '-pane').addClass('active');
+    var tab_name = id.split("-")[0];
+    $("#" + tab_name + "-pane").addClass("active");
   },
   // handler out - nothing
   function () {}
 );
+
+// close navbar on escape
+$(document).keyup(function (e) {
+  if (e.keyCode == 27 && $("#menuToggle").is(":checked")) {
+    // escape key maps to keycode `27`
+    $("#menuToggle").prop("checked", false);
+  }
+});
+
+// close submenus when menu is opened
+$("label[for='menuToggle']").click(function () {
+  $("#nav-headings li").each(function () {
+    $(this).removeClass("active");
+  });
+
+  $("#nav-items .tab-pane").each(function () {
+    $(this).removeClass("active");
+  });
+});
 
 const body = document.body;
 const scrollUp = "scroll-up";
