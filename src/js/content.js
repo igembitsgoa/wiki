@@ -28,16 +28,11 @@ $('.content h1, .content h2').each(function () {
     // add to table of contents if h1
     if ($(this).prop('tagName') == 'H1') {
         var item = document.createElement('li');
+
+        var span = document.createElement('span');
+        span.append(document.createElement('div'));
+        item.append(span);
         
-        var span1 = document.createElement('span');
-        span1.classList.add('circle');
-        $(span1).attr('aria-hidden', 'true');
-
-        var span2 = document.createElement('span');
-        span2.classList.add('icon', 'arrow');
-        span1.append(span2);
-        item.append(span1);
-
         var a = document.createElement('a');
         $(a).attr('href', '#' + id);
         $(a).text(text);
@@ -74,17 +69,4 @@ $('dfn').each(function () {
     $(this).tooltip();
 });
 
-$('.content .section').tooltip();
-
-$('.content .section').click(function () {
-    $(this)
-        .tooltip('hide')
-        .attr("data-original-title", "Doesn't work yet :/")
-        .tooltip('show');
-});
-
-$('.content .section').mouseout(function () {
-    $(this)
-        .attr("data-original-title", "Copy a link to this section!");
-});
-
+$('#bg-attribution').tooltip();

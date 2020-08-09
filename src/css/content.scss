@@ -33,7 +33,6 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
   min-height: 70vh;
 
   .container {
@@ -45,14 +44,28 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin-bottom: 6rem;
+    margin-bottom: calc(3rem + 2vw);
 
     h1 {
       color: $whitey;
       font-family: "Montserrat";
       font-weight: 700;
       font-size: calc(3rem + 4.5vw);
+      // font-size: 9rem;
     }
+  }
+
+  #bg-attribution {
+    height: 1.25rem;
+    width: 1.25rem;
+    display: block;
+    background-image: url(../assets/icons/link-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(225deg)
+      brightness(112%) contrast(100%);
+    margin: 0 15px 30px 0;
   }
 }
 
@@ -93,6 +106,10 @@ header {
 * Main
 ******************************/
 
+main {
+  padding: 3rem 0 2rem 0;
+}
+
 @include respond-above(xxl) {
   main .container {
     max-width: 1380px;
@@ -111,63 +128,33 @@ header {
   }
 }
 
-main {
-  padding: 3rem 0 2rem 0;
+.sidebar {
+  padding: 30px 100px 0 5px;
 
-  .sidebar {
-    padding: 30px 100px 0 5px;
+  #contents {
+    position: sticky;
+    top: 150px;
+    font-size: 1.2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    height: auto;
+    transition: none;
 
-    #contents {
-      position: sticky;
-      top: 150px;
-      font-size: 1.2rem;
-      font-family: "Lato", sans-serif;
-      font-weight: 500;
-      height: auto;
-      transition: none;
+    li {
+      margin: 15px 0;
+      justify-content: left;
+      list-style: none;
+      display: flex;
 
-      ul {
-        list-style: none;
+      span {
+        padding-top: 2px;
 
-        li {
-          margin: 15px 0;
-          display: flex;
-          justify-content: left;
-
-          .circle {
-            @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-            width: 1.5rem;
-            height: 1.5rem;
-            background: $grey;
-            border-radius: 1.354rem;
-            margin-top: 0.1rem;
-
-            .icon {
-              @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-              margin: auto;
-              background: black;
-              &.arrow {
-                @include transition(
-                  all,
-                  0.45s,
-                  cubic-bezier(0.65, 0, 0.076, 1)
-                );
-                width: 0.9375rem;
-                height: 0.104rem;
-                background: none;
-                &::before {
-                  display: block;
-                  content: "";
-                  margin: 0.5rem 0.4rem;
-                  width: 0.521rem;
-                  height: 0.521rem;
-                  border-top: 0.125rem solid black;
-                  border-right: 0.125rem solid black;
-                  transform: rotate(45deg);
-                }
-              }
-            }
-          }
+        div {
+          background: no-repeat url(../assets/icons/contents-arrow.svg);
+          width: 1.4rem;
+          height: 1.4rem;
+          background-size: contain;
+          margin: auto;
         }
       }
 
@@ -204,6 +191,7 @@ main {
           opacity: 0;
           transform: translateY($distance/2);
           transition: transform $duration $easeOutBack, opacity $duration;
+          width: 100%;
         }
         &:hover,
         &:focus {
@@ -223,235 +211,242 @@ main {
       }
     }
   }
+}
 
-  .content {
-    font-family: "Merriweather", serif;
+.content {
+  font-family: "Merriweather", serif;
 
-    article {
-      padding: calc(1rem + 1.2vw);
-      padding-top: 0;
-      background-color: $light-grey;
+  article {
+    padding: calc(1rem + 1.2vw);
+    background-color: $light-grey;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Merriweather";
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.65rem;
+    margin: 1rem 0 0.5rempx 0;
+    word-spacing: 0.3rem;
+    color: $dark-green;
+
+    &:first-of-type {
+      margin-top: 0;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: "Merriweather";
-    }
-
-    h1 {
+    button {
       font-weight: 400;
-      font-size: 2.65rem;
-      padding: 30px 0 15px 0;
-      word-spacing: 0.3rem;
-      color: $dark-green;
+      margin-right: 25px;
+    }
+  }
 
-      button {
-        font-weight: 400;
-        margin-right: 25px;
-      }
+  h1,
+  h2 {
+    scroll-margin-top: 100px;
+    .anchor {
+      float: left;
+      // padding-right: 4px;
+      line-height: 2;
+      opacity: 0.01;
+      background-image: url(../assets/icons/link-solid.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: visible;
+
+      filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
+        brightness(87%) contrast(84%);
+      border: 0px transparent solid;
+      transition: all ease 0.2s;
     }
 
-    h1,
-    h2 {
-      scroll-margin-top: 100px;
-      .anchor {
-        float: left;
-        // padding-right: 4px;
-        line-height: 2;
-        opacity: 0.01;
-        background-image: url(../assets/icons/link-solid.svg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: visible;
+    &:hover .anchor {
+      opacity: 100;
+    }
+  }
 
-        filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
-          brightness(87%) contrast(84%);
-        border: 0px transparent solid;
-        transition: all ease 0.2s;
-      }
+  h2 {
+    font-size: 2rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+  }
 
-      &:hover .anchor {
-        opacity: 100;
-      }
+  h3 {
+    font-size: 1.5rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+  }
+
+  button.section {
+    font-size: 2rem;
+    color: #bdbdbd;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
     }
 
-    h2 {
-      font-size: 2rem;
-      word-spacing: 0.3rem;
-      margin-top: 1.5rem;
+    &:hover {
+      text-decoration: none;
+      color: #828282;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+    text-align: justify;
+
+    .MathJax_Display {
+      overflow-x: scroll;
     }
 
-    h3 {
-      font-size: 1.5rem;
-      word-spacing: 0.3rem;
-      margin-top: 1.5rem;
-    }
-
-    button.section {
-      font-size: 2rem;
-      color: #bdbdbd;
-      padding: 0;
-
-      &:focus {
-        box-shadow: none;
-      }
-
-      &:hover {
-        text-decoration: none;
-        color: #828282;
-      }
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 1.1rem;
-      line-height: 1.75;
-      word-spacing: 0.1rem;
-      color: #3d3d3d;
-      text-align: justify;
-
-      span {
-        scroll-margin-top: 200px;
-
-        &:target {
-          animation: target-fade 3s 1;
-        }
-      }
-    }
-
-    li {
-      font-weight: 400;
-      font-size: 1.1rem;
-      line-height: 1.75;
-      word-spacing: 0.1rem;
-      color: #3d3d3d;
-    }
-
-    mark {
-      background: $selection-color;
-    }
-
-    .image {
-      text-align: center;
-
-      img {
-        padding: 20px;
-        width: 90%;
-      }
-
-      p {
-        text-align: center;
-        font-style: italic;
-        color: $black;
-      }
-    }
-
-    blockquote {
-      font-size: 1.4em;
-      width: 60%;
-      margin: 50px auto;
-      font-style: italic;
-      color: #555555;
-      padding: 1.2em 30px 0.7em 75px;
-      border-left: 8px solid #78c0a8;
-      line-height: 1.6;
-      position: relative;
-      // background:#EDEDED;
-    }
-
-    blockquote::before {
-      font-family: Arial;
-      content: "\201C";
-      color: #78c0a8;
-      font-size: 4em;
-      position: absolute;
-      left: 10px;
-      top: -10px;
-    }
-
-    blockquote::after {
-      content: "";
-    }
-
-    blockquote strong {
-      display: block;
-      color: #333333;
-      font-style: normal;
-      font-weight: bold;
-      margin-top: 1em;
-    }
-
-    table {
-      border: 1px solid #dee2e6;
-      width: 100%;
-      margin-bottom: 1rem;
-      color: #212529;
-      border-collapse: collapse;
-
-      thead {
-        th,
-        td {
-          vertical-align: bottom;
-          border-bottom: 2px solid #dee2e6;
-        }
-      }
-
-      tbody {
-        th,
-        td {
-          border: 1px solid #dee2e6;
-        }
-      }
-
-      tbody tr:nth-of-type(odd) {
-        background-color: rgba(0, 0, 0, 0.05);
-      }
-
-      th,
-      td {
-        padding: 0.75rem;
-        vertical-align: center;
-        border: 1px solid #dee2e6;
-      }
-
-      a {
-        color: $dark-green;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      caption {
-        text-align: center;
-        font-style: italic;
-        margin-top: 15px;
-        font-family: "Merriweather", serif;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        color: #6c757d;
-        caption-side: bottom;
-      }
-    }
-
-    span.in-text:hover {
-      cursor: pointer;
-    }
-
-    a.citation {
-      color: $dark-grey;
+    span {
       scroll-margin-top: 200px;
 
       &:target {
         animation: target-fade 3s 1;
       }
     }
+  }
 
-    dfn {
-      border-bottom: 1px solid black;
+  li {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+  }
+
+  mark {
+    background: $selection-color;
+  }
+
+  .image {
+    text-align: center;
+
+    img {
+      padding: 20px;
+      width: 90%;
     }
+
+    p {
+      text-align: center;
+      font-style: italic;
+      color: $black;
+    }
+  }
+
+  blockquote {
+    font-size: 1.4em;
+    width: 60%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 0.7em 75px;
+    border-left: 8px solid #78c0a8;
+    line-height: 1.6;
+    position: relative;
+    // background:#EDEDED;
+  }
+
+  blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #78c0a8;
+    font-size: 6rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  blockquote::after {
+    content: "";
+  }
+
+  blockquote strong {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  table {
+    border: 1px solid #dee2e6;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+
+    thead {
+      th,
+      td {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
+    }
+
+    tbody {
+      th,
+      td {
+        border: 1px solid #dee2e6;
+      }
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: center;
+      border: 1px solid #dee2e6;
+    }
+
+    a {
+      color: $dark-green;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 15px;
+      font-family: "Merriweather", serif;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      color: #6c757d;
+      caption-side: bottom;
+    }
+  }
+
+  span.in-text:hover {
+    cursor: pointer;
+  }
+
+  a.citation {
+    color: $dark-grey;
+    scroll-margin-top: 200px;
+
+    &:target {
+      animation: target-fade 3s 1;
+    }
+  }
+
+  dfn {
+    border-bottom: 1px solid black;
   }
 }
 
@@ -511,7 +506,6 @@ main {
   }
 }
 
-
 #references {
   ol {
     padding-inline-start: 30px;
@@ -566,6 +560,44 @@ footer {
   }
 }
 
+@include respond-below(xxl) {
+  .content {
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include respond-below(lg) {
+  main {
+    .content {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
 @include respond-below(md) {
   header {
     min-height: 55vh;
@@ -574,8 +606,16 @@ footer {
     }
   }
 
-  .sidebar {
-    display: none;
+  main {
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
   }
 }
 
@@ -583,10 +623,14 @@ footer {
   header {
     min-height: 40vh;
     #heading {
-      margin-left: 1rem;
+      margin-left: calc(1.5rem + 0.2vw);
+      margin-bottom: calc(1.5rem + 0.2vw);
       h1 {
         font-size: calc(3rem + 1.75vw);
       }
+    }
+    #bg-attribution {
+      margin: 0 15px 15px 0;
     }
   }
 
@@ -598,10 +642,6 @@ footer {
       article {
         padding: calc(1.5rem + 0.2vw);
       }
-
-      h1 {
-        font-size: 2.3rem;
-      }
     }
   }
 }
@@ -609,5 +649,45 @@ footer {
 @include respond-below(xs) {
   main {
     padding: 0;
+
+    .content {
+      article {
+        padding: calc(1.25rem + 0.2vw);
+        padding-top: calc(1.75rem + 0.2vw);
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  header #heading {
+    margin-left: calc(1.25rem + 0.2vw);
+    margin-bottom: calc(1.5rem + 0.2vw);
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include respond-below(xxs) {
+  header #heading h1 {
+    font-size: 3rem;
+  }
+}
+
+@include respond-below(xxxs) {
+  header #heading h1 {
+    font-size: 2.5rem;
   }
 }

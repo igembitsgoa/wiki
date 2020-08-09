@@ -87,34 +87,34 @@ nav.nav-transparent {
   position: relative;
   top: 8px;
   transition: all 0.3s ease;
-}
 
-#menuSwitch:before {
-  content: "";
-  background-color: #ffffff;
-  width: 20px;
-  height: 3px;
-  display: block;
-  border-radius: 20px;
-  position: relative;
-  top: -8px;
-  left: 4px;
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
-}
+  &:before {
+    content: "";
+    background-color: #ffffff;
+    width: 20px;
+    height: 3px;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+    top: -8px;
+    left: 4px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
 
-#menuSwitch:after {
-  content: "";
-  background-color: #ffffff;
-  width: 20px;
-  height: 3px;
-  display: block;
-  border-radius: 2px;
-  position: relative;
-  top: 5px;
-  left: 4px;
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
+  &:after {
+    content: "";
+    background-color: #ffffff;
+    width: 20px;
+    height: 3px;
+    display: block;
+    border-radius: 2px;
+    position: relative;
+    top: 5px;
+    left: 4px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
 }
 
 #fullscreenMenu {
@@ -200,11 +200,131 @@ nav.nav-transparent {
 $green: #4abf66;
 $whitey: #f0f0f0;
 
-#menuContent {
+#desktop-nav {
+  position: relative;
+  justify-content: center;
+  display: flex;
+
+  #nav-headings {
+    li.active {
+      a {
+        $duration: 0.2s;
+        $distance: 8px;
+        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        color: $green;
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+      }
+    }
+
+    a {
+      line-height: 3.75rem;
+      font-family: "Lato";
+      font-size: 2.75rem;
+    }
+  }
+
+  .tab-content {
+    color: white;
+
+    .tab-pane {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .active {
+      visibility: visible;
+      opacity: 1;
+      animation: opac 0.5s;
+    }
+  }
+
+  @keyframes opac {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  #nav-items {
+    transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  li {
+    padding: 0.25rem 0;
+
+    a {
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: white;
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 8px;
+      transition: color 0.5s;
+
+      // from https://codepen.io/devilishalchemist/pen/ZYLZay
+
+      $duration: 0.2s;
+      $distance: 8px;
+      $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $green;
+      }
+      &:before {
+        opacity: 0;
+        transform: translateY(-$distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+      }
+      &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:hover,
+      &:focus {
+        color: $green;
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+      }
+    }
+  }
+}
+
+#mobile-nav {
   position: relative;
   justify-content: center;
   flex-direction: column;
-  display: flex;
+  display: none;
 
   .col-12 {
     padding-left: 8%;
@@ -307,44 +427,56 @@ $whitey: #f0f0f0;
     }
   }
   #menuContent {
-    a.nav-heading {
-      font-size: 1.65rem;
-      font-weight: 600;
-      cursor: pointer;
+    #desktop-nav {
+      display: none;
     }
 
-    ul {
-      padding: 0.75rem 0 0 0;
-      display: none;
-      margin-bottom: 0;
+    #mobile-nav {
+      display: flex;
 
-      a {
-        font-size: 1.4rem;
+      a.nav-heading {
+        font-size: 1.65rem;
+        font-weight: 600;
+        cursor: pointer;
       }
 
-      ~ hr {
-        width: 25%;
+      ul {
+        padding: 0.75rem 0 0 0;
+        display: none;
+        margin-bottom: 0;
+
+        a {
+          font-size: 1.4rem;
+        }
+
+        ~ hr {
+          width: 25%;
+        }
       }
     }
   }
 }
 
 @include respond-below(xs) {
+  .navbar-brand {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
 
   #menuContent {
-    margin-left: 0.9rem;
+    #mobile-nav {
+      margin-left: 0.9rem;
 
-    a.nav-heading {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
+      a.nav-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
 
-    ul {
-
-      a {
-        font-size: 1.25rem;
+      ul {
+        a {
+          font-size: 1.25rem;
+        }
       }
     }
   }
 }
-

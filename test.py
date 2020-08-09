@@ -27,9 +27,7 @@ for root, directories, files in os.walk('src/pages'):
             contents = [line.rstrip() for line in file.readlines()]
 
             # Test: Template line
-            # TODO: Check if template file actually exists 
-            pattern = re.compile(r"extends (\.\.\/)+templates\/contents.pug")
-            if not pattern.match(contents[0].strip()):
+            if "extends" not in contents[0]:
                 print(filename, "failed test.")
                 print("Template string must be the first line!")
                 sys.exit(1)
@@ -63,12 +61,6 @@ for root, directories, files in os.walk('src/pages'):
                     "Check requireMathJax on line 5. It must be true or false and there must be a space after =.")
                 sys.exit(1)
             contains_mathjax = False  # change this later if MathJax is found
-
-            # Test: article line
-            if contents[6].strip() != "block article":
-                print(filename, "failed test.")
-                print("`block article` missing on line 7.")
-                sys.exit(1)
 
             image_count = 0   # keeps track of image numbers
             for i in range(len(contents)):
