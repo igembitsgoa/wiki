@@ -14,12 +14,33 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
     #fullscreenMenu
       label.mr-3(for='menuToggle')
       .container.w-100.h-100
-        #menuContent.h-100
-          .row.w-100.mb-4
-            each section in navItems
-              .col-md-4.col-sm-12.py-3
-                a.nav-heading= section['section']
-                ul
-                  each item in section['items']
+        #menuContent.w-100
+          #desktop-nav.w-100
+            .row.w-100.mb-4
+
+              .col-6#nav-headings
+                ul(role="tablist")
+                  each section in navItems  
                     li
-                      a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+                      - var underscored = section['section'].replace(/ /g,'_')
+                      a(id= underscored.concat('-tab'))= section['section']
+              .col-6#nav-items
+                //- <!-- Tab panes -->
+                .tab-content
+                  each section in navItems
+                    - var underscored = section['section'].replace(/ /g,'_')
+                    .tab-pane(id= underscored.concat('-pane'))
+                      ul
+                        each item in section['items']
+                          li
+                            a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+
+          #mobile-nav
+            .row.w-100.mb-4
+              each section in navItems
+                .col-md-4.col-sm-12.py-3
+                  a.nav-heading= section['section']
+                  ul
+                    each item in section['items']
+                      li
+                        a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
