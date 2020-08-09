@@ -206,8 +206,30 @@ $whitey: #f0f0f0;
   display: flex;
 
   #nav-headings {
-    .nav-tabs {
-      border: none;
+    li.active {
+      a {
+        $duration: 0.2s;
+        $distance: 8px;
+        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        color: $green;
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+      }
+    }
+
+    a {
+      line-height: 3.75rem;
+      font-family: "Lato";
+      font-size: 2.75rem;
     }
   }
 
@@ -216,29 +238,28 @@ $whitey: #f0f0f0;
 
     .tab-pane {
       visibility: hidden;
+      opacity: 0;
     }
 
-    .tab-pane.active {
+    .active {
       visibility: visible;
+      opacity: 1;
+      animation: opac 0.5s;
     }
   }
 
-  .col-12 {
-    padding-left: 8%;
+  @keyframes opac {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
-  ul {
-    padding: 0;
-  }
-
-  a.nav-heading {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
-    line-height: 5.5vmin;
-    color: $green;
-    padding: 0 0 1.25rem 0;
-    cursor: default;
+  #nav-items {
+    transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   li {
@@ -406,11 +427,10 @@ $whitey: #f0f0f0;
     }
   }
   #menuContent {
-
     #desktop-nav {
       display: none;
     }
-    
+
     #mobile-nav {
       display: flex;
 

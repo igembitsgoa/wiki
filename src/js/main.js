@@ -42,6 +42,12 @@ window.makeNavbarTransparent = makeNavbarTransparent;
 $("#nav-headings li").hover(
   // handler in
   function () {
+    $('#nav-headings li').each(function() {
+      $(this).removeClass('active');
+    });
+
+    $(this).addClass('active');
+
     var id = $(this).find("a").attr("id");
 
     $("#nav-items .tab-pane").each(function () {

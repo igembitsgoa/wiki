@@ -16,15 +16,15 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
       .container.w-100.h-100
         #menuContent.w-100
           #desktop-nav.w-100
-            .row.w-100.mb-4
+            .row.w-100.mb-4.justify-content-center
 
-              .col-6#nav-headings
+              .col-5#nav-headings
                 ul(role="tablist")
                   each section in navItems  
                     li
                       - var underscored = section['section'].replace(/ /g,'_')
                       a(id= underscored.concat('-tab'))= section['section']
-              .col-6#nav-items
+              .col-4#nav-items
                 //- <!-- Tab panes -->
                 .tab-content
                   each section in navItems
