@@ -23,9 +23,7 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
               p Close
           .row.flex-grow-1.w-100
             .col-xl-3.col-lg-2 
-              .contact-button
-                a(href="https://instagram.com/igem_bits") @igem_bits
-            .col-xl-6.col-lg-8#menuContent
+            .col-xl-6.col-lg-8#menuContent.d-flex.justify-content-between.flex-column
               .row
                 .col-6#nav-headings
                   ul(role="tablist")
@@ -45,10 +43,13 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
                           each item in section['items']
                             li
                               a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
-
+              .row
+                #contact-links
+                  a(href="https://instagram.com/igem_bits") Instagram
+                  a(href="https://instagram.com/igem_bits") Twitter
+                  a(href="mailto:igembitsgoa@gmail.com") Email
             .col-xl-3.col-lg-2 
-              .contact-button
-                a(href="mailto:igembitsgoa@gmail.com") igembitsgoa@gmail.com
+              
           .row.nav-footer.w-100
             .col-xl-3.col-lg-2
             .col-xl-6.col-lg-8
