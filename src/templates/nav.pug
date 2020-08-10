@@ -4,38 +4,59 @@ include mixins
 
 nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transparent.fixed-top
 
-  a.navbar-brand.d-lg-inline-block(href=urlPrefix) iGEM 
-    span BITS Goa
+  a.navbar-brand.d-lg-inline-block(href=urlPrefix) Sugar
+    span Gain
 
   #fullscreenMenuWrapper
     input#menuToggle(type='checkbox')
-    label(for='menuToggle')
+    label#menuSwitchContainer(for='menuToggle')
       #menuSwitch
     #fullscreenMenu
       label.mr-3(for='menuToggle')
-      .container.w-100.h-100
-        #menuContent.w-100
-          #desktop-nav.w-100
-            .row.w-100.mb-4.justify-content-center
+      #desktop-nav.w-100.h-100
+        .container-fluid.align-items-stretch.pr-0.flex-column
+          .row.nav-header.w-100
+            .col-lg-3
+              .teamLogo
+            .col-lg-6
+            .col-lg-3.d-flex.align-items-center.justify-content-end#close-label
+              p Close
+          .row.flex-grow-1.w-100
+            .col-lg-3 
+              .contact-button
+                a(href="https://instagram.com/igem_bits") @igem_bits
+            .col-lg-6#menuContent
+              .row
+                .col-7#nav-headings
+                  ul(role="tablist")
+                    each section in navItems  
+                      li
+                        - var underscored = section['section'].replace(/ /g,'_')
+                        a(href="" id= underscored.concat('-tab'))= section['section']
+                      //- hr
 
-              .col-5#nav-headings
-                ul(role="tablist")
-                  each section in navItems  
-                    li
+                .col-5#nav-items
+                  //- <!-- Tab panes -->
+                  .tab-content
+                    each section in navItems
                       - var underscored = section['section'].replace(/ /g,'_')
-                      a(id= underscored.concat('-tab'))= section['section']
-              .col-4#nav-items
-                //- <!-- Tab panes -->
-                .tab-content
-                  each section in navItems
-                    - var underscored = section['section'].replace(/ /g,'_')
-                    .tab-pane(id= underscored.concat('-pane'))
-                      ul
-                        each item in section['items']
-                          li
-                            a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+                      .tab-pane(id= underscored.concat('-pane'))
+                        ul
+                          each item in section['items']
+                            li
+                              a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
 
-          #mobile-nav
+            .col-lg-3 
+              .contact-button
+                a(href="mailto:igembitsgoa@gmail.com") igembitsgoa@gmail.com
+          .row.nav-footer.w-100
+            .col-lg-3
+            .col-lg-6
+            .col-lg-3
+
+      #mobile-nav
+        .container.w-100.h-100
+          #menuContent.w-100
             .row.w-100.mb-4
               each section in navItems
                 .col-md-4.col-sm-12.py-3

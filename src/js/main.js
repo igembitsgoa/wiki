@@ -24,29 +24,31 @@ if (window.location.href.includes("igem.org")) {
 }
 
 // make navbar transparent when fullscreen menu is opened
-function makeNavbarTransparent() {
-  if (menuToggle.checked == true) {
-    navbar.classList.add("nav-transparent");
-    navbar.classList.remove("nav-colored");
-  } else if (
-    document.body.scrollTop >= scrollHeight ||
-    document.documentElement.scrollTop >= scrollHeight
-  ) {
-    navbar.classList.add("nav-colored");
-    navbar.classList.remove("nav-transparent");
-  }
-}
-window.makeNavbarTransparent = makeNavbarTransparent;
+// function makeNavbarTransparent() {
+//   if (menuToggle.checked == true) {
+//     navbar.classList.add("nav-transparent");
+//     navbar.classList.remove("nav-colored");
+//   } else if (
+//     document.body.scrollTop >= scrollHeight ||
+//     document.documentElement.scrollTop >= scrollHeight
+//   ) {
+//     navbar.classList.add("nav-colored");
+//     navbar.classList.remove("nav-transparent");
+//   }
+// }
+// window.makeNavbarTransparent = makeNavbarTransparent;
 
 // navbar show on hover
 $("#nav-headings li").hover(
   // handler in
   function () {
-    $('#nav-headings li').each(function() {
-      $(this).removeClass('active');
+    $("#nav-headings li").each(function () {
+      $(this).removeClass("active");
+      $(this).addClass("inactive");
     });
 
-    $(this).addClass('active');
+    $(this).removeClass("inactive");
+    $(this).addClass("active");
 
     var id = $(this).find("a").attr("id");
 
@@ -54,12 +56,55 @@ $("#nav-headings li").hover(
       $(this).removeClass("active");
     });
 
-    var tab_name = id.split('-')[0]
-    $('#' + tab_name + '-pane').addClass('active');
+    var tab_name = id.split("-")[0];
+    $("#" + tab_name + "-pane").addClass("active");
   },
   // handler out - nothing
   function () {}
 );
+
+// close navbar on escape
+$(document).keyup(function (e) {
+  if (e.keyCode == 27 && $("#menuToggle").is(":checked")) {
+    // escape key maps to keycode `27`
+    $("#menuToggle").prop("checked", false);
+    $(".navbar").removeClass("desktop-menu");
+  }
+});
+
+// when menu checkbox status changes
+$("label[for='menuToggle']").click(function () {
+  // close submenus
+  $("#nav-headings li").each(function () {
+    $(this).removeClass("active");
+    $(this).removeClass("inactive");
+  });
+
+  $("#nav-items .tab-pane").each(function () {
+    $(this).removeClass("active");
+  });
+
+  // if menu has been opened, make navbar transparent
+  if (!$("#menuToggle").is(":checked")) {
+    $(".navbar").addClass("nav-transparent");
+    $(".navbar").addClass("desktop-menu");
+    $(".navbar").removeClass("nav-colored");
+  } else {
+    $(".navbar").removeClass("desktop-menu");
+    if (
+      document.body.scrollTop >= scrollHeight ||
+      document.documentElement.scrollTop >= scrollHeight
+    ) {
+      $(".navbar").removeClass("nav-transparent");
+      $(".navbar").addClass("nav-colored");
+    }
+  }
+});
+
+$("#desktop-nav #close-label p").click(function () {
+  $("#menuToggle").prop("checked", false);
+  $(".navbar").removeClass("desktop-menu");
+});
 
 const body = document.body;
 const scrollUp = "scroll-up";

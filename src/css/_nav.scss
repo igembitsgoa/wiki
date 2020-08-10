@@ -25,6 +25,7 @@
   position: relative;
   z-index: 200;
   margin-left: 1.5rem;
+  transition: transform 0.3s;
 
   span {
     font-weight: 600;
@@ -58,6 +59,16 @@ nav.nav-transparent {
   }
 }
 
+nav.desktop-menu {
+  .navbar-brand {
+    transform: translate(0%, 15%);
+  }
+
+  #fullscreenMenuWrapper label {
+    padding-top: 35px;
+  }
+}
+
 /**
  * Fullscreen Nav Styles
 **/
@@ -74,6 +85,7 @@ nav.nav-transparent {
     padding: 15px;
     cursor: pointer;
     float: right;
+    transition: all 0.3s ease;
   }
 }
 
@@ -120,7 +132,6 @@ nav.nav-transparent {
 #fullscreenMenu {
   position: fixed;
   width: 100vw;
-  height: stretch;
   height: 100vh;
   top: 0;
   left: 0;
@@ -128,7 +139,8 @@ nav.nav-transparent {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  background: #181818;
+  // linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 
   label {
     width: 25px;
@@ -145,15 +157,11 @@ nav.nav-transparent {
     transform: translateY(0%);
     transition: transform 0.5s;
     transition: opacity 0 !important;
-
-    li a {
-      color: white;
-    }
   }
 }
 
 #menuToggle:checked ~ #fullscreenMenu {
-  opacity: 0.95;
+  opacity: 1;
   visibility: visible;
   transition: opacity 0.5s;
 
@@ -196,40 +204,152 @@ nav.nav-transparent {
  * Fullscreen Menu Items
 **/
 
-// $red: #F37272;
 $green: #4abf66;
 $whitey: #f0f0f0;
+
+$blue: #2c2fe8;
+$darkblue: darken($blue, 30%);
 
 #desktop-nav {
   position: relative;
   justify-content: center;
   display: flex;
 
+  .col-lg-3,
+  .col-lg-6 {
+    border-color: hsla(0, 0%, 48.6%, 0.4);
+    border-style: solid;
+    background-color: #181818;
+  }
+
+  .col-lg-3 {
+    border-width: 0 1px 1px 1px;
+    z-index: 0;
+  }
+
+  .col-lg-6 {
+    border-width: 0 0 1px 0;
+  }
+
+  .nav-header {
+    height: 7rem;
+  }
+
+  .teamLogo {
+    height: 100px;
+    padding: 1.2rem;
+  }
+
+  #close-label {
+    padding: 1.5rem;
+    padding-right: 7rem;
+    p {
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-size: 1.3rem;
+      padding-top: 0.8rem;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $pink;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .contact-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    border-color: hsla(0, 0%, 48.6%, 0.4);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+
+    a {
+      padding: 1.65rem 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      color: $whitey;
+      margin: 0;
+      font-family: "Lato", sans-serif;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $pink;
+      z-index: -1;
+      transform: translateY(105%);
+      transition: all 0.2s ease-out;
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+    }
+  }
+
+  .nav-footer {
+    height: 7rem;
+  }
+
+  #menuContent {
+    padding: 4rem 0 0 4rem;
+  }
+
   #nav-headings {
-    li.active {
+    li {
+      margin-bottom: 0.7rem;
       a {
-        $duration: 0.2s;
-        $distance: 8px;
-        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        color: $green;
-        &:before,
-        &:after {
-          opacity: 1;
-          transform: translateY(0);
+        transition: color 0.5s ease;
+        color: white;
+        text-decoration: none;
+        line-height: 3rem;
+        font-family: "Lato";
+        font-size: 2.5rem;
+
+        position: relative;
+
+        &::before {
+          width: 0;
+          content: "";
+          height: 2px;
+          background-color: $green;
+          display: inline-block;
+          bottom: 0.3em;
+          position: relative;
+          transition: width 0.25s, margin-right 0.25s;
         }
-        &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+
+        &:hover::before {
+          width: 30px !important;
         }
       }
     }
 
-    a {
-      line-height: 3.75rem;
-      font-family: "Lato";
-      font-size: 2.75rem;
+    li.active {
+      a {
+        color: $green;
+        &::before {
+          width: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    li.inactive a {
+      color: #bfbfbf;
     }
   }
 
@@ -260,62 +380,93 @@ $whitey: #f0f0f0;
 
   #nav-items {
     transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
 
-  li {
-    padding: 0.25rem 0;
+    li {
+      padding: 0.25rem 0;
 
-    a {
-      font-family: "Lato", sans-serif;
-      font-weight: 500;
-      font-size: 1.5rem;
-      color: white;
-      position: relative;
-      text-decoration: none;
-      padding-bottom: 8px;
-      transition: color 0.5s;
+      a {
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: white;
+        position: relative;
+        text-decoration: none;
+        padding-bottom: 8px;
+        transition: color 0.5s;
 
-      // from https://codepen.io/devilishalchemist/pen/ZYLZay
+        // from https://codepen.io/devilishalchemist/pen/ZYLZay
 
-      $duration: 0.2s;
-      $distance: 8px;
-      $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        $duration: 0.2s;
+        $distance: 8px;
+        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background-color: $green;
-      }
-      &:before {
-        opacity: 0;
-        transform: translateY(-$distance);
-        transition: transform 0s $easeOutBack, opacity 0s;
-      }
-      &:after {
-        opacity: 0;
-        transform: translateY($distance/2);
-        transition: transform $duration $easeOutBack, opacity $duration;
-      }
-      &:hover,
-      &:focus {
-        color: $green;
         &:before,
         &:after {
-          opacity: 1;
-          transform: translateY(0);
+          content: "";
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: $green;
         }
         &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
+          opacity: 0;
+          transform: translateY(-$distance);
+          transition: transform 0s $easeOutBack, opacity 0s;
         }
         &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+          opacity: 0;
+          transform: translateY($distance/2);
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:hover,
+        &:focus {
+          color: $green;
+          &:before,
+          &:after {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          &:before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+          }
+          &:after {
+            transition: transform 0s $duration $easeOutBack,
+              opacity 0s $duration;
+          }
         }
       }
+    }
+  }
+}
+
+/** 
+ Media Queries for Desktop
+ **/
+
+@include respond-below(xxl) {
+  #desktop-nav {
+    #nav-headings {
+      li {
+        margin-bottom: 0.25rem;
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond-below(lg) {
+  #desktop-nav {
+    .contact-button {
+      display: none;
+    }
+
+    .col-lg-3,
+    .col-lg-6 {
+      border-width: 0;
     }
   }
 }
@@ -426,32 +577,29 @@ $whitey: #f0f0f0;
       height: 2px;
     }
   }
-  #menuContent {
-    #desktop-nav {
-      display: none;
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+
+    a.nav-heading {
+      font-size: 1.65rem;
+      font-weight: 600;
+      cursor: pointer;
     }
 
-    #mobile-nav {
-      display: flex;
+    ul {
+      padding: 0.75rem 0 0 0;
+      display: none;
+      margin-bottom: 0;
 
-      a.nav-heading {
-        font-size: 1.65rem;
-        font-weight: 600;
-        cursor: pointer;
+      a {
+        font-size: 1.4rem;
       }
 
-      ul {
-        padding: 0.75rem 0 0 0;
-        display: none;
-        margin-bottom: 0;
-
-        a {
-          font-size: 1.4rem;
-        }
-
-        ~ hr {
-          width: 25%;
-        }
+      ~ hr {
+        width: 25%;
       }
     }
   }
