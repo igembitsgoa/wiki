@@ -24,19 +24,19 @@ if (window.location.href.includes("igem.org")) {
 }
 
 // make navbar transparent when fullscreen menu is opened
-function makeNavbarTransparent() {
-  if (menuToggle.checked == true) {
-    navbar.classList.add("nav-transparent");
-    navbar.classList.remove("nav-colored");
-  } else if (
-    document.body.scrollTop >= scrollHeight ||
-    document.documentElement.scrollTop >= scrollHeight
-  ) {
-    navbar.classList.add("nav-colored");
-    navbar.classList.remove("nav-transparent");
-  }
-}
-window.makeNavbarTransparent = makeNavbarTransparent;
+// function makeNavbarTransparent() {
+//   if (menuToggle.checked == true) {
+//     navbar.classList.add("nav-transparent");
+//     navbar.classList.remove("nav-colored");
+//   } else if (
+//     document.body.scrollTop >= scrollHeight ||
+//     document.documentElement.scrollTop >= scrollHeight
+//   ) {
+//     navbar.classList.add("nav-colored");
+//     navbar.classList.remove("nav-transparent");
+//   }
+// }
+// window.makeNavbarTransparent = makeNavbarTransparent;
 
 // navbar show on hover
 $("#nav-headings li").hover(
@@ -68,11 +68,13 @@ $(document).keyup(function (e) {
   if (e.keyCode == 27 && $("#menuToggle").is(":checked")) {
     // escape key maps to keycode `27`
     $("#menuToggle").prop("checked", false);
+    $(".navbar").removeClass("desktop-menu");
   }
 });
 
-// close submenus when menu is opened
+// when menu checkbox status changes
 $("label[for='menuToggle']").click(function () {
+  // close submenus
   $("#nav-headings li").each(function () {
     $(this).removeClass("active");
     $(this).removeClass("inactive");
@@ -81,6 +83,27 @@ $("label[for='menuToggle']").click(function () {
   $("#nav-items .tab-pane").each(function () {
     $(this).removeClass("active");
   });
+
+  // if menu has been opened, make navbar transparent
+  if (!$("#menuToggle").is(":checked")) {
+    $(".navbar").addClass("nav-transparent");
+    $(".navbar").addClass("desktop-menu");
+    $(".navbar").removeClass("nav-colored");
+  } else {
+    $(".navbar").removeClass("desktop-menu");
+    if (
+      document.body.scrollTop >= scrollHeight ||
+      document.documentElement.scrollTop >= scrollHeight
+    ) {
+      $(".navbar").removeClass("nav-transparent");
+      $(".navbar").addClass("nav-colored");
+    }
+  }
+});
+
+$("#desktop-nav #close-label p").click(function () {
+  $("#menuToggle").prop("checked", false);
+  $(".navbar").removeClass("desktop-menu");
 });
 
 const body = document.body;
