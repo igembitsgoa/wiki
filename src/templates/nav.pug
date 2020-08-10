@@ -16,18 +16,18 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
       #desktop-nav.w-100.h-100
         .container-fluid.align-items-stretch.pr-0.flex-column
           .row.nav-header.w-100
-            .col-lg-3
+            .col-xl-3.col-lg-2
               .teamLogo
-            .col-lg-6
-            .col-lg-3.d-flex.align-items-center.justify-content-end#close-label
+            .col-xl-6.col-lg-8
+            .col-xl-3.col-lg-2.d-flex.align-items-center.justify-content-end#close-label
               p Close
           .row.flex-grow-1.w-100
-            .col-lg-3 
+            .col-xl-3.col-lg-2 
               .contact-button
                 a(href="https://instagram.com/igem_bits") @igem_bits
-            .col-lg-6#menuContent
+            .col-xl-6.col-lg-8#menuContent
               .row
-                .col-7#nav-headings
+                .col-6#nav-headings
                   ul(role="tablist")
                     each section in navItems  
                       li
@@ -35,7 +35,7 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
                         a(href="" id= underscored.concat('-tab'))= section['section']
                       //- hr
 
-                .col-5#nav-items
+                .col-6#nav-items
                   //- <!-- Tab panes -->
                   .tab-content
                     each section in navItems
@@ -46,13 +46,13 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
                             li
                               a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
 
-            .col-lg-3 
+            .col-xl-3.col-lg-2 
               .contact-button
                 a(href="mailto:igembitsgoa@gmail.com") igembitsgoa@gmail.com
           .row.nav-footer.w-100
-            .col-lg-3
-            .col-lg-6
-            .col-lg-3
+            .col-xl-3.col-lg-2
+            .col-xl-6.col-lg-8
+            .col-xl-3.col-lg-2
 
       #mobile-nav
         .container.w-100.h-100

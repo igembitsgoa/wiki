@@ -215,19 +215,19 @@ $darkblue: darken($blue, 30%);
   justify-content: center;
   display: flex;
 
-  .col-lg-3,
-  .col-lg-6 {
+  .col-xl-3,
+  .col-xl-6 {
     border-color: hsla(0, 0%, 48.6%, 0.4);
     border-style: solid;
     background-color: #181818;
   }
 
-  .col-lg-3 {
+  .col-xl-3 {
     border-width: 0 1px 1px 1px;
     z-index: 0;
   }
 
-  .col-lg-6 {
+  .col-xl-6 {
     border-width: 0 0 1px 0;
   }
 
@@ -277,6 +277,7 @@ $darkblue: darken($blue, 30%);
       margin: 0;
       font-family: "Lato", sans-serif;
       font-size: 1.3rem;
+      font-weight: 300;
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -313,10 +314,11 @@ $darkblue: darken($blue, 30%);
       margin-bottom: 0.7rem;
       a {
         transition: color 0.5s ease;
-        color: white;
+        color: $whitey;
         text-decoration: none;
         line-height: 3rem;
         font-family: "Lato";
+        font-weight: 300;
         font-size: 2.5rem;
 
         position: relative;
@@ -324,7 +326,7 @@ $darkblue: darken($blue, 30%);
         &::before {
           width: 0;
           content: "";
-          height: 2px;
+          height: 1px;
           background-color: $green;
           display: inline-block;
           bottom: 0.3em;
@@ -349,7 +351,7 @@ $darkblue: darken($blue, 30%);
     }
 
     li.inactive a {
-      color: #bfbfbf;
+      color: hsla(0, 0%, 48.6%, 0.7);
     }
   }
 
@@ -379,14 +381,16 @@ $darkblue: darken($blue, 30%);
   }
 
   #nav-items {
-    transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    padding-left: 2rem;
+    transition: visibility 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     li {
       padding: 0.25rem 0;
 
       a {
         font-family: "Lato", sans-serif;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 1.5rem;
         color: white;
         position: relative;
@@ -464,8 +468,8 @@ $darkblue: darken($blue, 30%);
       display: none;
     }
 
-    .col-lg-3,
-    .col-lg-6 {
+    .col-xl-3,
+    .col-xl-6 {
       border-width: 0;
     }
   }
