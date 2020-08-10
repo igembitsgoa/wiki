@@ -144,7 +144,7 @@ section {
       font-family: "Merriweather";
       font-weight: 400;
       font-size: calc(1.625rem + 1vw);
-      padding-bottom: 30px;
+      margin-bottom: 1.2rem;
       word-spacing: 0.3rem;
       line-height: 1.5;
 
@@ -341,27 +341,23 @@ section {
   }
 }
 
-@include respond-below(lg) {
+@include respond-below(xxl) {
   section {
     .content {
       h2 {
-        padding-bottom: 15px;
+        font-size: 2rem;
+        margin-bottom: 1.1rem;
       }
     }
   }
 }
 
-@include respond-below(md) {
+@include respond-below(xl) {
   section {
-    .sidebar {
-      display: none;
-    }
-
     .content {
-      padding: 0 10px !important;
-
-      h3 {
-        display: block;
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
       }
 
       p {
@@ -371,10 +367,84 @@ section {
   }
 }
 
-@include respond-below(xs) {
+@include respond-below(lg) {
   section {
     .content {
+      h2 {
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+    }
+  }
+}
+
+@include respond-below(md) {
+  section {
+
+    padding-top: 4rem;
+
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      padding: 0 10px !important;
+      h2 {
+        font-size: 1.9rem;
+        margin-bottom: 0.6rem;
+      }
+
+      h3 {
+        display: block;
+      }
+    }
+  }
+}
+
+@include respond-below(sm) {
+  section {
+    padding-top: 3rem;
+    .content {
+      h2 {
+        font-size: 1.7rem;
+        margin-bottom: 0.6rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xs) {
+  section {
+    padding-top: 2rem;
+    .content {
       padding: 0 25px !important;
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xxs) {
+  section {
+    padding-top: 2rem;
+    .content {
+      padding: 0 25px !important;
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
     }
   }
 }

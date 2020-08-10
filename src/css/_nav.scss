@@ -215,21 +215,21 @@ $darkblue: darken($blue, 30%);
   justify-content: center;
   display: flex;
 
-  .col-lg-3,
-  .col-lg-6 {
-    border-color: hsla(0, 0%, 48.6%, 0.4);
-    border-style: solid;
+  .col-xl-3,
+  .col-xl-6 {
+    // border-color: hsla(0, 0%, 48.6%, 0.4);
+    // border-style: solid;
     background-color: #181818;
   }
 
-  .col-lg-3 {
-    border-width: 0 1px 1px 1px;
+  .col-xl-3 {
+    // border-width: 0 1px 1px 1px;
     z-index: 0;
   }
 
-  .col-lg-6 {
-    border-width: 0 0 1px 0;
-  }
+  // .col-xl-6 {
+  //   border-width: 0 0 1px 0;
+  // }
 
   .nav-header {
     height: 7rem;
@@ -242,7 +242,7 @@ $darkblue: darken($blue, 30%);
 
   #close-label {
     padding: 1.5rem;
-    padding-right: 7rem;
+    padding-right: 5rem;
     p {
       color: white;
       font-family: "Lato", sans-serif;
@@ -257,46 +257,21 @@ $darkblue: darken($blue, 30%);
     }
   }
 
-  .contact-button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5rem;
-    text-align: center;
-    border-color: hsla(0, 0%, 48.6%, 0.4);
-    border-style: solid;
-    border-width: 1px 0 0 0;
+  #contact-links {
+    padding: 0 0 1rem 4.2rem;
 
     a {
-      padding: 1.65rem 0;
-      height: 100%;
-      width: 100%;
-      display: block;
-      color: $whitey;
-      margin: 0;
+      color: #a4a4a4;
       font-family: "Lato", sans-serif;
-      font-size: 1.3rem;
+      font-weight: 400;
       text-decoration: none;
       transition: all 0.3s ease;
-    }
+      margin-right: 2rem;
+      font-size: 1.4rem;
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $pink;
-      z-index: -1;
-      transform: translateY(105%);
-      transition: all 0.2s ease-out;
-    }
-
-    &:hover::before {
-      transform: translateX(0);
+      &:hover {
+        color: $pink;
+      }
     }
   }
 
@@ -304,19 +279,18 @@ $darkblue: darken($blue, 30%);
     height: 7rem;
   }
 
-  #menuContent {
-    padding: 4rem 0 0 4rem;
-  }
-
   #nav-headings {
+    padding: 4rem 0 0 4rem;
+    border: 0;
     li {
       margin-bottom: 0.7rem;
       a {
         transition: color 0.5s ease;
-        color: white;
+        color: $whitey;
         text-decoration: none;
         line-height: 3rem;
         font-family: "Lato";
+        font-weight: 300;
         font-size: 2.5rem;
 
         position: relative;
@@ -324,7 +298,7 @@ $darkblue: darken($blue, 30%);
         &::before {
           width: 0;
           content: "";
-          height: 2px;
+          height: 1px;
           background-color: $green;
           display: inline-block;
           bottom: 0.3em;
@@ -349,7 +323,7 @@ $darkblue: darken($blue, 30%);
     }
 
     li.inactive a {
-      color: #bfbfbf;
+      color: hsla(0, 0%, 48.6%, 0.7);
     }
   }
 
@@ -359,6 +333,38 @@ $darkblue: darken($blue, 30%);
     .tab-pane {
       visibility: hidden;
       opacity: 0;
+
+      &:nth-of-type(1) {
+        padding-top: 0.5rem;
+      }
+
+      &:nth-of-type(2) {
+        padding-top: 3.6rem;
+      }
+
+      &:nth-of-type(3) {
+        padding-top: 7.5rem;
+      }
+
+      &:nth-of-type(4) {
+        padding-top: 11rem;
+      }
+
+      &:nth-of-type(5) {
+        padding-top: 14.7rem;
+      }
+
+      &:nth-of-type(6) {
+        padding-top: 18.3rem;
+      }
+
+      &:nth-of-type(7) {
+        padding-top: 20.8rem;
+      }
+
+      &:nth-of-type(8) {
+        padding-top: 15.3rem;
+      }
     }
 
     .active {
@@ -379,63 +385,68 @@ $darkblue: darken($blue, 30%);
   }
 
   #nav-items {
-    transition: visibility ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 4rem 0 0 4rem;
+    transition: visibility 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 0;
 
     li {
       padding: 0.25rem 0;
+      text-align: left;
+    }
 
-      a {
-        font-family: "Lato", sans-serif;
-        font-weight: 500;
-        font-size: 1.5rem;
-        color: white;
-        position: relative;
-        text-decoration: none;
-        padding-bottom: 8px;
-        transition: color 0.5s;
+    a {
+      color: #ababab;
+    }
+  }
 
-        // from https://codepen.io/devilishalchemist/pen/ZYLZay
+  #nav-items a {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 8px;
+    transition: color 0.5s;
 
-        $duration: 0.2s;
-        $distance: 8px;
-        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    // from https://codepen.io/devilishalchemist/pen/ZYLZay
 
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 2px;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background-color: $green;
-        }
-        &:before {
-          opacity: 0;
-          transform: translateY(-$distance);
-          transition: transform 0s $easeOutBack, opacity 0s;
-        }
-        &:after {
-          opacity: 0;
-          transform: translateY($distance/2);
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:hover,
-        &:focus {
-          color: $green;
-          &:before,
-          &:after {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          &:before {
-            transition: transform $duration $easeOutBack, opacity $duration;
-          }
-          &:after {
-            transition: transform 0s $duration $easeOutBack,
-              opacity 0s $duration;
-          }
-        }
+    $duration: 0.2s;
+    $distance: 8px;
+    $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $green;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+      color: $green;
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
       }
     }
   }
@@ -455,6 +466,42 @@ $darkblue: darken($blue, 30%);
         }
       }
     }
+
+    .tab-content {
+      .tab-pane {
+        &:nth-of-type(1) {
+          padding-top: 0.5rem;
+        }
+
+        &:nth-of-type(2) {
+          padding-top: 3.2rem;
+        }
+
+        &:nth-of-type(3) {
+          padding-top: 6.5em;
+        }
+
+        &:nth-of-type(4) {
+          padding-top: 9.7rem;
+        }
+
+        &:nth-of-type(5) {
+          padding-top: 12.8rem;
+        }
+
+        &:nth-of-type(6) {
+          padding-top: 14.7rem;
+        }
+
+        &:nth-of-type(7) {
+          padding-top: 17.5rem;
+        }
+
+        &:nth-of-type(8) {
+          padding-top: 12rem;
+        }
+      }
+    }
   }
 }
 
@@ -464,8 +511,8 @@ $darkblue: darken($blue, 30%);
       display: none;
     }
 
-    .col-lg-3,
-    .col-lg-6 {
+    .col-xl-3,
+    .col-xl-6 {
       border-width: 0;
     }
   }
@@ -611,19 +658,17 @@ $darkblue: darken($blue, 30%);
     margin-left: 0.5rem;
   }
 
-  #menuContent {
-    #mobile-nav {
-      margin-left: 0.9rem;
+  #mobile-nav {
+    margin-left: 0.9rem;
 
-      a.nav-heading {
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
+    a.nav-heading {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
 
-      ul {
-        a {
-          font-size: 1.25rem;
-        }
+    ul {
+      a {
+        font-size: 1.25rem;
       }
     }
   }
