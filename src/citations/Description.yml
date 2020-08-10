@@ -1,19 +1,24 @@
 # 1
-- article:
-    authors: "Shukla, S. K., Sharma, L., Awasthi, S. K. & Pathak, A. D."
-    year_published: 2017
-    title: "Sugarcane in India: Package of Practices for Different Agro-clamatic Zones."
-    journal: "AICRP (S) Technical Bulletin"
-    numbers: "1, 1-64."
-# 2
 - webpage:
-    title: "Sugarcane Statistics."
+    title: "The World Factbook: India."
     accessed: "August 09, 2020"
-    site_name: "ICAR-Sugarcane Breeding Institute"
-    url: "https://sugarcane.icar.gov.in/index.php/en/sugar-stats/sugarcane-statistics"
+    site_name: "CIA World Factbook"
+    url: "https://www.cia.gov/library/publications/the-world-factbook/geos/in.html"
+# 2
+- doi: https://doi.org/10.6026/97320630009464
 # 3
-- book:
-    authors: "Central Board of Secondary Education (CBSE)."
+- article:
+    authors: "Saxena, P., Srivastava, R. & Sharma, M."
     year_published: 2010
-    title: "Basic Agriculture (Student Handbook) Class-X."
-    publisher: "CBSE"
+    title: "Impact of cut to crush delay and bio-chemical changes in sugarcane."
+    journal: "Australian Journal of Crop Science"
+    numbers: "4, 692-699."
+# 4
+- article:
+    authors: "Ghasemnejad, M.H. & Jamshidi, A."
+    year_published: 2011
+    title: "Forecast model of sugar loss due to mechanical harvesting of the sugarcane crop."
+    journal: "Australian Journal of Basic Applied Sciences"
+    numbers: "5(12), 1190-1194."
+#5
+- doi: https://doi.org/10.1007/BF02942486
