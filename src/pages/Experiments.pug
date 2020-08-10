@@ -1,0 +1,296 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Experiments"
+    - var requireMathJax = true
+
+block article
+
+    :markdown-it(html)
+
+        # Sugarcane Processing
+
+    - var imgpath = "" + require("../assets/img/Experiments--SugarcaneProcessing.png")["default"]
+    +image(1, imgpath, "Sugarcane Processing", 100)
+
+
+    :markdown-it(html)
+        Most of the degradation of LB, Sorbic Acid, Potassium Sorbate is expected to be done by the second clarifier stage. 
+        We will be trying to replicate this in the following experiments and characterizing to show that they are considerably degraded. 
+        And, Bentonite is assumed to be removed in the first clarifier stage as filter cake along with other residues.
+
+        <br>
+
+        # Degradation Experiments
+
+        ## 1. LB degradation
+        <br>
+
+        **Aim**: 
+        To degrade the LB broth by prolonged heating at 95°C during the clarification process.
+
+        **Principle**: 
+        LB broth is almost entirely made of proteins. 
+        And proteins are known to degrade when they undergo prolonged heating. 
+        Using this property, we aim to degrade the LB broth.
+
+        **Apparatus**:
+        1. Bunsen burner and heating set
+        1. 100mL borosil flask
+
+        **Reagents**:
+        1. LB
+        1. Distilled water
+
+        **Procedure**: 
+        1. Add 100mL of distilled water in a flask.
+        1. Add LB powder to prepare concentrations according to the table below.
+        1. Start heating the broth and record the color and smell when it starts boiling.
+        1. Record the color and smell every 15 minutes till there is no smell coming from the broth.
+        1. Repeat for every concentration mentioned in the table below.
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Sample No | Weight of LB (in gm) | Time lapsed post boiling point (in minutes) | Volume of water (in mL) | Smell (Present, Faint, Absent) | Color (CFC)
+        | :-----------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+        | 1 | 5 | 0 | 100 |  |  |
+        |  |  | 15 | 100 |  |  |
+        |  |  | 30 | 100 |  |  |
+        |  |  | 45 | 100 |  |  |
+        |  |  | 60 | 100 |  |  |
+        | 2 | 10 | 0 | 100 |  |  |
+        |  |  | 15 | 100 |  |  |
+        |  |  | 30 | 100 |  |  |
+        |  |  | 45 | 100 |  |  |
+        |  |  | 60 | 100 |  |  |
+
+        [Table 3: Caption goes here.]
+        <br>
+        
+    :markdown-it(html)
+        ## 2. Sorbic Acid and Potassium Sorbate Degradation 
+        <br>
+        
+        **Aim**: 
+        To degrade the Sorbic Acid and Potassium Sorbate present in the sedimentation process of sugar processing using Sulphur Dioxide.
+
+        **Principle**: 
+        Sorbic acid is known to undergo degradation in aqueous solutions, and this degradation appears to be accelerated in the presence of sulphur dioxide. 
+        At low pH (4.5-6), Potassium Sorbate readily converts into sorbic acid in water. 
+        During the sulphonation process, sugarcane juice has a pH of 5.0 to 6.0 making it ideal for the degradation of potassium sorbate as well.
+
+        **Apparatus**:
+        1. Glass bottle with screw cap
+        1. Degradation chamber
+
+        **Reagents**:
+        1. 1L of Degassed Distilled water
+        1. 1.5g of Sorbic Acid
+        1. Sulphur Dioxide gas
+        1. Iodine
+
+        **Procedure**: 
+        1. Dissolve 1.5g of Sorbic acid in 1 litre of degassed distilled water.
+        1. Pass Sulphur dioxide gas through 500mL of degassed distilled water for 1 minute.
+        1. Obtain the concentration of the dissolved Sulphur dioxide by titration with iodine.
+        1. To prepare the degradation mixture, mix the stock solutions of both sorbic acid and sulphur dioxide such that the final concentrations are 1g/L sorbic acid and 1.5g/L sulphur dioxide.
+        1. Store the solution in a clear glass bottle with a screw cap.
+        1. Place the glass bottle in a degradation chamber.
+        1. Measure the concentration of Sorbic acid at regular intervals using the Sorbic Acid characterization protocol.
+
+    - var imgpath = "" + require("../assets/img/Experiments--DegradationChamber.png")["default"]
+    +image(1, imgpath, "Degradation Chamber", 40)
+
+    :markdown-it(html)
+        <br>
+
+        # Characterization Experiments
+
+        ## 3. Sorbic Acid & Potassium Sorbate Characterization 
+        <br>
+        
+        **Aim**: 
+        To determine the concentration of Sorbic acid before and after treatment with Sulphur Dioxide.
+
+        **Principle**: 
+        Sorbic acid is extracted from the sample using the solvent mixture of diethyl ether and petroleum ether (1:1) and absorbance of the extract is measured at 250nm. 
+        Sorbic acid in another aliquot is destroyed with Sulphur Dioxide and the absence of the peak at 250 nm is taken as confirmation of the presence of sorbic acid in the sample. 
+
+        **Apparatus**:
+        1. UV Spectrophotometer
+
+        **Reagents**:
+        1. **Mixed ethers (40-60)**: Petroleum ether and anhydrous diethyl ether (1+1).
+        1. **Potassium permanganate solution**: Dissolve 15 gm in 100 ml water.
+        1. **Sorbic acid standard solution (1 mg/ml)**: Dissolve 100mg and makeup to 100 ml with mixed ethers.
+        1. **Woking standard solution**: Dilute 5ml of sorbic acid standard solution to 100ml with the solvent.
+        1. **Reference solution**: Shake 10 ml of mixed ethers with 100 ml of phosphoric acid solution and dry the supernatant ether layer with anhydrous sodium sulphate.
+
+        **Procedure**: 
+        1. Homogenise the sample.
+        1. Accurately weigh about 10gm of the prepared sample, in a high speed blender, add enough phosphoric acid to yield a total of 100ml of liquid in the mixture.
+        1. Blend for one minute and immediately filter through Whatman No.3 paper.
+        1. Transfer 10 ml of filtrate to a 250 ml separator containing 100ml of mixed ethers and shake for one minute.
+        1. Discard the aqueous layer and dry the ether extract over 5gm of anhydrous sodium sulphate and read the absorbance at 250nm against reference solution.
+        1. Determine the concentration of sorbic acid from the standard curve prepared as follows:
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Sample No | Working standard solution (in mL) | Mixed Ethers (in mL) | Filtrate Volume (in mL) | Volume of Phosphoric Acid (in mL) | Total Volume (in mL)
+        | :-----------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+        | Reference or Blank | 0 | 10 | 0 | 90 | 100 |
+        | Sample | 0 | 90 | 10 | 0 | 100 |
+        | 1 | 1 | 99 | 0 | 0 | 100 |
+        | 2 | 2 | 98 | 0 | 0 | 100 |
+        | 3 | 4 | 96 | 0 | 0 | 100 |
+        | 4 | 6 | 94 | 0 | 0 | 100 |
+ 
+        [Table 3: Caption goes here.]
+        <br>
+
+    :markdown-it(html)
+
+        ## 4. Carboxymethyl Cellulose Characterization 
+        <br>
+        
+        **Aim**: 
+        To determine the presence of Carboxymethyl Cellulose after the clarification step in sugarcane processing using FTIR.
+
+        **Principle**: 
+        To be added
+
+        **Apparatus**:
+        1. Infrared Spectrophotometer
+        1. Pellet maker
+
+        **Reagents**:
+        1. Carboxymethyl Cellulose (CMC)
+        1. KBr
+
+
+        **Procedure**: 
+        1. Prepare a pellette with 200mg of KBr and 2mg of CMC.
+        1. Record the FTIR spectra 
+ 
+    - var imgpath = "" + require("../assets/img/Experiments--CMCInfraredSpectra.png")["default"]
+    +image(1, imgpath, "Expected Infrared Spectra", 40)
+
+    :markdown-it(html)
+
+        ## 5. Triton X-100 Characterization 
+        <br>
+        
+        **Aim**: 
+        To determine the concentration of Sorbic acid before and after the degradation protocol using the Luminol-H2O2-Triton X-100 chemiluminescence system.
+
+        **Principle**: 
+        Under the optimal conditions, the standard curve was drawn up and quotas were evaluated. 
+        The linear range was 2 × 10-4 g·mL-1-4 × 10-2 g·mL-1 (w/v), and the detection limit was 3.97 × 10-5 g·mL-1 Triton X-100 (w/v). 
+        The relative standard deviation was less than 4.73% for 2 × 10-2 g·mL-1 (w/v) Triton X-100 (n = 7). 
+        This method has been applied to the determination of Triton X-100 in environmental water samples. 
+        The desirable recovery ratio was between 96%–102% and the relative standard deviation was 2.5%–3.3%. 
+        The luminescence mechanism was also discussed in detail based on the fluorescence spectrum and the kinetic curve, and demonstrated that Triton X-100-luminol-H2O2 was a rapid reaction.
+
+        **Apparatus**:
+        1. Ultra-weak luminescence analyzer
+        1. Sensitive PhotoMultiplier Tube (PMT)
+        1. Fluorescence Spectrophotometer
+
+        **Reagents**:
+        1. Luminol
+        1. Triton X-100
+        1. 1M NaOH Solution
+        1. 0.2M Na2CO3
+
+        **Preparation of solutions**: 
+        1. Prepare the 0.01 mol·L-1 **luminol stock solution** by dissolving 0.1772 g luminol with 5 mL 1 mol·L-1 NaOH solution and doubled distilled water to 100 mL and store in 4°C.
+        1. Prepare the **working standard solutions of luminol** from the stock solution by appropriate dilutions with 0.2 mol·L-1 Na2CO3 before use and pH adjusted to 12.5 with 1 mol·L-1 NaOH.
+        1. Prepare a **standard solution of Triton X-100 (8% w/v)** by dissolving 8g of Triton X-100 with doubly distilled water to 100 mL.
+        1. Prepare **working standard solutions of Triton X-100** from the stock solution by appropriate dilutions.
+
+        **Procedure**:
+        1. Rapidly inject 100 μL Triton X-100 (1 × 10-2 g·mL-1), 100 μL H2O2 (0.4 mol·L-1) and 100 μL luminol (1.0 × 10-4 mol·L-1) into the sample pool in the correct order.
+        1. Close the reaction door to maintain the reaction in the dark.
+        1. Immediately start recording the CL intensity. The CL intensity ΔI is calculated by ΔI = Is-I0, where Is and I0 are the CL signals in the presence and absence of Triton X-100, respectively.
+        1. Collect the CL signal and record consecutively within 100 seconds and plot the CL intensity-time curve (kinetic curve).
+
+        <br>
+
+        # Stability Experiments
+
+        ## 6. Evaluation of LB
+        <br>
+        
+        **Aim**: 
+        To determine the stability of LB over a range of temperatures and time.
+
+        **Principle**: 
+        To be added
+
+        **Apparatus**:
+        1. Petri plates
+        1. Streaker
+
+        **Reagents**:
+        1. Agar
+        1. LB
+        1. Distilled water
+
+        **Procedure**: 
+        1. Prepare the agar plates with LB as a nutrient source.
+        1. Streak a fast growing bacteria like E Coli.
+        1. Observe the plates under the different conditions according to the table below.
+        1. Record the CFU in the mentioned intervals. Stop the experiment when there is no growth.
+        1. Compare the plates.
+ 
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Sample No | Temperature (in C) | Time (in days) | Volume of LB solution (in mL) | CFU |
+        | :-----------: | :------------: | :------------: | :------------: | :------------: | 
+        | 1 | 0 | 1 | 10 |  |
+        |  |  | 2 | 10 |  |
+        |  |  | 3 | 10 |  |
+        |  |  | 4 | 10 |  |
+        |  |  | 5 | 10 |  |
+        | 2 | 25 | 1 | 10 |  |
+        |  |  | 2 | 10 |  |
+        |  |  | 3 | 10 |  |
+        |  |  | 4 | 10 |  |
+        |  |  | 5 | 10 |  |
+        | 3 | 37 in the dark | 1 | 10 |  |
+        |  |  | 2 | 10 |  |
+        |  |  | 3 | 10 |  |
+        |  |  | 4 | 10 |  |
+        |  |  | 5 | 10 |  |
+        | 4 | 37 under sunlight | 1 | 10 |  |
+        |  |  | 2 | 10 |  |
+        |  |  | 3 | 10 |  |
+        |  |  | 4 | 10 |  |
+        |  |  | 5 | 10 |  |
+        | 5 | 45 | 1 | 10 |  |
+        |  |  | 2 | 10 |  |
+        |  |  | 3 | 10 |  |
+        |  |  | 4 | 10 |  |
+        |  |  | 5 | 10 |  |
+ 
+        [Table 3: Caption goes here.]
+        <br>
+
+    :markdown-it(html)
+
+        # Definitions
+
+        <dfn>Term ~ Definition</dfn>
+
+        This can come <dfn>anywhere in ~ the text</dfn>.
+
+        # Citations
+
+        In text citation for a research article with a DOI. [Rosano et al., 2019](#citation1)
+
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Description")
+    +buttonRight("Next")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+prepend citations
+    - var citations = [{"authors": "Allen, M. J., & Sheridan, S. C. (2015). ", "doi": "https://doi.org/10.1007/s00484-015-1117-4", "journal": "International Journal of Biometeorology", "numbers": "62(1), 57-67. ", "title": "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.", "type": "article"}]
