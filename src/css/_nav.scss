@@ -277,7 +277,7 @@ $darkblue: darken($blue, 30%);
       margin: 0;
       font-family: "Lato", sans-serif;
       font-size: 1.3rem;
-      font-weight: 300;
+      font-weight: 400;
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -305,11 +305,9 @@ $darkblue: darken($blue, 30%);
     height: 7rem;
   }
 
-  #menuContent {
-    padding: 4rem 0 0 4rem;
-  }
-
   #nav-headings {
+    padding: 4rem 0 0 4rem;
+    border: 0;
     li {
       margin-bottom: 0.7rem;
       a {
@@ -381,12 +379,13 @@ $darkblue: darken($blue, 30%);
   }
 
   #nav-items {
-
-    padding-left: 2rem;
+    padding: 4rem 0 0 4rem;
     transition: visibility 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 0;
 
     li {
       padding: 0.25rem 0;
+      text-align: left;
 
       a {
         font-family: "Lato", sans-serif;
@@ -615,19 +614,17 @@ $darkblue: darken($blue, 30%);
     margin-left: 0.5rem;
   }
 
-  #menuContent {
-    #mobile-nav {
-      margin-left: 0.9rem;
+  #mobile-nav {
+    margin-left: 0.9rem;
 
-      a.nav-heading {
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
+    a.nav-heading {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
 
-      ul {
-        a {
-          font-size: 1.25rem;
-        }
+    ul {
+      a {
+        font-size: 1.25rem;
       }
     }
   }
