@@ -6,9 +6,19 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
 
   a.navbar-brand.d-lg-inline-block(href=urlPrefix) Sugar
     span Gain
-
+  
   .controls
     .row
+      .col#theme-switch-wrapper
+        .row
+          .col-3
+            i.icon-light
+          .col-6
+            label.switch(for='theme-switch')
+              input(type='checkbox')#theme-switch
+              span.slider.round
+          .col-3
+            i.icon-dark
       .col
         #fullscreenMenuWrapper
           input#menuToggle(type='checkbox')
@@ -34,8 +44,12 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
                             li
                               - var underscored = section['section'].replace(/ /g,'_')
                               a(href="" id= underscored.concat('-tab'))= section['section']
-                            //- hr
-
+                      .col-6#nav-headings
+                        ul(role="tablist")
+                          each section in navItems  
+                            li
+                              - var underscored = section['section'].replace(/ /g,'_')
+                              a(href="" id= underscored.concat('-tab'))= section['section']
                       .col-6#nav-items
                         //- <!-- Tab panes -->
                         .tab-content

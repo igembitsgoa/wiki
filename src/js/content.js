@@ -70,3 +70,12 @@ $('dfn').each(function () {
 });
 
 $('#bg-attribution').tooltip();
+
+$('label[for="theme-switch"]').click(function() {
+    if ($("#theme-switch").is(":checked")) {
+        $('body').addClass('dark');
+    }
+    else {
+        $('body').removeClass('dark');
+    }
+});
