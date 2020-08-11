@@ -9,8 +9,12 @@ mixin buttonLeft(buttonTitle)
         - var length = "long"
     else
         - var length = "super-long"
+    if buttonTitle = "Home"
+        - var href = urlPrefix
+    else
+        - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
     a.button.prev.flex.justify-content-end(class=length
-        href=urlPrefix + buttonTitle.replace(/ /g,'_'))
+        href=href)
         span.circle(aria-hidden=true)
             span.icon.arrow
         span.button-text= buttonTitle

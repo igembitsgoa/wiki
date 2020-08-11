@@ -3,6 +3,9 @@ extends ../templates/contents.pug
 block headVars
     - var title = "Design"
     - var requireMathJax = false
+    - var backgroundImage = "Description--josh-withers.jpg"
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
     :markdown-it(html)
@@ -68,7 +71,7 @@ block article
 
 append buttons
     //- mind the quotes and the plus sign
-    +buttonLeft("Previous")
-    +buttonRight("Sample")
+    +buttonLeft("Description")
+    +buttonRight("Model")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.

@@ -141,7 +141,7 @@ section {
   **/
 
     h2 {
-      font-family: "Merriweather";
+      font-family: "Merriweather", serif;
       font-weight: 400;
       font-size: calc(1.625rem + 1vw);
       margin-bottom: 1.2rem;
@@ -174,7 +174,7 @@ section {
 
   &:nth-of-type(odd) {
     .sidebar {
-      padding: 0 100px 0 0;
+      padding: 0 50px 0 0;
       h3 {
         text-align: left;
       }
@@ -187,7 +187,7 @@ section {
 
   &:nth-of-type(even) {
     .sidebar {
-      padding: 0 0 0 100px;
+      padding: 0 0 0 50px;
       h3 {
         text-align: right;
       }
@@ -343,6 +343,12 @@ section {
 
 @include respond-below(xxl) {
   section {
+    .sidebar {
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+    }
     .content {
       h2 {
         font-size: 2rem;
