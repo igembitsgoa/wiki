@@ -18,6 +18,10 @@ $light-grey: #f7f7f7;
 $dark-grey: #8e8e8e;
 $selection-color: rgba(255, 233, 0, 0.4);
 
+
+// dark mode
+$dark-body:#313131;
+
 ::selection {
   background-color: $selection-color;
 }
@@ -689,5 +693,15 @@ footer {
 @include respond-below(xxxs) {
   header #heading h1 {
     font-size: 2.5rem;
+  }
+}
+
+body.dark {
+  background-color: $dark-body;
+
+  .content {
+    h1 {
+      color: white;
+    }
   }
 }

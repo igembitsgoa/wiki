@@ -6,63 +6,76 @@ nav.navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transpare
 
   a.navbar-brand.d-lg-inline-block(href=urlPrefix) Sugar
     span Gain
+  
+  .controls
+    .row
+      .col#theme-switch-wrapper
+        .row
+          .col-3
+            i.icon-light
+          .col-6
+            label.switch(for='theme-switch')
+              input(type='checkbox')#theme-switch
+              span.slider.round
+          .col-3
+            i.icon-dark
+      .col
+        #fullscreenMenuWrapper
+          input#menuToggle(type='checkbox')
+          label#menuSwitchContainer(for='menuToggle')
+            #menuSwitch
+          #fullscreenMenu
+            label.mr-3(for='menuToggle')
+            #desktop-nav.w-100.h-100
+              .container-fluid.align-items-stretch.pr-0.flex-column
+                .row.nav-header.w-100
+                  .col-xl-3.col-lg-2
+                    .teamLogo
+                  .col-xl-6.col-lg-8
+                  .col-xl-3.col-lg-2.d-flex.align-items-center.justify-content-end#close-label
+                    p Close
+                .row.flex-grow-1.w-100
+                  .col-xl-3.col-lg-2 
+                  .col-xl-6.col-lg-8#menuContent.d-flex.justify-content-between.flex-column
+                    .row
+                      .col-6#nav-headings
+                        ul(role="tablist")
+                          each section in navItems  
+                            li
+                              - var underscored = section['section'].replace(/ /g,'_')
+                              a(href="" id= underscored.concat('-tab'))= section['section']
+                            //- hr
 
-  #fullscreenMenuWrapper
-    input#menuToggle(type='checkbox')
-    label#menuSwitchContainer(for='menuToggle')
-      #menuSwitch
-    #fullscreenMenu
-      label.mr-3(for='menuToggle')
-      #desktop-nav.w-100.h-100
-        .container-fluid.align-items-stretch.pr-0.flex-column
-          .row.nav-header.w-100
-            .col-xl-3.col-lg-2
-              .teamLogo
-            .col-xl-6.col-lg-8
-            .col-xl-3.col-lg-2.d-flex.align-items-center.justify-content-end#close-label
-              p Close
-          .row.flex-grow-1.w-100
-            .col-xl-3.col-lg-2 
-            .col-xl-6.col-lg-8#menuContent.d-flex.justify-content-between.flex-column
-              .row
-                .col-6#nav-headings
-                  ul(role="tablist")
-                    each section in navItems  
-                      li
-                        - var underscored = section['section'].replace(/ /g,'_')
-                        a(href="" id= underscored.concat('-tab'))= section['section']
-                      //- hr
+                      .col-6#nav-items
+                        //- <!-- Tab panes -->
+                        .tab-content
+                          each section in navItems
+                            - var underscored = section['section'].replace(/ /g,'_')
+                            .tab-pane(id= underscored.concat('-pane'))
+                              ul
+                                each item in section['items']
+                                  li
+                                    a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+                    .row
+                      #contact-links
+                        a(href="https://instagram.com/igem_bits") Instagram
+                        a(href="https://instagram.com/igem_bits") Twitter
+                        a(href="mailto:igembitsgoa@gmail.com") Email
+                  .col-xl-3.col-lg-2 
+                    
+                .row.nav-footer.w-100
+                  .col-xl-3.col-lg-2
+                  .col-xl-6.col-lg-8
+                  .col-xl-3.col-lg-2
 
-                .col-6#nav-items
-                  //- <!-- Tab panes -->
-                  .tab-content
+            #mobile-nav
+              .container.w-100.h-100
+                #menuContent.w-100
+                  .row.w-100.mb-4
                     each section in navItems
-                      - var underscored = section['section'].replace(/ /g,'_')
-                      .tab-pane(id= underscored.concat('-pane'))
+                      .col-md-4.col-sm-12.py-3
+                        a.nav-heading= section['section']
                         ul
                           each item in section['items']
                             li
                               a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
-              .row
-                #contact-links
-                  a(href="https://instagram.com/igem_bits") Instagram
-                  a(href="https://instagram.com/igem_bits") Twitter
-                  a(href="mailto:igembitsgoa@gmail.com") Email
-            .col-xl-3.col-lg-2 
-              
-          .row.nav-footer.w-100
-            .col-xl-3.col-lg-2
-            .col-xl-6.col-lg-8
-            .col-xl-3.col-lg-2
-
-      #mobile-nav
-        .container.w-100.h-100
-          #menuContent.w-100
-            .row.w-100.mb-4
-              each section in navItems
-                .col-md-4.col-sm-12.py-3
-                  a.nav-heading= section['section']
-                  ul
-                    each item in section['items']
-                      li
-                        a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
