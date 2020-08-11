@@ -3,6 +3,9 @@ extends ../templates/contents.pug
 block headVars
     - var title = "Description"
     - var requireMathJax = true
+    - var backgroundImage = "Description--josh-withers.jpg"
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
     :markdown-it(html)
@@ -16,15 +19,15 @@ block article
         ## Level 2 Heading1
 
         Naman: The molecular  causes them to bind to chlorophyll and retain large volumes of oil, 
-        
+
         Suhas: The molecular xyz of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        
+
         resulting in a 20% loss of oil during processing.
 
         Srxlmp says: Ur face sucks The irreversible binding between the AACs and chlorophyll prevents reuse of the AACs, leading
-        
+
         SShastri says: The **BOOM GOES THE DYNAMITE** the AACs and chlorophyll prevents reuse of the AACs, leading
-        
+
         to increased costs for the manufacturer. This also increases the amount of 
         [Rosano et al., 2019](#citation1) waste produced by the system. The waste is mixed into animal feed 
         and released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
@@ -51,9 +54,9 @@ block article
     +image(2, "Description--giphy.gif", "trump", 40)
     :markdown-it(html)
         # Genetic Design of Biosensor
-        
+
         This is the genetic circuit brooooo look how cool!
-    +image(3, "Biosensor.PNG", "Genetic Circuit of Biosensor")
+    +image(3, "biosensor.png", "Genetic Circuit of Biosensor")
 
     :markdown-it(html)
 
@@ -77,7 +80,8 @@ block article
         ### Level 3 Heading
 
         The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of [Allen & Sheridan, 2015](#citation2) oil during processing. The irreversible binding between the AACs and 
+        resulting in a 20% loss of [Allen & Sheridan, 2015](#citation2) oil during processing. The irreversible binding
+        between the AACs and 
         chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
         increases the amount of waste produced by the system. The waste is mixed into animal feed and 
         released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
@@ -105,7 +109,7 @@ block article
             [\sum^m_{i=1}(h_\theta(x^{(i)}) - 
             y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
         $$
-        
+
     :markdown-it(html)
         <mark>here be dragons</mark>
 
@@ -117,7 +121,7 @@ block article
         |Content       |   **Cell**    |         Cell |                                               
         |New section   |     More      |[Data](https://google.com) |
         |And more      | With an escaped '\|'       ||
-        
+
         [Table 1: Caption goes here.]
 
 
@@ -128,7 +132,7 @@ block article
         |Content       |   **Cell**    |         Cell |                                               
         |New section   |     More      |[Data](https://google.com) |
         |And more      | With an escaped '\|'       ||
-        
+
         [Table 1: Caption goes here.]
 
     :markdown-it(html)
@@ -157,77 +161,4 @@ append buttons
     +buttonLeft("Previous")
     +buttonRight("Sample")
 
-//- DO NOT MODIFY START AND END LINES.
-//- Citations DOI Start
-    1. https://doi.org/10.1007/s00484-015-1117-4
-    2. https://doi.org/10.1016/j.ijid.2019.08.003
-    3. https://doi.org/10.1007/s00484-015-1117-4
-//- Citations DOI End
-
-prepend citations_url
-    -
-        var citations_url = [
-            {
-                // 4
-                "authors": "",
-                "title": "Agriculture: Crop production: Sugarcane. ",
-                "published": "",
-                "accessed": "June 22, 2020",
-                "site_name": "TNAU Agritech Portal",
-                "url": "https://google.com"
-            },
-            {
-                // 5
-                "authors": "Pranav",
-                "title": "Agriculture: Crop production: Sugarcane. ",
-                "published": "",
-                "accessed": "June 22, 2020",
-                "site_name": "TNAU Agritech Portal",
-                "url": "https://google.com"
-            }
-        ]
-//- Citations URL End
-
-prepend citations_books
-    -
-        var citations_books = [
-            {
-                // 5
-                "authors": "Ingalls, B. P.",
-                "year_published": "2013",
-                "title": "Mathematical modeling in systems biology: An introduction.",
-                "publisher": "MIT Press",
-                "Google_Books_URL": "https://books.google.co.in/books?id=OYr6AQAAQBAJ"
-            }
-        ]
-//- Citations Books End
-
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
-prepend citations_doi
-    -
-        var citations_doi = [
-        {
-            'id': '1',
-            'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
-            'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
-            'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
-            'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
-        },
-        {
-            'id': '2',
-            'authors': 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ',
-            'title': 'Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).',
-            'journal': 'International Journal of Infectious Diseases',
-            'numbers': '88, 127-134. ',
-            'doi': 'https://doi.org/10.1016/j.ijid.2019.08.003',
-        },
-        {
-            'id': '3',
-            'authors': 'Allen, M. J., & Sheridan, S. C. (2015). ',
-            'title': 'Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.',
-            'journal': 'International Journal of Biometeorology',
-            'numbers': '62(1), 57-67. ',
-            'doi': 'https://doi.org/10.1007/s00484-015-1117-4',
-        },
-        ]

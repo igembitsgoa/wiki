@@ -25,6 +25,7 @@
   position: relative;
   z-index: 200;
   margin-left: 1.5rem;
+  transition: transform 0.3s;
 
   span {
     font-weight: 600;
@@ -58,6 +59,16 @@ nav.nav-transparent {
   }
 }
 
+nav.desktop-menu {
+  .navbar-brand {
+    transform: translate(0%, 15%);
+  }
+
+  #fullscreenMenuWrapper label {
+    padding-top: 35px;
+  }
+}
+
 /**
  * Fullscreen Nav Styles
 **/
@@ -74,6 +85,7 @@ nav.nav-transparent {
     padding: 15px;
     cursor: pointer;
     float: right;
+    transition: all 0.3s ease;
   }
 }
 
@@ -87,40 +99,39 @@ nav.nav-transparent {
   position: relative;
   top: 8px;
   transition: all 0.3s ease;
-}
 
-#menuSwitch:before {
-  content: "";
-  background-color: #ffffff;
-  width: 20px;
-  height: 3px;
-  display: block;
-  border-radius: 20px;
-  position: relative;
-  top: -8px;
-  left: 4px;
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
-}
+  &:before {
+    content: "";
+    background-color: #ffffff;
+    width: 20px;
+    height: 3px;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+    top: -8px;
+    left: 4px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
 
-#menuSwitch:after {
-  content: "";
-  background-color: #ffffff;
-  width: 20px;
-  height: 3px;
-  display: block;
-  border-radius: 2px;
-  position: relative;
-  top: 5px;
-  left: 4px;
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
+  &:after {
+    content: "";
+    background-color: #ffffff;
+    width: 20px;
+    height: 3px;
+    display: block;
+    border-radius: 2px;
+    position: relative;
+    top: 5px;
+    left: 4px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
 }
 
 #fullscreenMenu {
   position: fixed;
   width: 100vw;
-  height: stretch;
   height: 100vh;
   top: 0;
   left: 0;
@@ -128,7 +139,8 @@ nav.nav-transparent {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  background: #181818;
+  // linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 
   label {
     width: 25px;
@@ -145,15 +157,11 @@ nav.nav-transparent {
     transform: translateY(0%);
     transition: transform 0.5s;
     transition: opacity 0 !important;
-
-    li a {
-      color: white;
-    }
   }
 }
 
 #menuToggle:checked ~ #fullscreenMenu {
-  opacity: 0.95;
+  opacity: 1;
   visibility: visible;
   transition: opacity 0.5s;
 
@@ -196,15 +204,325 @@ nav.nav-transparent {
  * Fullscreen Menu Items
 **/
 
-// $red: #F37272;
 $green: #4abf66;
 $whitey: #f0f0f0;
 
-#menuContent {
+$blue: #2c2fe8;
+$darkblue: darken($blue, 30%);
+
+#desktop-nav {
+  position: relative;
+  justify-content: center;
+  display: flex;
+
+  .col-xl-3,
+  .col-xl-6 {
+    // border-color: hsla(0, 0%, 48.6%, 0.4);
+    // border-style: solid;
+    background-color: #181818;
+  }
+
+  .col-xl-3 {
+    // border-width: 0 1px 1px 1px;
+    z-index: 0;
+  }
+
+  // .col-xl-6 {
+  //   border-width: 0 0 1px 0;
+  // }
+
+  .nav-header {
+    height: 7rem;
+  }
+
+  .teamLogo {
+    height: 100px;
+    padding: 1.2rem;
+  }
+
+  #close-label {
+    padding: 1.5rem;
+    padding-right: 5rem;
+    p {
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-size: 1.3rem;
+      padding-top: 0.8rem;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $pink;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #contact-links {
+    padding: 0 0 1rem 4.2rem;
+
+    a {
+      color: #a4a4a4;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-right: 2rem;
+      font-size: 1.4rem;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  .nav-footer {
+    height: 7rem;
+  }
+
+  #nav-headings {
+    padding: 4rem 0 0 4rem;
+    border: 0;
+    li {
+      margin-bottom: 0.7rem;
+      a {
+        transition: color 0.5s ease;
+        color: $whitey;
+        text-decoration: none;
+        line-height: 3rem;
+        font-family: "Lato";
+        font-weight: 300;
+        font-size: 2.5rem;
+
+        position: relative;
+
+        &::before {
+          width: 0;
+          content: "";
+          height: 1px;
+          background-color: $green;
+          display: inline-block;
+          bottom: 0.3em;
+          position: relative;
+          transition: width 0.25s, margin-right 0.25s;
+        }
+
+        &:hover::before {
+          width: 30px !important;
+        }
+      }
+    }
+
+    li.active {
+      a {
+        color: $green;
+        &::before {
+          width: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    li.inactive a {
+      color: hsla(0, 0%, 48.6%, 0.7);
+    }
+  }
+
+  .tab-content {
+    color: white;
+
+    .tab-pane {
+      visibility: hidden;
+      opacity: 0;
+
+      &:nth-of-type(1) {
+        padding-top: 0.5rem;
+      }
+
+      &:nth-of-type(2) {
+        padding-top: 3.6rem;
+      }
+
+      &:nth-of-type(3) {
+        padding-top: 7.5rem;
+      }
+
+      &:nth-of-type(4) {
+        padding-top: 11rem;
+      }
+
+      &:nth-of-type(5) {
+        padding-top: 14.7rem;
+      }
+
+      &:nth-of-type(6) {
+        padding-top: 18.3rem;
+      }
+
+      &:nth-of-type(7) {
+        padding-top: 20.8rem;
+      }
+
+      &:nth-of-type(8) {
+        padding-top: 15.3rem;
+      }
+    }
+
+    .active {
+      visibility: visible;
+      opacity: 1;
+      animation: opac 0.5s;
+    }
+  }
+
+  @keyframes opac {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  #nav-items {
+    padding: 4rem 0 0 4rem;
+    transition: visibility 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 0;
+
+    li {
+      padding: 0.25rem 0;
+      text-align: left;
+    }
+
+    a {
+      color: #ababab;
+    }
+  }
+
+  #nav-items a {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 8px;
+    transition: color 0.5s;
+
+    // from https://codepen.io/devilishalchemist/pen/ZYLZay
+
+    $duration: 0.2s;
+    $distance: 8px;
+    $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $green;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+      color: $green;
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
+}
+
+/** 
+ Media Queries for Desktop
+ **/
+
+@include respond-below(xxl) {
+  #desktop-nav {
+    #nav-headings {
+      li {
+        margin-bottom: 0.25rem;
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        &:nth-of-type(1) {
+          padding-top: 0.5rem;
+        }
+
+        &:nth-of-type(2) {
+          padding-top: 3.2rem;
+        }
+
+        &:nth-of-type(3) {
+          padding-top: 6.5em;
+        }
+
+        &:nth-of-type(4) {
+          padding-top: 9.7rem;
+        }
+
+        &:nth-of-type(5) {
+          padding-top: 12.8rem;
+        }
+
+        &:nth-of-type(6) {
+          padding-top: 14.7rem;
+        }
+
+        &:nth-of-type(7) {
+          padding-top: 17.5rem;
+        }
+
+        &:nth-of-type(8) {
+          padding-top: 12rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond-below(lg) {
+  #desktop-nav {
+    .contact-button {
+      display: none;
+    }
+
+    .col-xl-3,
+    .col-xl-6 {
+      border-width: 0;
+    }
+  }
+}
+
+#mobile-nav {
   position: relative;
   justify-content: center;
   flex-direction: column;
-  display: flex;
+  display: none;
 
   .col-12 {
     padding-left: 8%;
@@ -306,7 +624,12 @@ $whitey: #f0f0f0;
       height: 2px;
     }
   }
-  #menuContent {
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+
     a.nav-heading {
       font-size: 1.65rem;
       font-weight: 600;
@@ -330,8 +653,12 @@ $whitey: #f0f0f0;
 }
 
 @include respond-below(xs) {
+  .navbar-brand {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
 
-  #menuContent {
+  #mobile-nav {
     margin-left: 0.9rem;
 
     a.nav-heading {
@@ -340,11 +667,9 @@ $whitey: #f0f0f0;
     }
 
     ul {
-
       a {
         font-size: 1.25rem;
       }
     }
   }
 }
-

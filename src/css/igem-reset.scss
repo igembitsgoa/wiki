@@ -65,6 +65,11 @@ ul {
   border-left-width: 0 !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  border: 0px !important;
+  overflow: visible;
+}
+
 /* https://gist.github.com/thedeerchild/3893094 */
 // #globalWrapper {
 //   background-color: transparent;

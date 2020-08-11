@@ -1,10 +1,5 @@
 - urlPrefix = "/"
 
-//- mixin heading(sectionTitle)
-//-     h1(id=sectionTitle.replace(/ /g,''))= sectionTitle + ' '
-//-         button.btn.section(data-toggle="tooltip" data-placement="right"
-//-             title="Copy link to this section!")= '#'
-
 mixin buttonLeft(buttonTitle)
     if buttonTitle.length <= 7
         - var length = "short"
@@ -34,7 +29,6 @@ mixin buttonRight(buttonTitle)
         span.button-text= buttonTitle
 
 mixin image(n, url, caption, width)
-    - var url = "../assets/img/" + url
     .image
         if width
             img(src=url alt=caption style="width: " + width + "%")
@@ -42,27 +36,43 @@ mixin image(n, url, caption, width)
             img(src=url alt=caption)
         p= "Figure " + n + ": " + caption
 
-//- Function for links
--   
-    var link = function(text, url) {
-        var attributes = 'class="in-text" href="' + url + '"'
-        var wrapper = '<a ' + attributes + '>' + text + '</a>'
-        return wrapper
-    }
+mixin imgCitation(name, number)
+    p.text-center
+        a(href="#citation" + number)= name
 
+mixin citation_article(citation, count)
+    // year_published is present in the authors field
+    - scholar = "https://scholar.google.com/scholar?q=" + citation.title
+    li(id= 'citation' + counter)
+        p.author= citation.authors
+        cite= citation.title
+        p
+            span.journalTitle= citation.journal
+            | 
+            span.journalInfo= citation.numbers
+        if citation.doi
+            a.in-text(href=citation.doi target="_blank" rel="noopener") CrossRef
+        a.in-text(href=scholar target="_blank" rel="noopener") Google Scholar
+        a.in-text(href="#intext" + count) Back to text
 
-//- Function for tooltip definitions
--   
-    var defn = function(term, definition) {
-        var attributes = 'data-toggle="tooltip" title="' + definition + '"'
-        var wrapper = '<dfn ' + attributes + '>' + term + '</dfn>'
-        return wrapper
-    }
+mixin citation_webpage(citation, count)
+    li(id= 'citation' + count)
+        // date of publication comes with authors/details 
+        // depending on presence of authors
+        // as per APA specifications
+        p.author= citation.authors
+        cite= citation.title
+        p
+            span.details= citation.details
+            a.in-text(href=citation.url target="_blank" rel="noopener")= citation.url
+        a.in-text(href="#intext" + count) Back to text
 
-//- Function for in-text citation
--
-    var intext = function(num, text) {
-        var link = "<a href=\"#citation" + num + "\">" + text + "</a>";
-        var wrapper = "<span id=\"intext" + num + "\" class=\"citation\">(" + link + ")</span>"
-        return wrapper;
-    }
+mixin citation_book(citation, count)
+    li(id= 'citation' + counter)
+        p.author= citation.authors + " " + citation.year_published
+        cite= citation.title
+        p
+            span.details= citation.publisher
+        if citation.Google_Books_URL != ""
+            a.in-text(href=citation.Google_Books_URL target="_blank" rel="noopener") Google Books
+        a.in-text(href="#intext" + counter) Back to text    

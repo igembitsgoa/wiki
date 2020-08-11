@@ -10,10 +10,12 @@ html(lang="en")
             script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
     body
         include nav.pug
-        header.d-flex.justify-content-center
-            .container.d-flex.align-items-end
+        header.d-flex.justify-content-center(style="background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)), url(../assets/img/" + backgroundImage + ");")
+            .container.d-flex.align-items-end.justify-content-between
                 #heading
                     h1 #{title}
+                a(href= backgroundAttributionLink)
+                    #bg-attribution(title=backgroundAttribution data-placement="top")
         main
             .container
                 .row
@@ -21,12 +23,6 @@ html(lang="en")
                         .nav#contents
                             ul
                                 //- Filled automatically from js
-                                //- each item in contents
-                                //-     li
-                                //-         span.circle(aria-hidden=true)
-                                //-             span.icon.arrow
-                                //-         a(href='#' + item.replace(/ /g,'') )= item 
-                                        // regex to remove spaces
                     .content.col-lg-9
                         article
                             block article
@@ -36,136 +32,21 @@ html(lang="en")
                             block buttons
 
 
-                        article#references
-                            h1 References
-                            
-                            ol
-                                block citations_doi
-                                block citations_url
-                                block citations_books
-                                - var counter = 0
-                                if citations_doi
-                                    each citation in citations_doi
+                        block citations
+                        if citations
+                            article#references
+                                h1 References
+                                ol
+                                    - counter = 1
+                                    each citation in citations
+                                        if citation.type == 'article'
+                                            +citation_article(citation, counter)
+                                        if citation.type == 'webpage'
+                                            +citation_webpage(citation, counter)
+                                        if citation.type == 'book'
+                                            +citation_book(citation, counter)
                                         - counter = counter + 1
-                                        - citation.id = citation.id.trim()
-                                        - citation.authors = citation.authors.trim()
-                                        - citation.title = citation.title.trim()
-                                        - citation.journal = citation.journal.trim()
-                                        - citation.numbers = citation.numbers.trim()
-                                        - citation.doi = citation.doi.trim()
-                                        
-                                        li(id= 'citation' + counter)
-                                            p.author= citation.authors
-                                            cite= citation.title
-                                            p
-                                                span.journalTitle= citation.journal
-                                                | 
-                                                span.journalInfo= citation.numbers
-                                            a.in-text(href=citation.doi target="_blank") CrossRef
-                                            a.in-text(href=scholar target="_blank") Google Scholar
-                                            a.in-text(href="#intext" + counter) Back to text
-                                
-                                if citations_url
-                                    each citation in citations_url
-                                        - counter = counter + 1
-                                        - citation.authors = citation.authors.trim()
-                                        - citation.title = citation.title.trim()
-                                        - citation.published = citation.published.trim()
-                                        - citation.accessed = citation.accessed.trim()
-                                        - citation.url = citation.url.trim()
-                                        - citation.site_name = citation.site_name.trim()
-                                        -
-                                            if (citation.authors != "" && citation.authors[citation.authors.length - 1] != ".")
-                                            {
-                                                citation.authors = citation.authors + ".";
-                                            }
-                                        -
-                                            if (citation.published != "")
-                                            {
-                                                if (citation.published[0] != "(")
-                                                {
-                                                    citation.published = "(" + citation.published + ")";
-                                                }
-                                                if (citation.published[citation.published.length - 1] != ".")
-                                                {
-                                                    citation.published = citation.published + ".";
-                                                }
-                                            }
-                                            else 
-                                            {
-                                                citation.published = "(n.d.)."
-                                            }
-                                        -
-                                            if (citation.title[citation.title.length - 1] != ".")
-                                            {
-                                                citation.title = citation.title + ".";
-                                            }
-                                        -
-                                            if (citation.site_name != "")
-                                            {
-                                                if (citation.site_name[citation.site_name.length - 1] != ".")
-                                                {
-                                                    citation.site_name = citation.site_name + ".";
-                                                }
-                                            }
 
-                                        li(id= 'citation' + counter)
-                                            if citation.authors != ""
-                                                p.author= citation.authors + " " + citation.published
-                                                cite= citation.title + " " + citation.site_name
-                                                p
-                                                    span.details= "Retrieved " + citation.accessed + ", from "
-                                                    a.in-text(href=citation.url target="_blank")= citation.url
-                                                a.in-text(href="#intext" + counter) Back to text
-                                            else
-                                                cite= citation.title + " " + citation.site_name
-                                                p
-                                                    span.details= citation.published + " Retrieved " + citation.accessed + ", from "
-                                                    a.in-text(href=citation.url target="_blank")= citation.url
-                                                a.in-text(href="#intext" + counter) Back to text
-
-                                if citations_books
-                                    each citation in citations_books
-                                        - counter = counter + 1
-                                        - citation.authors = citation.authors.trim()
-                                        - citation.title = citation.title.trim()
-                                        - citation.year_published = citation.year_published.trim()
-                                        - citation.publisher = citation.publisher.trim()
-                                        -
-                                            if (citation.authors != "" && citation.authors[citation.authors.length - 1] != ".")
-                                            {
-                                                citation.authors = citation.authors + ".";
-                                            }
-                                        -
-                                            if (citation.year_published != "")
-                                            {
-                                                if (citation.year_published[0] != "(")
-                                                {
-                                                    citation.year_published = "(" + citation.year_published + ")";
-                                                }
-                                                if (citation.year_published[citation.year_published.length - 1] != ".")
-                                                {
-                                                    citation.year_published = citation.year_published + ".";
-                                                }
-                                            }
-                                            else 
-                                            {
-                                                citation.year_published = "(n.d.)."
-                                            }
-                                        -
-                                            if (citation.title[citation.title.length - 1] != ".")
-                                            {
-                                                citation.title = citation.title + ".";
-                                            }
-
-                                        li(id= 'citation' + counter)
-                                            p.author= citation.authors + " " + citation.year_published
-                                            cite= citation.title
-                                            p
-                                                span.details= citation.publisher
-                                            if citation.Google_Books_URL != ""
-                                                a.in-text(href=citation.Google_Books_URL target="_blank") Google Books
-                                            a.in-text(href="#intext" + counter) Back to text    
 
         footer 
             include footer_nav.pug
