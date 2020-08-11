@@ -21,7 +21,8 @@ block article
         of the cultural and emotional fabric of the country, it was only natural for us to choose a problem that greatly 
         affected the livelihoods of farmers in the country.
 
-    +image(1, "Desctiption--devadas.jpg", "A farm in Kerala, India")
+    - var imgpath = "" + require("../assets/img/Desctiption--devadas.jpg")["default"]
+    +image(1, imgpath, "A farm in Kerala, India")
     
     :markdown-it(html)
 
@@ -35,7 +36,8 @@ block article
         We therefore chose to work on a problem plaguing both sugarcane farmers and the sugar industry: the problem of post-harvest 
         sucrose deterioration.
 
-    +image(2, "Description--sugarandothers.png", "Uses of sugarcane in the sugar and allied industries")
+    - var imgpath = "" + require("../assets/img/Description--sugarandothers.png")["default"]
+    +image(2, imgpath, "Uses of sugarcane in the sugar and allied industries")
 
     :markdown-it(html)
 
@@ -93,9 +95,10 @@ block article
         > (Project Logo) 
 
 
+
 append buttons
     //- mind the quotes and the plus sign
-    +buttonLeft("Sample")
+    +buttonLeft("Home")
     +buttonRight("Design")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
