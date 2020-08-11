@@ -177,6 +177,19 @@ $("#menuSwitch").on("click", function () {
   }
 });
 
+$("#close-label p, #menuSwitch").hover(
+  // handler in
+  function () {
+    $("#menuSwitch").addClass("hover");
+    $("#close-label p").addClass("hover");
+  },
+  // handler out
+  function () {
+    $("#menuSwitch").removeClass("hover");
+    $("#close-label p").removeClass("hover");
+  }
+);
+
 // show/hide footer on mobile
 $(".footer-heading").on("click", function () {
   if (getWidth() <= xs) {

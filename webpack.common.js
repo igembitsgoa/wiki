@@ -22,6 +22,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     content: "./src/js/content.js",
+    team: "./src/js/team.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -33,21 +34,21 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: "index.html",
       template: "./src/index.pug",
-      excludeChunks: ["content"],
+      excludeChunks: ["content", "team"],
     }),
     ...pages.map(
       (page) =>
         new HTMLWebpackPlugin({
           template: "./src/pages/" + page,
           filename: page.slice(0, -4) + "/index.html",
-          excludeChunks: ["index"],
+          excludeChunks: ["index", "team"],
         })
     ),
-    // new HTMLWebpackPlugin({
-    //     filename: 'Description/index.html',
-    //     template: "./src/pages/Description.pug",
-    //     excludeChunks: ['index']
-    // }),
+    new HTMLWebpackPlugin({
+      filename: "Team/index.html",
+      template: "./src/pages/Team.pug",
+      excludeChunks: ["index", "content"],
+    }),
   ],
   module: {
     rules: [
