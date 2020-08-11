@@ -6,54 +6,60 @@ block headVars
 
 block article
     :markdown-it(html)
+        # Fructose Regulated Anti-Invertase Construct 
 
-        # Parts List
+        The biosensor is the crux of our genetic circuit and is composed of Frur, pFrub and the Anti-invertase gene. 
+        Frur is a transcription factor with an affinity for D-fructose. The Frur gene coding for the FruR protein prevents 
+        transcription of the regulated promoters. pFruB is the promoter region following FruR and is repressed by the FruR 
+        transcription factor,  in the absence of D-Fructose. 
 
-    :markdown-it(html)
-        <mark>here be dragons</mark>
-
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | Biobrick ID |     | header row   |
-        | -----------  | ------------- | ------------ |
-        | 1            | 2             | 3            |
-        | 4            | 5             | 6            |
-        |Content       |   **Cell**    |         Cell |                                               
-        |New section   |     More      |[Data](https://google.com) |
-        |And more      | With an escaped '\|'       ||
-        
-        [Table 1: Caption goes here.]
-
-
-        |              |          Grouping           ||
-        |First Header  | Second Header | Third Header |
-        | ------------ | :-----------: | -----------: |
-        |Content       |          *Long Cell*        ||
-        |Content       |   **Cell**    |         Cell |                                               
-        |New section   |     More      |[Data](https://google.com) |
-        |And more      | With an escaped '\|'       ||
-        
-        [Table 1: Caption goes here.]
+    +image(1, "Design--AIwoFruc.png", "Fructose regulated Anti-Invertase Construct in the absence of Fructose-1-phosphate")
 
     :markdown-it(html)
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of oil during processing. The irreversible binding between the AACs and 
-        <dfn>chlorophyll ~ green pigment</dfn> prevents reuse of the AACs, leading to increased costs for the
-        manufacturer. This also increases the amount of waste produced by the system. The waste is mixed into
-        animal feed and released into the ecosystem, where it has the potential to alter soil pH and nutrient 
-        [here is a link](https://google.com) availability for future crops. Our team sought to find
-        an alternative method of oil-processing that addresses all three issues presented by AACs.
+        This prevents any further transcription, and no Anti-invertase protein is released. If D-Fructose is present 
+        in the cell, the FruR transcription factor will bind preferentially to it and thus be inactivated. This means 
+        that the repression of the related promoter pFruB will be released, enabling the transcription of the anti-invertase 
+        protein. Which can then act on invertase and stop sucrose loss. 
+    +image(2, "Description--calgary.jpg", "hello")
 
-        The current industry ***practices*** for chlorophyll removal from green seed canola oil involve the use 
-        of acid-activated clays (AACs). However, AACs are associated with a variety of problems, including 
-        product loss, lack of reusability, and environmental concerns.
+    :markdown-it(html)
+        # Killswitch
 
-        The molecular structure of AACs causes them to bind to chlorophyll and retain large volumes of oil, 
-        resulting in a 20% loss of [hello again](#citation2) oil during processing. The irreversible binding between the AACs and 
-        chlorophyll prevents reuse of the AACs, leading to increased costs for the manufacturer. This also 
-        increases the amount of waste produced by the system. The waste is mixed into animal feed and 
-        released into the ecosystem, where it has the potential to alter soil pH and nutrient availability 
-        for future crops. Our team sought to find an alternative method of oil-processing that addresses all 
-        three issues presented by AACs.
+        It is very important for us to have a robust biosafety model for our project because it is associated with a widely 
+        consumed edible product, sugar. The most important parts of the killswitch construct are the FNR promoter, the toxin 
+        ccdB responsible for binding and impairing the functioning of bacterial Gyrase and it’s antitoxin ccda. The ccda is under 
+        the FNR promoter whereas the ccdb is under a commonly used T7 constitutive promoter. Both promoters are supplemented by 
+        conserved and strong Ribosomal Binding Sites (RBS). The FNR promoter is only active in an anaerobic environment and inactivates 
+        in an aerobic environment. It forms the crux of the construct because it controls the antitoxin expression. 
+
+        The killswitch function can also be best explained with the help of two different cases. One where the bacterial cell 
+        is in an aerobic environment and one in an anaerobic environment.
+
+        ## Anaerobic 
+
+        This Diagram portrays the behaviour of the killswitch genetic circuit inside the sugarcane stem which is an anaerobic environment.
+    +image(3, "Description--calgary.jpg", "hello")
+
+    :markdown-it(html)
+        The ccdb toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to the nature of 
+        the surrounding, the FNR promoter will be active and hence ccda antitoxin will also be produced in the cell. Since both ccda 
+        and ccdb is present in the cell, they will make a toxin-antitoxin complex and be degraded. This way the bacteria is able to 
+        survive inside the sugarcane stem. 
+
+        ## Aerobic
+
+        This diagram portrays the behaviour of the killswitch genetic circuit outside the sugarcane stem which is an aerobic environment.
+    +image(4, "Design--KSAero.png", "Killswitch Genetic Circut outside sugarcane stem")
+
+    :markdown-it(html)
+        In this case, too, ccdb is expressed constitutively with the help of the T7 promoter. But due to the presence of oxygen, the FNR 
+        promoter is switched off. This leads to an increase in the levels of ccdb in the cell. Which in turn leads to a complete halt in 
+        cell division and death. This ensures that the bacteria will not be able to survive outside the sugarcane environment.
+
+    +image(5, "Design--AI.gif", "Anti-Invertase Modelled Protein Structure")
+
+
+
 
 append buttons
     //- mind the quotes and the plus sign
