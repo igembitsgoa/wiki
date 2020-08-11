@@ -198,6 +198,11 @@ nav.desktop-menu {
       z-index: 200;
     }
   }
+  #menuSwitch.hover {
+    &:after, &:before {
+      background-color: $pink;
+    }
+  }
 }
 
 /**
@@ -232,7 +237,7 @@ $darkblue: darken($blue, 30%);
   // }
 
   .nav-header {
-    height: 7rem;
+    height: 7vh;
   }
 
   .teamLogo {
@@ -242,8 +247,9 @@ $darkblue: darken($blue, 30%);
 
   #close-label {
     padding: 1.5rem;
-    padding-right: 5rem;
+
     p {
+      padding-right: 3.5rem;
       color: white;
       font-family: "Lato", sans-serif;
       font-size: 1.3rem;
@@ -254,6 +260,12 @@ $darkblue: darken($blue, 30%);
         color: $pink;
         cursor: pointer;
       }
+    }
+
+    p.hover {
+      color: $pink;
+      cursor: pointer;
+
     }
   }
 
@@ -276,7 +288,7 @@ $darkblue: darken($blue, 30%);
   }
 
   .nav-footer {
-    height: 7rem;
+    height: 7vh;
   }
 
   #nav-headings {
