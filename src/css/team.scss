@@ -33,6 +33,7 @@ header {
   }
 
   .row {
+    margin: 4rem 0;
     padding: 0 6rem;
   }
 
@@ -223,5 +224,85 @@ main {
   img {
     max-width: 100%;
     display: block; /* remove extra space below image */
+  }
+}
+
+@include respond-below(xxl) {
+  header {
+
+    h1 {
+      font-size: 4.5rem;
+    }
+    .row {
+      padding: 0 4rem;
+    }
+  }
+}
+
+@include respond-below(xl) {
+  header {
+    padding-top: 8rem;
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include respond-below(lg) {
+  header {
+    h1 {
+      margin-bottom: 4rem;
+    }
+    .row {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@include respond-below(md) {
+  header {
+    padding-top: 7.5rem;
+    h1 {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+@include respond-below(sm) {
+  header {
+
+    padding-top: 6.5rem;
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 3rem;
+    }
+    .row {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@include respond-below(xs) {
+  header {
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+    .row {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@include respond-below(xxs) {
+  header {
+
+    h1 {
+      font-size: 2.5rem;
+    }
+    .row {
+      padding: 0 1.5rem;
+    }
   }
 }
