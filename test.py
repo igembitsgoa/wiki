@@ -21,6 +21,10 @@ import pathlib
 
 for root, directories, files in os.walk('src/pages'):
     for filename in files:
+
+        if filename in ['Team.pug']:
+            continue
+
         filename = root + '/' + filename
 
         with open(filename, 'r', encoding="utf8", errors="ignore") as file:
