@@ -8,16 +8,44 @@ block article
 
     :markdown-it(html)
 
-        # Sugarcane Processing
+        # Introduction
+        <br>
+
+        ## Innoculant
+        Our innoculant contains the following ingredients:
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+
+        | Ingredients  || Composition (% w/w or v/w) |
+        | Filler | Talc | Formulation | 
+        | :-----------: | :------------: | :------------: |
+        | Filler | <dfn>Culture Broth ~ LB Broth</dfn> | 95.0 |
+        | Dispersant | <dfn>Triton X 100 ~ A detergent</dfn> | 3.0 |
+        | Thickener | Carboxymethyl Cellulose (CMC) | 0.2 |
+        | Suspending Agent | Bentonite Powder | 1.4 |
+        | Preservative | <dfn>Sorbic Acid ~ A preservative</dfn> | 0.2 |
+        | Antifungal Agent | <dfn>Potassium Sorbate ~ A preservative</dfn> | 0.2 |
+
+        [Table 1: Innoculant Formulation]
+
+        In the series of experiments described below, our aim is to show the degradation of 
+        these unwanted ingredients and also characterize them to show that they are considerably degraded.
+        When we looked at the standard sugarcane processing, we realized that most of the ingredients 
+        i.e. Culture broth 95% (w/v), Bentonite Powder 1.4% (w/v), Sorbic Acid 0.2% (w/v) and 
+        Potassium Sorbate 0.2% (w/v), together comprising of around 97% (w/v) of
+        our innoculant is degraded or removed in the various sugarcane processing steps.
+        <br>
+
+        ## Sugarcane Processing
 
     - var imgpath = "" + require("../assets/img/Experiments--SugarcaneProcessing.png")["default"]
     +image(1, imgpath, "Sugarcane Processing", 100)
 
-
+    
     :markdown-it(html)
         Most of the degradation of LB, Sorbic Acid, Potassium Sorbate is expected to be done by the second clarifier stage. 
         We will be trying to replicate this in the following experiments and characterizing to show that they are considerably degraded. 
-        And, Bentonite is assumed to be removed in the first clarifier stage as filter cake along with other residues.
+        And, Bentonite is assumed to be removed in the first clarifier stage as filter cake along with other residues. [Rosano et al., 2019](#citation1)
 
         <br>
 
@@ -50,20 +78,20 @@ block article
         1. Repeat for every concentration mentioned in the table below.
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | Sample No | Weight of LB (in gm) | Time lapsed post boiling point (in minutes) | Volume of water (in mL) | Smell (Present, Faint, Absent) | Color (CFC)
-        | :-----------: | :------------: | :------------: | :------------: | :------------: | :------------: |
-        | 1 | 5 | 0 | 100 |  |  |
-        |  |  | 15 | 100 |  |  |
-        |  |  | 30 | 100 |  |  |
-        |  |  | 45 | 100 |  |  |
-        |  |  | 60 | 100 |  |  |
-        | 2 | 10 | 0 | 100 |  |  |
-        |  |  | 15 | 100 |  |  |
-        |  |  | 30 | 100 |  |  |
-        |  |  | 45 | 100 |  |  |
-        |  |  | 60 | 100 |  |  |
+        | Sample No | LB (% w/v) | Time lapsed post boiling point (in minutes) | Volume of water (in mL) | Color (CFC)
+        | :-----------: | :------------: | :------------: | :------------: | :------------: |
+        | 1 | 5.0 | 0 | 100 |  |  
+        |  |  | 15 | 100 |  |  
+        |  |  | 30 | 100 |  |  
+        |  |  | 45 | 100 |  |  
+        |  |  | 60 | 100 |  |  
+        | 2 | 10.0 | 0 | 100 |  |  
+        |  |  | 15 | 100 |  |  
+        |  |  | 30 | 100 |  | 
+        |  |  | 45 | 100 |  |  
+        |  |  | 60 | 100 |  |  
 
-        [Table 3: Caption goes here.]
+        [Table 2: LB Degradation Experimental Design]
         <br>
         
     :markdown-it(html)
@@ -80,7 +108,7 @@ block article
 
         **Apparatus**:
         1. Glass bottle with screw cap
-        1. Degradation chamber
+        1. <dfn>Degradation chamber ~ An enclosed container with glass bottle holders and a light source</dfn>
 
         **Reagents**:
         1. 1L of Degassed Distilled water
@@ -98,7 +126,7 @@ block article
         1. Measure the concentration of Sorbic acid at regular intervals using the Sorbic Acid characterization protocol.
 
     - var imgpath = "" + require("../assets/img/Experiments--DegradationChamber.png")["default"]
-    +image(1, imgpath, "Degradation Chamber", 40)
+    +image(2, imgpath, "Degradation Chamber (An enclosed container with glass bottle holders and a light source as shown)", 40)
 
     :markdown-it(html)
         <br>
@@ -143,7 +171,7 @@ block article
         | 3 | 4 | 96 | 0 | 0 | 100 |
         | 4 | 6 | 94 | 0 | 0 | 100 |
  
-        [Table 3: Caption goes here.]
+        [Table 3: Sorbic Acid & Potassium Sorbate Degradation]
         <br>
 
     :markdown-it(html)
@@ -171,7 +199,7 @@ block article
         1. Record the FTIR spectra 
  
     - var imgpath = "" + require("../assets/img/Experiments--CMCInfraredSpectra.png")["default"]
-    +image(1, imgpath, "Expected Infrared Spectra", 40)
+    +image(3, imgpath, "Expected Infrared Spectra of CMC", 60)
 
     :markdown-it(html)
 
@@ -216,7 +244,7 @@ block article
 
         # Stability Experiments
 
-        ## 6. Evaluation of LB
+        ## 6. Evaluation of LB broth
         <br>
         
         **Aim**: 
@@ -270,21 +298,8 @@ block article
         |  |  | 4 | 10 |  |
         |  |  | 5 | 10 |  |
  
-        [Table 3: Caption goes here.]
+        [Table 4: Evaluation of LB broth]
         <br>
-
-    :markdown-it(html)
-
-        # Definitions
-
-        <dfn>Term ~ Definition</dfn>
-
-        This can come <dfn>anywhere in ~ the text</dfn>.
-
-        # Citations
-
-        In text citation for a research article with a DOI. [Rosano et al., 2019](#citation1)
-
 
 append buttons
     //- mind the quotes and the plus sign
@@ -293,4 +308,4 @@ append buttons
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 prepend citations
-    - var citations = [{"authors": "Allen, M. J., & Sheridan, S. C. (2015). ", "doi": "https://doi.org/10.1007/s00484-015-1117-4", "journal": "International Journal of Biometeorology", "numbers": "62(1), 57-67. ", "title": "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.", "type": "article"}]
+    - var citations = [{"authors": "Ildikó Bácskay", "doi": "https://doi.org/10.1016/j.ejps.2019.105162", "journal": "European Journal of Pharmaceutical Sciences", "numbers": "Volume 143", "title": "Comparative biocompatibility and antimicrobial studies of sorbic acid derivates", "type": "article"}]
