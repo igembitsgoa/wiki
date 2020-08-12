@@ -17,9 +17,18 @@ nav {
   }
 }
 
-nav.desktop-menu {
+nav.menu-open {
   .navbar-brand {
     color: white;
+  }
+  #menuSwitch {
+    .menu-icon {
+
+      &:before,
+      &:after {
+        background-color: white;
+      }
+    }
   }
 }
 
