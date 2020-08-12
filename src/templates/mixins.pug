@@ -9,7 +9,7 @@ mixin buttonLeft(buttonTitle)
         - var length = "long"
     else
         - var length = "super-long"
-    if buttonTitle = "Home"
+    if buttonTitle == "Home"
         - var href = urlPrefix
     else
         - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
