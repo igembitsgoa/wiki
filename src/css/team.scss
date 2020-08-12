@@ -1,23 +1,39 @@
 @import "_main.scss";
 
-nav.nav-transparent {
+nav {
   .navbar-brand {
     color: black;
   }
-  #menuSwitch {
-    background-color: black;
 
-    &:before,
-    &:after {
+  #menuSwitch {
+    .menu-icon {
       background-color: black;
+
+      &:before,
+      &:after {
+        background-color: black;
+      }
     }
   }
 }
 
-nav.desktop-menu {
+nav.menu-open {
   .navbar-brand {
     color: white;
   }
+  #menuSwitch {
+    .menu-icon {
+
+      &:before,
+      &:after {
+        background-color: white;
+      }
+    }
+  }
+}
+
+#themeSwitchWrapper {
+  display: none !important;
 }
 
 header {
@@ -167,7 +183,6 @@ main {
         width: auto;
         padding: 0.5rem 0;
 
-
         a {
           color: #000;
           display: block;
@@ -241,7 +256,6 @@ main {
 
 @include respond-below(xxl) {
   header {
-
     h1 {
       font-size: 4.5rem;
     }
@@ -282,7 +296,6 @@ main {
 
 @include respond-below(sm) {
   header {
-
     padding-top: 6.5rem;
 
     h1 {
@@ -297,7 +310,6 @@ main {
 
 @include respond-below(xs) {
   header {
-
     h1 {
       margin-bottom: 2rem;
     }
@@ -309,7 +321,6 @@ main {
 
 @include respond-below(xxs) {
   header {
-
     h1 {
       font-size: 2.5rem;
     }
