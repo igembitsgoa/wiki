@@ -1,4 +1,32 @@
 assets:
+  assets/fonts/lato-v16-latin/lato-v16-latin-100.eot:
+    link_URL: https://2020.igem.org/wiki/images/e/ee/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.eot
+    md5: 47e27cbed0532f3c7f1b2332490f979f
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.eot
+  assets/fonts/lato-v16-latin/lato-v16-latin-100.svg:
+    link_URL: https://2020.igem.org/wiki/images/4/48/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.svg
+    md5: fbba7ad644ab81c892f79b81e1267a8d
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.svg
+  assets/fonts/lato-v16-latin/lato-v16-latin-100.ttf:
+    link_URL: https://2020.igem.org/wiki/images/0/05/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.ttf
+    md5: d9cec969ebe31edeb2b203f2db2f5205
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.ttf
+  assets/fonts/lato-v16-latin/lato-v16-latin-100.woff:
+    link_URL: https://2020.igem.org/wiki/images/2/27/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.woff
+    md5: 4dfdd1c035c641accc4f3fedb7b73055
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-100.woff
+  assets/fonts/lato-v16-latin/lato-v16-latin-300.eot:
+    link_URL: https://2020.igem.org/wiki/images/9/9a/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-300.eot
+    md5: 1b8f8afa9b4ba60fbcf9936eae918ec6
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-300.eot
+  assets/fonts/lato-v16-latin/lato-v16-latin-300.ttf:
+    link_URL: https://2020.igem.org/wiki/images/8/89/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-300.ttf
+    md5: 483a27c988018f92133995b7d1453248
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-300.ttf
+  assets/fonts/lato-v16-latin/lato-v16-latin-300.woff:
+    link_URL: https://2020.igem.org/wiki/images/7/78/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-300.woff
+    md5: 656963c4beb814e754e38478fcaa0439
+    upload_filename: T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-300.woff
   assets/fonts/lato-v16-latin/lato-v16-latin-700.eot:
     link_URL: https://2020.igem.org/wiki/images/8/8c/T--BITSPilani-Goa_India--fonts--lato-v16-latin--lato-v16-latin-700.eot
     md5: f9203469f750b4284c62aa49f9496cb0
@@ -271,10 +299,18 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/4/48/T--BITSPilani-Goa_India--fonts--montserrat-v14-latin--montserrat-v14-latin-regular.woff
     md5: 8102c4838f9e3d08dad644290a9cb701
     upload_filename: T--BITSPilani-Goa_India--fonts--montserrat-v14-latin--montserrat-v14-latin-regular.woff
+  assets/icons/contents-arrow.svg:
+    link_URL: https://2020.igem.org/wiki/images/7/75/T--BITSPilani-Goa_India--icons--contents-arrow.svg
+    md5: d622aeda50de11f83cb8e6dc79cff750
+    upload_filename: T--BITSPilani-Goa_India--icons--contents-arrow.svg
   assets/icons/envelope-open-text-solid.svg:
     link_URL: https://2020.igem.org/wiki/images/4/4a/T--BITSPilani-Goa_India--icons--envelope-open-text-solid.svg
     md5: bc67d68eea0e8e8fcadc4388bf66f324
     upload_filename: T--BITSPilani-Goa_India--icons--envelope-open-text-solid.svg
+  assets/icons/facebook.svg:
+    link_URL: https://2020.igem.org/wiki/images/9/91/T--BITSPilani-Goa_India--icons--facebook.svg
+    md5: c14da210ece1241c23521e65ebb6dad9
+    upload_filename: T--BITSPilani-Goa_India--icons--facebook.svg
   assets/icons/instagram-brands.svg:
     link_URL: https://2020.igem.org/wiki/images/c/c7/T--BITSPilani-Goa_India--icons--instagram-brands.svg
     md5: e75317fafc5e835195adf92be513d35b
@@ -283,6 +319,18 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/4/43/T--BITSPilani-Goa_India--icons--link-solid.svg
     md5: 6af56728888d9074aaf4d8261a3eceda
     upload_filename: T--BITSPilani-Goa_India--icons--link-solid.svg
+  assets/icons/linkedin.svg:
+    link_URL: https://2020.igem.org/wiki/images/9/90/T--BITSPilani-Goa_India--icons--linkedin.svg
+    md5: afc106ad260cdbb93ce12d296a167cc4
+    upload_filename: T--BITSPilani-Goa_India--icons--linkedin.svg
+  assets/icons/moon.svg:
+    link_URL: https://2020.igem.org/wiki/images/9/99/T--BITSPilani-Goa_India--icons--moon.svg
+    md5: 5ad5182317a1d81e1a72aa0c3ef614b3
+    upload_filename: T--BITSPilani-Goa_India--icons--moon.svg
+  assets/icons/sun.svg:
+    link_URL: https://2020.igem.org/wiki/images/7/7a/T--BITSPilani-Goa_India--icons--sun.svg
+    md5: 6d385f102d5d96a806f2f1dcee79d30c
+    upload_filename: T--BITSPilani-Goa_India--icons--sun.svg
   assets/icons/twitter-brands.svg:
     link_URL: https://2020.igem.org/wiki/images/0/03/T--BITSPilani-Goa_India--icons--twitter-brands.svg
     md5: 6620c8ae2cac90067a9aa78339bb808d
@@ -303,6 +351,34 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/3/3c/T--BITSPilani-Goa_India--img--Description--josh-withers.jpg
     md5: 9912bbabc38bd4f8b7aae1752b432070
     upload_filename: T--BITSPilani-Goa_India--img--Description--josh-withers.jpg
+  assets/img/Description--sugarandothers.png:
+    link_URL: https://2020.igem.org/wiki/images/6/66/T--BITSPilani-Goa_India--img--Description--sugarandothers.png
+    md5: 660cc4d45a6997559f262bd7119ffa8b
+    upload_filename: T--BITSPilani-Goa_India--img--Description--sugarandothers.png
+  assets/img/Desctiption--devadas.jpg:
+    link_URL: https://2020.igem.org/wiki/images/d/d6/T--BITSPilani-Goa_India--img--Desctiption--devadas.jpg
+    md5: 0eef5558e8449aa2c28dac2ebee79abf
+    upload_filename: T--BITSPilani-Goa_India--img--Desctiption--devadas.jpg
+  assets/img/Design--AIwoFruc.png:
+    link_URL: https://2020.igem.org/wiki/images/6/6d/T--BITSPilani-Goa_India--img--Design--AIwoFruc.png
+    md5: 2d5abf8434bbda735f4b6bbd3ff25064
+    upload_filename: T--BITSPilani-Goa_India--img--Design--AIwoFruc.png
+  assets/img/Design--KSAero.png:
+    link_URL: https://2020.igem.org/wiki/images/0/07/T--BITSPilani-Goa_India--img--Design--KSAero.png
+    md5: 64114732c8616fa7b1ffbf764cc424ed
+    upload_filename: T--BITSPilani-Goa_India--img--Design--KSAero.png
+  assets/img/Growth_Model--GrowthPrediction.png:
+    link_URL: https://2020.igem.org/wiki/images/7/7c/T--BITSPilani-Goa_India--img--Growth_Model--GrowthPrediction.png
+    md5: 418c194917520c0328431a3c602ed38f
+    upload_filename: T--BITSPilani-Goa_India--img--Growth_Model--GrowthPrediction.png
+  assets/img/Growth_Model--ODScatterPlot.png:
+    link_URL: https://2020.igem.org/wiki/images/4/45/T--BITSPilani-Goa_India--img--Growth_Model--ODScatterPlot.png
+    md5: 80edcab9c4bedb516ef3bf313f4e3ed4
+    upload_filename: T--BITSPilani-Goa_India--img--Growth_Model--ODScatterPlot.png
+  assets/img/Kill_Switch--type2ks.jpg:
+    link_URL: https://2020.igem.org/wiki/images/d/d2/T--BITSPilani-Goa_India--img--Kill_Switch--type2ks.jpg
+    md5: 7b63d7843cd37b596bb541b2148fba11
+    upload_filename: T--BITSPilani-Goa_India--img--Kill_Switch--type2ks.jpg
   assets/img/Model--GrowthPrediction.png:
     link_URL: https://2020.igem.org/wiki/images/d/d8/T--BITSPilani-Goa_India--img--Model--GrowthPrediction.png
     md5: 418c194917520c0328431a3c602ed38f
@@ -315,6 +391,14 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/2/27/T--BITSPilani-Goa_India--img--Sample--calgary.jpg
     md5: ced876de70f9b1d2de818881a2f5ae77
     upload_filename: T--BITSPilani-Goa_India--img--Sample--calgary.jpg
+  assets/img/Team--sample-icon.png:
+    link_URL: https://2020.igem.org/wiki/images/4/46/T--BITSPilani-Goa_India--img--Team--sample-icon.png
+    md5: 008184e0ddfa5582487a27a4a15dec6c
+    upload_filename: T--BITSPilani-Goa_India--img--Team--sample-icon.png
+  assets/img/Team--sample.png:
+    link_URL: https://2020.igem.org/wiki/images/d/da/T--BITSPilani-Goa_India--img--Team--sample.png
+    md5: 72bc304f50eb41e168652fc0b260303e
+    upload_filename: T--BITSPilani-Goa_India--img--Team--sample.png
   assets/img/logo.jpg:
     link_URL: https://2020.igem.org/wiki/images/1/11/T--BITSPilani-Goa_India--img--logo.jpg
     md5: d47d3629a83090c33e94c961e03a03d2
@@ -330,6 +414,9 @@ css:
   css/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/indexCSS?action=raw&ctype=text/css
     md5: 44d0ddbf9e4c2f4f8c53e299b55f03b0
+  css/team.css:
+    link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/teamCSS?action=raw&ctype=text/css
+    md5: ''
 html:
   Description/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Description
@@ -337,12 +424,30 @@ html:
   Design/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Design
     md5: 484fe0597c21deaa2afc49fcb721cda5
+  Judging/Bronze/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging/Bronze
+    md5: ''
+  Judging/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging
+    md5: ''
+  Model/Growth_Model/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Growth_Model
+    md5: ''
+  Model/Kill_Switch/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Kill_Switch
+    md5: ''
+  Model/Viscosity_Model/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Viscosity_Model
+    md5: ''
   Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model
     md5: e61471fbcae8113a09a5142391427472
   Sample/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Sample
     md5: 308b4a2c337dc13141a41cbb4c496805
+  Team/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Team
+    md5: ''
   index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
     md5: 3656044fc74edd6c2687eaf03c8ea5b7
@@ -353,3 +458,6 @@ js:
   index.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/index-bundleJS?action=raw&ctype=text/javascript
     md5: 639e9a7f92d89cb5f7a277007ad99d80
+  team.bundle.js:
+    link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/team-bundleJS?action=raw&ctype=text/javascript
+    md5: ''
