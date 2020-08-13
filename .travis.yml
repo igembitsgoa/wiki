@@ -42,7 +42,7 @@ jobs:
     - stage: Build and Deploy to iGEM
       if: commit_message =~ /iGEM-deploy/
       script:
-        - npm run build
+        - npm run build 
         # Push to iGEM
         - pip install igem-wikisync
         - python wikisync.py
