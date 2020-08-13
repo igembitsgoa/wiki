@@ -26,7 +26,7 @@ jobs:
     - stage: Build and Push to Github Pages
       script:
         # Custom tests and preprocessing
-        - sh github.io_fix.sh # This changes URLs for github.io
+        - sh utils/github.io_fix.sh # This changes URLs for github.io
         - npm run build
         # Add new "origin" with access token in the git URL for authentication
         - git add src/citations/cache.yml
