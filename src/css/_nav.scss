@@ -508,13 +508,13 @@ $darkblue: darken($blue, 30%);
   }
 
   #nav-items {
-    padding: 4rem 0 0 4rem;
+    padding: 4rem 4rem 0 0;
     transition: visibility 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 0;
 
     li {
       padding: 0.25rem 0;
-      text-align: left;
+      text-align: right;
     }
 
     a {
@@ -537,40 +537,40 @@ $darkblue: darken($blue, 30%);
     $distance: 8px;
     $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: $green;
-    }
-    &:before {
-      opacity: 0;
-      transform: translateY(-$distance);
-      transition: transform 0s $easeOutBack, opacity 0s;
-    }
-    &:after {
-      opacity: 0;
-      transform: translateY($distance/2);
-      transition: transform $duration $easeOutBack, opacity $duration;
-    }
+    // &:before,
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 2px;
+    //   left: 0;
+    //   right: 0;
+    //   height: 2px;
+    //   background-color: $green;
+    // }
+    // &:before {
+    //   opacity: 0;
+    //   transform: translateY(-$distance);
+    //   transition: transform 0s $easeOutBack, opacity 0s;
+    // }
+    // &:after {
+    //   opacity: 0;
+    //   transform: translateY($distance/2);
+    //   transition: transform $duration $easeOutBack, opacity $duration;
+    // }
     &:hover,
     &:focus {
       color: $green;
-      &:before,
-      &:after {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      &:before {
-        transition: transform $duration $easeOutBack, opacity $duration;
-      }
-      &:after {
-        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-      }
+    //   &:before,
+    //   &:after {
+    //     opacity: 1;
+    //     transform: translateY(0);
+    //   }
+    //   &:before {
+    //     transition: transform $duration $easeOutBack, opacity $duration;
+    //   }
+    //   &:after {
+    //     transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    //   }
     }
   }
 }

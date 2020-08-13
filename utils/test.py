@@ -17,7 +17,6 @@
 import os
 import re
 import sys
-import pathlib
 
 for root, directories, files in os.walk('src/pages'):
     for filename in files:

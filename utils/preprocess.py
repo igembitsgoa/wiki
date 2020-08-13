@@ -44,7 +44,10 @@ for root, _, files in os.walk('src/pages'):
                     print(f"{img_path} doesn't exist")
                     sys.exit(1)
 
-            elif "var backgroundImage" in line and 'require(' not in line and "['default']" not in line:
+            elif "var backgroundImage"     in line and \
+                 "require("            not in line and \
+                 "['default']"         not in line and \
+                 '//-'                 not in line:
                 # split by = and join everything after first =
                 parts = line.split('=')
                 img_name = '='.join(parts[1:])

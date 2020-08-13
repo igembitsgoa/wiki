@@ -4,9 +4,17 @@
   "description": "Wiki for iGEM 2020 BITS Goa",
   "main": "index.js",
   "scripts": {
-    "start": "python3 preprocess.py && python3 nav.py && webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
-    "build": "python3 preprocess.py && webpack --config webpack.production.js",
-    "test": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\""
+    "preprocess": "python3 utils/preprocess.py",
+    "nav": "python3 utils/nav.py",
+    "citations": "python3 utils/citations.py",
+    "puglint": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\"",
+    "custom_tests": "python3 utils/test.py",
+    "test": "npm-run-all puglint custom_tests",
+    "server": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
+    "prestart": "npm-run-all preprocess nav citations test",
+    "start": "npm-run-all prestart server",
+    "build:webpack": "webpack --config webpack.production.js",
+    "build": "npm-run-all prestart build:webpack"
   },
   "repository": {
     "type": "git",
@@ -39,6 +47,7 @@
     "markdown-it-multimd-table": "^4.0.3",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
     "pug": "^2.0.4",
     "pug-html-loader": "^1.1.5",
