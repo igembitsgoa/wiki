@@ -1,18 +1,29 @@
  
-name: Node Continuous Integration
+name: Integration Test
 
 on:
   pull_request:
     branches: [ master ]
 
-
 jobs:
-  test_pull_request:
+  main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
         with:
-          node-version: 12
-      - run: npm ci
-      - run: npm run build
+          persist-credentials: false
+      
+      - name: Install and Test
+        run: |
+          npm install
+          npm run test
+
+      - name: Github Fix
+        run: sh utils/github.io_fix.sh
+
+      - name: Preprocess
+        run: npm run prestart
+
+      - name: Build
+        run: npm run build
