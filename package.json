@@ -10,9 +10,8 @@
     "puglint": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\"",
     "custom_tests": "python3 utils/test.py",
     "test": "npm-run-all puglint custom_tests",
-    "server": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
-    "prestart": "npm-run-all preprocess nav citations test",
-    "start": "npm-run-all prestart server",
+    "prestart": "npm-run-all preprocess nav citations custom_tests",
+    "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
     "build:webpack": "webpack --config webpack.production.js",
     "build": "npm-run-all prestart build:webpack"
   },
