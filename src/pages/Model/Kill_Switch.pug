@@ -3,32 +3,37 @@ extends ../../templates/contents.pug
 block headVars
     - var title = "Kill Switch"
     - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
     :markdown-it(html)
 
-        Advances in synthetic biology raise increasingly important questions about biocontamination and biological containment. 
-        It becomes absolutely essential that genetically-engineered organisms are not deleterious to the ecosystem and that scientists 
-        have adequate control over their production and multiplication. To ensure all possible safety, certain safeguards are developed — 
-        which are then introduced into the genetically modified organism — that compel the organism, in our case the bacteria, to rely on a 
-        “survival” factor to maintain viability in the population. This can be done by the means of introducing an auxotrophy for a particular 
-        compound (this is another safety aspect which we have included in our project. Please visit the section on Auxotroph model for a detailed 
+        Advances in synthetic biology raise increasingly essential questions about biocontamination and biological containment. 
+        It becomes imperative that genetically-engineered organisms are not deleterious to the ecosystem and that scientists 
+        have adequate control over their production and multiplication. Certain safeguards are developed to ensure all possible safety — 
+        which are then introduced into the genetically modified organism — that compels the organism, in our case the bacteria, to rely on a 
+        “survival” factor to maintain viability in the population. This dependence can be achieved by introducing an auxotrophy for a particular 
+        compound (this is another safety aspect which we have included in our project. Visit the section on Auxotroph model for a detailed 
         discussion about the same) or by introducing artificial systems, called Kill Switches, into the genetic material that result in cellular 
         death under certain conditions, such as the activation of a “trigger” caused by environmental changes [Stirling et al., 2017](#citation1).
 
         We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the close proximity of the
         system with both agricultural environments and human consumables, it is indispensable that our bacteria include a lethality mechanism. We propose 
         to use a modified type II ccdA-ccdB toxin-antitoxin system as our kill switch that is activated upon exposure to atmospheric concentrations of oxygen. 
-        This results in a sharp increase in the amount of the toxin protein being synthesised which disturbs the already established equilibrium between 
-        the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes. In the following sections, 
-        we explore the functioning of type II toxin-antitoxin systems, with an emphasis on the ccdA-ccdB mechanism, our rationale behind selecting this 
-        particular system, and a mathematical description of the processes involved. 
+        A change in the oxygen concentration in the environment results in a sharp increase in the amount of the toxin protein being synthesised which disturbs 
+        the already established equilibrium between the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes. 
+        In the following sections, we explore the functioning of type II toxin-antitoxin systems, with an emphasis on the ccdA-ccdB mechanism, our rationale behind selecting this 
+        particular system, and provide a mathematical description of the processes involved. 
 
         # Type II Toxin-Antitoxin Systems
 
         Bacterial toxin-antitoxin systems were characterised in the 1980s as molecular systems encoded in plasmids that ensured the persistence of a plasmid 
         in the host lineage during replication by making the cells “addicted” to the plasmid so that the only daughter cells that survived were the ones that 
-        contained the plasmid. This is also known as postsegragational killing. Most prokaryotic chromosomes contain a number of toxin-antitoxin modules that 
+        contained the plasmid. This phenomenon is also known as postsegragational killing. Most prokaryotic chromosomes contain a number of toxin-antitoxin modules that 
         consist of a pair of genes that encode for two components: a stable toxin protein and its unstable, labile cognate antitoxin. Toxins are always proteins, 
         but the antitoxins can either be RNAs (in type I and III systems) or proteins (in type II systems).
 
@@ -36,19 +41,8 @@ block article
         two-domain proteins that consist of a protein-protein interaction domain and a DNA-binding domain. The antitoxin binds to the toxin and inhibits its activity, and 
         the stable TA complex binds to the operator of the corresponding <dfn>TAS ~ Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses 
         its transcription [Makarova et al., 2009](#citation2) [Tam & Kline, 1989](#citation3).
-    
-    - var imgpath = "../" + require("../../assets/img/Kill_Switch--type2ks.jpg")["default"]
-    +image(1, imgpath, "Transcriptional regulation of type II toxin-antitoxin systems")
-    
-    +imgCitation("Fraikin et al., 2020", "4")
 
     :markdown-it(html)
-
-        The working mechanism of toxin-antitoxin systems is shown in the above figure. The whole operon (antitoxin-toxin) is transcribed by a single autoregulated promoter. A lower 
-        translational efficiency of toxins ensures a molar excess of antitoxin. The whole operon is generally transcribed by a single autoregulated promoter (black arrow). A molar 
-        excess of antitoxin is ensured through its exclusive transcription by other promoters (blue arrow). Excess antitoxin binds operators (white boxes) to repress transcription 
-        of the whole operon while the antitoxin gene is still transcribed. A molar excess of toxin displaces the antitoxin from its operators, leading to derepression of the autoregulated 
-        promoter (black arrow) and transcription of the whole operon [Fraikin et al., 2020](#citation4).
 
         # ccdA-ccdB Toxin-Antitoxin System
 
