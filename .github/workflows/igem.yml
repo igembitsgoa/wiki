@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
         with:
-          persist-credentials: false
+          persist-credentials: false    
       
       - name: Install and Test
         run: |
@@ -26,8 +26,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
       - run: pip install igem-wikisync
       - run: python wikisync.py
         env:
           IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
           IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
+
+      - run: cat upload_map.yml
