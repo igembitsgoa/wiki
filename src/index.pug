@@ -1,196 +1,66 @@
 include templates/mixins
 
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title SugarGain | iGEM BITS Goa
-    body
-        include templates/nav.pug
-        header.d-flex.justify-content-center.align-items-center
-            .container.text-center
-                .heading.d-flex.justify-content-center.align-items-center
-                    h1 Template test
-        section#introduction.white
-            .container
-                .row
-                    .sidebar.col-lg-3
-                        h3
-                            | A cold winter day —
-                            br
-                            | The bacteria inhibit 
-                            br
-                            | Invertase from acting.
-                            
-                    .content.col-lg-9
-                        h2 Tonnes of sugar are lost every year as post-harvest losses. 
-                            span We're here to change that.
-                        p.
-                        :markdown-it(html)
-                            Sugarcane is one of the most widely-grown commercial crops in India: cultivated on almost 
-                            **5 million hectares** of land in 2017. The sugar industry is the second largest in the country: 
-                            contributing to around **6%** of the agricultural GDP; this puts sugarcane among the most economically 
-                            important crops in the country.
-                        p.
-                        :markdown-it(html)
-                            The sucrose present in the stem of the sugarcane exists in a dynamic equilibrium between its synthesis 
-                            and utilisation. Following the harvest of the crop, this equilibrium is disturbed. Invertase – an enzyme 
-                            present in the cells –  breaks down sucrose into its components: fructose and glucose, resulting in a 
-                            reduction in the amount of sucrose in the stem. Ultimately the sugar recovery rate sees a reduction by 
-                            anywhere between **2%** to **10%**.
-                        p.
-                            Our project involves targeting this enzyme. We propose to introduce genetically-modified bacteria, suspended 
-                            in our novel polymer-based inoculant, into the sugarcane matrix post-harvest. The bacteria would exhibit 
-                            anti-invertase activity regulated by the amount of fructose and glucose inside the sugarcane in a continuous 
-                            and controlled manner.
-                        p.
-                            SugarGain: Making the world a sweeter place, quite literally. 
-                        p 
-                            a(href)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title SugarGain | iGEM BITS Goa
+  body
+    include templates/nav.pug
+    header.d-flex.justify-content-center.align-items-center
+      .container
+        .jumbotron
+          h1 Welcome to iGEM 2020!
+          p.lead.
+            Your team has been approved and you are ready to start the iGEM season!
+          hr.my-4
+          p
+            | All the content on this website is based on the 
+            a(href="https://2020.igem.org/Team:Example") example wiki
+            |  and has been used for demonstration only.
+          a.btn.btn-primary.btn-lg(href='Description' role='button') Read more 
 
-                        .d-flex.justify-content-end.my-5
-                            +buttonRight("Description")
-        section#design.yellow
-            .container
-                .row
-                    .content.col-lg-9
-                        h2 Design caption goes here. 
-                            span Optional hype.
-                        h3.
-                            Not sure what goes here but removing this makes it too empty.
-                            Maybe an important highlight from the text itself?
-                        p.
-                            Summarize the genetic circuit and models. From the iGEM docs: "Explanation of the engineering
-                            principles used" and "Experimental plan to test your designs." It also asks for design iterations
-                            but home page is probably not the right place for that. Safety section is at the bottom, but maybe
-                            briefly mention the killswitch as well?
-                        p.
-                            Also talk about the delivery mechanism. Maybe this is the right place to mention why we went 
-                            with a syn bio solution instead of just injecting the inhibitor.
+    article
+      .container
+        h1 Styling your Wiki
+        p You may style this page as you like or you can simply leave the style as it is. You can easily keep the styling and edit the content of these default wiki pages with your project information and completely fulfill the requirement to document your project.
+        p While you may not win Best Wiki with this styling, your team is still eligible for all other awards. This default wiki meets the requirements, it improves navigability and ease of use for visitors, and you should not feel it is necessary to style beyond what has been provided.
+
+        br
+
+        .row
+          .col
+            .card(style='width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/Home--design.jpeg')['default'])
+
+              .card-body
+                h5.card-title Design
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Design') Read more
+
+          .col
+            .card(style='width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/Home--model.jpeg')['default'])
+
+              .card-body
+                h5.card-title Model
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Model') Read More
+
+          .col
+            .card(style='width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/Home--human-practices.jpg')['default'])
+
+              .card-body
+                h5.card-title Human Practices
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Human_Practices') Read more
 
 
-                        .d-flex.justify-content-end.my-5
-                            +buttonRight("Design")
-
-                    .sidebar.col-lg-3
-                        h3
-                            | Reacting to fructose
-                            br
-                            | The bacteria synthesise
-                            br
-                            | Anti-invertase. 
-        section#safety.white
-            .container
-                .row
-                    .sidebar.col-lg-3
-                        h3
-                            | The microbe escapes
-                            br
-                            | its confined space. But Alas!
-                            br
-                            | The kill switch goes off. 
-                    .content.col-lg-9
-                        h2 Safety caption goes here. 
-                            span Optional hype.
-                        h3.
-                            Maybe an important highlight from the text?
-                            Or some helpful warnings about (not) leaving plastic tip boxes in the oven.
-                        p.
-                            Talk about the killswitch. The whole thing about toxins and anaerobic environment.
-                            From the iGEM docs: choosing a non-pathogenic chassis, 
-                            choosing parts that will not harm humans / animals / plants,
-                            substituting safer materials for dangerous materials in a proof-of-concept experiment,
-                            and including an 
-                            induced lethality or "kill-switch" device.
-                        p.
-                            Unusual safety issues (like the one on the left?) also have to be mentioned but probably
-                            not on the home page.
-
-
-                        .d-flex.justify-content-end.my-5
-                            +buttonRight("Safety")  
-
-        section#human-practices.green
-            .container
-                .row
-
-                    .content.col-lg-9
-                        h2 Human-centered design. 
-                            span Optional hype.
-                        p.
-                            Summarize our human practices approach. Write about how we conducted detailed discussions with stakeholders at every step. Also write about how we changed various aspects of the design based 
-                            on feedback, and how our product solves different issues for different belts across India and the world.
-                        p.
-                            From the iGEM docs: explore issues relating (but not limited) to the 
-                            ethics, safety, security, and sustainability of your project, and to show how this exploration 
-                            feeds back into your project purpose, design, and execution.
-
-
-                        .d-flex.justify-content-end.my-5
-                            +buttonRight("Human Practices")
-
-                    .sidebar.col-lg-3
-                        h3
-                            | Science and humans,
-                            br
-                            | Like shadow to a body:
-                            br
-                            | Inseparable.
-        section#collaborations.white
-            .container
-                .row
-                    .sidebar.col-lg-3
-                        h3
-                            | Helping us with issues,
-                            br
-                            | And with making new friends too! —
-                            br
-                            | Collaborations.
-                    .content.col-lg-9
-                        h2 Collaborating for the win. 
-                            span Optional hype.
-                        h3.
-                            Not sure what goes here but removing this makes it too empty.
-                            Maybe an important highlight from the text itself?
-                        p.
-                            Summarize our collaborations, including various surveys and the language project.
-                            Also summarize some conclusions from surveys we created and the impact of the language project
-                            (and maybe a little bit about future scope).
-                        p.
-                            From the iGEM docs: Sharing and collaboration are core values of iGEM. We encourage you to 
-                            reach out and work with other teams on difficult problems that you can more easily solve together.
-
-
-                        .d-flex.justify-content-end.my-5
-                            +buttonRight("Collaborations")
-        section#science-communication.orange
-            .container
-                .row
-                    .content.col-lg-9
-                        h2 Engaging with the scientists of tomorrow. 
-                            span Optional hype.
-                        h3.
-                            Maybe an important highlight from the text itself?
-                            Scroll up for an inverted Indian flag.
-                        p.
-                            Headline too cringey? Questionable color choice? Apparently orange is the color of 
-                            communication. It's a really hard color to work with, though. Increasing saturation any
-                            more hurts my eyes, reducing it saturation makes orange lose its effect and reducing 
-                            brightness makes it dull. Btw, scroll up for an inverted Indian flag.
-                        p.
-                            Anyway, write about the webinar here. Maybe an intro about why science
-                            communication is necessary, specially keeping the current situation in mind.
-                            Also write about Abhighyan insta posts? Is that sci-comn or public engagement? 
-                            I'll just call the button Communication for now.
-
-
-                        .d-flex.justify-content-end.my-5
-                            +buttonRight("Communication")
-
-                    .sidebar.col-lg-3
-                        h3.
-                            Maybe an important highlight from the text itself?
-                            Scroll up for an inverted Indian flag.
-        footer 
-            include templates/footer_brand.pug
-            include templates/footer_nav.pug
+    include templates/footer.pug

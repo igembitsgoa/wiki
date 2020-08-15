@@ -1,42 +1,31 @@
 @import "_main.scss";
 
+// #themeSwitchWrapper {
+//   display: none !important;
+// }
+
 /******************************
  * Header
  ******************************/
 
+$green: #4abf66;
+$whitey: #f0f0f0;
+
+
 header {
-  background: 
-    /* top, transparent black, faked with gradient */ linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.4)
-    ),
-    /* bottom, image */ url(../assets/img/photo-1513360371669-4adf3dd7dff8.jpeg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
+  margin: 10rem 0 4rem 0;
 
   h1 {
-    color: $whitey;
-    font-family: "Merriweather";
-    font-style: italic;
-    font-weight: 400;
-    font-size: 6rem;
-    height: 250px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 4.5rem;
   }
-  .heading {
-    // background: url("../assets/ vectors/white-frame-brush-strokes/16-1.1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 160px;
-  }
+
+
 }
 
 /******************************
-* Sections
+* Article
 ******************************/
 $pink: #ea178c;
 $green: #0fc488;
@@ -47,414 +36,42 @@ $yellow: #ffdb59;
 $orange: #ffb454;
 $black: #3d3d3d;
 
-@include respond-above(xxl) {
-  section .container {
-    max-width: 1380px;
+article {
+  font-family: "Lato", sans-serif;
+  h1 {
+    font-size: 2.5rem;
+    color: $darkBlue;
+    margin: 1.5rem 0 1rem 0;
   }
-}
 
-@include respond-between(xl, xxl) {
-  section .container {
-    max-width: 1140px;
+  h2 {
+    margin: 1.5rem 0 1rem 0;
   }
-}
 
-@include respond-between(lg, xl) {
-  section .container {
-    max-width: 1000px;
+  h3 {
+    margin: 1.5rem 0 0.7rem 0;
   }
-}
 
-#themeSwitchWrapper {
-  display: none !important;
-}
+  p {
+    font-size: 1.1rem;
+  }
 
-section {
-  padding: 5rem 0 1.5rem 0;
+  li {
+    margin-left: 1rem;
+  }
 
-  /**
-   * Section Button
-   */
+  .col {
+    padding: 1.5rem;
 
-  a:not(.button) {
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    padding: 0 1px;
-    transition: color ease 0.3s;
-
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      background-color: $green;
-      height: 10%;
-    }
-
-    &:before {
-      width: 0%;
-      left: 0;
-      bottom: 0;
-      transition: width ease 0.4s;
-    }
-
-    &:after {
+  }
+  
+  .card-img-top {
+    img {
       width: 100%;
-      left: 0;
-      bottom: 0;
-      transition: all ease 0.6s;
-    }
-
-    &:hover {
-      text-decoration: none;
-      color: $black;
-
-      &::before {
-        width: 100%;
-      }
-
-      &::after {
-        left: 100%;
-        width: 0%;
-        transition: all ease 0.2s;
-      }
     }
   }
 
-  /**
-   * Section subtitle/aside
-   */
-
-  .sidebar h3 {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    border-top: 1px solid !important;
-    padding-top: 10px;
-    margin-top: 10px;
-    word-spacing: 0.2em;
-    line-height: 1.3em;
-  }
-
-  .content {
-    font-family: "Merriweather", serif;
-
-    /**
-   * Section Title
-  **/
-
-    h2 {
-      font-family: "Merriweather", serif;
-      font-weight: 400;
-      font-size: calc(1.625rem + 1vw);
-      margin-bottom: 1.2rem;
-      word-spacing: 0.3rem;
-      line-height: 1.5;
-
-      span {
-        color: $green;
-        font-weight: 400;
-      }
-    }
-
-    h3 {
-      font-style: italic;
-      font-size: 1.2rem;
-      font-weight: 400;
-      font-family: "Merriweather", serif;
-      padding-bottom: 10px;
-      display: none;
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 1.2rem;
-      line-height: 1.75;
-      word-spacing: 0.1rem;
-      color: #3d3d3d;
-    }
-  }
-
-  &:nth-of-type(odd) {
-    .sidebar {
-      padding: 0 50px 0 0;
-      h3 {
-        text-align: left;
-      }
-    }
-
-    .content {
-      padding: 0 0 0 25px;
-    }
-  }
-
-  &:nth-of-type(even) {
-    .sidebar {
-      padding: 0 0 0 50px;
-      h3 {
-        text-align: right;
-      }
-    }
-
-    .content {
-      padding: 0 25px 0 0;
-    }
-  }
-
-  &.white {
-    background-color: white;
-    h3 {
-      border-color: black;
-    }
-    h2 {
-      color: $black;
-      span {
-        color: $green;
-      }
-    }
-    a.button {
-      .circle {
-        background-color: $green !important;
-        .icon {
-          &.arrow {
-            background-color: none !important;
-            &::before {
-              border-color: $white !important;
-            }
-          }
-        }
-      }
-      .button-text {
-        color: black !important;
-        // font-weight: 900 !important;
-      }
-      &:hover {
-        .circle {
-          .icon {
-            &.arrow {
-              background: $white !important;
-            }
-          }
-        }
-        .button-text {
-          color: $white !important;
-        }
-      }
-    }
-  }
-
-  &.yellow {
-    background-color: $yellow;
-    h3 {
-      border-color: black;
-    }
-    h2 {
-      color: $black;
-      span {
-        color: $pink;
-      }
-    }
-  }
-
-  &.green {
-    background-color: $green-background;
-    h3 {
-      border-color: black;
-    }
-    h2 {
-      color: $black;
-      span {
-        color: $white;
-      }
-    }
-    a.button {
-      .circle {
-        background-color: $white !important;
-        .icon {
-          &.arrow {
-            background-color: none !important;
-            &::before {
-              border-color: $pink !important;
-            }
-          }
-        }
-      }
-      .button-text {
-        color: white !important;
-        font-weight: 900 !important;
-      }
-      &:hover {
-        .circle {
-          .icon {
-            &.arrow {
-              background: $pink !important;
-            }
-          }
-        }
-        .button-text {
-          color: $pink !important;
-        }
-      }
-    }
-  }
-
-  &.orange {
-    background-color: $orange;
-    h3 {
-      border-color: black;
-    }
-    h2 {
-      color: black;
-      span {
-        color: $white;
-      }
-    }
-    p {
-      color: black;
-    }
-    a.button {
-      .circle {
-        background-color: $white !important;
-        .icon {
-          &.arrow {
-            background-color: none !important;
-            &::before {
-              border-color: $pink !important;
-            }
-          }
-        }
-      }
-      .button-text {
-        color: black !important;
-        font-weight: 700 !important;
-      }
-      &:hover {
-        .circle {
-          .icon {
-            &.arrow {
-              background: $pink !important;
-            }
-          }
-        }
-        .button-text {
-          color: $pink !important;
-        }
-      }
-    }
-  }
-}
-
-@include respond-below(xxl) {
-  section {
-    .sidebar {
-      h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-      }
-    }
-    .content {
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1.1rem;
-      }
-    }
-  }
-}
-
-@include respond-below(xl) {
-  section {
-    .content {
-      h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
-    }
-  }
-}
-
-@include respond-below(lg) {
-  section {
-    .content {
-      h2 {
-        margin-bottom: 0.8rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-    }
-  }
-}
-
-@include respond-below(md) {
-  section {
-
-    padding-top: 4rem;
-
-    .sidebar {
-      display: none;
-    }
-
-    .content {
-      padding: 0 10px !important;
-      h2 {
-        font-size: 1.9rem;
-        margin-bottom: 0.6rem;
-      }
-
-      h3 {
-        display: block;
-      }
-    }
-  }
-}
-
-@include respond-below(sm) {
-  section {
-    padding-top: 3rem;
-    .content {
-      h2 {
-        font-size: 1.7rem;
-        margin-bottom: 0.6rem;
-      }
-    }
-  }
-}
-
-@include respond-below(xs) {
-  section {
-    padding-top: 2rem;
-    .content {
-      padding: 0 25px !important;
-      h2 {
-        font-size: 1.4rem;
-        margin-bottom: 0.6rem;
-      }
-      p {
-        font-size: 0.9rem;
-      }
-    }
-  }
-}
-
-@include respond-below(xxs) {
-  section {
-    padding-top: 2rem;
-    .content {
-      padding: 0 25px !important;
-      h2 {
-        font-size: 1.4rem;
-        margin-bottom: 0.6rem;
-      }
-      p {
-        font-size: 0.9rem;
-      }
-    }
+  p.card-text {
+    font-size: 1rem;
   }
 }
