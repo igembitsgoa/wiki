@@ -1,109 +1,61 @@
-https://doi.org/10.1007/BF00261153:
-  authors: 'Tam, J. E., & Kline, B. C. (1989). '
-  doi: https://doi.org/10.1007/BF00261153
-  journal: Molecular and General Genetics MGG
-  numbers: '219(1-2), 26-32. '
-  title: The F plasmid ccd autorepressor is a complex of CcdA and CcdB proteins.
-  type: article
-https://doi.org/10.1007/BF02942486:
-  authors: 'Singh, I., & Solomon, S. (2003). '
-  doi: https://doi.org/10.1007/BF02942486
-  journal: Sugar Tech
-  numbers: '5(4), 285-288. '
-  title: 'Post-harvest quality loss of sugarcane genotypes under sub-tropical climate
-    : Deterioration of whole stalk and billets.'
-  type: article
-https://doi.org/10.1007/s00484-015-1117-4:
-  authors: 'Allen, M. J., & Sheridan, S. C. (2015). '
-  doi: https://doi.org/10.1007/s00484-015-1117-4
-  journal: International Journal of Biometeorology
-  numbers: '62(1), 57-67. '
-  title: Mortality risks during extreme temperature events (ETEs) using a distributed
-    lag non-linear model.
-  type: article
-https://doi.org/10.1016/j.ijid.2019.08.003:
-  authors: 'Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti,
-    S., ... & Rizzo, C. (2019). '
-  doi: https://doi.org/10.1016/j.ijid.2019.08.003
-  journal: International Journal of Infectious Diseases
-  numbers: '88, 127-134. '
+https://doi.org/10.1007/BF00261153: {authors: 'Tam, J. E., & Kline, B. C. (1989). ',
+  doi: 'https://doi.org/10.1007/BF00261153', journal: Molecular and General Genetics
+    MGG, numbers: '219(1-2), 26-32. ', title: The F plasmid ccd autorepressor is a
+    complex of CcdA and CcdB proteins., type: article}
+https://doi.org/10.1007/BF02942486: {authors: 'Singh, I., & Solomon, S. (2003). ',
+  doi: 'https://doi.org/10.1007/BF02942486', journal: Sugar Tech, numbers: '5(4),
+    285-288. ', title: 'Post-harvest quality loss of sugarcane genotypes under sub-tropical
+    climate : Deterioration of whole stalk and billets.', type: article}
+https://doi.org/10.1007/s00484-015-1117-4: {authors: 'Allen, M. J., & Sheridan, S.
+    C. (2015). ', doi: 'https://doi.org/10.1007/s00484-015-1117-4', journal: International
+    Journal of Biometeorology, numbers: '62(1), 57-67. ', title: Mortality risks during
+    extreme temperature events (ETEs) using a distributed lag non-linear model., type: article}
+https://doi.org/10.1016/j.ijid.2019.08.003: {authors: 'Rosano, A., Bella, A., Gesualdo,
+    F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ', doi: 'https://doi.org/10.1016/j.ijid.2019.08.003',
+  journal: International Journal of Infectious Diseases, numbers: '88, 127-134. ',
   title: Investigating the impact of influenza on excess mortality in all ages in
-    Italy during recent seasons (2013/14-2016/17 seasons).
-  type: article
-https://doi.org/10.1016/j.jmb.2005.03.049:
-  authors: 'Dao-Thi, M.-H., Van Melderen, L., De Genst, E., Afif, H., Buts, L., Wyns,
-    L., & Loris, R. (2005). '
-  doi: https://doi.org/10.1016/j.jmb.2005.03.049
-  journal: Journal of Molecular Biology
-  numbers: '348(5), 1091-1102. '
-  title: Molecular Basis of Gyrase Poisoning by the Addiction Toxin CcdB.
-  type: article
-https://doi.org/10.1016/j.molcel.2017.10.033:
-  authors: 'Stirling, F., Bitzan, L., O-Keefe, S., Redfield, E., Oliver, J. W. K.,
-    Way, J., & Silver, P. A. (2017). '
-  doi: https://doi.org/10.1016/j.molcel.2017.10.033
-  journal: Molecular Cell
-  numbers: '68(4), 686-697.e3. '
-  title: Rational Design of Evolutionarily Stable Microbial Kill Switches.
-  type: article
-https://doi.org/10.1046/j.1365-2958.2001.02492.x:
-  authors: 'Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). '
-  doi: https://doi.org/10.1046/j.1365-2958.2001.02492.x
-  journal: Molecular Microbiology
-  numbers: '41(1), 73-82. '
-  title: The ratio between CcdA and CcdB modulates the transcriptional repression
-    of the ccd poison-antidote system.
-  type: article
-https://doi.org/10.1111/tpj.13624:
-  authors: 'Evans, M. J., & Morris, R. J. (2017). '
-  doi: https://doi.org/10.1111/tpj.13624
-  journal: The Plant Journal
-  numbers: '91(6), 1029-1037. '
-  title: Chemical agents transported by xylem mass flow propagate variation potentials.
-  type: article
-https://doi.org/10.1128/JB.00763-19:
-  authors: 'Fraikin, N., Goormaghtigh, F., & Van Melderen, L. (2020). '
-  doi: https://doi.org/10.1128/JB.00763-19
-  journal: Journal of Bacteriology
-  numbers: '202(7). '
-  title: 'Type II Toxin-Antitoxin Systems: Evolution and Revolutions.'
-  type: article
-https://doi.org/10.1139/w2012-025:
-  authors: 'Syed, M. A., & L vesque, C. M. (2012). '
-  doi: https://doi.org/10.1139/w2012-025
-  journal: Canadian Journal of Microbiology
-  numbers: '58(5), 553-562. '
-  title: Chromosomal bacterial type II toxin-antitoxin systems.
-  type: article
-https://doi.org/10.1146/annurev.fl.15.010183.000333:
-  authors: 'Rand, R. H. (1983). '
-  doi: https://doi.org/10.1146/annurev.fl.15.010183.000333
-  journal: Annual Review of Fluid Mechanics
-  numbers: '15(1), 29-45. '
-  title: Fluid Mechanics of Green Plants.
-  type: article
-https://doi.org/10.1186/1745-6150-4-19:
-  authors: 'Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). '
-  doi: https://doi.org/10.1186/1745-6150-4-19
-  journal: Biology Direct
-  numbers: '4(1), 19. '
-  title: Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems
-    and related mobile stress response systems in prokaryotes.
-  type: article
-https://doi.org/10.4161/hv.25086:
-  authors: "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C.,\
-    \ Michel, B., Nauwynck, H., Xhonneux, F., Pr\xE9at, V., Vanderplasschen, A. &\
-    \ Szpirer, C. (2013)."
-  doi: https://doi.org/10.4161/hv.25086
-  journal: Human Vaccines & Immunotherapeutics
-  numbers: '9(10), 2203-2210. '
-  title: "Use of Staby\xAE technology for development and production of DNA vaccines\
-    \ free of antibiotic resistance gene."
-  type: article
-https://doi.org/10.6026/97320630009464:
-  authors: 'Ansari, M. I., Yadav, A., & Lal, R. (2013). '
-  doi: https://doi.org/10.6026/97320630009464
-  journal: Bioinformation
-  numbers: '9(9), 464-465. '
-  title: An-Overview on invertase in sugarcane.
-  type: article
+    Italy during recent seasons (2013/14-2016/17 seasons)., type: article}
+https://doi.org/10.1016/j.jmb.2005.03.049: {authors: 'Dao-Thi, M.-H., Van Melderen,
+    L., De Genst, E., Afif, H., Buts, L., Wyns, L., & Loris, R. (2005). ', doi: 'https://doi.org/10.1016/j.jmb.2005.03.049',
+  journal: Journal of Molecular Biology, numbers: '348(5), 1091-1102. ', title: Molecular
+    Basis of Gyrase Poisoning by the Addiction Toxin CcdB., type: article}
+https://doi.org/10.1016/j.molcel.2017.10.033: {authors: 'Stirling, F., Bitzan, L.,
+    O-Keefe, S., Redfield, E., Oliver, J. W. K., Way, J., & Silver, P. A. (2017). ',
+  doi: 'https://doi.org/10.1016/j.molcel.2017.10.033', journal: Molecular Cell, numbers: '68(4),
+    686-697.e3. ', title: Rational Design of Evolutionarily Stable Microbial Kill
+    Switches., type: article}
+https://doi.org/10.1046/j.1365-2958.2001.02492.x: {authors: 'Afif, H., Allali, N.,
+    Couturier, M., & Van Melderen, L. (2001). ', doi: 'https://doi.org/10.1046/j.1365-2958.2001.02492.x',
+  journal: Molecular Microbiology, numbers: '41(1), 73-82. ', title: The ratio between
+    CcdA and CcdB modulates the transcriptional repression of the ccd poison-antidote
+    system., type: article}
+https://doi.org/10.1111/tpj.13624: {authors: 'Evans, M. J., & Morris, R. J. (2017). ',
+  doi: 'https://doi.org/10.1111/tpj.13624', journal: The Plant Journal, numbers: '91(6),
+    1029-1037. ', title: Chemical agents transported by xylem mass flow propagate
+    variation potentials., type: article}
+https://doi.org/10.1128/JB.00763-19: {authors: 'Fraikin, N., Goormaghtigh, F., & Van
+    Melderen, L. (2020). ', doi: 'https://doi.org/10.1128/JB.00763-19', journal: Journal
+    of Bacteriology, numbers: '202(7). ', title: 'Type II Toxin-Antitoxin Systems:
+    Evolution and Revolutions.', type: article}
+https://doi.org/10.1139/w2012-025: {authors: 'Syed, M. A., & L vesque, C. M. (2012). ',
+  doi: 'https://doi.org/10.1139/w2012-025', journal: Canadian Journal of Microbiology,
+  numbers: '58(5), 553-562. ', title: Chromosomal bacterial type II toxin-antitoxin
+    systems., type: article}
+https://doi.org/10.1146/annurev.fl.15.010183.000333: {authors: 'Rand, R. H. (1983). ',
+  doi: 'https://doi.org/10.1146/annurev.fl.15.010183.000333', journal: Annual Review
+    of Fluid Mechanics, numbers: '15(1), 29-45. ', title: Fluid Mechanics of Green
+    Plants., type: article}
+https://doi.org/10.1186/1745-6150-4-19: {authors: 'Makarova, K. S., Wolf, Y. I., &
+    Koonin, E. V. (2009). ', doi: 'https://doi.org/10.1186/1745-6150-4-19', journal: Biology
+    Direct, numbers: '4(1), 19. ', title: Comprehensive comparative-genomic analysis
+    of Type 2 toxin-antitoxin systems and related mobile stress response systems in
+    prokaryotes., type: article}
+https://doi.org/10.4161/hv.25086: {authors: "Reschner, A., Scohy, S., Vandermeulen,\
+    \ G., Daukandt, M., Jacques, C., Michel, B., Nauwynck, H., Xhonneux, F., Pr\xE9\
+    at, V., Vanderplasschen, A. & Szpirer, C. (2013).", doi: 'https://doi.org/10.4161/hv.25086',
+  journal: Human Vaccines & Immunotherapeutics, numbers: '9(10), 2203-2210. ', title: "Use\
+    \ of Staby\xAE technology for development and production of DNA vaccines free\
+    \ of antibiotic resistance gene.", type: article}
+https://doi.org/10.6026/97320630009464: {authors: 'Ansari, M. I., Yadav, A., & Lal,
+    R. (2013). ', doi: 'https://doi.org/10.6026/97320630009464', journal: Bioinformation,
+  numbers: '9(9), 464-465. ', title: An-Overview on invertase in sugarcane., type: article}
