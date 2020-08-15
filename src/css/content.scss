@@ -18,13 +18,11 @@ $light-grey: #f7f7f7;
 $dark-grey: #8e8e8e;
 $selection-color: rgba(255, 233, 0, 0.4);
 
-
 $darkBlue: #2c3e50;
-$darkerBlue: #1E2B37;
-
+$darkerBlue: #1e2b37;
 
 // dark mode
-$dark-body:#313131;
+$dark-body: #313131;
 
 ::selection {
   background-color: $selection-color;
@@ -32,15 +30,22 @@ $dark-body:#313131;
 
 header {
   margin: 10rem 0 0 0;
+  font-family: "Lato", sans-serif;
 
   h1 {
-    font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 4.5rem;
+    margin-bottom: 1.7rem;
+  }
+
+  p.lead {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
   }
 
   hr {
-    background: #E2E2E3;
+    background: #e2e2e3;
   }
 }
 
@@ -50,8 +55,6 @@ header {
 
 main {
   // padding: 1rem 0;
-
-
 }
 
 .sidebar {
@@ -59,7 +62,7 @@ main {
   padding: 2rem 5rem 0 1rem;
 
   h5 {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
@@ -80,18 +83,10 @@ main {
       list-style: none;
       display: flex;
 
-      span {
-        padding-top: 2px;
-
-        div {
-          background: no-repeat url(../assets/icons/contents-arrow.svg);
-          width: 1.4rem;
-          height: 1.4rem;
-          background-size: contain;
-          margin: auto;
-        }
+      svg {
+        margin-top: 4px;
+        height: 15px;
       }
-
       a {
         margin-left: 10px;
         position: relative;
@@ -148,7 +143,11 @@ main {
 }
 
 .content {
-  font-family: "Merriweather", serif;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  word-spacing: 0.1rem;
 
   article {
     padding: calc(1rem + 1.2vw);
@@ -163,7 +162,7 @@ main {
   h1 {
     font-weight: 400;
     font-size: 2.15rem;
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     word-spacing: 0.3rem;
     color: $darkBlue;
 
@@ -230,11 +229,7 @@ main {
   }
 
   p {
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 1.75;
-    word-spacing: 0.1rem;
-    color: #3d3d3d;
+    color: black;
     text-align: justify;
 
     .MathJax_Display {
@@ -252,14 +247,6 @@ main {
 
   ul {
     padding-left: 25px;
-  }
-
-  li {
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 1.75;
-    word-spacing: 0.1rem;
-    color: #3d3d3d;
   }
 
   mark {
