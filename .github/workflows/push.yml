@@ -1,0 +1,77 @@
+ 
+name: Build and Deploy to Github
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  main:
+    if: "!contains(github.event.head_commit.message, 'no-ci')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      
+      - name: Install and Test
+        run: |
+          npm install
+          npm run test
+
+      - name: Github Fix
+        run: sh utils/github.io_fix.sh
+
+      - name: Preprocess
+        run: npm run prestart
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          allow_empty_commit: true
+  
+  iGEM:
+    if: "!contains(github.event.head_commit.message, 'no-ci') && contains(github.event.head_commit.message, 'iGEM-deploy')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      
+      - name: Install and Test
+        run: |
+          npm install
+          npm run test
+
+      - name: Github Fix
+        run: sh utils/github.io_fix.sh
+
+      - name: Preprocess
+        run: npm run prestart
+
+      - name: Build
+        run: npm run build
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Install WikiSync
+        run: pip install igem-wikisync
+
+      - name: Deploy to iGEM
+        run: python wikisync.py
+        env:
+          IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
+          IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
+
+      - name: Print Upload Map
+        run: cat upload_map.yml
