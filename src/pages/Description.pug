@@ -1,27 +1,18 @@
 extends ../templates/contents.pug
 
 block headVars
-    - var title = "Description"
+    - var title = "Project Description"
     - var requireMathJax = false
-    //- You can just write the filename here and it will be resolved to 'require'.
-    //- var backgroundImage = "Description--josh-withers.jpg"
-    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
-    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
     :markdown-it(html)
 
-        # Inspiration
+        # What should this page contain?
 
-        India is still primarily an agrarian economy, with the sector contributing to almost 15.4 percent of the net 
-        Gross Domestic Product [The World Factbook: India, 2018](#citation1) and around 58.6 percent of the population 
-        is engaged in some form of agricultural activity. Agriculture is therefore, not only a means of income for a 
-        majority of the Indian population, but also a form of cultural identity for farmers across the nation. The 
-        fourteenth-century philosopher Ghagh also goes on to declare, rather whimsically, in one of his poems that 
-        “Heaven would be found in a farm close to a village [...]”. With agriculture forming such an important part 
-        of the cultural and emotional fabric of the country, it was only natural for us to choose a problem that greatly 
-        affected the livelihoods of farmers in the country.
+        * A clear and concise description of your project.
+        * A detailed explanation of why your team chose to work on this particular project.
+        * References and sources to document your research.
+        * Use illustrations and other visual resources to explain your project.
 
     - var imgpath = "" + require("../assets/img/Desctiption--devadas.jpg")["default"]
     +image(1, imgpath, "A farm in Kerala, India")

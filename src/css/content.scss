@@ -19,6 +19,10 @@ $dark-grey: #8e8e8e;
 $selection-color: rgba(255, 233, 0, 0.4);
 
 
+$darkBlue: #2c3e50;
+$darkerBlue: #1E2B37;
+
+
 // dark mode
 $dark-body:#313131;
 
@@ -27,82 +31,16 @@ $dark-body:#313131;
 }
 
 header {
-  background: 
-    /* top, transparent black, faked with gradient */ linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.4)
-    );
-    // /* bottom, image */ url(../assets/img/Description--josh-withers.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 70vh;
+  margin: 10rem 0 0 0;
 
-  .container {
-    padding: 0;
+  h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 4.5rem;
   }
 
-  #heading {
-    // background: url("../assets/ vectors/white-frame-brush-strokes/16-1.1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-bottom: calc(3rem + 2vw);
-
-    h1 {
-      color: $whitey;
-      font-family: "Montserrat";
-      font-weight: 700;
-      font-size: calc(3rem + 4.5vw);
-      // font-size: 9rem;
-    }
-  }
-
-  #bg-attribution {
-    height: 1.25rem;
-    width: 1.25rem;
-    display: block;
-    background-image: url(../assets/icons/link-solid.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(225deg)
-      brightness(112%) contrast(100%);
-    margin: 0 15px 30px 0;
-  }
-}
-
-@include respond-above(xxl) {
-  header {
-    .container {
-      max-width: 1330px;
-    }
-  }
-}
-
-@include respond-between(xl, xxl) {
-  header {
-    .container {
-      max-width: 1140px;
-    }
-  }
-}
-
-@include respond-between(lg, xl) {
-  header {
-    .container {
-      max-width: 1000px;
-    }
-  }
-}
-
-@keyframes target-fade {
-  0% {
-    background-color: rgba(255, 255, 0, 0.2);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0);
+  hr {
+    background: #E2E2E3;
   }
 }
 
@@ -111,29 +49,21 @@ header {
 ******************************/
 
 main {
-  padding: 3rem 0 2rem 0;
-}
+  // padding: 1rem 0;
 
-@include respond-above(xxl) {
-  main .container {
-    max-width: 1380px;
-  }
-}
 
-@include respond-between(xl, xxl) {
-  main .container {
-    max-width: 1140px;
-  }
-}
-
-@include respond-between(lg, xl) {
-  main .container {
-    max-width: 1000px;
-  }
 }
 
 .sidebar {
-  padding: 30px 100px 0 5px;
+  margin-top: 1rem;
+  padding: 2rem 5rem 0 1rem;
+
+  h5 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
 
   #contents {
     position: sticky;
@@ -222,21 +152,20 @@ main {
 
   article {
     padding: calc(1rem + 1.2vw);
-    background-color: $light-grey;
   }
 
   h1,
   h2,
   h3 {
-    font-family: "Merriweather";
+    font-family: "Lato", sans-serif;
   }
 
   h1 {
     font-weight: 400;
-    font-size: 2.65rem;
-    margin: 1rem 0 0.5rempx 0;
+    font-size: 2.15rem;
+    margin: 1rem 0 1rem 0;
     word-spacing: 0.3rem;
-    color: $dark-green;
+    color: $darkBlue;
 
     &:first-of-type {
       margin-top: 0;
@@ -250,7 +179,7 @@ main {
 
   h1,
   h2 {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
     .anchor {
       float: left;
       // padding-right: 4px;
@@ -319,6 +248,10 @@ main {
         animation: target-fade 3s 1;
       }
     }
+  }
+
+  ul {
+    padding-left: 25px;
   }
 
   li {
