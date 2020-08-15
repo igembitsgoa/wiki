@@ -29,9 +29,10 @@ $('.content h1, .content h2').each(function () {
     if ($(this).prop('tagName') == 'H1') {
         var item = document.createElement('li');
 
-        var span = document.createElement('span');
-        span.append(document.createElement('div'));
-        item.append(span);
+        var icon = document.createElement('i');
+        icon.classList.add("fas");
+        icon.classList.add("fa-chevron-right");
+        item.append(icon);
         
         var a = document.createElement('a');
         $(a).attr('href', '#' + id);

@@ -1,4 +1,6 @@
 import "bootstrap";
+import '@fortawesome/fontawesome-free/js/all'
+
 var $ = require("jquery");
 window.jQuery = $;
 window.$ = $;
