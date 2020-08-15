@@ -5,3 +5,5 @@ sync.run(
     src_dir='dist',
     build_dir='igem'
 )
+
+print("Action runs local wikisync file")
