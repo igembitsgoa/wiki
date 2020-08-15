@@ -65,9 +65,6 @@ jobs:
           npm install
           npm run test
 
-      - name: Github Fix
-        run: sh utils/github.io_fix.sh
-
       - name: Preprocess
         run: npm run prestart
 
