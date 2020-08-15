@@ -76,11 +76,12 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: Install WikiSync
-        run: pip install igem-wikisync
-
-      - name: Deploy to iGEM
-        run: python wikisync.py
+      - name: iGEM WikiSync
+        uses: igembitsgoa/wikisync-action@v0
+        with:
+          team: 'BITSPilani-Goa_India'
+          source: 'dist'
+          build: 'igem'
         env:
           IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
           IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
