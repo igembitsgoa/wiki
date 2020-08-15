@@ -12,6 +12,11 @@ def main():
     nav_json = []
 
     for section in nav:
+
+        if isinstance(section, str):
+            nav_json.append(section)
+            continue
+
         current = {}
 
         current['section'] = list(section.keys())[0]
