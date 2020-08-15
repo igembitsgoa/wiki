@@ -35,10 +35,26 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           allow_empty_commit: true
+
+      - name: Add Changes to Git
+        run: git add src/citations/cache.yml
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Successfully built and deployed to Github [no-ci]"
+
+      - name: Push Changes to Github
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   
   iGEM:
-    if: "!contains(github.event.head_commit.message, 'no-ci') && contains(github.event.head_commit.message, 'iGEM-deploy')"
+    if: "!contains(github.event.head_commit.message, 'no-ci') && \
+          contains(github.event.head_commit.message, 'iGEM-deploy')"
     runs-on: ubuntu-latest
+    needs: main
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
@@ -75,3 +91,17 @@ jobs:
 
       - name: Print Upload Map
         run: cat upload_map.yml
+
+      - name: Add Changes to Git
+        run: git add src/citations/cache.yml upload_map.yml wikisync.log dist igem
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Successfully built and deployed to iGEM [no-ci]"
+
+      - name: Push Changes to Github
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
