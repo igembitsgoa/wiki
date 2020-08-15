@@ -1,5 +1,4 @@
- 
-name: Build and Deploy to Github
+name: Build and Deploy
 
 on:
   push:
@@ -43,7 +42,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Successfully built and deployed to Github [no-ci]" || echo "No changes to commit"'
+          git commit -m "Successfully built and deployed to Github [no-ci]" || echo "No changes to commit"
 
       - name: Push Changes to Github
         uses: ad-m/github-push-action@master
@@ -99,7 +98,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Successfully built and deployed to iGEM [no-ci]" || echo "No changes to commit"'
+          git commit -m "Successfully built and deployed to iGEM [no-ci]" || echo "No changes to commit"
 
       - name: Push Changes to Github
         uses: ad-m/github-push-action@master
