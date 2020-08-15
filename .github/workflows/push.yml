@@ -34,6 +34,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           allow_empty_commit: true
+          external_repository: igembitsgoa/wiki-template
 
       - name: Add Changes to Git
         run: git add src/citations/cache.yml
