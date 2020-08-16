@@ -13,7 +13,8 @@
     "prestart": "npm-run-all preprocess nav citations custom_tests",
     "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
     "build": "webpack --config webpack.production.js",
-    "build:all": "npm-run-all prestart build"
+    "build:all": "npm-run-all prestart build",
+    "postbuild": "python3 utils/postbuild.py"
   },
   "repository": {
     "type": "git",
