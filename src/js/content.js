@@ -18,11 +18,6 @@ $('.content h1, .content h2').each(function () {
     link.classList.add('anchor');
     $(link).attr('href', "#" + id);
     $(link).attr('aria-hidden', "true");
-    $(link).css('margin-left', -height*0.5);
-    $(link).css('margin-top', height*0.265);
-    $(link).css('border-right-width', height*0.1);
-    $(link).css('height', height*0.5);
-    $(link).css('width', height*0.5);
     $(this).prepend(link);
 
     // add to table of contents if h1

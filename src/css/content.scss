@@ -20,6 +20,7 @@ $selection-color: rgba(255, 233, 0, 0.4);
 
 $darkBlue: #2c3e50;
 $darkerBlue: #1e2b37;
+$linkHover: #18bc9c;
 
 // dark mode
 $dark-body: #313131;
@@ -89,6 +90,7 @@ main {
       }
       a {
         margin-left: 10px;
+        font-size: 1.1rem;
         position: relative;
         text-decoration: none;
         padding-bottom: 6px;
@@ -98,18 +100,18 @@ main {
         // from https://codepen.io/devilishalchemist/pen/ZYLZay
 
         $duration: 0.2s;
-        $distance: 8px;
+        $distance: 6px;
         $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         &:before,
         &:after {
           content: "";
           position: absolute;
-          bottom: 2px;
+          bottom: 6px;
           left: 0;
           right: 0;
           height: 2px;
-          background-color: $green;
+          background-color: $linkHover;
         }
         &:before {
           opacity: 0;
@@ -159,36 +161,24 @@ main {
     font-family: "Lato", sans-serif;
   }
 
-  h1 {
-    font-weight: 400;
-    font-size: 2.15rem;
-    margin: 2rem 0 1rem 0;
-    word-spacing: 0.3rem;
-    color: $darkBlue;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    button {
-      font-weight: 400;
-      margin-right: 25px;
-    }
-  }
+  $h1size: 2.15; // rem
 
   h1,
   h2 {
     scroll-margin-top: 120px;
     .anchor {
       float: left;
-      // padding-right: 4px;
-      line-height: 2;
       opacity: 0.01;
       background-image: url(../assets/icons/link-solid.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       overflow: visible;
+
+      margin-left: $h1size * -0.7rem;
+      border-right-width: 2px;
+      height: $h1size * 0.5rem;
+      width: $h1size * 0.5rem;
 
       filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
         brightness(87%) contrast(84%);
@@ -201,14 +191,39 @@ main {
     }
   }
 
+  h1 {
+    font-weight: 400;
+    font-size: $h1size * 1rem;
+    margin: 2rem 0 1rem 0;
+    word-spacing: 0.3rem;
+    color: $darkBlue;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    button {
+      font-weight: 400;
+      margin-right: 25px;
+    }
+
+    .anchor {
+      margin-top: $h1size * 0.27rem;
+    }
+  }
+
   h2 {
-    font-size: 2rem;
+    font-size: $h1size * 0.8rem;
     word-spacing: 0.3rem;
     margin-top: 1.5rem;
+
+    .anchor {
+      margin-top: $h1size * 0.2rem;
+    }
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: $h1size * 0.7rem;
     word-spacing: 0.3rem;
     margin-top: 1.5rem;
   }
@@ -233,7 +248,7 @@ main {
     text-align: justify;
 
     .MathJax_Display {
-      overflow-x: scroll;
+      overflow-x: auto;
     }
 
     span {
@@ -269,40 +284,38 @@ main {
   }
 
   blockquote {
-    font-size: 1.4em;
-    width: 60%;
+    font-size: 1.15em;
+    width: 75%;
     margin: 50px auto;
     font-style: italic;
     color: #555555;
-    padding: 1.2em 30px 0.7em 75px;
-    border-left: 8px solid #78c0a8;
+    padding: 1.2em 30px 0.7em 60px;
+    border-left: 6px solid $linkHover;
     line-height: 1.6;
     position: relative;
-    // background:#EDEDED;
-  }
 
-  blockquote::before {
-    font-family: Arial;
-    content: "\201C";
-    color: #78c0a8;
-    font-size: 6rem;
-    position: absolute;
-    left: 10px;
-    top: -10px;
-  }
+    &:before {
+      font-family: Arial;
+      content: "\201C";
+      color: $linkHover;
+      font-size: 5rem;
+      position: absolute;
+      left: 10px;
+      top: -20px;
+    }
 
-  blockquote::after {
-    content: "";
-  }
+    &:after {
+      content: "";
+    }
 
-  blockquote strong {
-    display: block;
-    color: #333333;
-    font-style: normal;
-    font-weight: bold;
-    margin-top: 1em;
+    strong {
+      display: block;
+      color: #333333;
+      font-style: normal;
+      font-weight: bold;
+      margin-top: 1em;
+    }
   }
-
   table {
     border: 1px solid #dee2e6;
     width: 100%;
@@ -371,6 +384,7 @@ main {
 
   dfn {
     border-bottom: 1px solid black;
+    font-style: normal;
   }
 }
 
@@ -395,8 +409,8 @@ main {
     &:after {
       content: "";
       position: absolute;
-      background-color: $green;
-      height: 3px;
+      background-color: $linkHover;
+      height: 2px;
     }
 
     &:before {

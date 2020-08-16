@@ -2,6 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Project Description"
+    - var tagline = "Describe how and why you chose your iGEM project."
     - var requireMathJax = false
 
 block article
@@ -27,7 +28,6 @@ block article
         iGEM teams are encouraged to record references you use during the course of your research. They
         should be posted somewhere on your wiki so that judges and other visitors can see how you thought 
         about your project and what works inspired you.
-        
 
     - var imgpath = "" + require("../assets/img/Desctiption--devadas.jpg")["default"]
     +image(1, imgpath, "A farm in Kerala, India")
