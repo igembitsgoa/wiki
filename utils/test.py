@@ -2,7 +2,6 @@
 *  DONE:
 *      Template line
 *      Page title
-*      requireMathJax
 *      Image syntax
 *      Image paths
 *
@@ -56,15 +55,6 @@ for root, directories, files in os.walk('src/pages'):
                     "Page title on line 4 doesn't match the filename. Are you sure it's right?")
                 sys.exit(1)
 
-            # Test and remember value of requireMathJax
-            requireMathJax = re.split(" ", contents[4].strip())[-1]
-            if requireMathJax not in ["true", "false"]:
-                print(filename, "failed test.")
-                print(
-                    "Check requireMathJax on line 5. It must be true or false and there must be a space after =.")
-                sys.exit(1)
-            contains_mathjax = False  # change this later if MathJax is found
-
             image_count = 0   # keeps track of image numbers
             for i in range(len(contents)):
                 line = contents[i]
@@ -94,16 +84,3 @@ for root, directories, files in os.walk('src/pages'):
                         sys.exit(1)
                     image_count += 1
 
-                elif "$$" in line:
-                    contains_mathjax = True
-                    if requireMathJax != "true":
-                        print(filename, "failed test.")
-                        print("The file appears to contain MathJax on line",
-                              i+1, "but requireMathJax is not true.")
-                        sys.exit(1)
-
-            if requireMathJax == "true" and not contains_mathjax:
-                print(filename, "failed test.")
-                print(
-                    "requireMathJax is true but the file doesn't seem to contain any MathJax.")
-                sys.exit(1)
