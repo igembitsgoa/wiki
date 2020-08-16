@@ -25,6 +25,10 @@ $navItemHover: #18bc9c;
     span {
       font-weight: 600;
     }
+    
+    &:hover {
+      color: white;
+    }
   }
 
   .navbar-toggler-icon {
@@ -32,7 +36,7 @@ $navItemHover: #18bc9c;
   }
 
   .navbar-collapse {
-    background-color: $navBG; 
+    background-color: $navBG;
   }
 
   li {
