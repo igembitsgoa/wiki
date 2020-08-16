@@ -4,17 +4,12 @@ block headVars
     - var title = "Sample"
     - var tagline = "A sample page for the theme."
     - var requireMathJax = true
-    //- You can just write the filename here and it will be resolved to 'require'.
-    //- var backgroundImage = "Sample--jean-wimmerlin.jpg"
-    - var backgroundImage = "" + require("../assets/img/Sample--jean-wimmerlin.jpg")["default"]
-    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
-    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
 
     :markdown-it(html)
 
-        # Level 1 Heading
+        # Headings
         ## Level 2 Heading
         ### Level 3 Heading
         #### Level 4 Heading
@@ -66,8 +61,8 @@ block article
         #### This is a level 4 heading. 
         [This is a link](google.com)
 
-    - var imgpath = "" + require("../assets/img/Sample--calgary.jpg")["default"]
-    +image(1, imgpath, "Caption", 60)
+    - var imgpath = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    +image(1, imgpath, "Caption", 100)
 
     :markdown-it(html)
         Back to regular text.
