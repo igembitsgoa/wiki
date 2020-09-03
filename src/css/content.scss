@@ -18,9 +18,8 @@ $light-grey: #f7f7f7;
 $dark-grey: #8e8e8e;
 $selection-color: rgba(255, 233, 0, 0.4);
 
-
 // dark mode
-$dark-body:#313131;
+$dark-body: #313131;
 
 ::selection {
   background-color: $selection-color;
@@ -29,11 +28,11 @@ $dark-body:#313131;
 header {
   background: 
     /* top, transparent black, faked with gradient */ linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.4)
-    );
-    // /* bottom, image */ url(../assets/img/Description--josh-withers.jpg);
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4)
+  );
+  // /* bottom, image */ url(../assets/img/Description--josh-withers.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,7 +75,7 @@ header {
 @include respond-above(xxl) {
   header {
     .container {
-      max-width: 1330px;
+      max-width: 1380px;
     }
   }
 }
@@ -133,19 +132,21 @@ main {
 }
 
 .sidebar {
-  padding: 30px 100px 0 5px;
+  padding: 30px 50px 0 5px;
+  flex: 0 0 20%;
+  max-width: 20%;
 
   #contents {
     position: sticky;
     top: 150px;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-family: "Lato", sans-serif;
     font-weight: 500;
     height: auto;
     transition: none;
 
     li {
-      margin: 15px 0;
+      margin: 10px 0;
       justify-content: left;
       list-style: none;
       display: flex;
@@ -219,6 +220,8 @@ main {
 
 .content {
   font-family: "Merriweather", serif;
+  flex: 0 0 80%;
+  max-width: 80%;
 
   article {
     padding: calc(1rem + 1.2vw);
@@ -250,7 +253,7 @@ main {
 
   h1,
   h2 {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 140px;
     .anchor {
       float: left;
       // padding-right: 4px;
@@ -616,6 +619,8 @@ footer {
     }
 
     .content {
+      flex: 0 0 100%;
+      max-width: 100%;
       h1 {
         font-size: 1.75rem;
       }

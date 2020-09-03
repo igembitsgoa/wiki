@@ -31,6 +31,10 @@
   span {
     font-weight: 600;
   }
+
+  &:hover {
+    color: white;
+  }
 }
 
 .nav-colored {
@@ -54,7 +58,6 @@
     }
   }
 
-  
   #themeSwitchWrapper {
     display: flex;
     opacity: 1;
@@ -560,17 +563,17 @@ $darkblue: darken($blue, 30%);
     &:hover,
     &:focus {
       color: $green;
-    //   &:before,
-    //   &:after {
-    //     opacity: 1;
-    //     transform: translateY(0);
-    //   }
-    //   &:before {
-    //     transition: transform $duration $easeOutBack, opacity $duration;
-    //   }
-    //   &:after {
-    //     transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-    //   }
+      //   &:before,
+      //   &:after {
+      //     opacity: 1;
+      //     transform: translateY(0);
+      //   }
+      //   &:before {
+      //     transition: transform $duration $easeOutBack, opacity $duration;
+      //   }
+      //   &:after {
+      //     transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      //   }
     }
   }
 }
