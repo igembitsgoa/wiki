@@ -86,7 +86,7 @@ def main():
 
     # write cache
     with open('src/citations/cache.yml', 'w') as file:
-        yaml.safe_dump(cache, file)
+        yaml.safe_dump(cache, file, default_flow_style=False)
 
 
 def etiquette():
