@@ -90,6 +90,14 @@ https://doi.org/10.1186/1745-6150-4-19:
   title: Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems
     and related mobile stress response systems in prokaryotes.
   type: article
+https://doi.org/10.1371/journal.pcbi.1003190:
+  authors: 'Gelens, L., Hill, L., Vandervelde, A., Danckaert, J., & Loris, R. (2013). '
+  doi: https://doi.org/10.1371/journal.pcbi.1003190
+  journal: PLoS Computational Biology
+  numbers: '9(8), e1003190. '
+  title: A General Model for Toxin-Antitoxin Module Dynamics Can Explain Persister
+    Cell Formation in E. coli.
+  type: article
 https://doi.org/10.4161/hv.25086:
   authors: "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C.,\
     \ Michel, B., Nauwynck, H., Xhonneux, F., Pr\xE9at, V., Vanderplasschen, A. &\
