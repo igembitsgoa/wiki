@@ -2,6 +2,10 @@
 * Navbar 
 **/
 
+$dark-nav-background: #262626;
+$theme-slider-light: #ccc;
+$theme-slider-dark: #5D5D5D;
+
 .navbar {
   height: 80px;
   transition: all 0.3s ease, transform 0.5s ease;
@@ -278,7 +282,7 @@ Dark Mode Toggle Switch
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #ccc;
+      background-color: $theme-slider-light;
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
@@ -296,11 +300,11 @@ Dark Mode Toggle Switch
     }
 
     input:checked + .slider {
-      background-color: #2196f3;
+      background-color: $theme-slider-dark;
     }
 
     input:focus + .slider {
-      box-shadow: 0 0 1px #2196f3;
+      box-shadow: 0 0 1px $theme-slider-dark;
     }
 
     input:checked + .slider:before {
@@ -316,6 +320,42 @@ Dark Mode Toggle Switch
 
     .slider.round:before {
       border-radius: 50%;
+    }
+  }
+}
+
+/**
+ * Dark Mode Theme
+ **/
+body.dark {
+  .nav-colored {
+    background-color: $dark-nav-background;
+
+    .navbar-brand {
+      color: white;
+    }
+
+    #menuSwitch {
+      .menu-icon {
+        background-color: white;
+
+        &:before,
+        &:after {
+          background-color: white;
+        }
+      }
+    }
+
+    .icon-dark,
+    .icon-light {
+      filter: invert(93%) sepia(7%) saturate(0%) hue-rotate(16deg)
+        brightness(106%) contrast(102%);
+    }
+
+    #themeSwitch {
+      .slider {
+        background-color: #5D5D5D;
+      }
     }
   }
 }

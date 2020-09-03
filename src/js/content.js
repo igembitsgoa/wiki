@@ -71,8 +71,8 @@ $('dfn').each(function () {
 
 $('#bg-attribution').tooltip();
 
-$('label[for="theme-switch"]').click(function() {
-    if ($("#theme-switch").is(":checked")) {
+$('label[for="themeSwitchInput"]').click(function() {
+    if ($("#themeSwitchInput").is(":checked")) {
         $('body').addClass('dark');
     }
     else {

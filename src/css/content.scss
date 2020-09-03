@@ -17,9 +17,19 @@ $grey: #dadada;
 $light-grey: #f7f7f7;
 $dark-grey: #8e8e8e;
 $selection-color: rgba(255, 233, 0, 0.4);
+$table-border-light: #dee2e6;
 
 // dark mode
-$dark-body: #313131;
+$dark-body: #2a2a2a;
+$dark-contents-background: #343434;
+$dark-TOC-items: white;
+$dark-contents-text: white;
+$table-border-dark: #424242;
+$table-alternate-row-background-dark: #3b3b3b;
+
+body {
+  transition: background-color 0.3s ease;
+}
 
 ::selection {
   background-color: $selection-color;
@@ -226,6 +236,7 @@ main {
   article {
     padding: calc(1rem + 1.2vw);
     background-color: $light-grey;
+    transition: background-color 0.3s ease;
   }
 
   h1,
@@ -312,7 +323,8 @@ main {
     text-align: justify;
 
     .MathJax_Display {
-      overflow-x: scroll;
+      overflow: auto;
+      overflow-y: hidden;
     }
 
     span {
@@ -387,9 +399,9 @@ main {
   }
 
   table {
-    border: 1px solid #dee2e6;
+    border: 1px solid $table-border-light;
     width: 100%;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 1rem 0;
     color: #212529;
     border-collapse: collapse;
 
@@ -397,14 +409,14 @@ main {
       th,
       td {
         vertical-align: bottom;
-        border-bottom: 2px solid #dee2e6;
+        border-bottom: 2px solid $table-border-light;
       }
     }
 
     tbody {
       th,
       td {
-        border: 1px solid #dee2e6;
+        border: 1px solid $table-border-light;
       }
     }
 
@@ -416,7 +428,7 @@ main {
     td {
       padding: 0.75rem;
       vertical-align: center;
-      border: 1px solid #dee2e6;
+      border: 1px solid $table-border-light;
     }
 
     a {
@@ -704,9 +716,50 @@ footer {
 body.dark {
   background-color: $dark-body;
 
-  .content {
-    h1 {
-      color: white;
+  .sidebar #contents li a {
+    color: $dark-TOC-items;
+  }
+
+  .content article {
+    background: $dark-contents-background;
+
+    p,
+    li,
+    a {
+      color: $dark-contents-text;
+    }
+
+    table {
+      border: none;
+      color: $dark-contents-text;
+      caption {
+        color: $dark-contents-text;
+      }
+
+      tbody tr {
+        &:nth-of-type(odd) {
+          background: $table-alternate-row-background-dark;
+        }
+      }
+
+      th,
+      td {
+        border: 1px solid $table-border-dark;
+      }
+      thead,
+      tbody {
+        border: 1px solid $table-border-dark;
+        th,
+        td {
+          border-bottom: 1px solid $table-border-dark;
+        }
+      }
+    }
+  }
+  #references {
+    li a:not(.citation),
+    cite {
+      color: $dark-contents-text;
     }
   }
 }
