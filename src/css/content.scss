@@ -25,8 +25,9 @@ $dark-contents-background: #343434;
 $dark-TOC-items: white;
 $dark-contents-text: white;
 $dark-heading: white;
-$table-border-dark: #424242;
-$table-alternate-row-background-dark: #3b3b3b;
+$table-border-dark: #5e5a5a;
+$table-alternate-row-background-dark: #3f3f3f;
+$dfn-dark: #dddcdc;
 
 body {
   transition: background-color 0.3s ease;
@@ -714,6 +715,7 @@ footer {
   }
 }
 
+
 body.dark {
   background-color: $dark-body;
 
@@ -734,6 +736,14 @@ body.dark {
     h3,
     h4 {
       color: $dark-heading;
+    }
+
+    a.citation {
+      color: $dark-grey;
+    }
+
+    dfn {
+      border-bottom: 1px solid $dfn-dark;
     }
 
     table {

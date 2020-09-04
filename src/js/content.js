@@ -74,8 +74,10 @@ $('#bg-attribution').tooltip();
 $('label[for="themeSwitchInput"]').click(function() {
     if ($("#themeSwitchInput").is(":checked")) {
         $('body').addClass('dark');
+        $('.button').addClass('dark');
     }
     else {
         $('body').removeClass('dark');
+        $('.button').removeClass('dark');
     }
 });

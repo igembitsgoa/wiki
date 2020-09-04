@@ -138,3 +138,15 @@ a.button.prev {
     bottom: 0;
   }
 }
+
+a.button.dark {
+  .button-text {
+    color: $white;
+  }
+  
+  &:hover {
+    .button-text {
+      color: rgb(36, 35, 35);
+    }
+  }
+}
