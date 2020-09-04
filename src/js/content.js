@@ -71,11 +71,21 @@ $('dfn').each(function () {
 
 $('#bg-attribution').tooltip();
 
+// switch to dark theme based if set in local storage
+$(function(){
+    if (localStorage.getItem('theme') == 'dark') {
+        $('body').addClass('dark');
+        $('#themeSwitchInput').prop('checked', true);
+    }
+});
+
 $('label[for="themeSwitchInput"]').click(function() {
     if ($("#themeSwitchInput").is(":checked")) {
         $('body').addClass('dark');
+        localStorage.setItem('theme', 'dark');
     }
     else {
         $('body').removeClass('dark');
+        localStorage.setItem('theme', 'light');
     }
 });
