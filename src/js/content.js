@@ -81,3 +81,10 @@ $('label[for="themeSwitchInput"]').click(function() {
         $('.button').removeClass('dark');
     }
 });
+
+// sourced from https://stackoverflow.com/questions/50840168/how-to-detect-if-the-os-is-in-dark-mode-in-browsers
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    $('#themeSwitchInput').prop('checked', true);
+    $('body').addClass('dark');
+    $('.button').addClass('dark');
+}
