@@ -24,6 +24,7 @@ $dark-body: #2a2a2a;
 $dark-contents-background: #343434;
 $dark-TOC-items: white;
 $dark-contents-text: white;
+$dark-heading: white;
 $table-border-dark: #424242;
 $table-alternate-row-background-dark: #3b3b3b;
 
@@ -727,6 +728,12 @@ body.dark {
     li,
     a {
       color: $dark-contents-text;
+    }
+
+    h2,
+    h3,
+    h4 {
+      color: $dark-heading;
     }
 
     table {
