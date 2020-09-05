@@ -20,7 +20,7 @@
 
 Quick Reference: https://github.com/igembitsgoa/wiki/wiki/0.-Quick-Reference
 
-Docs: https://github.com/igembitsgoa/wiki/wiki
+Docs: https://github.com/igembitsgoa/wiki/wiki 
 
 ## Quick Start
 
