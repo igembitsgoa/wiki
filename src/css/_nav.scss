@@ -4,8 +4,9 @@
 
 $dark-nav-background: #262626;
 $theme-slider-light: #ccc;
-$theme-slider-dark: #5d5d5d;
 $nav-menu-items: #e3e3e3;
+$theme-slider-dark: #5D5D5D;
+$theme-switcher-green: #0fc488;
 
 .navbar {
   height: 80px;
@@ -284,6 +285,7 @@ Dark Mode Toggle Switch
 
     input:checked + .slider {
       background-color: $theme-slider-dark;
+      background-color: rgb(161, 91, 241);
     }
 
     input:focus + .slider {

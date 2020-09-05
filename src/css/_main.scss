@@ -7,7 +7,6 @@
 @import "_nav.scss";
 @import "_footer.scss";
 
-
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -88,7 +87,7 @@ a.button {
     text-transform: uppercase;
     width: fit-content;
   }
-  
+
   &:hover {
     .circle {
       width: 100%;
@@ -136,5 +135,19 @@ a.button.prev {
     margin: 1.54rem 0 0 0;
     right: 0;
     bottom: 0;
+  }
+}
+
+body.dark {
+  .button {
+    .button-text {
+      color: $white;
+    }
+
+    &:hover {
+      .button-text {
+        color: rgb(36, 35, 35);
+      }
+    }
   }
 }
