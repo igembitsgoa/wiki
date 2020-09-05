@@ -8,6 +8,17 @@ var scrollHeight = 100; // make navbar colored/hidden beyond this
 var sm = 768; // small viewport width
 var xs = 576; // medium viewport width
 
+// function to get width of viewport
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
 // reset iGEM
 if (window.location.href.includes("igem.org")) {
   var ids = ["HQ_page", "content", "bodyContent", "mw-content-text"];
@@ -22,6 +33,7 @@ if (window.location.href.includes("igem.org")) {
   }
 }
 
+// toggle navbar class on menu switch
 $("#menuSwitch").click(function () {
   $("#main-nav").toggleClass("menu-open");
 
@@ -30,6 +42,16 @@ $("#menuSwitch").click(function () {
   } else if ($(window).scrollTop() > scrollHeight) {
     $(".navbar").addClass("nav-colored");
   }
+
+  $("#nav-headings li").each(function () {
+    $(this).removeClass("active");
+    $(this).removeClass("inactive");
+  });
+  $("#nav-items .tab-pane").each(function () {
+    $(this).removeClass("active");
+  });
+
+  $(".mobile-nav-items").hide();
 });
 
 $(window).scroll(function () {
@@ -50,98 +72,76 @@ $(document).keyup(function (e) {
     // escape key maps to keycode `27`
     $("#main-nav").removeClass("menu-open");
     $(".navbar").removeClass("desktop-menu");
-  }
-});
-
-// navbar show on hover
-$("#nav-headings li").hover(
-  // handler in
-  function () {
     $("#nav-headings li").each(function () {
       $(this).removeClass("active");
-      $(this).addClass("inactive");
+      $(this).removeClass("inactive");
     });
-
-    $(this).removeClass("inactive");
-    $(this).addClass("active");
-
-    var id = $(this).find("a").attr("id");
-
     $("#nav-items .tab-pane").each(function () {
       $(this).removeClass("active");
     });
+    $(".mobile-nav-items").hide();
+  }
+});
 
-    var tab_name = id.split("-")[0];
-    $("#" + tab_name + "-pane").addClass("active");
+// show nav menu items on hover
+$("#nav-headings > ul > li").hover(
+  // handler in
+  function () {
+    if (getWidth() > sm) {
+      $("#nav-headings > ul > li").each(function () {
+        $(this).removeClass("active");
+        $(this).addClass("inactive");
+      });
+
+      $(this).removeClass("inactive");
+      $(this).addClass("active");
+
+      var id = $(this).find("a").attr("id");
+
+      $("#nav-items .tab-pane").each(function () {
+        $(this).removeClass("active");
+      });
+
+      var tab_name = id.split("-")[0];
+      $("#" + tab_name + "-pane").addClass("active");
+    }
   },
   // handler out - nothing
   function () {}
 );
 
-// when menu checkbox status changes
-$("label[for='menuToggle']").click(function () {
-  // close submenus
-  $("#nav-headings li").each(function () {
-    $(this).removeClass("active");
-    $(this).removeClass("inactive");
-  });
+// navbar show on click
+$("#nav-headings > ul > li").click(function () {
+  var id = $(this).find("a").attr("id");
+  var tab_name = id.split("-")[0];
 
-  $("#nav-items .tab-pane").each(function () {
-    $(this).removeClass("active");
-  });
+  if ($(this).hasClass("active")) {
+    $("#nav-headings > ul > li").each(function () {
+      $(this).removeClass("active");
+      $(this).removeClass("inactive");
+    });
 
-  // if menu has been opened, make navbar transparent
-  if (!$("#menuToggle").is(":checked")) {
-    $(".navbar").addClass("nav-transparent");
-    $(".navbar").addClass("desktop-menu");
-    $(".navbar").removeClass("nav-colored");
+    $("#" + tab_name + "-pane").removeClass("active");
   } else {
-    $(".navbar").removeClass("desktop-menu");
-    if (
-      document.body.scrollTop >= scrollHeight ||
-      document.documentElement.scrollTop >= scrollHeight
-    ) {
-      $(".navbar").removeClass("nav-transparent");
-      $(".navbar").addClass("nav-colored");
-    }
+    $("#nav-headings > ul > li").each(function () {
+      $(this).removeClass("active");
+      $(this).addClass("inactive");
+    });
+
+    $(this).addClass("active");
+    $(this).removeClass("inactive");
+    $("#" + tab_name + "-pane").addClass("active");
   }
-});
 
-$("#desktop-nav #close-label p").click(function () {
-  $("#menuToggle").prop("checked", false);
-  $(".navbar").removeClass("desktop-menu");
-});
-
-// show/hide nav on mobile
-$(".nav-heading").on("click", function () {
-  if (getWidth() <= sm) {
-    if ($(this).siblings("ul").css("display") === "none") {
-      $("#menuContent ul").slideUp();
-      $(this).siblings("ul").slideDown();
+  if (getWidth() < sm) {
+    if ($(this).find(".mobile-nav-items").css("display") == "none") {
+      $(".mobile-nav-items").slideUp(300);
+      $(this).find(".mobile-nav-items").slideDown(300);
     } else {
-      $("#menuContent ul").slideUp();
+      $(".mobile-nav-items").slideUp(300);
     }
   }
 });
-
-$("#menuSwitch").on("click", function () {
-  if (getWidth() <= sm) {
-    $("#menuContent ul").slideUp();
-  }
-});
-
-$("#close-label p, #menuSwitch").hover(
-  // handler in
-  function () {
-    $("#menuSwitch").addClass("hover");
-    $("#close-label p").addClass("hover");
-  },
-  // handler out
-  function () {
-    $("#menuSwitch").removeClass("hover");
-    $("#close-label p").removeClass("hover");
-  }
-);
 
 // show/hide footer on mobile
 $(".footer-heading").on("click", function () {
