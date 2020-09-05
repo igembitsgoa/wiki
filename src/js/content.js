@@ -28,6 +28,7 @@ $('.content h1, .content h2').each(function () {
     // add to table of contents if h1
     if ($(this).prop('tagName') == 'H1') {
         var item = document.createElement('li');
+        $(item).addClass('list-group');
 
         var span = document.createElement('span');
         span.append(document.createElement('div'));

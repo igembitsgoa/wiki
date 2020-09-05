@@ -349,13 +349,16 @@ section {
     height: 100%;
     position: absolute;
     margin-top: -5rem;
-    padding: 400px 0 0 200px;
 
     .bacteria-wrapper {
       animation-iteration-count: infinite;
       animation-timing-function: linear;
       animation-name: orbit;
       animation-duration: 2s;
+
+      &:first-of-type {
+        animation-delay: 0.75s;
+      }
     }
     
     .bacteria {
@@ -363,9 +366,11 @@ section {
       background: url(../assets/icons/bacteria.svg);
       background-position: center;
       background-size: contain;
-      margin-bottom: 100px;
+      margin: 20px;
       width: 100px;
       height: 100px;
+      position: absolute;
+
     }
   }
 }

@@ -154,3 +154,28 @@ $(".footer-heading").on("click", function () {
     }
   }
 });
+
+function getXoffset(wrapperWidth) {
+  var size = 50 + Math.random() * 100;
+
+  return (size + Math.random() * (wrapperWidth - 2 * size)).toString().concat("px");
+}
+
+function getYoffset(height) {
+  return (Math.random() * height).toString().concat("px");
+}
+
+$("section").each(function () {
+  for (i = 0; i < 4; i++) {
+    $(this).find(".section-animation").append(
+      $("<div></div>")
+        .addClass("bacteria-wrapper")
+        .append(
+          $("<div></div>")
+            .addClass("bacteria")
+            .css("left", getXoffset($(this).width())) 
+            .css("top", getYoffset($(this).height()))
+        )
+    );
+  }
+});
