@@ -284,8 +284,8 @@ Dark Mode Toggle Switch
     }
 
     input:checked + .slider {
-      background-color: $theme-slider-dark;
-      background-color: rgb(161, 91, 241);
+      background-color: $theme-switcher-green;
+      // background-color: rgb(161, 91, 241);
     }
 
     input:focus + .slider {
