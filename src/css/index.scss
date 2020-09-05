@@ -343,6 +343,53 @@ section {
       }
     }
   }
+
+  .section-animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: -5rem;
+    padding: 400px 0 0 200px;
+
+    .bacteria-wrapper {
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-name: orbit;
+      animation-duration: 2s;
+    }
+    
+    .bacteria {
+      animation: self-rotate 1.5s ease-in-out infinite alternate;
+      background: url(../assets/icons/bacteria.svg);
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 100px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@keyframes orbit {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(2px) rotate(0deg);
+    transform: rotate(0deg) translateX(2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn) translateX(2px) rotate(-1turn);
+    transform: rotate(1turn) translateX(2px) rotate(-1turn);
+  }
+}
+
+@keyframes self-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+  }
 }
 
 @include respond-below(xxl) {
@@ -387,14 +434,12 @@ section {
       p {
         font-size: 1rem;
       }
-
     }
   }
 }
 
 @include respond-below(md) {
   section {
-
     padding-top: 4rem;
 
     .sidebar {
