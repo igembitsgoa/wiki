@@ -230,6 +230,11 @@ main {
   }
 }
 
+.content.fullwidth {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
 .content {
   font-family: "Merriweather", serif;
   flex: 0 0 80%;

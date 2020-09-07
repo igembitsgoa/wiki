@@ -23,6 +23,8 @@ module.exports = {
     index: "./src/index.js",
     content: "./src/js/content.js",
     team: "./src/js/team.js",
+    // landing: "./src/js/landing.js",
+    // notebook: "./src/js/notebook.js",  
   },
   output: {
     filename: "[name].bundle.js",
