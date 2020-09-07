@@ -2,7 +2,7 @@ import "../css/content.scss";
 import "./main";
 
 // format links
-$('.content h1, .content h2').each(function () {
+$('.content h1, .content > article > h2').each(function () {
     var text = $(this).text();
     $(this).text(text + ' ');
     var id = text.trim().replace(/ /g, '');
