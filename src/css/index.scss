@@ -14,6 +14,9 @@ header {
     /* bottom, image */ url(../assets/img/photo-1513360371669-4adf3dd7dff8.jpeg);
   background-position: center;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
