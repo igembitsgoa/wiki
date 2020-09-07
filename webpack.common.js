@@ -43,7 +43,7 @@ module.exports = {
         new HTMLWebpackPlugin({
           template: "./src/pages/" + page,
           filename: page.slice(0, -4) + "/index.html",
-          chunks: ["contents"],
+          chunks: ["content"],
         })
     ),
     new HTMLWebpackPlugin({
