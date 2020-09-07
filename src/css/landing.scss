@@ -1,0 +1,55 @@
+#landingCards {
+  .card {
+    position: relative;
+  }
+
+  .card-background {
+    // background-image: url("../assets/img/Design--AI.gif");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-top: 75px;
+  }
+
+  .card-info {
+    z-index: 50; // TODO: find a workaround
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      margin: 40% 0;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+
+      span {
+        font-size: 1rem;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 700;
+        font-family: "Lato", serif;
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    .line {
+      height: 100px;
+      margin: 0 auto;
+      width: 1px;
+      background-color: orange;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    display: block; /* remove extra space below image */
+  }
+}

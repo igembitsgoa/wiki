@@ -1,3 +1,4 @@
-import "../css/team.scss";
+import "../css/content.scss";
+import "../css/landing.scss";
 import "./main";
 

@@ -1,40 +1,72 @@
 include mixins
 
 html(lang="en")
-    block headVars
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title #{title} | SugarGain | iGEM BITS Goa
-        if requireMathJax
-            script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
-    body
-        include nav.pug
-        style
-            | header {
-            |     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)), 
-            |         url( #{backgroundImage});
-            | }
-        header.d-flex.justify-content-center()
-            .container.d-flex.align-items-end.justify-content-between
-                #heading
-                    h1 #{title}
-                a(href= backgroundAttributionLink)
-                    span#bg-attribution(title=backgroundAttribution data-placement="top")
-        main
-            .container
+  block headVars
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{title} | SugarGain | iGEM BITS Goa
+    if requireMathJax
+      script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
+  body
+    include nav.pug
+    style
+      | header {
+      |     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)), 
+      |         url( #{backgroundImage});
+      | }
+    header.d-flex.justify-content-center()
+      .container.d-flex.align-items-end.justify-content-between
+        #heading
+          h1 #{title}
+        a(href= backgroundAttributionLink)
+          span#bg-attribution(title=backgroundAttribution data-placement="top")
+    main
+      .container
+        .row
+          .content.fullwidth.col-lg-12
+            article
+              block article
+
+              #landingCards
                 .row
-                    .content.fullwidth.col-lg-12
-                        article
-                            block article
- 
-                        .d-flex.justify-content-between.my-5
-                            block buttons
+                  .col-md-4
+                    .card
+                      .card-background
+                        img(src=require("../assets/img/Design--AI.gif")['default'])
+                      .card-info
+                        h2
+                          a(href='')
+                          span Model
+                          | Growth Curve
+                  .col-md-4
+                    .card
+                      .card-background
+                        img(src=require("../assets/img/Design--AI.gif")['default'])
+                      .card-info
+                        h2
+                          a(href='')
+                          span Arts
+                          | anciens
+                  .col-md-4
+                    .card
+                      .card-background
+                        img(src=require("../assets/img/Design--AI.gif")['default'])
+                      .card-info
+                        h2
+                          a(href='')
+                          span Arts
+                          | anciens
 
 
-        footer 
-            include footer_nav.pug
-            include footer_brand.pug
+
+            .d-flex.justify-content-between.my-5
+              block buttons
+
+
+    footer 
+      include footer_nav.pug
+      include footer_brand.pug
 
 
 
