@@ -1,0 +1,175 @@
+@include respond-above(xxl) {
+  header {
+    .container {
+      max-width: 1380px;
+    }
+  }
+}
+
+@include respond-between(xl, xxl) {
+  header {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@include respond-between(lg, xl) {
+  header {
+    .container {
+      max-width: 1000px;
+    }
+  }
+}
+
+@include respond-above(xxl) {
+  main .container {
+    max-width: 1380px;
+  }
+}
+
+@include respond-between(xl, xxl) {
+  main .container {
+    max-width: 1140px;
+  }
+}
+
+@include respond-between(lg, xl) {
+  main .container {
+    max-width: 1000px;
+  }
+}
+
+@include respond-below(xxl) {
+  .content {
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include respond-below(lg) {
+  main {
+    .content {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@include respond-below(md) {
+  header {
+    min-height: 55vh;
+    #heading {
+      margin-left: 1.75rem;
+    }
+  }
+
+  main {
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      flex: 0 0 100%;
+      max-width: 100%;
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@include respond-below(sm) {
+  header {
+    min-height: 40vh;
+    #heading {
+      margin-left: calc(1.5rem + 0.2vw);
+      margin-bottom: calc(1.5rem + 0.2vw);
+      h1 {
+        font-size: calc(3rem + 1.75vw);
+      }
+    }
+    #bg-attribution {
+      margin: 0 15px 15px 0;
+    }
+  }
+
+  main {
+    .content {
+      padding-left: 0;
+      padding-right: 0;
+
+      article {
+        padding: calc(1.5rem + 0.2vw);
+      }
+    }
+  }
+}
+
+@include respond-below(xs) {
+  main {
+    padding: 0;
+
+    .content {
+      article {
+        padding: calc(1.25rem + 0.2vw);
+        padding-top: calc(1.75rem + 0.2vw);
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  header #heading {
+    margin-left: calc(1.25rem + 0.2vw);
+    margin-bottom: calc(1.5rem + 0.2vw);
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include respond-below(xxs) {
+  header #heading h1 {
+    font-size: 3rem;
+  }
+}
+
+@include respond-below(xxxs) {
+  header #heading h1 {
+    font-size: 2.5rem;
+  }
+}

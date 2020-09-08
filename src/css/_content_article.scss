@@ -1,0 +1,245 @@
+.content.fullwidth {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.content {
+  font-family: "Merriweather", serif;
+  flex: 0 0 80%;
+  max-width: 80%;
+
+  article {
+    padding: calc(1rem + 1.2vw);
+    background-color: $light-grey;
+    transition: background-color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Merriweather";
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.65rem;
+    margin: 1.5rem 0 0.5rem 0;
+    word-spacing: 0.3rem;
+    color: $dark-green;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    button {
+      font-weight: 400;
+      margin-right: 25px;
+    }
+  }
+
+  h1,
+  h2 {
+    scroll-margin-top: 140px;
+    .anchor {
+      float: left;
+      // padding-right: 4px;
+      line-height: 2;
+      opacity: 0.01;
+      background-image: url(../assets/icons/link-solid.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: visible;
+
+      filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg)
+        brightness(87%) contrast(84%);
+      border: 0px transparent solid;
+      transition: all ease 0.2s;
+    }
+
+    &:hover .anchor {
+      opacity: 100;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+  }
+
+  button.section {
+    font-size: 2rem;
+    color: #bdbdbd;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #828282;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+    text-align: justify;
+
+    .MathJax_Display {
+      overflow: auto;
+      overflow-y: hidden;
+    }
+
+    span {
+      scroll-margin-top: 200px;
+
+      &:target {
+        animation: target-fade 3s 1;
+      }
+    }
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+  }
+
+  mark {
+    background: $selection-color;
+  }
+
+  .image {
+    text-align: center;
+
+    img {
+      margin: 20px;
+      width: 90%;
+    }
+
+    p {
+      text-align: center;
+      font-style: italic;
+      color: $black;
+    }
+  }
+
+  blockquote {
+    font-size: 1.4em;
+    width: 60%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 0.7em 75px;
+    border-left: 8px solid #78c0a8;
+    line-height: 1.6;
+    position: relative;
+    // background:#EDEDED;
+  }
+
+  blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #78c0a8;
+    font-size: 6rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  blockquote::after {
+    content: "";
+  }
+
+  blockquote strong {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  table {
+    border: 1px solid $table-border-light;
+    width: 100%;
+    margin: 1.5rem 0 1rem 0;
+    color: #212529;
+    border-collapse: collapse;
+
+    thead {
+      th,
+      td {
+        vertical-align: bottom;
+        border-bottom: 2px solid $table-border-light;
+      }
+    }
+
+    tbody {
+      th,
+      td {
+        border: 1px solid $table-border-light;
+      }
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: center;
+      border: 1px solid $table-border-light;
+    }
+
+    a {
+      color: $dark-green;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 15px;
+      font-family: "Merriweather", serif;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      color: #6c757d;
+      caption-side: bottom;
+    }
+  }
+
+  span.in-text:hover {
+    cursor: pointer;
+  }
+
+  a.citation {
+    color: $dark-grey;
+    scroll-margin-top: 200px;
+
+    &:target {
+      animation: target-fade 3s 1;
+    }
+  }
+
+  dfn {
+    border-bottom: 1px solid black;
+  }
+}

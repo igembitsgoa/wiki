@@ -1,0 +1,40 @@
+#references {
+  ol {
+    padding-inline-start: 30px;
+  }
+
+  li {
+    padding: 0 0 20px 10px;
+    scroll-margin-top: 100px;
+
+    &:target {
+      animation: target-fade 3s 1;
+    }
+  }
+
+  p {
+    text-align: left;
+    margin-bottom: 0.2rem;
+
+    .journalTitle {
+      font-style: italic;
+    }
+  }
+  cite {
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+  }
+  a {
+    margin-right: 15px;
+
+    &:before,
+    &:after {
+      height: 2px !important;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.content p,
+#references li {
+  a:not(.citation) {
+    color: $black;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $green;
+      height: 3px;
+    }
+
+    &:before {
+      width: 0%;
+      left: 0;
+      bottom: 0;
+      transition: width ease 0.4s;
+    }
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      transition: all ease 0.6s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      // color: $black;
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        left: 100%;
+        width: 0%;
+        transition: all ease 0.2s;
+      }
+    }
+  }
+}

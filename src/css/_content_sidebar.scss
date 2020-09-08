@@ -1,0 +1,86 @@
+.sidebar {
+    padding: 30px 50px 0 5px;
+    flex: 0 0 20%;
+    max-width: 20%;
+  
+    #contents {
+      position: sticky;
+      top: 150px;
+      font-size: 1.05rem;
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      height: auto;
+      transition: none;
+  
+      li {
+        margin: 10px 0;
+        justify-content: left;
+        list-style: none;
+        display: flex;
+  
+        span {
+          padding-top: 2px;
+  
+          div {
+            background: no-repeat url(../assets/icons/contents-arrow.svg);
+            width: 1.4rem;
+            height: 1.4rem;
+            background-size: contain;
+            margin: auto;
+          }
+        }
+  
+        a {
+          margin-left: 10px;
+          position: relative;
+          text-decoration: none;
+          padding-bottom: 6px;
+          transition: color 0.5s;
+          color: black;
+  
+          // from https://codepen.io/devilishalchemist/pen/ZYLZay
+  
+          $duration: 0.2s;
+          $distance: 8px;
+          $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $green;
+          }
+          &:before {
+            opacity: 0;
+            transform: translateY(-$distance);
+            transition: transform 0s $easeOutBack, opacity 0s;
+          }
+          &:after {
+            opacity: 0;
+            transform: translateY($distance/2);
+            transition: transform $duration $easeOutBack, opacity $duration;
+            width: 100%;
+          }
+          &:hover,
+          &:focus {
+            &:before,
+            &:after {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            &:before {
+              transition: transform $duration $easeOutBack, opacity $duration;
+            }
+            &:after {
+              transition: transform 0s $duration $easeOutBack,
+                opacity 0s $duration;
+            }
+          }
+        }
+      }
+    }
+  }

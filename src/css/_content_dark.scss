@@ -1,0 +1,69 @@
+body.dark {
+  background-color: $dark-body;
+
+  .sidebar #contents li a {
+    color: $dark-TOC-items;
+  }
+
+  .content article {
+    background: $dark-contents-background;
+
+    img {
+      background-color: white;
+      border-radius: 7px;
+    }
+
+    p,
+    li,
+    a {
+      color: $dark-contents-text;
+    }
+
+    h2,
+    h3,
+    h4 {
+      color: $dark-heading;
+    }
+
+    a.citation {
+      color: $dark-grey;
+    }
+
+    dfn {
+      border-bottom: 1px solid $dfn-dark;
+    }
+
+    table {
+      border: none;
+      color: $dark-contents-text;
+      caption {
+        color: $dark-contents-text;
+      }
+
+      tbody tr {
+        &:nth-of-type(odd) {
+          background: $table-alternate-row-background-dark;
+        }
+      }
+
+      th,
+      td {
+        border: 1px solid $table-border-dark;
+      }
+      thead,
+      tbody {
+        border: 1px solid $table-border-dark;
+        th,
+        td {
+          border-bottom: 1px solid $table-border-dark;
+        }
+      }
+    }
+  }
+  #references {
+    li a:not(.citation),
+    cite {
+      color: $dark-contents-text;
+    }
+  }
+}
