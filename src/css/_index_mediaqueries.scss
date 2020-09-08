@@ -1,0 +1,123 @@
+@include respond-between(xl, xxl) {
+  section .container {
+    max-width: 1140px;
+  }
+}
+
+@include respond-between(lg, xl) {
+  section .container {
+    max-width: 1000px;
+  }
+}
+
+@include respond-below(xxl) {
+  section {
+    .sidebar {
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .content {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.1rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xl) {
+  section {
+    .content {
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@include respond-below(lg) {
+  section {
+    .content {
+      h2 {
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include respond-below(md) {
+  section {
+    padding-top: 4rem;
+
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      padding: 0 10px !important;
+      h2 {
+        font-size: 1.9rem;
+        margin-bottom: 0.6rem;
+      }
+
+      h3 {
+        display: block;
+      }
+    }
+  }
+}
+
+@include respond-below(sm) {
+  section {
+    padding-top: 3rem;
+    .content {
+      h2 {
+        font-size: 1.7rem;
+        margin-bottom: 0.6rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xs) {
+  section {
+    padding-top: 2rem;
+    .content {
+      padding: 0 25px !important;
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xxs) {
+  section {
+    padding-top: 2rem;
+    .content {
+      padding: 0 25px !important;
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

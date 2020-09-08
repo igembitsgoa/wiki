@@ -1,0 +1,37 @@
+/******************************
+ * Header
+ ******************************/
+
+header {
+  background: 
+    /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4)
+    ),
+    /* bottom, image */ url(../assets/img/photo-1513360371669-4adf3dd7dff8.jpeg);
+  background-position: center;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    color: $whitey;
+    font-family: "Merriweather";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 6rem;
+    height: 250px;
+  }
+  .heading {
+    // background: url("../assets/ vectors/white-frame-brush-strokes/16-1.1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 160px;
+  }
+}
