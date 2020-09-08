@@ -1,0 +1,98 @@
+/**
+Dark Mode Toggle Switch
+**/
+
+#themeSwitchWrapper {
+  display: none;
+  margin-right: 2rem;
+  align-items: center;
+  padding-top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  i {
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .icon-dark {
+    background-image: url(../assets/icons/moon.svg);
+    height: 15px;
+    width: 15px;
+  }
+
+  .icon-light {
+    background-image: url(../assets/icons/sun.svg);
+  }
+
+  #themeSwitch {
+    display: inline-block;
+
+    label.switch {
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 20px;
+      margin: 0 1rem;
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $theme-slider-light;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      top: 3px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: $theme-switcher-green;
+      // background-color: rgb(161, 91, 241);
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px $theme-slider-dark;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(29px);
+      -ms-transform: translateX(29px);
+      transform: translateX(29px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  }
+}

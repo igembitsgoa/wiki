@@ -1,0 +1,35 @@
+/**
+ * Dark Mode Theme
+ **/
+body.dark {
+  .nav-colored {
+    background-color: $dark-nav-background;
+
+    .navbar-brand {
+      color: white;
+    }
+
+    #menuSwitch {
+      .menu-icon {
+        background-color: white;
+
+        &:before,
+        &:after {
+          background-color: white;
+        }
+      }
+    }
+
+    .icon-dark,
+    .icon-light {
+      filter: invert(93%) sepia(7%) saturate(0%) hue-rotate(16deg)
+        brightness(106%) contrast(102%);
+    }
+
+    #themeSwitch {
+      .slider {
+        background-color: #5d5d5d;
+      }
+    }
+  }
+}
