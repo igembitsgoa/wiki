@@ -1,18 +1,17 @@
-extends ../templates/landing.pug
+extends ../../templates/contents.pug
 
 block headVars
-    - var title = "Experiments"
+    - var title = "Kill Switch"
     - var requireMathJax = false
     //- You can just write the filename here and it will be resolved to 'require'.
     //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "../" + require("../../assets/img/Description--josh-withers.jpg")["default"]
     - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
     - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+    - var fullWidth = true
 
 prepend article
     
-    :markdown-it(html)
-
     #collapsibleSections.accordion
         .card
             #headingOne.card-header
