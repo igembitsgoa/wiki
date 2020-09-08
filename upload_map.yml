@@ -434,16 +434,16 @@ assets:
 css:
   css/content.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/contentCSS?action=raw&ctype=text/css
-    md5: 697b11f1a0671ee63e68fd72162b218c
+    md5: e738f869c6f8d1c03a3dcd605634c5c2
   css/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/indexCSS?action=raw&ctype=text/css
-    md5: 7f753607165122cd31772afeb0d882ac
+    md5: 72050a9bfe4d3167eaa4eadc3641038e
   css/landing.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/landingCSS?action=raw&ctype=text/css
-    md5: 689b874d1ebeb919f7d6a7cc72ad658a
+    md5: 897ac5e713ceeee50e17948543fbaf84
   css/team.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/teamCSS?action=raw&ctype=text/css
-    md5: eee43dcb412c8364e0b472e574860e09
+    md5: 1c9c314372ccfa1bd0a14e1594f9c8df
 html:
   Description/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Description
@@ -451,6 +451,9 @@ html:
   Design/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Design
     md5: 30ab9c53fff38e7f0efc1b56f692b23a
+  Experiments/Kill_Switch/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Kill_Switch
+    md5: 2322de5d0504f166304378be8c5ecefa
   Experiments/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments
     md5: d672b27a838d5a3947479170e2e41d47
