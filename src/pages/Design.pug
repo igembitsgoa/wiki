@@ -3,6 +3,11 @@ extends ../templates/contents.pug
 block headVars
     - var title = "Design"
     - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
     :markdown-it(html)
