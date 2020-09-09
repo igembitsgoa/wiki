@@ -34,7 +34,7 @@ $light-grey: #878787;
 }
 
 #footerLogo {
-  background-image: url("../assets/img/logo.jpg");
+  background-image: url("../assets/img/iGEMBITSGoa_logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   height: 200px;
@@ -125,8 +125,6 @@ $light-grey: #878787;
       }
     }
 
-
-
     // .col {
     //   line-height: 0.75rem 0;
     // }
@@ -156,5 +154,11 @@ $light-grey: #878787;
       margin-top: 10px;
       display: none;
     }
+  }
+}
+
+body.dark {
+  #footerLogo {
+    background-image: url('../assets/img/iGEMBITSGoa_logo_dark.svg');
   }
 }
