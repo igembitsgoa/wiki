@@ -1,17 +1,8 @@
-@include respond-between(xl, xxl) {
-  section .container {
-    max-width: 1140px;
-  }
-}
-
-@include respond-between(lg, xl) {
-  section .container {
-    max-width: 1000px;
-  }
-}
-
 @include respond-below(xxl) {
   section {
+    .container {
+      max-width: 1300px;
+    }
     .sidebar {
       h3 {
         font-size: 1.1rem;
@@ -29,6 +20,9 @@
 
 @include respond-below(xl) {
   section {
+    .container {
+      max-width: 1150px;
+    }
     .content {
       h2 {
         font-size: 1.8rem;
@@ -44,6 +38,9 @@
 
 @include respond-below(lg) {
   section {
+    .container {
+      max-width: 950px;
+    }
     .content {
       h2 {
         margin-bottom: 0.8rem;
@@ -58,6 +55,10 @@
 
 @include respond-below(md) {
   section {
+    .container {
+      max-width: 700px;
+    }
+
     padding-top: 4rem;
 
     .sidebar {
@@ -80,7 +81,7 @@
 
 @include respond-below(sm) {
   section {
-    padding-top: 3rem;
+    padding: 3rem 1.5rem 0 1.5rem;
     .content {
       h2 {
         font-size: 1.7rem;
@@ -92,7 +93,7 @@
 
 @include respond-below(xs) {
   section {
-    padding-top: 2rem;
+    padding: 2rem 0.5rem 0 0.5rem;
     .content {
       padding: 0 25px !important;
       h2 {
@@ -108,7 +109,7 @@
 
 @include respond-below(xxs) {
   section {
-    padding-top: 2rem;
+    padding: 2rem 0 0 0;
     .content {
       padding: 0 25px !important;
       h2 {
