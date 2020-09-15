@@ -193,6 +193,9 @@
         border-left: 0px;
         a {
           margin-left: 0;
+          i {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -209,7 +212,46 @@
 
       &:hover {
         color: $pink;
+
+        i {
+          filter: brightness(0) saturate(100%) invert(39%) sepia(0%)
+            saturate(0%) hue-rotate(208deg) brightness(94%) contrast(87%);
+        }
       }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    i {
+      display: none;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      margin: 0 15px;
+      transition: all 0.2s;
+
+      filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(2%)
+        hue-rotate(36deg) brightness(94%) contrast(88%);
+
+    }
+    i.email {
+      background-image: url(../assets/icons/email.svg);
+    }
+
+    i.insta {
+      background-image: url(../assets/icons/instagram-brands.svg);
+    }
+
+    i.twitter {
+      background-image: url(../assets/icons/twitter-brands.svg);
+    }
+
+    i.sample {
+      background-image: url(../assets/icons/sample.svg);
     }
   }
 
