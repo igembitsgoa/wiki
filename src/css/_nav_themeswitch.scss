@@ -71,11 +71,6 @@ Dark Mode Toggle Switch
       transition: 0.4s;
     }
 
-    input:checked + .slider {
-      background-color: $theme-switcher-green;
-      // background-color: rgb(161, 91, 241);
-    }
-
     input:focus + .slider {
       box-shadow: 0 0 1px $theme-slider-dark;
     }
@@ -93,6 +88,30 @@ Dark Mode Toggle Switch
 
     .slider.round:before {
       border-radius: 50%;
+    }
+  }
+}
+
+body.theme-green {
+  #themeSwitchWrapper #themeSwitch {
+    input:checked + .slider {
+      background-color: $theme-switcher-green;
+    }
+  }
+}
+
+body.theme-yellow {
+  #themeSwitchWrapper #themeSwitch {
+    input:checked + .slider {
+      background-color: $theme-switcher-yellow;
+    }
+  }
+}
+
+body.theme-blue {
+  #themeSwitchWrapper #themeSwitch {
+    input:checked + .slider {
+      background-color: $theme-switcher-blue;
     }
   }
 }
