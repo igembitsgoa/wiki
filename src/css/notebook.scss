@@ -1,0 +1,102 @@
+@import "_main.scss";
+
+$whitey: #f0f0f0;
+$pink: #ea178c;
+$green: #0fc488;
+$green-background: #11d694;
+$dark-green: #12bc84;
+$white: #ffffff;
+$orange: #ffc5ad;
+$yellow: #ffdb59;
+$blue: #1faaad;
+$black: #3d3d3d;
+$grey: #dadada;
+$light-grey: #f7f7f7;
+$dark-grey: #8e8e8e;
+$selection-color: rgba(255, 233, 0, 0.4);
+$table-border-light: #dee2e6;
+
+// dark mode
+$dark-body: #2a2a2a;
+$dark-contents-background: #343434;
+$dark-TOC-items: white;
+$dark-contents-text: white;
+$dark-heading: white;
+$table-border-dark: #5e5a5a;
+$table-alternate-row-background-dark: #3f3f3f;
+$dfn-dark: #dddcdc;
+
+body {
+  transition: background-color 0.3s ease;
+}
+
+::selection {
+  background-color: $selection-color;
+}
+
+@import "_content_header.scss";
+
+main {
+  padding: 3rem 0 2rem 0;
+}
+
+.tooltip {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+@import "_content_sidebar.scss";
+
+.sidebar {
+  padding-top: 12px;
+  #months {
+    top: 100px;
+  }
+}
+
+// background animation for citations
+@keyframes target-fade {
+  0% {
+    background-color: rgba(255, 255, 0, 0.2);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@import "_notebook_article.scss";
+// @import "_content_references.scss";
+@import "_content_fancylink.scss";
+@import "_content_mediaqueries.scss";
+@import "_content_dark.scss";
+
+footer {
+  #footerNav {
+    h1 {
+      color: $black;
+    }
+    a {
+      color: $black;
+    }
+  }
+}
+
+body.theme-green {
+  #footerNav {
+    background-color: lighten($green, 5%);
+  }
+}
+
+body.theme-yellow {
+  #footerNav {
+    background-color: lighten($yellow, 5%);
+  }
+}
+
+body.theme-blue {
+  #footerNav {
+    background-color: lighten($blue, 15%);
+  }
+}

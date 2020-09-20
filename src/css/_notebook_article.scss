@@ -1,0 +1,338 @@
+/**
+ * Main Content
+ **/
+
+.content.fullwidth {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.content {
+  font-family: "Merriweather", serif;
+  flex: 0 0 80%;
+  max-width: 80%;
+
+  article {
+    padding: calc(1rem + 1.2vw);
+    background-color: $light-grey;
+    transition: background-color 0.3s ease;
+  }
+
+  .month {
+    scroll-margin-top: 100px;
+    display: none;
+    .tabs {
+      ul {
+        margin: 0;
+      }
+      li {
+        display: inline-block;
+        font-family: "Lato", sans-serif;
+        height: 4rem;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 1.1;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      li.active {
+        border-bottom: solid 3px $green;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .week {
+    display: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Lato", sans-serif;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.15rem;
+    margin: 0.5rem 0 1rem 0;
+    word-spacing: 0.3rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    word-spacing: 0.3rem;
+    // margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    color: darken($dark-grey, 0%);
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    margin-left: 1.25rem;
+  }
+
+  button.section {
+    font-size: 2rem;
+    color: #bdbdbd;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #828282;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+    text-align: justify;
+
+    .MathJax_Display {
+      overflow: auto;
+      overflow-y: hidden;
+    }
+
+    span {
+      scroll-margin-top: 200px;
+
+      &:target {
+        animation: target-fade 3s 1;
+      }
+    }
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+  }
+
+  mark {
+    background: $selection-color;
+  }
+
+  .image {
+    text-align: center;
+
+    img {
+      margin: 20px;
+      width: 90%;
+    }
+
+    p {
+      text-align: center;
+      font-style: italic;
+      color: $black;
+    }
+  }
+
+  blockquote {
+    font-size: 1.4em;
+    width: 60%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 0.7em 75px;
+    line-height: 1.6;
+    position: relative;
+    // background:#EDEDED;
+  }
+
+  blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    font-size: 6rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  blockquote::after {
+    content: "";
+  }
+
+  blockquote strong {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  table {
+    border: 1px solid $table-border-light;
+    width: 100%;
+    margin: 1.5rem 0 1rem 0;
+    color: #212529;
+    border-collapse: collapse;
+
+    thead {
+      th,
+      td {
+        vertical-align: bottom;
+        border-bottom: 2px solid $table-border-light;
+      }
+    }
+
+    tbody {
+      th,
+      td {
+        border: 1px solid $table-border-light;
+      }
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: center;
+      border: 1px solid $table-border-light;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 15px;
+      font-family: "Merriweather", serif;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      color: #6c757d;
+      caption-side: bottom;
+    }
+  }
+
+  span.in-text:hover {
+    cursor: pointer;
+  }
+
+  a.citation {
+    color: $dark-grey;
+    scroll-margin-top: 200px;
+
+    &:target {
+      animation: target-fade 3s 1;
+    }
+  }
+
+  dfn {
+    border-bottom: 1px solid black;
+  }
+}
+
+body.theme-green {
+  .content {
+    blockquote {
+      border-left: 8px solid darken($green, 4%);
+
+      &:before {
+        color: darken($green, 4%);
+      }
+    }
+
+    h1 {
+      color: darken($green, 5%);
+    }
+    a {
+      color: darken($green, 5%);
+    }
+  }
+  .content p,
+  #references li {
+    a:not(.citation) {
+      &:before,
+      &:after {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+body.theme-yellow {
+  .content {
+    blockquote {
+      border-left: 8px solid darken($yellow, 4%);
+
+      &:before {
+        color: darken($yellow, 4%);
+      }
+    }
+
+    h1 {
+      color: darken($yellow, 15%);
+    }
+    a {
+      color: darken($yellow, 20%);
+    }
+  }
+  .content p,
+  #references li {
+    a:not(.citation) {
+      &:before,
+      &:after {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+body.theme-blue {
+  .content {
+    blockquote {
+      border-left: 8px solid darken($blue, 4%);
+
+      &:before {
+        color: darken($blue, 4%);
+      }
+    }
+
+    h1 {
+      color: darken($blue, 0%);
+    }
+    a {
+      color: darken($blue, 0%);
+    }
+  }
+  .content p,
+  #references li {
+    a:not(.citation) {
+      &:before,
+      &:after {
+        background-color: $blue;
+      }
+    }
+  }
+}

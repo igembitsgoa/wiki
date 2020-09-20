@@ -165,17 +165,17 @@ function getYoffset(height) {
   return (Math.random() * height).toString().concat("px");
 }
 
-$("section").each(function () {
-  for (i = 0; i < 4; i++) {
-    $(this).find(".section-animation").append(
-      $("<div></div>")
-        .addClass("bacteria-wrapper")
-        .append(
-          $("<div></div>")
-            .addClass("bacteria")
-            .css("left", getXoffset($(this).width())) 
-            .css("top", getYoffset($(this).height()))
-        )
-    );
-  }
-});
+// $("section").each(function () {
+//   for (i = 0; i < 4; i++) {
+//     $(this).find(".section-animation").append(
+//       $("<div></div>")
+//         .addClass("bacteria-wrapper")
+//         .append(
+//           $("<div></div>")
+//             .addClass("bacteria")
+//             .css("left", getXoffset($(this).width())) 
+//             .css("top", getYoffset($(this).height()))
+//         )
+//     );
+//   }
+// });

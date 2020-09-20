@@ -3,7 +3,8 @@
   flex: 0 0 20%;
   max-width: 20%;
 
-  #contents {
+  #contents,
+  #months {
     position: sticky;
     top: 150px;
     font-size: 1.05rem;
@@ -30,6 +31,11 @@
         }
       }
 
+      // from https://codepen.io/devilishalchemist/pen/ZYLZay
+      $duration: 0.2s;
+      $distance: 8px;
+      $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      
       a {
         margin-left: 10px;
         position: relative;
@@ -37,12 +43,6 @@
         padding-bottom: 6px;
         transition: color 0.5s;
         color: black;
-
-        // from https://codepen.io/devilishalchemist/pen/ZYLZay
-
-        $duration: 0.2s;
-        $distance: 8px;
-        $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         &:before,
         &:after {
@@ -64,20 +64,20 @@
           transition: transform $duration $easeOutBack, opacity $duration;
           width: 100%;
         }
-        &:hover,
-        &:focus {
-          &:before,
-          &:after {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          &:before {
-            transition: transform $duration $easeOutBack, opacity $duration;
-          }
-          &:after {
-            transition: transform 0s $duration $easeOutBack,
-              opacity 0s $duration;
-          }
+      }
+      a:hover,
+      a:focus,
+      a.active {
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
         }
       }
     }
@@ -86,10 +86,13 @@
 
 body.theme-green {
   .sidebar {
-    #contents li a {
-      &:before,
-      &:after {
-        background-color: $green;
+    #contents,
+    #months {
+      li a {
+        &:before,
+        &:after {
+          background-color: $green;
+        }
       }
     }
   }
@@ -97,22 +100,27 @@ body.theme-green {
 
 body.theme-yellow {
   .sidebar {
-    #contents li a {
-      &:before,
-      &:after {
-        background-color: $yellow;
+    #contents,
+    #months {
+      li a {
+        &:before,
+        &:after {
+          background-color: $yellow;
+        }
       }
     }
   }
 }
 
-
 body.theme-blue {
   .sidebar {
-    #contents li a {
-      &:before,
-      &:after {
-        background-color: $blue;
+    #contents,
+    #months {
+      li a {
+        &:before,
+        &:after {
+          background-color: $blue;
+        }
       }
     }
   }

@@ -1,0 +1,50 @@
+extends ../templates/notebook.pug
+
+block headVars
+  - var title = "Notebook"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+  - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+  - var theme = "green"
+
+block article
+
+  .month#Nov19
+    article
+      h2 November 2019
+      .week.week1
+        :markdown-it(html)
+          # Week 1: 3 Nov to 9 Nov
+          
+          1. We did this
+          1. We did that
+          1. We did quite a lot
+
+      .week.week2
+        :markdown-it(html)
+          # Week 2
+          
+          1. We did this
+          1. We did that
+          1. We did quite a lot
+  .month#Dec19
+    article
+      h2 December 2019
+      .week.week1
+        :markdown-it(html)
+          # Week 1: 3 Nov to 9 Nov
+          
+          1. We did this
+          1. We did that
+          1. We did quite a lot
+
+      .week.week2
+        :markdown-it(html)
+          # Week 2
+          India is still primarily an agrarian economy, with the sector contributing to almost 15.4 percent of the net 
+          Gross Domestic Product and around 58.6 percent of the population 
+          is engaged in some form of agricultural activity. 
+
