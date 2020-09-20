@@ -78,21 +78,16 @@ body.dark {
       h2 {
         margin-top: 0;
       }
-
-      .btn-block {
-        color: $green-background;
-        font-size: 1.2rem;
-        &:hover, &:focus {
-          text-decoration: none;
-        }
-    
-        .btn-link {
-          font-family: "Lato", sans-serif;
-        }
-      }
     }
+
     .card-body {
       background-color: grey;
+    }
+
+    button {
+      i {
+        filter: invert(1);
+      }
     }
   }
 
