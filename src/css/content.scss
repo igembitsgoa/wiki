@@ -75,6 +75,23 @@ main {
   }
   .card-header {
     padding: 0.75rem 0.5rem;
+
+    &:hover, 
+    &:focus {
+      background-color: $green-background;
+      button {
+        text-decoration: none;
+        background-color: $green-background;
+        color: $whitey;
+      }
+    }
+
+    button {
+      &:not(.collapsed) {
+        background-color: $green-background;
+        color: $whitey;
+      }
+    }
   }
 
   button {
@@ -84,11 +101,6 @@ main {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
 
     i {
       height: 20px;
