@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 80 80"
+   id="svg332"
+   sodipodi:docname="email.svg"
+   width="80"
+   height="80"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata338">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs336" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1848"
+     inkscape:window-height="1014"
+     id="namedview334"
+     showgrid="false"
+     inkscape:snap-global="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:zoom="6.944"
+     inkscape:cx="40"
+     inkscape:cy="48.901287"
+     inkscape:window-x="72"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg332" />
+  <g
+     transform="translate(-10,-962.36218)"
+     id="g326">
+    <path
+       style="color:#000000;enable-background:accumulate"
+       d="m 10.9688,977.36216 c -0.5405,0 -0.9688,0.44601 -0.9688,1 v 4.96875 l 40,29.53129 40,-29.53129 v -4.96875 c 0,-0.55399 -0.4283,-1 -0.9688,-1 z M 10,988.29966 v 38.06254 c 0,0.554 0.4283,1 0.9688,1 h 78.0624 c 0.5405,0 0.9688,-0.446 0.9688,-1 v -38.06254 l -38.8125,28.65624 a 2.0001996,2.0001996 0 0 1 -2.375,0 z"
+       fill="#000000"
+       stroke="none"
+       marker="none"
+       visibility="visible"
+       display="inline"
+       overflow="visible"
+       id="path324" />
+  </g>
+</svg>

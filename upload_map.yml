@@ -311,6 +311,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/0/0e/T--BITSPilani-Goa_India--icons--down-arrow.svg
     md5: 3fc898075b85bba3248d2e735ffece52
     upload_filename: T--BITSPilani-Goa_India--icons--down-arrow.svg
+  assets/icons/email.svg:
+    link_URL: https://2020.igem.org/wiki/images/5/58/T--BITSPilani-Goa_India--icons--email.svg
+    md5: fc07b598ad346d5f0856b4a8d5009ae1
+    upload_filename: T--BITSPilani-Goa_India--icons--email.svg
   assets/icons/envelope-open-text-solid.svg:
     link_URL: https://2020.igem.org/wiki/images/4/4a/T--BITSPilani-Goa_India--icons--envelope-open-text-solid.svg
     md5: bc67d68eea0e8e8fcadc4388bf66f324
@@ -339,6 +343,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/2/29/T--BITSPilani-Goa_India--icons--plant.svg
     md5: 241f35978f1521db156d3d9a9a950275
     upload_filename: T--BITSPilani-Goa_India--icons--plant.svg
+  assets/icons/sample.svg:
+    link_URL: https://2020.igem.org/wiki/images/a/aa/T--BITSPilani-Goa_India--icons--sample.svg
+    md5: f0dc4d65848225c06ca67c568a03dc86
+    upload_filename: T--BITSPilani-Goa_India--icons--sample.svg
   assets/icons/sun.svg:
     link_URL: https://2020.igem.org/wiki/images/7/7a/T--BITSPilani-Goa_India--icons--sun.svg
     md5: 6d385f102d5d96a806f2f1dcee79d30c
@@ -446,56 +454,56 @@ assets:
 css:
   css/content.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/contentCSS?action=raw&ctype=text/css
-    md5: 3b7953cd5df71ee67724edc1556e8614
+    md5: b06e0bfb7d80e3510a76ca23ccbf28e3
   css/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/indexCSS?action=raw&ctype=text/css
-    md5: ce0bff138b26b71d684baa29dea9bccd
+    md5: 3c195b2c11690cb99c40b24b813165a2
   css/landing.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/landingCSS?action=raw&ctype=text/css
-    md5: f1ee1617a20ee888de5ec94dd74279ce
+    md5: 5640289a5fc6c6d18d5bdc520614c589
   css/team.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/teamCSS?action=raw&ctype=text/css
-    md5: 824e5bcd10c872c46356e9f23f2d6436
+    md5: f2f78f49284a3a43018fe1d38cb570bb
 html:
   Description/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Description
-    md5: dd6997dea8985d8476887f279435f321
+    md5: 1f617e22e1faccd490229d79a0d0c82d
   Design/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Design
-    md5: c3b4437cc0f2825720b2996197b25927
+    md5: 37b6561fd13e6b78bb0a7bf26f321252
   Experiments/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Kill_Switch
-    md5: 5decf6317040b175e71421ee6db2d510
+    md5: 2984b8911d2db3e6ffab43a8994ba5f2
   Experiments/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments
     md5: d672b27a838d5a3947479170e2e41d47
   Judging/Bronze/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging/Bronze
-    md5: 137ae14932cd40b4408a1e652b30f1fa
+    md5: 6b70f4264804171f46560c63694f3cf4
   Judging/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging
-    md5: 325b8c6bcdb740ec36e57fc10d4852a5
+    md5: 895fea43d9f4443a6e1c04a2a13a862a
   Model/Growth_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Growth_Model
-    md5: ad64f6e658c7cd914ef2696ad2d74f7d
+    md5: 62eda19215a317bac82e506703741b3b
   Model/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Kill_Switch
-    md5: c4bd022bd9b59476a19f3586b575478a
+    md5: 7a394dce9e87555d9dc75e5f46f1c390
   Model/Viscosity_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Viscosity_Model
-    md5: e62265ec10a1c6ed9e8e98e6cfa61b19
+    md5: bf0603f82964394ff75f4c1e420a66fa
   Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model
-    md5: 15fcf2cab2c70b3112c4b0158629c43a
+    md5: 94d98a9f2f09154cb750d3f1957db479
   Sample/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Sample
-    md5: 9bd02fd066c82845bc2b13fdc98cf8a2
+    md5: 2b5d9d9ba88dc8118ad806ab4621d2f5
   Team/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Team
-    md5: 47317f79e3433366e11b4abb2d8b8faa
+    md5: ad719e0325c7c71d99654bd8995d80a5
   index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
-    md5: c1232fa28908e1ddc6a910bb3686d824
+    md5: 5af7ca7cbb9a3f0550c4ba23d9fce965
 js:
   content.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/content-bundleJS?action=raw&ctype=text/javascript

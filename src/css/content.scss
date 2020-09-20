@@ -6,8 +6,9 @@ $green: #0fc488;
 $green-background: #11d694;
 $dark-green: #12bc84;
 $white: #ffffff;
+$orange: #ffc5ad;
 $yellow: #ffdb59;
-$orange: #ffb454;
+$blue: #1FAAAD;
 $black: #3d3d3d;
 $grey: #dadada;
 $light-grey: #f7f7f7;
@@ -65,7 +66,6 @@ main {
 @import "_content_dark.scss";
 
 #collapsibleSections {
-
   h2 {
     margin-top: 0;
   }
@@ -77,7 +77,6 @@ main {
     padding: 0.75rem 0.5rem;
   }
 
-
   button {
     color: $green-background;
     font-size: 1.2rem;
@@ -86,7 +85,8 @@ main {
     justify-content: space-between;
     width: 100%;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
 
@@ -113,18 +113,34 @@ main {
   .card-body {
     background-color: $whitey;
   }
-
 }
 
 footer {
   #footerNav {
-    background-color: $green-background;
-
     h1 {
       color: $black;
     }
     a {
       color: $black;
     }
+  }
+}
+
+body.theme-green {
+  #footerNav {
+    background-color: lighten($green, 5%);
+  }
+}
+
+body.theme-yellow {
+  #footerNav {
+    background-color: lighten($yellow, 5%);
+  }
+}
+
+
+body.theme-blue {
+  #footerNav {
+    background-color: lighten($blue, 15%);
   }
 }
