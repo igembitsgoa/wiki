@@ -44,7 +44,7 @@ $darkblue: darken($blue, 30%);
     font-weight: 600;
   }
 
-  &:hover {
+  &:hover, &:visited {
     color: white;
   }
 }
@@ -57,6 +57,10 @@ $darkblue: darken($blue, 30%);
 
   .navbar-brand {
     color: black;
+
+    &:visited {
+      color: black;
+    }
   }
 
   #menuSwitch {
