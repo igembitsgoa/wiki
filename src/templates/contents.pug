@@ -8,7 +8,7 @@ html(lang="en")
         title #{title} | SugarGain | iGEM BITS Goa
         if requireMathJax
             script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
-    body(class={"theme-green": theme == "green", "theme-yellow": theme == "yellow", "theme-blue": theme == "blue"})
+    body
         include nav.pug
         style
             | header {
@@ -21,7 +21,7 @@ html(lang="en")
                     h1 #{title}
                 a(href=backgroundAttributionLink target="_blank" rel="noopener")
                     span#bg-attribution(title=backgroundAttribution data-placement="top")
-        main
+        main.hello(class={"theme-green": theme == "green", "theme-yellow": theme == "yellow", "theme-blue": theme == "blue"})
             .container
                 .row
                     .sidebar

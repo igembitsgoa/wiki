@@ -102,3 +102,9 @@ $('label[for="themeSwitchInput"]').click(function() {
     }
 });
 
+// apply theme class to body if it's applied to main
+// this is necessary because iGEM deletes all classes applied to body
+var themeClass = $('main').attr('class').split(' ').filter(function(className) {
+    return className.match('theme')
+})
+$('body').addClass(themeClass);
