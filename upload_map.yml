@@ -484,63 +484,69 @@ css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/teamCSS?action=raw&ctype=text/css
     md5: 6152e91ceafc8bd24dfe76928acbfbca
 html:
+  Accessibility/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Accessibility
+    md5: c3a0b25aa2397d11e1db0da59986044f
+  All_India_iGEM_Meet/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/All_India_iGEM_Meet
+    md5: 762c7c0aa75368eeb87a6d84164ab60b
   Attributions/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Attributions
-    md5: 9504d64edc0625cc3a2f13d473c18cc0
+    md5: b7a486b1e9d076ba72e5937e7819e793
   Description/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Description
-    md5: f6e6922d65f5369b10600088ac92a08b
+    md5: d14c63b745631e7264b05e46cc8efea3
   Design/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Design
-    md5: c745ffd7ed5e1e755af14ad790dc5534
+    md5: a6859cda693f788e50a17cabd1915f79
   Education/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Education
-    md5: 83b410e16e117d9ec40edc0f24581c88
+    md5: f047d7805349047e3beac5246e4cdba2
   Engineering/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Engineering
-    md5: c7a7d16841ecafa42595bcd15af7b9e7
+    md5: 7637b89978fdb07871e81cab10cd54f3
   Experiments/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Kill_Switch
-    md5: a9eeb999874f08858eae83253314e96f
+    md5: 1b74878fa3e3d57b207bc2437447178d
   Experiments/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments
     md5: d672b27a838d5a3947479170e2e41d47
   Human_Practices/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Human_Practices
-    md5: dfd5ceb797c7ebd08aaea1659380330b
+    md5: 028b4df4af4f2a29a80b5cafaab67979
   Judging/Bronze/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging/Bronze
-    md5: 5100fd49a5bc686542480042c845f7bc
+    md5: f9be00c3f265340e23c7349e30959301
   Judging/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging
-    md5: 2e1a3f3a5026c2074b491de0d3e15934
+    md5: 0268384950fc596b27c611fa4c598d80
   Model/Growth_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Growth_Model
-    md5: c55395e078fe5696b2dc046824d788e6
+    md5: ebbb1ee24843f3f0e4b541d3a9575ae7
   Model/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Kill_Switch
-    md5: 715c9ef8398da6c726ec6bc4b9f8fe30
+    md5: 87f9ea01ee1ecadc2426cb22f28bd534
   Model/Viscosity_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Viscosity_Model
-    md5: 4309132358b029492f5b39cd2996a2d4
+    md5: f5fd4fb6a2e4e648cc8327d5b821d1f6
   Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model
-    md5: 73506e9cf5727c850494299cc6202222
+    md5: eaed4c52fab165bf90ef5f861a15dcd1
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Notebook
-    md5: 6a1a8c97276e90c02bf225e65b8132d2
+    md5: 947db84d2fc2188e303384dfffec6678
   Safety/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Safety
-    md5: 0480a237400550c830b0e03d79934409
+    md5: 6f87423a5a5e7d5d4514532aa119f439
   Sample/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Sample
-    md5: 52e916235d730b63bbd1c488c02d5b89
+    md5: 7e81a771e9d961616d365300b4342c26
   Team/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Team
     md5: f64ce5bf4307f8d2312780f94b4280b3
   index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
-    md5: 52fa9c94c9cdb2e9a072f95cb1804140
+    md5: 9385b77d0eb01633d426f8d589e83a3e
 js:
   content.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/content-bundleJS?action=raw&ctype=text/javascript
