@@ -1,0 +1,46 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Dance"
+    - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../assets/img/Sample--jean-wimmerlin.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Sample--haifsa-rafique.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+    - var theme = "blue"
+
+block article
+
+    :markdown-it(html)
+
+        > [add haiku about dance]
+
+        We collaborated with the University of Rochester and IITM for a science through dance initiative. The collaboration was through two different parts.
+
+        # A title 
+
+        Each team choreographed a sequence in different styles ranging from Indian classical to ballet that when stitched together reveals a story. We tried 
+        expressing the current pandemic through different dance styles. The overarching message being a story of courage, tenacity and resilience. A story that 
+        captures the pathos of the collective experience of humanity in these extraordinary times.
+
+        > [Add pictures and video]
+
+        # Pass the Mask
+
+        We also organised an activity during the iGEM Global Meetup as a movement collaboration. The activity had participants pass a mask while introducing themselves 
+        in their native language. This activity was meant to demonstrate that although the pandemic has affected us all we still persevere and its meant to create a dance 
+        that shows the possibility of overcoming the boundaries and challenges using science during difficult times through collaboration and embracing diversity.
+
+        > [Add pictures and video]
+
+
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Description")
+    +buttonRight("Next")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
