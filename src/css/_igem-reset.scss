@@ -29,12 +29,13 @@
   height: 0px;
 }
 
-// ul {
-//   list-style-image: none;
+ul {
+  list-style-image: none;
+  list-style-type: circle;
 //   /* removes the iGEM wiki bullets */
 //   padding: 0;
 //   margin: 0;
-// }
+}
 
 #mw-content-text > p {
   /*make <p> containing <head> tags invisible */
