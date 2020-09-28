@@ -151,27 +151,27 @@
     line-height: 1.6;
     position: relative;
     // background:#EDEDED;
-  }
 
-  blockquote::before {
-    font-family: Arial;
-    content: "\201C";
-    font-size: 6rem;
-    position: absolute;
-    left: 10px;
-    top: -10px;
-  }
+    &::before {
+      font-family: Arial;
+      content: "\201C";
+      font-size: 6rem;
+      position: absolute;
+      left: 10px;
+      top: -10px;
+    }
 
-  blockquote::after {
-    content: "";
-  }
+    &::after {
+      content: "";
+    }
 
-  blockquote strong {
-    display: block;
-    color: #333333;
-    font-style: normal;
-    font-weight: bold;
-    margin-top: 1em;
+    strong {
+      display: block;
+      color: #333333;
+      font-style: normal;
+      font-weight: bold;
+      margin-top: 1em;
+    }
   }
 
   table {
@@ -271,7 +271,6 @@ body.theme-green {
   }
 }
 
-
 body.theme-yellow {
   .content {
     blockquote {
@@ -299,7 +298,6 @@ body.theme-yellow {
     }
   }
 }
-
 
 body.theme-blue {
   .content {
