@@ -1,0 +1,173 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Entrepreneurship"
+    - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
+    - var backgroundAttribution = "Photo by Sveta Fedarava on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/tI_Odb7ZU6M"
+    - var theme = "yellow"
+
+block article
+    :markdown-it(html)
+        For a product to be commercialised we need an economic model which demonstrates its viability. First, we conducted a detailed survey on how sugarcane is 
+        grown in a variety of countries; how pressing the issue of post-harvest loss is; and finally, what variations in our delivery mechanism were necessary to 
+        make sure they are applicable in all places, followed by an economic viability model of our product.
+
+        # Project Scope 
+
+        To assess the scope of our solution across the world, we carried out some research into various aspects of the sugar industry in several countries around the world. 
+        We found that almost every major producer of sugarcane suffers from the probelm of post-harvest losses, and there are a host of problems that our solution addresses, 
+        all which are all described below.
+
+        There is minimal similarity across countries because of differences in industry structure and operation. The harvesting practices and consequently the transportation of 
+        the cane from the field is influenced by the terrain, the relative cost of labour and capital, the state of road and rail networks as well as other infrastructure, and the 
+        distribution of sugarcane fields around a sugar mill.
+
+        Due to these differences in industries, post-harvest losses affect some countries more than others. We have summarised the salient points for a few countries below. 
+
+        ## Australia
+
+        In Australia, where all the cane is machine harvested, the permitted cut-to-crush delay is generally not more than 12 hours to avoid penalities to the grower. However, 
+        storage of cut cane is a significant problem. 
+
+        ## India
+
+        Most sugarcane farmers in this region are small farmers operating with their own families. Since most of them do not possess a truck, they have to pay the cost of transportation 
+        of the cane from their farm to the mills. However, both small and large farmers face a common problem of transport as the delivery of sugarcane per transaction requires a bulk carrier. 
+        They are required to rent a truck and pay hired labourers for cutting sugarcane and loading the truck.
+
+        At the beginning and end of the growing season, the mills face an inadequate supply of raw materials for crushing, whereas, during the peak season, supply is higher than 
+        what the mills can process. At that time, hundreds of trucks can be seen queuing in front of the mills, waiting to unload sugarcane. Truck owners typically operate their 
+        businesses as middlemen by charging for transport services per tonne. They also face problems of delays during transportation and excessive time spent at the mills waiting 
+        to unload the raw sugarcane. Truck drivers might spend up to 24 hours just for one transaction. This, of course, has an impact on the costs of the transaction. If the mills 
+        could manage the flow of trucks and unloading operations more efficiently, the price of raw sugarcane would be lower.
+
+        ## South Africa
+        
+        The South African Sugar Association (SASA) states that the South African sugar industry, is worth over R14 billion and provides more than 85, 000 direct and 350,000 indirect jobs. 
+        [SouthAfrica.co.sa, n.d.](#citation1).
+
+        The sugar industry in South Africa suffers from harvesting delays and cane deterioration due to weather conditions, among several other causes. Delays of three to four days, and sometimes 
+        much longer between harvesting and crushing the cane are common. The rate of cane deterioration varies considerably with the weather conditions, being most rapid in the hot, humid summer months. 
+        It is characterised by a decline in both purity and sucrose percentage in the cane. Evening burns increase the delay in crushing by 10 to 11 hours. Where enough cane is burnt for two days' allocation, 
+        the delay is increased by a further 24 hours, and if burning is only done once a week, the delay is increased by at least 60 hours. Currently, in South Africa the average burn-to-crush delay is over 
+        72 hours, so the industry is losing much potential revenue. It should be noted that over and above the losses of sucrose and the accompanying reduction in purity mentioned above, there are also losses 
+        in the factory caused by degradation products (for example dextrans and oligosaccharides). These secondary losses in the factory could increase the loss of sugar by at least a further 20% over 96 hours, 
+        and by even more for longer delays. 
+
+        ## Thailand
+
+        Sugarcane is one of Thailand’s most important crops and is critical to its economy. In Thailand, the sugar industry has a large number of small-sized, independent farms. This industry configuration 
+        causes uneven supplies throughout the harvesting season. The high transportation cost is due to inefficient cane delivery truck utilisation and 
+        extensive truck waiting time at the mill. Most of the cane was burnt before harvesting due to a shortage of workforce. The cut-to-crush time lasted more than 48 hours. 
+
+        ## United States
+
+        Salassi and Barker [2008](#citation2) estimate that the total harvest cost per acre is $241.32 per acre (variable cost is $144.54 per acre), and for every additional minute harvesting resources are 
+        forced to wait for the truck returning from the mill, the variable cost increases by approximately $1.30 using 2007 harvest fuel and labour prices. Because mills pay for the cost of 
+        hauling the cane from the farms, growers thus have an incentive to use enough trucks to pick up all the loads as soon as they become ready. The situation is further complicated by the fact that harvest 
+        operations among farms are often uncoordinated. The result is congestion at the mill and a vicious cycle that leads growers to use even more trucks.
+
+
+        <br>
+        <br>
+
+        In summary,  it is sufficient to conclude that due to a combination of factors unique to each country contribute to post-harvest losses. Most sugar industries in the world are impacted severely by the 
+        problem of post-harvest losses. In South Africa in 2009, 70.0% of the cane supply was harvested from mill controlled fields, with 55.5% being mill owned, giving mill operators significant control over the supply process for the mill. In this situation, the mill does not face the problem of being oversupplied during the peak season as in Thailand nor is the issue of integrating 
+        the decision-making process between growers and harvesters of importance as seen in South Africa. Furthermore, harvesting in Brazil is done 24 hours a day, and as a result, storage is not an issue as it is 
+        Australia, Cuba, and the United States.
+
+        Hence, while better logistics and improvements in policies can be implemented to reduce the impact of this issue, our solution aims to address the problem at its core and combat post-harvest losses directly. 
+        It would be much easier to manage transport if the cane had a longer shelf life, as that would provide a buffer period during which the cane could just be stored at the farm or the mill, to reduce unnecessarily long waiting times for unloading.
+
+
+        # Economic Viability
+
+        Presently India has a lower recovery rate of sugar from sugarcane as compared to other top producers of sugarcane globally. The Government of India has formulated a policy that declares that farmers should be 
+        paid an FRP (Fair and Remunerative Price) "[...] to ensure that higher sugar recoveries are adequately rewarded and considering variations amongst sugar mills, the FRP is linked to a basic recovery rate of sugar, 
+        with a premium payable to farmers for higher recoveries of sugar from sugarcane.[Sugarcane Pricing Policy, 2018](#citation3)."
+
+        Accordingly, the FRP for 2019-20 sugar season was fixed at ₹275 per quintal linked to a primary recovery of 10%, subject to a premium of ₹2.75 per quintal for each 0.1% increase of recovery over and above 10%; and a 
+        reduction in FRP at the same rate for each 0.1% decrease in the recovery rate till a maximum of 9.5%. With a view of protecting the interest of farmers, the Government has decided that there shall not be any 
+        deduction in the case where recovery is below 9.5%; such farmers will get ₹261.25 per quintal for sugarcane in the current season.
+
+        Thus, farmers receive a higher price for sugarcane for higher sugar recoveries, and our product aims to help the farmer achieve the same.
+
+        **Disclaimer:** Due to a lack of lab access due to the COVID-19 pandemic and the resulting lockdowns, we have been unable to determine the increase in recovery rate of sugar or the concentration of our product 
+        that must be applied to sugarcane farms in exact quantities. Our team is working on approximating the same. For now, we have made some assumptions which would be explicitly stated wherever they are made.
+
+        The costs for each component involved in manufacturing our product are:
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Ingredient | Price of one industrial lot (INR) | Mass needed for 75,000 kg of Inoculant | Mass of one lot (kg) | Lots required | Total Material Cost (INR) |
+        | ------  | --------- | ---------- | ---------- | ---------- |---------- |---------- |
+        | Luria Bertrani      | ₹10,000     | 1800       | 2         | 900       | ₹9,000,000          |      
+        | Water               | ₹120        | 70,000     | 1,000     | 70        | ₹8,400          |
+        | Triton X 100        | ₹2,000      | 2250       | 0.5       | 4500      | ₹9,000,000          |
+        | CMC                 | ₹5,000      | 150        | 25        | 6         | ₹30,000          |
+        | Bentonite powder    | ₹4,000      | 1050       | 1000      | 1         | ₹4,000          |
+        | Sorbic Acid         | ₹10,000     | 150        | 25        | 6         | ₹60,000          |          
+        | Potassium Sorbate   | ₹8,000      | 150        | 25        | 6         | ₹48,000          |          
+        [Table 1: Manufacturing costs associated with our product]
+
+    :markdown-it(html)
+        These are the components that go into our polymer inoculant. We found their composition through an optimisation process. More information about the optimisation model can be found [here](/Model/Viscosity_Model). 
+        The costs were found from manufacturers’ websites.
+
+        **Assumption:** We have assumed that despite bulk ordering, we would be sold the product at the retail price with no discounts. This was intentional so that the extra costs would 
+        offset the delivery and handling charges which could be set to zero.
+
+        The following cost analysis has been made with respect to the state of Maharashtra which is the second-largest producer of cane in India. We have looked at four scenarios: a best case, a moderate case, a worst case scenario, and 
+        a worst viable case scenario.
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Case Viability | Best Case | Moderate Case | Worst Case | Worst Viable Case |
+        | --------  | --------- | ---------- | ---------- | ---------- |
+        | Area of sugarcane plantations in Maharashtra in hectares | 1000000 | 1000000 | 1000000 | 1000000 |
+        | Hectares covered by 1 kg | 1 | 0.25 | 0.1 | 0.05 |
+        | Quantity of inoculant needed (kg) | 1,000,000 | 4,000,000 | 10,000,000 | 2,000,000 |
+        | Size of one lot of inoculant (kg) | 75,000 | 75,000 | 75,000 | 75,000 |
+        | Number of lots to be produced | 13.33 | 13.33 | 13.33 | 13.33 |
+        | Input costs per lot | ₹18,150,400 | ₹18,150,400 | ₹18,150,400 | ₹18,150,400 | 
+        | Total input costs | ₹242,005,333 | ₹968,021,333 | ₹2,420,053,333 | ₹4,840,106,667 |
+        | Other Costs | ₹1,500,000,000 | ₹2,500,000,000 | ₹2,500,000,000 | ₹2,500,000,000 |
+        | Total Costs | ₹1,742,005,333 | ₹3,468,021,333 | ₹4,920,053,333 | ₹7,340,106,667 |
+        | Cost of inoculant per hectare | ₹1,742 | ₹3,468.02 | ₹4,920.05 | ₹7,340.11 |
+        | Sugarcane yield (quintal/hectare) | 800 | 800 | 800 | 800 |
+        | Additional price for 0.1% increase in recovery rate | ₹2.85 | ₹2.85 | ₹2.85 | ₹2.85 |
+        | Recovery rate increase in units of 0.1% | 10.00 | 5.00 | 5.00 | 4.00 |
+        | Revenue increase/quintal | ₹28.50 | ₹14.25 | ₹14.25 | ₹11.40 |
+        | Revenue increase per hectare | ₹22,800.00 | ₹11,400.00 | ₹11,400.00 | ₹9,120.00 |
+        | Room for profit margin per kg of inoculant | ₹21,057.99 | ₹7,931.98 | ₹6,479.95 | ₹1,779.89 |
+        | | 1208.84% | 228.72% | 131.70% | 24.25%|
+        [Table 1: Cost benefit analysis of our product]
+
+    :markdown-it(html)
+
+        Our product also aims to contribute towards the United Nations's SDG number 2, which is Zero Hunger. This SDG aims to end all forms of hunger and malnutrition by 2030, making sure all people – especially 
+        children – have sufficient and nutritious food all year. This involves promoting sustainable agricultural, **doubling the agricultural productivity and incomes of small-scale food producers**, **supporting 
+        small-scale farmers** and equal access to land, technology and markets. It also requires international cooperation to ensure investment in infrastructure and technology to improve agricultural productivity; Ensure sustainable food production systems and implement resilient agricultural practices 
+        that **increase productivity and production**, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively 
+        improve land and soil quality.
+
+
+ 
+
+
+
+
+
+
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Policy")
+    +buttonRight("")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"details": "(n.d.). Retrieved on September 30, 2020. from ", "title": "Sugar Production. SouthAfrica.co.za.", "type": "webpage", "url": "http://southafrica.co.za/sugar-production.html"}, {"authors": "Salassi, Michael E., & Barker, F. Gil. (2008).", "journal": "Journal of the American Society of Sugar Cane Technologists.", "numbers": "-.", "title": "Reducing harvest costs through coordinated sugarcane harvest and transport operations in Louisiana.", "type": "article", "year_published": 2008}, {"details": "(n.d.). Retrieved on September 30, 2020. from ", "title": "Sugarcane Pricing Policy. Department of Food and Public Distribution, Government of India.", "type": "webpage", "url": "https://dfpd.gov.in/sugar.htm"}]
