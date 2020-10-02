@@ -2,7 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Design"
-    - var requireMathJax = false
+    - var requireMathJax = true
     //- You can just write the filename here and it will be resolved to 'require'.
     //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
     - var backgroundImage = "" + require("../assets/img/Design--jean-wimmerlin.jpg")["default"]
@@ -12,58 +12,116 @@ block headVars
 
 block article
     :markdown-it(html)
-        # Fructose Regulated Anti-Invertase Construct 
+        We aim to target invertase, the enzyme present in the sugarcane stem which is responsible for the degradation of sucrose into glucose and fructose. The project has been structured 
+        into the following major modules:
+         - A fructose-regulated anti-invertase construct
+         - An atmospherically-regulated kill switch
+         - A novel polymer inoculant
 
-        The biosensor is the crux of our genetic circuit and is composed of Frur, pFrub and the Anti-invertase gene. 
-        Frur is a transcription factor with an affinity for D-fructose. The Frur gene coding for the FruR protein prevents 
-        transcription of the regulated promoters. pFruB is the promoter region following FruR and is repressed by the FruR 
-        transcription factor,  in the absence of D-Fructose. 
+        Each aspect of the project design has been explained in the proceeding sections.
 
-    - var imgpath = "" + require("../assets/img/Design--AIwoFruc.png")["default"]
-    +image(1, imgpath, "Fructose regulated Anti-Invertase Construct in the absence of Fructose-1-phosphate")
+        # Fructose-regulated Construct
 
-    :markdown-it(html)
-        This prevents any further transcription, and no Anti-invertase protein is released. If D-Fructose is present 
-        in the cell, the FruR transcription factor will bind preferentially to it and thus be inactivated. This means 
-        that the repression of the related promoter pFruB will be released, enabling the transcription of the anti-invertase 
-        protein. Which can then act on invertase and stop sucrose loss. 
+        The primary product of the action of the invertase enzyme is fructose and glucose. Hence the concentration of fructose inside the sugarcane stem is proportional to the activity of invertase 
+        and consequently the amount of invertase present. We employed this dynamic concentration of fructose to modulate the expression of anti-invertase.
+
+        We designed a genetic construct based on a biosensor created by Paris-Saclay (link). A biosensor is a module that combines biological molecules as the recognition element with a physical transducer 
+        or repressor and outputs quantitative data corresponding to the biomolecule’s concentration. Generally, these specific interactions between the ligand and the transducer are used to determine secretion 
+        or production rates in the form of an electrochemical and/or optical signal. In our case, we coupled the biosensor to the expression of anti-invertase.
+
+        ## pFruB - Cra (FruR) Regulation
+
+        The enterobacterial catabolite repressor/activator (Cra) protein or the FruR protein is a pleiotropic regulator that controls expression of a large number of metabolic genes in response to the flux of 
+        glycolytic intermediates in various natural biological systems. The regulator is able to interact with specifically fructose-1-phosphate and regulate the action of pFruB promoter (which is a common promoter 
+        usually found in the fructose operon). 
+
+        ## Mechanism
+
+        The FruR expression is under an IPTG-induced pTac promoter which is induced before packaging the bacteria in our polymer inoculant. FruR is a transcription factor with an affinity for fructose-1-phosphate which 
+        is produced from the D-fructose formed after invertase action. The FruR gene encoding for the FruR protein prevents the transcription of the regulated promoters. pFruB is the promoter region following FruR and 
+        is repressed by the FruR transcription factor, in the absence of D-Fructose. This prevents any further transcription, and no anti-invertase protein is produced. If D-Fructose is present in the cell, 
+        the FruR transcription factor will bind preferentially to it and thus be inactivated. This means that the repression of the related promoter pFruB will be released, enabling the transcription of the 
+        anti-invertase protein which can then act on invertase and prevent the inversion of sucrose.
+
+        > GIF
+
+
+
+
+
+
+        # Kill Switch
+
+        Advances in synthetic biology raise increasingly essential questions about biocontamination and biological containment. It becomes imperative that genetically-engineered organisms are 
+        not deleterious to the ecosystem and that scientists have adequate control over their production and multiplication. Certain safeguards are developed to ensure all possible safety — 
+        which are then introduced into the genetically modified organism — that compels the organism, in our case the bacteria, to rely on a “survival” factor to maintain viability in the 
+        population. Kill switches when introduced into the genetic material results in cellular death under certain conditions, such as the activation of a “trigger” caused by environmental 
+        changes. Thus helping us effectively control the proliferation of the genetically-engineered microorganism.
+
+        We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the close proximity of the system with both agricultural environments 
+        and human consumables, it is indispensable that our bacteria include a lethality mechanism. We propose to use a **modified type II ccdA-ccdB toxin-antitoxin system** as our kill switch that 
+        is activated upon exposure to atmospheric concentrations of oxygen. A change in the oxygen concentration in the environment results in a sharp increase in the amount of the toxin protein being 
+        synthesised which disturbs the already established equilibrium between the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes.
+
+        ## Type II Toxin-Antitoxin Systems
+
+        Bacterial toxin-antitoxin systems were characterised in the 1980s as molecular systems encoded in plasmids that ensured the persistence of a plasmid in the host lineage during replication by 
+        making the cells “addicted” to the plasmid so that the only daughter cells that survived were the ones that contained the plasmid. This phenomenon is also known as post-segregational killing. 
+        Most prokaryotic chromosomes contain a number of toxin-antitoxin modules that consist of a pair of genes that encode for two components: a stable toxin protein and its unstable, labile cognate 
+        antitoxin. Toxins are always proteins, but the antitoxins can either be RNAs (in type I and III systems) or proteins (in type II systems) [Syed, M. & Lévesque, C., 2012](#citation1).
+
+        Type II toxin-antitoxin systems use a protein antitoxin to deactivate the toxin protein via protein-protein interaction. All type II antitoxins are dual-function, two-domain proteins that consist 
+        of a protein-protein interaction domain and a DNA-binding domain. The antitoxin binds to the toxin and inhibits its activity, and the stable TA complex binds to the operator of the corresponding 
+        <dfn>TAS~Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses its transcription [Makarova et al., 2009](#citation2) [Tam & Kline, 1989](#citation3).
+
+        As our product would be introduced into a plant which is later converted into a consumable item, we decided to use the ccdA-ccdB toxin-antitoxin system as the kill switch for its relative non-toxicity 
+        towards humans and more generally, mammalian cells [Reschner et al., 2013](#citation4).
+
+        ## ccdA-ccdB System
+
+        In the ccdA-ccdB system, the two genes are organised in an operon in which the antitoxin ccdA gene is upstream of the toxin ccdB gene. ccdA prevents ccdB toxicity by forming a tight ccdA-ccdB complex 
+        [Afif et al., 2001](#citation5). ccdB inhibits DNA replication by poisoning DNA gyrase; more specifically, ccdB prevents DNA gyrase from disentangling DNA from replication resulting in double-stranded breaks in 
+        the DNA [Dao-Thi et al., 2005](#citation6). ccdA and ccdB are able to form complexes of various stoichiometries depending on their molar ratios.
+
+        Our kill switch is a modified version of the ccdA-ccdB TA system, where the ccdB (toxin) CDS is placed under a T7 constitutive promoter, and the ccdA (antitoxin) CDS is placed under an FNR promoter 
+        whose activity is controlled by the concentration of oxygen present in the environment. 
+
+        ## FNR Promoter 
         
-    :markdown-it(html)
-        # Killswitch
+        This part which we used is a standard FNR promoter. The promoter is used in _E. coli_ strains to induce protein expression in anaerobic environments. It is natively used to induce metabolic processes when 
+        the _E. coli_ enter anaerobic environments. The part is often used to express any protein sequence placed behind it in such environmental conditions. On entering a hypoxic environment, the formation of 
+        \\( [ 4Fe-4S]^{2+} \\) dimers is stimulated within the FNR-producing bacteria. These dimers are the transcription activators of the FNR promoter. They are able to bind to the promoter, thus allowing 
+        it to become active. Important to note is that the biobrick (number) is a tandem promoter meaning that two \\( [ 4Fe-4S]^{2+} \\) dimers are able to bind to the promoter. This tandem effect enhances 
+        the induction effect of the promoter, ultimately leading to a higher expression rate.
+        $$ $$
 
-        It is very important for us to have a robust biosafety model for our project because it is associated with a widely 
-        consumed edible product, sugar. The most important parts of the killswitch construct are the FNR promoter, the toxin 
-        ccdB responsible for binding and impairing the functioning of bacterial Gyrase and it’s antitoxin ccda. The ccda is under 
-        the FNR promoter whereas the ccdb is under a commonly used T7 constitutive promoter. Both promoters are supplemented by 
-        conserved and strong Ribosomal Binding Sites (RBS). The FNR promoter is only active in an anaerobic environment and inactivates 
-        in an aerobic environment. It forms the crux of the construct because it controls the antitoxin expression. 
+        As the environment inside sugarcane is hypoxic compared to the external atmosphere, we chose to place the ccdA antitoxin under the FNR promoter. The mechanism of the kill switch has been explained 
+        in the next section.
 
-        The killswitch function can also be best explained with the help of two different cases. One where the bacterial cell 
-        is in an aerobic environment and one in an anaerobic environment.
+        ## Mechanism
 
-        ## Anaerobic 
+        The kill switch function is best explained with the help of two different cases: the first where the bacteria is present in a sufficiently oxygenated environment, and the second where it is present in a hypoxic one.
 
-        This Diagram portrays the behaviour of the killswitch genetic circuit inside the sugarcane stem which is an anaerobic environment.
+        ### Hypoxic Environment
 
-    :markdown-it(html)
-        The ccdb toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to the nature of 
-        the surrounding, the FNR promoter will be active and hence ccda antitoxin will also be produced in the cell. Since both ccda 
-        and ccdb is present in the cell, they will make a toxin-antitoxin complex and be degraded. This way the bacteria is able to 
-        survive inside the sugarcane stem. 
+        > GIF
 
-        ## Aerobic
+        The ccdB toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to prevalant environmental conditions, the FNR promoter will be active and hence the ccdA antitoxin will also be produced 
+        in the cell. Since both ccdA and ccdB are present in the cell, they form a toxin-antitoxin complex by sequestering the toxin. This way the bacteria is able to survive inside the sugarcane stem.
 
-        This diagram portrays the behaviour of the killswitch genetic circuit outside the sugarcane stem which is an aerobic environment.
-    - var imgpath = "" + require("../assets/img/Design--KSAero.png")["default"]
-    +image(2, imgpath, "Killswitch Genetic Circut outside sugarcane stem")
+        ### Aerobic Environment
 
-    :markdown-it(html)
-        In this case, too, ccdb is expressed constitutively with the help of the T7 promoter. But due to the presence of oxygen, the FNR 
-        promoter is switched off. This leads to an increase in the levels of ccdb in the cell. Which in turn leads to a complete halt in 
-        cell division and death. This ensures that the bacteria will not be able to survive outside the sugarcane environment.
+        > GIF
 
-    - var imgpath = "" + require("../assets/img/Design--AI.gif")["default"]
-    +image(3, imgpath, "Anti-Invertase Modelled Protein Structure")
+        In this case, too, ccdB is expressed constitutively with the help of the T7 promoter; however, due to the presence of oxygen, the FNR promoter is switched off. This leads to an increase in the levels of ccdB in the cell which in 
+        turn leads to a complete halt in cell division and death. This ensures that the bacteria will not be able to survive outside the sugarcane environment.
+
+
+
+
+
+
+
 
 
 
@@ -74,3 +132,6 @@ append buttons
     +buttonRight("Model")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"authors": "Syed, M. A., & L vesque, C. M. (2012). ", "doi": "https://doi.org/10.1139/w2012-025", "journal": "Canadian Journal of Microbiology", "numbers": "58(5), 553-562. ", "title": "Chromosomal bacterial type II toxin-antitoxin systems.", "type": "article"}, {"authors": "Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). ", "doi": "https://doi.org/10.1186/1745-6150-4-19", "journal": "Biology Direct", "numbers": "4(1), 19. ", "title": "Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems and related mobile stress response systems in prokaryotes.", "type": "article"}, {"authors": "Tam, J. E., & Kline, B. C. (1989). ", "doi": "https://doi.org/10.1007/BF00261153", "journal": "Molecular and General Genetics MGG", "numbers": "219(1-2), 26-32. ", "title": "The F plasmid ccd autorepressor is a complex of CcdA and CcdB proteins.", "type": "article"}, {"authors": "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C., Michel, B., Nauwynck, H., Xhonneux, F., Pr\u00e9at, V., Vanderplasschen, A. & Szpirer, C. (2013).", "doi": "https://doi.org/10.4161/hv.25086", "journal": "Human Vaccines & Immunotherapeutics", "numbers": "9(10), 2203-2210. ", "title": "Use of Staby\u00ae technology for development and production of DNA vaccines free of antibiotic resistance gene.", "type": "article"}, {"authors": "Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). ", "doi": "https://doi.org/10.1046/j.1365-2958.2001.02492.x", "journal": "Molecular Microbiology", "numbers": "41(1), 73-82. ", "title": "The ratio between CcdA and CcdB modulates the transcriptional repression of the ccd poison-antidote system.", "type": "article"}, {"authors": "Dao-Thi, M.-H., Van Melderen, L., De Genst, E., Afif, H., Buts, L., Wyns, L., & Loris, R. (2005). ", "doi": "https://doi.org/10.1016/j.jmb.2005.03.049", "journal": "Journal of Molecular Biology", "numbers": "348(5), 1091-1102. ", "title": "Molecular Basis of Gyrase Poisoning by the Addiction Toxin CcdB.", "type": "article"}]
