@@ -1,0 +1,69 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Contribution"
+    - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+    - var theme = "green"
+
+block article
+    :markdown-it(html)
+
+        As a team participating in iGEM for the first time, we were completely new to the iGEM framework, and one of the parts of
+        this framework is the wiki. The wiki is the face of an iGEM team, more so this year than ever. As it occured to us that 
+        the Jamboree this year was going to be online, we realized how important wikis were going to be, and decided to make it 
+        easier for teams across the world to build their wikis.
+
+        Currently, building iGEM wikis requires teams to write code in a text box in their browsers, due to which they miss out 
+        on the wide variety of features code editors and integration tools offer these days. These tools have become the de facto 
+        standard in the web development industry, since they optimize various parts of the process, ultimately making it much
+        easier and faster.
+
+        Over the years, iGEM teams have come up with several ways to improve this experience. These solutions have focused on
+        almost all aspects of building wikis - from making it easier to write code to uploading it and even implementing
+        continuous integration. iGEM Toronto 2015, Waterloo 2017 and Virginia 2018 did excellent work in this area, with their 
+        wiki generators, upload APIs and CI tools. Some of these tools allowed teams to write code locally, in a code editor
+        of their choice, and then upload it to iGEM servers for deployment.
+
+        However, we felt that there was a need for a holistic solution - something that would cover every aspect of iGEM wikis. 
+        This solution had to be comprehensive enough that teams wouldn't need to find other software to build common components,
+        but it would still allow teams to easily integrate other libraries, should they need to do so. 
+    
+        We identified three key areas to focus on: content, design and deployment. 
+
+        The way teams design and add content to their wikis usually varies widely, but the deployment process is common, since
+        all iGEM wikis are powered by the MediaWiki engine. They write code in a code editor, and then manually copy and paste it 
+        in the text box on the page where it belongs. A typical iGEM wiki is anywhere between 15 to 20 pages, so it can quickly 
+        become cumbersome to copy and paste for every small change, and sometimes a few changes might just be left out in a hurry.
+
+        Deployment is one of the parts of this process that we could automate. These days in the web development industry, it is 
+        common to set up a version control system like Git on Github, and link that to an automatic deployment service, like Github
+        Actions or Travis. This ensures that every time a change is made in the codebase, it is automatically pushed to servers for 
+        deployment.
+
+        Github Actions and Travis are free for open source repositories, and most website hosting services offer integration with 
+        these, so we decided to write an integration software for iGEM wiki servers, iGEM WikiSync. This would allow iGEM teams to
+        set up continuous integration and continuous deployment for their wikis, making the wiki freeze a little less dreadful. 
+
+        ---
+
+        Web development practices have changed so much over the last few years, that the software powering tools build by previous 
+        iGEM teams quickly became obsolete. 
+
+        modularity
+        separation of concerns
+
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Home")
+    +buttonRight("Design")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"details": "(n.d.). Retrieved on August 09, 2020. from ", "title": "The World Factbook: India. CIA World Factbook.", "type": "webpage", "url": "https://www.cia.gov/library/publications/the-world-factbook/geos/in.html"}, {"authors": "Ansari, M. I., Yadav, A., & Lal, R. (2013). ", "doi": "https://doi.org/10.6026/97320630009464", "journal": "Bioinformation", "numbers": "9(9), 464-465. ", "title": "An-Overview on invertase in sugarcane.", "type": "article"}, {"authors": "Saxena, P., Srivastava, R. & Sharma, M. (2010).", "journal": "Australian Journal of Crop Science.", "numbers": "4, 692-699.", "title": "Impact of cut to crush delay and bio-chemical changes in sugarcane.", "type": "article", "year_published": 2010}, {"authors": "Ghasemnejad, M.H. & Jamshidi, A. (2011).", "journal": "Australian Journal of Basic Applied Sciences.", "numbers": "5(12), 1190-1194.", "title": "Forecast model of sugar loss due to mechanical harvesting of the sugarcane crop.", "type": "article", "year_published": 2011}, {"authors": "Singh, I., & Solomon, S. (2003). ", "doi": "https://doi.org/10.1007/BF02942486", "journal": "Sugar Tech", "numbers": "5(4), 285-288. ", "title": "Post-harvest quality loss of sugarcane genotypes under sub-tropical climate : Deterioration of whole stalk and billets.", "type": "article"}]
