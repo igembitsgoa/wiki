@@ -1,0 +1,40 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Policy"
+    - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+    - var theme = "green"
+
+block article
+    :markdown-it(html)
+
+        One of the main considerations of our team was the public perception of GMOs. Our product is associated with a consumable: sugar. Although, our _E. coli_ are not directly 
+        present in the end product, we have taken great care to design a [three-tier biosafety mechanism](/Safety) for the containment of our chassis.
+
+        We wanted to begin by understanding the policies surrounding GMOs in various countries. Together with OhioState, iGEM Waterloo, UANL and DTU Denmark we gathered and compared 
+        our respective country’s regulations on GMOs and biotechnology products in general. We focused on GMO regulation differences among countries, and loopholes in the current 
+        regulations for different countries. Our purpose was to make the regulatory process more equal among countries and to make a way for iGEM teams to actually implement their 
+        products in their respective countries by navigating the regulatory process. 
+
+        > Attach doc
+
+        Following this, we wanted to take a closer look at how the public [perceives](/Education#Webinars) our product and GMOs. We released the same survey to the general public as well.
+        Our primary question was to find out whether people would consume the sugar that is produced knowing that a genetically modified organism has been in the sugarcane, but not in the 
+        final consumable product. We were happy to note a largely positive response for the same.
+        
+  
+
+
+
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Dance")
+    +buttonRight("Entrepreneurship")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.

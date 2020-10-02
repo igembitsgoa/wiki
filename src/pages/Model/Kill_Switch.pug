@@ -13,66 +13,31 @@ block headVars
 block article
     :markdown-it(html)
 
-        Advances in synthetic biology raise increasingly essential questions about biocontamination and biological containment. 
-        It becomes imperative that genetically-engineered organisms are not deleterious to the ecosystem and that scientists 
-        have adequate control over their production and multiplication. Certain safeguards are developed to ensure all possible safety — 
-        which are then introduced into the genetically modified organism — that compels the organism, in our case the bacteria, to rely on a 
-        “survival” factor to maintain viability in the population. This dependence can be achieved by introducing an auxotrophy for a particular 
-        compound (this is another safety aspect which we have included in our project. Visit the section on Auxotroph model for a detailed 
-        discussion about the same) or by introducing artificial systems, called Kill Switches, into the genetic material that result in cellular 
-        death under certain conditions, such as the activation of a “trigger” caused by environmental changes [Stirling et al., 2017](#citation1).
-
-        We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the close proximity of the
-        system with both agricultural environments and human consumables, it is indispensable that our bacteria include a lethality mechanism. We propose 
-        to use a modified type II ccdA-ccdB toxin-antitoxin system as our kill switch that is activated upon exposure to atmospheric concentrations of oxygen. 
-        A change in the oxygen concentration in the environment results in a sharp increase in the amount of the toxin protein being synthesised which disturbs 
-        the already established equilibrium between the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes. 
-        In the following sections, we explore the functioning of type II toxin-antitoxin systems, with an emphasis on the ccdA-ccdB mechanism, our rationale behind selecting this 
-        particular system, and provide a mathematical description of the processes involved. 
-
-        # Type II Toxin-Antitoxin Systems
-
-        Bacterial toxin-antitoxin systems were characterised in the 1980s as molecular systems encoded in plasmids that ensured the persistence of a plasmid 
-        in the host lineage during replication by making the cells “addicted” to the plasmid so that the only daughter cells that survived were the ones that 
-        contained the plasmid. This phenomenon is also known as postsegragational killing. Most prokaryotic chromosomes contain a number of toxin-antitoxin modules that 
-        consist of a pair of genes that encode for two components: a stable toxin protein and its unstable, labile cognate antitoxin. Toxins are always proteins, 
-        but the antitoxins can either be RNAs (in type I and III systems) or proteins (in type II systems).
-
-        Type II toxin-antitoxin systems use a protein antitoxin to deactivate the toxin protein via a protein-protein interaction. All type II antitoxins are dual-function, 
-        two-domain proteins that consist of a protein-protein interaction domain and a DNA-binding domain. The antitoxin binds to the toxin and inhibits its activity, and 
-        the stable TA complex binds to the operator of the corresponding <dfn>TAS ~ Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses 
-        its transcription [Makarova et al., 2009](#citation2) [Tam & Kline, 1989](#citation3).
-
-        As our product would be introduced into a plant which is later converted into a consumable item, we decided to use the ccdA-ccdB toxin-antitoxin system as the kill switch for its 
-        relative non-toxicity towards humans and more generally, mammalian cells [Reschner et al., 2013](#citation8).
-
-    :markdown-it(html)
-
-        # ccdA-ccdB Toxin-Antitoxin System
-
-        In the ccdA-ccdB system, the two genes are organised in an operon in which the antitoxin ccdA gene is upstream of the toxin ccdB gene. ccdA prevents ccdB toxicity by forming a 
-        tight ccdA-ccdB complex [Afif et al., 2001](#citation5). cdB inhibits DNA replication by poisoning DNA gyrase; more specifically, ccdB prevents DNA gyrase from disentangling DNA 
-        from replication resulting in double stranded breaks in the DNA [Dao-Thi et al., 2005](#citation6). ccdA and ccdB are able to form complexes of various stoichiometries depending 
-        on their molar ratios, however maximal repression occurs at equimolar ratios of ccdA and ccdB [Syed et al., 2012](#citation7).
-
-        Our kill switch is a modified version of the ccdA-ccdB TA system, where the ccdB (toxin) <dfn> CDS ~ Coding Sequence </dfn> is placed under a T7 constitutive promoter, and the ccdA 
-        (antitoxin) <dfn> CDS ~ Coding Sequence </dfn> is placed under an FNR promoter whose activity is controlled by the concentration of oxygen present in the environment. Look at the 
-        [Design](Design#Kill_Switch) page for a detailed description of the kill switch construct. 
-
-        # Reactions Modelled and Parameter Description
+        The first step involved in modelling the kill switch was to carry out a literature survey to understand the functioning of the module at a moelcular level and understand the various mechanisms 
+        and reactions involved.
 
         The kill switch has been designed to be activated by exposure to atmospheric concentrations of oxygen. Oxygen binds to the FNR promoter, thereby suppressing the transcription of the antitoxin 
-        and the absence of which leads to an accumulation of toxin in the cell, leading to cell death. The diagram below provides a detailed account of the processes and the reaction pathways involved. 
+        and the absence of which leads to an accumulation of toxin in the cell, leading to cell death. Our model was based on the mechanism proposed by Gelens et al. [2013](#citation9) with certain modifications
+        that are specific to our construct. Our model involves an **inducible transcription** of the toxin, and whose kinetics are governed by appropriate Hill equations. 
+        The diagram below provides a detailed account of the processes and the reaction pathways involved. 
 
         > Image describing the construct with all its products. 
 
         Six different chemical species have to be accounted for: the toxin mRNA (\\( M_T \\)), the antitoxin mRNA (\\( M_A \\)), the toxin (\\( T \\)), the antitoxin (\\( A \\)), a complex of the form \\( TA \\) (\\( C_1 \\)), 
-        and another complex of the form \\( TAT \\) (\\( C_2 \\)); the concentrations of these species are then expressed by forming ordinary differential equations. 
+        and another complex of the form \\( TAT \\) (\\( C_2 \\)); the concentrations of these species are determined by forming ordinary differential equations. 
 
-        Due to a difference in the time scales involved between binding/unbinding of FNR and oxygen (happening in the order of milliseconds) and transcription/translation (happening in the order of minutes), we assume that the 
-        concentration of the oxidised FNR promoter, \\( [FNR-O_2] \\) remains time-invariant, that is, \\( \frac{d[FNR-O_2]}{dt} = 0 \\). This assumption is called the **quasi-steady-state approximation**, which allows us to express 
-        the concentration of free promoter in terms of the concentration of oxygen and a few other parameters. We have also assumed that the rates of transcription for both the toxin and antitoxin are identical as well as that the decay rates
-        of their respective mRNAs are the same.
+        We make the following assumptions in our model:
+
+        1. Our inducible and repressible mechanisms follow Hill characteristics.
+
+        2. (**Quasi-steady state approximation**) Due to a difference in the time scales involved between binding/unbinding of FNR and oxygen (happening in the order of milliseconds) and transcription/translation (happening in the order of minutes), we assume that the 
+        concentration of the oxidised FNR promoter, \\( [FNR-O_2] \\) remains time-invariant, that is, \\( \frac{d[FNR-O_2]}{dt} = 0 \\).
+
+        3. The transcription rates for both the toxin and antitoxin mRNAs were assumed to be approximately similar.
+
+        4. The initial concentrations of all chemical species was assumed to be zero.
+
+        # Differential Equations
 
         We write the coupled <dfn> ODEs ~ Ordinary Differential Equations </dfn> that describe the reactions illustrated above as follows.
 
@@ -87,58 +52,61 @@ block article
         \end{aligned}
         $$
 
-        The parameters used in the above set of equations along with their description and numerical values are tabulated below.
+        The parameters used in the above set of equations along with their description and numerical values are tabulated below. In the absence of literature on the \\( FNR/O_2 \\) interactions, we have 
+        made educated guessed about some parameter values.  
     
     :markdown-it(html plugins=['markdown-it-multimd-table'])
 
         | Parameter      | Description                                      | Value     | Units                 | Reference                          | 
         | :-------------:| :-----------------------------------------------:| :--------:| :-------------------: | :---------------------------------:|
-        | \\( \rho_A \\) | Transcription rate of the Antitoxin              | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( \rho_T \\) | Transcription rate of the Toxin                  | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( \beta_A \\)| Translation rate of the Antitoxin                | \\(0.139\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( \beta_T \\) | Translation rate of the Toxin                   | \\(0.033\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( \delta_A \\) | Decay rate of the Antitoxin mRNA               | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( \delta_T \\) | Decay rate of the Toxin mRNA                   | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( d_A \\) | Decay rate of the Antitoxin                         | \\(2.8881\cdot10^{-4}\\) | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( d_T \\) | Decay rate of the Toxin                             | \\(0.00115524\\)| \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( F \\) | Decay rate of the Antitoxin in the \\( AT \\) complex | \\(0.2\\)       |                     | [Gelens et. al., 2013](#citation9)|
-        | \\( \alpha_c \\) | Rate of complex formation                      | \\(2\cdot10^6\\)      | \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( \theta_c \\) | Rate of complex decay                          | \\(7.14972\cdot10^{-6}\\)| \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation9)|
-        | \\( k_D \\)     | Dissociation constant for FNR and \\( O_2 \\)   | \\(2.5\cdot10^{-3}\\)         | \\(\text{s}^{-1}\\) | |
+        | \\( \rho_A \\) | Transcription rate of the Antitoxin              | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( \rho_T \\) | Transcription rate of the Toxin                  | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( \beta_A \\)| Translation rate of the Antitoxin                | \\(0.139\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( \beta_T \\) | Translation rate of the Toxin                   | \\(0.033\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( \delta_A \\) | Decay rate of the Antitoxin mRNA               | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( \delta_T \\) | Decay rate of the Toxin mRNA                   | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( d_A \\) | Decay rate of the Antitoxin                         | \\(2.8881\times 10^{-4}\\) | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( d_T \\) | Decay rate of the Toxin                             | \\(0.00115524\\)| \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( F \\) | Decay rate of the Antitoxin in the \\( AT \\) complex | \\(0.2\\)       |         -            | [Gelens et. al., 2013](#citation1)|
+        | \\( \alpha_c \\) | Rate of complex formation                      | \\(2\times 10^6\\)      | \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\( \theta_c \\) | Rate of complex decay                          | \\(7.14972\times 10^{-6}\\)| \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+        | \\(  C_N \\)     | Plasmid copy number                            | 16                                    | -| |
+        | \\( k_D \\)     | Dissociation constant for FNR and \\( O_2 \\)   | \\(800\times10^{-6}\\)         | \\(\text{s}^{-1}\\) | [Sutton, V. R., et al., 2012](#citation2) |
          [Table 1: Model paramters and their numerical values]
 
     :markdown-it(html)
-        As we had no lab access, we could not verify the values of parameters through experimental analyses. The next step would be to solve the above ODEs numerically to obtain the concentrations of free toxin and antitoxin. 
+
+        # Simulations of the model
+
+        As we had no lab access, we could not verify the values of parameters through experimental analysis; however, we have designed experiments that we would have conducted to verify the parameter values through curve fitting. 
+        These experiments can be found on our [experiments](/Experiments) page. The next step would be to solve the above ODEs numerically to obtain the concentrations of free toxin and antitoxin. 
         
-        To activate the kill switch, we require a "trigger", or a change in the surrounding oxygen concentration. This trigger was achieved by modelling the oxygen concentration as a step function, \\( O(t) \\), that represents the number of oxygen molecules in the environment (cell volume). 
-        $$
-            O(t) = 
-            \begin{cases}
-                3.570\times10^{-10}, & \text{if $t < 300$} \\\\
-                9.735\times10^{3}, & \text{if $t > 300$}
-            \end{cases}
-        $$
-        The function is constructed such that we activate the kill switch at the \\(t = 300 \text{ min}\\) mark. This time instance was selected to allow us to observe the steady state concentrations of both, the toxin and antitoxin. The jump 
-        in the concentration corresponds to the exposure of the cell to an aerobic environment, with atmospheric levels of oxygen.
+        To activate the kill switch, we require a "trigger", or a change in the surrounding oxygen concentration. This trigger was achieved by modelling the oxygen concentration as a step function, \\( O(t) \\), that represents 
+        the concentration of oxygen in the environment of the cell. This function can be expressed as
 
-        The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](Appendix) algorithm and the concentrations of free ccdA and ccdB were plotted against time. We also included the concentrations of the tow complexes for good measure.
+        $$
+            O(t) = O_1H(300 - t) + O_2H(t - 300)
+        $$
 
-    - var imgpath = "../" + require("../../assets/img/KillSwitch--TAGraph.jpeg")["default"]
-    +image(1, imgpath, "Plot of the concnetrations of ccdA, ccdB and TA complexes versus time")
+        where \\( O_1 \text{ and } O_2\\) are the oxygen concentrations inside and outside the sugarcane matrix, respectively and \\( H(x) \\) is the Heaviside step function.
+
+        This function was constructed such that the kill switch would be activated at the \\(t = 300 \text{ min}\\) mark. This time instance was selected to allow us to observe the steady state concentrations of both, the toxin and antitoxin. The jump 
+        in the concentration, given by the point of discontinuity in the step function, corresponds to the exposure of the cell to an aerobic environment, with atmospheric levels of oxygen.
+
+        The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](Appendix) algorithm and the concentrations of free ccdA and ccdB were plotted against time.
+
+    - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchGraph.png")["default"]
+    +image(1, imgpath, "Simulation of the kill switch construct")
 
     :markdown-it(html)
 
-        > The image of the graph is temporary, I'll add a better one later
+        From the graph, it is seen that around the \\(t = 300 \text{ min}\\) mark (when the kill switch is activated), the concentration of free ccdA begins to drop, reaches a minimum and that of free ccdB beings to rise. 
+        After a while, the only major chemical species in the cellular system are the toxin, ccdB and highly stable complexes. Therefore, the toxin accumulates in the cell and reaches a high enough concentration to kill it.
 
-        The steady-state concentration of ccdA is about \\( 0.25 \text{ mM}\\) . Therefore, any dynamics that lead to a higher steady state value of ccdB (which is higher than that of ccdA) would lead to 
-        an accumulation of toxin that would "kill" the cell. 
-
-        This change is precisely brought out by changing the oxygen concentration. From the graph, it is seen that around the \\(t = 300 \text{ min}\\) mark, the concentration of ccdA begins to drop and that of ccdB beings to rise. After a while, the only major 
-        chemical species in the kill switch system is the toxin, ccdB. This accumulates in the cell, surpassing the stationary state concentration of ccdA, and reaches a high enough concentration to kill the cell.
-
+        # Sensitivity Analysis 
 
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 
 prepend citations
-    - var citations = [{"authors": "Stirling, F., Bitzan, L., O-Keefe, S., Redfield, E., Oliver, J. W. K., Way, J., & Silver, P. A. (2017). ", "doi": "https://doi.org/10.1016/j.molcel.2017.10.033", "journal": "Molecular Cell", "numbers": "68(4), 686-697.e3. ", "title": "Rational Design of Evolutionarily Stable Microbial Kill Switches.", "type": "article"}, {"authors": "Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). ", "doi": "https://doi.org/10.1186/1745-6150-4-19", "journal": "Biology Direct", "numbers": "4(1), 19. ", "title": "Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems and related mobile stress response systems in prokaryotes.", "type": "article"}, {"authors": "Tam, J. E., & Kline, B. C. (1989). ", "doi": "https://doi.org/10.1007/BF00261153", "journal": "Molecular and General Genetics MGG", "numbers": "219(1-2), 26-32. ", "title": "The F plasmid ccd autorepressor is a complex of CcdA and CcdB proteins.", "type": "article"}, {"authors": "Fraikin, N., Goormaghtigh, F., & Van Melderen, L. (2020). ", "doi": "https://doi.org/10.1128/JB.00763-19", "journal": "Journal of Bacteriology", "numbers": "202(7). ", "title": "Type II Toxin-Antitoxin Systems: Evolution and Revolutions.", "type": "article"}, {"authors": "Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). ", "doi": "https://doi.org/10.1046/j.1365-2958.2001.02492.x", "journal": "Molecular Microbiology", "numbers": "41(1), 73-82. ", "title": "The ratio between CcdA and CcdB modulates the transcriptional repression of the ccd poison-antidote system.", "type": "article"}, {"authors": "Dao-Thi, M.-H., Van Melderen, L., De Genst, E., Afif, H., Buts, L., Wyns, L., & Loris, R. (2005). ", "doi": "https://doi.org/10.1016/j.jmb.2005.03.049", "journal": "Journal of Molecular Biology", "numbers": "348(5), 1091-1102. ", "title": "Molecular Basis of Gyrase Poisoning by the Addiction Toxin CcdB.", "type": "article"}, {"authors": "Syed, M. A., & L vesque, C. M. (2012). ", "doi": "https://doi.org/10.1139/w2012-025", "journal": "Canadian Journal of Microbiology", "numbers": "58(5), 553-562. ", "title": "Chromosomal bacterial type II toxin-antitoxin systems.", "type": "article"}, {"authors": "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C., Michel, B., Nauwynck, H., Xhonneux, F., Pr\u00e9at, V., Vanderplasschen, A. & Szpirer, C. (2013).", "doi": "https://doi.org/10.4161/hv.25086", "journal": "Human Vaccines & Immunotherapeutics", "numbers": "9(10), 2203-2210. ", "title": "Use of Staby\u00ae technology for development and production of DNA vaccines free of antibiotic resistance gene.", "type": "article"}, {"authors": "Gelens, L., Hill, L., Vandervelde, A., Danckaert, J., & Loris, R. (2013). ", "doi": "https://doi.org/10.1371/journal.pcbi.1003190", "journal": "PLoS Computational Biology", "numbers": "9(8), e1003190. ", "title": "A General Model for Toxin-Antitoxin Module Dynamics Can Explain Persister Cell Formation in E. coli.", "type": "article"}]
+    - var citations = [{"authors": "Gelens, L., Hill, L., Vandervelde, A., Danckaert, J., & Loris, R. (2013). ", "doi": "https://doi.org/10.1371/journal.pcbi.1003190", "journal": "PLoS Computational Biology", "numbers": "9(8), e1003190. ", "title": "A General Model for Toxin-Antitoxin Module Dynamics Can Explain Persister Cell Formation in E. coli.", "type": "article"}, {"authors": "Sutton, V. R., Mettert, E. L., Beinert, H., & Kiley, P. J. (2004). ", "doi": "https://doi.org/10.1128/jb.186.23.8018-8025.2004", "journal": "Journal of Bacteriology", "numbers": "186(23), 8018-8025. ", "title": "Kinetic Analysis of the Oxidative Conversion of the [4Fe-4S]2+ Cluster of FNR to a [2Fe-2S]2+ Cluster.", "type": "article"}]
