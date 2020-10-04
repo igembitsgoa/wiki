@@ -5,8 +5,11 @@ include mixins
 nav#main-nav
   .navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transparent
 
-    a.navbar-brand.d-lg-inline-block(href=urlPrefix) Sugar
-      span Gain
+    a.navbar-brand(href=urlPrefix) 
+      i.navbar-logo
+      span 
+        | Sugar
+        strong Gain
 
     .controls.h-100.d-flex.align-items-center
       #themeSwitchWrapper.align-items-center

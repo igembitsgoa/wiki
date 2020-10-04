@@ -5,7 +5,7 @@
 $dark-nav-background: #262626;
 $theme-slider-light: #ccc;
 $nav-menu-items: #e3e3e3;
-$theme-slider-dark: #5D5D5D;
+$theme-slider-dark: #5d5d5d;
 $theme-switcher-green: #0fc488;
 $theme-switcher-yellow: #ffdb59;
 $theme-switcher-blue: #1faaad;
@@ -43,12 +43,29 @@ $darkblue: darken($blue, 30%);
   margin-left: 1.5rem;
   transition: transform 0.3s;
   color: white;
+  display: flex;
+  align-items: center;
 
-  span {
-    font-weight: 600;
+  i.navbar-logo {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem; 
+    background: url("../assets/img/logo-navbar.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;;
   }
 
-  &:hover, &:visited {
+  span {
+    display: inline-block;
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &:hover,
+  &:visited {
     color: white;
   }
 }

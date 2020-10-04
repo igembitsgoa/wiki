@@ -80,6 +80,11 @@
   .navbar-brand {
     font-size: 1.75rem;
     margin-left: 0.75rem;
+
+    i.navbar-logo {
+      height: 2rem;
+      width: 2rem;
+    }
   }
 
   #menuSwitch {
@@ -152,5 +157,9 @@
   .navbar-brand {
     font-size: 1.5rem;
     margin-left: 0.5rem;
+    
+    i.navbar-logo {
+      margin-right: 0.5rem;
+    }
   }
 }
