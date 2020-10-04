@@ -7,22 +7,16 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   }
   .card-header {
-    padding: 0.75rem 0.5rem;
-
-    &:hover, 
-    &:focus {
-      background-color: $green-background;
-      button {
-        text-decoration: none;
-        background-color: $green-background;
-        color: $whitey;
-      }
-    }
+    padding: 0;
 
     button {
-      &:not(.collapsed) {
+      padding: 0.75rem 0.5rem;
+      &:hover,
+      &:not(.collapsed),
+      &:focus {
         background-color: $green-background;
         color: $whitey;
+        text-decoration: none;
       }
     }
   }
