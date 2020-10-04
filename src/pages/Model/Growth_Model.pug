@@ -16,37 +16,24 @@ block article
         # Motivation
 
         Our project rests on the premise that our genetically modified organism — *Escherichia coli*, was able to replicate 
-        and survive in the sugarcane system, at least long enough to serve its purpose. Fortunately, we were able to perform the 
-        experiments required to support these claims in a laboratory setting. As it would have been rather difficult to measure 
-        the growth of *E. coli* directly inside the sugarcane matrix, we extracted the juice from a sugarcane plant and cultured 
-        our bacterium in this medium and performed optical density (OD at 600nm) measurements on the liquid at regular intervals 
-        of time, specifically one hour intervals. This experiment was performed three times, and as a consequence three sets of 
-        optical density measurements were obtained. The averages of the three were calculated and are tabulated below.
+        and survive in the sugarcane system. Fortunately, we were able to perform the experiments required to support these claims 
+        in a laboratory setting. As it would have been rather difficult to measure the growth of *E. coli* directly inside the sugarcane 
+        matrix, we extracted the juice from a sugarcane plant and cultured our bacteria in this medium and performed optical density (OD at 600nm) 
+        measurements on the liquid at one hour intervals of time. This experiment was performed three times, and therefore, three sets of optical density 
+        measurements were obtained.
 
         # Experimental Data 
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | **Time Elapsed** (h)      | **Optical Density** (at 600nm)     | 
-        | :-----------:  | :-----------: |
-        | 1            | 0.001         |
-        | 2            | 0.019         |
-        | 3            | 0.050         |                                              
-        | 4            | 0.042         |
-        | 5            | 0.049         |
-        | 6            | 0.059         |
-        | 7            | 0.095         |
-        | 8            | 0.072         |
-        
-        [Table 1: Optical density of the culture at 600nm at different times]
-
     - var imgpath = "../" + require("../../assets/img/Growth_Model--ODScatterPlot.png")["default"]
-    +image(1, imgpath, "A scatterplot showing the variation of OD versus time")
+    +image(1, imgpath, "A scatterplot showing the variation of OD versus time (three runs)")
 
     :markdown-it(html)
 
         The optical density was subsequently converted to population size (in the units cfu/mL) using the conversion ratio 
-        \\( 1 \text{OD} \\) = \\( 10^{-6} \text{cfu/mL} \\). Then, the data was converted to the semi-log domain by calculating 
+        \\( 1 \text{ OD} \\) = \\( 10^{-6} \text{cfu/mL} \\). Then, the data was converted to the semi-log domain by calculating 
         the logarithm (base 10) of the optical density data while retaining the time series data as it is.
+
+        We calculated the average of the three runs and used that data for further analysis.
 
         # Mathematical Model
 
@@ -92,7 +79,7 @@ block article
         we obtain the following growth function:
 
         $$
-            N(t) = \frac{4.9777}{1 + 0.6592\cdot exp(-1.2017t)}
+            N(t) = \frac{5.1644}{1 + 8.8751\cdot exp(-1.2017t)}
         $$
 
     - var imgpath = "../" + require("../../assets/img/Growth_Model--GrowthPrediction.png")["default"]
@@ -101,8 +88,6 @@ block article
     :markdown-it(html)
         With this model (and experiment), we have shown that our organism is able to survive and replicate within the sugarcane matrix with a nontrivial growth rate and 
         that it reaches a sufficiently large population size. We have also obtained a closed-form growth function that models the growth of our bacteria in the sugarcane system.
-
-        The codebase for this model can be found [here](https://github.com/igembitsgoa/modelling).
 
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
