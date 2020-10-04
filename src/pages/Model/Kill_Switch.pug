@@ -17,7 +17,7 @@ block article
         and reactions involved.
 
         The kill switch has been designed to be activated by exposure to atmospheric concentrations of oxygen. Oxygen binds to the FNR promoter, thereby suppressing the transcription of the antitoxin 
-        and the absence of which leads to an accumulation of toxin in the cell, leading to cell death. Our model was based on the mechanism proposed by Gelens et al. [2013](#citation9) with certain modifications
+        and the absence of which leads to an accumulation of toxin in the cell, leading to cell death. Our model was based on the mechanism proposed by Gelens et al. [2013](#citation1) with certain modifications
         that are specific to our construct. Our model involves an **inducible transcription** of the toxin, and whose kinetics are governed by appropriate Hill equations. 
         The diagram below provides a detailed account of the processes and the reaction pathways involved. 
 
@@ -93,7 +93,7 @@ block article
         This function was constructed such that the kill switch would be activated at the \\(t = 300 \text{ min}\\) mark. This time instance was selected to allow us to observe the steady state concentrations of both, the toxin and antitoxin. The jump 
         in the concentration, given by the point of discontinuity in the step function, corresponds to the exposure of the cell to an aerobic environment, with atmospheric levels of oxygen.
 
-        The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](Appendix) algorithm and the concentrations of free ccdA and ccdB were plotted against time.
+        The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](/Appendix) algorithm and the concentrations of free ccdA and ccdB were plotted against time.
 
     - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchGraph.png")["default"]
     +image(1, imgpath, "Simulation of the kill switch construct")
