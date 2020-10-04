@@ -1,16 +1,20 @@
 #collapsibleSections {
+  transition: all 0.3s ease;
   h2 {
     margin-top: 0;
   }
   .card {
     margin: 1.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: none;
+    transition: all 0.3s ease;
   }
   .card-header {
     padding: 0;
 
     button {
-      padding: 0.75rem 0.5rem;
+      transition: all 0.3s ease;
+      padding: 0.75rem 1rem;
       &:hover,
       &:not(.collapsed),
       &:focus {
@@ -51,5 +55,63 @@
 
   .card-body {
     background-color: $whitey;
+  }
+}
+
+body.theme-green {
+  #collapsibleSections {
+    .card-header {
+      button {
+        &:hover,
+        &:not(.collapsed),
+        &:focus {
+          background-color: $green-background;
+        }
+      }
+    }
+
+    button {
+      color: $green-background;
+    }
+  }
+}
+
+
+body.theme-yellow {
+  #collapsibleSections {
+    .card-header {
+      button {
+        &:hover,
+        &:not(.collapsed),
+        &:focus {
+          background-color: $yellow;
+          color: $dark-body;
+        }
+      }
+    }
+
+    button {
+      color: darken($yellow, 20%);
+    }
+  }
+}
+
+
+
+body.theme-blue {
+  #collapsibleSections {
+    .card-header {
+      button {
+        &:hover,
+        &:not(.collapsed),
+        &:focus {
+          background-color: $blue;
+        }
+      }
+    }
+
+    button {
+      color: $blue;
+    }
   }
 }

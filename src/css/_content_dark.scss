@@ -2,11 +2,11 @@
  * Dark Mode for Contents
  **/
 
- /**
+/**
  * Dark mode for green pages
  **/
 
-body.dark.theme-green{
+body.dark.theme-green {
   background-color: $dark-body;
 
   .sidebar #contents li a {
@@ -99,33 +99,41 @@ body.dark.theme-green{
   }
 
   #collapsibleSections {
+    .card {
+      background-color: transparent;
+    }
 
     .card-header {
       background-color: rgb(52, 52, 52);
-      h2 {
-        margin-top: 0;
-      }
     }
 
     .card-body {
-      background-color: grey;
+      background-color: $dark-body;
+      color: white;
     }
 
     button {
+      border-color: $table-border-dark;
+
+      &:hover,
+      &:not(.collapsed),
+      &:focus {
+        background-color: darken($green-background, 5%);
+        color: $dark-body;
+      }
+
       i {
         filter: invert(1);
       }
     }
   }
-  
 }
-
 
 /**
  * Dark mode for yellow pages
  **/
 
-body.dark.theme-yellow{
+body.dark.theme-yellow {
   background-color: $dark-body;
 
   .sidebar #contents li a {
@@ -218,32 +226,41 @@ body.dark.theme-yellow{
   }
 
   #collapsibleSections {
+    .card {
+      background-color: transparent;
+    }
 
     .card-header {
       background-color: rgb(52, 52, 52);
-      h2 {
-        margin-top: 0;
-      }
     }
 
     .card-body {
-      background-color: grey;
+      background-color: $dark-body;
+      color: white;
     }
 
     button {
+      border-color: $table-border-dark;
+
+      &:hover,
+      &:not(.collapsed),
+      &:focus {
+        background-color: darken($yellow, 5%);
+        color: $dark-body;
+      }
+
       i {
         filter: invert(1);
       }
     }
   }
-  
 }
 
 /**
  * Dark mode for blue pages
  **/
 
-body.dark.theme-blue{
+body.dark.theme-blue {
   background-color: $dark-body;
 
   .sidebar #contents li a {
@@ -333,23 +350,32 @@ body.dark.theme-blue{
   }
 
   #collapsibleSections {
+    .card {
+      background-color: transparent;
+    }
 
     .card-header {
       background-color: rgb(52, 52, 52);
-      h2 {
-        margin-top: 0;
-      }
     }
 
     .card-body {
-      background-color: grey;
+      background-color: $dark-body;
+      color: white;
     }
 
     button {
+      border-color: $table-border-dark;
+
+      &:hover,
+      &:not(.collapsed),
+      &:focus {
+        background-color: darken($blue, 5%);
+        color: $dark-body;
+      }
+
       i {
         filter: invert(1);
       }
     }
   }
-  
 }
