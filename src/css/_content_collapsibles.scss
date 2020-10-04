@@ -1,0 +1,61 @@
+#collapsibleSections {
+  h2 {
+    margin-top: 0;
+  }
+  .card {
+    margin: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .card-header {
+    padding: 0.75rem 0.5rem;
+
+    &:hover, 
+    &:focus {
+      background-color: $green-background;
+      button {
+        text-decoration: none;
+        background-color: $green-background;
+        color: $whitey;
+      }
+    }
+
+    button {
+      &:not(.collapsed) {
+        background-color: $green-background;
+        color: $whitey;
+      }
+    }
+  }
+
+  button {
+    color: $green-background;
+    font-size: 1.2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    i {
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease;
+    }
+    .icon-dropdown {
+      background-image: url(../assets/icons/down-arrow.svg);
+    }
+
+    &:not(.collapsed) {
+      i {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .card-body {
+    background-color: $whitey;
+  }
+}
