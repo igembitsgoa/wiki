@@ -8,7 +8,7 @@ html(lang="en")
     body
         include templates/nav.pug
         header.d-flex.justify-content-center.align-items-center
-            video(controls)
+            video(controls width=1080)
                 source(src= urlPrefix + require("./assets/video/promo-1080p.mp4")['default'].substr(2), type='video/mp4')
         section#introduction.white
             .section-animation
