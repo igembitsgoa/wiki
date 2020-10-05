@@ -14,3 +14,12 @@ import "./js/main";
 //         }, 250);
 //     });
 // });
+
+// a terrible way to fix the github.io /wiki/ problem
+if (window.location.href.includes("github.io")) {
+    $("source").each(function () {
+      var link = $(this).attr("src").replace('wiki/..', 'wiki');
+      $(this).attr("href", link);
+    });
+  }
+  
