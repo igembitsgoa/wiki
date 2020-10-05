@@ -36,7 +36,7 @@ if (window.location.href.includes("igem.org")) {
 }
 
 // toggle navbar class on menu switch
-$("#menuSwitch").on('click', function () {
+$("#menuSwitch").click(function () {
   $("#main-nav").toggleClass("menu-open");
 
   if ($(".navbar").hasClass("nav-colored")) {
@@ -86,7 +86,7 @@ $(document).keyup(function (e) {
 });
 
 // show nav menu items on hover
-$("#nav-headings > ul > li").on('hover', 
+$("#nav-headings > ul > li").hover(
   // handler in
   function () {
     if (getWidth() > sm) {
