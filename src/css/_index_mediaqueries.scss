@@ -1,4 +1,15 @@
+@include respond-above(xxl) {
+  header {
+    height: 100vh;
+  }
+}
+
 @include respond-below(xxl) {
+
+  header {
+    height: max-content;
+  }
+
   section {
     .container {
       max-width: 1300px;
