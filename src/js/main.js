@@ -7,6 +7,7 @@ var menuToggle = document.getElementById("menuToggle");
 var scrollHeight = 100; // make navbar colored/hidden beyond this
 var sm = 768; // small viewport width
 var xs = 576; // medium viewport width
+var xl = 1400; // xl viewport width
 
 // function to get width of viewport
 function getWidth() {
@@ -17,7 +18,8 @@ function getWidth() {
     document.documentElement.offsetWidth,
     document.documentElement.clientWidth
   );
-}
+};
+window.getWidth = getWidth;
 
 // reset iGEM
 if (window.location.href.includes("igem.org")) {
@@ -34,7 +36,7 @@ if (window.location.href.includes("igem.org")) {
 }
 
 // toggle navbar class on menu switch
-$("#menuSwitch").click(function () {
+$("#menuSwitch").on('click', function () {
   $("#main-nav").toggleClass("menu-open");
 
   if ($(".navbar").hasClass("nav-colored")) {
@@ -84,7 +86,7 @@ $(document).keyup(function (e) {
 });
 
 // show nav menu items on hover
-$("#nav-headings > ul > li").hover(
+$("#nav-headings > ul > li").on('hover', 
   // handler in
   function () {
     if (getWidth() > sm) {
