@@ -9,7 +9,7 @@ html(lang="en")
         include templates/nav.pug
         header.d-flex.justify-content-center.align-items-center
             video(controls)
-                source(src=require("./assets/video/promo-1080p.mp4")['default'], type='video/mp4')
+                source(src= urlPrefix + require("./assets/video/promo-1080p.mp4")['default'], type='video/mp4')
         section#introduction.white
             .section-animation
             .container
