@@ -5,7 +5,7 @@ block headVars
     - var requireMathJax = false
     //- You can just write the filename here and it will be resolved to 'require'.
     //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/WikiSync--header.jpg")["default"]
     - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
     - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
     - var theme = "green"
@@ -54,50 +54,55 @@ block article
 
         # iGEM WikiSync
 
-        Our Python package, iGEM WikiSync allows iGEM teams to set up continuous integration and continuous deployment for their 
-        wikis, making the wiki freeze a little less dreadful. It lets teams work on their wiki locally, using whichever web 
-        development framework they're familiar with, and upload the code to iGEM servers for deployment, without uploading a 
-        single file manually.
+        Our Python package, iGEM WikiSync allows iGEM teams to set up and continuous deployment for their wikis, making the 
+        wiki freeze a little less dreadful. It lets teams work on their wiki locally, using whichever web development framework
+        they're familiar with, and upload the code to iGEM servers for deployment, without uploading a single file manually.
 
         It does this in the following way:
-        1. WikiSync looks for all non-code files (images, videos, PDFs, etc.), renames them according to iGEM specification, and uploads them to iGEM servers.
-        2. It then goes through every single code file (HTML, CSS, JavaScript), scanning them for links.
+        1. WikiSync looks for all assets (images, videos, PDFs, etc.), renames them according to iGEM specification, and uploads them 
+        to iGEM servers.
+        2. It then goes through the code (HTML, CSS, JavaScript), scanning it for links.
         3. It replaces all local links to iGEM.org URLs where the files have been uploaded.
-        4. Finally, all code files are also uploaded to iGEM servers, the team wiki is deployed.
-
-        // write about password security
+        4. Finally, all code files are also uploaded to iGEM servers and the team wiki is deployed.
 
         WikiSync keeps track of the files uploaded in each run, so only changes are uploaded the next time it runs. It also checks code for internal
         broken links and shows warnings.
 
+        In order to access files on iGEM servers, WikiSync requires the user ID and password of a team member. These credentials are 
+        taken in as environment variables, so that they never have to be stored in plain text, and are discarded when the terminal 
+        session ends. When run as part of a CI/CD workflow on Github Actions or Travis, user credentials are stored as "secrets" in 
+        the repository, and CI providers ensure that they are never displayed publicly and cannot be accessed by anyone apart from the
+        user themselves.
+
+        WikiSync is available at the following links:
+        * Github repository: [https://github.com/igembitsgoa/igem-wikisync](https://github.com/igembitsgoa/igem-wikisync)
+        * Documentation: [https://igem-wikisync.readthedocs.io](https://igem-wikisync.readthedocs.io)
+        * PyPI package: [https://pypi.org/project/igem-wikisync/](https://pypi.org/project/igem-wikisync/)
+
         # iGEM WikiSync Github Action
 
-        By automating uploads, iGEM WikiSync allows teams to save dozens of hours over the course of their iGEM experience. This is made possible by 
-        using WikiSync to set up a continuous integration and continuous deployment routine on the wiki's version control repository, such as Github. 
-        For example, for our own wiki, we set up continuous deployment using a Github Action we wrote for iGEM WikiSync. This allows teams to set up 
-        Github Actions for their wiki, so that everytime changes are made in the codebase, they're automatically sent to iGEM servers. All that is required
-        is a `git push`. 
+        By automating uploads, iGEM WikiSync allows teams to save dozens of hours over the course of their iGEM experience. This is
+        made possible by using WikiSync to set up a continuous integration and continuous deployment routine on the wiki's version 
+        control repository, such as on Github. For example, for our own wiki, we set up continuous deployment using a Github Action we
+        wrote for iGEM WikiSync that runs every two days, or as requested manually.
+        
+        iGEM WikiSync Github Action is a Github Actions plugin that allows teams to easily set up a Github Actions workflow
+        and integrate iGEM WikiSync into their wiki, so that everytime changes are made in the codebase, they're automatically
+        sent to iGEM servers. All that is required is a `git push`. 
 
-        In order to prevent iGEM servers from running for every small change, we decided to schedule this Action for every two days.
+        Setting it up is a really simple process. Teams can either write their own CI workflows and include the plugin in just a few 
+        lines of code, or they can use our readymade recipes for wikis built with webpack, such as those made with our iGEM Wiki 
+        Starter Pack. All they have to do is download and include a file in their wiki repository and enable Github Actions for their
+        wiki. 
 
-        The Action can be found [here](https://github.com/marketplace/actions/igem-wikisync) along with usage instructions and common use cases.
+        Since this Actions plugin behind-the-scenes runs iGEM WikiSync itself, it also needs access to iGEM.org credentials of a team
+        member. These credentials are stored as "secrets" in the Github repository, so that they are never accessible to anyone apart
+        from the user themselves. In public build logs, they are replaced with asterisks (*).
 
-        // write about password security
+        The Action can be found [here](https://github.com/marketplace/actions/igem-wikisync) along with usage instructions and common
+        use cases.
 
         # iGEM Wiki Starter Pack
-
-
-
-
-
-
-        ---
-
-        Web development practices have changed so much over the last few years, that the software powering tools build by previous 
-        iGEM teams quickly became obsolete. 
-
-        modularity
-        separation of concerns
 
 
 append buttons
