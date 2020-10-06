@@ -1,12 +1,31 @@
 #1
-- doi: https://doi.org/10.1139/w2012-025
+- doi: https://doi.org/10.3390/s130505777
 #2
-- doi: https://doi.org/10.1186/1745-6150-4-19
+- article:
+    authors: "Pereira, L. F. M., Ferreira, V. M., Oliveira, N. G., Sarmento, P. L. V. S., Endres, L. & Teodoro, I."
+    year_published: 2017
+    title: "Sugars levels of four sugarcane genotypes in different stem portions during the maturation phase."
+    journal: "Annals of the Brazilian Academy of Sciences"
+    numbers: " 89(2), 1231-1242."
 #3
-- doi: https://doi.org/10.1007/BF00261153
+- doi: https://doi.org/10.1016/j.fob.2014.03.013
 #4
-- doi: https://doi.org/10.4161/hv.25086
+- doi: https://doi.org/10.1139/w2012-025
 #5
-- doi:  https://doi.org/10.1046/j.1365-2958.2001.02492.x
+- doi: https://doi.org/10.1186/1745-6150-4-19
 #6
+- doi: https://doi.org/10.1007/BF00261153
+#7
+- doi: https://doi.org/10.4161/hv.25086
+#8
+- doi:  https://doi.org/10.1046/j.1365-2958.2001.02492.x
+#9
 - doi: https://doi.org/10.1016/j.jmb.2005.03.049
+#10
+- article:
+    authors: "Bieleski R. L."
+    year_published: 1960
+    title: "The physiology of sugar-cane. II."
+    journal: "Australian Journal of Biological Science"
+    numbers: "13, 203-220."
+

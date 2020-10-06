@@ -8,10 +8,13 @@ block headVars
     - var backgroundImage = "" + require("../assets/img/Design--jean-wimmerlin.jpg")["default"]
     - var backgroundAttribution = "Photo by Jean Wimmerlin on Unsplash"
     - var backgroundAttributionLink = "https://unsplash.com/photos/tjZ-g9VnT7U"
-    - var theme = "yellow"
+    - var theme = "blue"
 
 block article
     :markdown-it(html)
+
+        # Overview 
+
         We aim to target invertase, the enzyme present in the sugarcane stem which is responsible for the degradation of sucrose into glucose and fructose. The project has been structured 
         into the following major modules:
          - A fructose-regulated anti-invertase construct
@@ -25,20 +28,20 @@ block article
         The primary product of the action of the invertase enzyme is fructose and glucose. Hence the concentration of fructose inside the sugarcane stem is proportional to the activity of invertase 
         and consequently the amount of invertase present. We employed this dynamic concentration of fructose to modulate the expression of anti-invertase.
 
-        We designed a genetic construct based on a biosensor created by Paris-Saclay (link). A biosensor is a module that combines biological molecules as the recognition element with a physical transducer 
-        or repressor and outputs quantitative data corresponding to the biomolecule’s concentration. Generally, these specific interactions between the ligand and the transducer are used to determine secretion 
+        We designed a genetic construct based on a biosensor created by Paris-Saclay ([BBa_K2448032](http://parts.igem.org/Part:BBa_K2448032)). A biosensor is a module that combines biological molecules as the recognition element with a physical transducer 
+        or repressor and outputs quantitative data corresponding to the biomolecule’s concentration [Park, M et al., 2013](#citation1). Generally, these specific interactions between the ligand and the transducer are used to determine secretion 
         or production rates in the form of an electrochemical and/or optical signal. In our case, we coupled the biosensor to the expression of anti-invertase.
 
         ## pFruB - Cra (FruR) Regulation
 
         The enterobacterial catabolite repressor/activator (Cra) protein or the FruR protein is a pleiotropic regulator that controls expression of a large number of metabolic genes in response to the flux of 
         glycolytic intermediates in various natural biological systems. The regulator is able to interact with specifically fructose-1-phosphate and regulate the action of pFruB promoter (which is a common promoter 
-        usually found in the fructose operon). 
+        usually found in the fructose operon) [Pereira, L.F.M. et al., 2016](#citation2) [Chavarría, M et al., 2014](#citation3). 
 
         ## Mechanism
 
-        The FruR expression is under an IPTG-induced pTac promoter which is induced before packaging the bacteria in our polymer inoculant. FruR is a transcription factor with an affinity for fructose-1-phosphate which 
-        is produced from the D-fructose formed after invertase action. The FruR gene encoding for the FruR protein prevents the transcription of the regulated promoters. pFruB is the promoter region following FruR and 
+        The FruR expression is under an IPTG-induced pLac promoter [(BBa_K3156000)](http://parts.igem.org/Part:BBa_K3156000) which is induced before packaging the bacteria in our polymer inoculant. FruR is a transcription factor with an affinity for fructose-1-phosphate which 
+        is produced from the D-fructose formed after invertase action. The FruR gene [(BBa_K2448009)](http://parts.igem.org/Part:BBa_K2448009) encoding for the FruR protein prevents the transcription of the regulated promoters. pFruB [(BBa_K2448017)](http://parts.igem.org/Part:BBa_K2448017) is the promoter region following FruR and 
         is repressed by the FruR transcription factor, in the absence of D-Fructose. This prevents any further transcription, and no anti-invertase protein is produced. If D-Fructose is present in the cell, 
         the FruR transcription factor will bind preferentially to it and thus be inactivated. This means that the repression of the related promoter pFruB will be released, enabling the transcription of the 
         anti-invertase protein which can then act on invertase and prevent the inversion of sucrose.
@@ -68,23 +71,23 @@ block article
         Bacterial toxin-antitoxin systems were characterised in the 1980s as molecular systems encoded in plasmids that ensured the persistence of a plasmid in the host lineage during replication by 
         making the cells “addicted” to the plasmid so that the only daughter cells that survived were the ones that contained the plasmid. This phenomenon is also known as post-segregational killing. 
         Most prokaryotic chromosomes contain a number of toxin-antitoxin modules that consist of a pair of genes that encode for two components: a stable toxin protein and its unstable, labile cognate 
-        antitoxin. Toxins are always proteins, but the antitoxins can either be RNAs (in type I and III systems) or proteins (in type II systems) [Syed, M. & Lévesque, C., 2012](#citation1).
+        antitoxin. Toxins are always proteins, but the antitoxins can either be RNAs (in type I and III systems) or proteins (in type II systems) [Syed, M. & Lévesque, C., 2012](#citation4).
 
         Type II toxin-antitoxin systems use a protein antitoxin to deactivate the toxin protein via protein-protein interaction. All type II antitoxins are dual-function, two-domain proteins that consist 
         of a protein-protein interaction domain and a DNA-binding domain. The antitoxin binds to the toxin and inhibits its activity, and the stable TA complex binds to the operator of the corresponding 
-        <dfn>TAS~Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses its transcription [Makarova et al., 2009](#citation2) [Tam & Kline, 1989](#citation3).
+        <dfn>TAS~Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses its transcription [Makarova et al., 2009](#citation5) [Tam & Kline, 1989](#citation6).
 
         As our product would be introduced into a plant which is later converted into a consumable item, we decided to use the ccdA-ccdB toxin-antitoxin system as the kill switch for its relative non-toxicity 
-        towards humans and more generally, mammalian cells [Reschner et al., 2013](#citation4).
+        towards humans and more generally, mammalian cells [Reschner et al., 2013](#citation7).
 
         ## ccdA-ccdB System
 
         In the ccdA-ccdB system, the two genes are organised in an operon in which the antitoxin ccdA gene is upstream of the toxin ccdB gene. ccdA prevents ccdB toxicity by forming a tight ccdA-ccdB complex 
-        [Afif et al., 2001](#citation5). ccdB inhibits DNA replication by poisoning DNA gyrase; more specifically, ccdB prevents DNA gyrase from disentangling DNA from replication resulting in double-stranded breaks in 
-        the DNA [Dao-Thi et al., 2005](#citation6). ccdA and ccdB are able to form complexes of various stoichiometries depending on their molar ratios.
+        [Afif et al., 2001](#citation8). ccdB inhibits DNA replication by poisoning DNA gyrase; more specifically, ccdB prevents DNA gyrase from disentangling DNA from replication resulting in double-stranded breaks in 
+        the DNA [Dao-Thi et al., 2005](#citation9). ccdA and ccdB are able to form complexes of various stoichiometries depending on their molar ratios.
 
-        Our kill switch is a modified version of the ccdA-ccdB TA system, where the ccdB (toxin) CDS is placed under a T7 constitutive promoter, and the ccdA (antitoxin) CDS is placed under an FNR promoter 
-        whose activity is controlled by the concentration of oxygen present in the environment. 
+        Our kill switch is a modified version of the ccdA-ccdB TA system [(BBa_P1010)](https://parts.igem.org/Part:BBa_P1010), where the ccdB (toxin) CDS is placed under a T7 [(BBa_I719005)](https://parts.igem.org/Part:BBa_I719005) constitutive promoter, 
+        and the ccdA (antitoxin) CDS is placed under an FNR promoter [(BBa_K1123000)](http://parts.igem.org/Part:BBa_K1123000) whose activity is controlled by the concentration of oxygen present in the environment. 
 
         ## FNR Promoter 
         
@@ -95,8 +98,8 @@ block article
         the induction effect of the promoter, ultimately leading to a higher expression rate.
         $$ $$
 
-        As the environment inside sugarcane is hypoxic compared to the external atmosphere, we chose to place the ccdA antitoxin under the FNR promoter. The mechanism of the kill switch has been explained 
-        in the next section.
+        As the environment inside sugarcane is hypoxic compared to the external atmosphere, we chose to place the ccdA antitoxin under the FNR promoter. 
+        The mechanism of the kill switch has been explained in the next section.
 
         ## Mechanism
 
@@ -106,8 +109,8 @@ block article
 
         > GIF
 
-        The ccdB toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to prevalant environmental conditions, the FNR promoter will be active and hence the ccdA antitoxin will also be produced 
-        in the cell. Since both ccdA and ccdB are present in the cell, they form a toxin-antitoxin complex by sequestering the toxin. This way the bacteria is able to survive inside the sugarcane stem.
+        The ccdB toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to prevalant hypoxic conditions inside the sugarcane [Bieleski, R. L., 1960](#citation10) conditions, the FNR promoter will be active and hence the ccdA antitoxin will also be produced 
+        in the cell. Since both ccdA and ccdB are present in the cell, they form a highly stable toxin-antitoxin complex. This way the bacteria is able to survive inside the sugarcane stem.
 
         ### Aerobic Environment
 
@@ -115,6 +118,16 @@ block article
 
         In this case, too, ccdB is expressed constitutively with the help of the T7 promoter; however, due to the presence of oxygen, the FNR promoter is switched off. This leads to an increase in the levels of ccdB in the cell which in 
         turn leads to a complete halt in cell division and death. This ensures that the bacteria will not be able to survive outside the sugarcane environment.
+
+        # Polymer Inoculant
+
+        We have devised a novel polymer inoculant to create an easy-to-use, robust and organic delivery mechanism of our bacteria. The inoculant consists of a Carboxymethylcellulose based polymer, bentonite suspending agent and sorbic acid preservative. We have also optimized the viscosity to minimize 
+        the innoculant’s toxicity, and ensured that it is close to that of water for efficient transport. This inoculant would be supplied to the farmer and can be used through an injector mechanism. In this manner the sugarcane’s inherent transport mechanism due to transpirational pull is leveraged 
+        for the uniform distribution of the bacteria through the plant. 
+
+        To ensure large scale manufacturing of this inoculant we have constructed a process flow diagram to emulate an industrial setting. The assembly consist of a simple bioreactor, and a simple mixing tank  where we mix in our inoculant ingredients. The bioreactor will be designed to be anaerobic 
+        so as to consider the killswitch. Even during the mixing process care needs to be taken that minimum aeration takes place. Through mass balance calculations we were able to compute the concentration of bacterial cells needed in the inoculant to ensure effective inactivity of invertase. 
+
 
 
 
@@ -134,4 +147,4 @@ append buttons
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 
 prepend citations
-    - var citations = [{"authors": "Syed, M. A., & L vesque, C. M. (2012). ", "doi": "https://doi.org/10.1139/w2012-025", "journal": "Canadian Journal of Microbiology", "numbers": "58(5), 553-562. ", "title": "Chromosomal bacterial type II toxin-antitoxin systems.", "type": "article"}, {"authors": "Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). ", "doi": "https://doi.org/10.1186/1745-6150-4-19", "journal": "Biology Direct", "numbers": "4(1), 19. ", "title": "Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems and related mobile stress response systems in prokaryotes.", "type": "article"}, {"authors": "Tam, J. E., & Kline, B. C. (1989). ", "doi": "https://doi.org/10.1007/BF00261153", "journal": "Molecular and General Genetics MGG", "numbers": "219(1-2), 26-32. ", "title": "The F plasmid ccd autorepressor is a complex of CcdA and CcdB proteins.", "type": "article"}, {"authors": "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C., Michel, B., Nauwynck, H., Xhonneux, F., Pr\u00e9at, V., Vanderplasschen, A. & Szpirer, C. (2013).", "doi": "https://doi.org/10.4161/hv.25086", "journal": "Human Vaccines & Immunotherapeutics", "numbers": "9(10), 2203-2210. ", "title": "Use of Staby\u00ae technology for development and production of DNA vaccines free of antibiotic resistance gene.", "type": "article"}, {"authors": "Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). ", "doi": "https://doi.org/10.1046/j.1365-2958.2001.02492.x", "journal": "Molecular Microbiology", "numbers": "41(1), 73-82. ", "title": "The ratio between CcdA and CcdB modulates the transcriptional repression of the ccd poison-antidote system.", "type": "article"}, {"authors": "Dao-Thi, M.-H., Van Melderen, L., De Genst, E., Afif, H., Buts, L., Wyns, L., & Loris, R. (2005). ", "doi": "https://doi.org/10.1016/j.jmb.2005.03.049", "journal": "Journal of Molecular Biology", "numbers": "348(5), 1091-1102. ", "title": "Molecular Basis of Gyrase Poisoning by the Addiction Toxin CcdB.", "type": "article"}]
+    - var citations = [{"authors": "Park, M., Tsai, S.-L., & Chen, W. (2013). ", "doi": "https://doi.org/10.3390/s130505777", "journal": "Sensors", "numbers": "13(5), 5777-5795. ", "title": "Microbial Biosensors: Engineered Microorganisms as the Sensing Machinery.", "type": "article"}, {"authors": "Pereira, L. F. M., Ferreira, V. M., Oliveira, N. G., Sarmento, P. L. V. S., Endres, L. & Teodoro, I. (2017).", "journal": "Annals of the Brazilian Academy of Sciences.", "numbers": "89(2), 1231-1242.", "title": "Sugars levels of four sugarcane genotypes in different stem portions during the maturation phase.", "type": "article", "year_published": 2017}, {"authors": "Chavarr  a, M., Durante-Rodr  guez, G., Krell, T., Santiago, C., Brezovsky, J., Damborsky, J., & de Lorenzo, V. (2014). ", "doi": "https://doi.org/10.1016/j.fob.2014.03.013", "journal": "FEBS Open Bio", "numbers": "4(1), 377-386. ", "title": "Fructose 1-phosphate is the one and only physiological effector of the Cra (FruR) regulator ofPseudomonas putida.", "type": "article"}, {"authors": "Syed, M. A., & L vesque, C. M. (2012). ", "doi": "https://doi.org/10.1139/w2012-025", "journal": "Canadian Journal of Microbiology", "numbers": "58(5), 553-562. ", "title": "Chromosomal bacterial type II toxin-antitoxin systems.", "type": "article"}, {"authors": "Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). ", "doi": "https://doi.org/10.1186/1745-6150-4-19", "journal": "Biology Direct", "numbers": "4(1), 19. ", "title": "Comprehensive comparative-genomic analysis of Type 2 toxin-antitoxin systems and related mobile stress response systems in prokaryotes.", "type": "article"}, {"authors": "Tam, J. E., & Kline, B. C. (1989). ", "doi": "https://doi.org/10.1007/BF00261153", "journal": "Molecular and General Genetics MGG", "numbers": "219(1-2), 26-32. ", "title": "The F plasmid ccd autorepressor is a complex of CcdA and CcdB proteins.", "type": "article"}, {"authors": "Reschner, A., Scohy, S., Vandermeulen, G., Daukandt, M., Jacques, C., Michel, B., Nauwynck, H., Xhonneux, F., Pr\u00e9at, V., Vanderplasschen, A. & Szpirer, C. (2013).", "doi": "https://doi.org/10.4161/hv.25086", "journal": "Human Vaccines & Immunotherapeutics", "numbers": "9(10), 2203-2210. ", "title": "Use of Staby\u00ae technology for development and production of DNA vaccines free of antibiotic resistance gene.", "type": "article"}, {"authors": "Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). ", "doi": "https://doi.org/10.1046/j.1365-2958.2001.02492.x", "journal": "Molecular Microbiology", "numbers": "41(1), 73-82. ", "title": "The ratio between CcdA and CcdB modulates the transcriptional repression of the ccd poison-antidote system.", "type": "article"}, {"authors": "Dao-Thi, M.-H., Van Melderen, L., De Genst, E., Afif, H., Buts, L., Wyns, L., & Loris, R. (2005). ", "doi": "https://doi.org/10.1016/j.jmb.2005.03.049", "journal": "Journal of Molecular Biology", "numbers": "348(5), 1091-1102. ", "title": "Molecular Basis of Gyrase Poisoning by the Addiction Toxin CcdB.", "type": "article"}, {"authors": "Bieleski R. L. (1960).", "journal": "Australian Journal of Biological Science.", "numbers": "13, 203-220.", "title": "The physiology of sugar-cane. II.", "type": "article", "year_published": 1960}]
