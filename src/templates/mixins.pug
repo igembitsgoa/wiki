@@ -84,3 +84,14 @@ mixin citation_book(citation, count)
         if citation.Google_Books_URL != ""
             a.in-text(href=citation.Google_Books_URL target="_blank" rel="noopener") Google Books
         a.in-text(href="#intext" + counter) Back to text    
+
+mixin landing_card(name, image)
+  .col-sm-6.col-lg-4
+    a(href= urlPrefix + "Model/" + name.replace(" ", "_"))
+      section.card
+        .card-background
+          img(src=require("../assets/img/" + image)['default'])
+        .card-info
+          h2
+            span Model
+            = name

@@ -17,13 +17,13 @@ html(lang="en")
             |         url( #{backgroundImage});
             | }
         header.d-flex.justify-content-center()
-            .container.d-flex.align-items-end.justify-content-between
+            .custom-container.d-flex.align-items-end.justify-content-between
                 #heading
                     h1 #{title}
                 a(href=backgroundAttributionLink target="_blank" rel="noopener")
                     span#bg-attribution(title=backgroundAttribution data-placement="top")
         main.hello(class={"theme-green": theme == "green", "theme-yellow": theme == "yellow", "theme-blue": theme == "blue"})
-            .container
+            .custom-container
                 .row
                     .sidebar
                         .nav#contents
