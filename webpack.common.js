@@ -57,6 +57,11 @@ module.exports = {
       chunks: ["landing"],
     }),
     new HTMLWebpackPlugin({
+      filename: "Experiments/index.html",
+      template: "./src/pages/Experiments.pug",
+      chunks: ["landing"],
+    }),
+    new HTMLWebpackPlugin({
       filename: "Notebook/index.html",
       template: "./src/pages/Notebook.pug",
       chunks: ["notebook"],
