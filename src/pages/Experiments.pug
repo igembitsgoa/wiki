@@ -1,0 +1,41 @@
+extends ../templates/landing.pug
+
+block headVars
+    - var title = "Experiments"
+    - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Model--jean-wimmerlin1.jpg")["default"]
+    - var backgroundAttribution = "Photo by Jean Wimmerlin on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/RUj5b4YXaHE"
+    - var theme = "yellow"
+
+prepend article
+
+    :markdown-it(html)
+
+        Mathematical models are an integral part of our project. They allow us to gain an insight into the functioning of the
+        constructs we designed as well as enable us to predict and verify its behaviour. Considering our non-existent access
+        to a laboratory environment due to COVID-19, these models form the cornerstone of our project.  
+
+        We have tried to integrate our models during each step of the modelling process with the experiments we have designed. 
+        The benefits that this approach has are two-fold: one, it allowed the experimental and theoretical portions of the
+        project to complement each other, and two, it also allowed us to leverage the insights provided by the wetlab aspects. 
+
+        Modelling these systems also allowed us to predict their behaviour and determine how they could be incorporated into
+        our final [design](/Design).
+
+append cards
+    +landing_card("Growth Curve", "Design--AI.gif")
+    +landing_card("Kill Switch", "Design--AI.gif")
+    +landing_card("Inoculant", "Design--AI.gif")
+    +landing_card("Docking", "Design--AI.gif")
+    +landing_card("Biosensor", "Design--AI.gif")
+    +landing_card("Auxotroph", "Design--AI.gif")
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Design")
+    +buttonRight("Engineering")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
