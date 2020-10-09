@@ -5,97 +5,50 @@ block headVars
     - var requireMathJax = false
     //- You can just write the filename here and it will be resolved to 'require'.
     //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
-    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+    - var backgroundImage = "" + require("../assets/img/Contribution--header.png")["default"]
+    - var backgroundAttribution = "Photo from Freepik"
+    - var backgroundAttributionLink = "https://www.freepik.com/free-vector/public-contribution-concept_2448540.htm"
     - var theme = "green"
+    - var fullWidth = true
 
 block article
     :markdown-it(html)
 
-        One of the most important aspects of the iGEM experience is the team wiki, more so this year than ever. 
-        As it occured to us that the Jamboree this year was going to be online, we realized how important wikis were going to be, 
-        and decided to make it easier for teams across the world to build their wikis.
+        As a team participating in iGEM for the first time, we were absolutely thrilled by the community spirit that iGEM 
+        fosters. It was amazing to see how helpful everyone was, and over the years, participating teams had developed 
+        into a tightly-knit community, working together on shared goals and aspirations, and having lots of fun along the way!
 
-        Currently, building iGEM wikis requires teams to write code in a text box in their browsers, due to which they miss out 
-        on the wide variety of features code editors and integration tools offer these days. These tools have become the de facto 
-        standard in the web development industry, optimizing various parts of the process and ultimately making it much
-        easier and faster.
+        The Bronze medal criterion for contribution towards future iGEM teams gave us a chance to give back to this community.
+        We worked on the following projects as part of this endeavour.
 
-        Over the years, iGEM teams have come up with several ways to improve this experience. These solutions have focused on
-        almost all aspects of building wikis - from making it easier to write code to uploading it and even implementing
-        continuous integration. iGEM Toronto 2015, Waterloo 2017 and Virginia 2018 did excellent work in this area, with their 
-        wiki generators, upload APIs and CI tools. Some of these tools allowed teams to write code locally, in a code editor
-        of their choice, and then upload it to iGEM servers for deployment.
+        1. [iGEM WikiSync](/Software#iGEMWikiSync): A continuous deployment tool for iGEM wikis. It automatically uploads files onto the iGEM server, 
+                converts relative URLs in the codebase to absolute URLs from iGEM servers, and in the process also checks
+                for broken links.
 
-        However, we felt that there was a need for a holistic solution - something that would cover every aspect of iGEM wikis. 
-        This solution had to be comprehensive enough that teams wouldn't need to find other software to build common components,
-        but it would still allow teams to easily integrate other libraries, should they need to do so. 
-    
-        We identified three key areas to focus on: content, design and deployment. 
+        2. [iGEM WikiSync Github Action](/Software#iGEMWikiSyncGithubAction): A Github Actions plugin that allows
+                Github repositories to deploy wikis to iGEM servers, ensuring that the wiki always remains in sync with the codebase. 
 
-        The way teams design and add content to their wikis usually varies widely, but the deployment process is common, since
-        all iGEM wikis are powered by the MediaWiki engine. They write code in a code editor, and then manually copy and paste it 
-        in the text box on the page where it belongs. A typical iGEM wiki is anywhere between 15 to 20 pages, so it can quickly 
-        become cumbersome to copy and paste for every small change, and sometimes a few changes might just be left out in a hurry.
+        3. [iGEM Wiki Starter Pack](/Software#iGEMWikiStarterPack): The easiest way to build iGEM Wikis. Our Starter Pack 
+                is a holistic solution that provies teams with a mobile-responsive starter template and allows them to focus on the
+                content and design of their wiki, by making the programming aspect much easier. It fully supports Markdown 
+                formatting, so that once the initial design setup is done, all members of the team can work on the wiki, without 
+                having to learn to code. It comes with common web development libraries like Bootstrap, jQuery, MathJax and Font 
+                Awesome built-in, along with features like automatically adding citations from DOI, a table of contents on each 
+                page, and a dark mode to make it easier on the eyes. Built on top of the Node JS infrastructure using Webpack,
+                it allows easily integrating any web development library from the entire ecosystem. It also includes Pug for 
+                templating, SCSS for easy and powerful styling and iGEM WikiSync for continuous deployment.
 
-        Deployment is one of the parts of this process that we could automate. These days in the web development industry, it is 
-        common to set up a version control system like Git on Github, and link that to an automatic deployment service, like Github
-        Actions or Travis. This ensures that every time a change is made in the codebase, it is automatically pushed to servers for 
-        deployment.
+        We've covered these packages in great detail on [the Software page](/Software). Please head over there to know more about some
+        common use cases, installation instructions and documentation.
 
-        Github Actions and Travis are free for open source repositories, and most website hosting services offer integration with 
-        these. However, in order for iGEM teams to use such a service, an integration tool was required, that would allow CI/CD software
-        to upload files to iGEM servers, so we decided to make one!
-
-        # iGEM WikiSync
-        
-        iGEM WikiSync allows iGEM teams to set up continuous integration and continuous deployment for their wikis, making the wiki freeze
-        a little less dreadful. It lets teams work on their wiki locally, using whichever web development framework they're familiar with,
-        and upload the code to iGEM servers for deployment. 
-
-        It does this in the following way:
-        1. WikiSync looks for all non-code files (images, videos, PDFs, etc.), renames them according to iGEM specification, and uploads them to iGEM servers.
-        2. It then goes through every single code file (HTML, CSS, JavaScript), scanning them for links.
-        3. It replaces all local links to iGEM.org URLs where the files have been uploaded.
-        4. Finally, all code files are also uploaded to iGEM servers, the team wiki is deployed.
-
-        // write about password security
-
-        WikiSync keeps track of the files uploaded in each run, so only changes are uploaded the next time it runs. It also checks code for internal
-        broken links and shows warnings.
-
-        # iGEM WikiSync Github Action
-
-        By automating uploads, iGEM WikiSync allows teams to save dozens of hours over the course of their iGEM experience. This is made possible by 
-        using WikiSync to set up a continuous integration and continuous deployment routine on the wiki's version control repository, such as Github. 
-        For example, for our own wiki, we set up continuous deployment using a Github Action we wrote for iGEM WikiSync. This allows teams to set up 
-        Github Actions for their wiki, so that everytime changes are made in the codebase, they're automatically sent to iGEM servers. All that is required
-        is a `git push`. 
-
-        In order to prevent iGEM servers from running for every small change, we decided to schedule this Action for every two days.
-
-        The Action can be found [here](https://github.com/marketplace/actions/igem-wikisync) along with usage instructions and common use cases.
-
-        // write about password security
-
-
-
-
-
-
-        ---
-
-        Web development practices have changed so much over the last few years, that the software powering tools build by previous 
-        iGEM teams quickly became obsolete. 
-
-        modularity
-        separation of concerns
+        We also planned to work on a web application in order to make it easier for iGEM teams to construct golden gate assemblies using
+        parts from the registry according to iGEM specifications. This would allow importing data from the parts registry, modifying it 
+        according to iGEM golden gate specifications, and exporting it to platforms like Benchling. <mark>(elaborate)</mark>
 
 
 append buttons
     //- mind the quotes and the plus sign
     +buttonLeft("Home")
-    +buttonRight("")
+    +buttonRight("Software")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.

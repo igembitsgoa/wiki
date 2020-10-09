@@ -1,42 +1,41 @@
-@include respond-above(xxl) {
-  header {
-    .container {
-      max-width: 1380px;
+@include respond-below(xxl) {
+  header, main {
+    .custom-container {
+      max-width: 1340px;
     }
   }
 }
 
-@include respond-between(xl, xxl) {
-  header {
-    .container {
+@include respond-below(xl) {
+  header, main {
+    .custom-container {
       max-width: 1140px;
     }
   }
 }
 
-@include respond-between(lg, xl) {
-  header {
-    .container {
-      max-width: 1000px;
+@include respond-below(lg) {
+  header, main {
+    .custom-container {
+      max-width: 950px;
     }
   }
 }
 
-@include respond-above(xxl) {
-  main .container {
-    max-width: 1380px;
+@include respond-below(md) {
+  header, main {
+    .custom-container {
+      max-width: 750px;
+    }
   }
 }
 
-@include respond-between(xl, xxl) {
-  main .container {
-    max-width: 1140px;
-  }
-}
 
-@include respond-between(lg, xl) {
-  main .container {
-    max-width: 1000px;
+@include respond-below(sm) {
+  header, main {
+    .custom-container {
+      max-width: 540px;
+    }
   }
 }
 

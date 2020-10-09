@@ -15,8 +15,10 @@ header {
   background-repeat: no-repeat;
   min-height: 70vh;
 
-  .container {
+  .custom-container {
     padding: 0;
+    max-width: 1380px;
+    width: 100%;
   }
 
   #heading {
@@ -25,6 +27,7 @@ header {
     background-position: center;
     background-size: contain;
     margin-bottom: calc(3rem + 2vw);
+    margin-left: 3rem;
 
     h1 {
       color: $whitey;

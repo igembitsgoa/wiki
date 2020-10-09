@@ -14,7 +14,7 @@ module.exports = merge(common, {
                 use: [ExtractCssChunks.loader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(svg|png|jpg|jpeg|gif|ttf|woff2|woff|eot)$/i,
+                test: /\.(svg|png|jpg|jpeg|gif|ttf|woff2|woff|eot|mp4)$/i,
                 use: [
                     {
                         loader: "file-loader",

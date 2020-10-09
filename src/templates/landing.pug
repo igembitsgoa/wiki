@@ -16,13 +16,13 @@ html(lang="en")
       |         url( #{backgroundImage});
       | }
     header.d-flex.justify-content-center()
-      .container.d-flex.align-items-end.justify-content-between
+      .custom-container.d-flex.align-items-end.justify-content-between
         #heading
           h1 #{title}
         a(href= backgroundAttributionLink target="_blank" rel="noopener")
           span#bg-attribution(title=backgroundAttribution data-placement="top")
     main
-      .container
+      .custom-container
         .row
           .content.fullwidth.col-lg-12
             article
@@ -30,35 +30,7 @@ html(lang="en")
 
               #landingCards
                 .row
-                  .col-md-4
-                    a(href= urlPrefix + "Model/Growth_Model")
-                      section.card
-                        .card-background
-                          img(src=require("../assets/img/Design--AI.gif")['default'])
-                        .card-info
-                          h2
-                            span Model
-                            | Growth Curve
-                  .col-md-4
-                    a(href= urlPrefix + "Model/Kill_Switch")
-                      section.card
-                        .card-background
-                          img(src=require("../assets/img/Design--AI.gif")['default'])
-                        .card-info
-                          h2
-                            span Model
-                            | Kill Switch
-                  .col-md-4
-                      a(href= urlPrefix + "Model/Viscosity_Model")
-                        section.card
-                          .card-background
-                            img(src=require("../assets/img/Design--AI.gif")['default'])
-                          .card-info
-                            h2
-                              span Model
-                              | Inoculant
-
-
+                  block cards
 
             .d-flex.justify-content-between.my-5
               block buttons

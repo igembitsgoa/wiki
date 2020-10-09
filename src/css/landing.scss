@@ -1,4 +1,32 @@
+@import "_main.scss";
+
+@import "_contents_colors.scss";
+
+body {
+  transition: background-color 0.3s ease;
+}
+
+::selection {
+  background-color: $selection-color;
+}
+
+@import "_content_header.scss";
+
+main {
+  padding: 3rem 0 2rem 0;
+  .custom-container {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+}
+
+@import "_content_mediaqueries.scss";
+
 #landingCards {
+
+  .col-sm-6 {
+    padding: 15px;
+  }
   .card {
     position: relative;
   }
@@ -56,5 +84,71 @@
 
   a:hover {
     text-decoration: none;
+  }
+}
+
+@include respond-below(xl) {
+  #landingCards {
+    .card-info {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xs) {
+  #landingCards {
+    .card {
+      margin: 1.2rem;
+    }
+    .card-info {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@include respond-below(xxs) {
+  #landingCards {
+    .card {
+      margin: 1rem;
+    }
+    .card-info {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+footer {
+  #footerNav {
+    h1 {
+      color: $black;
+    }
+    a {
+      color: $black;
+    }
+  }
+}
+
+body.theme-green {
+  #footerNav {
+    background-color: lighten($green, 5%);
+  }
+}
+
+body.theme-yellow {
+  #footerNav {
+    background-color: lighten($yellow, 5%);
+  }
+}
+
+
+body.theme-blue {
+  #footerNav {
+    background-color: lighten($blue, 15%);
   }
 }

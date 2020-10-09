@@ -8,9 +8,8 @@ html(lang="en")
     body
         include templates/nav.pug
         header.d-flex.justify-content-center.align-items-center
-            .container.text-center
-                .heading.d-flex.justify-content-center.align-items-center
-                    h1 
+            video(controls width=1080)
+                source(src= urlPrefix + require("./assets/video/promo-1080p.mp4")['default'].substr(2), type='video/mp4')
         section#introduction.white
             .section-animation
             .container
@@ -33,8 +32,8 @@ html(lang="en")
                             and forms the livelihood for 20 million people across the country. 
                         p.
                         :markdown-it(html)
-                           This industry is in peril, however. Post-harvest sucrose deterioration is responsible for losses worth millions of rupees.
-                           Following its harvest, enzymatic activity reduces sugar recovery rates by upto 10%!
+                            This industry is in peril, however. Post-harvest sucrose deterioration is responsible for losses worth millions of rupees.
+                            Following its harvest, enzymatic activity reduces sugar recovery rates by upto 10%!
                         p.
                             Our solution mitigates this problem.
                             <br>
@@ -84,7 +83,7 @@ html(lang="en")
                             | The kill switch goes off. 
                     .content.col-lg-9
                         h2 Safety caption goes here. 
-                        
+
                         p.
                             Biosafety is a cruicial aspect of our project, especially so when our chassis is so closely involved with food
                             products.
@@ -159,7 +158,7 @@ html(lang="en")
                 .row
                     .content.col-lg-9
                         h2 Contribution Headline 
-            
+
                         p.
                             Headline too cringey? Questionable color choice? Apparently orange is the color of 
                             communication. It's a really hard color to work with, though. Increasing saturation any
