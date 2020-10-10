@@ -13,64 +13,75 @@ block headVars
 block article
     :markdown-it(html)
 
-        It is imperative for teams to demonstrate that they have thought about all ethical and safety issues that may arise with their project. This section covers the various safety 
-        and security measures and policies which we have followed. 
+        It is imperative for teams to demonstrate that they have thought about all ethical and safety issues that may arise 
+        with their project. This section and security measures and policies which we have followed. 
 
         # Project Safety
 
-        Our chassis, _E. coli_, is a Risk 1 organism, and along with our biobrick parts, belongs to the White list. Furthermore, we are not aware of any possible dual use, deleterious 
-        or otherwise, of our project. 
+        Our chassis, _E. coli_, is a Risk 1 organism, and along with our biobrick parts, belongs to the White list. 
+        Furthermore, we are not aware of any possible dual use, deleterious or otherwise, of our project. 
 
-        Biosafety is the ethical obligation of a bioengineer. Throughout our project design we have tried to be as mindful as possible regarding 
-        identifying strategies for robust biosafety. Since our project is closely related to a consumable sugar, we have devised a three-tier fail-safe mechanism 
-        after taking into consideration the various use cases of our chassis.
+        Biosafety is the ethical obligation of a bioengineer. Throughout our project design we have tried to be as mindful 
+        as possible regarding identifying strategies for robust biosafety. Since our project is closely related to a consumable 
+        sugar, we have devised a three-tier fail-safe mechanism after taking into consideration the various use cases of our chassis.
 
         ## Level 1: Kill Switch
 
-        We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the close proximity of the system to both 
-        agricultural environments and human consumables, it is indispensable that our bacteria include a lethality mechanism. We propose to use a modified type II 
-        ccdA-ccdB toxin-antitoxin system as our kill switch that is activated upon exposure to atmospheric concentrations of oxygen. A change in the oxygen concentration 
-        in the environment results in a sharp increase in the amount of the toxin protein being synthesised which disturbs the already established equilibrium between the 
-        toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes. More information about the design of the kill switch can 
-        be found [here](/Design#KillSwitch) and a study of its dynamics [here](/Model/Kill_Switch).
+        We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the
+        close proximity of the system to both agricultural environments and human consumables, it is indispensable that our bacteria 
+        include a lethality mechanism. We propose to use a modified type II ccdA-ccdB toxin-antitoxin system as our kill switch that 
+        is activated upon exposure to atmospheric concentrations of oxygen. A change in the oxygen concentration in the environment
+        results in a sharp increase in the amount of the toxin protein being synthesised which disturbs the already established 
+        equilibrium between the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray 
+        microbes. More information about the design of the kill switch can be found [here](/Design#KillSwitch) and a study 
+        of its dynamics [here](/Model/Kill_Switch).
 
         ## Level 2: Auxotropic Regulation
 
-        There are several amino acids that have been detected in sugarcane including, pipecolic acid and hydroxypipecolic acid. Increasing the supply of nitrogen increases 
-        markedly the amides asparagine and glutamine and less markedly the basic amino‐acids lysine, histidine, arginine and tryptophan. The neutral and acidic amino‐acids 
-        tend to increase and then decrease in level with increasing nitrogen supply. An auxotroph of tryptophan would bleh. You can find a detailed description of auxotrophic model 
-        [here]()
+        There are several amino acids that have been detected in sugarcane including, pipecolic acid and hydroxypipecolic 
+        acid. Increasing the supply of nitrogen increases markedly the amides asparagine and glutamine and less markedly the 
+        basic amino‐acids lysine, histidine, arginine and tryptophan. The neutral and acidic amino‐acids tend to increase and 
+        then decrease in level with increasing nitrogen supply. An auxotroph of tryptophan would bleh. You can find a detailed 
+        description of auxotrophic model [here]().
 
         ## Level 3: Sugar Manufacturing Process
 
         > Need better quality image of the industy process
 
-        During the sugar manufacturing process the cane juice is heated at the evaporation station to temperatures greater than 100°C for upto eight hours. Furthermore, sulphur dioxide 
-        is passed through the solution at the clarifying stage along with a change in pH. We have designed experiments to mimic these industrial conditions on a lab scale. More details about 
-        these experiments can be found [here](/Experiments). The bacteria would not be able to handle the stress of these conditions and hence the manufacturing process would act as a third failsafe. 
+        During the sugar manufacturing process the cane juice is heated at the evaporation station to temperatures greater than 
+        100°C for upto eight hours. Furthermore, sulphur dioxide is passed through the solution at the clarifying stage along 
+        with a change in pH. We have designed experiments to mimic these industrial conditions on a lab scale. More details about 
+        these experiments can be found [here](/Experiments). The bacteria would not be able to handle the stress of these 
+        conditions and hence the manufacturing process would act as a third failsafe. 
 
 
         # Safety Policies
 
         ## Human Subjects Research
 
-        Engagement with the community is an essential aspect of any iGEM project which involves talking to people, collecting their opinions, compiling them, and using them to structure our project. 
-        Although our project does **not** involve any collection or experimentation with any human biological samples, it does however have a strong involvement of social science research using surveys 
-        and interviews.
+        Engagement with the community is an essential aspect of any iGEM project which involves talking to people, collecting 
+        their opinions, compiling them, and using them to structure our project. Although our project does **not** involve any 
+        collection or experimentation with any human biological samples, it does however have a strong involvement of social 
+        science research using surveys and interviews.
 
-        In accordance with iGEM policy concerning human subjects research, we have ensured that we have followed all national rules and regulations with regard to data collection. Our data collection procedure
-        is compliant with the Indian Council of Medical Research's National Ethical Gudelines For Biomedical and Health Research Involving Human Participants (2017), with a strong focus on §2.1 Principal of voluntariness and 
-        § 2.3 Principal of ensuring privacy and confidentiality.
+        In accordance with iGEM policy concerning human subjects research, we have ensured that we have followed all national 
+        rules and regulations with regard to data collection. Our data collection procedure is compliant with the Indian 
+        Council of Medical Research's National Ethical Gudelines For Biomedical and Health Research Involving Human Participants 
+        (2017), with a strong focus on §2.1 Principal of voluntariness and § 2.3 Principal of ensuring privacy and confidentiality.
 
-        All responses for our surveys were obtained by seeking written consent from the participant. All our surveys were purely anonymous and any demographic data collected was used for research and educational purposes only.
+        All responses for our surveys were obtained by seeking written consent from the participant. All our surveys were purely 
+        anonymous and any demographic data collected was used for research and educational purposes only.
 
-        We have ensured that interviews were conducted only with the verbal consent of the participant and participants had the option to remain anonymous if they chose to do so.
+        We have ensured that interviews were conducted only with the verbal consent of the participant and participants had the 
+        option to remain anonymous if they chose to do so.
 
         ## Do Not Release Policy
 
-        We have strictly followed iGEM's Do Not Release safety policy. Our project is still at an experimental stage and no organism (genetically modified or otherwise) has been released or deployed outside a laboratory environment.
+        We have strictly followed iGEM's Do Not Release safety policy. Our project is still at an experimental stage and no 
+        organism (genetically modified or otherwise) has been released or deployed outside a laboratory environment.
 
-        Moreover, we would alos like to explicitly state that our project does not confer anti-microbial resistance to any micororganism nor does it involve the use of any animals. 
+        Moreover, we would alos like to explicitly state that our project does not confer anti-microbial resistance to any 
+        micororganism nor does it involve the use of any animals. 
   
 
 append buttons
