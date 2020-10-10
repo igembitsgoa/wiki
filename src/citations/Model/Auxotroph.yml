@@ -1,20 +1,10 @@
 #1
-- article:
-    authors: "Knudsen, S. M. and Karlstrom, O. H."
-    year_published: 1991
-    title: "Development of efficient suicide mechanisms for biological containment of bacteria."
-    journal: "American Society for Microbiology Journals"
-    numbers: "57(1), 85-92."
+- doi: https://doi.org/10.1128/aem.57.1.85-92.1991
 #2
-- article:
-    authors: "Molin, S., Boe, L., Jensen, L. B., Kristernsen, C. S., Givskov, M., Ramos, J. L. & Bej, A. K."
-    year_published: 1993
-    title: "Suicidal Genetic Elements and their Use in Biological Containment of Bacteria."
-    journal: "Annual Review of Microbiology"
-    numbers: "47(1), 136-166."
+- doi: https://doi.org/10.1146/annurev.mi.47.100193.001035
 #3
-# - doi: https://doi.org/10.1146/10.1038/ncomms7989
-# #4
-# - doi: https://doi.org/10.1071/FP12042
-# #5
-# - doi: https://doi.org/10.1371/journal.pone.0041349
+- doi: https://doi.org/10.1038/ncomms7989
+#4
+- doi: https://doi.org/10.1071/FP12042
+#5
+- doi: https://doi.org/10.1371/journal.pone.0041349
