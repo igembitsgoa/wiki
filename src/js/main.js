@@ -18,7 +18,7 @@ function getWidth() {
     document.documentElement.offsetWidth,
     document.documentElement.clientWidth
   );
-};
+}
 window.getWidth = getWidth;
 
 // reset iGEM
@@ -160,7 +160,9 @@ $(".footer-heading").on("click", function () {
 function getXoffset(wrapperWidth) {
   var size = 50 + Math.random() * 100;
 
-  return (size + Math.random() * (wrapperWidth - 2 * size)).toString().concat("px");
+  return (size + Math.random() * (wrapperWidth - 2 * size))
+    .toString()
+    .concat("px");
 }
 
 function getYoffset(height) {
@@ -175,9 +177,10 @@ function getYoffset(height) {
 //         .append(
 //           $("<div></div>")
 //             .addClass("bacteria")
-//             .css("left", getXoffset($(this).width())) 
+//             .css("left", getXoffset($(this).width()))
 //             .css("top", getYoffset($(this).height()))
 //         )
 //     );
 //   }
 // });
+

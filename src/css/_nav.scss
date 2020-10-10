@@ -21,6 +21,8 @@ $darkblue: darken($blue, 30%);
   left: 0;
   right: 0;
   z-index: 1030;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .scroll-down .navbar {
@@ -49,12 +51,12 @@ $darkblue: darken($blue, 30%);
   i.navbar-logo {
     display: inline-block;
     height: 2.5rem;
-    width: 2.5rem; 
+    width: 2.5rem;
     background: url("../assets/img/logo-navbar.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-right: 1rem;;
+    margin-right: 1rem;
   }
 
   span {
@@ -105,6 +107,30 @@ $darkblue: darken($blue, 30%);
 .menu-open {
   .navbar-brand {
     transform: translate(0%, 15%);
+  }
+}
+
+#progress-container {
+  opacity: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  height:6px;
+  background-color: white;
+  position: fixed;
+  left: 0;
+
+  #nav-progress-bar {
+    background-color: lighten($theme-switcher-green, 5%);
+    height: 6px;
+  }
+}
+
+.nav-colored {
+  #progress-container {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
   }
 }
 

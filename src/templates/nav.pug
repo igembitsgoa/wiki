@@ -3,24 +3,31 @@ include nav_list
 include mixins
 
 nav#main-nav
-  .navbar.navbar-expand-lg.d-flex.justify-content-between.bg-none.nav-transparent
+  .navbar.bg-none.nav-transparent
 
-    a.navbar-brand(href=urlPrefix) 
-      i.navbar-logo
-      span 
-        | Sugar
-        strong Gain
+    .row.w-100.justify-content-between.align-items-center
+      a.navbar-brand(href=urlPrefix) 
+        i.navbar-logo
+        span 
+          | Sugar
+          strong Gain
 
-    .controls.h-100.d-flex.align-items-center
-      #themeSwitchWrapper.align-items-center
-        i.icon-light
-        #themeSwitch
-          label.switch(for='themeSwitchInput')
-            input(type='checkbox')#themeSwitchInput
-            span.slider.round
-        i.icon-dark
-      button.btn#menuSwitch
-        .menu-icon
+      .controls.h-100.d-flex.align-items-center
+        #themeSwitchWrapper.align-items-center
+          i.icon-light
+          #themeSwitch
+            label.switch(for='themeSwitchInput')
+              input(type='checkbox')#themeSwitchInput
+              span.slider.round
+          i.icon-dark
+        button.btn#menuSwitch
+          .menu-icon
+    
+    .row.w-100
+      #progress-container
+        #nav-progress-bar
+    
+    
   #fullscreenMenuWrapper
     #fullscreenMenu.w-100.h-100
       .container-fluid.d-flex.align-items-stretch.pr-0.flex-column

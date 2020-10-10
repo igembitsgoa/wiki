@@ -132,3 +132,12 @@ if (window.location.href.includes("github.io")) {
     $(this).attr("href", link);
   });
 }
+
+// scroll progress bar
+$(window).on('scroll', function () {
+  var s = $(window).scrollTop();
+  var d = $(document).height();
+  var scrollPercent = (s / d) * 125
+
+  $("#nav-progress-bar").css("width", scrollPercent.toString().concat("%"));
+});
