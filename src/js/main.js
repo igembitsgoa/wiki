@@ -184,3 +184,18 @@ function getYoffset(height) {
 //   }
 // });
 
+// scroll progress bar
+$(window).on("scroll", function () {
+  var s = $(window).scrollTop();
+  var d = $(document).height();
+
+  var height =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+
+  // I have absolutely no idea why this works
+  var scrollPercent = (s / (d - height)) * 100;
+
+  $("#nav-progress-bar").css("width", scrollPercent.toString().concat("%"));
+});

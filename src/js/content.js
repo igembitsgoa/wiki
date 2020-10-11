@@ -120,8 +120,7 @@ if (window.location.href.includes("github.io")) {
       !link.match("/wiki/") &&
       !link.match("https") &&
       link[0] != "#"
-    )
-    {
+    ) {
       if (link[0] == "/") {
         link = "/wiki" + link;
       } else {
@@ -133,11 +132,3 @@ if (window.location.href.includes("github.io")) {
   });
 }
 
-// scroll progress bar
-$(window).on('scroll', function () {
-  var s = $(window).scrollTop();
-  var d = $(document).height();
-  var scrollPercent = (s / d) * 125
-
-  $("#nav-progress-bar").css("width", scrollPercent.toString().concat("%"));
-});
