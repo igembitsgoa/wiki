@@ -1,0 +1,154 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Implementation"
+    - var requireMathJax = true
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../assets/img/Sample--jean-wimmerlin.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Sample--haifsa-rafique.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+    - var theme = "blue"
+
+block article
+
+    :markdown-it(html)
+
+        Our proposed implementation strives to answer five essential underlying issues, namely:
+        1. Who will be the end users of our product and how would our product be applied? 
+        2. How are we a better solution to the problem of post harvest losses and how do we compare with other existing solutions?
+        3. How do we scale up our process and supply it to the end user? 
+        4. How profitable is the scaling up of the process?
+        5. How well have we thought about the safety considerations.
+
+        As explained in our Entrepreneurship page, we first conducted a thorough literature survey to understand the global impact of our product. We then outlined the [unique problems faced by sugarcane farmers](/Human_Practices) in each 
+        farming area that causes post harvest loss. Broadly speaking, they fall into two categories: losses due to mill breakdown and storage issues and losses due to inherent inefficiencies in the mills. Our solution had to be all-encompassing 
+        and comprehensive but most importantly must also be economically viable for the farmer to purchase. 
+
+        Our proposed implementation therefore, consists of our unique polymer inoculant along with a delivery mechanism and industrial manufacturing of our inoculant. 
+
+        # Polymer Inoculant and Delivery Mechanism
+
+        One of  major aspects during the development of our project was to design an appropriate delivery mechanism. As highlighted in Human Practises, the farmers that we spoke to were instrumental in the design process. Since the farmers are 
+        our end users at every stage of development we had to keep in mind the viability in real time. Subsequently, the delivery mechanism had to be something easy to use and the inoculant needed to have a large shelf life so that the farmer 
+        can choose when to use the product.
+
+        Research conducted on the inoculant production and formulation technologies is limited. A breakthrough is needed in the inoculation technology to improve the shelf life and field efficacy of biofertilizer, especially in India, to make them 
+        commercially viable and acceptable to farmers. Liquid biofertilizers contain desired microorganisms and their nutrients, special cell protectants or substances that encourage formation of resting spores for longer shelf life and tolerance 
+        to adverse conditions [Da Silva et al., 2012](#citation1).
+
+        We have come up with a novel delivery mechanism consisting of a Carboxymethyl Cellulose-based polymer inoculant. Another key point is that we have [designed experiments](/Experiments) to check for the removal of all our inoculant ingredients 
+        during the sugar manufacture process. This inoculant would be supplied to the farmer in the form of a cartridge with an injector system. The aim of the injector is to utilise the sugarcane’s transpirational pull to distribute our chassis throughout 
+        the cane just before its harvest. The injector is a spring-loaded device, with a 20mm tapered nozzle to assist when placing the injector into the tree. Like a syringe, the chemical is drawn into the chamber of the injector in measured 10, 15 or 20ml 
+        quantities.
+
+        The table below lists our final inoculant formulation after the modelling and optimization of toxicities of the various ingredients:
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Component                | Optimised Concentration (w/w)|
+        | :---------:              | :--------------------------: |
+        | Culture Broth (LB)      | 95                           |
+        | Triton X 100            |  3.1                          |
+        | Carboxymethyl cellulose |  0.1                          |
+        | Bentonite               |  1.4                          |
+        | Sorbic Acid             |  0.2                          |
+        | Potassium Sorbate       | 0.2                          |
+        [Table 1: Optimal concentration of each component in the inoculant]
+
+    :markdown-it(html)
+        The ingredients chosen for the final formulation were designed such that any remnants would be removed during the sugar manufacturing process (for which we have designed experiments for lab scale validation) and have minimal toxicity. 
+
+        # Scaling Up Processes
+
+        A general flow chart exhibiting product formation is called Block Flow Diagram (BFD). Figure 1 below shows the sequence of basic components generally used in a typical chemical process in which each block represents a stage in the overall 
+        process for producing a product from the raw materials. The design of the process involves selection, arrangement of the stages, and the selection of specification and design of the equipment required to perform the stages. To scale up our 
+        inoculant to an industrial product these are the unit processes and operations that we identified.
+
+        From these processes, we had to look for equipment to accomplish these processes. The assembly, we came up with, consists mainly of an anaerobic bioreactor and a simple mixing tank where we mix in our inoculant ingredients. The bioreactor and 
+        mixing tank will be designed to be anaerobic so as to consider for the kill switch. Based on our discussions with Mr. Ashish, we identified the need for adding a filter to concentrate the product stream of the bioreactor. We chose a crossflow 
+        filter to this effect, since it allows us to selectively concentrate the stream upto a desired level. In the usual scenario, the permeate nutrient media would be wasted, we decided to recover the nutrient media and supply it back to the bioreactor 
+        mixing with the fresh media [Shuler, M. L., & Kargi, F., 2002](#citation2). We also added a hopper so that there is no exposure of the bacteria to the atmosphere at all and the killswitch is not triggered.
+
+        > Aspen diagram
+
+        There were a few practical considerations that needed to be calculated which would capture the working of our process. The first of them being an estimation of total amount invertase present in one sugarcane. This would then allow us to formulate how 
+        much inoculant would be needed to inactivate the invertase. 
+
+        ## Computation of invertase concentration
+
+        The activity of the Acid and Neutral invertase(s) were determined by Saxena et al. [2010](#citation3) The following results were reported by them:
+
+    - var imgpath = "" + require("../assets/img/Implementation--SaxenaEtAl.png")["default"]
+    +image(1, imgpath, "Acid and Neutral invertase(s) in juice of staled canes. (μmol sucrose hydrolysed/min/ml juice)")
+
+    :markdown-it(html)
+
+        Using these values we computed the graph of invertase concentration and staling time. We then created a best fit curve that gave us a polynomial expression for invertase activity in sugarcane over a period of time. 
+
+        > Shrilaxmi Plot
+
+        Through our interaction with the Sugarcane Federation, we found that the best case average time of travel for invertase action is 5 hours from the farm to th emill. Therefore we chose to model our bacteria such that it neutralizes 50% of the invertase in 2.5 hours. 
+        Since even after after that the bacteria will continue to diffuse through the sugarcane and divide, it will continue to inhibit invertase action. This acts as a sufficient metric to formulate our required inoculant concentration.
+         
+        The curve representing the invertase activity (time units in minute) with time is 
+        $$
+            I(t) = -6\times10^{-13}t^5 + 7.5\times10^{-9}t^4 + 1.292\times10^{-1}t^2 + 454.86t \text{ μmol hydrolysed }\text{ s }^{-1} \text{ mL }^{-1}
+        $$
+
+        Therefore, at the 2.5 hour mark, the amount of invertase would be 
+        $$
+            I(150) = 1.18567 \times 10^{3} \text{ μmol hydrolysed }\text{ s }^{-1} \text{ mL }^{-1}
+        $$
+
+        One sugarcane contains around \\( 240 \\)mL of juice. Therefore, in one sugarcane you would have \\( 2.845 \times 10^{5} \text{ μmol hydrolysed }\text{ s }^{-1}\\). Once we computed the total amount of invertase we now had to decide the amount of inoculant needed for 
+        neutralising all the invertase. 
+
+        ## Model for the required inoculant
+
+        In our implementation, there are two major factors that affect the rate of deactivation or "neutralisation" of invertase - the diffusion of bacteria inside the sugarcane matrix and the secretion of anti-invertase by the bacteria. We have assumed that there is maximum promoter expression in 
+        our chassis and hence the major factor that would contribute to the time taken for deactivation of invertase would be the diffusion of bacteria.
+
+        Fick's first law of diffusion postulates that mass flux goes goes from regions of high concentration to regions of low concentration through a relation that is given by [Atkins, P. & de Paula, J., 2010](#citation4):
+
+        $$
+            \textbf{J} = - D\nabla\varphi
+        $$
+        where 
+        - \\(J\\) is the diffusion flux. It measures the amount of substance that would flow through a unit area during a unit time interval;
+        - \\(D\\) is the diffusion coefficient or diffusivity;
+        - \\( \varphi \\) is the concentration; and
+        - \\( \nabla \\) is the gradient operator.
+
+        We began a series of experiments that measured the diffusion of _E. coli_ through various cross sections of sugarcane across various times. This would allow us to compute the mass flux of bacteria within the sugarcane. However, due to loss of lab access we were unable to complete the experiment 
+        to obtain statistically significant values. Once the diffusion constant for our chassis is obtained using the concentration gradient of invertase (as calculated above) we would obtain the amount of bacteria required in our inoculant per sugarcane. This value would now allow us to determine the 
+        specifications of our filter in our process flow diagram. 
+
+        # Safety Considerations
+
+        We have tried inculcating biosafety at every design step. The inoculant ingredients are such that each of them are removed during the processing of sugarcane and thereby ensuring that no remnants remain in the final consumable sugar. Most of the degradation of LB, Sorbic Acid, Potassium Sorbate is expected to 
+        be completed by the second clarifier stage. We will be trying to replicate this in the following experiments and characterizing to show that they are considerably degraded. Bentonite is assumed to be removed in the first clarifier stage as filter cake along with other residues. As explained in our Human Practices, 
+        the cane that is used for raw consumption is different from the cane being sent to the mill. This ensures that neither the inoculant nor our chassis will be present in any sugarcane that is used for purposes other than producing sugar. Furthermore, our three-tier failsafe mechanism will take care of any rogue bacteria 
+        present. 
+
+        Achieving sustainable development while limiting environmental pollution is one of the main challenges for chemical engineering at present. To develop and design a greener alternative to replace or retrofit a current polluted process, it is essential to establish a method for quantitatively evaluating the environmental 
+        impact of a chemical process so that its environmental performance can be improved by identifying and discovering the bottlenecks that cause the pollution. Through our discussions with Dr. Vivek Rangarajan we were careful to take into considerations of regulations present in our country. In India, the manufacture, import, 
+        research and release of Genetically Engineered Organisms (GEOs), as well as products made by the use of such organisms are governed by The Rules for Manufacture, Use, Import, Export and Storage of Hazardous Microorganisms, Genetically Engineered Organisms or Cells. We were mindful of these regulations and we hope to continue 
+        to refine our processes and conduct a thorough feasibility survey during Phase 2.
+
+        One of the most important parts of comprehensive upstream processing with respect to safety considerations in bioprocess technology is sterilization. Dr Rangarajan also informed us about the importance of sterilization of all the machinery for the biochemical plant. In industrial practice, sterilization is the process which ensures 
+        that the probability of survival of undesired organisms is reduced to an arbitrarily low level. However, we must not let the probabilistic definition of the concept fool us into relaxing our requirements about the process. It in fact just proves that there are a number of factors that can foil the high sterility standards of large 
+        scale biochemical production like the initial number of organisms, heat resistance of the particular organism, etc. Hence, we made it a point to include a robust sterilization unit in our plans for the set-up of the plant. It will play an important role in making our machinery, nutrient media, inoculant and the pipings contaminant free.
+
+
+
+        
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Safety")
+    +buttonRight("Home")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"authors": "Da Silva, M. F., de Souza Ant  nio, C., de Oliveira, P. J., Xavier, G. R., Rumjanek, N. G., de Barros Soares, L. H., & Reis, V. M. (2012). ", "doi": "https://doi.org/10.1007/s11104-012-1242-3", "journal": "Plant and Soil", "numbers": "356(1-2), 231-243. ", "title": "Survival of endophytic bacteria in polymer-based inoculants and efficiency of their application to sugarcane.", "type": "article"}, {"Google_Books_URL": "https://books.google.co.in/books?id=0VHtngEACAAJ", "authors": "Shuler, M. L., & Kargi, F.", "publisher": "Prentice Hall Inc.", "title": "Bioprocess Engineering: Basic Concepts.", "type": "book", "year_published": "(2002)."}, {"authors": "Saxena, P., Srivastava, R. & Sharma, M. (2010).", "journal": "Australian Journal of Crop Science.", "numbers": "4, 692-699.", "title": "Impact of cut to crush delay and bio-chemical changes in sugarcane.", "type": "article", "year_published": 2010}, {"Google_Books_URL": "https://books.google.co.in/books?id=HXOcAQAAQBAJ", "authors": "Atkins, P., & de Paula, J.", "publisher": "OUP Oxford.", "title": "Physical Chemistry for the Life Sciences.", "type": "book", "year_published": "(2010)."}]

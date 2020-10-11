@@ -1,0 +1,25 @@
+#1
+- doi: https://doi.org/10.1007/s11104-012-1242-3
+#2
+- book:
+    authors: "Shuler, M. L., & Kargi, F."
+    year_published: 2002
+    title: "Bioprocess Engineering: Basic Concepts."
+    publisher: "Prentice Hall Inc"
+    Google_Books_URL: "https://books.google.co.in/books?id=0VHtngEACAAJ"
+#3
+- article:
+    authors: "Saxena, P., Srivastava, R. & Sharma, M."
+    year_published: 2010
+    title: "Impact of cut to crush delay and bio-chemical changes in sugarcane."
+    journal: "Australian Journal of Crop Science"
+    numbers: "4, 692-699."
+
+#4
+- book:
+    authors: "Atkins, P., & de Paula, J."
+    year_published: 2010
+    title: "Physical Chemistry for the Life Sciences."
+    publisher: "OUP Oxford"
+    Google_Books_URL: "https://books.google.co.in/books?id=HXOcAQAAQBAJ"
+
