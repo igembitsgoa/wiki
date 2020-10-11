@@ -44,9 +44,13 @@ block article
         We, along with Abhigyaan, debunked some myths about COVID and promoted safer and smarter ways to deal with the pandemic through posters and infographics. All of our posts can be found on our instagram page. A few of them have 
         been shown below!
 
-
-    - var imgpath = "" + require("../assets/img/Education--Abhigyaan.png")["default"]
-    +image(1, imgpath, "Unmasking the Coronavirus — A collaboration with Abhigyaan")
+    .row
+        .col-md-6
+            - var imgpath = "" + require("../assets/img/Education--Abhigyaan-1.png")["default"]
+            +image(1, imgpath, "An infographic from our collboration with Abhigyaan")
+        .col-md-6
+            - var imgpath = "" + require("../assets/img/Education--Abhigyaan-2.png")["default"]
+            +image(2, imgpath, "An infographic from our collboration with Abhigyaan")
 
     :markdown-it(html)
 
@@ -63,10 +67,10 @@ block article
         conversational and accessible to a general audience. We also appeared on a live podcast, _‘Charlas In Silico’_,  by the iGEM Barcelona team and to talk about our experience as iGEMers. 
 
     - var imgpath = "" + require("../assets/img/Education--pittsburgh.png")["default"]
-    +image(2, imgpath, "iGEM BITS Goa featuring in the Bluetooth Bacteria podcast by iGEM Pittsburgh")
+    +image(3, imgpath, "iGEM BITS Goa featuring in the Bluetooth Bacteria podcast by iGEM Pittsburgh")
     
     - var imgpath = "" + require("../assets/img/Education--barcelona.png")["default"]
-    +image(3, imgpath, "iGEM BITS Goa featuring in the Charlas In Silico podcast by iGEM Barcelona")
+    +image(4, imgpath, "iGEM BITS Goa featuring in the Charlas In Silico podcast by iGEM Barcelona")
 
     :markdown-it(html)
         
@@ -81,16 +85,8 @@ block article
 
         The Language Project was created by IIT Madras, to address the difficulties in science communication and to make science more accessible. This year BITS Goa and the University of Rochester collaborated with IIT Madras to expand the number of 
         initiatives under this umbrella. It is a multifaceted approach that includes art, dance and music to foster science communication. Further, we seek to increase accessibility of resources through our ASL initiatives and by making iGEM wikis 
-        more accessible. More information can be found on our [Accessibility](/Accessibility) page 
+        more accessible. More information can be found on our [Accessibility](/Accessibility) page.
 
-
-    //- .row
-    //-     .col-md-6
-    //-         - var imgpath = "" + require("../assets/img/Education--Abhigyaan-1.png")["default"]
-    //-         +image(3, imgpath, "caption 1")
-    //-     .col-md-6
-    //-         - var imgpath = "" + require("../assets/img/Education--Abhigyaan-2.png")["default"]
-    //-         +image(4, imgpath, "caption 1")
 
 
 
