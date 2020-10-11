@@ -97,4 +97,8 @@ mixin landing_card(caption, name, image)
             = name
 
 mixin pdf(url, description)
+  p
+    | To download this document, click 
+    a(href=url) here
+    | .
   embed(src=url type="application/pdf" title=description)
