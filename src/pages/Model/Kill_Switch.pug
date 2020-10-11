@@ -13,7 +13,9 @@ block headVars
 block article
     :markdown-it(html)
 
-        The first step involved in modelling the kill switch was to carry out a literature survey to understand the functioning of the module at a moelcular level and understand the various mechanisms 
+        # Introduction
+
+        The first step involved in modelling the kill switch was to carry out a literature survey to understand the functioning of the module at a molecular level and understand the various mechanisms 
         and reactions involved.
 
         The kill switch has been designed to be activated by exposure to atmospheric concentrations of oxygen. Oxygen binds to the FNR promoter, thereby suppressing the transcription of the antitoxin 
@@ -28,7 +30,7 @@ block article
 
         We make the following assumptions in our model:
 
-        1. Our inducible and repressible mechanisms follow Hill characteristics.
+        1. Our inducible mechanisms follow Hill characteristics.
 
         2. (**Quasi-steady state approximation**) Due to a difference in the time scales involved between binding/unbinding of FNR and oxygen (happening in the order of milliseconds) and transcription/translation (happening in the order of minutes), we assume that the 
         concentration of the oxidised FNR promoter, \\( [FNR-O_2] \\) remains time-invariant, that is, \\( \frac{d[FNR-O_2]}{dt} = 0 \\).
@@ -93,7 +95,7 @@ block article
         This function was constructed such that the kill switch would be activated at the \\(t = 300 \text{ min}\\) mark. This time instance was selected to allow us to observe the steady state concentrations of both, the toxin and antitoxin. The jump 
         in the concentration, given by the point of discontinuity in the step function, corresponds to the exposure of the cell to an aerobic environment, with atmospheric levels of oxygen.
 
-        The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](/Appendix) algorithm and the concentrations of free ccdA and ccdB were plotted against time.
+        The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](/Appendix) algorithm and the concentrations of major chemical species were plotted against time.
 
     - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchGraph.png")["default"]
     +image(1, imgpath, "Simulation of the kill switch construct")
@@ -101,7 +103,7 @@ block article
     :markdown-it(html)
 
         From the graph, it is seen that around the \\(t = 300 \text{ min}\\) mark (when the kill switch is activated), the concentration of free ccdA begins to drop, reaches a minimum and that of free ccdB beings to rise. 
-        After a while, the only major chemical species in the cellular system are the toxin (ccdB) and highly stable complexes. Therefore, the toxin accumulates in the cell and reaches a high enough concentration to kill it.
+        After a while, the only major chemical species in the cellular system are the toxin (ccdB) and a highly stable TAT complexe. Therefore, the toxin accumulates in the cell and reaches a high enough concentration to kill it.
 
         # Sensitivity Analysis 
 
@@ -113,14 +115,36 @@ block article
 
     :markdown-it(html)
         The results of our sensitivity analysis showed that manipulating parameters associated with the FNR promoter would result in a more significant diference in the model output. Therefore, the amount of toxin produced, and consequently the 
-        growth rate of the bacteria can be controlled more easily by varying the \\(k_D\\) associated with the FNR promoter. Based on these results, we ran simluations that predicted a lower activation time for the kill switch could be obtained 
-        by changing the \\( k_D \\) for the FNR promoter by something like mutagenesis. 
+        growth rate of the bacteria can be controlled more easily by varying the \\(k_D\\) associated with the FNR promoter. Based on these results, we concluded that somehow altering \\(k_D\\) would lead to a more fine-tuned kill switch.
+
+        Next we wanted to exclusively study the the variation of toxin concentration as a function of the \\( k_D \\) values. To do this, we used the same approach as mentioned above, where we added a randomized gaussian noise to the \\( k_D \\) value 
+        proportional to a factor (given by \\( \alpha\Delta \\) in the plot) and studied how the concentration of ccdB would change. The plot we obtained is illustrated below.
+
+    - var imgpath = "../" + require("../../assets/img/Kill_Switch--ccdBvsKd.png")["default"]
+    +image(3, imgpath, "The variation of ccdB toxin concentration with varying k_D values")
+
+    :markdown-it(html)
+
+        This analysis showed us that altering \\(k_D\\) is an effective tool to increase the sensitivity of the kill switch as the graph indicates shorter response times for a perturbed \\(k_D\\). The next question was how could this alteration be acheived? 
+        Since we did not have access to a lab, we have hypothesised below a few ways that this could be performed.
+
+        The fine-tuning of the kill switch could be achieived by altering the expression rates for the ccdB gene. There are two possible ways to accomplish this:
+        - Inducing mutations in the promoter region of the gene to alter its affinity towards RNA Polymerase — which would affect the trascription and translation rates; or 
+        -  Using the promoter regions of genes with rates in the desired range.
+
+        We can also control the binding of FNR/O2 to its binding site by either:
+        - Inducing mutations in the operator region to alter the affinities of FNR to the binding site; or
+        - Inducing mutation in the repressor proteings by altering region that encodes for FNR thereby changing its affinity to the operator site.
+
 
         # Conclusion
 
         From the model we created, we have derived the following conclusions:
         1. The arrest of growth can be observed around 50-70 minutes after the kill switch has been activated.
         2. This time can be brought down further by tuning the model to change the \\( k_D \\) value for FNR/O2.
+
+        We would also like to state at this point that it is not enitirely certain if a changed \\(k_D\\) would really be effective in real-life. Although our in-silico analysis shows that 
+        some change is possible, it cannot be formally verified unless experiments are conducted.
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 
