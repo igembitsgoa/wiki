@@ -4,42 +4,7 @@
       max-width: 1340px;
     }
   }
-}
 
-@include respond-below(xl) {
-  header, main {
-    .custom-container {
-      max-width: 1140px;
-    }
-  }
-}
-
-@include respond-below(lg) {
-  header, main {
-    .custom-container {
-      max-width: 950px;
-    }
-  }
-}
-
-@include respond-below(md) {
-  header, main {
-    .custom-container {
-      max-width: 750px;
-    }
-  }
-}
-
-
-@include respond-below(sm) {
-  header, main {
-    .custom-container {
-      max-width: 540px;
-    }
-  }
-}
-
-@include respond-below(xxl) {
   .content {
     h1 {
       font-size: 2.25rem;
@@ -59,7 +24,21 @@
   }
 }
 
+@include respond-below(xl) {
+  header, main {
+    .custom-container {
+      max-width: 1140px;
+    }
+  }
+}
+
 @include respond-below(lg) {
+  header, main {
+    .custom-container {
+      max-width: 950px;
+    }
+  }
+
   main {
     .content {
       h1 {
@@ -78,6 +57,16 @@
 }
 
 @include respond-below(md) {
+  header, main {
+    .custom-container {
+      max-width: 750px;
+    }
+  }
+
+  embed {
+    height: 950px;
+  }
+
   header {
     min-height: 55vh;
     #heading {
@@ -100,7 +89,18 @@
   }
 }
 
+
 @include respond-below(sm) {
+  header, main {
+    .custom-container {
+      max-width: 540px;
+    }
+  }
+
+  embed {
+    height: 600px;
+  }
+
   header {
     min-height: 40vh;
     #heading {
@@ -159,16 +159,29 @@
       font-size: 4rem;
     }
   }
+
+  embed {
+    height: 610px;
+  }
 }
 
 @include respond-below(xxs) {
   header #heading h1 {
     font-size: 3rem;
   }
+
+  embed {
+    height: 400px;
+  }
 }
 
 @include respond-below(xxxs) {
   header #heading h1 {
     font-size: 2.5rem;
+  }
+
+
+  embed {
+    height: 350px;
   }
 }

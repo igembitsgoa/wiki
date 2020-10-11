@@ -1,0 +1,52 @@
+extends ../../templates/contents.pug
+
+block headVars
+  - var title = "Biosensor"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "../" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+  - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+  - var fullWidth = true
+  - var theme = "blue"
+
+prepend article
+
+  #collapsibleSections.accordion
+    .card
+      #headingOne.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+            span pFruB Characterization
+            i.icon-dropdown
+      #collapseOne.collapse(aria-labelledby='headingOne')
+        .card-body
+
+          +pdf("../" + require("../../assets/docs/brochure.pdf")['default'], "iGEM BITS Brochure")
+
+  .card
+    #headingTwo.card-header
+      h2.mb-0
+        button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')                        
+          span Collapsible Group Item #2
+          i.icon-dropdown
+    #collapseTwo.collapse(aria-labelledby='headingTwo')
+      .card-body
+        | Anim pariatur cliche reprehenderit
+  .card
+    #headingThree.card-header
+      h2.mb-0
+        button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+          span Collapsible Group Item #3
+          i.icon-dropdown
+    #collapseThree.collapse(aria-labelledby='headingThree')
+      .card-body
+        | Anim pariatur cliche reprehenderit
+
+append buttons
+  //- mind the quotes and the plus sign
+  +buttonLeft("Design")
+  +buttonRight("Engineering")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
