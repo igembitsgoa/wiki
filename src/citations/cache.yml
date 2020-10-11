@@ -64,6 +64,14 @@ https://doi.org/10.1016/j.molcel.2017.10.033:
   numbers: '68(4), 686-697.e3. '
   title: Rational Design of Evolutionarily Stable Microbial Kill Switches.
   type: article
+https://doi.org/10.1038/ncomms7989:
+  authors: 'Caliando, B. J., & Voigt, C. A. (2015). '
+  doi: https://doi.org/10.1038/ncomms7989
+  journal: Nature Communications
+  numbers: '6(1). '
+  title: Targeted DNA degradation using a CRISPR device stably carried in the host
+    genome.
+  type: article
 https://doi.org/10.1046/j.1365-2958.2001.02492.x:
   authors: 'Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). '
   doi: https://doi.org/10.1046/j.1365-2958.2001.02492.x
@@ -71,6 +79,13 @@ https://doi.org/10.1046/j.1365-2958.2001.02492.x:
   numbers: '41(1), 73-82. '
   title: The ratio between CcdA and CcdB modulates the transcriptional repression
     of the ccd poison-antidote system.
+  type: article
+https://doi.org/10.1071/FP12042:
+  authors: 'Vinall, K., Schmidt, S., Brackin, R., Lakshmanan, P., & Robinson, N. (2012). '
+  doi: https://doi.org/10.1071/FP12042
+  journal: Functional Plant Biology
+  numbers: '39(6), 503. '
+  title: Amino acids are a nitrogen source for sugarcane.
   type: article
 https://doi.org/10.1111/tpj.13624:
   authors: 'Evans, M. J., & Morris, R. J. (2017). '
@@ -85,6 +100,14 @@ https://doi.org/10.1128/JB.00763-19:
   journal: Journal of Bacteriology
   numbers: '202(7). '
   title: 'Type II Toxin-Antitoxin Systems: Evolution and Revolutions.'
+  type: article
+https://doi.org/10.1128/aem.57.1.85-92.1991:
+  authors: 'Knudsen, S. M., & Karlstr  m, O. H. (1991). '
+  doi: https://doi.org/10.1128/aem.57.1.85-92.1991
+  journal: Applied and Environmental Microbiology
+  numbers: '57(1), 85-92. '
+  title: Development of efficient suicide mechanisms for biological containment of
+    bacteria..
   type: article
 https://doi.org/10.1128/jb.186.23.8018-8025.2004:
   authors: 'Sutton, V. R., Mettert, E. L., Beinert, H., & Kiley, P. J. (2004). '
@@ -108,6 +131,14 @@ https://doi.org/10.1146/annurev.fl.15.010183.000333:
   numbers: '15(1), 29-45. '
   title: Fluid Mechanics of Green Plants.
   type: article
+https://doi.org/10.1146/annurev.mi.47.100193.001035:
+  authors: 'Molin, S., Boe, L., Jensen, L. B., Kristensen, C. S., Givskov, M., Ramos,
+    J. L., & Bej, A. K. (1993). '
+  doi: https://doi.org/10.1146/annurev.mi.47.100193.001035
+  journal: Annual Review of Microbiology
+  numbers: '47(1), 139-166. '
+  title: Suicidal Genetic Elements and their Use in Biological Containment of Bacteria.
+  type: article
 https://doi.org/10.1186/1745-6150-4-19:
   authors: 'Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). '
   doi: https://doi.org/10.1186/1745-6150-4-19
@@ -123,6 +154,13 @@ https://doi.org/10.1371/journal.pcbi.1003190:
   numbers: '9(8), e1003190. '
   title: A General Model for Toxin-Antitoxin Module Dynamics Can Explain Persister
     Cell Formation in E. coli.
+  type: article
+https://doi.org/10.1371/journal.pone.0041349:
+  authors: 'Bertels, F., Merker, H., & Kost, C. (2012). '
+  doi: https://doi.org/10.1371/journal.pone.0041349
+  journal: PLoS ONE
+  numbers: '7(7), e41349. '
+  title: Design and Characterization of Auxotrophy-Based Amino Acid Biosensors.
   type: article
 https://doi.org/10.3389/fpls.2018.00598:
   authors: 'Shivalingamurthy, S. G., Anangi, R., Kalaipandian, S., Glassop, D., King,

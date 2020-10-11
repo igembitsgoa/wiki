@@ -31,16 +31,45 @@ $light-grey: #878787;
 
 #footerBrand {
   padding: 75px 0;
+  font-family: 'Lato', sans-serif;
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+  }
 }
 
-#footerLogo {
+#footerTeamLogo {
   background-image: url("../assets/img/iGEMBITSGoa_logo.svg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px;
-  width: 100%;
+  height: 150px;
+  width: 175px;
   background-size: contain;
-  margin: 0 0 35px 0;
+  margin: 0 30px 35px 10px;
+  display: inline-block;
+}
+
+#BITSLogo {
+  background-image: url("../assets/img/BITS_Pilani-Logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  background-size: contain;
+  margin: 0 0 35px 30px;
+}
+
+@include respond-below(xs) {
+  #footerTeamLogo, #BITSLogo {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 #footerIcons {
@@ -158,7 +187,7 @@ $light-grey: #878787;
 }
 
 body.dark {
-  #footerLogo {
+  #footerTeamLogo {
     background-image: url('../assets/img/iGEMBITSGoa_logo_dark.svg');
   }
 }
