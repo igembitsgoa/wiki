@@ -15,14 +15,13 @@ $blue: #2c2fe8;
 $darkblue: darken($blue, 30%);
 
 .navbar {
-  height: 80px;
+  // height: 80px;
   transition: all 0.3s ease, transform 0.5s ease;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 1030;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .scroll-down .navbar {
@@ -36,6 +35,16 @@ $darkblue: darken($blue, 30%);
   transform: none;
 }
 
+#navbar-row {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0;
+
+
+}
+
 .navbar-brand {
   font-size: 2.25rem;
   font-family: "Montserrat", sans-serif;
@@ -43,7 +52,7 @@ $darkblue: darken($blue, 30%);
   position: relative;
   z-index: 200;
   margin-left: 1.5rem;
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
   color: white;
   display: flex;
   align-items: center;

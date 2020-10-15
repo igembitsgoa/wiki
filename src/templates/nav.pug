@@ -5,7 +5,7 @@ include mixins
 nav#main-nav
   .navbar.bg-none.nav-transparent
 
-    .row.w-100.justify-content-between.align-items-center
+    .row#navbar-row
       a.navbar-brand(href=urlPrefix) 
         i.navbar-logo
         span 
@@ -23,7 +23,7 @@ nav#main-nav
         button.btn#menuSwitch
           .menu-icon
     
-    .row.w-100
+    .row.w-100#progress-container-wrapper
       #progress-container
         #nav-progress-bar
     

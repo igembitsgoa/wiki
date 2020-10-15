@@ -157,9 +157,23 @@
   .navbar-brand {
     font-size: 1.5rem;
     margin-left: 0.5rem;
-    
+
     i.navbar-logo {
       margin-right: 0.5rem;
+    }
+  }
+
+  #menuSwitch {
+    margin-right: 5px;
+  }
+
+  #themeSwitchWrapper {
+    margin-right: 0.5rem;
+
+    #themeSwitch {
+      label.switch {
+        margin: 0 0.5rem;
+      }
     }
   }
 }
