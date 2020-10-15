@@ -1,14 +1,13 @@
 @include respond-above(xxl) {
-  header {
-    height: 100vh;
-  }
+  // header {
+  //   height: 100vh;
+  // }
 }
 
 @include respond-below(xxl) {
-
-  header {
-    height: max-content;
-  }
+  // header {
+  //   height: max-content;
+  // }
 
   section {
     .container {
@@ -48,6 +47,26 @@
 }
 
 @include respond-below(lg) {
+  nav {
+    .navbar-brand {
+      &,
+      &:hover,
+      &:visited {
+        color: black;
+      }
+    }
+
+    #menuSwitch {
+      .menu-icon {
+        &,
+        &:before,
+        &:after {
+          background-color: black;
+        }
+      }
+    }
+  }
+
   section {
     .container {
       max-width: 950px;
