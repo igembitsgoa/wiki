@@ -34,32 +34,77 @@ block article
 
         The results from our preliminary survey led us to the idea of translating the resources available about iGEM to
         foster greater participation in future years. To eliminate these language barriers, we thought that the best place
-        to start is at home. We began by translating iGEM manuals on protocols and assembly to Indian languages — not only
-        to increase participation in iGEM but also make this material accessible to a broader, multicultural audience.
+        to start is at home. We began by translating some iGEM resources for teams which we thought were important into Indian languages — 
+        not only to increase participation in iGEM but also make this material accessible to a broader, multicultural audience.
         To date, we have translated a few resources into multiple Indian languages, and we hope to expand this even further.
-        This content can be found here (link).
+        This content can be found below.
+    
+
+    #collapsibleSections.accordion
+        .card
+            #headingOne.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                        span Starting your Team!
+                        i.icon-dropdown
+            #collapseOne.collapse(aria-labelledby='headingOne')
+                .card-body
+
+                    +pdf("../" + require("../assets/docs/Accessibility--Start A Team.pdf")['default'], "iGEM BITS Brochure")
+
+        .card
+            #headingTwo.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
+                        span Navigating iGEM
+                        i.icon-dropdown
+            #collapseTwo.collapse(aria-labelledby='headingTwo')
+                .card-body
+
+                    +pdf("../" + require("../assets/docs/Accessibility--Start A Team.pdf")['default'], "iGEM BITS Brochure")
+
+        .card
+            #headingThree.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='true' aria-controls='collapseThree')
+                        span Funding
+                        i.icon-dropdown
+            #collapseThree.collapse(aria-labelledby='headingThree')
+                .card-body
+
+                    +pdf("../" + require("../assets/docs/Accessibility--Start A Team.pdf")['default'], "iGEM BITS Brochure")
+
+    :markdown-it(html)
+
+        ----
 
         # ASL Initiative
 
-        There is an urgent need in the deaf community for access to the right scientific terms. Fingerspelling is often too
-        tedious for scientific terminology. With the right words, we have the potential to make science come alive for deaf
-        students. ASLcore is a website that originates in Rochester through the National Technical Institute for the Deaf,
-        which is the first and largest technical college for Deaf and hard of hearing students in the United States. This
-        platform is interested in adding a whole new category of science - synthetic biology - to their already extensive
-        list of categories. Unlike ASL, Indian Sign Language is yet to be standardized across the country. However, with
-        the recently announced National Education Policy in India, ISL will be standardized across the nation, and National
-        and State curriculum materials developed for students with hearing impairment. We hope to continue our efforts, post
-        the Jamboree, in breaking barriers with ongoing initiatives that future teams can take forward.
+        After contributing to the Language project, we wanted to think of new ways to expand upon the existing initiative. 
+        Therefore, we decided to focus on non-verbal languages next with an emphasis on American Sign Language. There is an urgent need in the deaf community for access 
+        to the right scientific terms. Fingerspelling is often too tedious for scientific terminology. With the right words, 
+        we have the potential to make science come alive for deaf students. ASLcore is a website that originates in Rochester 
+        through the National Technical Institute for the Deaf,which is the first and largest technical college for Deaf and 
+        hard of hearing students in the United States. This platform is interested in adding a whole new category of science - 
+        synthetic biology - to their already extensivelist of categories. Unlike ASL, Indian Sign Language is yet to be 
+        standardized across the country. However, with the recently announced National Education Policy in India, ISL will be 
+        standardized across the nation, and National and State curriculum materials developed for students with hearing 
+        impairment. We hope to continue our efforts, post the Jamboree, in breaking barriers with ongoing initiatives that 
+        future teams can take forward.
 
         We wanted to begin educating people about ASL closer to home. In collaboration with the iGEM team from the University
         of Rochester, we created a short video consisting of ten common ASL phrases used during Jamboree.
 
-        > Link to video
+    .d-flex.justify-content-center.align-items-center
+        video(controls width=720)
+                source(src= urlPrefix + require("../assets/video/Accessibility--ASL.mp4")['default'].substr(2), type='video/mp4')
+    
+    :markdown-it(html)
+        <br>
 
         Our motivation behind this concept was to aim for a more inclusive Jamboree. Apart from just translators for various
         languages, we also wanted to include ASL to make the whole Jamboree experience more accessible and inclusive.
-        Our motivation behind this concept was to aim for a more inclusive Jamboree. Apart from just translators for various languages, we also wanted to include ASL to make the whole Jamboree experience more accessible and inclusive.
-
+        
         # Wiki Accessibility
 
         Building upon the efforts of iGEM Marburg 2018, we plan to expand their web accessibility guide and make it more thorough and comprehensive.  Web developers in most iGEM teams are unaware of this problem, and as a result, most 
@@ -74,7 +119,7 @@ block article
 
 append buttons
     //- mind the quotes and the plus sign
-    +buttonLeft("Humans of iGEM")
-    +buttonRight("All India iGEM Meet")
+    +buttonLeft("Education")
+    +buttonRight("Home")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
