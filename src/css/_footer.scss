@@ -141,10 +141,6 @@ $light-grey: #878787;
 }
 
 @include respond-below(sm) {
-  // #footerBrand {
-  //   padding: 40px 0;
-  // }
-
   #footerNav {
     .container {
       text-align: center;
