@@ -132,6 +132,7 @@ $light-grey: #878787;
     list-style: none;
     padding: 0;
     font-weight: 400;
+    margin: 0;
     a {
       color: $light-grey;
       font-size: 1.1rem;
@@ -140,10 +141,6 @@ $light-grey: #878787;
 }
 
 @include respond-below(sm) {
-  // #footerBrand {
-  //   padding: 40px 0;
-  // }
-
   #footerNav {
     .container {
       text-align: center;
@@ -189,5 +186,9 @@ $light-grey: #878787;
 body.dark {
   #footerTeamLogo {
     background-image: url('../assets/img/iGEMBITSGoa_logo_dark.svg');
+  }
+
+  p {
+    color: white;
   }
 }
