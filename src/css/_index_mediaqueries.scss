@@ -47,25 +47,25 @@
 }
 
 @include respond-below(lg) {
-  nav {
-    .navbar-brand {
-      &,
-      &:hover,
-      &:visited {
-        color: black;
-      }
-    }
+  // nav {
+  //   .navbar-brand {
+  //     &,
+  //     &:hover,
+  //     &:visited {
+  //       color: black;
+  //     }
+  //   }
 
-    #menuSwitch {
-      .menu-icon {
-        &,
-        &:before,
-        &:after {
-          background-color: black;
-        }
-      }
-    }
-  }
+  //   #menuSwitch {
+  //     .menu-icon {
+  //       &,
+  //       &:before,
+  //       &:after {
+  //         background-color: black;
+  //       }
+  //     }
+  //   }
+  // }
 
   section {
     .container {
