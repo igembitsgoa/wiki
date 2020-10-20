@@ -34,7 +34,7 @@ function resizeHeader() {
     $("header").css("height", "100vh");
     $("header video").css("margin-top", "0");
   }
-}
+} 
 
 $(window).on("resize", function () {
   resizeHeader();
