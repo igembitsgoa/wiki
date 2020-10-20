@@ -23,12 +23,16 @@ function resizeHeader() {
     document.body.clientHeight;
 
   var ratio = width / height;
+  
+  console.log(width + " " + height + " " + ratio + " " + $("header").css("height"));
 
   if (ratio < 1920 / 1080) {
     $("header").css("height", "unset");
   } else {
     $("header").css("height", "100vh");
   }
+  
+  console.log(width + " " + height + " " + ratio + " " + $("header").css("height"));
 }
 
 $(window).on("resize", function () {
@@ -37,7 +41,7 @@ $(window).on("resize", function () {
 
 $(function () {
   resizeHeader();
-
+  
   // a terrible way to fix the github.io /wiki/ problem
   if (window.location.href.includes("github.io")) {
     $("source").each(function () {
