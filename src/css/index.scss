@@ -1,13 +1,6 @@
 @import "_main.scss";
 
-$pink: #ea178c;
-$green: #0fc488;
-$green-background: #11d694;
-$white: #ffffff;
-$yellow: #ffdb59;
-// $orange: #FFBA60;
-$orange: #ffb454;
-$black: #3d3d3d;
+@import "_colors.scss";
 
 
 // hide dark mode switch
@@ -17,4 +10,19 @@ $black: #3d3d3d;
 
 @import "_index_header.scss";
 @import "_index_sections.scss";
+
+#footerNav {
+  background-color: $index-footer-background;
+
+  a.footer-heading {
+    color: $index-footer-heading;
+  }
+
+  li {
+    a {
+      color: $index-footer-links;
+    }
+  }
+}
+
 @import "_index_mediaqueries.scss";
