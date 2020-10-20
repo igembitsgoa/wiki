@@ -15,16 +15,7 @@ import "./js/main";
 //     });
 // });
 
-// a terrible way to fix the github.io /wiki/ problem
-if (window.location.href.includes("github.io")) {
-  $("source").each(function () {
-    var link = $(this).attr("src").replace("wiki/..", "wiki");
-    $(this).attr("href", link);
-  });
-}
-
-$(window).on('resize', function () {
-
+function resizeHeader() {
   var width = getWidth();
   var height =
     window.innerHeight ||
@@ -33,10 +24,25 @@ $(window).on('resize', function () {
 
   var ratio = width / height;
 
-  if (ratio < 1920/1080) {
-    $('header').css('height', 'unset');
+  if (ratio < 1920 / 1080) {
+    $("header").css("height", "unset");
+  } else {
+    $("header").css("height", "100vh");
   }
-  else {
-    $('header').css('height', '100vh');
+}
+
+$(window).on("resize", function () {
+  resizeHeader();
+});
+
+$(function () {
+  resizeHeader();
+
+  // a terrible way to fix the github.io /wiki/ problem
+  if (window.location.href.includes("github.io")) {
+    $("source").each(function () {
+      var link = $(this).attr("src").replace("wiki/..", "wiki");
+      $(this).attr("href", link);
+    });
   }
 });
