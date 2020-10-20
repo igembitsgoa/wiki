@@ -10,7 +10,7 @@ html(lang="en")
         header.d-flex.justify-content-center.align-items-center
             video(autoplay="true" muted)
                 source(src= urlPrefix + require("./assets/video/homepage.mp4")['default'].substr(2), type='video/mp4')
-        section#introduction.white
+        section.section1#introduction
             .section-animation
             .container
                 .row
@@ -43,7 +43,7 @@ html(lang="en")
 
                         .d-flex.justify-content-center.justify-content-sm-end.my-5
                             +buttonRight("Description")
-        section#design.yellow
+        section.section2#design
             .section-animation
             .container
                 .row
@@ -70,7 +70,7 @@ html(lang="en")
                             | The bacteria synthesise
                             br
                             | Anti-invertase. 
-        section#safety.white
+        section.section3#safety
             .section-animation
             .container
                 .row
@@ -98,8 +98,7 @@ html(lang="en")
 
                         .d-flex.justify-content-center.justify-content-sm-end.my-5
                             +buttonRight("Safety")  
-
-        section#human-practices.green
+        section.section4#human-practices
             .section-animation
             .container
                 .row
@@ -125,7 +124,7 @@ html(lang="en")
                             | Like shadow to a body:
                             br
                             | Inseparable.
-        section#collaborations.white
+        section.section5#collaboration
             .section-animation
             .container
                 .row
@@ -152,7 +151,7 @@ html(lang="en")
 
                         .d-flex.justify-content-center.justify-content-sm-end.my-5
                             +buttonRight("Collaborations")
-        section#science-communication.orange
+        section.section6#contribution
             .section-animation
             .container
                 .row
@@ -182,4 +181,5 @@ html(lang="en")
                             br
                             | CONTRIBUTE!
         footer 
+            include templates/footer_nav.pug
             include templates/footer_brand.pug

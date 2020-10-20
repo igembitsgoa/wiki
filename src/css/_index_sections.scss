@@ -2,10 +2,12 @@
 * Homepage Sections
 ******************************/
 
+@use 'sass:list';
+
 section {
   padding: 5rem 0 1.5rem 0;
   position: relative;
-  
+
   .container {
     max-width: 1380px;
   }
@@ -79,8 +81,8 @@ section {
     font-family: "Merriweather", serif;
 
     /**
-   * Section Title
-  **/
+    * Section Title
+    **/
 
     h2 {
       font-family: "Merriweather", serif;
@@ -140,147 +142,50 @@ section {
     }
   }
 
-  &.white {
-    background-color: white;
-    h3 {
-      border-color: black;
-      color: $green;
-    }
-    h2 {
-      color: $black;
-      span {
-        color: $green;
+  @for $i from 1 through 6 {
+    &.section#{$i} {
+      background-color: list.nth($section-backgrounds, $i);
+
+      h3 {
+        border-color: list.nth($section-accents, $i);
+        color: list.nth($section-accents, $i);
       }
-    }
-    a.button {
-      .circle {
-        background-color: $green !important;
-        .icon {
-          &.arrow {
-            background-color: none !important;
-            &::before {
-              border-color: $white !important;
-            }
-          }
+      h2 {
+        color: list.nth($section-headings, $i);
+        span {
+          color: list.nth($section-accents, $i);
         }
       }
-      .button-text {
-        color: black !important;
-        // font-weight: 900 !important;
+      p {
+        color: list.nth($section-texts, $i);
       }
-      &:hover {
+      a.button {
         .circle {
+          background-color: list.nth($section-accents, $i);;
           .icon {
             &.arrow {
-              background: $white !important;
+              background-color: none !important;
+              &::before {
+                border-color: white;
+              }
             }
           }
         }
         .button-text {
-          color: $white !important;
+          color:list.nth($section-texts, $i);
+          font-weight: 700 !important;
         }
-      }
-    }
-  }
-
-  &.yellow {
-    background-color: $yellow;
-    h3 {
-      border-color: black;
-      color: $pink;
-    }
-    h2 {
-      color: $black;
-      span {
-        color: $pink;
-      }
-    }
-  }
-
-  &.green {
-    background-color: $green-background;
-    h3 {
-      border-color: black;
-      color: $white;
-    }
-    h2 {
-      color: $black;
-      span {
-        color: $white;
-      }
-    }
-    a.button {
-      .circle {
-        background-color: $white !important;
-        .icon {
-          &.arrow {
-            background-color: none !important;
-            &::before {
-              border-color: $pink !important;
+        &:hover {
+          .circle {
+            .icon {
+              &.arrow {
+                background: white;
+              }
             }
           }
-        }
-      }
-      .button-text {
-        color: white !important;
-        font-weight: 900 !important;
-      }
-      &:hover {
-        .circle {
-          .icon {
-            &.arrow {
-              background: $pink !important;
-            }
+          .button-text {
+            color: white;
           }
-        }
-        .button-text {
-          color: $pink !important;
-        }
-      }
-    }
-  }
-
-  &.orange {
-    background-color: $orange;
-    h3 {
-      border-color: black;
-      color: $white;
-    }
-    h2 {
-      color: black;
-      span {
-        color: $white;
-      }
-    }
-    p {
-      color: black;
-    }
-    a.button {
-      .circle {
-        background-color: $white !important;
-        .icon {
-          &.arrow {
-            background-color: none !important;
-            &::before {
-              border-color: $pink !important;
-            }
-          }
-        }
-      }
-      .button-text {
-        color: black !important;
-        font-weight: 700 !important;
-      }
-      &:hover {
-        .circle {
-          .icon {
-            &.arrow {
-              background: $pink !important;
-            }
-          }
-        }
-        .button-text {
-          color: $pink !important;
         }
       }
     }
