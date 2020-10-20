@@ -64,12 +64,31 @@ block article
         process for producing a product from the raw materials. The design of the process involves selection, arrangement of the stages, and the selection of specification and design of the equipment required to perform the stages. To scale up our 
         inoculant to an industrial product these are the unit processes and operations that we identified.
 
+    - var imgpath = "" + require("../assets/img/Implementation--BFD.png")["default"]
+    +image(1, imgpath, "A Block Flow Digram showing the product stages", 60)
+    
+    :markdown-it(html)
         From these processes, we had to look for equipment to accomplish these processes. The assembly, we came up with, consists mainly of an anaerobic bioreactor and a simple mixing tank where we mix in our inoculant ingredients. The bioreactor and 
         mixing tank will be designed to be anaerobic so as to consider for the kill switch. Based on our discussions with Mr. Ashish, we identified the need for adding a filter to concentrate the product stream of the bioreactor. We chose a crossflow 
-        filter to this effect, since it allows us to selectively concentrate the stream upto a desired level. In the usual scenario, the permeate nutrient media would be wasted, we decided to recover the nutrient media and supply it back to the bioreactor 
-        mixing with the fresh media [Shuler, M. L., & Kargi, F., 2002](#citation2). We also added a hopper so that there is no exposure of the bacteria to the atmosphere at all and the killswitch is not triggered.
+        filter to this effect, since it allows us to selectively concentrate the stream upto a desired level. Usually, the permeate nutrient media would be wasted, we decided to recover the nutrient media and supply it back to the bioreactor 
+        mixing with the fresh media [Shuler, M. L., & Kargi, F., 2002](#citation2). We also added a hopper so that there is no exposure of the bacteria to the atmosphere and the kill switch is not activated.
 
-        > Aspen diagram
+    - var imgpath = "" + require("../assets/img/Implementation--PFD.png")["default"]
+    +image(2, imgpath, "Process Flow Diagram indicating the processes involved in the industrial manufacturing of our product")
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Unit/Stream | Component            | Unit/Stream | Component             |
+        | :---------: | :------------------: |:----------: |:--------------------: |
+        | S1          | Fresh Nutrient Media | S5          | Concentrated Retentate |
+        | B1          | Media Reservoir      | S6          | Permeate Nutrient Media |
+        | S2          | Nutrient Media to Mixer | S7          | Inoculant Mixture  (See above table)|
+        | B2          | Mixer | B5          | Inoculant Storage |
+        | S3          | Media to Bioreactor | S8          | Inoculant Mixture to Hopper |
+        | B3          | Bioreactor | B6          | Hopper |
+        | S4          | Fermented Cells with Media | S9          | Packaging Outlet |
+        | B4          | Crossflow Filter |          |  |
+
+    :markdown-it(html)
 
         There were a few practical considerations that needed to be calculated which would capture the working of our process. The first of them being an estimation of total amount invertase present in one sugarcane. This would then allow us to formulate how 
         much inoculant would be needed to inactivate the invertase. 
@@ -79,13 +98,16 @@ block article
         The activity of the Acid and Neutral invertase(s) were determined by Saxena et al. [2010](#citation3) The following results were reported by them:
 
     - var imgpath = "" + require("../assets/img/Implementation--SaxenaEtAl.png")["default"]
-    +image(1, imgpath, "Acid and Neutral invertase(s) in juice of staled canes. (μmol sucrose hydrolysed/min/ml juice)")
+    +image(2, imgpath, "Acid and Neutral invertase(s) in juice of staled canes. (μmol sucrose hydrolysed/min/ml juice)")
 
     :markdown-it(html)
 
         Using these values we computed the graph of invertase concentration and staling time. We then created a best fit curve that gave us a polynomial expression for invertase activity in sugarcane over a period of time. 
 
-        > Shrilaxmi Plot
+    - var imgpath = "" + require("../assets/img/Implementation--InveratseActivityPlot.png")["default"]
+    +image(3, imgpath, "Invertase activity in sugarcane varieties as a function of time", 70)
+
+    :markdown-it(html)
 
         Through our interaction with the Sugarcane Federation, we found that the best case average time of travel for invertase action is 5 hours from the farm to th emill. Therefore we chose to model our bacteria such that it neutralizes 50% of the invertase in 2.5 hours. 
         Since even after after that the bacteria will continue to diffuse through the sugarcane and divide, it will continue to inhibit invertase action. This acts as a sufficient metric to formulate our required inoculant concentration.
@@ -100,7 +122,7 @@ block article
             I(150) = 1.18567 \times 10^{3} \text{ μmol hydrolysed }\text{ s }^{-1} \text{ mL }^{-1}
         $$
 
-        One sugarcane contains around \\( 240 \\)mL of juice. Therefore, in one sugarcane you would have \\( 2.845 \times 10^{5} \text{ μmol hydrolysed }\text{ s }^{-1}\\). Once we computed the total amount of invertase we now had to decide the amount of inoculant needed for 
+        One sugarcane contains around \\( 240 \\)mL of juice. Therefore, one sugarcane would have \\( 2.845 \times 10^{5} \text{ μmol hydrolysed }\text{ s }^{-1}\\) of invertase after 2.5 hours. After computing the total amount of invertase we now had to determine the amount of inoculant needed for 
         neutralising all the invertase. 
 
         ## Model for the required inoculant
@@ -119,8 +141,8 @@ block article
         - \\( \varphi \\) is the concentration; and
         - \\( \nabla \\) is the gradient operator.
 
-        We began a series of experiments that measured the diffusion of _E. coli_ through various cross sections of sugarcane across various times. This would allow us to compute the mass flux of bacteria within the sugarcane. However, due to loss of lab access we were unable to complete the experiment 
-        to obtain statistically significant values. Once the diffusion constant for our chassis is obtained using the concentration gradient of invertase (as calculated above) we would obtain the amount of bacteria required in our inoculant per sugarcane. This value would now allow us to determine the 
+        We began a series of experiments that measured the diffusion of _E. coli_ through various cross sections of sugarcane across various times. This would allow us to compute the mass flux of bacteria within the sugarcane. However, due to no lab access we were unable to complete the experiment 
+        to obtain statistically significant values. Once the diffusion constant for our chassis is obtained using the concentration gradient of invertase (as calculated above) we would obtain the amount of bacteria required in our inoculant per sugarcane. This value would allow us to determine the 
         specifications of our filter in our process flow diagram. 
 
         # Safety Considerations
@@ -137,7 +159,7 @@ block article
 
         One of the most important parts of comprehensive upstream processing with respect to safety considerations in bioprocess technology is sterilization. Dr Rangarajan also informed us about the importance of sterilization of all the machinery for the biochemical plant. In industrial practice, sterilization is the process which ensures 
         that the probability of survival of undesired organisms is reduced to an arbitrarily low level. However, we must not let the probabilistic definition of the concept fool us into relaxing our requirements about the process. It in fact just proves that there are a number of factors that can foil the high sterility standards of large 
-        scale biochemical production like the initial number of organisms, heat resistance of the particular organism, etc. Hence, we made it a point to include a robust sterilization unit in our plans for the set-up of the plant. It will play an important role in making our machinery, nutrient media, inoculant and the pipings contaminant free.
+        scale biochemical production like the initial number of organisms, heat resistance of the particular organism, _et cetera_. Hence, we made it a point to include a robust sterilization unit in our plans for the set-up of the plant. It will play an important role in making our machinery, nutrient media, inoculant and the pipings contaminant-free.
 
 
 
