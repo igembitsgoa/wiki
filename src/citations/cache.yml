@@ -1,3 +1,19 @@
+https://doi.org/10.1002/prot.24403:
+  authors: 'Kozakov, D., Beglov, D., Bohnuud, T., Mottarella, S. E., Xia, B., Hall,
+    D. R., & Vajda, S. (2013). '
+  doi: https://doi.org/10.1002/prot.24403
+  journal: 'Proteins: Structure, Function, and Bioinformatics'
+  numbers: '81(12), 2159-2166. '
+  title: How good is automated protein docking?.
+  type: article
+https://doi.org/10.1002/prot.25219:
+  authors: 'Vajda, S., Yueh, C., Beglov, D., Bohnuud, T., Mottarella, S. E., Xia,
+    B., ... & Kozakov, D. (2017). '
+  doi: https://doi.org/10.1002/prot.25219
+  journal: 'Proteins: Structure, Function, and Bioinformatics'
+  numbers: '85(3), 435-444. '
+  title: New additions to the ClusPro server motivated by CAPRI.
+  type: article
 https://doi.org/10.1007/BF00261153:
   authors: 'Tam, J. E., & Kline, B. C. (1989). '
   doi: https://doi.org/10.1007/BF00261153
@@ -81,6 +97,14 @@ https://doi.org/10.1038/ncomms7989:
   title: Targeted DNA degradation using a CRISPR device stably carried in the host
     genome.
   type: article
+https://doi.org/10.1038/nprot.2016.169:
+  authors: 'Kozakov, D., Hall, D. R., Xia, B., Porter, K. A., Padhorny, D., Yueh,
+    C., ... & Vajda, S. (2017). '
+  doi: https://doi.org/10.1038/nprot.2016.169
+  journal: Nature Protocols
+  numbers: '12(2), 255-278. '
+  title: The ClusPro web server for protein-protein docking.
+  type: article
 https://doi.org/10.1046/j.1365-2958.2001.02492.x:
   authors: 'Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). '
   doi: https://doi.org/10.1046/j.1365-2958.2001.02492.x
@@ -95,6 +119,23 @@ https://doi.org/10.1071/FP12042:
   journal: Functional Plant Biology
   numbers: '39(6), 503. '
   title: Amino acids are a nitrogen source for sugarcane.
+  type: article
+https://doi.org/10.1073/pnas.1004481107:
+  authors: 'Hothorn, M., Van den Ende, W., Lammens, W., Rybin, V., & Scheffzek, K.
+    (2010). '
+  doi: https://doi.org/10.1073/pnas.1004481107
+  journal: Proceedings of the National Academy of Sciences
+  numbers: '107(40), 17427-17432. '
+  title: Structural insights into the pH-controlled targeting of plant cell-wall invertase
+    by a specific inhibitor protein.
+  type: article
+https://doi.org/10.1093/nar/gky427:
+  authors: 'Waterhouse, A., Bertoni, M., Bienert, S., Studer, G., Tauriello, G., Gumienny,
+    R., ... & Schwede, T. (2018). '
+  doi: https://doi.org/10.1093/nar/gky427
+  journal: Nucleic Acids Research
+  numbers: '46(W1), W296-W303. '
+  title: 'SWISS-MODEL: homology modelling of protein structures and complexes.'
   type: article
 https://doi.org/10.1111/tpj.13624:
   authors: 'Evans, M. J., & Morris, R. J. (2017). '
@@ -204,4 +245,46 @@ https://doi.org/10.6026/97320630009464:
   journal: Bioinformation
   numbers: '9(9), 464-465. '
   title: An-Overview on invertase in sugarcane.
+  type: article
+https://dx.doi.org/10.1002/elps.200900140:
+  authors: 'Guex, N., Peitsch, M. C., & Schwede, T. (2009). '
+  doi: https://dx.doi.org/10.1002/elps.200900140
+  journal: ELECTROPHORESIS
+  numbers: '30(S1), S162-S173. '
+  title: 'Automated comparative protein structure modeling with SWISS-MODEL and Swiss-PdbViewer:
+    A historical perspective.'
+  type: article
+https://dx.doi.org/10.1038/s41598-017-09654-8:
+  authors: 'Bertoni, M., Kiefer, F., Biasini, M., Bordoli, L., & Schwede, T. (2017). '
+  doi: https://dx.doi.org/10.1038/s41598-017-09654-8
+  journal: Scientific Reports
+  numbers: '7(1). '
+  title: Modeling protein quaternary structure of homo-and hetero-oligomers beyond
+    binary interactions by homology.
+  type: article
+https://dx.doi.org/10.1093/bioinformatics/btq662:
+  authors: 'Benkert, P., Biasini, M., & Schwede, T. (2010). '
+  doi: https://dx.doi.org/10.1093/bioinformatics/btq662
+  journal: Bioinformatics
+  numbers: '27(3), 343-350. '
+  title: Toward the estimation of the absolute quality of individual protein structure
+    models.
+  type: article
+https://dx.doi.org/10.1093/bioinformatics/btz828:
+  authors: 'Studer, G., Rempfer, C., Waterhouse, A. M., Gumienny, R., Haas, J., &
+    Schwede, T. (2019). QMEANDisCo-distance constraints applied on model quality estimation.
+    Bioinformatics, 36(6), 1765-1771. '
+  doi: https://dx.doi.org/10.1093/bioinformatics/btz828
+  journal: Bioinformatics
+  numbers: '36(6), 1765-1771. '
+  title: QMEANDisCo distance constraints applied on model quality estimation.
+  type: article
+https://dx.doi.org/10.1093/nar/gkw1132:
+  authors: 'Bienert, S., Waterhouse, A., de Beer, T. A. P., Tauriello, G., Studer,
+    G., Bordoli, L., & Schwede, T. (2016). The SWISS-MODEL Repository-new features
+    and functionality. Nucleic Acids Research, 45(D1), D313-D319. '
+  doi: https://dx.doi.org/10.1093/nar/gkw1132
+  journal: Nucleic Acids Research
+  numbers: '45(D1), D313-D319. '
+  title: The SWISS-MODEL Repository new features and functionality.
   type: article
