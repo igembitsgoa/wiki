@@ -1,0 +1,100 @@
+extends ../templates/contents.pug
+
+block headVars
+  - var title = "Collaborations"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "" + require("../assets/img/Contribution--header.png")["default"]
+  - var backgroundAttribution = "Photo from Freepik"
+  - var backgroundAttributionLink = "https://www.freepik.com/free-vector/public-contribution-concept_2448540.htm"
+  - var theme = "green"
+  - var fullWidth = true
+
+block article
+  :markdown-it(html)
+
+    # Technical Collaborations 
+
+    ## Ohio State 
+    We collaborated with the Ohio State team for our kill switch characterisation and biocontainment. Our project contains a three-tiered biosafety system, since we plan on working with inoculating our strain into plant systems. The Ohio State team helped us by validating our kill switch mathematical model and biosafety considerations. 
+
+    ## Groningen 
+    
+    The Groningen team were also working on a plant based project regarding nematode infestation in potatoes. They helped us by providing valuable feedback for our toxicity model for our inoculant delivery mechanism. 
+
+    ## UNESP 
+
+    The UNESP team was crucial for our understanding of sugarcane cultivation in Brazil. They provided us the contact of Andre Hermann, who guided us on policy guidelines and framework for GMOs 
+
+    # AIIM
+
+    We jointly organised and hosted the All India iGEM Meet (link to page) in collaboration with IISER Bhopal, IISER Berhampur, Manipal and IISER Tirupati 
+
+    Manipal, The Dais, BITSMUN Goa  (Biosummit)
+
+    IISER Bhopal
+
+    IISER Tirupati:
+
+    IISER Behrampur:
+
+    # Software
+
+    ##  Manipal 
+    The Manipal team used our software WikiSync. They helped us find bugs(?) 
+
+    ## Thessaly 
+
+    ## Stockholm 
+
+    ## Stockholm: Used starter pack, found bugs, is writing docs
+
+    # Education, Policy and Outreach 
+
+    ## UANL, DTU Denmark, Waterloo and Ohio State
+
+    We collaborated with these teams over the course of the competition season for our comparative study of GMO policies across different (link to policy page) 
+
+    ## IISER Pune 
+
+    The IISER Pune teams were one of the first teams we met. Their project domain was closely related to one of our alumnus Dr Shruthi Vembur’s research field. We provided them with her contact for any help they may require. 
+
+    ## IIT Madras, Rochester  (Accessibility)
+
+    The Language Project was created by IIT Madras, to address the difficulties in science communication and to make science more accessible. This year BITS Goa and the University of Rochester collaborated with IIT Madras to expand the number of initiatives under this umbrella. (link to accessibility) 
+
+    ## Calgary 
+
+    We first met the Calgary team when they hosted JulyGEM. We later met up with them to discuss the various milestones and challenges faced by first time teams. They provided us with some valuable inputs that helped us in shaping our synthetic biology course.
+
+    ## Pittsburgh and Barcelona
+
+    We met with the Pittsburgh and Barcelona teams for their podcasts about iGEM teams. The Pittsburgh team’s podcast was to shine a light on current iGEM teams and their progress so far. The iGEM Barcelona team had a live podcast (‘Charlas In Silico’) about iGEM and synthetic biology. 
+
+    ## Korea SIS
+
+    The Korea SIS team is currently working on reducing post harvest losses in food and grain crops. We helped them in formulating their economic model as well as sharing our kill switch mechanism and design.
+
+    ## Korea KSI
+
+    We helped the KSI team by reaching out to our contacts in the paper industry in India. They required information on paper recycling which we were able to help them with. 
+
+    ## Pittsburgh
+
+    ## Barcelona
+
+    ## Synbio for Everyone 
+
+    We collaborated with Synbio for Everyone for our accessibility initiatives. They helped us in curating content for circulation among the children of the Sparsha foundation (link to accessibility page) 
+
+    # Humans of iGEM 
+
+    ## During the course of the competition season, we had the chance to meet several teams who collaborated with us for our Humans of iGEM initiative. These included - MSP iGEM, iGEM Calgary, Kaavya, the iGEM ambassador for Japan, Varsha Jaisimha - the ambassador for Asia Pacific (link to Humans of iGEM Page) 
+
+append buttons
+  //- mind the quotes and the plus sign
+  +buttonLeft("Home")
+  +buttonRight("Software")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
