@@ -24,12 +24,17 @@ function resizeHeader() {
 
   var ratio = width / height;
 
-  if (ratio < 1920 / 1080) {
+  if (ratio < 1200 / 1080) {
     $("header").css("height", "unset");
+    $("header video").css("margin-top", "17%");
+  } else if (ratio < 1920 / 1080) {
+    $("header").css("height", "unset");
+    $("header video").css("margin-top", "0");
   } else {
     $("header").css("height", "100vh");
+    $("header video").css("margin-top", "0");
   }
-}
+} 
 
 $(window).on("resize", function () {
   resizeHeader();

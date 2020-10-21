@@ -1,3 +1,26 @@
+$section-backgrounds: #d6feff, #ffffff, #ffe9e0, #ffffff, #ffaaba, #ffffff;
+$section-headings: #4b5555, #4b5555, #4b5555, #212121, #212121, #212121;
+$section-texts: #707070, #434343, #434343, #191919, #212121, #212121;
+$section-accents: #009c9f, #ea526f, #ea526f, #006669, #9e132e, #008487;
+
+$index-footer-background: #007679;
+$index-footer-heading: #abf5f7;
+$index-footer-links: #ffffff;
+
+$footer-headings: #616161;
+$footer-links: #878787;
+
+// maps sections to IDs from the section arrays
+$section-pages-map: (
+  project: 0,
+  human-practices: 1,
+  parts: 2,
+  journal: 3,
+  team: 4,
+  contribution: 5,
+  other-areas: 1,
+);
+
 $pink: #ea178c;
 $green: #0fc488;
 $green-background: #11d694;
@@ -7,11 +30,28 @@ $yellow: #ffdb59;
 $orange: #ffb454;
 $black: #3d3d3d;
 
-$section-backgrounds: #d6feff, #ffffff, #ffe9e0, #ffffff, #ffaaba, #ffffff;
-$section-headings: #4b5555, #4b5555, #4b5555, #212121, #212121, #212121;
-$section-texts: #707070, #434343, #434343, #191919, #212121, #212121;
-$section-accents: #009c9f, #ea526f, #ea526f, #006669, #9e132e, #008487;
+$whitey: #f0f0f0;
+$pink: #ea178c;
+$green: #0fc488;
+$green-background: #11d694;
+$dark-green: #12bc84;
+$white: #ffffff;
+$orange: #ffc5ad;
+$yellow: #ffdb59;
+$blue: #1faaad;
+$black: #3d3d3d;
+$grey: #dadada;
+$light-grey: #f7f7f7;
+$dark-grey: #8e8e8e;
+$selection-color: rgba(255, 233, 0, 0.4);
+$table-border-light: #dee2e6;
 
-$index-footer-background: #007679;
-$index-footer-heading: #abf5f7;
-$index-footer-links: #ffffff;
+// dark mode
+$dark-body: #2a2a2a;
+$dark-contents-background: #343434;
+$dark-TOC-items: white;
+$dark-contents-text: white;
+$dark-heading: white;
+$table-border-dark: #5e5a5a;
+$table-alternate-row-background-dark: #3f3f3f;
+$dfn-dark: #dddcdc;

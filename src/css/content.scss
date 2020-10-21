@@ -1,7 +1,5 @@
 @import "_main.scss";
 
-@import "_contents_colors.scss";
-
 body {
   transition: background-color 0.3s ease;
 }
@@ -40,6 +38,7 @@ main {
 }
 
 @import "_content_article.scss";
+@import "_content_themes.scss";
 @import "_content_references.scss";
 @import "_content_fancylink.scss";
 @import "_content_collapsibles.scss";

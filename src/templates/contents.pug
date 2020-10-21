@@ -12,17 +12,25 @@ html(lang="en")
         include nav.pug
         style
             | header {
-            |     background-image: 
-            //- |         linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)), 
-            |         url( #{backgroundImage});
+            |     background-image: url( #{backgroundImage});
             | }
+        -
+            theme_class = {
+                "theme-project":  theme == "project", 
+                "theme-human-practices": theme == "human-practices",
+                "theme-parts": theme == "parts",
+                "theme-journal": theme == "journal",
+                "theme-team": theme == "team",
+                "theme-contribution": theme == "contribution",
+                "theme-other-areas": theme == "other-areas"
+            }
         header.d-flex.justify-content-center()
             .custom-container.d-flex.align-items-end.justify-content-between
                 #heading
                     h1 #{title}
                 a(href=backgroundAttributionLink target="_blank" rel="noopener")
                     span#bg-attribution(title=backgroundAttribution data-placement="top")
-        main.hello(class={"theme-green": theme == "green", "theme-yellow": theme == "yellow", "theme-blue": theme == "blue"})
+        main.hello(class= theme_class)
             .custom-container
                 .row
                     .sidebar

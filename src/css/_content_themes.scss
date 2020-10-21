@@ -1,0 +1,34 @@
+@use "sass:list";
+
+body.theme-human-practices {
+    $theme-ID: map-get($map: $section-pages-map, $key: human-practices);
+    $color: list.nth($section-accents, $theme-ID);
+    .content {
+      background-color: $color;
+      blockquote {
+        border-left: 8px solid darken($green, 4%);
+  
+        &:before {
+          color: darken($green, 4%);
+        }
+      }
+  
+      h1 {
+        color: darken($green, 5%);
+      }
+      a {
+        color: darken($green, 5%);
+      }
+    }
+    .content p,
+    #references li {
+      a:not(.citation) {
+        &:before,
+        &:after {
+          background-color: $green;
+        }
+      }
+    }
+  }
+  
+  
