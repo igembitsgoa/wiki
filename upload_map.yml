@@ -676,6 +676,9 @@ html:
   Attributions/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Attributions
     md5: 79fa66eb2635bf4606b13a960b84aca6
+  Collaborations/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Collaborations
+    md5: bcbf17202bea3e835ff889208837a787
   Contribution/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Contribution
     md5: 0da243d1bfff1118d4f8482cc814fff4
@@ -697,6 +700,9 @@ html:
   Entrepreneurship/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Entrepreneurship
     md5: 0d686a470132c60f748df8aadf37355f
+  Excellence/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Excellence
+    md5: a4ff429508b638b2231965f5123c4074
   Experiments/Biosensor/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Biosensor
     md5: 085b52dda12cb8cc108346a8684faacb
