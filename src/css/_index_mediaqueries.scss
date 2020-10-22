@@ -1,14 +1,4 @@
-@include respond-above(xxl) {
-  // header {
-  //   height: 100vh;
-  // }
-}
-
 @include respond-below(xxl) {
-  // header {
-  //   height: max-content;
-  // }
-
   section {
     .container {
       max-width: 1240px;
@@ -47,30 +37,11 @@
 }
 
 @include respond-below(lg) {
-  // nav {
-  //   .navbar-brand {
-  //     &,
-  //     &:hover,
-  //     &:visited {
-  //       color: black;
-  //     }
-  //   }
-
-  //   #menuSwitch {
-  //     .menu-icon {
-  //       &,
-  //       &:before,
-  //       &:after {
-  //         background-color: black;
-  //       }
-  //     }
-  //   }
-  // }
-
   section {
     .container {
       max-width: 950px;
     }
+
     .content {
       h2 {
         margin-bottom: 0.8rem;
@@ -81,25 +52,67 @@
       }
     }
   }
+
+  #description {
+    .sidebar {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #design {
+    .sidebar {
+      margin-top: 1rem;
+      img {
+        margin: 1rem auto;
+        width: 80%;
+      }
+    }
+  }
+
+  #safety {
+    .sidebar {
+      margin-top: 3rem;
+      img {
+        margin: 1rem auto;
+        width: 80%;
+      }
+    }
+  }
+
+  #human-practices {
+    .sidebar {
+      img {
+        margin: 3rem auto 1rem auto;
+        width: 90%;
+      }
+    }
+  }
 }
 
 @include respond-below(md) {
   section {
+    padding-top: 2rem;
     .container {
       max-width: 700px;
     }
-
-    padding-top: 4rem;
-
+    
     .sidebar {
       display: none;
     }
-
+    
     .content {
+      margin-top: 1.5rem;
       padding: 0 10px !important;
       h2 {
         font-size: 1.9rem;
         margin-bottom: 0.6rem;
+      }
+
+      img {
+        display: block;
+        width: 80%;
       }
 
       h3 {
@@ -107,23 +120,72 @@
       }
     }
   }
+
+  #design {
+    .content img {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  #safety {
+    .content img {
+      width: 50%;
+      margin: 0 auto 1rem auto;
+    }
+  }
+
+  #human-practices {
+    .content img {
+      width: 60%;
+      margin: 0 auto 1rem auto;
+    }
+  }
+
+  #collaboration {
+    .content img {
+      width: 50%;
+      margin: 0 auto 1rem auto;
+    }
+  }
+
+  #contribution {
+    .content img {
+      width: 20%;
+      margin: 0 auto 1rem auto;
+    }
+  }
 }
 
 @include respond-below(sm) {
   section {
-    padding: 3rem 1.5rem 0 1.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
     .content {
       h2 {
         font-size: 1.7rem;
         margin-bottom: 0.6rem;
       }
+
+      img {
+        display: block;
+        width: 50%;
+        margin: 1rem 2rem 0 auto;
+      }
+    }
+  }
+
+  #description {
+    .content img {
+      width: 70%;
+      margin-right: auto;
     }
   }
 }
 
 @include respond-below(xs) {
   section {
-    padding: 2rem 0.5rem 0 0.5rem;
+    padding: 1rem 0.5rem 0 0.5rem;
     .content {
       padding: 0 25px !important;
       h2 {
@@ -135,11 +197,30 @@
       }
     }
   }
+
+  #description {
+    .content img {
+      width: 50%;
+    }
+  }
+
+  #design {
+    .content img {
+      width: 40%;
+      margin-top: 0;
+    }
+  }
+
+  #safety, #human-practices, #collaboration {
+    .content img {
+      width: 40%;
+      margin-top: 1rem;
+    }
+  }
 }
 
 @include respond-below(xxs) {
-  section {
-    padding: 2rem 0 0 0;
+  section {git
     .content {
       padding: 0 25px !important;
       h2 {

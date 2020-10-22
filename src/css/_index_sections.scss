@@ -5,7 +5,7 @@
 @use 'sass:list';
 
 section {
-  padding: 5rem 0 1.5rem 0;
+  padding: 2rem 0 1.5rem 0;
   position: relative;
 
   .container {
@@ -66,18 +66,29 @@ section {
    * Section subtitle/aside
    */
 
-  .sidebar h3 {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    border-top: 1px solid !important;
-    padding-top: 10px;
-    margin-top: 10px;
-    word-spacing: 0.2em;
-    line-height: 1.3em;
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    img {
+      display: block;
+    }
+
+    h3 {
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      border-top: 1px solid !important;
+      padding-top: 10px;
+      margin-top: 10px;
+      word-spacing: 0.2em;
+      line-height: 1.3em;
+    }
   }
 
   .content {
+    margin-top: 3rem;
     font-family: "Merriweather", serif;
 
     /**
@@ -113,6 +124,10 @@ section {
       line-height: 1.75;
       word-spacing: 0.1rem;
       color: #3d3d3d;
+    }
+
+    img {
+      display: none;
     }
   }
 
@@ -161,7 +176,7 @@ section {
       }
       a.button {
         .circle {
-          background-color: list.nth($section-accents, $i);;
+          background-color: list.nth($section-accents, $i);
           .icon {
             &.arrow {
               background-color: none !important;
@@ -172,7 +187,7 @@ section {
           }
         }
         .button-text {
-          color:list.nth($section-texts, $i);
+          color: list.nth($section-texts, $i);
           font-weight: 700 !important;
         }
         &:hover {
@@ -220,6 +235,67 @@ section {
     }
   }
 }
+
+#description {
+  .sidebar {
+    margin-top: 7rem;
+    img {
+      margin-bottom: 2rem;
+      width: 85%;
+    }
+  }
+}
+
+#design {
+  .sidebar {
+    margin: 2.5rem 0;
+    img {
+      width: 60%;
+      margin: 2rem auto;
+    }
+  }
+}
+
+#safety {
+  .sidebar {
+    margin: 2rem 0;
+    img {
+      width: 70%;
+      margin: 3rem auto;
+    }
+  }
+}
+
+#human-practices {
+  .sidebar {
+    margin-top: 2rem;
+    img {
+      width: 70%;
+      margin: 3rem auto;
+    }
+  }
+}
+
+#collaboration {
+  .sidebar {
+    margin-top: 1.5rem;
+    img {
+      width: 70%;
+      margin: 3rem auto 1.5rem auto;
+    }
+  }
+}
+
+#contribution {
+  .sidebar {
+    img {
+      width: 40%;
+      margin: 3rem auto 1.5rem auto;
+    }
+  }
+}
+
+
 
 @keyframes orbit {
   0% {
