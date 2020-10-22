@@ -19,3 +19,11 @@
     accessed: "September 30, 2020"
     site_name: "Department of Food and Public Distribution, Government of India"
     url: "https://dfpd.gov.in/sugar.htm"
+
+# 4
+- book:
+    authors: "Shuler, M. L., & Kargi, F."
+    year_published: 2002
+    title: "Bioprocess Engineering: Basic Concepts."
+    publisher: "Prentice Hall Inc"
+    Google_Books_URL: "https://books.google.co.in/books?id=0VHtngEACAAJ"
