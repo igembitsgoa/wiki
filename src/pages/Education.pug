@@ -26,23 +26,59 @@ block article
         invaluable insights and feedback, which we have implemented in our human-centric design.
 
         We also circulated a survey among these students to gauge their opinions about synthtic biology and science as a whole. The student demographic consisted of 35% (217) 
-        females and 65% (403) males. All students had a background in Physics, Chemistry, Biology, and Mathematics and were preparing for preparatory exams to undergraduate universities.
+        females and 65% (403) males. All students had a background in Physics, Chemistry, Biology, and Mathematics and were preparing for entrance exams to universities.
         From the survey, we conducted there were a few key insights that we gained. Our primary objective was to expose students to research methodology and application-oriented research practices. 
         Initially, 52.8% of the students mentioned that they were interested in a career in research. Following our webinar, when asked the same question, 74% of the students were open to the idea 
         of a career in research, with 77.4% expressing interest in having synthetic biology as part of their curriculum.
 
         The second half of our webinar focused exclusively on GMOs and students' perception of GMOs. 74.3% of the participants believed that Genetically Modified Organisms (GMO) are a boon to curb the hunger 
         epidemic worldwide. When the remaining 25.7% were asked if knowing that 115 Nobel Laureates worldwide support GMOs would change their perception of GMOs,  74.3% reported feeling more secure about GMOs 
-        and their applications.
+        and their applications. 
 
         You can find a recording of our webinar [here](https://www.youtube.com/watch?v=dMEfaVo8NGs).
 
-        # Abhigyaan Collaboration
+        After knowing the student community's perspective on GMOs, we wanted to focus on the general population and their attitudes towards the same. We circulated a survey to gauge public opinion 
+        and the results have been compiled below.
+    
+    .row
+        each counter in [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
+            .col-md-6
+                - var imgpath = "" + require("../assets/img/Education--survey" + counter + ".png")["default"]
+                +ximage(imgpath, "", 100)
+        .col
+            - var imgpath = "" + require("../assets/img/Education--survey1.png")["default"]
+            +ximage(imgpath, "",  50)
 
-        Misinformation and myths have become highly prevelant in our society, especially so since the beginning of the pandemic carried by the panic associated with it.
-        We collaborated with Abhigyaan — a student-run organization at BITS Pilani K.K Birla Goa campus which aims at providing quality education to the underprivileged and work towards their social upliftment.
+
+    
+    :markdown-it(html)
+
+        André Hermann, a member of the iGEM policy committee, told us that a way to facilitate change is to begin by understanding the policies and regulations that surround GMOs. 
+        In this effect, together with OhioState, iGEM Waterloo, UANL and DTU Denmark we gathered and compared our respective country’s regulations on GMOs and biotechnology products 
+        in general. We focused on GMO regulation differences among countries, and loopholes in the current regulations for different countries. Our purpose was to make the regulatory 
+        process more equal among countries and to make a way for iGEM teams to actually implement their products in their respective countries by navigating the regulatory process. 
+        The document we compiled compares the regulations of USA and India and can be found below:
+
+    #collapsibleSections.accordion
+        .card
+            #headingOne.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                        span GMO Policy Collaboration Notes
+                        i.icon-dropdown
+            #collapseOne.collapse(aria-labelledby='headingOne')
+                .card-body
+
+                    +pdf(require("../assets/docs/Education--Country Policy Collaboration.pdf")['default'], "iGEM BITS Brochure")
+
+    :markdown-it(html)
+
+        # Collaboration with Abhigyaan
+
+        Misinformation and myths have become prevalent in our society since the beginning of the pandemic.
+        We collaborated with Abhigyaan — a student-run organization at BITS Goa which aims at providing quality education to the underprivileged and work towards their social upliftment.
         We, along with Abhigyaan, debunked some myths about COVID and promoted safer and smarter ways to deal with the pandemic through posters and infographics. All of our posts can be found on our instagram page. A few of them have 
-        been shown below!
+        been shown below.
 
     .row
         .col-md-6
@@ -64,13 +100,14 @@ block article
         # Podcasts and Interviews
 
         We collaborated with the iGEM Pittsburg team for their podcast to talk about iGEM and synthetic biology. The goal of their podcast is to shine the light on current iGEM teams and their progress so far. Each podcast episode is 
-        conversational and accessible to a general audience. We also appeared on a live podcast, _‘Charlas In Silico’_,  by the iGEM Barcelona team and to talk about our experience as iGEMers. 
+        conversational and accessible to a general audience. The 'Bluetooth Bacteria' Podcast presents the Pittsburgh iGEM team as they take on controversial topics in synthetic biology including bioweapons, animal organ donation, 
+        and genetic dating through the lens of five students from the University of Pittsburgh. They discuss current advances in bioengineering as well as interview different iGEM teams from around the world to learn about their project, 
+        experiences, and challenges as they navigate the world of synthetic biology. You can find all their episodes [here!](https://open.spotify.com/show/43IxYDdVX3byKpsEJuT0qT).
+        
+        We also appeared on a live podcast, _‘Charlas In Silico’_,  by the iGEM Barcelona team and to talk about our experience as iGEMers. 
 
     - var imgpath = "" + require("../assets/img/Education--pittsburgh.png")["default"]
     +image(3, imgpath, "iGEM BITS Goa featuring in the Bluetooth Bacteria podcast by iGEM Pittsburgh")
-    
-    - var imgpath = "" + require("../assets/img/Education--barcelona.png")["default"]
-    +image(4, imgpath, "iGEM BITS Goa featuring in the Charlas In Silico podcast by iGEM Barcelona")
 
     :markdown-it(html)
         
@@ -79,7 +116,46 @@ block article
         Along with the Centre for Technical Education of our university, we were able to start an exclusive course on synthetic biology for the undergraduate students. Our course attempts to provide an introduction to bioengineering and 
         describe the various engineering principles used therein. Rather than approaching the subject from a purely biological perspective, this course introduces a multidisciplinary approach that covers physics, mathematics, computer science 
         and even economics. Most importantly, however, the objective of this course is to show that the domain of engineering is ubiquitous and wide-ranging, and not just limited to conventional areas; besides, it also covers how the sciences 
-        have been able to benefit from the applications of engineering in their areas.
+        have been able to benefit from the applications of engineering in their areas. 
+        
+        Some of the slides we used to teach the course have been attached below below.
+
+    #collapsibleSections.accordion
+        .card
+            #headingOneA.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOneA' aria-expanded='true' aria-controls='collapseOneA')
+                        span Introduction to Synthetic Biology
+                        i.icon-dropdown
+            #collapseOneA.collapse(aria-labelledby='headingOneA')
+                .card-body
+                    +pdf(require("../assets/docs/Education--IntroToSynBio.pdf")['default'], "iGEM BITS Brochure")
+
+        .card
+            #headingTwoA.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwoA' aria-expanded='true' aria-controls='collapseTwoA')
+                        span PCR and Primer Design
+                        i.icon-dropdown
+            #collapseTwoA.collapse(aria-labelledby='headingTwoA')
+                .card-body
+                    +pdf(require("../assets/docs/Education--PCRandPrimerDesign.pdf")['default'], "iGEM BITS Brochure")
+
+        .card
+            #headingThreeA.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThreeA' aria-expanded='true' aria-controls='collapseThreeA')
+                        span Parts and Design
+                        i.icon-dropdown
+            #collapseThreeA.collapse(aria-labelledby='headingThreeA')
+                .card-body
+
+                    +pdf(require("../assets/docs/Education--PartsAndDesign.pdf")['default'], "iGEM BITS Brochure") 
+
+    
+    :markdown-it(html)
+
+
 
         # Humans of iGEM
 
@@ -92,9 +168,118 @@ block article
         He was instrumental in helping us streamline our process and questions. He also gave us extremely valuable inputs on how we could expand our efforts to different languages. 
         Following the meeting with Yoshi, we met with the iGEM UANL team. They were incredibly supportive and were excited to continue the Humans of iGEM initiative with the LatAm teams.
 
-    .text-center
-        img(src=require("../assets/img/Education--HumansOfiGEM.png")['default'] width=500)
+    - var imgpath = "" + require("../assets/img/Education--HumansOfiGEM.png")["default"]
+    +image(4, imgpath, "The Humans of iGEM initiative", 30)
 
+    .row
+        .col-md-6
+            - var imgpath = "" + require("../assets/img/Education--HoICalgary.png")["default"]
+            +image(5, imgpath, "Humans of iGEM interview with iGEM Calgary")
+        .col-md-6
+            - var imgpath = "" + require("../assets/img/Education--HoIMSP.jpeg")["default"]
+            +image(6, imgpath, "Humans of iGEM interview with iGEM MSP-Maastricht")
+
+    :markdown-it(html)
+        # Language Project 
+
+        The Language Project was started by the iGEM team from IIT Madras in 2019 to address the difficulties faced in
+        communicating scientific ideas to a vast population as well as to an audience not comfortable in English. The
+        Language Project started with 9 Indian languages and 11 foreign languages by collaborating with other iGEM teams.
+
+        This year, we collaborated with IIT Madras and the University of Rochester to expand on the initiative. We released
+        a survey to ask iGEM teams what they think about language barriers in iGEM and more generally, in science. Almost
+        88% of respondents said that there was a dearth of iGEM resources in their native language, and 70% believed that
+        having such resources in a diverse range of languages would increase participation in iGEM.
+
+        The results from our preliminary survey led us to the idea of translating the resources available about iGEM to
+        foster greater participation in future years. To eliminate these language barriers, we thought that the best place
+        to start is at home. We began by translating some iGEM resources for teams which we thought were important into Indian languages — 
+        not only to increase participation in iGEM but also make this material accessible to a broader, multicultural audience.
+        To date, we have translated a few resources into multiple Indian languages, and we hope to expand this even further.
+        This content can be found below.
+
+    #collapsibleSections.accordion
+        .card
+            #headingOneB.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOneB' aria-expanded='true' aria-controls='collapseOneB')
+                        span Starting your Team!
+                        i.icon-dropdown
+            #collapseOneB.collapse(aria-labelledby='headingOneB')
+                .card-body
+
+                    +pdf(require("../assets/docs/Accessibility--Start A Team.pdf")['default'], "iGEM BITS Brochure")
+
+        .card
+            #headingTwoB.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwoB' aria-expanded='true' aria-controls='collapseTwoB')
+                        span Navigating iGEM
+                        i.icon-dropdown
+            #collapseTwoB.collapse(aria-labelledby='headingTwoB')
+                .card-body
+
+                    +pdf(require("../assets/docs/Accessibility--Navigating iGEM.pdf")['default'], "iGEM BITS Brochure")
+
+        .card
+            #headingThreeB.card-header
+                h2.mb-0
+                    button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThreeB' aria-expanded='true' aria-controls='collapseThreeB')
+                        span Funding
+                        i.icon-dropdown
+            #collapseThreeB.collapse(aria-labelledby='headingThreeB')
+                .card-body
+
+                    +pdf(require("../assets/docs/Accessibility--Start A Team.pdf")['default'], "iGEM BITS Brochure")
+
+    :markdown-it(html)
+        ----------
+        # ASL Initiative
+
+        After contributing to the Language project, we wanted to think of new ways to expand upon the existing initiative. 
+        Therefore, we decided to focus on non-verbal languages next with an emphasis on American Sign Language. There is an urgent need in the deaf community for access 
+        to the right scientific terms. Fingerspelling is often too tedious for scientific terminology. With the right words, 
+        we have the potential to make science come alive for deaf students. ASLcore is a website that originates in Rochester 
+        through the National Technical Institute for the Deaf,which is the first and largest technical college for Deaf and 
+        hard of hearing students in the United States. This platform is interested in adding a whole new category of science - 
+        synthetic biology - to their already extensivelist of categories. Unlike ASL, Indian Sign Language is yet to be 
+        standardized across the country. However, with the recently announced National Education Policy in India, ISL will be 
+        standardized across the nation, and National and State curriculum materials developed for students with hearing 
+        impairment. We hope to continue our efforts, post the Jamboree, in breaking barriers with ongoing initiatives that 
+        future teams can take forward.
+
+        We wanted to begin educating people about ASL closer to home. In collaboration with the iGEM team from the University
+        of Rochester, we created a short video consisting of ten common ASL phrases used during Jamboree.
+
+    .d-flex.justify-content-center.align-items-center
+        video(controls width=720)
+                source(src= urlPrefix + require("../assets/video/Accessibility--ASL.mp4")['default'].substr(2), type='video/mp4')
+
+    :markdown-it(html)
+        <br>
+
+        Our motivation behind this concept was to aim for a more inclusive Jamboree. Apart from just translators for various
+        languages, we also wanted to include ASL to make the whole Jamboree experience more accessible and inclusive.
+
+        # Dance 
+
+        In the words of eminent Hindustani classical vocalist Ashwini Bhide-Deshpande, “The scientific must not be kept separate from the aesthetic.” As a team we are heavily involved in the cultural 
+        activities of the campus. Which is why, while brainstorming iGEM Rochester and IIT Madras, we noticed that they had the same love for art as we do and hence we came up with this unique movement collaboration. 
+        
+        Dance as a form of expression transcends boundaries. Now more than ever, it is imperative that we unite and nothing brings people together like dance. We thought that a dance collaboration would be a great way 
+        to promote diversity and unity in times of pandemic. We collaborated with the University of Rochester and IITM for a science through dance initiative. The collaboration was through two different parts.
+        Each team choreographed a sequence in different styles ranging from Indian classical to ballet that when stitched together reveals a story. We tried 
+        expressing the current pandemic through different dance styles. The overarching message being a story of courage, tenacity and resilience. A story that 
+        captures the pathos of the collective experience of humanity in these extraordinary times.
+
+        ## Pass the Mask
+
+        We also organised an activity during the iGEM Global Meetup as a movement collaboration. The activity had participants pass a mask while introducing themselves 
+        in their native language. This activity was meant to demonstrate that although the pandemic has affected us all we still persevere and its meant to create a dance 
+        that shows the possibility of overcoming the boundaries and challenges using science during difficult times through collaboration and embracing diversity.
+
+    - var imgpath = "" + require("../assets/img/Dance--PassTheMask.png")["default"]
+    +image(7, imgpath, "Our Pass the Mask activity held during the Global Meetup")
 
 
 
