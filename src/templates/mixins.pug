@@ -44,6 +44,14 @@ mixin image(n, url, caption, width)
       img(src=url alt=caption)
     p= "Figure " + n + ": " + caption
 
+mixin ximage(url, caption, width)
+  .image
+    if width
+      img(src=url alt=caption style="width: " + width + "%")
+    else
+      img(src=url alt=caption)
+    p= caption
+
 mixin imgCitation(name, number)
   p.text-center
     a(href="#citation" + number)= name

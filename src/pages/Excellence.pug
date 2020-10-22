@@ -1,0 +1,26 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Excellence"
+    - var requireMathJax = false
+    //- You can just write the filename here and it will be resolved to 'require'.
+    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+    - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
+    - var backgroundAttribution = "Photo by Sveta Fedarava on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/tI_Odb7ZU6M"
+    - var theme = "yellow"
+
+block article
+    :markdown-it(html)
+        
+        Not much to see here. 
+
+append buttons
+    //- mind the quotes and the plus sign
+    +buttonLeft("Policy")
+    +buttonRight("Home")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"details": "(n.d.). Retrieved on September 30, 2020. from ", "title": "Sugar Production. SouthAfrica.co.za.", "type": "webpage", "url": "http://southafrica.co.za/sugar-production.html"}, {"authors": "Salassi, Michael E., & Barker, F. Gil. (2008).", "journal": "Journal of the American Society of Sugar Cane Technologists.", "numbers": "-.", "title": "Reducing harvest costs through coordinated sugarcane harvest and transport operations in Louisiana.", "type": "article", "year_published": 2008}, {"details": "(n.d.). Retrieved on September 30, 2020. from ", "title": "Sugarcane Pricing Policy. Department of Food and Public Distribution, Government of India.", "type": "webpage", "url": "https://dfpd.gov.in/sugar.htm"}]

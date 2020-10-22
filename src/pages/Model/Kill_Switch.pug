@@ -23,8 +23,8 @@ block article
         that are specific to our construct. Our model involves an **inducible transcription** of the toxin, and whose kinetics are governed by appropriate Hill equations. 
         The diagram below provides a detailed account of the processes and the reaction pathways involved. 
 
-    //- - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchDynamics.svg")["default"]
-    //- +image(1, imgpath, "The dynamics of the kill switch construct", 65)
+    - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchDynamics.png")["default"]
+    +image(1, imgpath, "The dynamics of the kill switch construct", 65)
         
     :markdown-it(html)
 
@@ -100,8 +100,8 @@ block article
 
         The ODEs were solved numerically using SciPy's `solve_ivp` method using the [Radau](/Appendix) algorithm and the concentrations of major chemical species were plotted against time.
 
-    //- - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchGraph.png")["default"]
-    //- +image(2, imgpath, "Simulation of the kill switch construct")
+    - var imgpath = "../" + require("../../assets/img/Kill_Switch--KillSwitchGraph.png")["default"]
+    +image(2, imgpath, "Simulation of the kill switch construct")
 
     :markdown-it(html)
 
@@ -113,8 +113,8 @@ block article
         After establishing the models for the system, we wanted to carry out a sensitivity analysis to identify parameters which could be used to fine-tune our kill switch. As a part of the sensitivity analysis, we selected a few 
         model parameters and varied them by multiplying them with a term proportational to a given factor. The change in the output as a result of this perturbation was measured and studied.
 
-    //- - var imgpath = "../" + require("../../assets/img/Kill_Switch--Sensitivity.png")["default"]
-    //- +image(3, imgpath, "Sensitivity analysis of the model")
+    - var imgpath = "../" + require("../../assets/img/Kill_Switch--Sensitivity.png")["default"]
+    +image(3, imgpath, "Sensitivity analysis of the model")
 
     :markdown-it(html)
         The results of our sensitivity analysis showed that manipulating parameters associated with the FNR promoter would result in a more significant diference in the model output. Therefore, the amount of toxin produced, and consequently the 
@@ -123,8 +123,8 @@ block article
         Next we wanted to exclusively study the the variation of toxin concentration as a function of the \\( k_D \\) values. To do this, we used the same approach as mentioned above, where multiplied a term proportional to a factor with \\( k_D \\) value 
         and studied how the concentration of ccdB would change. The plot we obtained is illustrated below.
 
-    //- - var imgpath = "../" + require("../../assets/img/Kill_Switch--ccdBvsKd.png")["default"]
-    //- +image(4, imgpath, "The variation of ccdB toxin concentration with varying k_D values")
+    - var imgpath = "../" + require("../../assets/img/Kill_Switch--ccdBvsKd.png")["default"]
+    +image(4, imgpath, "The variation of ccdB toxin concentration with varying k_D values")
 
     :markdown-it(html)
 
@@ -146,7 +146,7 @@ block article
         1. The arrest of growth can be observed around 50-70 minutes after the kill switch has been activated.
         2. This time can be brought down further by tuning the model to change the \\( k_D \\) value for FNR/O2.
         
-
+ 
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 

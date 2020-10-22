@@ -23,6 +23,8 @@ for root, _, files in os.walk('src/pages'):
         for line in contents:
             if "+image" in line and "imgpath" not in line:
                 parts = line.split(",")
+                leading_spaces = line.split('+')[0]
+
                 img_name = None
                 if '"' in parts[1]:
                     img_name = parts[1].split('"')[1]
@@ -34,11 +36,37 @@ for root, _, files in os.walk('src/pages'):
                 if img_path.exists():
                     relative_path = os.path.relpath(img_path, filepath.parent)
                     levels = relative_path.count('../') - 1
-                    templines.append(f'    - var imgpath = "{"../"*levels}" + require("{relative_path}")["default"]\n')
+                    templines.append(leading_spaces + f'- var imgpath = "{"../"*levels}" + require("{relative_path}")["default"]\n')
 
                     parts[1] = ' imgpath'
                     newline = ','.join(parts)
                     templines.append(newline)
+
+                else:
+                    print(f"{img_path} doesn't exist")
+                    sys.exit(1)
+
+            if "+ximage" in line and "imgpath" not in line:
+                parts = line.split(",")
+                prefix, img_name = tuple(parts[0].split('('))
+                leading_spaces = prefix.split('+')[0]
+                
+
+                if '"' in img_name:
+                    img_name = img_name.split('"')[1]
+                elif "'" in img_name:
+                    img_name = img_name.split("'")[1]
+
+                img_path = Path('src/assets/img') / Path(img_name)
+
+                if img_path.exists():
+                    relative_path = os.path.relpath(img_path, filepath.parent)
+                    levels = relative_path.count('../') - 1
+                    templines.append(leading_spaces + f'- var imgpath = "{"../"*levels}" + require("{relative_path}")["default"]\n')
+
+                    parts[0] = 'imgpath'
+                    newline = ','.join(parts)
+                    templines.append(prefix + '(' + newline)
 
                 else:
                     print(f"{img_path} doesn't exist")
