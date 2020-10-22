@@ -12,8 +12,10 @@
     "test": "npm-run-all puglint custom_tests",
     "prestart": "npm-run-all preprocess nav citations custom_tests",
     "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
-    "build": "webpack --config webpack.production.js",
-    "build:all": "npm-run-all prestart build"
+    "postprocess": "python3 utils/postprocess.py",
+    "build:webpack": "webpack --config webpack.production.js",
+    "build:all": "npm-run-all prestart build",
+    "build": "npm-run-all build:webpack postprocess"
   },
   "repository": {
     "type": "git",
