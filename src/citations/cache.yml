@@ -129,6 +129,13 @@ https://doi.org/10.1073/pnas.1004481107:
   title: Structural insights into the pH-controlled targeting of plant cell-wall invertase
     by a specific inhibitor protein.
   type: article
+https://doi.org/10.1093/nar/gkp322:
+  authors: 'Benkert, P., K  nzli, M., & Schwede, T. (2009). '
+  doi: https://doi.org/10.1093/nar/gkp322
+  journal: Nucleic Acids Research
+  numbers: '37(suppl_2), W510-W514. '
+  title: QMEAN server for protein model quality estimation.
+  type: article
 https://doi.org/10.1093/nar/gky427:
   authors: 'Waterhouse, A., Bertoni, M., Bienert, S., Studer, G., Tauriello, G., Gumienny,
     R., ... & Schwede, T. (2018). '
@@ -150,6 +157,14 @@ https://doi.org/10.1128/JB.00763-19:
   journal: Journal of Bacteriology
   numbers: '202(7). '
   title: 'Type II Toxin-Antitoxin Systems: Evolution and Revolutions.'
+  type: article
+https://doi.org/10.1128/JB.183.23.6752-6762.2001:
+  authors: 'Leveau, J. H. J., & Lindow, S. E. (2001). '
+  doi: https://doi.org/10.1128/JB.183.23.6752-6762.2001
+  journal: Journal of Bacteriology
+  numbers: '183(23), 6752-6762. '
+  title: Predictive and Interpretive Simulation of Green Fluorescent Protein Expression
+    in Reporter Bacteria.
   type: article
 https://doi.org/10.1128/aem.57.1.85-92.1991:
   authors: 'Knudsen, S. M., & Karlstr  m, O. H. (1991). '
@@ -188,6 +203,13 @@ https://doi.org/10.1146/annurev.mi.47.100193.001035:
   journal: Annual Review of Microbiology
   numbers: '47(1), 139-166. '
   title: Suicidal Genetic Elements and their Use in Biological Containment of Bacteria.
+  type: article
+https://doi.org/10.1162/artl.2008.14.1.121:
+  authors: 'Schilstra, M. J., & Nehaniv, C. L. (2008). '
+  doi: https://doi.org/10.1162/artl.2008.14.1.121
+  journal: Artificial Life
+  numbers: '14(1), 121-133. '
+  title: 'Bio-Logic: Gene Expression and the Laws of Combinatorial Logic.'
   type: article
 https://doi.org/10.1186/1745-6150-4-19:
   authors: 'Makarova, K. S., Wolf, Y. I., & Koonin, E. V. (2009). '

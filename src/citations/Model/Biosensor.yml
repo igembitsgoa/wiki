@@ -1,0 +1,40 @@
+#1 (Chavarria)
+- doi:  https://doi.org/10.1016/j.fob.2014.03.013
+#2 (nocite)
+- doi: https://doi.org/10.1162/artl.2008.14.1.121 
+#3 (Leveau)
+- doi: https://doi.org/10.1128/JB.183.23.6752-6762.2001
+#4
+- book:
+    authors: "Bisswanger, H."
+    year_published: 2008
+    title: "Enzyme Kinetics: Principles and Methods."
+    publisher: "John Wiley & Sons"
+    Google_Books_URL: "https://books.google.co.in/books?id=6DiEL3mGIzgC"
+#5 (Benkert)
+- doi: https://doi.org/10.1093/nar/gkp322
+#6 (ClusPro)
+- doi: https://doi.org/10.1002/prot.25219
+#7(ClusPro)
+- doi: https://doi.org/10.1038/nprot.2016.169
+#8(ClusPro)
+- doi: https://doi.org/10.1002/prot.24403
+#9 (SWISS)
+- doi: https://doi.org/10.1093/nar/gky427
+#10(SWISS)
+- doi: https://dx.doi.org/10.1093/nar/gkw1132
+#11(SWISS)
+- doi: https://dx.doi.org/10.1002/elps.200900140
+#12(SWISS)
+- doi: https://dx.doi.org/10.1093/bioinformatics/btz828
+#13(SWISS)
+- doi: https://dx.doi.org/10.1093/bioinformatics/btq662
+#14(SWISS)
+- doi: https://dx.doi.org/10.1038/s41598-017-09654-8
+#15
+- article:
+    authors: "Schrödinger, LLC. "
+    year_published: 2010
+    title: "The PyMOL Molecular Graphics System"
+    journal: "PyMOL"
+    numbers: "Version 2.4."
