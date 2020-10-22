@@ -20,7 +20,10 @@ block article
         Sucrose into D-fructose and D-glucose through cleavage of the terminal non-reducing beta-fructofuranoside residues, a reaction known as inversion. In nature, 
         Invertase usually exists in various isoforms.
 
-        > Inversion diagram
+    - var imgpath = "" + require("../assets/img/Appendix--Inversion.png")["default"]
+    +image(1, imgpath, "Inversion of Sucrose into Glucose and Fructose catalysed by Invertase", 60)
+
+    :markdown-it(html)
 
         Two of the main invertases found in sugarcane are the neutral invertases and acid invertases, which are spatially differentiated. Sucrose - the end product of photosynthesis, 
         is transported to three different cellular compartments: the cell wall (apoplastic space), the vacuole, and the cytoplasm. There is a specific invertase isoform for each compartment 
@@ -42,6 +45,14 @@ block article
         During pre- and post-harvest periods, however, Invertase has an undesirable role in continuously degrading sucrose (in the vacuoles and intracellular space) thereby reducing recovery rate and 
         overall sugar yield. Our genetically engineered _E. coli_ tries to to address this issue.
 
+        # FruR - pFruB Interactions
+
+    p
+        | Detailed results form the modelling of the pFruB - FruR interactions can be found in a spreadsheet you can download
+        a(href=require("../assets/docs/FruR-pFruBInteractions.xlsx")["default"]) &nbsp;here
+        | .
+    
+    :markdown-it(html)
         # Radau Methods
 
         The system of ODEs we obtained for the kill switch were <dfn>stiff ~ A system of ODEs for which solvers are numerically unstable </dfn> in nature. 

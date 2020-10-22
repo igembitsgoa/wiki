@@ -46,13 +46,13 @@ block article
         the FruR transcription factor will bind preferentially to it and thus be inactivated. This means that the repression of the related promoter pFruB will be released, enabling the transcription of the 
         anti-invertase protein which can then act on invertase and prevent the inversion of sucrose.
 
-        > GIF
+    - var imgpath = "" + require("../assets/img/Design--Biosensor_NoFruc.gif")["default"]
+    +image(1, imgpath, "The behaviour of the FruR-Cra construct in the absence of fructose", 80)
 
+    - var imgpath = "" + require("../assets/img/Design--Biosensor_WithFruc.gif")["default"]
+    +image(1, imgpath, "The behaviour of the FruR-Cra construct in the presence of fructose", 80)
 
-
-
-
-
+    :markdown-it(html)
         # Kill Switch
 
         Advances in synthetic biology raise increasingly essential questions about biocontamination and biological containment. It becomes imperative that genetically-engineered organisms are 
@@ -86,7 +86,7 @@ block article
         [Afif et al., 2001](#citation8). ccdB inhibits DNA replication by poisoning DNA gyrase; more specifically, ccdB prevents DNA gyrase from disentangling DNA from replication resulting in double-stranded breaks in 
         the DNA [Dao-Thi et al., 2005](#citation9). ccdA and ccdB are able to form complexes of various stoichiometries depending on their molar ratios.
 
-        Our kill switch is a modified version of the ccdA-ccdB TA system [(BBa_P1010)](https://parts.igem.org/Part:BBa_P1010), where the ccdB (toxin) CDS is placed under a T7 [(BBa_I719005)](https://parts.igem.org/Part:BBa_I719005) constitutive promoter, 
+        Our kill switch is a modified version of the ccdA-ccdB TA system ([BBa_K3512002](https://parts.igem.org/Part:BBa_K3512002), [BBa_K3512001](https://parts.igem.org/Part:BBa_K3512001)), where the ccdB (toxin) CDS is placed under a T7 [(BBa_I719005)](https://parts.igem.org/Part:BBa_I719005) constitutive promoter, 
         and the ccdA (antitoxin) CDS is placed under an FNR promoter [(BBa_K1123000)](http://parts.igem.org/Part:BBa_K1123000) whose activity is controlled by the concentration of oxygen present in the environment. 
 
         ## FNR Promoter 
