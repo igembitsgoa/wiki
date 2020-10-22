@@ -623,6 +623,18 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/0/09/T--BITSPilani-Goa_India--img--Engineering--sveta.jpg
     md5: 27005474bdf4d85ca5631bd307b7e654
     upload_filename: T--BITSPilani-Goa_India--img--Engineering--sveta.jpg
+  assets/img/Entrepreneurship--PieChart.png:
+    link_URL: https://2020.igem.org/wiki/images/d/df/T--BITSPilani-Goa_India--img--Entrepreneurship--PieChart.png
+    md5: b1e7d670dc0058d49085849b1356d3a6
+    upload_filename: T--BITSPilani-Goa_India--img--Entrepreneurship--PieChart.png
+  assets/img/Entrepreneurship--ProfitvsArea.png:
+    link_URL: https://2020.igem.org/wiki/images/c/c9/T--BITSPilani-Goa_India--img--Entrepreneurship--ProfitvsArea.png
+    md5: 3eb639fb01a443be4699b5fb713c5a27
+    upload_filename: T--BITSPilani-Goa_India--img--Entrepreneurship--ProfitvsArea.png
+  assets/img/Entrepreneurship--ProfitvsRecovery.png:
+    link_URL: https://2020.igem.org/wiki/images/2/29/T--BITSPilani-Goa_India--img--Entrepreneurship--ProfitvsRecovery.png
+    md5: 9492b0e472249023e30b05031043e69a
+    upload_filename: T--BITSPilani-Goa_India--img--Entrepreneurship--ProfitvsRecovery.png
   assets/img/Growth_Model--GrowthPrediction.png:
     link_URL: https://2020.igem.org/wiki/images/7/7c/T--BITSPilani-Goa_India--img--Growth_Model--GrowthPrediction.png
     md5: 8e2e1136364793c9cb3280defa226cc2
@@ -899,7 +911,7 @@ html:
     md5: 818bd914156e7b4814c51bfb920749bc
   Entrepreneurship/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Entrepreneurship
-    md5: f8cbfaeaba855087ecff231af98ec181
+    md5: 02ee021cf1118e92c49de825e86b4995
   Excellence/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Excellence
     md5: 01316255faee6383cdf8cba48e07eba8
@@ -932,7 +944,7 @@ html:
     md5: d8389b1bbca70d9e44ffd45b92b6bf8f
   Model/Biosensor/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Biosensor
-    md5: 30b822d1779bff15c050b22226e1ad21
+    md5: 998bc310ed46be46c8a947e1a5eef6b4
   Model/Growth_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Growth_Model
     md5: f87a03aeda77ba47335f2a393033f964
