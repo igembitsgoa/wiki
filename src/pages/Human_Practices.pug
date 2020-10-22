@@ -22,8 +22,11 @@ block article
 
         We then approached our primary stakeholders — the farmers. In the schematic given below we can see the prominent sugarcane growing regions in India. For our human practices component, 
         we contacted farmers from the Indian states of Maharashtra, Karnataka and Tamil Nadu. We also visited the Sugar Mill Federation in Uttar Pradesh.
+    
+    - var imgpath = "" + require("../assets/img/HP--SugarcaneBelts.png")["default"]
+    +image(1, imgpath, "Major sugarcane-growing regions in India (2016)", 50)
 
-        > Schematic 
+    :markdown-it(html)
 
         # Belt One: Uttar Pradesh
 
@@ -32,7 +35,10 @@ block article
         and the farmers alike. He graciously supplied us with real time field data of loss of sucrose in Commercial Cane Sugarcane (CCS) for the state of Uttar Pradesh and was instrumental in validating our idea and giving us theoretical backing across a 
         variety of sugarcane crops. 
 
-        > Ohri picture
+    - var imgpath = "" + require("../assets/img/HP--Ohri.png")["default"]
+    +image(2, imgpath, "Sunil Kumar Ohri of the U.P. Cooperative Sugar Factories Federation Ltd.", 40)
+
+    :markdown-it(html)
 
         In the Uttar Pradesh belt, mills are situated close to the farm (within a 25-50 kilometer radius) in accordance with state government regulations. Currently, Uttar Pradesh and most other states in India face debilitating land shortages 
         and area saturation issues. In India, sugarcane farms are usually located not very close to the mills, so by the time the harvested cane reaches the factory, a lot of the sugar content has already been lost. Sugarcane constitutes 90% of the 
@@ -67,8 +73,6 @@ block article
         Our next step was to find out more about post-harvest losses globally. We met our alumni during the BITSAA Global Meetup (BGM). BGM which was held from 17th to the 19th of January 2020 was attended by over 1100 participants which included alumni of 
         the four different campuses of BITS Pilani namely, Pilani, Goa, Dubai and Hyderabad. During the BGM we pitched our project to a diverse group of distinguished alumni. It was through this interaction that we truly understood the global scope of post harvest losses.
 
-        > BGM Picture 
-
         We learnt that it is due to a combination of factors unique to each country that contribute to post-harvest losses. Most sugar industries in the world are impacted severely by the problem of post-harvest losses. In South Africa in 2009, 70.0% of the cane supply was harvested 
         from mill controlled fields, with 55.5% being mill owned [Neves et al., 2010], giving mill operators significant control over the supply process for the mill. In this situation, the mill does not face the problem of being oversupplied during the peak season. However in Thailand, 
         over-population of mills is a significant issue. In South Africa, the major bottleneck is the issue of integrating the decision-making process and improving relations between growers and harvesters. Furthermore, harvesting in Brazil is done 24 hours a day, and as a result, storage 
@@ -80,7 +84,10 @@ block article
 
         We had a brief interaction with him about the nature of the industry in Brazil. He told us about the features of Brazilian sugar industry that make it very different from Indian scenario. 
 
-        > Brazil map
+    - var imgpath = "" + require("../assets/img/HP--BrazilMap.png")["default"]
+    +image(3, imgpath, "Sugarcane production in Brazil (2016)")
+
+    :markdown-it(html)
 
         The above map, made by Andre himself, is of the agricultural production in Brazil in 2016 of Cana-de-açúcar (sugarcane)! 
         
@@ -106,8 +113,6 @@ block article
         if it has cooked properly and then is poured in a wide pan to cool. After half an hour the cooled liquid is put into buckets to form the characteristic blocks of jaggery. Since the harvesting and cooking of the solution happen almost simultaneously 
         there is minimal loss due to invertase action. Hence our solution would empower farmers with the choice of either selling their cane to the mills (and not be constrained by the distance) or take up jaggery production.
 
-        > Naik Picture
-
         Mr. Chikane was extremely interested in our solution. He mentioned that since the farmers are paid on the basis of the weight of the cane alone, such a solution might create positive change in the payment policy. Currently, pesticides, urea and some o
         ther germicides are used as and when needed to try and minimise losses.
 
@@ -129,15 +134,23 @@ block article
 
         # Scaling-up 
 
-        We met Rohan Ranganath, an alumni of our institute, to decide how to go about scaling up our project to a pilot or a small scale industrial plant. He guided us on how to make process development decisions and also recommended that we to talk to Dr. Vivek Rangarajan, a professor in the deaprtment of Chemical Engineering at BITS Goa, for more details on the 
-        modeling of a biochemical industrial process. He guided us on how to take into consideration biosafety regulations present in our country. Dr. Rangarajan also informed us about the importance of sterilization of all the machinery for the biochemical plant. 
+        We met Rohan Ranganath, an alumni of our institute, to decide how to go about scaling up our project to a pilot or a small scale industrial plant. He guided us on how to make process development decisions and also recommended that we to talk to Dr. Vivek Rangarajan, a professor in the department of Chemical Engineering at BITS Goa, for more details on the 
+        modeling of a biochemical industrial process. Dr. Rangarajan guided us on how to take into consideration biosafety regulations present in our country. Dr. Rangarajan also informed us about the importance of sterilization of all the machinery for the biochemical plant. 
         
         Our proposed implementation can be found on our [implementation](/Implementation) page. We also drew a preliminary process flow diagram with the help of Dr. Rangarajan. This helped us to gain a better estimation of the equipment costs as well as helped us determine the economic viability of our project (which you can check out on our [entrepreneurship](/Entrepreneurship) page).
 
-        > Rohan & Vivek Picture
+    .row
+        .col-md-6
+            - var imgpath = "" + require("../assets/img/HP--Bejoy.jpg")["default"]
+            +image(4, imgpath, "Dr. Bejoy K Thomas, IISER Pune", 70)
+        .col-md-6
+            - var imgpath = "" + require("../assets/img/HP--Rohan.jpeg")["default"]
+            +image(5, imgpath, "Rohan Ranganath, BITS Pilani Goa graduate", 60)
 
-        With a rough model of the process and equipment in our mind, we wanted to know about any other design considerations we would have to account for. To this effect we got in touch with Mr. Ashish surname, who has extensive experience in the biochemical industry. He told us about the need to concentrate our bacterial bioreactor output, because of which we made changes to our process f
-        low diagram. He also helped us with costing and calculating the basis for production for our plant. This was instrumental in calculating costs for our economic viability model.
+    :markdown-it(html)
+
+        With a rough model of the process and equipment in our mind, we wanted to know about any other design considerations we would have to account for. To this effect we got in touch with Mr. Ashish Dagade, who has extensive experience in the biochemical industry. He told us about the need to concentrate our bacterial bioreactor output, because of which we made changes to our process 
+        flow diagram. He also helped us with costing and calculating the basis for production for our plant. This was instrumental in calculating costs for our economic viability model.
 
         > Ashish picture
 
@@ -146,7 +159,10 @@ block article
         We wanted to study if the product would make for a profitable venture and hence we performed a cost-benefit analysis. Dr. Bejoy Thomas from IISER, Pune was instrumental in guiding us with this model. He specialises in Sustainable Development Goals 1, 2, 6 and 13 and tacking multidimensional poverty. We showed him our model to get his opinion on the impact of our product for Sustainable 
         Development Goals namely SDG 2: Zero Hunger. 
 
-        > Dr Bejoy
+    - var imgpath = "" + require("../assets/img/HP--Bejoy.jpg")["default"]
+    +image(6, imgpath, "Dr. Bejoy K Thomas, IISER Pune", 40)
+
+    :markdown-it(html)
 
         However, we could not get in touch with any mills because of quarantine and the nationwide lockdown. We tried our best to get in touch with a few mills but some problems persisted. The pandemic resulted in several mills in heavy sugarcane producing areas being forced to shut down which resulted in huge layoffs. Despite these extraordinary circumstances, the Chief Chemist of Kiccha Sugar Company Ltd,
         one of the leading sugar producers in the Uttar Pradesh belt, genially agreed to meet us. We gained knowledge on the Mill and Sugarcane farmer relationships and more importantly the impact of the pandemic on the sugar industry. This interaction solidified our hopes of bringing about grassroot level changes to the backbone of our country - farmers.
@@ -156,27 +172,6 @@ block article
         In summary, through multiple iterative interactions with various stakeholders we were able to fine-tune our design to make it user friendly and implementable. We met farmers from all major sugarcane producing belts in India that helped us design a viable delivery mechanism. Our meetings with contacts from various parts of the world such as Brazil, Mauritius and Mexico, helped us identify unique problems 
         in each place that helped us come up with a comprehensive solution. Industry experts, including the chief chemist of a leading sugar company, provided us with valuable real time data and insights that structured our implementation design. Our meetings with SDG economist Dr Bejoy, helped us formulate our economic viability model. Dr Vivek and Rohan, chemical engineering researchers, advised us on how to 
         design our process flow for commercialization of our product. 
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 append buttons
