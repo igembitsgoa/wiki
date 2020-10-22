@@ -2,17 +2,7 @@
 * Navbar 
 **/
 
-$dark-nav-background: #262626;
-$theme-slider-light: #ccc;
-$nav-menu-items: #e3e3e3;
-$theme-slider-dark: #5d5d5d;
-$theme-switcher-green: #0fc488;
-$theme-switcher-yellow: #ffdb59;
-$theme-switcher-blue: #1faaad;
-$whitey: #f0f0f0;
 
-$blue: #2c2fe8;
-$darkblue: darken($blue, 30%);
 
 .navbar {
   // height: 80px;
@@ -129,7 +119,6 @@ $darkblue: darken($blue, 30%);
   left: 0;
 
   #nav-progress-bar {
-    background-color: lighten($theme-switcher-green, 5%);
     height: 6px;
   }
 }
@@ -145,5 +134,5 @@ $darkblue: darken($blue, 30%);
 
 @import "_nav_fullscreen.scss";
 @import "_nav_themeswitch.scss";
-@import "_nav_dark.scss";
+@import "_nav_themes.scss";
 @import "_nav_mediaqueries.scss";

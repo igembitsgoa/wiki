@@ -54,7 +54,7 @@ Dark Mode Toggle Switch
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: $theme-slider-light;
+      background-color: $nav-theme-slider-light;
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
@@ -72,7 +72,7 @@ Dark Mode Toggle Switch
     }
 
     input:focus + .slider {
-      box-shadow: 0 0 1px $theme-slider-dark;
+      box-shadow: 0 0 1px $nav-theme-slider-dark;
     }
 
     input:checked + .slider:before {

@@ -1,9 +1,24 @@
-/**
- * Dark Mode Theme
- **/
+@use "sass:list";
+
+@each $category, $id in $section-pages-map {
+  body.theme-#{$category} {
+    $theme-ID: map-get(
+      $map: $section-pages-map,
+      $key: $category,
+    );
+    $color: list.nth($section-accents, $theme-ID);
+
+    &.dark {
+      #themeSwitchWrapper #themeSwitch .slider {
+        background-color: list.nth($section-accents, $theme-ID);
+      }
+    }
+  }
+}
+
 body.dark {
   .nav-colored {
-    background-color: $dark-nav-background;
+    background-color: $nav-dark-background;
 
     .navbar-brand {
       color: white;
