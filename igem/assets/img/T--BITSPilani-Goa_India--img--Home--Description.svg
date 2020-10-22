@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 424.98001 268"
+   version="1.1"
+   id="svg173"
+   sodipodi:docname="Home--Description.svg"
+   width="424.98001"
+   height="268"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata177">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1858"
+     inkscape:window-height="1016"
+     id="namedview175"
+     showgrid="false"
+     inkscape:zoom="1.654"
+     inkscape:cx="215"
+     inkscape:cy="102"
+     inkscape:window-x="62"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg173"
+     inkscape:document-rotation="0"
+     lock-margins="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs122">
+    <style
+       id="style120">.cls-1,.cls-4{fill:none;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#000;stroke-miterlimit:10;}.cls-2,.cls-5{fill:#fff;}.cls-3{fill:#25ced1;}.cls-4,.cls-5{stroke-linecap:round;stroke-width:0.5px;}</style>
+  </defs>
+  <g
+     id="_2.1"
+     data-name="2.1"
+     transform="translate(-35,-148)">
+    <rect
+       class="cls-1"
+       x="35.5"
+       y="245.5"
+       width="275"
+       height="126"
+       rx="6.0100002"
+       id="rect124"
+       ry="6.0100002" />
+    <path
+       class="cls-1"
+       d="M 451.56,371.5 H 318.44 a 8,8 0 0 1 -7.94,-7.94 v -173.2 a 7.94,7.94 0 0 1 7.86,-7.94 l 81.21,-0.84 a 7.94,7.94 0 0 1 8,7.85 l 0.82,71.37 a 7.94,7.94 0 0 0 7.79,7.85 l 35.51,0.7 a 7.94,7.94 0 0 1 7.79,7.94 v 86.27 a 8,8 0 0 1 -7.92,7.94 z"
+       id="path126" />
+    <rect
+       class="cls-1"
+       x="35.5"
+       y="148.5"
+       width="15"
+       height="97"
+       rx="5"
+       id="rect128"
+       ry="5" />
+    <rect
+       class="cls-1"
+       x="169.5"
+       y="148.5"
+       width="15"
+       height="97"
+       rx="5"
+       id="rect130"
+       ry="5" />
+    <rect
+       class="cls-1"
+       x="295.5"
+       y="148.5"
+       width="15"
+       height="97"
+       rx="5"
+       id="rect132"
+       ry="5" />
+    <rect
+       class="cls-2"
+       x="35.5"
+       y="164.5"
+       width="275"
+       height="12"
+       rx="3"
+       id="rect134"
+       ry="3" />
+    <rect
+       class="cls-2"
+       x="35.5"
+       y="198.5"
+       width="275"
+       height="12"
+       rx="3"
+       id="rect136"
+       ry="3" />
+    <rect
+       class="cls-2"
+       x="35.5"
+       y="233.5"
+       width="275"
+       height="12"
+       rx="3"
+       id="rect138"
+       ry="3" />
+    <rect
+       class="cls-3"
+       x="322.5"
+       y="197.5"
+       width="71"
+       height="71"
+       rx="6.25"
+       id="rect140"
+       ry="6.25" />
+    <rect
+       class="cls-1"
+       x="426.5"
+       y="280.5"
+       width="21"
+       height="21"
+       rx="1.85"
+       id="rect142"
+       ry="1.85" />
+    <circle
+       class="cls-2"
+       cx="84.5"
+       cy="379.5"
+       r="36"
+       id="circle144" />
+    <circle
+       class="cls-2"
+       cx="227.5"
+       cy="379.5"
+       r="36"
+       id="circle146" />
+    <circle
+       class="cls-2"
+       cx="369.5"
+       cy="379.5"
+       r="36"
+       id="circle148" />
+    <circle
+       class="cls-2"
+       cx="84.5"
+       cy="379.5"
+       r="18"
+       id="circle150" />
+    <circle
+       class="cls-2"
+       cx="227.5"
+       cy="379.5"
+       r="18"
+       id="circle152" />
+    <circle
+       class="cls-2"
+       cx="369.5"
+       cy="379.5"
+       r="18"
+       id="circle154" />
+    <path
+       class="cls-4"
+       d="m 43.5,275.5 c 0,-23 -1,-23 25,-23"
+       id="path156" />
+    <path
+       class="cls-4"
+       d="m 328.3,220 c 0,-16 -0.69,-16 17.39,-16"
+       id="path158" />
+    <path
+       class="cls-4"
+       d="m 55.5,371.5 c 1,-10 9.23,-18.74 18,-21"
+       id="path160" />
+    <path
+       class="cls-4"
+       d="m 71.5,377.5 c 0.55,-5.5 4.13,-10 9,-11.28"
+       id="path162" />
+    <path
+       class="cls-5"
+       d="m 197.5,372.5 c 1,-10 9.23,-18.74 18,-21"
+       id="path164" />
+    <path
+       class="cls-5"
+       d="m 339.5,372.5 c 1,-10 9.23,-18.74 18,-21"
+       id="path166" />
+    <path
+       class="cls-4"
+       d="m 214.34,377.72 c 0.55,-5.51 4.13,-10 8.95,-11.28"
+       id="path168" />
+    <path
+       class="cls-4"
+       d="m 356.44,377.74 c 0.55,-5.5 4.13,-10 8.95,-11.28"
+       id="path170" />
+  </g>
+</svg>

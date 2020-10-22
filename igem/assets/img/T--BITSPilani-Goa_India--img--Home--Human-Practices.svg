@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 332.25269 214.78407"
+   version="1.1"
+   id="svg295"
+   sodipodi:docname="Home--Human-Practices.svg"
+   width="332.25269"
+   height="214.78407"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata299">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1858"
+     inkscape:window-height="1016"
+     id="namedview297"
+     showgrid="false"
+     inkscape:zoom="1.666"
+     inkscape:cx="147.58461"
+     inkscape:cy="86.436729"
+     inkscape:window-x="62"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg295"
+     inkscape:document-rotation="0"
+     fit-margin-top="0"
+     fit-margin-bottom="0"
+     fit-margin-left="0"
+     fit-margin-right="0" />
+  <defs
+     id="defs270">
+    <style
+       id="style268">.cls-1,.cls-2{fill:none;}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#000;stroke-miterlimit:10;}.cls-2{stroke-linecap:round;stroke-width:0.5px;}.cls-3{fill:#25ced1;}.cls-4{fill:#ea526f;}</style>
+  </defs>
+  <g
+     id="_2.4"
+     data-name="2.4"
+     transform="translate(-102.41538,-163.56326)">
+    <rect
+       class="cls-1"
+       x="364.14001"
+       y="169.82001"
+       width="47"
+       height="113.89"
+       transform="rotate(-26.39,387.68257,226.78392)"
+       id="rect272" />
+    <rect
+       class="cls-1"
+       x="120.58"
+       y="168.75999"
+       width="47"
+       height="113.89"
+       transform="rotate(-160.65,144.08758,225.70907)"
+       id="rect274" />
+    <path
+       class="cls-1"
+       d="m 194.66,250 c 39.84,8.5 56.84,-11.5 66.84,-34.5 12,4 12.38,4.58 41,13 17,5 33,-17 19,-22 -12.23,-4.37 -72.09,-25.7 -79,-28 -9,-3 -22,-1 -27.54,2.85 -6.25,4.33 -29.84,-1.58 -29.84,-1.58"
+       id="path276" />
+    <path
+       class="cls-1"
+       d="m 207.5,273.5 c -13,7 -25.85,13.74 -32.39,17.43 -11.61,6.57 -2.61,29.57 15.39,22.57 14.14,-5.5 48,-23 56,-27"
+       id="path278" />
+    <path
+       class="cls-1"
+       d="m 211.5,303.5 c -13,7 -26.85,13.74 -33.39,17.43 -11.61,6.57 -2.61,28.57 15.39,21.57 14.14,-5.5 65,-32 73,-36"
+       id="path280" />
+    <path
+       class="cls-1"
+       d="m 231.5,324.5 c -13,7 -26.85,13.74 -33.39,17.43 -11.61,6.57 -2.61,28.57 15.39,21.57 14.14,-5.5 65,-32 73,-36"
+       id="path282" />
+    <path
+       class="cls-1"
+       d="m 391.9,288.22 c -17.4,17.28 -50.4,45.28 -70.4,52.28 -7.62,4.68 -58.86,30.5 -73,36 -18,7 -27,-15 -15.39,-21.57 6.54,-3.69 20.39,-10.43 33.39,-17.43"
+       id="path284" />
+    <path
+       class="cls-2"
+       d="m 139.5,187.5 c 5,-14 7,-14 18,-10"
+       id="path286" />
+    <path
+       class="cls-2"
+       d="m 387.65,187 c -6.7,-13.28 -8.68,-13 -19.1,-7.7"
+       id="path288" />
+    <circle
+       class="cls-3"
+       cx="130.5"
+       cy="260.5"
+       r="8"
+       id="circle290" />
+    <circle
+       class="cls-4"
+       cx="404.5"
+       cy="260.5"
+       r="8"
+       id="circle292" />
+  </g>
+</svg>
