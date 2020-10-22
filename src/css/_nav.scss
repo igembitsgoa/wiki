@@ -119,7 +119,6 @@
   left: 0;
 
   #nav-progress-bar {
-    background-color: lighten($theme-switcher-green, 5%);
     height: 6px;
   }
 }
@@ -135,5 +134,5 @@
 
 @import "_nav_fullscreen.scss";
 @import "_nav_themeswitch.scss";
-@import "_nav_dark.scss";
+@import "_nav_themes.scss";
 @import "_nav_mediaqueries.scss";

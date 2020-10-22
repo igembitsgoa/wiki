@@ -2,17 +2,11 @@
 
 @each $category, $id in $section-pages-map {
   body.theme-#{$category} {
-    $theme-ID: map-get(
-      $map: $section-pages-map,
-      $key: human-practices,
-    );
-    $color: list.nth($section-accents, $theme-ID);
+    $color: nth($section-accents, $id);
 
-    $theme-ID: map-get(
-      $map: $section-pages-map,
-      $key: human-practices,
-    );
-    $color: list.nth($section-accents, $theme-ID);
+    #nav-progress-bar {
+      background-color: nth($section-accents, $id);
+    }
 
     .content {
       blockquote {
@@ -55,7 +49,7 @@
         }
 
         a {
-          color: $color;
+          color: lighten($color, 10%);
         }
       }
 
