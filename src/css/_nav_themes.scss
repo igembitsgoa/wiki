@@ -2,15 +2,22 @@
 
 @each $category, $id in $section-pages-map {
   body.theme-#{$category} {
-    $theme-ID: map-get(
-      $map: $section-pages-map,
-      $key: $category,
-    );
-    $color: list.nth($section-accents, $theme-ID);
 
+    $color: nth($page-accents, $id);
+
+    #nav-progress-bar {
+      background-color: $color;
+    }
+    
     &.dark {
+      $color: nth($page-accents-dark, $id);
+
+      #nav-progress-bar {
+        background-color: $color;
+      }
+
       #themeSwitchWrapper #themeSwitch .slider {
-        background-color: list.nth($section-accents, $theme-ID);
+        background-color: $color;
       }
     }
   }

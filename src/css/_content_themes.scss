@@ -2,26 +2,19 @@
 
 @each $category, $id in $section-pages-map {
   body.theme-#{$category} {
-    $color: nth($section-accents, $id);
-
-    #nav-progress-bar {
-      background-color: nth($section-accents, $id);
-    }
+    $color: nth($content-accents, $id);
 
     .content {
       blockquote {
-        border-left: 8px solid darken($color, 4%);
+        border-left: 8px solid $color;
 
         &:before {
-          color: darken($color, 4%);
+          color: $color;
         }
       }
 
-      h1 {
-        color: darken($color, 5%);
-      }
-      a {
-        color: darken($color, 5%);
+      h1, a {
+        color: $color;
       }
     }
     .content p,
@@ -35,6 +28,7 @@
     }
 
     &.dark {
+      $color: nth($content-accents-dark, $id);
       .content {
         blockquote {
           border-left: 8px solid $color;
@@ -44,12 +38,8 @@
           }
         }
 
-        h1 {
-          color: lighten($color, 5%);
-        }
-
-        a {
-          color: lighten($color, 10%);
+        h1, a {
+          color: $color;
         }
       }
 
@@ -65,7 +55,7 @@
 
       #collapsibleSections {
         button {
-          color: lighten($color, 10%);
+          color: $color;
 
           &:hover,
           &:not(.collapsed),

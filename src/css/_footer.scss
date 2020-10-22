@@ -1,6 +1,7 @@
 /**
  * Footer
  **/
+@use "sass:list";
 
 @include respond-above(xxl) {
   footer {
@@ -28,7 +29,7 @@
 
 #footerBrand {
   padding: 75px 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   p {
     font-size: 1.1rem;
     margin-bottom: 0;
@@ -63,7 +64,8 @@
 }
 
 @include respond-below(xs) {
-  #footerTeamLogo, #BITSLogo {
+  #footerTeamLogo,
+  #BITSLogo {
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -122,7 +124,6 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.1rem;
-    color: $footer-headings;
   }
 
   ul {
@@ -131,7 +132,6 @@
     font-weight: 400;
     margin: 0;
     a {
-      color: $footer-links;
       font-size: 1.1rem;
     }
   }
@@ -147,17 +147,8 @@
         cursor: pointer;
       }
     }
-
-    // .col {
-    //   line-height: 0.75rem 0;
-    // }
-
-    // ul {
-    //   display: none;
-    // }
   }
 }
-
 @include respond-below(xs) {
   #footerBrand {
     padding: 80px 0 20px 0;
@@ -180,9 +171,31 @@
   }
 }
 
+@each $category, $id in $section-pages-map {
+  body.theme-#{$category} {
+
+    #footerNav {
+      background-color: nth($page-accents, $id);
+
+      .footer-heading {
+        color: nth($footer-text, $id);
+      }
+
+      li a {
+        color: nth($footer-text, $id);
+      }
+    }
+    &.dark {
+      #footerNav {
+        background-color: nth($page-accents-dark, $id);
+      }
+    }
+  }
+}
+
 body.dark {
   #footerTeamLogo {
-    background-image: url('../assets/img/iGEMBITSGoa_logo_dark.svg');
+    background-image: url("../assets/img/iGEMBITSGoa_logo_dark.svg");
   }
 
   p {
