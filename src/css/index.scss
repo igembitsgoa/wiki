@@ -5,6 +5,11 @@
   display: none !important;
 }
 
+.nav-transparent:not(.nav-colored) {
+  transform: translateY(-100px);
+  transition: all 0.3s ease;
+}
+
 @import "_index_header.scss";
 @import "_index_sections.scss";
 
