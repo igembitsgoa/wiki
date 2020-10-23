@@ -25,7 +25,8 @@
         }
       }
 
-      h1, a {
+      h1,
+      a {
         color: $color;
       }
     }
@@ -50,7 +51,8 @@
           }
         }
 
-        h1, a {
+        h1,
+        a {
           color: $color;
         }
       }
@@ -128,9 +130,25 @@ body.dark {
         color: $dark-contents-text;
       }
 
-      tbody tr {
-        &:nth-of-type(odd) {
-          background: $table-alternate-row-background-dark;
+      tbody {
+        tr {
+          &:nth-of-type(even) {
+            background: $table-alternate-row-background-dark;
+          }
+          &:nth-of-type(odd) {
+            background: $dark-contents-background;
+          }
+        }
+      }
+
+      thead {
+        tr {
+          &:nth-of-type(odd) {
+            background: $table-alternate-row-background-dark;
+          }
+          &:nth-of-type(even) {
+            background: $dark-contents-background;
+          }
         }
       }
 
@@ -183,8 +201,4 @@ body.dark {
       }
     }
   }
-}
-
-body.theme-green {
-  
 }
