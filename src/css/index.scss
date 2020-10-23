@@ -5,7 +5,7 @@
   display: none !important;
 }
 
-.nav-transparent:not(.nav-colored) {
+nav:not(.menu-open) .nav-transparent:not(.nav-colored) {
   transform: translateY(-100px);
   transition: all 0.3s ease;
 }
