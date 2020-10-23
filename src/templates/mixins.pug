@@ -5,6 +5,11 @@ mixin buttonLeft(buttonTitle)
     - var href = urlPrefix
   else
     - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
+
+  if buttonTitle.includes("Model/")
+    - buttonTitle = buttonTitle.substr(6)
+  else if buttonTitle.includes("Experiments/")
+    - buttonTitle = buttonTitle.substr(12)
   
   a.button.prev(href=href)
     .button-background
@@ -18,6 +23,11 @@ mixin buttonRight(buttonTitle)
     - var href = urlPrefix
   else
     - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
+
+  if buttonTitle.includes("Model/")
+    - buttonTitle = buttonTitle.substr(6)
+  else if buttonTitle.includes("Experiments/")
+    - buttonTitle = buttonTitle.substr(12)
   
   a.button.next(href=href)
     .button-background
