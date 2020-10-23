@@ -8,7 +8,7 @@ html(lang="en")
   body
     include templates/nav.pug
     header.d-flex.justify-content-center.align-items-center
-      video(autoplay="true" muted)
+      video(autoplay="true" muted loop)
         source(src= require("./assets/video/homepage.mp4")['default'].substr(2), type='video/mp4')
     section.section1#description
       .container

@@ -33,7 +33,7 @@ $(function () {
   if (window.location.href.includes("github.io")) {
     $("source").each(function () {
       var link = $(this).attr("src");
-      $(this).attr("href", "/wiki/" + link);
+      $(this).attr("src", "/wiki/" + link);
     });
   }
 });
