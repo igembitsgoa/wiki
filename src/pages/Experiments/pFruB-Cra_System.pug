@@ -1,7 +1,7 @@
 extends ../../templates/contents.pug
 
 block headVars
-  - var title = "Biosensor"
+  - var title = "pFruB-Cra System"
   - var requireMathJax = false
   //- You can just write the filename here and it will be resolved to 'require'.
   //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
@@ -18,35 +18,36 @@ prepend article
       #headingOne.card-header
         h2.mb-0
           button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
-            span pFruB Characterization
+            span Invertase Inhibitor Assay
             i.icon-dropdown
       #collapseOne.collapse(aria-labelledby='headingOne')
         .card-body
 
-          +pdf("../" + require("../../assets/docs/brochure.pdf")['default'], "iGEM BITS Brochure")
-
+          +pdf("../" + require("../../assets/docs/Experiments--pFruB-Cra_System--Anti-Invertase_Assay.pdf")['default'], "Invertase Inhibitor Assay")
     .card
       #headingTwo.card-header
         h2.mb-0
-          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')                        
-            span Collapsible Group Item #2
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
+            span pFruB Characterization
             i.icon-dropdown
       #collapseTwo.collapse(aria-labelledby='headingTwo')
         .card-body
-          | Anim pariatur cliche reprehenderit
+
+          +pdf("../" + require("../../assets/docs/Experiments--pFruB-Cra_System--pFruB_Characterisation.pdf")['default'], "pFruB Characterization")
     .card
       #headingThree.card-header
         h2.mb-0
-          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
-            span Collapsible Group Item #3
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='true' aria-controls='collapseThree')
+            span pFruB Specificity
             i.icon-dropdown
       #collapseThree.collapse(aria-labelledby='headingThree')
         .card-body
-          | Anim pariatur cliche reprehenderit
+
+          +pdf("../" + require("../../assets/docs/Experiments--pFruB-Cra_System--pFruB_Specificity.pdf")['default'], "pFruB Specificity")
 
 append buttons
   //- mind the quotes and the plus sign
-  +buttonLeft("Design")
-  +buttonRight("Engineering")
+  +buttonLeft("Experiments")
+  +buttonRight("Experiments/Kill Switch")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.

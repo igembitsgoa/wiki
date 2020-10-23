@@ -1,7 +1,7 @@
 extends ../../templates/contents.pug
 
 block headVars
-  - var title = "Kill Switch"
+  - var title = "Other"
   - var requireMathJax = false
   //- You can just write the filename here and it will be resolved to 'require'.
   //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
@@ -18,33 +18,26 @@ prepend article
       #headingOne.card-header
         h2.mb-0
           button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
-            span FNR Characterisation
+            span Growth Rate
             i.icon-dropdown
       #collapseOne.collapse(aria-labelledby='headingOne')
         .card-body
-          +pdf("../" + require("../../assets/docs/Experiments--Killswitch--FNR_Characterisation.pdf")['default'], "FNR Characterisation")
+          +pdf("../" + require("../../assets/docs/Experiments--Others--Growth_Rate.pdf")['default'], "Growth Rate")
     .card
       #headingTwo.card-header
         h2.mb-0
           button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
-            span pH Dependency of FNR Promoter
+            span High Performance Liquid Chromatography (HPLC) of Sugarcane juice
             i.icon-dropdown
       #collapseTwo.collapse(aria-labelledby='headingTwo')
         .card-body
-          +pdf("../" + require("../../assets/docs/Experiments--Killswitch--pH_Dependency.pdf")['default'], "pH Dependency of FNR Promoter")
-    .card
-      #headingThree.card-header
-        h2.mb-0
-          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='true' aria-controls='collapseThree')
-            span Killswitch Response Time Determination
-            i.icon-dropdown
-      #collapseThree.collapse(aria-labelledby='headingThree')
-        .card-body
-          +pdf("../" + require("../../assets/docs/Experiments--Killswitch--Response_Time.pdf")['default'], "Killswitch Response Time Determination")
+          +pdf("../" + require("../../assets/docs/Experiments--Others--Sugarcane_Juice_HPLC.pdf")['default'], "Sugarcane Juice HPLC")
+
+          
 
 append buttons
   //- mind the quotes and the plus sign
-  +buttonLeft("Experiments/pFruB-Cra System")
-  +buttonRight("Experiments/Inoculant")
+  +buttonLeft("Experiments/Protocols")
+  +buttonRight("Home")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.

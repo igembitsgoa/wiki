@@ -1,0 +1,79 @@
+extends ../../templates/contents.pug
+
+block headVars
+  - var title = "Inoculant"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "../" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+  - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+  - var fullWidth = true
+  - var theme = "journal"
+
+prepend article
+
+  #collapsibleSections.accordion
+    .card
+      #headingOne.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+            span Carboxymethyl Cellulose Characterization
+            i.icon-dropdown
+      #collapseOne.collapse(aria-labelledby='headingOne')
+        .card-body
+          +pdf("../" + require("../../assets/docs/Experiments--Inoculant--Carboxymethyl_Cellulose_Characterization.pdf")['default'], "Carboxymethyl Cellulose Characterization")
+    .card
+      #headingTwo.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
+            span LB Degradation
+            i.icon-dropdown
+      #collapseTwo.collapse(aria-labelledby='headingTwo')
+        .card-body
+          +pdf("../" + require("../../assets/docs/Experiments--Inoculant--LB_Degradation.pdf")['default'], "LB Degradation")
+    .card
+      #headingThree.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='true' aria-controls='collapseThree')
+            span Sorbic Acid Characterization
+            i.icon-dropdown
+      #collapseThree.collapse(aria-labelledby='headingThree')
+        .card-body
+          +pdf("../" + require("../../assets/docs/Experiments--Inoculant--Sorbic_Acid_Characterization.pdf")['default'], "Sorbic Acid Characterization")
+    .card
+      #headingFour.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour')
+            span Sorbic Acid and Potassium Sorbate Characterization
+            i.icon-dropdown
+      #collapseFour.collapse(aria-labelledby='headingFour')
+        .card-body
+          +pdf("../" + require("../../assets/docs/Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Characterization.pdf")['default'], "Sorbic Acid and Potassium Sorbate Characterization")
+    .card
+      #headingFive.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFive' aria-expanded='true' aria-controls='collapseFive')
+            span Sorbic Acid and Potassium Sorbate Degradation
+            i.icon-dropdown
+      #collapseFive.collapse(aria-labelledby='headingFive')
+        .card-body
+          +pdf("../" + require("../../assets/docs/Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Degradation.pdf")['default'], "Sorbic Acid and Potassium Sorbate Degradation")
+    .card
+      #headingSix.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseSix' aria-expanded='true' aria-controls='collapseSix')
+            span Triton X-100 Characterization
+            i.icon-dropdown
+      #collapseSix.collapse(aria-labelledby='headingSix')
+        .card-body
+          +pdf("../" + require("../../assets/docs/Experiments--Inoculant--Triton_X-100_Characterization.pdf")['default'], "Triton X-100 Characterization")
+
+          
+
+append buttons
+  //- mind the quotes and the plus sign
+  +buttonLeft("Experiments/Kill Switch")
+  +buttonRight("Experiments/Protocols")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
