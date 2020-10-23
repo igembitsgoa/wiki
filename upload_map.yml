@@ -1,4 +1,8 @@
 assets:
+  assets/docs/Accessibility--Funding.pdf:
+    link_URL: https://2020.igem.org/wiki/images/0/09/T--BITSPilani-Goa_India--docs--Accessibility--Funding.pdf
+    md5: 6560666396d7b722a571b0d2f145def3
+    upload_filename: T--BITSPilani-Goa_India--docs--Accessibility--Funding.pdf
   assets/docs/Accessibility--Navigating iGEM.pdf:
     link_URL: https://2020.igem.org/wiki/images/9/90/T--BITSPilani-Goa_India--docs--Accessibility--Navigating_iGEM.pdf
     md5: 77cb36ac2ac1a50c1eebbb199fe06f8f
@@ -1176,7 +1180,7 @@ html:
     md5: c32dab540cddbb68e12d74d4f37fa8b7
   Education/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Education
-    md5: 0dae59b13dd07a9f9252e3b22a1f539d
+    md5: 3a42acf3f23fdfd8a64661552025b3a3
   Engineering/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Engineering
     md5: b71d4e3a2ecdcd84ebc8a6a478b676bb
@@ -1221,7 +1225,7 @@ html:
     md5: 328443379e1692d88d76a8297f435a8a
   Judging/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Judging
-    md5: 1b24320ada3ff2c7ed92edb0bfe33413
+    md5: c31d2b56939e65ac70a7833634162d75
   Model/Auxotroph/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Auxotroph
     md5: 2992cdd9092ec560f38721d49c18e7ba
@@ -1254,7 +1258,7 @@ html:
     md5: 690a521ff788782cfa70dbdfa2ec9451
   Parts/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Parts
-    md5: 4fd96834a6d42eea335c8c41ec633756
+    md5: 90c44675e456e00b80c3e9dd01df8402
   Policy/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Policy
     md5: 9eb1c7e83f3a1aba041592e1ceb414c0
