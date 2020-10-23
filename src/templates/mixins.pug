@@ -12,10 +12,10 @@ mixin buttonLeft(buttonTitle)
     - buttonTitle = buttonTitle.substr(12)
   
   a.button.prev(href=href)
-    .button-background
-      .circle(aria-hidden=true)
-        .icon.arrow
-    .button-text= buttonTitle 
+    span.button-background
+      span.circle(aria-hidden=true)
+        span.icon.arrow
+    span.button-text= buttonTitle 
 
 mixin buttonRight(buttonTitle)
 
@@ -30,10 +30,10 @@ mixin buttonRight(buttonTitle)
     - buttonTitle = buttonTitle.substr(12)
   
   a.button.next(href=href)
-    .button-background
-      .circle(aria-hidden=true)
-        .icon.arrow
-    .button-text= buttonTitle 
+    span.button-background
+      span.circle(aria-hidden=true)
+        span.icon.arrow
+    span.button-text= buttonTitle 
 
 mixin image(n, url, caption, width)
   .image
