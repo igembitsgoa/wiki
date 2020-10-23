@@ -184,7 +184,10 @@
   }
 
   #contact-links {
-    padding: 0 0 1rem 4.2rem;
+    padding: 0 0 1rem 3rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 
     li {
       display: inline-block;
@@ -237,7 +240,6 @@
 
       filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(2%)
         hue-rotate(36deg) brightness(94%) contrast(88%);
-
     }
     i.email {
       background-image: url(../assets/icons/email.svg);

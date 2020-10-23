@@ -63,6 +63,23 @@
   }
 }
 
+@include respond-below(xl) {
+  #fullscreenMenu {
+    #nav-headings {
+    padding-left: 2rem;
+    }
+    #nav-items {
+      padding-right: 2rem;
+    }
+
+    #contact-links {
+      padding-left: 2rem;
+    }
+  }
+
+
+}
+
 @include respond-below(lg) {
   #fullscreenMenu {
     .contact-button {
@@ -132,7 +149,11 @@
     }
 
     #contact-links {
+      flex-direction: column;
       padding-left: 2rem;
+      ul {
+        margin-bottom: 0;
+      }
       li {
         border: 0;
         margin: 0.5rem 0;
