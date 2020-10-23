@@ -6,7 +6,6 @@
   .card {
     margin: 1.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-    background-color: none;
     transition: all 0.3s ease;
   }
   .card-header {
@@ -18,7 +17,6 @@
       &:hover,
       &:not(.collapsed),
       &:focus {
-        background-color: $green-background;
         color: $whitey;
         text-decoration: none;
       }
@@ -26,7 +24,6 @@
   }
 
   button {
-    color: $green-background;
     font-size: 1.2rem;
     align-items: center;
     display: flex;
@@ -50,68 +47,6 @@
       i {
         transform: rotate(90deg);
       }
-    }
-  }
-
-  .card-body {
-    background-color: $whitey;
-  }
-}
-
-body.theme-green {
-  #collapsibleSections {
-    .card-header {
-      button {
-        &:hover,
-        &:not(.collapsed),
-        &:focus {
-          background-color: $green-background;
-        }
-      }
-    }
-
-    button {
-      color: $green-background;
-    }
-  }
-}
-
-
-body.theme-yellow {
-  #collapsibleSections {
-    .card-header {
-      button {
-        &:hover,
-        &:not(.collapsed),
-        &:focus {
-          background-color: $yellow;
-          color: $dark-body;
-        }
-      }
-    }
-
-    button {
-      color: darken($yellow, 20%);
-    }
-  }
-}
-
-
-
-body.theme-blue {
-  #collapsibleSections {
-    .card-header {
-      button {
-        &:hover,
-        &:not(.collapsed),
-        &:focus {
-          background-color: $blue;
-        }
-      }
-    }
-
-    button {
-      color: $blue;
     }
   }
 }

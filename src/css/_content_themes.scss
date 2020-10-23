@@ -40,6 +40,18 @@
       }
     }
 
+    #collapsibleSections {
+      button {
+        color: $color;
+
+        &:hover,
+        &:not(.collapsed),
+        &:focus {
+          background-color: $color;
+        }
+      }
+    }
+
     &.dark {
       $color: nth($content-accents-dark, $id);
       .content {
@@ -75,10 +87,6 @@
           &:not(.collapsed),
           &:focus {
             background-color: $color;
-          }
-
-          i {
-            filter: invert(1);
           }
         }
       }
