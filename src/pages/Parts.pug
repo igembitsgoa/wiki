@@ -1,0 +1,22 @@
+extends ../templates/contents.pug
+
+block headVars
+  - var title = "Parts"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "" + require("../assets/img/Contribution--header.png")["default"]
+  - var backgroundAttribution = "Photo from Freepik"
+  - var backgroundAttributionLink = "https://www.freepik.com/free-vector/public-contribution-concept_2448540.htm"
+  - var theme = "parts"
+
+block article
+
+  groupparts
+
+append buttons
+  //- mind the quotes and the plus sign
+  +buttonLeft("Attributions")
+  +buttonRight("Home")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
