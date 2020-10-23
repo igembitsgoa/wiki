@@ -9,7 +9,7 @@
 @import "_footer.scss";
 
 html {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -25,68 +25,57 @@ html {
 }
 
 a.button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
   text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
   font-family: "Lato";
-  height: auto;
+  display: block;
+  position: relative;
+  max-width: max-content;
 
-  .circle {
-    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-    position: relative;
-    display: inline-block;
-    right: 0;
-    margin: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: $pink;
-    border-radius: 1.354rem;
-    .icon {
+  .button-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    .circle {
       @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      background: $white;
-      &.arrow {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: $pink;
+      border-radius: 1.354rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
         @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-        left: 0.521rem;
-        width: 0.9375rem;
-        height: 0.104rem;
-        background: none;
-        &::before {
-          position: absolute;
-          content: "";
-          top: -0.21rem;
-          right: 0.052rem;
-          width: 0.521rem;
-          height: 0.521rem;
-          border-top: 0.125rem solid #fff;
-          border-right: 0.125rem solid #fff;
-          transform: rotate(45deg);
+        position: absolute;
+        background: $white;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          width: 0.9375rem;
+          height: 0.104rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 0.521rem;
+            height: 0.521rem;
+          }
         }
       }
     }
   }
+
   .button-text {
     @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-    position: absolute;
-
-    padding: 0.62rem 0 0.625rem 2.1rem;
-    margin: 0 0 0 1.54rem;
-    color: $black;
+    background: transparent;
+    display: inline-block;
+    max-width: max-content;
+    position: relative;
+    z-index: 2;
     font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
     text-transform: uppercase;
-    width: fit-content;
   }
 
   &:hover {
@@ -103,39 +92,52 @@ a.button {
       color: $white;
     }
   }
-
-  &.super-long {
-    width: 14.7rem;
-  }
-
-  &.long {
-    width: 12rem;
-  }
-
-  &.medium {
-    width: 10.5rem;
-  }
-
-  &.short {
-    width: 9rem;
-  }
 }
 
 a.button.next {
+  .button-background {
+    .circle {
+      .icon {
+        &.arrow {
+          left: 0.521rem;
+          &::before {
+            top: -0.21rem;
+            right: 0.052rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
   .button-text {
-    top: 0;
-    left: 0;
+    margin: 0.5rem 1.5rem 0.5rem 3.5rem;
   }
 }
 
 a.button.prev {
-  transform: rotate(180deg);
+  .button-background {
+    transform: rotate(180deg);
+    .circle {
+      .icon {
+        &.arrow {
+          left: 0.521rem;
+          &::before {
+            top: -0.21rem;
+            right: 0.052rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
 
   .button-text {
-    transform: rotate(180deg);
-    margin: 1.54rem 0 0 0;
-    right: 0;
-    bottom: 0;
+    margin: 0.5rem 3.5rem 0.5rem 1.5rem;
   }
 }
 
