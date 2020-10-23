@@ -7,6 +7,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/8/86/T--BITSPilani-Goa_India--docs--Accessibility--Start_A_Team.pdf
     md5: 5354f7de6e3c5818f52c852cedc1e878
     upload_filename: T--BITSPilani-Goa_India--docs--Accessibility--Start A Team.pdf
+  assets/docs/Education--CTEHandout.pdf:
+    link_URL: https://2020.igem.org/wiki/images/d/d1/T--BITSPilani-Goa_India--docs--Education--CTEHandout.pdf
+    md5: 39bae98bf37d34e5dd867bc751a03fe5
+    upload_filename: T--BITSPilani-Goa_India--docs--Education--CTEHandout.pdf
   assets/docs/Education--Country Policy Collaboration.pdf:
     link_URL: https://2020.igem.org/wiki/images/9/9d/T--BITSPilani-Goa_India--docs--Education--Country_Policy_Collaboration.pdf
     md5: ca1066ae4fafcc3a55a98fb7da323710
@@ -23,6 +27,94 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/1/16/T--BITSPilani-Goa_India--docs--Education--PartsAndDesign.pdf
     md5: 97a289de12ebf4ef56aca611e104e680
     upload_filename: T--BITSPilani-Goa_India--docs--Education--PartsAndDesign.pdf
+  assets/docs/Experiments--Inoculant--Carboxymethyl_Cellulose_Characterization.pdf:
+    link_URL: https://2020.igem.org/wiki/images/1/15/T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Carboxymethyl_Cellulose_Characterization.pdf
+    md5: ee6118837ad37b39c7cc11cd7a6612ea
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Carboxymethyl_Cellulose_Characterization.pdf
+  assets/docs/Experiments--Inoculant--LB_Degradation.pdf:
+    link_URL: https://2020.igem.org/wiki/images/0/09/T--BITSPilani-Goa_India--docs--Experiments--Inoculant--LB_Degradation.pdf
+    md5: 15bdc4e30d82cdf8b5b1e13330d647a6
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Inoculant--LB_Degradation.pdf
+  assets/docs/Experiments--Inoculant--Sorbic_Acid_Characterization.pdf:
+    link_URL: https://2020.igem.org/wiki/images/5/52/T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Sorbic_Acid_Characterization.pdf
+    md5: a8423a30fa6814388103ff3adcd23e98
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Sorbic_Acid_Characterization.pdf
+  assets/docs/Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Characterization.pdf:
+    link_URL: https://2020.igem.org/wiki/images/d/dd/T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Characterization.pdf
+    md5: 4e101bdf20911d7bd0d072636e8649f9
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Characterization.pdf
+  assets/docs/Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Degradation.pdf:
+    link_URL: https://2020.igem.org/wiki/images/1/12/T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Degradation.pdf
+    md5: be429751378dd7f1adf5d2c372ca230c
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Sorbic_Acid_Potassium_Sorbate_Degradation.pdf
+  assets/docs/Experiments--Inoculant--Triton_X-100_Characterization.pdf:
+    link_URL: https://2020.igem.org/wiki/images/2/21/T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Triton_X-100_Characterization.pdf
+    md5: c72b8bae6634230fd9795ad6973030af
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Inoculant--Triton_X-100_Characterization.pdf
+  assets/docs/Experiments--Killswitch--FNR_Characterisation.pdf:
+    link_URL: https://2020.igem.org/wiki/images/7/78/T--BITSPilani-Goa_India--docs--Experiments--Killswitch--FNR_Characterisation.pdf
+    md5: 13b1f5804314fba5a56b1f4bd14569e0
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Killswitch--FNR_Characterisation.pdf
+  assets/docs/Experiments--Killswitch--Response_Time.pdf:
+    link_URL: https://2020.igem.org/wiki/images/a/ab/T--BITSPilani-Goa_India--docs--Experiments--Killswitch--Response_Time.pdf
+    md5: b29961ff966a2feb8c9650c8a32fb912
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Killswitch--Response_Time.pdf
+  assets/docs/Experiments--Killswitch--pH_Dependency.pdf:
+    link_URL: https://2020.igem.org/wiki/images/9/9f/T--BITSPilani-Goa_India--docs--Experiments--Killswitch--pH_Dependency.pdf
+    md5: 2058a0c639de1d41ee3122c37f2f517f
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Killswitch--pH_Dependency.pdf
+  assets/docs/Experiments--Others--Growth_Rate.pdf:
+    link_URL: https://2020.igem.org/wiki/images/a/a0/T--BITSPilani-Goa_India--docs--Experiments--Others--Growth_Rate.pdf
+    md5: c1ac9181ee9b13b7a546db450ad8de41
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Others--Growth_Rate.pdf
+  assets/docs/Experiments--Others--Sugarcane_Juice_HPLC.pdf:
+    link_URL: https://2020.igem.org/wiki/images/7/7d/T--BITSPilani-Goa_India--docs--Experiments--Others--Sugarcane_Juice_HPLC.pdf
+    md5: 02ff7c903b4ca3a40d9bd63721bb7533
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Others--Sugarcane_Juice_HPLC.pdf
+  assets/docs/Experiments--Protocols--Competent_Cell_Prep.pdf:
+    link_URL: https://2020.igem.org/wiki/images/5/57/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Competent_Cell_Prep.pdf
+    md5: acf7bc3c16f918f30440ffdaa3035bdc
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Competent_Cell_Prep.pdf
+  assets/docs/Experiments--Protocols--Invertase_Assay_Kit.pdf:
+    link_URL: https://2020.igem.org/wiki/images/e/e2/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Invertase_Assay_Kit.pdf
+    md5: 77bf9f96b736bdd42c810c0c7a834af9
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Invertase_Assay_Kit.pdf
+  assets/docs/Experiments--Protocols--Isolated_Plasmid_Analysis.pdf:
+    link_URL: https://2020.igem.org/wiki/images/d/df/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Isolated_Plasmid_Analysis.pdf
+    md5: 676e3e65461c503390c5f54022488dc0
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Isolated_Plasmid_Analysis.pdf
+  assets/docs/Experiments--Protocols--LB_Medium_Preparation.pdf:
+    link_URL: https://2020.igem.org/wiki/images/4/44/T--BITSPilani-Goa_India--docs--Experiments--Protocols--LB_Medium_Preparation.pdf
+    md5: 11496bb456e46dbc11681395f2706dae
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--LB_Medium_Preparation.pdf
+  assets/docs/Experiments--Protocols--PCR.pdf:
+    link_URL: https://2020.igem.org/wiki/images/8/8a/T--BITSPilani-Goa_India--docs--Experiments--Protocols--PCR.pdf
+    md5: a7251d069cd9410b9744958d45818347
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--PCR.pdf
+  assets/docs/Experiments--Protocols--Plasmid_Purification.pdf:
+    link_URL: https://2020.igem.org/wiki/images/a/a1/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Plasmid_Purification.pdf
+    md5: d8d471babe6d10cce5c4924364d4ac82
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Plasmid_Purification.pdf
+  assets/docs/Experiments--Protocols--Site_Directed_Mutagenesis.pdf:
+    link_URL: https://2020.igem.org/wiki/images/a/ae/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Site_Directed_Mutagenesis.pdf
+    md5: e3c11eb1e0116bcd6d42ea0444efdecb
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Site_Directed_Mutagenesis.pdf
+  assets/docs/Experiments--Protocols--Transformation.pdf:
+    link_URL: https://2020.igem.org/wiki/images/0/01/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Transformation.pdf
+    md5: 234af04a9e43691d1187e4dc6159e939
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Transformation.pdf
+  assets/docs/Experiments--pFruB-Cra_System--Anti-Invertase_Assay.pdf:
+    link_URL: https://2020.igem.org/wiki/images/0/09/T--BITSPilani-Goa_India--docs--Experiments--pFruB-Cra_System--Anti-Invertase_Assay.pdf
+    md5: 3afccd75687a26e060ae7e23e211ffb2
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--pFruB-Cra_System--Anti-Invertase_Assay.pdf
+  assets/docs/Experiments--pFruB-Cra_System--pFruB_Characterisation.pdf:
+    link_URL: https://2020.igem.org/wiki/images/a/ae/T--BITSPilani-Goa_India--docs--Experiments--pFruB-Cra_System--pFruB_Characterisation.pdf
+    md5: 95c99e11a3a801063cc4637359f4d349
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--pFruB-Cra_System--pFruB_Characterisation.pdf
+  assets/docs/Experiments--pFruB-Cra_System--pFruB_Specificity.pdf:
+    link_URL: https://2020.igem.org/wiki/images/3/3c/T--BITSPilani-Goa_India--docs--Experiments--pFruB-Cra_System--pFruB_Specificity.pdf
+    md5: 5c4653e1b159a3f687cd7d4b3d1bb571
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--pFruB-Cra_System--pFruB_Specificity.pdf
   assets/docs/FruR-pFruBInteractions.xlsx:
     link_URL: https://2020.igem.org/wiki/images/a/a5/T--BITSPilani-Goa_India--docs--FruR-pFruBInteractions.xlsx
     md5: e7f0d435c0f125a47d37864580df90fc
@@ -765,7 +857,7 @@ assets:
     upload_filename: T--BITSPilani-Goa_India--img--HP--BrazilMap.png
   assets/img/HP--Mandya.jpg:
     link_URL: https://2020.igem.org/wiki/images/2/25/T--BITSPilani-Goa_India--img--HP--Mandya.jpg
-    md5: fe2d4b16e695a680502701cc3cebd507
+    md5: 033174e861d633fdcd49a9dbf628256d
     upload_filename: T--BITSPilani-Goa_India--img--HP--Mandya.jpg
   assets/img/HP--Ohri.png:
     link_URL: https://2020.igem.org/wiki/images/a/ad/T--BITSPilani-Goa_India--img--HP--Ohri.png
@@ -1078,34 +1170,46 @@ html:
     md5: 31e857de9522be2aa79cee213a3a861b
   Description/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Description
-    md5: 9063265b5bf886d410a8b254228aa8dc
+    md5: a401be8886b566a2af8b56c06fd21d4d
   Design/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Design
-    md5: 3b391542a09e3bdfcd1a007612d1cdca
+    md5: c32dab540cddbb68e12d74d4f37fa8b7
   Education/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Education
-    md5: ba4ebe0951c3a0412c2b037df9007bb1
+    md5: 0dae59b13dd07a9f9252e3b22a1f539d
   Engineering/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Engineering
     md5: b71d4e3a2ecdcd84ebc8a6a478b676bb
   Entrepreneurship/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Entrepreneurship
-    md5: e15a2ac93835a83ee7a28b0f4972ff59
+    md5: 026332db16eedcaa58a027a46c037ffa
   Excellence/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Excellence
     md5: 4f5ef1f4288be7b077590c526ef55e45
   Experiments/Biosensor/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Biosensor
     md5: 3e9911b40e68ed134ec1a6be4f81a103
+  Experiments/Inoculant/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Inoculant
+    md5: e05f56c36012923808495589153aa135
   Experiments/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Kill_Switch
-    md5: f67306fc74eabad904de38a1cc3b2c07
+    md5: 2cd160b11c1b47c884089dae749a2088
+  Experiments/Other/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Other
+    md5: 6b769c6985bcde4b6ca98693eb01115e
+  Experiments/Protocols/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Protocols
+    md5: 4c6321c6440eced1a6f8ca98f50499a3
   Experiments/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments
-    md5: b1eea699bb137c990d71e5168497e26a
+    md5: b6f9882a8198d30944fdaefe32d7d9f0
+  Experiments/pFruB-Cra_System/index.html:
+    link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/pFruB-Cra_System
+    md5: 96a2c0b5718b7f1b2406bab8aaa3e666
   Human_Practices/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Human_Practices
-    md5: 9d99397c3ee62c79bd978af479a05865
+    md5: a1b8255ad5ea4607355e7a71eb0f7371
   Humans_of_iGEM/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Humans_of_iGEM
     md5: fa077f111bc10ce4e195e3328e4e9e63
@@ -1147,7 +1251,7 @@ html:
     md5: 7043c4147f71a82c7dfaf7406c36d7d5
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Notebook
-    md5: 64927712fade1117c4cdde5a1d692c26
+    md5: 690a521ff788782cfa70dbdfa2ec9451
   Parts/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Parts
     md5: 4fd96834a6d42eea335c8c41ec633756
@@ -1156,7 +1260,7 @@ html:
     md5: 9eb1c7e83f3a1aba041592e1ceb414c0
   Safety/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Safety
-    md5: 5574b82f0a2c3c944620482590b2951d
+    md5: 4371a70475edef66a7682d2b7e44bf67
   Sample/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Sample
     md5: 02ebd35f8344b5d0e0c671d6e9cebf7a
@@ -1168,7 +1272,7 @@ html:
     md5: 59bc6570f982f69cb8a9a20d286b6d2d
   index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India
-    md5: 7a42e79effc6e34100707a28b7891560
+    md5: 222080ef39621b002d61b0905ce895c4
 js:
   content.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/content-bundleJS?action=raw&ctype=text/javascript
