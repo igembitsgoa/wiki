@@ -21,16 +21,16 @@ block article
          - An atmospherically-regulated kill switch
          - A novel polymer inoculant
 
-        Each aspect of the project design has been explained in the proceeding sections.
+        Each aspect of the project design has been explained in the proceeding sections. Click [here](/Appendix#ANoteOnInvertases) to know more about the action of invertases. 
 
-        # Fructose-regulated Construct
+        # pFruB - Cra Construct
 
         The primary product of the action of the invertase enzyme is fructose and glucose. Hence the concentration of fructose inside the sugarcane stem is proportional to the activity of invertase 
         and consequently the amount of invertase present. We employed this dynamic concentration of fructose to modulate the expression of anti-invertase.
 
         We designed a genetic construct based on a biosensor created by Paris-Saclay ([BBa_K2448032](http://parts.igem.org/Part:BBa_K2448032)). A biosensor is a module that combines biological molecules as the recognition element with a physical transducer 
         or repressor and outputs quantitative data corresponding to the biomolecule’s concentration [Park, M et al., 2013](#citation1). Generally, these specific interactions between the ligand and the transducer are used to determine secretion 
-        or production rates in the form of an electrochemical and/or optical signal. In our case, we coupled the biosensor to the expression of anti-invertase.
+        or production rates in the form of an electrochemical and/or optical signals. In our case, we coupled the biosensor to the expression of anti-invertase.
 
         ## pFruB - Cra (FruR) Regulation
 
@@ -41,30 +41,32 @@ block article
         ## Mechanism
 
         The FruR expression is under an IPTG-induced pLac promoter [(BBa_K3156000)](http://parts.igem.org/Part:BBa_K3156000) which is induced before packaging the bacteria in our polymer inoculant. FruR is a transcription factor with an affinity for fructose-1-phosphate which 
-        is produced from the D-fructose formed after invertase action. The FruR gene [(BBa_K2448009)](http://parts.igem.org/Part:BBa_K2448009) encoding for the FruR protein prevents the transcription of the regulated promoters. pFruB [(BBa_K2448017)](http://parts.igem.org/Part:BBa_K2448017) is the promoter region following FruR and 
-        is repressed by the FruR transcription factor, in the absence of D-Fructose. This prevents any further transcription, and no anti-invertase protein is produced. If D-Fructose is present in the cell, 
-        the FruR transcription factor will bind preferentially to it and thus be inactivated. This means that the repression of the related promoter pFruB will be released, enabling the transcription of the 
-        anti-invertase protein which can then act on invertase and prevent the inversion of sucrose.
+        is produced from the D-fructose formed after invertase action. The FruR gene [(BBa_K2448009)](http://parts.igem.org/Part:BBa_K2448009) encoding for the FruR protein prevents the transcription of the pFruB-regulated promoters. pFruB [(BBa_K2448017)](http://parts.igem.org/Part:BBa_K2448017) is the promoter region following FruR and 
+        is repressed by the FruR transcription factor, in the absence of D-Fructose. This prevents any further transcription, and no anti-invertase protein is produced. 
 
     - var imgpath = "" + require("../assets/img/Design--Biosensor_NoFruc.gif")["default"]
     +image(1, imgpath, "The behaviour of the FruR-Cra construct in the absence of fructose", 80)
+
+    :markdown-it(html)
+        If D-Fructose is present in the cell, the FruR transcription factor will bind preferentially to it and thus be inactivated. This means that the repression of the related promoter pFruB will be released, enabling the transcription of the 
+        anti-invertase protein which can then act on invertase and prevent the inversion of sucrose.
 
     - var imgpath = "" + require("../assets/img/Design--Biosensor_WithFruc.gif")["default"]
     +image(2, imgpath, "The behaviour of the FruR-Cra construct in the presence of fructose", 80)
 
     :markdown-it(html)
-        # Kill Switch
+        # Atmosphere-Regulated Kill Switch
 
         Advances in synthetic biology raise increasingly essential questions about biocontamination and biological containment. It becomes imperative that genetically-engineered organisms are 
         not deleterious to the ecosystem and that scientists have adequate control over their production and multiplication. Certain safeguards are developed to ensure all possible safety — 
-        which are then introduced into the genetically modified organism — that compels the organism, in our case the bacteria, to rely on a “survival” factor to maintain viability in the 
+        which are then introduced into the genetically modified organism — that compels the organism to rely on a “survival” factor to maintain viability in the 
         population. Kill switches when introduced into the genetic material results in cellular death under certain conditions, such as the activation of a “trigger” caused by environmental 
-        changes. Thus helping us effectively control the proliferation of the genetically-engineered microorganism.
+        changes, thus helping us effectively control the proliferation of the genetically-engineered microorganism.
 
         We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the close proximity of the system with both agricultural environments 
         and human consumables, it is indispensable that our bacteria include a lethality mechanism. We propose to use a **modified type II ccdA-ccdB toxin-antitoxin system** as our kill switch that 
         is activated upon exposure to atmospheric concentrations of oxygen. A change in the oxygen concentration in the environment results in a sharp increase in the amount of the toxin protein being 
-        synthesised which disturbs the already established equilibrium between the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes.
+        synthesised which disturbs the already established equilibrium between the toxin and antitoxin concentrations, effectively killing the cell, and thus preventing any contamination by stray microbes.
 
         ## Type II Toxin-Antitoxin Systems
 
@@ -73,7 +75,7 @@ block article
         Most prokaryotic chromosomes contain a number of toxin-antitoxin modules that consist of a pair of genes that encode for two components: a stable toxin protein and its unstable, labile cognate 
         antitoxin. Toxins are always proteins, but the antitoxins can either be RNAs (in type I and III systems) or proteins (in type II systems) [Syed, M. & Lévesque, C., 2012](#citation4).
 
-        Type II toxin-antitoxin systems use a protein antitoxin to deactivate the toxin protein via protein-protein interaction. All type II antitoxins are dual-function, two-domain proteins that consist 
+        Type II toxin-antitoxin systems use a protein antitoxin to deactivate the toxin protein via protein-protein interactions. All type II antitoxins are dual-function, two-domain proteins that consist 
         of a protein-protein interaction domain and a DNA-binding domain. The antitoxin binds to the toxin and inhibits its activity, and the stable TA complex binds to the operator of the corresponding 
         <dfn>TAS~Toxin-Antitoxin System</dfn> operon via the DNA-binding domain of the antitoxin and represses its transcription [Makarova et al., 2009](#citation5) [Tam & Kline, 1989](#citation6).
 
@@ -82,7 +84,7 @@ block article
 
         ## ccdA-ccdB System
 
-        In the ccdA-ccdB system, the two genes are organised in an operon in which the antitoxin ccdA gene is upstream of the toxin ccdB gene. ccdA prevents ccdB toxicity by forming a tight ccdA-ccdB complex 
+        In the ccdA-ccdB system, the two genes are organised in an operon in which the antitoxin ccdA gene is loacted upstream of the toxin ccdB gene. ccdA prevents ccdB toxicity by forming a tight ccdA-ccdB complex 
         [Afif et al., 2001](#citation8). ccdB inhibits DNA replication by poisoning DNA gyrase; more specifically, ccdB prevents DNA gyrase from disentangling DNA from replication resulting in double-stranded breaks in 
         the DNA [Dao-Thi et al., 2005](#citation9). ccdA and ccdB are able to form complexes of various stoichiometries depending on their molar ratios.
 
@@ -91,12 +93,10 @@ block article
 
         ## FNR Promoter 
         
-        This part which we used is a standard FNR promoter. The promoter is used in _E. coli_ strains to induce protein expression in anaerobic environments. It is natively used to induce metabolic processes when 
+        This part we used is a standard FNR promoter. The promoter is used in _E. coli_ strains to induce protein expression in anaerobic environments. It is natively used to induce metabolic processes when 
         the _E. coli_ enter anaerobic environments. The part is often used to express any protein sequence placed behind it in such environmental conditions. On entering a hypoxic environment, the formation of 
         \\( [ 4Fe-4S]^{2+} \\) dimers is stimulated within the FNR-producing bacteria. These dimers are the transcription activators of the FNR promoter. They are able to bind to the promoter, thus allowing 
-        it to become active. Important to note is that the biobrick (number) is a tandem promoter meaning that two \\( [ 4Fe-4S]^{2+} \\) dimers are able to bind to the promoter. This tandem effect enhances 
-        the induction effect of the promoter, ultimately leading to a higher expression rate.
-        $$ $$
+        it to become active.
 
         As the environment inside sugarcane is hypoxic compared to the external atmosphere, we chose to place the ccdA antitoxin under the FNR promoter. 
         The mechanism of the kill switch has been explained in the next section.
@@ -107,23 +107,27 @@ block article
 
         ### Hypoxic Environment
 
+        The ccdB toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to prevalant hypoxic conditions inside the sugarcane [Bieleski, R. L., 1960](#citation10) conditions, the FNR promoter will be active and hence the ccdA antitoxin will also be produced 
+        in the cell. Since both ccdA and ccdB are present in the cell, they form a highly stable toxin-antitoxin complex. This way the bacteria is able to survive inside the sugarcane stem.
+
+        $$ $$
+
+
     - var imgpath = "" + require("../assets/img/Design--KS_NoOxy.png")["default"]
     +image(3, imgpath, "Kill switch construct in a hypoxic environment")
 
     :markdown-it(html)
 
-        The ccdB toxin is under a constitutive promoter which constantly expresses the toxin inside the cell. Due to prevalant hypoxic conditions inside the sugarcane [Bieleski, R. L., 1960](#citation10) conditions, the FNR promoter will be active and hence the ccdA antitoxin will also be produced 
-        in the cell. Since both ccdA and ccdB are present in the cell, they form a highly stable toxin-antitoxin complex. This way the bacteria is able to survive inside the sugarcane stem.
-
         ### Aerobic Environment
+
+        In this case, too, ccdB is expressed constitutively with the help of the T7 promoter; however, due to the presence of oxygen, the FNR promoter is switched off. This leads to an increase in the levels of ccdB in the cell which in 
+        turn leads to a complete halt in cell division and subsequently its death. This ensures that the bacteria will not be able to survive outside the sugarcane environment.
 
     - var imgpath = "" + require("../assets/img/Design--KS_Oxy.png")["default"]
     +image(4, imgpath, "Kill switch construct in an aerobic environment")
 
     :markdown-it(html)
 
-        In this case, too, ccdB is expressed constitutively with the help of the T7 promoter; however, due to the presence of oxygen, the FNR promoter is switched off. This leads to an increase in the levels of ccdB in the cell which in 
-        turn leads to a complete halt in cell division and death. This ensures that the bacteria will not be able to survive outside the sugarcane environment.
 
         # Polymer Inoculant
 
@@ -131,17 +135,8 @@ block article
         the innoculant’s toxicity, and ensured that it is close to that of water for efficient transport. This inoculant would be supplied to the farmer and can be used through an injector mechanism. In this manner the sugarcane’s inherent transport mechanism due to transpirational pull is leveraged 
         for the uniform distribution of the bacteria through the plant. 
 
-        To ensure large scale manufacturing of this inoculant we have constructed a process flow diagram to emulate an industrial setting. The assembly consist of a simple bioreactor, and a simple mixing tank  where we mix in our inoculant ingredients. The bioreactor will be designed to be anaerobic 
-        so as to consider the killswitch. Even during the mixing process care needs to be taken that minimum aeration takes place. Through mass balance calculations we were able to compute the concentration of bacterial cells needed in the inoculant to ensure effective inactivity of invertase. 
-
-
-
-
-
-
-
-
-
+       For the large scale manufacturing of this inoculant we have constructed a process flow diagram to emulate an industrial setting. The assembly consists of an anaerobic countinuous stirred tank bioreactor, a mixing tank, a cross-flow filter unit and a sterilization unit. Through diffusivity and 
+       mass-flux calculations we hope to able to compute the concentration of bacterial cells needed in the inoculant to ensure effective inactivity of invertase as a part of phase 2.
 
 
 

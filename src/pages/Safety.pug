@@ -13,37 +13,37 @@ block headVars
 block article
     :markdown-it(html)
 
-        The construction of a new biological system always poses the risk of working differently than expected and can pose safety risks; these risks are 
+        The construction of a new biological system always poses the risk of working differently than expected. These risks are 
         addressed under biosafety, which describes the containment, technologies, principles, and practices that are implemented to prevent unintentional exposure to pathogens and toxins or 
         their accidental release. For our project, biosafety was an iterative process at each stage. We consulted with our faculty members and industrial experts in order to conform to biosafety 
         regulations.
 
         # General Lab Safety
 
-        The lab that hosted us was the Vista lab of the Department of Biological Sciences of BITS, Pilani K. K. Birla Goa Campus. Our institute has an Institutional Biosafety Committee, which is formed 
-        and governed by the rules and regulations of Review Committee on Genetic Manipulation (RCGM) serviced by Department of Biotechnology, Ministry of Science and Technology, Government of India. 
+        The lab that hosted us was the Vista lab of the Department of Biological Sciences of BITS, Pilani K. K. Birla Goa Campus. Our institute has an Institutional Biosafety Committee (IBSC), which is formed 
+        and governed by the rules and regulations of Review Committee on Genetic Manipulation (RCGM) serviced by the Department of Biotechnology, Ministry of Science and Technology, Government of India. 
         Our PI is a part of the IBSC, and has gone over the proposal and run it by other IBSC members, all of whom have found the proposal to be within the rules. These experts are all trained in 
-        molecular biology and genetic engineering techniques, and have experience in more than a decade on biosafety procedures. They have overseen the procedures and methodology of the project 
-        and expressed no reservations. Moreover, there have been multiple training sessions for our team to make us well-versed about biosafety measures and precautions.
+        molecular biology and genetic engineering techniques, and have experience of more than a decade on biosafety procedures. They have overseen the procedures and methodology of the project 
+        and have expressed no reservations. Moreover, there have been training sessions for our team to make us well-versed in biosafety measures and precautions.
 
         # Project Safety
 
-       In our safety assessment session with our ambassador Varsha Jaisimha, no specific safety hazard was pinpointed for our project. During our initial meetings, we were extremely careful not to 
-       involve organisms and metabolites that would either be harmful for the environment or human consumption. We are using _E. coli_ DH5α  as our chassis which is both safe and easy to handle.
+       In our safety assessment session with our ambassador Varsha Jaisimha, no specific safety hazard was pinpointed in our project. During our initial meetings, we were extremely careful not to 
+       involve organisms and metabolites that would either be harmful for the environment or to humans. We are using _E. coli_ DH5α  as our chassis which is both safe and easy to handle.
 
         To ensure a maximum level of safety, we have designed a three-tier failsafe mechanism for our project.
 
-        ## Level 1: Kill Switch
+        ## Level 1: Atmosphere-Regulated Kill Switch
 
-        We intend to introduce our strain of bacteria into the sugarcane matrix to synthesise anti-invertase. Considering the close proximity of the system with both agricultural environments and human consumables, 
-        it is indispensable that our bacteria include a lethality mechanism. We propose to use a modified type II ccdA-ccdB toxin-antitoxin. ccdB poisons DNA gyrase to inhibit replication, while ccdA acts as the 
-        labile antitoxin. A change in the oxygen concentration in the environment results in a sharp increase in the amount of the toxin protein being synthesised which disturbs the already established equilibrium 
+        Given the close proximity of the system with both agricultural environments and human consumables, 
+        it is indispensable that our bacteria include a lethality mechanism. We propose to use a modified type II ccdA-ccdB toxin-antitoxin module. ccdB poisons DNA gyrase to inhibit replication, while ccdA acts as the 
+        labile antitoxin. An exposure of the bacteria to atmospheric levels of oxygen results in a sharp increase in the amount of the toxin protein being synthesised which disturbs the already established equilibrium 
         between the toxin and antitoxin, effectively killing the cell, and thus preventing any contamination by stray microbes. You can find more about our kill switch [here](/Design#KillSwitch).
         
         This mechanism works exceptionally well in Enterobacteriaceae and does not affect mammalian cells making it a good choice for our application. 
 
 
-        ## Level 2: Auxotropic Regulation
+        ## Level 2: Auxotrophic Regulation
 
         Pioneering biocontainment systems used metabolic auxotrophy in which target cells could only grow in the presence of an exogenously supplied metabolite. We intend to leverage this mechanism for biocontainment of 
         our chassis inside the sugarcane system. There are several amino acids that have been detected in sugarcane including, pipecolic acid and hydroxypipecolic acid. Increasing the supply of nitrogen increases markedly 

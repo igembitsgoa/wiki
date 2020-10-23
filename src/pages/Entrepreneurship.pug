@@ -2,7 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Entrepreneurship"
-    - var requireMathJax = true
+    - var requireMathJax = false
     //- You can just write the filename here and it will be resolved to 'require'.
     //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
     - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
@@ -20,7 +20,7 @@ block article
         # Project Scope - Worldwide
 
         To assess the scope of our solution across the world, we carried out some research into various aspects of the sugar industry in several countries around the world. 
-        We found that almost every major producer of sugarcane suffers from the probelm of post-harvest losses, and there are a host of problems that our solution addresses, 
+        We found that almost every major producer of sugarcane suffers from the problem of post-harvest losses, and there are a host of problems that our solution addresses, 
         all which are all described below.
 
         There is minimal similarity across countries because of differences in industry structure and operation. The harvesting practices and consequently the transportation of 
@@ -48,7 +48,7 @@ block article
 
         ## South Africa
         
-        The South African Sugar Association (SASA) states that the South African sugar industry, is worth over R14 billion and provides more than 85, 000 direct and 350,000 indirect jobs. 
+        The South African Sugar Association (SASA) states that the South African sugar industry, is worth over R14 billion and provides more than 85,000 direct and 350,000 indirect jobs. 
         [SouthAfrica.co.sa, n.d.](#citation1).
 
         The sugar industry in South Africa suffers from harvesting delays and cane deterioration due to weather conditions, among several other causes. Delays of three to four days, and sometimes 
@@ -120,13 +120,11 @@ block article
         These are the components that go into our polymer inoculant. We found their composition through an optimisation process. More information about the optimisation model can be found [here](/Model/Inoculant). 
         The costs of each component were sourced from manufacturers’ websites.
 
-        **Assumption:** We have assumed that despite bulk ordering, we would be sold the product at the retail price with no discounts. This was intentional so that the extra costs would 
+        **Assumption:** We have assumed that despite bulk ordering, the raw materials would be sold to us at the retail price with no discounts. This was intentional so that the extra costs would 
         offset the delivery and handling charges which could be set to zero.
 
         The following cost analysis has been made with respect to the state of Maharashtra which is the second-largest producer of cane in India. We have looked at four scenarios: a best case, a moderate case, a worst case scenario, and 
         a worst viable case scenario. 
-        $$
-        $$
 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
         | Description    |   Costs/Quantity   |
