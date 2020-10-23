@@ -4,6 +4,18 @@
   body.theme-#{$category} {
     $color: nth($content-accents, $id);
 
+    .sidebar {
+      #contents,
+      #months {
+        li a {
+          &:before,
+          &:after {
+            background-color: $color;
+          }
+        }
+      }
+    }
+
     .content {
       blockquote {
         border-left: 8px solid $color;
@@ -171,4 +183,8 @@ body.dark {
       }
     }
   }
+}
+
+body.theme-green {
+  
 }

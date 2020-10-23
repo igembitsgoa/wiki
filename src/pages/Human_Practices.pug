@@ -58,7 +58,10 @@ block article
         We learnt from a case study of Mandya farmers that in some cane-growing areas there were a variety of problems that lead to farmers not getting paid by the mills. The farmer had to travel all the way to Tamil Nadu to sell the sugarcane thereby exacerbating 
         the problem of sucrose losses on the way to the mill.
 
-        > Farm picture
+    - var imgpath = "" + require("../assets/img/HP--Mandya.jpg")["default"]
+    +image(3, imgpath, "A Sugarcane farm in Mandya", 40)
+
+    :markdown-it(html)
 
         The farmer from Gulbarga has a fifteen-acre farm. On this specific farm it has been difficult to cultivate sugarcane due to lack of steady water and power supply. The farmer has been trying to construct 200 feet borewells to mitigate his probelm, but with no luck. 
         Labour is expensive, and the farm is plowed manually by bullock. We also encountered this issue in Maharashtra where labour is rather expensive for harvesting activities. The farms on the other side of the Bhima river, however, grow sugarcane extensively since irrigation 
@@ -80,12 +83,10 @@ block article
 
         As a follow up to our global scope study, we put up a few messages on the iGEM Slack workspace asking for information with sugarcane in different countries. André Hermann, a member of the iGEM Policy Committee, graciously volunteered. 
 
-        > Andre picture
-
         We had a brief interaction with him about the nature of the industry in Brazil. He told us about the features of Brazilian sugar industry that make it very different from Indian scenario. 
 
     - var imgpath = "" + require("../assets/img/HP--BrazilMap.png")["default"]
-    +image(3, imgpath, "Sugarcane production in Brazil (2016)")
+    +image(4, imgpath, "Sugarcane production in Brazil (2016)")
 
     :markdown-it(html)
 
@@ -139,20 +140,13 @@ block article
         
         Our proposed implementation can be found on our [implementation](/Implementation) page. We also drew a preliminary process flow diagram with the help of Dr. Rangarajan. This helped us to gain a better estimation of the equipment costs as well as helped us determine the economic viability of our project (which you can check out on our [entrepreneurship](/Entrepreneurship) page).
 
-    .row
-        .col-md-6
-            - var imgpath = "" + require("../assets/img/HP--Bejoy.jpg")["default"]
-            +image(4, imgpath, "Dr. Bejoy K Thomas, IISER Pune", 70)
-        .col-md-6
-            - var imgpath = "" + require("../assets/img/HP--Rohan.jpeg")["default"]
-            +image(5, imgpath, "Rohan Ranganath, BITS Pilani Goa graduate", 60)
+    - var imgpath = "" + require("../assets/img/HP--Rohan.jpeg")["default"]
+    +image(5, imgpath, "Rohan Ranganath, BITS Pilani Goa graduate", 30)
 
     :markdown-it(html)
 
         With a rough model of the process and equipment in our mind, we wanted to know about any other design considerations we would have to account for. To this effect we got in touch with Mr. Ashish Dagade, who has extensive experience in the biochemical industry. He told us about the need to concentrate our bacterial bioreactor output, because of which we made changes to our process 
         flow diagram. He also helped us with costing and calculating the basis for production for our plant. This was instrumental in calculating costs for our economic viability model.
-
-        > Ashish picture
 
         # Economic Viability Analysis
 

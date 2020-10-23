@@ -1,0 +1,62 @@
+extends ../templates/contents.pug
+
+block headVars
+  - var title = "Acknowledgements"
+  - var requireMathjax = false
+  - var backgroundImage = "" + require("../assets/img/Sample--haifsa-rafique.jpg")["default"]
+  - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+  - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
+  - var theme = "journal"
+  - var fullWidth = true
+
+block article
+
+  p We would like to thank our sponsors for giving us this opportunity to participate in iGEM 2020.
+  
+  .row
+    .col-md-6.col-lg-4
+      :markdown-it
+        * VG Rajagopalan
+        * Sugavanam Rajaram
+        * Suraj Gopal
+        * Mohan Borkar
+        * Sandhya Srikanth
+        * Srivatsan K
+        * Ravishankar
+        * Parth Patel
+        * SAI PRIYAA N P (N Pattabhiraman) 
+        * Itihaas
+    .col-md-6.col-lg-4
+      :markdown-it
+        * Bikram Gupta Sarma
+        * Rajat Gupta
+        * Lucky Kaul
+        * Mukul Khare
+        * V Priyamvadan
+        * Deepak Gupta
+        * Narendra Singh Rawat
+        * Arun Birla
+        * Rajiv Ranka
+        * Avinash Kamani
+    .col-md-6.col-lg-4
+      :markdown-it
+        * Nalin Kaul
+        * Subhash Chugh
+        * Ashok Chandak
+        * Sashichandra Desai
+        * Veenu Jain
+        * Dr Sundar
+        * Devendra Jain 
+        * Rita Pad Printing Systems Ltd.
+
+
+
+
+
+
+
+append buttons
+  //- mind the quotes and the plus sign
+  +buttonLeft("Home")
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
