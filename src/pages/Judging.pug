@@ -3,7 +3,164 @@ extends ../templates/contents.pug
 block headVars
     - var title = "Judging"
     - var requireMathJax = false
+    - var theme = "other-areas"
+    - var backgroundImage = "" + require("../assets/img/Sample--haifsa-rafique.jpg")["default"]
+    - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
+    - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
 
 block article
+    
     :markdown-it(html)
-        Just an example on how to create nested pages
+
+        # Medal Criteria
+
+    - var imgpath = "" + require("../assets/img/Judging--bronze.svg")["default"]
+    +ximage(imgpath, "", 35)
+
+    :markdown-it(html)
+        ### Competition Deliverables
+
+        We have completed the competition deliverables including the wiki, poster, presentation video, judging form, and the promotional video.
+
+        ### Attributions
+        We have created an [attributions page](/Attributions) including all the people who have helped and supported us throughout the competition season.
+
+        ### Project Description
+        We have created a project [description page](/Description) that describes our motivations and goals towards SugarGain.
+
+        ### Contribution
+        We have created [contributions](/Contribution) explaining in detail our Wiki Starter, WikiSync Python package and GitHub action, along with 
+        literature added to existing part [BBa_K2448032](http://parts.igem.org/Part:BBa_K2448032)
+    
+    - var imgpath = "" + require("../assets/img/Judging--silver.svg")["default"]
+    +ximage(imgpath, "", 35)
+
+    :markdown-it(html)
+
+        ### Engineering Success
+        SugarGain has three thoughtfully designed sections, namely the pFruB-Cra system, the kill switch and our delivery mechanism. Our [engineering success](/Engineering) page 
+        outlines the interconnection between these modules and our mathematical models while providing insight into our design iterations.
+
+        ### Collaborations
+
+        We have collaborated with a number of teams from all over the world! Our [collaborations page](/Collaborations) lists these interactions in detail.
+
+        ### Human Practices
+
+        We have tried our best to include and cover all stakeholders throughout our project. Check out our [Human Practices](/Human_Practices) page to know more!
+
+        ### Proposed Implementation
+
+        We have detailed our plans on implementing SugarGain along with our commercialization and scaling up process. You can find these on our [implementation](/Implementation) page.
+
+    - var imgpath = "" + require("../assets/img/Judging--gold.svg")["default"]
+    +ximage(imgpath, "", 35)
+
+    :markdown-it(html)
+        ### Integrated Human Practices
+
+        We have taken utmost care in having a human-centred design for SugarGain. Check out our Human Practices page to know more!
+
+        ### Project Modelling
+
+        Mathematical models are the cornerstone of our project. We have designed six [models](/Model) that cover various aspects of SugarGain.
+
+        ### Science Communication
+
+        Our initiatives for synthetic biology education have been extensively covered on our [education](/Education) page.
+
+        # Other Awards
+
+    h3 Best Education & Public Engagement 
+
+    .row
+        .col-md-8
+            p.
+                As a team we have tried our best to reach out as wide a demographic as possible and address pertinent questions in synthetic biology. 
+                Our various initiatives included : three webinars for over 600 students in the 11th and 12th grades belonging to STEM backgrounds in 
+                synthetic biology. A collaboration with Abhigyaan — a student-run NGO at BITS Pilani K.K Birla Goa campus which aims at providing 
+                quality education to the underprivileged. In collaboration with The Dais India, EMERGE, BITSMUN Goa, and iGEM Manipal Biomachines, 
+                we organized the first-ever national-level iGEM India BioSummit 2020 on 25th July 2020. Along with the Centre for Technical Education 
+                of our university, we were able to start an exclusive course on synthetic biology for the undergraduate students. We also collaborated 
+                with the Inner Wheel Foundation Lucknow along with the iGEM Rochester to circulate STEM content for Endometriosis Awareness.
+
+        .col-md-4.mt-5
+            - var imgpath = "" + require("../assets/img/Judging--bestEdu.svg")["default"]
+            +ximage(imgpath, "", 60)
+
+    h3 Best Integrated Human Practices
+
+    .row
+        .col-md-4.mt-5
+            - var imgpath = "" + require("../assets/img/Judging--bestIHP.svg")["default"]
+            +ximage(imgpath, "", 60)
+
+        .col-md-8
+            p.
+                Our approach to human practices consisted of multiple iterations which allowed us to effectively interview industry experts, researchers and users. 
+                Throughout our project, we identified and spoke to various diverse stakeholders relevant to our project. We met farmers from all major sugarcane producing 
+                belts in India that helped us design a viable delivery mechanism. Our meetings with contacts from various parts of the world such as Brazil, Mauritius and 
+                Mexico, helped us identify unique problems in each place that helped us come up with a comprehensive solution. Industry experts, including the chief chemist 
+                of a leading sugar company, provided us with valuable real time data and insights that structured our implementation design. Our meetings with SDG economist 
+                Dr Bejoy, helped us formulate our economic viability model. Dr Vivek and Rohan, chemical engineering researchers, advised us on how to design our process flow 
+                for commercialisation of our product.
+
+    h3 Best Model 
+
+    .row
+        .col-md-8
+            p.
+                Mathematical models are an integral part of our project. They allow us to gain an insight into the functioning of the constructs we designed as well as enable us to predict and verify its behaviour. As we couldn't experimentally verify our claims due the COVID-19 imposed lockdown, these models form the cornerstone of our project.
+                We have designed six models that cover various aspects of SugarGain, they are: 
+                a) A model to describe our pFruB-Cra construct regulatory system, along with molecular modelling and docking studies;
+                b) An in silico simulation of the kill switch and an auxotrophy model as part of our three tier biosafety mechanism;
+                c) A model to determine the composition and optimum viscosity of our novel polymer inoculant with biosafety considerations;
+                d) A model to predict the growth of bacteria in the sugarcane matrix; and
+                e) An in silico virtual screening to study the interactions between invertase and various inhibitors.
+
+
+        .col-md-4.mt-5
+            - var imgpath = "" + require("../assets/img/Judging--bestModel.svg")["default"]
+            +ximage(imgpath, "", 60)
+
+
+    h3 Best Software
+
+    .row
+        .col-md-4.mt-5
+            - var imgpath = "" + require("../assets/img/Judging--bestSoftware.svg")["default"]
+            +ximage(imgpath, "", 60)
+
+        .col-md-8
+            p.
+                With the Jamboree being held online this year, iGEM wikis have never been more important. To make it easier for iGEM teams to build their wikis, we created software to cover all its aspects - from content and design to deployment. Our contributions include 
+                (a) iGEM WikiSync is a Python package that allows teams to automatically upload their wiki to iGEM servers. It also integrates with continuous deployment services like Travis; 
+                (b) A iGEM WikiSync Github Action, a Github Actions plugin that allows teams to directly deploy their wiki to iGEM servers from their Github repository; and
+                (c) The iGEM Wiki Starter Package is a template that contains everything needed to build an iGEM wiki. It comes with all commonly used libraries and fully supports Markdown syntax. It includes several utilities that make development easier, like adding citations automatically from DOI. 
+                It also includes WikiSync for continuous deployment.
+
+    h3 Best Supporting Entrepreneurship
+
+    .row
+        .col-md-8
+            p.
+               We always believed that for any project design it is crucial to also examine how viable it would be in the market. We conducted a detailed global survey on how sugarcane is grown in a variety of countries; how pressing the issue of post-harvest loss is; and finally, what variations in our delivery 
+               mechanism were necessary to make sure they are applicable in all places, followed by an economic viability model of our product. We have also consulted with industry professionals in helping us design our proposed plant design that would help in the commercialization of our product. All along the 
+               project, we had the opportunity to pitch our idea to several distinguished alumni of our institute and have implemented their feedback in the design of our complete implementation strategy. 
+
+        .col-md-4.mt-5
+            - var imgpath = "" + require("../assets/img/Judging--bestEntrepreneurship.svg")["default"]
+            +ximage(imgpath, "", 60)
+
+
+
+
+
+
+
+
+
+
+
+        
+        
