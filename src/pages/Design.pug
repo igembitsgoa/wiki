@@ -44,6 +44,7 @@ block article
         is produced from the D-fructose formed after invertase action. The FruR gene [(BBa_K2448009)](http://parts.igem.org/Part:BBa_K2448009) encoding for the FruR protein prevents the transcription of the pFruB-regulated promoters. pFruB [(BBa_K2448017)](http://parts.igem.org/Part:BBa_K2448017) is the promoter region following FruR and 
         is repressed by the FruR transcription factor, in the absence of D-Fructose. This prevents any further transcription, and no anti-invertase protein is produced. 
 
+
     - var imgpath = "" + require("../assets/img/Design--Biosensor_NoFruc.gif")["default"]
     +image(1, imgpath, "The behaviour of the FruR-Cra construct in the absence of fructose", 80)
 
@@ -55,6 +56,17 @@ block article
     +image(2, imgpath, "The behaviour of the FruR-Cra construct in the presence of fructose", 80)
 
     :markdown-it(html)
+
+        ## His Tag
+
+        The His tag is by far the most popular affinity tag for purification of recombinant proteins. Typically, the tag is composed of 6–10 consecutive histidines at either terminus of the protein of interest. These tags can be used for protein purification with the help of Nickel or Cobalt (adjacent period 4 transition metals) in sepharose/agarose 
+        based resin columns [Burgess, R. R. & Deutscher, M. P., 2009](#citation11). We use a His tag ([BBa_K1223006](http://parts.igem.org/Part:BBa_K1223006)) in our construct to be able to extract anti-invertase and observe its properties as well as use the protein in different planned experiments.  
+        
+        -----
+
+        For the phase-2 of the project, we would like to be able to extract the protein in the lab. The invertase protein sequence we procured had an existing signalling peptide sequence to allow the bacterial chassis secrete the protein in the extracellular matrix. We propose characterisation of this protein and if inadequate, include another strong 
+        signalling peptide in the final construct.
+        
         # Atmosphere-Regulated Kill Switch
 
         Advances in synthetic biology raise increasingly essential questions about biocontamination and biological containment. It becomes imperative that genetically-engineered organisms are 
@@ -128,6 +140,20 @@ block article
 
     :markdown-it(html)
 
+        # Plasmid Design
+
+        We plan to use the pET28a(+) plasmid for our application. 
+
+    .row
+        .col.md-6
+            - var imgpath = "" + require("../assets/img/Design--BiosensorPlasmid.png")["default"]
+            +image(5, imgpath, "Plasmid for the pFruB-Cra Module")
+
+        .col.md-6
+            - var imgpath = "" + require("../assets/img/Design--KSPlasmid.png")["default"]
+            +image(6, imgpath, "Plasmid for the Atomsphere-regulated Kill Switch", 90)
+
+    :markdown-it(html)
 
         # Polymer Inoculant
 

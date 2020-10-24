@@ -50,9 +50,17 @@ block article
         
         # iGEM WikiSync
         
-        Our Python package, iGEM WikiSync allows iGEM teams to set up continuous deployment for their wikis. It lets teams 
-        work on their wiki locally, using whichever web development framework they're familiar with. It then uploads the 
-        code to iGEM servers. 
+    .row
+        .col-md-8 
+            p.
+                Our Python package, iGEM WikiSync allows iGEM teams to set up continuous deployment for their wikis. It lets teams 
+                work on their wiki locally, using whichever web development framework they're familiar with. It then uploads the 
+                code to iGEM servers.  
+        .col-md-4
+            - var imgpath = "" + require("../assets/img/Home--WikiSync.svg")["default"]
+            +ximage(imgpath, "")
+
+    :markdown-it(html)
 
         It does this in the following way: 
         

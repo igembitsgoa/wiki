@@ -310,3 +310,11 @@ https://dx.doi.org/10.1093/nar/gkw1132:
   numbers: '45(D1), D313-D319. '
   title: The SWISS-MODEL Repository new features and functionality.
   type: article
+https://dx.doi.org/10.1093/nar/gkw454:
+  authors: 'Paz, I., Kligun, E., Bengad, B., & Mandel-Gutfreund, Y. (2016). '
+  doi: https://dx.doi.org/10.1093/nar/gkw454
+  journal: Nucleic Acids Research
+  numbers: '44(W1), W568-W574. '
+  title: 'BindUP: a web server for non-homology-based prediction of DNA and RNA binding
+    proteins.'
+  type: article

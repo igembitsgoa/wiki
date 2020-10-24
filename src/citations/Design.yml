@@ -28,4 +28,11 @@
     title: "The physiology of sugar-cane. II."
     journal: "Australian Journal of Biological Science"
     numbers: "13, 203-220."
+#11
+- book:
+    authors: "Burgess, R. R. & Deutscher, M. P."
+    year_published: 2009
+    title: "Guide to Protein Purification."
+    publisher: "Elsevier"
+    Google_Books_URL: "https://books.google.co.in/books?id=f6Lp4yna4hoC"
 

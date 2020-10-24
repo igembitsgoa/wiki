@@ -31,14 +31,20 @@ block article
         4. Potato inhibitor
 
         ClusPro performs three computational steps: first it performs a rigid body docking; next it performs a RMSD based clustering of the 1000 lowest energy structures; and lastly it performs a removal of steric clashes 
-        by energy minimization. 
+        by energy minimization. ClusPro [2](#citation2) [3](#citation3) [4](#citation4). The [ClusPro](https://cluspro.org) server is a widely used tool for protein–protein docking. Docking with each energy parameter set results 
+        in ten models defined by centers of highly populated clusters of low-energy docked structures. 
+
+    - var imgpath = "../" + require("../../assets/img/Biosensor--ClusProAlg.png")["default"]
+    +image(1, imgpath, "The ClusPro algorithm", 50)
+
+    :markdown-it(html)
         
         Docking methods can be classified as direct or template-based. Based on thermodynamics, direct methods attempt to find the structure of the target complex located at the minimum of Gibbs free 
         energy in the conformational space. Template-based docking, on the other hand, is based on the observation that interacting pairs sharing above 30% sequence identity often interact in the same way, 
         and hence the structure of the target complex can be obtained by homology modeling tools if an appropriate template complex of a known structure is available. 
 
         Although the applicability of template-based docking has been extended based on the observation that partial structures representing the interface region are capable of providing templates, the coverage of the template 
-        space at present is still limited and hence direct methods are generally more useful in many applications (ClusPro) [2](#citation2) [3](#citation3) [4](#citation4).
+        space at present is still limited and hence direct methods are generally more useful in many applications.
 
         The interaction energy between the two proteins is given by the expression of the form
         $$
@@ -54,14 +60,14 @@ block article
         # Structure of Sugarcane Invertase
 
     - var imgpath = "../" + require("../../assets/img/VS--SugarcaneInvertase.png")["default"]
-    +image(1, imgpath, "Structure of Sugarcane invertase using homology modelling", 30)
+    +image(2, imgpath, "Structure of Sugarcane invertase using homology modelling", 30)
 
     :markdown-it(html)
         A Ramachandran plot is a way to visualize energetically favoured regions for backbone dihedral angles against amino acid residues in protein structures. Histograms with a binning of 4 degrees are used to count Φ (Phi; C-N-CA-C) / Ψ (Psi; N-CA-C-N) 
         occurrences for all displayed categories. The number of observed Φ / Ψ pairs determines the contour lines (SWISS-MODEL) [5](#citation5) [6](#citation6) [7](#citation7) [8](#citation8) [9](#citation9) [10](#citation10).
     
     - var imgpath = "../" + require("../../assets/img/VS--Ramachandran Plot.png")["default"]
-    +image(2, imgpath, "Ramachandran Plot for the modelled sugarcane invertase", 50)
+    +image(3, imgpath, "Ramachandran Plot for the modelled sugarcane invertase", 50)
 
     :markdown-it(html)
         From the above Ramachandran plot, it was observed that the Ramachandran outliers include SER169, PRO166, ASP239, SER459 and ARG387.
@@ -69,7 +75,7 @@ block article
         Next, we performed a comparision of the structure with a non-redundant set of PDB structures.  The comparison with Non-Redundant Set of PDB Structures helps us derive a quality estimate for our model via QMEAN4.
 
     - var imgpath = "../" + require("../../assets/img/VS--QualityComparison.png")["default"]
-    +image(3, imgpath, "Quality comparision of the modelled sugarcane invertase", 50)
+    +image(4, imgpath, "Quality comparision of the modelled sugarcane invertase", 50)
 
     :markdown-it(html)
         Our model obtained a GMQE of 0.83. GMQE is a quality estimation score which combines properties from the target–template alignment and the template structure using a multi-layer perceptron (SWISS-MODEL) [5](#citation5) [6](#citation6) [7](#citation7) [8](#citation8) [9](#citation9) [10](#citation10).
@@ -79,16 +85,16 @@ block article
         The following images illustrate the docking of sugarcane invertase with various anti-invertases. The final energy of binding is also expressed.
 
     - var imgpath = "../" + require("../../assets/img/VS--Sugarcane inhibitor.png")["default"]
-    +image(4, imgpath, "Sugarcane invertase and sugarcane inhibitor. E = -677.5 J", 40)
+    +image(5, imgpath, "Sugarcane invertase and sugarcane inhibitor. E = -677.5 J", 40)
 
     - var imgpath = "../" + require("../../assets/img/VS--Arabidopsis inhibitor.png")["default"]
-    +image(5, imgpath, "Sugarcane invertase and Arabidopsis inhibitor. E = -1058.1 J", 50)
+    +image(6, imgpath, "Sugarcane invertase and Arabidopsis inhibitor. E = -1058.1 J", 50)
 
     - var imgpath = "../" + require("../../assets/img/VS--Tobacco inhibitor.png")["default"]
-    +image(6, imgpath, "Sugarcane invertase and Tobacco inhibitor. E = -1058 J", 50)
+    +image(7, imgpath, "Sugarcane invertase and Tobacco inhibitor. E = -1058 J", 50)
 
     - var imgpath = "../" + require("../../assets/img/VS--Potato inhibitor.png")["default"]
-    +image(7, imgpath, "Sugarcane invertase and Potato inhibitor E = -767.9 J", 50)
+    +image(8, imgpath, "Sugarcane invertase and Potato inhibitor E = -767.9 J", 50)
 
     :markdown-it(html)
         # Interpretation of the results

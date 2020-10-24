@@ -9,6 +9,7 @@ block headVars
   - var backgroundAttribution = "Photo from Freepik"
   - var backgroundAttributionLink = "https://www.freepik.com/free-vector/public-contribution-concept_2448540.htm"
   - var theme = "parts"
+  - var fullWidth = true
 
 block article
 
@@ -26,6 +27,23 @@ block article
     | [BBa_K3512002](http://parts.igem.org/wiki/index.php?title=Part:BBa_K3512002) | Coding | ccdA Toxin | Gourav Saha, Naman Chaudhary, Suhas Badadal	 | 221 |
     | [BBa_K3512012](http://parts.igem.org/wiki/index.php?title=Part:BBa_K3512012) | Device | pFruB-Cra System | Gourav Saha	 | 3104 |
     | [BBa_K3512042](http://parts.igem.org/wiki/index.php?title=Part:BBa_K3512042) | Device | Atmosphere Regulated Killswitch	 | Gourav Saha | 958 |
+
+  :markdown-it(html)
+
+    <br>
+    <br>
+
+    # Plasmid Design
+
+  .row
+      .col.md-6
+          - var imgpath = "" + require("../assets/img/Design--BiosensorPlasmid.png")["default"]
+          +image(1, imgpath, "Plasmid for the pFruB-Cra Module")
+
+      .col.md-6
+          - var imgpath = "" + require("../assets/img/Design--KSPlasmid.png")["default"]
+          +image(2, imgpath, "Plasmid for the Atomsphere-regulated Kill Switch", 90)
+
 
 
 append buttons

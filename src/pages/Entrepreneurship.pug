@@ -2,7 +2,7 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Entrepreneurship"
-    - var requireMathJax = false
+    - var requireMathJax = true
     //- You can just write the filename here and it will be resolved to 'require'.
     //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
     - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
@@ -123,9 +123,7 @@ block article
         **Assumption:** We have assumed that despite bulk ordering, the raw materials would be sold to us at the retail price with no discounts. This was intentional so that the extra costs would 
         offset the delivery and handling charges which could be set to zero.
 
-        The following cost analysis has been made with respect to the state of Maharashtra which is the second-largest producer of cane in India. We have looked at four scenarios: a best case, a moderate case, a worst case scenario, and 
-        a worst viable case scenario. 
-
+        The following cost analysis has been made with respect to the state of Maharashtra which is the second-largest producer of cane in India.
     :markdown-it(html plugins=['markdown-it-multimd-table'])
         | Description    |   Costs/Quantity   |
         | --------  | --------- |
@@ -231,6 +229,8 @@ block article
 
         This is a phenomenon called economies of scale, where costs reduce as production increases because fixed costs don’t change as fast as revenues do even 
         after scaling up. This leads to growing room for profit margin as the area of application increases _even for the same increase in recovery rate (40%)!_
+
+        $$ $$
 
         # Conclusion
 
