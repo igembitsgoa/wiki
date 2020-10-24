@@ -16,5 +16,14 @@ contents = contents.replace('//assets/video/Accessibility--ASL.mp4', '../assets/
 with open("dist/Education/index.html", 'w') as file:
     file.write(contents)
 
+# HP video
+with open("dist/Human_Practices/index.html", 'r') as file:
+    contents = file.read()
+
+contents = contents.replace('//assets/video/HP--Swaminathan.mp4', '../assets/video/HP--Swaminathan.mp4')
+
+with open("dist/Human_Practices/index.html", 'w') as file:
+    file.write(contents)
+
 
     
