@@ -81,21 +81,3 @@ footer {
     }
   }
 }
-
-body.theme-green {
-  #footerNav {
-    background-color: lighten($green, 5%);
-  }
-}
-
-body.theme-yellow {
-  #footerNav {
-    background-color: lighten($yellow, 5%);
-  }
-}
-
-body.theme-blue {
-  #footerNav {
-    background-color: lighten($blue, 15%);
-  }
-}

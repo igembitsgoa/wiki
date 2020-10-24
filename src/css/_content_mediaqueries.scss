@@ -163,10 +163,6 @@
       font-size: 4rem;
     }
   }
-
-  embed {
-    height: 610px;
-  }
 }
 
 @include respond-below(xxs) {
