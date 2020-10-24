@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 424.98001 268"
+   viewBox="0 0 428.98001 288"
    version="1.1"
    id="svg173"
    sodipodi:docname="Home--Description.svg"
-   width="424.98001"
-   height="268"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+   width="428.98001"
+   height="288"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)">
   <metadata
      id="metadata177">
     <rdf:RDF>
@@ -39,32 +39,50 @@
      inkscape:window-height="1016"
      id="namedview175"
      showgrid="false"
-     inkscape:zoom="1.654"
-     inkscape:cx="215"
-     inkscape:cy="102"
+     inkscape:zoom="2.3391092"
+     inkscape:cx="161.51411"
+     inkscape:cy="284.18943"
      inkscape:window-x="62"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg173"
+     inkscape:current-layer="layer5"
      inkscape:document-rotation="0"
-     lock-margins="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     lock-margins="true"
+     fit-margin-top="10"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="10"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-others="true"
+     inkscape:snap-object-midpoints="true">
+    <sodipodi:guide
+       position="61.418187,-38.444218"
+       orientation="0,-1"
+       id="guide54763" />
+  </sodipodi:namedview>
   <defs
      id="defs122">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 144 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="428.98001 : 144 : 1"
+       inkscape:persp3d-origin="214.49 : 96 : 1"
+       id="perspective54774" />
     <style
        id="style120">.cls-1,.cls-4{fill:none;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#000;stroke-miterlimit:10;}.cls-2,.cls-5{fill:#fff;}.cls-3{fill:#25ced1;}.cls-4,.cls-5{stroke-linecap:round;stroke-width:0.5px;}</style>
   </defs>
   <g
-     id="_2.1"
-     data-name="2.1"
-     transform="translate(-35,-148)">
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Truck"
+     style="display:inline"
+     transform="translate(0,8)">
     <rect
        class="cls-1"
-       x="35.5"
-       y="245.5"
+       x="2.5"
+       y="99.5"
        width="275"
        height="126"
        rx="6.0100002"
@@ -72,12 +90,12 @@
        ry="6.0100002" />
     <path
        class="cls-1"
-       d="M 451.56,371.5 H 318.44 a 8,8 0 0 1 -7.94,-7.94 v -173.2 a 7.94,7.94 0 0 1 7.86,-7.94 l 81.21,-0.84 a 7.94,7.94 0 0 1 8,7.85 l 0.82,71.37 a 7.94,7.94 0 0 0 7.79,7.85 l 35.51,0.7 a 7.94,7.94 0 0 1 7.79,7.94 v 86.27 a 8,8 0 0 1 -7.92,7.94 z"
+       d="M 418.56,225.5 H 285.44 a 8,8 0 0 1 -7.94,-7.94 V 44.36 a 7.94,7.94 0 0 1 7.86,-7.94 l 81.21,-0.84 a 7.94,7.94 0 0 1 8,7.85 l 0.82,71.37 a 7.94,7.94 0 0 0 7.79,7.85 l 35.51,0.7 a 7.94,7.94 0 0 1 7.79,7.94 v 86.27 a 8,8 0 0 1 -7.92,7.94 z"
        id="path126" />
     <rect
        class="cls-1"
-       x="35.5"
-       y="148.5"
+       x="2.5"
+       y="2.5"
        width="15"
        height="97"
        rx="5"
@@ -85,8 +103,8 @@
        ry="5" />
     <rect
        class="cls-1"
-       x="169.5"
-       y="148.5"
+       x="136.5"
+       y="2.5"
        width="15"
        height="97"
        rx="5"
@@ -94,8 +112,8 @@
        ry="5" />
     <rect
        class="cls-1"
-       x="295.5"
-       y="148.5"
+       x="262.5"
+       y="2.5"
        width="15"
        height="97"
        rx="5"
@@ -103,35 +121,38 @@
        ry="5" />
     <rect
        class="cls-2"
-       x="35.5"
-       y="164.5"
+       x="2.5"
+       y="18.5"
        width="275"
        height="12"
        rx="3"
        id="rect134"
-       ry="3" />
+       ry="3"
+       style="fill:none" />
     <rect
        class="cls-2"
-       x="35.5"
-       y="198.5"
+       x="2.5"
+       y="52.5"
        width="275"
        height="12"
        rx="3"
        id="rect136"
-       ry="3" />
+       ry="3"
+       style="fill:none" />
     <rect
        class="cls-2"
-       x="35.5"
-       y="233.5"
+       x="2.5"
+       y="87.5"
        width="275"
        height="12"
        rx="3"
        id="rect138"
-       ry="3" />
+       ry="3"
+       style="fill:none" />
     <rect
        class="cls-3"
-       x="322.5"
-       y="197.5"
+       x="289.5"
+       y="51.5"
        width="71"
        height="71"
        rx="6.25"
@@ -139,80 +160,134 @@
        ry="6.25" />
     <rect
        class="cls-1"
-       x="426.5"
-       y="280.5"
+       x="393.5"
+       y="134.5"
        width="21"
        height="21"
        rx="1.85"
        id="rect142"
        ry="1.85" />
-    <circle
-       class="cls-2"
-       cx="84.5"
-       cy="379.5"
-       r="36"
-       id="circle144" />
-    <circle
-       class="cls-2"
-       cx="227.5"
-       cy="379.5"
-       r="36"
-       id="circle146" />
-    <circle
-       class="cls-2"
-       cx="369.5"
-       cy="379.5"
-       r="36"
-       id="circle148" />
-    <circle
-       class="cls-2"
-       cx="84.5"
-       cy="379.5"
-       r="18"
-       id="circle150" />
-    <circle
-       class="cls-2"
-       cx="227.5"
-       cy="379.5"
-       r="18"
-       id="circle152" />
-    <circle
-       class="cls-2"
-       cx="369.5"
-       cy="379.5"
-       r="18"
-       id="circle154" />
     <path
        class="cls-4"
-       d="m 43.5,275.5 c 0,-23 -1,-23 25,-23"
+       d="m 10.5,129.5 c 0,-23 -1,-23 25,-23"
        id="path156" />
     <path
        class="cls-4"
-       d="m 328.3,220 c 0,-16 -0.69,-16 17.39,-16"
+       d="m 295.3,74 c 0,-16 -0.69,-16 17.39,-16"
        id="path158" />
-    <path
-       class="cls-4"
-       d="m 55.5,371.5 c 1,-10 9.23,-18.74 18,-21"
-       id="path160" />
-    <path
-       class="cls-4"
-       d="m 71.5,377.5 c 0.55,-5.5 4.13,-10 9,-11.28"
-       id="path162" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Stationary"
+     style="display:inline">
+    <circle
+       class="cls-2"
+       cx="51.5"
+       cy="233.5"
+       r="36"
+       id="circle144"
+       style="display:inline;fill:#25ced1;fill-opacity:1"
+       transform="translate(0,8)" />
+    <circle
+       class="cls-2"
+       cx="51.5"
+       cy="233.5"
+       r="18"
+       id="circle150"
+       style="display:inline;fill:#d6feff;fill-opacity:1"
+       transform="translate(0,8)" />
+    <circle
+       class="cls-2"
+       cx="194.5"
+       cy="233.5"
+       r="36"
+       id="circle146"
+       style="display:inline;fill:#25ced1;fill-opacity:1"
+       transform="translate(0,8)" />
+    <circle
+       class="cls-2"
+       cx="194.5"
+       cy="233.5"
+       r="18"
+       id="circle152"
+       style="display:inline;fill:#d6feff;fill-opacity:1"
+       transform="translate(0,8)" />
+    <circle
+       class="cls-2"
+       cx="336.5"
+       cy="233.5"
+       r="36"
+       id="circle148"
+       style="display:inline;fill:#25ced1;fill-opacity:1"
+       transform="translate(0,8)" />
+    <circle
+       class="cls-2"
+       cx="336.5"
+       cy="233.5"
+       r="18"
+       id="circle154"
+       style="display:inline;fill:#d6feff;fill-opacity:1"
+       transform="translate(0,8)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Wheel1"
+     style="display:inline;mix-blend-mode:normal"
+     transform="translate(0,8)">
+    <g
+       id="g54797"
+       style="display:inline">
+      <path
+         class="cls-4"
+         d="m 22.5,225.5 c 1,-10 9.23,-18.74 18,-21"
+         id="path160" />
+      <path
+         class="cls-4"
+         d="m 38.5,231.5 c 0.55,-5.5 4.13,-10 9,-11.28"
+         id="path162" />
+      <rect
+         style="opacity:0.99;fill:none;fill-opacity:1;stroke:none;stroke-width:2.15995"
+         id="rect54792"
+         width="29.428061"
+         height="29.428061"
+         x="22.5"
+         y="204.39201"
+         rx="0"
+         ry="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Wheel2"
+     style="display:inline"
+     transform="translate(0,8)">
     <path
        class="cls-5"
-       d="m 197.5,372.5 c 1,-10 9.23,-18.74 18,-21"
-       id="path164" />
-    <path
-       class="cls-5"
-       d="m 339.5,372.5 c 1,-10 9.23,-18.74 18,-21"
-       id="path166" />
+       d="m 164.5,226.5 c 1,-10 9.23,-18.74 18,-21"
+       id="path164"
+       style="fill:none" />
     <path
        class="cls-4"
-       d="m 214.34,377.72 c 0.55,-5.51 4.13,-10 8.95,-11.28"
+       d="m 181.34,231.72 c 0.55,-5.51 4.13,-10 8.95,-11.28"
        id="path168" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Wheel3"
+     style="display:inline"
+     transform="translate(0,8)">
+    <path
+       class="cls-5"
+       d="m 306.5,226.5 c 1,-10 9.23,-18.74 18,-21"
+       id="path166"
+       style="fill:none" />
     <path
        class="cls-4"
-       d="m 356.44,377.74 c 0.55,-5.5 4.13,-10 8.95,-11.28"
+       d="m 323.44,231.74 c 0.55,-5.5 4.13,-10 8.95,-11.28"
        id="path170" />
   </g>
 </svg>
