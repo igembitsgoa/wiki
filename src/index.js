@@ -22,6 +22,17 @@ function resizeHeader() {
   }
 } 
 
+$('video').on('click', function() {
+  if (!$(this)[0].hasAttribute('controls')) {
+    $(this).attr('controls', '');
+  }
+  var video = document.querySelector('video');
+  video.play();
+  $(this).prop('muted', false);
+  video.volume = 0.6;
+  return false;
+});
+
 $(window).on("resize", function () {
   resizeHeader();
 });
