@@ -1,28 +1,31 @@
 extends ../templates/contents.pug
 
 block headVars
-    - var title = "Engineering"
-    - var requireMathJax = false
-    //- You can just write the filename here and it will be resolved to 'require'.
-    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
-    - var backgroundAttribution = "Photo by Sveta Fedarava on Unsplash"
-    - var backgroundAttributionLink = "https://unsplash.com/photos/tI_Odb7ZU6M"
-    - var theme = "project"
+  - var title = "Engineering"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
+  - var backgroundAttribution = "Photo by Sveta Fedarava on Unsplash"
+  - var backgroundAttributionLink = "https://unsplash.com/photos/tI_Odb7ZU6M"
+  - var theme = "project"
 
 block article
 
-    h1 Atmosphere Regulated Killswitch
+  h1 Atmosphere Regulated Killswitch
 
-    - var imgpath = "" + require("../assets/img/Engineering--Killswitch.svg")["default"]
-    +image(1, imgpath, "Killswitch", 100)
+  style.
+    svg {
+      width: 100%;
+      height: auto;
+    }
 
-
-
+  include ../assets/img/Engineering--Killswitch.svg
+  include ../assets/img/Engineering--Killswitch-path.svg
 
 append buttons
-    //- mind the quotes and the plus sign
-    +buttonLeft("Model")
-    +buttonRight("Safety")
+  //- mind the quotes and the plus sign
+  +buttonLeft("Model")
+  +buttonRight("Safety")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
