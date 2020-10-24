@@ -71,8 +71,10 @@ section {
     flex-direction: column;
     justify-content: start;
 
-    img {
+    img,
+    svg {
       display: block;
+      height: max-content;
     }
 
     h3 {
@@ -126,8 +128,10 @@ section {
       color: #3d3d3d;
     }
 
-    img {
+    img,
+    svg {
       display: none;
+      height: max-content;
     }
   }
 
@@ -239,9 +243,79 @@ section {
 #description {
   .sidebar {
     margin-top: 7rem;
-    img {
+    img,
+    svg {
       margin-bottom: 2rem;
       width: 85%;
+    }
+  }
+
+  .sidebar, .content {
+    img,
+    svg {
+      overflow: visible;
+
+      #rect140 {
+        fill:#25ced1;
+        fill-opacity:1;
+      }
+
+      #layer1 {
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: truck-bounce;
+        animation-duration: 1.3s;
+      }
+
+      #layer2 path, #layer3 path, #layer4 path {
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: wheel;
+        animation-duration: 3s;
+      }
+      #layer2 path {
+        transform-origin: 12% 81%;
+      }
+      #layer3 path {
+        transform-origin: 45.4% 81%;
+      }
+      #layer4 path {
+        transform-origin: 78.4% 81%;
+      }
+
+      @keyframes truck-bounce {
+        0% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+        }
+        25% {
+          -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+        }
+        50% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+        }
+        75% {
+          -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes wheel {
+        0% {
+          -webkit-transform: rotate(0px);
+          transform: rotate(0px);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
     }
   }
 }
@@ -249,7 +323,8 @@ section {
 #design {
   .sidebar {
     margin: 2.5rem 0;
-    img {
+    img,
+    svg {
       width: 60%;
       margin: 2rem auto;
     }
@@ -259,7 +334,8 @@ section {
 #safety {
   .sidebar {
     margin: 2rem 0;
-    img {
+    img,
+    svg {
       width: 70%;
       margin: 3rem auto;
     }
@@ -269,7 +345,8 @@ section {
 #human-practices {
   .sidebar {
     margin-top: 2rem;
-    img {
+    img,
+    svg {
       width: 70%;
       margin: 3rem auto;
     }
@@ -279,7 +356,8 @@ section {
 #collaboration {
   .sidebar {
     margin-top: 1.5rem;
-    img {
+    img,
+    svg {
       width: 70%;
       margin: 3rem auto 1.5rem auto;
     }
@@ -288,14 +366,13 @@ section {
 
 #contribution {
   .sidebar {
-    img {
+    img,
+    svg {
       width: 40%;
       margin: 3rem auto 1.5rem auto;
     }
   }
 }
-
-
 
 @keyframes orbit {
   0% {

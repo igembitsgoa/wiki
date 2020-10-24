@@ -55,7 +55,8 @@
 
   #description {
     .sidebar {
-      img {
+      img,
+      svg {
         width: 100%;
       }
     }
@@ -64,7 +65,8 @@
   #design {
     .sidebar {
       margin-top: 1rem;
-      img {
+      img,
+      svg {
         margin: 1rem auto;
         width: 80%;
       }
@@ -74,7 +76,8 @@
   #safety {
     .sidebar {
       margin-top: 3rem;
-      img {
+      img,
+      svg {
         margin: 1rem auto;
         width: 80%;
       }
@@ -83,7 +86,8 @@
 
   #human-practices {
     .sidebar {
-      img {
+      img,
+      svg {
         margin: 3rem auto 1rem auto;
         width: 90%;
       }
@@ -97,11 +101,11 @@
     .container {
       max-width: 700px;
     }
-    
+
     .sidebar {
       display: none;
     }
-    
+
     .content {
       margin-top: 1.5rem;
       padding: 0 10px !important;
@@ -110,7 +114,8 @@
         margin-bottom: 0.6rem;
       }
 
-      img {
+      img,
+      svg {
         display: block;
         width: 80%;
       }
@@ -122,38 +127,53 @@
   }
 
   #design {
-    .content img {
-      width: 50%;
-      margin-left: auto;
-      margin-right: auto;
+    .content {
+      img,
+      svg {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 
   #safety {
-    .content img {
-      width: 50%;
-      margin: 0 auto 1rem auto;
+    .content {
+      img,
+      svg {
+        width: 50%;
+        margin: 0 auto 1rem auto;
+      }
     }
   }
 
   #human-practices {
-    .content img {
-      width: 60%;
-      margin: 0 auto 1rem auto;
+    .content {
+      img,
+      svg {
+        width: 60%;
+        margin: 0 auto 1rem auto;
+      }
     }
   }
 
   #collaboration {
-    .content img {
-      width: 50%;
-      margin: 0 auto 1rem auto;
+    .content {
+      img,
+      svg {
+        width: 50%;
+        margin: 0 auto 1rem auto;
+      }
     }
   }
 
   #contribution {
-    .content img {
-      width: 20%;
-      margin: 0 auto 1rem auto;
+    .content {
+      img,
+      svg {
+        width: 20%;
+        margin: 0 auto 1rem auto;
+      }
     }
   }
 }
@@ -167,7 +187,8 @@
         margin-bottom: 0.6rem;
       }
 
-      img {
+      img,
+      svg {
         display: block;
         width: 50%;
         margin: 1rem 2rem 0 auto;
@@ -176,9 +197,12 @@
   }
 
   #description {
-    .content img {
-      width: 70%;
-      margin-right: auto;
+    .content {
+      img,
+      svg {
+        width: 70%;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -199,28 +223,39 @@
   }
 
   #description {
-    .content img {
-      width: 50%;
+    .content {
+      img,
+      svg {
+        width: 50%;
+      }
     }
   }
 
   #design {
-    .content img {
-      width: 40%;
-      margin-top: 0;
+    .content {
+      img,
+      svg {
+        width: 40%;
+        margin-top: 0;
+      }
     }
   }
 
-  #safety, #human-practices, #collaboration {
-    .content img {
-      width: 40%;
-      margin-top: 1rem;
+  #safety,
+  #human-practices,
+  #collaboration {
+    .content {
+      img,
+      svg {
+        width: 40%;
+        margin-top: 1rem;
+      }
     }
   }
 }
 
 @include respond-below(xxs) {
-  section {git
+  section {
     .content {
       padding: 0 25px !important;
       h2 {
