@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200mm"
+   height="400mm"
+   viewBox="0 0 200 400"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
+   sodipodi:docname="Engineering--Killswitch.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="18.520832"
+       y="190.5"
+       width="84.666664"
+       height="31.75"
+       id="rect1578" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="131.15627"
+       height="39.118801"
+       id="rect874" />
+    <rect
+       x="33.288403"
+       y="64.10907"
+       width="65.240067"
+       height="32.65387"
+       id="rect868" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="131.15627"
+       height="39.118801"
+       id="rect923" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8"
+       x="-1.1999132e-05"
+       width="1.0265937"
+       y="-4.8013895e-05"
+       height="1.0761533">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-5" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect991" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-50" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect991-1" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-3" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect991-9" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-0" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1144" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="105.74207"
+       height="25.089788"
+       id="rect874-8-7" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1203" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-3"
+       x="-1.1999132e-05"
+       width="1.0002681"
+       y="-4.8013895e-05"
+       height="1.3246375">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-7" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-8" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1262" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1"
+       x="-1.1999132e-05"
+       width="1.0002681"
+       y="-4.8013895e-05"
+       height="1.3246375">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-7-8" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1267" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-3-0"
+       x="-1.1999132e-05"
+       width="1.0002681"
+       y="-4.8013895e-05"
+       height="1.3246375">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-7-6" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="143.37733"
+       height="27.652025"
+       id="rect874-8-7-84" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1393" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-3-9"
+       x="-1.1999132e-05"
+       width="1.0294485"
+       y="-4.8013895e-05"
+       height="1.0188965">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-7-2" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect874-8-8-2" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1591" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7"
+       x="-1.1999132e-05"
+       width="1.0002681"
+       y="-4.8013895e-05"
+       height="1.3246375">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="117.20535"
+       height="43.103718"
+       id="rect874-8-8-2-3" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1638" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-2"
+       x="-1.1999132e-05"
+       width="1.006025"
+       y="-4.8013895e-05"
+       height="1.0648423">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-0" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="72.061813"
+       height="14.987786"
+       id="rect874-8-8-2-6" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="102.84407"
+       height="28.834377"
+       id="rect1686" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0"
+       x="-1.1999132e-05"
+       width="1.0267537"
+       y="-4.8013895e-05"
+       height="1.1612484">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="75.859131"
+       height="22.010941"
+       id="rect874-8-8-2-6-8" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="72.061813"
+       height="14.987786"
+       id="rect1738" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-7"
+       x="-1.1999132e-05"
+       width="1.0222349"
+       y="-4.8013895e-05"
+       height="1.0374352">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-9" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="83.472656"
+       height="21.764582"
+       id="rect874-8-8-2-6-8-9" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="72.061813"
+       height="14.987786"
+       id="rect1781" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-7-5"
+       x="-1.1999132e-05"
+       width="1.0261308"
+       y="-4.8013895e-05"
+       height="1.0498204">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-9-2" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="72.061813"
+       height="14.987786"
+       id="rect874-8-8-2-6-8-9-2" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="72.061813"
+       height="14.987786"
+       id="rect1844" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-7-5-4"
+       x="-1.1999132e-05"
+       width="1.0267537"
+       y="-4.8013895e-05"
+       height="1.1612484">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-9-2-5" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="71.814831"
+       height="21.764546"
+       id="rect874-8-8-2-6-86" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="72.061813"
+       height="14.987786"
+       id="rect1909" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-4"
+       x="-1.1999132e-05"
+       width="1.0209761"
+       y="-4.8013895e-05"
+       height="1.1430237">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-1" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="83.443854"
+       height="21.206547"
+       id="rect874-8-8-2-6-86-5" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="71.814835"
+       height="21.764545"
+       id="rect1949" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-4-6"
+       x="-1.1999132e-05"
+       width="1.0241746"
+       y="-4.8013895e-05"
+       height="1.0867317">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-1-3" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="75.858311"
+       height="22.846764"
+       id="rect874-8-8-2-6-86-5-9" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="83.443855"
+       height="21.206547"
+       id="rect2013" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-4-6-2"
+       x="-1.1999132e-05"
+       width="1.0241746"
+       y="-4.8013895e-05"
+       height="1.0867317">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-1-3-3" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="90.022806"
+       height="28.830324"
+       id="rect874-8-8-2-6-86-5-9-2" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="75.858315"
+       height="22.846764"
+       id="rect2062" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-4-6-2-3"
+       x="-1.1999132e-05"
+       width="1.0055937"
+       y="-4.8013895e-05"
+       height="1.1019362">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-1-3-3-7" />
+    </filter>
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="90.022804"
+       height="28.830324"
+       id="rect874-8-8-2-6-86-5-9-2-4" />
+    <rect
+       x="56.6618"
+       y="62.220955"
+       width="90.022804"
+       height="28.830324"
+       id="rect2111" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter892-8-1-7-0-4-6-2-3-6"
+       x="-1.1999132e-05"
+       width="1.0055937"
+       y="-4.8013895e-05"
+       height="1.1019362">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00064867742"
+         id="feGaussianBlur894-3-4-6-2-1-3-3-7-6" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="283.51585"
+     inkscape:cy="984.02913"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-width="1858"
+     inkscape:window-height="1016"
+     inkscape:window-x="62"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="2"
+     lock-margins="true"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1133"
+       originx="-9.7013106"
+       originy="-6.7256888" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.7013114,-6.7256785)">
+    <ellipse
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1898-5"
+       cx="155.93817"
+       cy="266.51807"
+       rx="37.036755"
+       ry="15.866488" />
+    <rect
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1727"
+       width="74.083328"
+       height="23.8125"
+       x="18.520836"
+       y="233.36226"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254942"
+       x="69.022621"
+       y="14.961381"
+       id="text835"><tspan
+         sodipodi:role="line"
+         x="69.022621"
+         y="14.961381"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Lato;-inkscape-font-specification:Lato;stroke-width:0.254942"
+         id="tspan837">Problem Statement</tspan></text>
+    <rect
+       style="opacity:0.99;fill:#9e132e;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect858"
+       width="119.06251"
+       height="29.104166"
+       x="45.468746"
+       y="21.166666"
+       rx="3.5923274"
+       ry="3.5923276" />
+    <text
+       xml:space="preserve"
+       id="text866"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect868);fill:#000000;fill-opacity:1;stroke:none;" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254942"
+       x="69.358894"
+       y="67.750969"
+       id="text835-9"><tspan
+         sodipodi:role="line"
+         x="69.358894"
+         y="67.750969"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Lato;-inkscape-font-specification:Lato;stroke-width:0.254942"
+         id="tspan837-7">Designing Process</tspan></text>
+    <rect
+       style="opacity:0.99;fill:#9e132e;stroke:#000000;stroke-width:0.13543"
+       id="rect858-8"
+       width="82.020836"
+       height="34.395824"
+       x="15.875"
+       y="76.729172"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8);fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter892-8);"
+       transform="matrix(0.68087343,0,0,0.68087343,-18.714667,41.164807)"
+       x="64.872437"
+       y="0"><tspan
+         x="57.107634"
+         y="67.470032"><tspan
+           style="fill:#ffffff">First, we ascertained the trigger to be the </tspan></tspan><tspan
+         x="59.389664"
+         y="74.525582"><tspan
+           style="fill:#ffffff">swift and abrupt change in atmospheric </tspan></tspan><tspan
+         x="68.986314"
+         y="81.581132"><tspan
+           style="fill:#ffffff">conditions (anaerobic inside the </tspan></tspan><tspan
+         x="62.575685"
+         y="88.636681"><tspan
+           style="fill:#ffffff">sugarcane stem and aerobic outside).</tspan></tspan></text>
+    <circle
+       style="opacity:0.99;fill:#ffffff;stroke:#000000;stroke-width:0.264583"
+       id="path978"
+       cx="16.619856"
+       cy="78.683372"
+       r="4.5" />
+    <rect
+       style="opacity:0.99;fill:#9e132e;stroke:#000000;stroke-width:0.135666"
+       id="rect858-8-1"
+       width="82.307098"
+       height="34.395824"
+       x="113.77084"
+       y="76.729172"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-7);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-3);"
+       transform="matrix(0.68087343,0,0,0.68087343,80.272601,42.561093)"
+       x="64.872437"
+       y="0"><tspan
+         x="59.786062"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-7);filter:url(#filter892-8-3)">After an extensive search of the registry, </tspan></tspan><tspan
+         x="57.432374"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-7);filter:url(#filter892-8-3)">we found the FNR promoter that was only </tspan></tspan><tspan
+         x="68.147991"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-7);filter:url(#filter892-8-3)">activated in anaerobic conditions.</tspan></tspan></text>
+    <circle
+       style="opacity:0.99;fill:#ffffff;stroke:#000000;stroke-width:0.264583"
+       id="path978-4"
+       cx="115.57401"
+       cy="78.683365"
+       r="4.5" />
+    <rect
+       style="opacity:0.99;fill:#9e132e;stroke:#000000;stroke-width:0.13543"
+       id="rect858-8-3"
+       width="82.020836"
+       height="34.395836"
+       x="15.875"
+       y="121.70839"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8);fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter892-8-1);"
+       transform="matrix(0.68087343,0,0,0.68087343,-18.00728,87.540316)"
+       x="64.872437"
+       y="0"><tspan
+         x="59.681807"
+         y="67.470032"><tspan
+           style="fill:#ffffff">Second, we found a toxin-antitoxin pair </tspan></tspan><tspan
+         x="60.933065"
+         y="74.525582"><tspan
+           style="fill:#ffffff">that was quite fatal to bacteria but did </tspan></tspan><tspan
+         x="80.220073"
+         y="81.581132"><tspan
+           style="fill:#ffffff">not affect human cells.</tspan></tspan></text>
+    <circle
+       style="opacity:0.99;fill:#ffffff;stroke:#000000;stroke-width:0.264583"
+       id="path978-6"
+       cx="16.333603"
+       cy="123.66257"
+       r="4.5" />
+    <rect
+       style="opacity:0.99;fill:#9e132e;stroke:#000000;stroke-width:0.13543"
+       id="rect858-8-1-5"
+       width="82.020836"
+       height="34.395836"
+       x="113.77084"
+       y="121.70839"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7-9-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-7-8);fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter892-8-3-0);"
+       transform="matrix(0.68087343,0,0,0.68087343,80.852696,90.277684)"
+       x="64.872437"
+       y="0"><tspan
+         x="64.995519"
+         y="67.470032"><tspan
+           style="fill:#ffffff">Using these parts, we designed our </tspan></tspan><tspan
+         x="77.811264"
+         y="74.525582"><tspan
+           style="fill:#ffffff">killswitch genetic circuit.</tspan></tspan></text>
+    <circle
+       style="opacity:0.99;fill:#ffffff;stroke:#000000;stroke-width:0.264583"
+       id="path978-4-7"
+       cx="115.28777"
+       cy="123.66257"
+       r="4.5" />
+    <text
+       xml:space="preserve"
+       id="text872-7-9-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-7-84);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-3-9);"
+       transform="matrix(0.68087343,0,0,0.68087343,15.934088,-16.508295)"
+       x="64.872437"
+       y="0"><tspan
+         x="60.082625"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-7-84);filter:url(#filter892-8-3-9)">Given the consumable nature of our product, we had to </tspan></tspan><tspan
+         x="63.963178"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-7-84);filter:url(#filter892-8-3-9)">come up with a robust killswitch that was capable of </tspan></tspan><tspan
+         x="60.722035"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-7-84);filter:url(#filter892-8-3-9)">effectively terminating the bacteria taking into account </tspan></tspan><tspan
+         x="63.874984"
+         y="88.636681"><tspan
+           style="shape-inside:url(#rect874-8-7-84);filter:url(#filter892-8-3-9)">the toxicity of killswitch with respect to the humans.</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.37703px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.109426"
+       x="15.138314"
+       y="80.237656"
+       id="text1446"><tspan
+         sodipodi:role="line"
+         id="tspan1444"
+         x="15.138314"
+         y="80.237656"
+         style="stroke-width:0.109426">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.37703px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.109426"
+       x="15.138314"
+       y="80.237656"
+       id="text1446-6"><tspan
+         sodipodi:role="line"
+         id="tspan1444-9"
+         x="15.138314"
+         y="80.237656"
+         style="stroke-width:0.109426">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.37703px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.109426"
+       x="113.82636"
+       y="80.202843"
+       id="text1446-4"><tspan
+         sodipodi:role="line"
+         id="tspan1444-8"
+         x="113.82636"
+         y="80.202843"
+         style="stroke-width:0.109426">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.37703px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.109426"
+       x="14.89344"
+       y="125.23714"
+       id="text1446-4-4"><tspan
+         sodipodi:role="line"
+         id="tspan1444-8-4"
+         x="14.89344"
+         y="125.23714"
+         style="stroke-width:0.109426">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.37703px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.109426"
+       x="113.52209"
+       y="125.28574"
+       id="text1446-4-8"><tspan
+         sodipodi:role="line"
+         id="tspan1444-8-1"
+         x="113.52209"
+         y="125.28574"
+         style="stroke-width:0.109426">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254942"
+       x="36.271477"
+       y="171.62836"
+       id="text835-9-9"><tspan
+         sodipodi:role="line"
+         x="36.271477"
+         y="171.62836"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Lato;-inkscape-font-specification:Lato;stroke-width:0.254942"
+         id="tspan837-7-1">Modelling</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254942"
+       x="154.56331"
+       y="171.8882"
+       id="text835-9-9-7"><tspan
+         sodipodi:role="line"
+         x="154.56331"
+         y="171.8882"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle;stroke-width:0.254942"
+         id="tspan1570">Experimental Design</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1576"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1578);fill:#000000;fill-opacity:1;stroke:none;" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2);fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7);"
+       transform="matrix(0.68087343,0,0,0.68087343,-17.944681,136.74317)"
+       x="64.872437"
+       y="0"><tspan
+         x="58.221088"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2);filter:url(#filter892-8-1-7)">To model our circuit, we focussed on the </tspan></tspan><tspan
+         x="62.978072"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2);filter:url(#filter892-8-1-7)">workings of inducible promoters and </tspan></tspan><tspan
+         x="78.649111"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2);filter:url(#filter892-8-1-7)">toxin-antitoxin systems.</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-3);fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-2);"
+       transform="matrix(0.68087343,0,0,0.68087343,75.744703,136.67798)"
+       x="64.872437"
+       y="0"><tspan
+         x="57.012262"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-3);filter:url(#filter892-8-1-7-2)">Due to the global pandemic, we were unable to </tspan></tspan><tspan
+         x="59.321852"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-3);filter:url(#filter892-8-1-7-2)">complement our modelling with experimental </tspan></tspan><tspan
+         x="57.690256"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-3);filter:url(#filter892-8-1-7-2)">results. However, we prepared and planned for </tspan></tspan><tspan
+         x="60.793596"
+         y="88.636681"><tspan
+           style="shape-inside:url(#rect874-8-8-2-3);filter:url(#filter892-8-1-7-2)">these experiments to strengthen our project </tspan></tspan><tspan
+         x="61.333786"
+         y="95.692231"><tspan
+           style="shape-inside:url(#rect874-8-8-2-3);filter:url(#filter892-8-1-7-2)">design and help the next team carry out our </tspan></tspan><tspan
+         x="87.996049"
+         y="102.74778"><tspan
+           style="shape-inside:url(#rect874-8-8-2-3);filter:url(#filter892-8-1-7-2)">project to completion.</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0);"
+       transform="matrix(0.68087343,0,0,0.68087343,-8.1013242,197.34577)"
+       x="64.872437"
+       y="0"><tspan
+         x="66.068705"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6);filter:url(#filter892-8-1-7-0)">Create a persister cell </tspan></tspan><tspan
+         x="58.803693"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6);filter:url(#filter892-8-1-7-0)">formation model in phase 2</tspan></tspan></text>
+    <rect
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1727-5"
+       width="74.083328"
+       height="23.8125"
+       x="18.520832"
+       y="262.46661"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-8);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-7);"
+       transform="matrix(0.68087343,0,0,0.68087343,-9.4758852,224.44978)"
+       x="64.872437"
+       y="0"><tspan
+         x="58.691173"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8);filter:url(#filter892-8-1-7-0-7)">Differential expression of the </tspan></tspan><tspan
+         x="58.779367"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8);filter:url(#filter892-8-1-7-0-7)">antitoxin in the presence and </tspan></tspan><tspan
+         x="71.699844"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8);filter:url(#filter892-8-1-7-0-7)">absence of oxygen</tspan></tspan></text>
+    <rect
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1727-5-4"
+       width="74.083328"
+       height="23.8125"
+       x="18.520832"
+       y="291.57111"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-0-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-8-9);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-7-5);"
+       transform="matrix(0.68087343,0,0,0.68087343,-12.177241,253.47258)"
+       x="64.872437"
+       y="0"><tspan
+         x="58.986575"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8-9);filter:url(#filter892-8-1-7-0-7-5)">Time required for the buildup of </tspan></tspan><tspan
+         x="58.87082"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8-9);filter:url(#filter892-8-1-7-0-7-5)">toxin concentration sufficient to </tspan></tspan><tspan
+         x="68.776151"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8-9);filter:url(#filter892-8-1-7-0-7-5)">restrict bacterial growth</tspan></tspan></text>
+    <rect
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1727-5-4-8"
+       width="74.083328"
+       height="23.8125"
+       x="18.52083"
+       y="320.67526"
+       rx="3.5923274"
+       ry="3.5923274" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-0-1-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-8-9-2);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-7-5-4);"
+       transform="matrix(0.68087343,0,0,0.68087343,-8.2013473,284.65827)"
+       x="64.872437"
+       y="0"><tspan
+         x="61.774741"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8-9-2);filter:url(#filter892-8-1-7-0-7-5-4)"> Identify the optimum Kd </tspan></tspan><tspan
+         x="57.469753"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-8-9-2);filter:url(#filter892-8-1-7-0-7-5-4)">value for the system to work</tspan></tspan></text>
+    <ellipse
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1898"
+       cx="156.22401"
+       cy="230.2876"
+       rx="37.036755"
+       ry="15.866488" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-86);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-4);"
+       transform="matrix(0.68087343,0,0,0.68087343,92.675633,180.05389)"
+       x="64.872437"
+       y="0"><tspan
+         x="67.075649"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86);filter:url(#filter892-8-1-7-0-4)">Assay to check if the </tspan></tspan><tspan
+         x="65.388931"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86);filter:url(#filter892-8-1-7-0-4)">killswitch functions as </tspan></tspan><tspan
+         x="81.605672"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86);filter:url(#filter892-8-1-7-0-4)">intended</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-6-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-86-5);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-4-6);"
+       transform="matrix(0.68087343,0,0,0.68087343,88.109954,216.82308)"
+       x="64.872437"
+       y="0"><tspan
+         x="57.654523"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5);filter:url(#filter892-8-1-7-0-4-6)">Killswitch response time assay to </tspan></tspan><tspan
+         x="58.657734"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5);filter:url(#filter892-8-1-7-0-4-6)">ascertain the time required after </tspan></tspan><tspan
+         x="58.194714"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5);filter:url(#filter892-8-1-7-0-4-6)">exposure for the cell to succumb</tspan></tspan></text>
+    <ellipse
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1898-5-8"
+       cx="156.19255"
+       cy="301.8663"
+       rx="37.036755"
+       ry="15.866488" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-6-4-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-86-5-9);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-4-6-2);"
+       transform="matrix(0.68087343,0,0,0.68087343,91.125007,251.64215)"
+       x="64.872437"
+       y="0"><tspan
+         x="73.606071"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9);filter:url(#filter892-8-1-7-0-4-6-2)">Gel shift assay to </tspan></tspan><tspan
+         x="58.993365"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9);filter:url(#filter892-8-1-7-0-4-6-2)">experimentally determine Kd </tspan></tspan><tspan
+         x="61.479344"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9);filter:url(#filter892-8-1-7-0-4-6-2)">value of the FNR promoter</tspan></tspan></text>
+    <ellipse
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1898-5-8-6"
+       cx="155.69389"
+       cy="338.80267"
+       rx="37.036755"
+       ry="15.866488" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-6-4-7-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-86-5-9-2);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-4-6-2-3);"
+       transform="matrix(0.68087343,0,0,0.68087343,86.124312,288.29734)"
+       x="64.872437"
+       y="0"><tspan
+         x="61.611532"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2);filter:url(#filter892-8-1-7-0-4-6-2-3)">Site-directed mutagenesis of the </tspan></tspan><tspan
+         x="57.444348"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2);filter:url(#filter892-8-1-7-0-4-6-2-3)">FNR promoter to bring the Kd value </tspan></tspan><tspan
+         x="58.932628"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2);filter:url(#filter892-8-1-7-0-4-6-2-3)">to the one established through the </tspan></tspan><tspan
+         x="94.017454"
+         y="88.636681"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2);filter:url(#filter892-8-1-7-0-4-6-2-3)">model</tspan></tspan></text>
+    <ellipse
+       style="opacity:0.99;fill:#800080;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1898-5-8-6-3"
+       cx="155.52959"
+       cy="376.03183"
+       rx="37.036755"
+       ry="15.866488" />
+    <text
+       xml:space="preserve"
+       id="text872-7-6-6-9-6-4-7-1-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect874-8-8-2-6-86-5-9-2-4);fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter892-8-1-7-0-4-6-2-3-6);"
+       transform="matrix(0.68087343,0,0,0.68087343,86.031518,325.68481)"
+       x="64.872437"
+       y="0"><tspan
+         x="67.889869"
+         y="67.470032"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2-4);filter:url(#filter892-8-1-7-0-4-6-2-3-6)">pH dependency of the FNR </tspan></tspan><tspan
+         x="58.833409"
+         y="74.525582"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2-4);filter:url(#filter892-8-1-7-0-4-6-2-3-6)">promoter (due to the fluctuation in </tspan></tspan><tspan
+         x="58.756239"
+         y="81.581132"><tspan
+           style="shape-inside:url(#rect874-8-8-2-6-86-5-9-2-4);filter:url(#filter892-8-1-7-0-4-6-2-3-6)">pH in the sugar extraction process)</tspan></tspan></text>
+  </g>
+</svg>
