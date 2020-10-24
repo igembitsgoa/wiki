@@ -1,31 +1,5 @@
 @import "_main.scss";
 
-$whitey: #f0f0f0;
-$pink: #ea178c;
-$green: #0fc488;
-$green-background: #11d694;
-$dark-green: #12bc84;
-$white: #ffffff;
-$orange: #ffc5ad;
-$yellow: #ffdb59;
-$blue: #1faaad;
-$black: #3d3d3d;
-$grey: #dadada;
-$light-grey: #f7f7f7;
-$dark-grey: #8e8e8e;
-$selection-color: rgba(255, 233, 0, 0.4);
-$table-border-light: #dee2e6;
-
-// dark mode
-$dark-body: #2a2a2a;
-$dark-contents-background: #343434;
-$dark-TOC-items: white;
-$dark-contents-text: white;
-$dark-heading: white;
-$table-border-dark: #5e5a5a;
-$table-alternate-row-background-dark: #3f3f3f;
-$dfn-dark: #dddcdc;
-
 body {
   transition: background-color 0.3s ease;
 }
@@ -38,6 +12,10 @@ body {
 
 main {
   padding: 3rem 0 2rem 0;
+  .custom-container {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
 }
 
 .tooltip {
@@ -67,8 +45,8 @@ main {
 }
 
 @import "_notebook_article.scss";
-// @import "_content_references.scss";
 @import "_content_fancylink.scss";
+@import "_content_themes.scss";
 @import "_content_mediaqueries.scss";
 
 footer {

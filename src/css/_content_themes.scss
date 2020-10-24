@@ -25,6 +25,10 @@
         }
       }
 
+      .month .tabs  li.active {
+        border-color: $color;
+      }
+
       h1,
       a {
         color: $color;
