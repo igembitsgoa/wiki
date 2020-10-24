@@ -5,10 +5,26 @@ block headVars
   - var requireMathJax = false
   //- You can just write the filename here and it will be resolved to 'require'.
   //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
-  - var backgroundImage = "" + require("../assets/img/Engineering--sveta.jpg")["default"]
-  - var backgroundAttribution = "Photo by Sveta Fedarava on Unsplash"
-  - var backgroundAttributionLink = "https://unsplash.com/photos/tI_Odb7ZU6M"
-  - var theme = "project"
+  - var backgroundImage = "" + require("../assets/img/Engineering--header.svg")["default"]
+  - var headerBackgroundColor = "#c5fffd"
+  - var backgroundAttribution = "Photo from Freepik"
+  - var backgroundAttributionLink = "https://freepik.com"
+  - var theme = "journal"
+
+  style.
+    header #heading h1 {
+      color: #187a7a !important;
+    }
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand:hover, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand:visited {
+      color: #187a7a !important;
+    }
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon::before, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon::after {
+      background-color: #187a7a !important;
+    }
 
 block article
 

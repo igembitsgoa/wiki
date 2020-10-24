@@ -1,5 +1,6 @@
 @include respond-below(xxl) {
-  header, main {
+  header,
+  main {
     .custom-container {
       max-width: 1340px;
     }
@@ -18,14 +19,16 @@
       font-size: 1.5rem;
     }
 
-    li, p {
+    li,
+    p {
       font-size: 1rem;
     }
   }
 }
 
 @include respond-below(xl) {
-  header, main {
+  header,
+  main {
     .custom-container {
       max-width: 1140px;
     }
@@ -33,7 +36,8 @@
 }
 
 @include respond-below(lg) {
-  header, main {
+  header,
+  main {
     .custom-container {
       max-width: 950px;
     }
@@ -57,7 +61,8 @@
 }
 
 @include respond-below(md) {
-  header, main {
+  header,
+  main {
     .custom-container {
       max-width: 750px;
     }
@@ -68,9 +73,16 @@
   }
 
   header {
-    min-height: 55vh;
+    min-height: 70vh;
+
+    #header-background {
+      width: 60%;
+      right: 17%;
+    }
+
     #heading {
-      margin-left: 1.75rem;
+      margin-left: 1.5rem;
+      bottom: 5%;
     }
   }
 
@@ -93,9 +105,9 @@
   }
 }
 
-
 @include respond-below(sm) {
-  header, main {
+  header,
+  main {
     .custom-container {
       max-width: 540px;
     }
@@ -106,9 +118,15 @@
   }
 
   header {
-    min-height: 40vh;
+    min-height: 60vh;
+
+    #heading-background {
+      height: 80%;
+      width: 70%;
+    }
+
     #heading {
-      margin-left: calc(1.5rem + 0.2vw);
+      margin-left: 0.8rem;
       margin-bottom: calc(1.5rem + 0.2vw);
       h1 {
         font-size: calc(3rem + 1.75vw);
@@ -155,12 +173,22 @@
     }
   }
 
-  header #heading {
-    margin-left: calc(1.25rem + 0.2vw);
-    margin-bottom: calc(1.5rem + 0.2vw);
+  header {
 
-    h1 {
-      font-size: 4rem;
+    #header-background {
+      top: 15%;
+      right: 10%;
+      height: 80%;
+      width: 75%;
+    }
+
+    #heading {
+      margin-left: calc(1.25rem + 0.2vw);
+      margin-bottom: calc(1.5rem + 0.2vw);
+
+      h1 {
+        font-size: 4rem;
+      }
     }
   }
 }
@@ -179,7 +207,6 @@
   header #heading h1 {
     font-size: 2.5rem;
   }
-
 
   embed {
     height: 350px;

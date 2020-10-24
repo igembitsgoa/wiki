@@ -1,31 +1,45 @@
 extends ../templates/landing.pug
 
 block headVars
-    - var title = "Experiments"
-    - var requireMathJax = false
-    //- You can just write the filename here and it will be resolved to 'require'.
-    //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
-    - var backgroundImage = "" + require("../assets/img/Model--jean-wimmerlin1.jpg")["default"]
-    - var backgroundAttribution = "Photo by Jean Wimmerlin on Unsplash"
-    - var backgroundAttributionLink = "https://unsplash.com/photos/RUj5b4YXaHE"
-    - var theme = "journal"
+  - var title = "Experiments"
+  - var requireMathJax = false
+  //- You can just write the filename here and it will be resolved to 'require'.
+  //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
+  - var backgroundImage = "" + require("../assets/img/Experiments--header.svg")["default"]
+  - var headerBackgroundColor = "#c5fffd"
+  - var backgroundAttribution = "Photo from Freepik"
+  - var backgroundAttributionLink = "https://freepik.com"
+  - var theme = "journal"
+
+  style.
+    header #heading h1 {
+      color: #187a7a !important;
+    }
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand:hover, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand:visited {
+      color: #187a7a !important;
+    }
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon::before, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon::after {
+      background-color: #187a7a !important;
+    }
 
 prepend article
 
-    :markdown-it(html)
-
-        Experiments!
+  :markdown-it(html)
 
 append cards
-    +landing_card("Experiments", "pFruB-Cra System", "Design--AI.gif")
-    +landing_card("Experiments", "Kill Switch", "Design--AI.gif")
-    +landing_card("Experiments", "Inoculant", "Design--AI.gif")
-    +landing_card("Experiments", "Protocols", "Design--AI.gif")
-    +landing_card("Experiments", "Others", "Design--AI.gif")
+  +landing_card("Experiments", "pFruB-Cra System", "Design--AI.gif")
+  +landing_card("Experiments", "Kill Switch", "Design--AI.gif")
+  +landing_card("Experiments", "Inoculant", "Design--AI.gif")
+  +landing_card("Experiments", "Protocols", "Design--AI.gif")
+  +landing_card("Experiments", "Others", "Design--AI.gif")
 
 append buttons
-    //- mind the quotes and the plus sign
-    +buttonLeft("Notebook")
-    +buttonRight("Appendix")
+  //- mind the quotes and the plus sign
+  +buttonLeft("Notebook")
+  +buttonRight("Appendix")
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.

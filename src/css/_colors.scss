@@ -1,13 +1,13 @@
-$section-backgrounds: #d6feff, #ffffff, #ffe9e0, #ffffff, #ffaaba, #ffffff;
-$section-headings: #4b5555, #4b5555, #4b5555, #212121, #212121, #212121;
-$section-texts: #000000, #434343, #434343, #191919, #212121, #212121;
-$section-accents: #009c9f, #ea526f, #ea526f, #006669, #9e132e, #008487;
+$section-backgrounds: #d6feff, #ffffff, #ffe9e0, #ffffff, #ffaaba, #ffffff, #2b478b;
+$section-headings: #4b5555, #4b5555, #4b5555, #212121, #212121, #212121, #2b478b;
+$section-texts: #000000, #434343, #434343, #191919, #212121, #212121, #2b478b;
+$section-accents: #009c9f, #ea526f, #ea526f, #006669, #9e132e, #008487, #2b478b;
 
-$page-accents: #1bbfc1, #ec889b, #007679, #1bbfc1, #ec889b, #007679;
-$page-accents-dark: #1bbfc1, #e87289, #007679, #1bbfc1, #e87289, #007679;
-$content-accents: #159394, #e55c76, #007679, #159394, #e55c76, #007679;
-$content-accents-dark: #1bbfc1, #e87289, #00c1c5, #1bbfc1, #e87289, #00c1c5;
-$footer-text: #091010, #1d0106, #ffffff, #091010, #1d0106, #ffffff;
+$page-accents: #1bbfc1, #ec889b, #007679, #1bbfc1, #ec889b, #007679, #2b478b;
+$page-accents-dark: #1bbfc1, #e87289, #007679, #1bbfc1, #e87289, #007679, #2b478b;
+$content-accents: #159394, #e55c76, #007679, #159394, #e55c76, #007679, #2b478b;
+$content-accents-dark: #1bbfc1, #e87289, #00c1c5, #1bbfc1, #e87289, #00c1c5, #b3d0fb;
+$footer-text: #091010, #1d0106, #ffffff, #091010, #1d0106, #ffffff, #b3d0fb;
 
 $index-footer-background: #007679;
 $index-footer-heading: #98fcff;
@@ -22,6 +22,7 @@ $section-pages-map: (
   team: 5,
   contribution: 6,
   other-areas: 2,
+  software: 7
 );
 
 $pink: #ea178c;

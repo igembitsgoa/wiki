@@ -5,11 +5,27 @@ block headVars
   - var requireMathJax = false
   //- You can just write the filename here and it will be resolved to 'require'.
   //- var backgroundImage = "" + require("../../assets/img/Description--josh-withers.jpg")["default"]
-  - var backgroundImage = "../" + require("../../assets/img/Description--josh-withers.jpg")["default"]
-  - var backgroundAttribution = "Photo by Josh Withers on Unsplash"
-  - var backgroundAttributionLink = "https://unsplash.com/photos/lZ4xZZuk8iA"
-  - var fullWidth = true
+  - var backgroundImage = "../" + require("../../assets/img/Experiments--header.svg")["default"]
+  - var headerBackgroundColor = "#c5fffd"
+  - var backgroundAttribution = "Photo from Freepik"
+  - var backgroundAttributionLink = "https://freepik.com"
   - var theme = "journal"
+  - var fullWidth = true
+
+  style.
+    header #heading h1 {
+      color: #187a7a !important;
+    }
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand:hover, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .navbar-brand:visited {
+      color: #187a7a !important;
+    }
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon::before, 
+    nav:not(.menu-open) .nav-transparent:not(.nav-colored) .menu-icon::after {
+      background-color: #187a7a !important;
+    }
 
 prepend article
 
@@ -41,6 +57,18 @@ prepend article
       #collapseThree.collapse(aria-labelledby='headingThree')
         .card-body
           +pdf("../" + require("../../assets/docs/Experiments--Killswitch--Response_Time.pdf")['default'], "Killswitch Response Time Determination")
+    
+    .card
+      #headingFour.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour')
+            span Site Directed Mutagenesis
+            i.icon-dropdown
+      #collapseFour.collapse(aria-labelledby='headingFour')
+        .card-body
+          p To tune the Kd value of the FNR promoter, we propose to use the following protocol. 
+
+          +pdf("../" + require("../../assets/docs/Experiments--Protocols--Site_Directed_Mutagenesis.pdf")['default'], "Site Directed Mutagenesis")
 
 append buttons
   //- mind the quotes and the plus sign

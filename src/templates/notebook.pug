@@ -11,8 +11,11 @@ html(lang="en")
   body
     include nav.pug
     style
-      | header {
+      | #header-background {
       |     background-image: url( #{backgroundImage});
+      | }
+      | header {
+      |     background-color: #{headerBackgroundColor};
       | }
     -
       theme_class = {
@@ -25,7 +28,8 @@ html(lang="en")
         "theme-other-areas": theme == "other-areas"
       }
     header.d-flex.justify-content-center
-      .custom-container.d-flex.align-items-end.justify-content-between
+      .custom-container
+        #header-background
         #heading
           h1 #{title}
         a(href= backgroundAttributionLink target="_blank" rel="noopener")

@@ -10,22 +10,26 @@ html(lang="en")
       script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
   body
     include nav.pug
-        style
-            | header {
-            |     background-image: url( #{backgroundImage});
-            | }
-        -
-            theme_class = {
-                "theme-project":  theme == "project", 
-                "theme-human-practices": theme == "human-practices",
-                "theme-parts": theme == "parts",
-                "theme-journal": theme == "journal",
-                "theme-team": theme == "team",
-                "theme-contribution": theme == "contribution",
-                "theme-other-areas": theme == "other-areas"
-            }
-    header.d-flex.justify-content-center()
-      .custom-container.d-flex.align-items-end.justify-content-between
+    style
+      | #header-background {
+      |     background-image: url( #{backgroundImage});
+      | }
+      | header {
+      |     background-color: #{headerBackgroundColor};
+      | }
+    -
+      theme_class = {
+        "theme-project":  theme == "project", 
+        "theme-human-practices": theme == "human-practices",
+        "theme-parts": theme == "parts",
+        "theme-journal": theme == "journal",
+        "theme-team": theme == "team",
+        "theme-contribution": theme == "contribution",
+        "theme-other-areas": theme == "other-areas"
+      }
+    header.d-flex.justify-content-center
+      .custom-container
+        #header-background
         #heading
           h1 #{title}
         a(href= backgroundAttributionLink target="_blank" rel="noopener")
