@@ -827,6 +827,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/5/5a/T--BITSPilani-Goa_India--img--Education--survey9.png
     md5: 207ef6c15dcf04543033994dd53dc6d4
     upload_filename: T--BITSPilani-Goa_India--img--Education--survey9.png
+  assets/img/Engineering--Killswitch.svg:
+    link_URL: https://2020.igem.org/wiki/images/5/57/T--BITSPilani-Goa_India--img--Engineering--Killswitch.svg
+    md5: d4993b9d93aa664ef712e1b9fef22bea
+    upload_filename: T--BITSPilani-Goa_India--img--Engineering--Killswitch.svg
   assets/img/Engineering--sveta.jpg:
     link_URL: https://2020.igem.org/wiki/images/0/09/T--BITSPilani-Goa_India--img--Engineering--sveta.jpg
     md5: 27005474bdf4d85ca5631bd307b7e654
@@ -1125,12 +1129,16 @@ assets:
     upload_filename: T--BITSPilani-Goa_India--video--Accessibility--ASL.mp4
   assets/video/homepage.mp4:
     link_URL: https://2020.igem.org/wiki/images/d/db/T--BITSPilani-Goa_India--video--homepage.mp4
-    md5: 1bd15ff5b384adb699f2f43091bf82e9
+    md5: f2a43d74766cdec60510a3fff24621c1
     upload_filename: T--BITSPilani-Goa_India--video--homepage.mp4
   assets/video/promo-1080p.mp4:
     link_URL: https://2020.igem.org/wiki/images/6/6c/T--BITSPilani-Goa_India--video--promo-1080p.mp4
     md5: 0f283f8bc4bd6ae2e13d30c97bce36ee
     upload_filename: T--BITSPilani-Goa_India--video--promo-1080p.mp4
+  assets/video/HP--Swaminathan.mp4:
+    link_URL: https://2020.igem.org/wiki/images/5/54/T--BITSPilani-Goa_India--video--HP--Swaminathan.mp4
+    md5: 1bf7a323638c46786796aa8cf5bc6389
+    upload_filename: T--BITSPilani-Goa_India--video--HP--Swaminathan.mp4
 css:
   css/content.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/contentCSS?action=raw&ctype=text/css
