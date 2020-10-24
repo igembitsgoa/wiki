@@ -40,11 +40,11 @@ $(window).on("resize", function () {
 $(function () {
   resizeHeader();
 
-  // a terrible way to fix the github.io /wiki/ problem
-  if (window.location.href.includes("github.io")) {
-    $("source").each(function () {
-      var link = $(this).attr("src");
-      $(this).attr("src", "/wiki/" + link);
-    });
-  }
+  // // a terrible way to fix the github.io /wiki/ problem
+  // if (window.location.href.includes("github.io")) {
+  //   $("source").each(function () {
+  //     var link = $(this).attr("src");
+  //     $(this).attr("src", "/wiki/" + link);
+  //   });
+  // }
 });
