@@ -663,6 +663,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/4/45/T--BITSPilani-Goa_India--img--Collaborations--Manipal--Logo3.svg
     md5: 4439a837b27e47b20fec95db153b5387
     upload_filename: T--BITSPilani-Goa_India--img--Collaborations--Manipal--Logo3.svg
+  assets/img/Collaborations--ManipalLogo.svg:
+    link_URL: https://2020.igem.org/wiki/images/7/77/T--BITSPilani-Goa_India--img--Collaborations--ManipalLogo.svg
+    md5: 3c98fde3fd750a63c7ffc6746901cb2b
+    upload_filename: T--BITSPilani-Goa_India--img--Collaborations--ManipalLogo.svg
   assets/img/Collaborations--OhioState-Logo.jpg:
     link_URL: https://2020.igem.org/wiki/images/b/b8/T--BITSPilani-Goa_India--img--Collaborations--OhioState-Logo.jpg
     md5: cc8474be650f2fca1b874a8b9d5481fe
@@ -1404,7 +1408,7 @@ html:
     md5: 8f856a7484623aebc4d523e26235fb27
   Collaborations/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Collaborations
-    md5: f9e26f4330d355ad9175d9110b7d2af5
+    md5: 1fb54f025e4dbfbfd39b5d26c87e72e0
   Contribution/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Contribution
     md5: ecb2dc3f24e6a527e5d334687be04942
@@ -1491,7 +1495,7 @@ html:
     md5: 0da0285e2f0978f9f6f5ec5076fdfdd6
   Model/pFruB-Cra_System/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/pFruB-Cra_System
-    md5: 6fb06c53c531cacc69309b077dad6f96
+    md5: f3f2357a0039fb5afb50743802373562
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Notebook
     md5: 6228451f841031efda5865d8e509ed96
