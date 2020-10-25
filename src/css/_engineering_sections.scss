@@ -190,3 +190,20 @@ $engg-graph-card-border: #ea526f;
     }
   }
 }
+
+#biosensor, #inoculant {
+  .design {
+    .rounded-rectangle {
+      height: 200px;
+    }
+  }
+}
+
+
+// media queries
+
+@include respond-below(md) {
+  .rounded-rectangle {
+    font-size: 0.5rem;;
+  }
+}
