@@ -29,7 +29,6 @@ block headVars
 block article
 
   h1 Atmosphere Regulated Killswitch
-
   .chart-wrapper
     section#killswitch
       .row.problem
@@ -110,17 +109,17 @@ block article
               pH dependency of the FNR promoter (due to the fluctuation in pH in the sugar extraction process)
 
       .arrows
-        +arrow("#killswitch-exp1", "#killswitch-mod1", "#000000",    0, 0, 15, 0)
-        +arrow("#killswitch-mod1", "#killswitch-exp2", "#000000",    0, 5, 10, -50)
-        +bi-arrow("#killswitch-exp2", "#killswitch-mod3", "#000000", -15, 15, 17, -10)
-        +arrow("#killswitch-mod4", "#killswitch-exp3", "#000000",    0, 0, -15, 0)
-        +arrow("#killswitch-mod3", "#killswitch-exp4", "#000000",    0, 0, 10, -50)
-        +arrow("#killswitch-exp3", "#killswitch-exp4", "#000000",    0, 0, 0, -15)
+        +arrow("#killswitch-exp1", "#killswitch-mod1", "#ea526f",    0, 0, 10, 0)
+        +arrow("#killswitch-mod1", "#killswitch-exp2", "#ea526f",    0, 15, 10, -40, "if high cell viability", -30, -30)
+        +bi-arrow("#killswitch-exp2", "#killswitch-mod3", "#ea526f", -10, 15, 10, 0)
+        +arrow("#killswitch-mod4", "#killswitch-exp3", "#ea526f",    0, 0, -10, 0)
+        +arrow("#killswitch-mod3", "#killswitch-exp4", "#ea526f",    0, 10, 10, -40, "if not quick enough", -75, -40)
+        +arrow("#killswitch-exp3", "#killswitch-exp4", "#ea526f",    0, 0, 0, -10, "if inadequate Kd value", 20, -30)
 
   h1 pFruB-Cra System
 
   .chart-wrapper
-    section#killswitch
+    section#biosensor
       .row.problem
         .col-6
           h2 Problem Statement
@@ -130,7 +129,6 @@ block article
               glucose and fructose. Since this process was important to the life cycle of the plant, it wasn’t practical to 
               genetically re-engineer sugarcane cells itself. The most harm this enzyme causes is post-harvest and hence, that 
               seemed like the most logical time period for us to target. 
-
       .row.design
         .col-12
           h2 Designing Process
@@ -167,7 +165,6 @@ block article
               p 5
             p.
               Using these parts, we constructed our fructose regulated anti invertase.
-
       .row.brief
         .col-5
           h2 Modelling
@@ -219,13 +216,13 @@ block article
               Site-directed mutagenesis of the pFruB to bring the K<sub>d</sub> value to the one established through the model
 
       .arrows
-        +bi-arrow("#biosensor-mod1", "#biosensor-exp1", "#000000", 20, 0, -20, 0)
-        +arrow("#biosensor-exp1", "#biosensor-mod5", "#000000", 20, 35, -5, -80)
-        +bi-arrow("#biosensor-mod3", "#biosensor-exp2", "#000000", 10, -85, -15, 10)
-        +bi-arrow("#biosensor-mod3", "#biosensor-exp3", "#000000", 17, 0, -17, 0)
-        +bi-arrow("#biosensor-mod4", "#biosensor-exp4", "#000000", 17, 0, -17, 0)
-        +arrow("#biosensor-mod4", "#biosensor-exp5", "#000000", 0, 30, 0, -40)
-        +arrow("#biosensor-exp4", "#biosensor-mod5", "#000000", 5, 20, 13, -30)
+        +bi-arrow("#biosensor-mod1", "#biosensor-exp1", "#ea526f", 10, 0, -10, 0)
+        +arrow("#biosensor-exp1", "#biosensor-mod5", "#ea526f", 20, 35, -5, -75)
+        +bi-arrow("#biosensor-mod3", "#biosensor-exp2", "#ea526f", 8, -75, -10, 10)
+        +bi-arrow("#biosensor-mod3", "#biosensor-exp3", "#ea526f", 10, 0, -10, 0)
+        +bi-arrow("#biosensor-mod4", "#biosensor-exp4", "#ea526f", 10, 0, -10, 0)
+        +arrow("#biosensor-mod4", "#biosensor-exp5", "#ea526f", 0, 30, 0, -40, "if inadequate", 0, 0)
+        +arrow("#biosensor-exp4", "#biosensor-mod5", "#ea526f", 5, 20, 13, -30)
 
 
   h1 Polymer Inoculant
@@ -299,9 +296,9 @@ block article
               Capillary action experiment will help with delivery mechanism model in proposed implementation
 
       .arrows
-        +arrow("#inoculant-exp1", "#inoculant-mod1", "#000000", 0, 0, 15, 15)
-        +arrow("#inoculant-exp2", "#inoculant-mod1", "#000000", 0, 0, 5, 45)
-        +arrow("#inoculant-exp3", "#inoculant-mod2", "#000000", 0, 0, 4, 53)
+        +arrow("#inoculant-exp1", "#inoculant-mod1", "#ea526f", 0, 0, 10, 15)
+        +arrow("#inoculant-exp2", "#inoculant-mod1", "#ea526f", 0, 0, 0, 40)
+        +arrow("#inoculant-exp3", "#inoculant-mod2", "#ea526f", 0, 0, 4, 45)
 
 
 
