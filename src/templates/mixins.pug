@@ -110,16 +110,18 @@ mixin pdf(url, description)
     | .
   embed(src=url type="application/pdf" title=description)
 
-mixin arrow(from, to, color, x1, y1, x2, y2)
-  .arrow-container(data-from=from data-to=to data-offset-x1=x1 data-offset-x2=x2 data-offset-y1=y1 data-offset-y2=y2)
+mixin arrow(from, to, color, x1, y1, x2, y2, label, label_x, label_y)
+  .arrow-container(data-from=from data-to=to data-offset-x1=x1 data-offset-x2=x2 data-offset-y1=y1 data-offset-y2=y2 data-label-offset-x=label_x data-label-offset-y=label_y)
     svg(height=100 width=100)
       defs
         marker(id="arrow_" + from + "_" + to markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto")
           polygon(points="0 0, 6 3.5, 0 7" style='fill: ' + color + ';')
       line.arrow(x1=0 y1=0 x2=87 y2=87 marker-end="url(#" + "arrow_" + from + "_" + to + ")" stroke=color)
+    if label
+      p.label= label
 
-mixin bi-arrow(from, to, color, x1, y1, x2, y2)
-  .arrow-container(data-from=from data-to=to data-offset-x1=x1 data-offset-x2=x2 data-offset-y1=y1 data-offset-y2=y2)
+mixin bi-arrow(from, to, color, x1, y1, x2, y2, label)
+  .arrow-container(data-from=from data-to=to data-offset-x1=x1 data-offset-x2=x2 data-offset-y1=y1 data-offset-y2=y2 data-label-offset-x=label_x data-label-offset-y=label_y)
     svg(height=100 width=100)
       defs
         marker#startarrow(markerWidth="6" markerHeight="7" refX="6" refY="3.5" orient="auto")
@@ -127,3 +129,5 @@ mixin bi-arrow(from, to, color, x1, y1, x2, y2)
         marker#endarrow(markerWidth="6" markerHeight="7" refX="0" refY="3.5" orient="auto" markerUnits="strokeWidth")
           polygon(points="0 0, 6 3.5, 0 7" fill=color)
       line.arrow(x1=0 y1=0 x2=87 y2=87 marker-end="url(#endarrow)" marker-start="url(#startarrow)" stroke=color)
+    if label
+      p.label= label

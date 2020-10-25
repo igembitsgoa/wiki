@@ -1,5 +1,22 @@
+$engg-section-heading: #ea526f;
+$engg-problem-card-background: #fde6ea;
+$engg-problem-card-text: #9e132e;
+$engg-problem-card-border: #ea526f;
+
+$engg-design-card-background: #d6feff;
+$engg-design-card-text: #006669;
+$engg-design-card-border: #007679;
+
+$engg-design-number-background: #009c9f;
+$engg-design-number-text: white;
+$engg-design-number-border: #007679;
+
+$engg-graph-card-background: #fde6ea;
+$engg-graph-card-text: #9e132e;
+$engg-graph-card-border: #ea526f;
+
 .chart-wrapper {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .content section {
@@ -8,6 +25,7 @@
   h2 {
     text-align: center;
     margin-bottom: 1rem;
+    color: $engg-section-heading;
     font-family: "Lato", sans-serif;
   }
 
@@ -24,6 +42,14 @@
 
   .problem {
     justify-content: center;
+    .rounded-rectangle {
+      background-color: $engg-problem-card-background;
+      color: $engg-problem-card-text;
+      border-color: $engg-problem-card-border;
+      p {
+        color: $engg-problem-card-text;
+      }
+    }
   }
 
   .design {
@@ -35,6 +61,12 @@
 
     .rounded-rectangle {
       height: 150px;
+      background-color: $engg-design-card-background;
+      color: $engg-design-card-text;
+      border-color: $engg-design-card-border;
+      p {
+        color: $engg-design-card-text;
+      }
     }
   }
 
@@ -48,11 +80,20 @@
 
   .graph {
     justify-content: space-around;
+    .rounded-rectangle, .oval {
+      background-color: $engg-graph-card-background;
+      color: $engg-graph-card-text;
+      border-color: $engg-graph-card-border;
+      p {
+        color: $engg-graph-card-text;
+      }
+    }
+
   }
 
   .rounded-rectangle {
     position: relative;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 1.5rem;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
     margin-bottom: 3rem;
@@ -68,16 +109,18 @@
     .number {
       height: 50px;
       width: 50px;
-      border-radius: 25px;
-      border: 1px solid black;
       top: -25px;
       left: calc(50% - 25px);
       position: absolute;
       display: flex;
       justify-content: center;
-      background: white;
+      border-radius: 25px;
+      border: 1px solid;
+      border-color: $engg-design-number-border;
+      background: $engg-design-number-background;
       align-items: center;
       p {
+        color: $engg-design-number-text;
         font-size: 1.3rem;
         line-height: 1;
         padding: 0;
@@ -133,6 +176,34 @@
         overflow: visible;
         stroke-width: 2;
       }
+      p.label {
+        position: absolute;
+        margin: 0;
+        padding: 4px;
+        font-size: 0.8rem;
+        background-color: $engg-design-card-background;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid $engg-design-card-border;
+        color: black;
+      }
     }
+  }
+}
+
+#biosensor, #inoculant {
+  .design {
+    .rounded-rectangle {
+      height: 200px;
+    }
+  }
+}
+
+
+// media queries
+
+@include respond-below(md) {
+  .rounded-rectangle {
+    font-size: 0.5rem;;
   }
 }

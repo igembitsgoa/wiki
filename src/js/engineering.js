@@ -181,6 +181,16 @@ function positionArrows() {
     line.attr('y1', line_y1 + offset_y1);
     line.attr('x2', line_x2 + offset_x2);
     line.attr('y2', line_y2 + offset_y2);
+
+    var label_offset_x = parseInt($(this).attr("data-label-offset-x"));
+    var label_offset_y = parseInt($(this).attr("data-label-offset-y"));
+
+    var label = $(this).find('p.label');
+    label.css('top', height/2 + label_offset_y);
+    label.css('left', width/2 + label_offset_x);
+
+    console.log(label_offset_x, label_offset_y);
+
   });
 };
 
