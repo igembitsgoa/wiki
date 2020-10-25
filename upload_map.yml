@@ -1333,7 +1333,7 @@ css:
     md5: 07c8816f206091e5b3b491d6873c2d69
   css/engineering.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/engineeringCSS?action=raw&ctype=text/css
-    md5: 0b7604680173f11cf7e400afeeb25eb9
+    md5: 3ab146c15de12b9376564edd8a7d65c3
   css/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/indexCSS?action=raw&ctype=text/css
     md5: d99b69c2b1eb409cb4b980e2acf9285b
@@ -1382,7 +1382,7 @@ html:
     md5: b05e398d3cafdd67f591a03761658913
   Engineering/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Engineering
-    md5: be97ca1bf55361391fd37efb9b8baea0
+    md5: 47795fb07a242a1290ef62ab0bf04580
   Entrepreneurship/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Entrepreneurship
     md5: b79c1fe24605dbeb76ac61a8949ab2ce
@@ -1482,7 +1482,7 @@ js:
     md5: 96b8120a6b03c1cf0ad74a8cce907b69
   engineering.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/engineering-bundleJS?action=raw&ctype=text/javascript
-    md5: addda17906523feb3f4c486f29f34ea7
+    md5: da759d419af683a82d5b89a11d31ef9d
   index.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/index-bundleJS?action=raw&ctype=text/javascript
     md5: 250a79ffa8b15d6a3822560053c3ead0
