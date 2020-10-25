@@ -1175,6 +1175,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/5/54/T--BITSPilani-Goa_India--img--Parts--header.svg
     md5: a97d35596589edcf1f1327c639a33261
     upload_filename: T--BITSPilani-Goa_India--img--Parts--header.svg
+  assets/img/Safety--Biosafety.png:
+    link_URL: https://2020.igem.org/wiki/images/f/f8/T--BITSPilani-Goa_India--img--Safety--Biosafety.png
+    md5: cec7c1ea18d1a0b8dfc187a814a50df8
+    upload_filename: T--BITSPilani-Goa_India--img--Safety--Biosafety.png
   assets/img/Safety--header.svg:
     link_URL: https://2020.igem.org/wiki/images/0/03/T--BITSPilani-Goa_India--img--Safety--header.svg
     md5: 3e48df707f6ba9dfb4c68d28743489ed
@@ -1507,7 +1511,7 @@ html:
     md5: 9eb1c7e83f3a1aba041592e1ceb414c0
   Safety/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Safety
-    md5: 93b3514a1076fc5ae8cac00c6eaf0321
+    md5: 103be6f1ec18481e1803481d8e63cff1
   Sample/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Sample
     md5: 891ff424079318dbfbac2ff97f6b661e
