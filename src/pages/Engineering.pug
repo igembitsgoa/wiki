@@ -30,169 +30,278 @@ block article
 
   h1 Atmosphere Regulated Killswitch
 
-  section#killswitch
+  .chart-wrapper
+    section#killswitch
+      .row.problem
+        .col-6
+          h2 Problem Statement
+          .rounded-rectangle
+            p.
+              Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
+              effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
+      .row.design
+        .col-12
+          h2 Designing Process
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 1
+            p.
+              First, we ascertained the trigger to be the swift and abrupt change in atmospheric conditions 
+              (anaerobic inside the sugarcane stem and aerobic outside)
+          .rounded-rectangle
+            .number 
+              p 2
+            p.
+              Second, we found a toxin-antitoxin pair that was quite fatal to bacteria but did not affect human cells.
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 3
+            p.
+              After an extensive search of the registry, we found the FNR promoter that was only
+              activated in anaerobic conditions.
+          .rounded-rectangle
+            .number 
+              p 4
+            p.
+              Using these parts, we designed our killswitch genetic circuit.
+      .row.brief
+        .col-5
+          h2 Modelling
+          p.text-center.
+            We focussed on modelling the behaviour of the circuit to the change in concentration of oxygen in the atmosphere. 
+            We further predicted the response time for the same.
+        .col-5
+          h2 Experimental Design
+          p.text-center.
+            Due to the global pandemic, we were unable to complement our modelling with experimental results. 
+            However, we prepared and planned for these experiments to strengthen our project design and help the 
+            next team carry out our project to completion.
+      .row.graph
+        .col-5
+          .rounded-rectangle#killswitch-mod1
+            p.
+              Create a persister cell model in phase 2
+          .rounded-rectangle#killswitch-mod2
+            p.
+              Differential expression of the antitoxin in the presence and absence of oxygen
+          .rounded-rectangle#killswitch-mod3
+            p.
+              Time required for the buildup of toxin concentration sufficient to restrict bacterial growth
+          .rounded-rectangle#killswitch-mod4
+            p.
+              Identify the optimum Kd value for the system to work
+        .col-4
+          .oval#killswitch-exp1
+            p.
+              Assay to check if the killswitch functions as intended
+          .oval#killswitch-exp2
+            p.
+              Killswitch response time assay to ascertain the time required after exposure for the cell to succumb
+          .oval#killswitch-exp3
+            p.
+              Gel shift assay to experimentally determine Kd value of the FNR promoter
+          .oval#killswitch-exp4
+            p.
+              Site-directed mutagenesis of the FNR promoter to bring the Kd value to the one established through the model
+          .oval#killswitch-exp5
+            p.
+              pH dependency of the FNR promoter (due to the fluctuation in pH in the sugar extraction process)
 
-    .row.problem
-      .col-6
-        h2 Problem Statement
-        .rounded-rectangle
-          p.
-            Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
-            effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
-    .row.design
-      .col-12
-        h2 Designing Process
-      .col-5
-        .rounded-rectangle
-          .number 
-            p 1
-          p.
-            First, we ascertained the trigger to be the swift and abrupt change in atmospheric conditions 
-            (anaerobic inside the sugarcane stem and aerobic outside)
-        .rounded-rectangle
-          .number 
-            p 2
-          p.
-            Second, we found a toxin-antitoxin pair that was quite fatal to bacteria but did not affect human cells.
-      .col-5
-        .rounded-rectangle
-          .number 
-            p 3
-          p.
-            After an extensive search of the registry, we found the FNR promoter that was only
-            activated in anaerobic conditions.
-        .rounded-rectangle
-          .number 
-            p 4
-          p.
-            Using these parts, we designed our killswitch genetic circuit.
-    .row.brief
-      .col-5
-        h2 Modelling
-        p.text-center.
-          We focussed on modelling the behaviour of the circuit to the change in concentration of oxygen in the atmosphere. 
-          We further predicted the response time for the same.
-      .col-5
-        h2 Experimental Design
-        p.text-center.
-          Due to the global pandemic, we were unable to complement our modelling with experimental results. 
-          However, we prepared and planned for these experiments to strengthen our project design and help the 
-          next team carry out our project to completion.
-    .row.graph
-      .col-5
-        .rounded-rectangle#killswitch-mod1
-          p.
-            Create a persister cell model in phase 2
-        .rounded-rectangle#killswitch-mod2
-          p.
-            Differential expression of the antitoxin in the presence and absence of oxygen
-        .rounded-rectangle#killswitch-mod3
-          p.
-            Time required for the buildup of toxin concentration sufficient to restrict bacterial growth
-        .rounded-rectangle#killswitch-mod4
-          p.
-            Identify the optimum Kd value for the system to work
-      .col-4
-        .oval#killswitch-exp1
-          p.
-            Assay to check if the killswitch functions as intended
-        .oval#killswitch-exp2
-          p.
-            Killswitch response time assay to ascertain the time required after exposure for the cell to succumb
-        .oval#killswitch-exp3
-          p.
-            Gel shift assay to experimentally determine Kd value of the FNR promoter
-        .oval#killswitch-exp4
-          p.
-            Site-directed mutagenesis of the FNR promoter to bring the Kd value to the one established through the model
-        .oval#killswitch-exp5
-          p.
-            pH dependency of the FNR promoter (due to the fluctuation in pH in the sugar extraction process)
+      .arrows
+        +arrow("#killswitch-exp1", "#killswitch-mod1", "#000000",    0, 0, 15, 0)
+        +arrow("#killswitch-mod1", "#killswitch-exp2", "#000000",    0, 5, 10, -50)
+        +bi-arrow("#killswitch-exp2", "#killswitch-mod3", "#000000", -15, 15, 17, -10)
+        +arrow("#killswitch-mod4", "#killswitch-exp3", "#000000",    0, 0, -15, 0)
+        +arrow("#killswitch-mod3", "#killswitch-exp4", "#000000",    0, 0, 10, -50)
+        +arrow("#killswitch-exp3", "#killswitch-exp4", "#000000",    0, 0, 0, -15)
 
-    .arrows
-      +arrow("#killswitch-exp1", "#killswitch-mod1", "#000000")
-      +arrow("#killswitch-mod1", "#killswitch-exp2", "#000000")
-      +arrow("#killswitch-exp2", "#killswitch-mod3", "#000000")
-      +arrow("#killswitch-mod4", "#killswitch-exp3", "#000000")
-      +arrow("#killswitch-mod3", "#killswitch-exp4", "#000000")
-      +arrow("#killswitch-exp3", "#killswitch-exp4", "#000000")
+  h1 pFruB-Cra System
+
+  .chart-wrapper
+    section#killswitch
+      .row.problem
+        .col-6
+          h2 Problem Statement
+          .rounded-rectangle
+            p.
+              Our project aims to reduce the activity of invertase, an enzyme that converts useful sucrose into profitless
+              glucose and fructose. Since this process was important to the life cycle of the plant, it wasn’t practical to 
+              genetically re-engineer sugarcane cells itself. The most harm this enzyme causes is post-harvest and hence, that 
+              seemed like the most logical time period for us to target. 
+
+      .row.design
+        .col-12
+          h2 Designing Process
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 1
+            p.
+              After surveying publications on invertases, we came across a group of proteins called anti-invertases/invertase 
+              inhibitor which regulate invertase and control sugar hydrolysis.
+          .rounded-rectangle
+            .number 
+              p 3
+            p.
+              We also discovered that anti-invertase has quite a small half-life. This meant that the invertase would have to 
+              be secreted at the site of action (i.e., inside the sugarcane).
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 2
+            p.
+              To decrease the nutrient load on our bacterial chassis and have a controlled release of our protein, we decided on a 
+              biosensor mechanism.
+          .rounded-rectangle
+            .number 
+              p 4
+            p.
+              Since the concentration of fructose was a more or less direct result of invertase activity, we wanted to calibrate a 
+              self-regulatory mechanism that modulated the secretion of the anti-invertase in tandem with the concentration of 
+              fructose in the medium. We were able to achieve that by using a pFruB-Cra system.
+        .col-5
+          .rounded-rectangle.mt-5
+            .number 
+              p 5
+            p.
+              Using these parts, we constructed our fructose regulated anti invertase.
+
+      .row.brief
+        .col-5
+          h2 Modelling
+          p.text-center.
+            Biosensor will simulate output of invertase inhibitor for particular levels of fructose in the environment and will also 
+            link the promoter activity to a measurable output.
+        .col-5
+          h2 Experimental Design
+          p.text-center.
+            Due to the global pandemic, we were unable to complement our modelling with experimental results. However, we prepared 
+            and planned for these experiments to strengthen our project design and help the next team carry out our project to completion.
+      .row.graph
+        .col-5
+          .rounded-rectangle#biosensor-mod1
+            strong Homology Modelling and Docking
+            p.
+              We tried to get an insight into the protein-protein interaction through modelling of anti-invertase with invertase.
+          .rounded-rectangle#biosensor-mod2
+            strong Homology Modelling
+            p.
+              We tried to get an insight into the protein-DNA interaction through homology modelling of FruR.
+          .rounded-rectangle#biosensor-mod3
+            strong Docking studies of FruR with F-1-P
+            p.
+              Since FruR and its interactions are not extensively characterised, we had to conduct molecular docking studies in order
+              to elucidate the interactions between FruR and fructose.
+          .rounded-rectangle#biosensor-mod4
+            p.
+              Identify the optimum Kd value for the system to work
+          .rounded-rectangle#biosensor-mod5
+            p.
+              In phase 2, prediction of overall efficiency of the pFruB-Cra system and the amount of inoculant required per sugarcane 
+              using information from experiments.
+        .col-4
+          .oval#biosensor-exp1
+            p.
+              Anti-Invertase Assay to characterise the functioning of anti-invertase.
+          .oval#biosensor-exp2
+            p.
+              FruR Specificity Experiment
+          .oval#biosensor-exp3
+            p.
+              pFruB-FruR Characterisation
+          .oval#biosensor-exp4
+            p.
+              Gel shift assay to experimentally determine K<sub>d</sub> value of pFruB.
+          .oval#biosensor-exp5
+            p.
+              Site-directed mutagenesis of the pFruB to bring the K<sub>d</sub> value to the one established through the model
+
+      .arrows
+        +bi-arrow("#biosensor-mod1", "#biosensor-exp1", "#000000", 20, 0, -20, 0)
+        +arrow("#biosensor-exp1", "#biosensor-mod5", "#000000", 20, 35, -5, -80)
+        +bi-arrow("#biosensor-mod3", "#biosensor-exp2", "#000000", 10, -85, -15, 10)
+        +bi-arrow("#biosensor-mod3", "#biosensor-exp3", "#000000", 17, 0, -17, 0)
+        +bi-arrow("#biosensor-mod4", "#biosensor-exp4", "#000000", 17, 0, -17, 0)
+        +arrow("#biosensor-mod4", "#biosensor-exp5", "#000000", 0, 30, 0, -40)
+        +arrow("#biosensor-exp4", "#biosensor-mod5", "#000000", 5, 20, 13, -30)
 
 
   h1 Polymer Inoculant
+  .chart-wrapper
+    section#inoculant
+      .row.problem
+        .col-6
+          h2 Problem Statement
+          .rounded-rectangle
+            p.
+              Since our product includes live bacteria, we wanted to ensure that the product had a long shelf life. After consulting farmers in various belts 
+              across India, we also came across the need for the product to be organic, non-toxic and cheap. 
+      .row.design
+        .col-12
+          h2 Designing Process
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 1
+            p.
+              We started researching polymer-based inoculants that had longevity and were organic in nature.
+          .rounded-rectangle
+            .number 
+              p 2
+            p.
+              We determined the optimal inoculant composition of a Carboxymethylcellulose-based polymer with 
+              bentonite suspending agent and sorbic acid preservative.
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 3
+            p.
+              We optimized the viscosity to minimize the inoculant's toxicity, and ensured that it is close to 
+              that of water for efficient transport.
+          .rounded-rectangle
+            .number 
+              p 4
+            p.
+              This inoculant would be supplied to the farmer and can be used through an injector mechanism. In this manner 
+              the sugarcane's inherent transport mechanism due to transpirational pull is leveraged for the uniform distribution of the 
+              bacteria through the plant.
+      .row.brief
+        .col-5
+          h2 Modelling
+          p.text-center.
+            Keeping in mind the concerns of the sugarcane farmers across major Indian belts,we devised ways to optimise the features of the polymer 
+            inoculant. 
+        .col-5
+          h2 Experimental Design
+          p.text-center.
+            Due to the global pandemic, we were unable to complement our modelling with experimental results. 
+            However, we prepared and planned for these experiments to strengthen our project design and help the 
+            next team carry out our project to completion.
+      .row.graph
+        .col-5
+          .rounded-rectangle#inoculant-mod1
+            p.
+              Kinematic Viscosity model and Toxicity model
+          .rounded-rectangle#inoculant-mod2
+            p.
+              Proposed implementation and economic scalability model
+        .col-4
+          .oval#inoculant-exp1
+            p.
+              Removal of chemical residues of polymer inoculant during processing of sugarcane juice 
+          .oval#inoculant-exp2
+            p.
+              Validating toxicity model
+          .oval#inoculant-exp3
+            p.
+              Capillary action experiment will help with delivery mechanism model in proposed implementation
 
-  section#inoculant
-
-    .row.problem
-      .col-6
-        h2 Problem Statement
-        .rounded-rectangle
-          p.
-            Since our product includes live bacteria, we wanted to ensure that the product had a long shelf life. After consulting farmers in various belts 
-            across India, we also came across the need for the product to be organic, non-toxic and cheap. 
-    .row.design
-      .col-12
-        h2 Designing Process
-      .col-5
-        .rounded-rectangle
-          .number 
-            p 1
-          p.
-            We started researching polymer-based inoculants that had longevity and were organic in nature.
-        .rounded-rectangle
-          .number 
-            p 2
-          p.
-            We determined the optimal inoculant composition of a Carboxymethylcellulose-based polymer with 
-            bentonite suspending agent and sorbic acid preservative.
-      .col-5
-        .rounded-rectangle
-          .number 
-            p 3
-          p.
-            We optimized the viscosity to minimize the inoculant's toxicity, and ensured that it is close to 
-            that of water for efficient transport.
-        .rounded-rectangle
-          .number 
-            p 4
-          p.
-            This inoculant would be supplied to the farmer and can be used through an injector mechanism. In this manner 
-            the sugarcane's inherent transport mechanism due to transpirational pull is leveraged for the uniform distribution of the 
-            bacteria through the plant.
-    .row.brief
-      .col-5
-        h2 Modelling
-        p.text-center.
-          Keeping in mind the concerns of the sugarcane farmers across major Indian belts,we devised ways to optimise the features of the polymer 
-          inoculant. 
-      .col-5
-        h2 Experimental Design
-        p.text-center.
-          Due to the global pandemic, we were unable to complement our modelling with experimental results. 
-          However, we prepared and planned for these experiments to strengthen our project design and help the 
-          next team carry out our project to completion.
-    .row.graph
-      .col-5
-        .rounded-rectangle#inoculant-mod1
-          p.
-            Kinematic Viscosity model and Toxicity model
-        .rounded-rectangle#inoculant-mod2
-          p.
-            Proposed implementation and economic scalability model
-      .col-4
-        .oval#inoculant-exp1
-          p.
-            Removal of chemical residues of polymer inoculant during processing of sugarcane juice 
-        .oval#inoculant-exp2
-          p.
-            Validating toxicity model
-        .oval#inoculant-exp3
-          p.
-            Capillary action experiment will help with delivery mechanism model in proposed implementation
-
-    .arrows
-      +arrow("#inoculant-exp1", "#inoculant-mod1", "#000000")
-      +arrow("#inoculant-exp2", "#inoculant-mod1", "#000000")
-      +arrow("#inoculant-exp3", "#inoculant-mod2", "#000000")
+      .arrows
+        +arrow("#inoculant-exp1", "#inoculant-mod1", "#000000", 0, 0, 15, 15)
+        +arrow("#inoculant-exp2", "#inoculant-mod1", "#000000", 0, 0, 5, 45)
+        +arrow("#inoculant-exp3", "#inoculant-mod2", "#000000", 0, 0, 4, 53)
 
 
 

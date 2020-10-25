@@ -129,8 +129,6 @@ function positionArrows() {
     var to_x = to_self_position.left + to_parent_position.left;
     var to_y = to_self_position.top + to_parent_position.top;
 
-    console.log(from_x, from_y, to_x, to_y);
-
     if (from_x < to_x) {
       var x1 = from_x + from_width;
       var x2 = to_x;
@@ -168,11 +166,21 @@ function positionArrows() {
     svg.attr('width', width);
     svg.attr('height', height);
 
+    var line_x1 = parseInt(from_x < to_x ? 0 :  width);
+    var line_y1 = parseInt(from_y < to_y ? 0 : height);
+    var line_x2 = parseInt(from_x < to_x ? width  : 0);
+    var line_y2 = parseInt(from_y < to_y ? height : 0);
+
+    var offset_x1 = parseInt($(this).attr('data-offset-x1'));
+    var offset_y1 = parseInt($(this).attr('data-offset-y1'));
+    var offset_x2 = parseInt($(this).attr('data-offset-x2'));
+    var offset_y2 = parseInt($(this).attr('data-offset-y2'));
+
     var line = $(this).find('line');
-    line.attr('x1', (from_x < to_x ? 0 : width))  + line.attr('offset_x1');
-    line.attr('y1', (from_y < to_y ? 0 : height)) + line.attr('offset_y1');
-    line.attr('x2', (from_x < to_x ? width : 0))  + line.attr('offset_x2');
-    line.attr('y2', (from_y < to_y ? height : 0)) + line.attr('offset_y2');
+    line.attr('x1', line_x1 + offset_x1);
+    line.attr('y1', line_y1 + offset_y1);
+    line.attr('x2', line_x2 + offset_x2);
+    line.attr('y2', line_y2 + offset_y2);
   });
 };
 
