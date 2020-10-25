@@ -246,4 +246,8 @@ main .row {
   dfn {
     border-bottom: 1px solid black;
   }
+
+  .table-wrapper {
+    overflow: auto;
+  }
 }

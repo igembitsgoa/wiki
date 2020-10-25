@@ -12,6 +12,18 @@ block headVars
     - var backgroundAttributionLink = "https://freepik.com"
     - var theme = "project"
 
+    style.
+        @media only screen and (max-width: 600px) {
+            header #heading h1 {
+                font-size: 3rem !important;
+            }
+        }
+        @media only screen and (max-width: 450px) {
+            header #heading h1 {
+                font-size: 2.2rem !important;
+            }
+        }
+
 
 block article
 
@@ -47,16 +59,17 @@ block article
 
         The table below lists our final inoculant formulation after optimization of the toxicities of the various ingredients:
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | Component                | Optimised Concentration (w/w)|
-        | :---------:              | :--------------------------: |
-        | Culture Broth (LB)      | 95                           |
-        | Triton X 100            |  3.1                          |
-        | Carboxymethyl cellulose |  0.1                          |
-        | Bentonite               |  1.4                          |
-        | Sorbic Acid             |  0.2                          |
-        | Potassium Sorbate       | 0.2                          |
-        [Table 1: Optimal concentration of each component in the inoculant]
+    .table-wrapper 
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
+            | Component                | Optimised Concentration (w/w)|
+            | :---------:              | :--------------------------: |
+            | Culture Broth (LB)      | 95                           |
+            | Triton X 100            |  3.1                          |
+            | Carboxymethyl cellulose |  0.1                          |
+            | Bentonite               |  1.4                          |
+            | Sorbic Acid             |  0.2                          |
+            | Potassium Sorbate       | 0.2                          |
+            [Table 1: Optimal concentration of each component in the inoculant]
 
     :markdown-it(html)
         The ingredients chosen for the final formulation were designed such that any remnants would be removed during the sugar manufacturing process (for which we have designed experiments for lab scale validation) and have minimal toxicity.
@@ -83,17 +96,18 @@ block article
     - var imgpath = "" + require("../assets/img/Implementation--PFD.png")["default"]
     +image(2, imgpath, "Process Flow Diagram indicating the processes involved in the industrial manufacturing of our product")
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | Unit/Stream | Component            | Unit/Stream | Component             |
-        | :---------: | :------------------: |:----------: |:--------------------: |
-        | S1          | Fresh Nutrient Media | S5          | Concentrated Retentate |
-        | B1          | Media Reservoir      | S6          | Permeate Nutrient Media |
-        | S2          | Nutrient Media to Mixer | S7          | Inoculant Mixture  (See above table)|
-        | B2          | Mixer | B5          | Inoculant Storage |
-        | S3          | Media to Bioreactor | S8          | Inoculant Mixture to Hopper |
-        | B3          | Bioreactor | B6          | Hopper |
-        | S4          | Fermented Cells with Media | S9          | Packaging Outlet |
-        | B4          | Crossflow Filter |          |  |
+    .table-wrapper
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
+            | Unit/Stream | Component            | Unit/Stream | Component             |
+            | :---------: | :------------------: |:----------: |:--------------------: |
+            | S1          | Fresh Nutrient Media | S5          | Concentrated Retentate |
+            | B1          | Media Reservoir      | S6          | Permeate Nutrient Media |
+            | S2          | Nutrient Media to Mixer | S7          | Inoculant Mixture  (See above table)|
+            | B2          | Mixer | B5          | Inoculant Storage |
+            | S3          | Media to Bioreactor | S8          | Inoculant Mixture to Hopper |
+            | B3          | Bioreactor | B6          | Hopper |
+            | S4          | Fermented Cells with Media | S9          | Packaging Outlet |
+            | B4          | Crossflow Filter |          |  |
 
     :markdown-it(html)
 

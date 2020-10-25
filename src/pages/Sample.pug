@@ -76,12 +76,13 @@ block article
         When you want to insert a table, indent one level back and specify the plugin.
         Then indent inside again and start writing the table.
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | This is | the table | header row |
-        | ------  | --------- | ---------- |
-        | 1       | 2         | 3          |
-        | 4       | 5         | 6          |
-        [Table 1: Caption goes here.]
+    .table-wrapper
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
+            | This is | the table | header row |
+            | ------  | --------- | ---------- |
+            | 1       | 2         | 3          |
+            | 4       | 5         | 6          |
+            [Table 1: Caption goes here.]
 
     :markdown-it(html)
         And when you're done, go back to the regular markdown filter.
@@ -89,25 +90,27 @@ block article
     :markdown-it(html)
         **Example 2:**
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | Left aligned | Center aligned | Right aligned |
-        | :----------- | :------------: | ------------: |
-        | 1 | 2 | 3 |
-        | 4 | 5 | 6 |
+    .table-wrapper
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
+            | Left aligned | Center aligned | Right aligned |
+            | :----------- | :------------: | ------------: |
+            | 1 | 2 | 3 |
+            | 4 | 5 | 6 |
 
     :markdown-it(html)
         **Example 3:**
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        |              |          Grouping           ||
-        |First Header  | Second Header | Third Header |
-        | ------------ | :-----------: | -----------: |
-        |Content       |          *Long Cell*        ||
-        |Content       |   **Cell**    |         Cell |                                               
-        |New section   |     More      |[Data](https://google.com) |
-        |And more      | With an escaped '\|'       ||
+    .table-wrapper
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
+            |              |          Grouping           ||
+            |First Header  | Second Header | Third Header |
+            | ------------ | :-----------: | -----------: |
+            |Content       |          *Long Cell*        ||
+            |Content       |   **Cell**    |         Cell |                                               
+            |New section   |     More      |[Data](https://google.com) |
+            |And more      | With an escaped '\|'       ||
 
-        [Table 3: Caption goes here.]
+            [Table 3: Caption goes here.]
 
     :markdown-it(html)
 

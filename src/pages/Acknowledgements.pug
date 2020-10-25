@@ -11,6 +11,28 @@ block headVars
   - var theme = "journal"
   - var fullWidth = true
 
+  style.
+      @media only screen and (max-width: 1200px) {
+          header #heading h1 {
+              font-size: calc(3.5rem + 2vw) !important;
+          }
+      }
+      @media only screen and (max-width: 1000px) {
+          header #heading h1 {
+              font-size: calc(3rem + 2vw) !important;
+          }
+      }
+      @media only screen and (max-width: 750px) {
+          header #heading h1 {
+              font-size: calc(2rem + 2vw) !important;
+          }
+      }
+      @media only screen and (max-width: 450px) {
+          header #heading h1 {
+              font-size: 2rem !important;
+          }
+      }
+
 block article
 
   p We would like to extend our heartfelt gratitude to all our sponsors for giving us this opportunity to participate in iGEM 2020. Our project would have not culminated without their valuable support, both financial and otherwise.

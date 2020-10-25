@@ -78,17 +78,18 @@ block article
         We formulated a linear optimisation problem using the cost function and the constraints derived above. Using SciPy's `minimize` method
         we solved the problem to find the optimal composition of the inoculant. The resultling optimal concentrations of each component, along with their LD50 values 
         are tabulated below. 
-
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | Component               | LD50 (Rats, oral) (g/kg) | Optimised Concentration (w/w)|
-        | :---------:             | :----------------------: | :--------------------------: |
-        | Culture Broth (LB)      | —                        | 95                           |
-        | Triton X 100            | 4.19                     | 3.1                          |
-        | Carboxymethyl cellulose | 27                       | 0.1                          |
-        | Bentonite               | —                        | 1.4                          |
-        | Sorbic Acid             | 7.36                     | 0.2                          |
-        | Potassium Sorbate       | 4.34                     | 0.2                          |
-        [Table 2: Optimal concentration of each component in the inoculant]
+    
+    .table-wrapper
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
+            | Component               | LD50 (Rats, oral) (g/kg) | Optimised Concentration (w/w)|
+            | :---------:             | :----------------------: | :--------------------------: |
+            | Culture Broth (LB)      | —                        | 95                           |
+            | Triton X 100            | 4.19                     | 3.1                          |
+            | Carboxymethyl cellulose | 27                       | 0.1                          |
+            | Bentonite               | —                        | 1.4                          |
+            | Sorbic Acid             | 7.36                     | 0.2                          |
+            | Potassium Sorbate       | 4.34                     | 0.2                          |
+            [Table 2: Optimal concentration of each component in the inoculant]
 
     :markdown-it(html)
 

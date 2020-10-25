@@ -61,24 +61,25 @@ block article
         The parameters used in the above set of equations along with their description and numerical values are tabulated below. In the absence of literature on the \\( FNR/O_2 \\) interactions, we have 
         made educated guessed about some parameter values.  
     
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
+    .table-wrapper
+        :markdown-it(html plugins=['markdown-it-multimd-table'])
 
-        | Parameter      | Description                                      | Value     | Units                 | Reference                          | 
-        | :-------------:| :-----------------------------------------------:| :--------:| :-------------------: | :---------------------------------:|
-        | \\( \rho_A \\) | Transcription rate of the Antitoxin              | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( \rho_T \\) | Transcription rate of the Toxin                  | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( \beta_A \\)| Translation rate of the Antitoxin                | \\(0.139\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( \beta_T \\) | Translation rate of the Toxin                   | \\(0.033\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( \delta_A \\) | Decay rate of the Antitoxin mRNA               | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( \delta_T \\) | Decay rate of the Toxin mRNA                   | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( d_A \\) | Decay rate of the Antitoxin                         | \\(2.8881\times 10^{-4}\\) | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( d_T \\) | Decay rate of the Toxin                             | \\(0.00115524\\)| \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( F \\) | Decay rate of the Antitoxin in the \\( AT \\) complex | \\(0.2\\)       |         -            | [Gelens et. al., 2013](#citation1)|
-        | \\( \alpha_c \\) | Rate of complex formation                      | \\(2\times 10^6\\)      | \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\( \theta_c \\) | Rate of complex decay                          | \\(7.14972\times 10^{-6}\\)| \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
-        | \\(  C_N \\)     | Plasmid copy number                            | 16                                    | -| |
-        | \\( k_D \\)     | Dissociation constant for FNR and \\( O_2 \\)   | \\(800\times10^{-6}\\)         | \\(\text{s}^{-1}\\) | [Sutton, V. R., et al., 2012](#citation2) |
-         [Table 1: Model paramters and their numerical values]
+            | Parameter      | Description                                      | Value     | Units                 | Reference                          | 
+            | :-------------:| :-----------------------------------------------:| :--------:| :-------------------: | :---------------------------------:|
+            | \\( \rho_A \\) | Transcription rate of the Antitoxin              | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( \rho_T \\) | Transcription rate of the Toxin                  | \\(0.1333\\)    | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( \beta_A \\)| Translation rate of the Antitoxin                | \\(0.139\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( \beta_T \\) | Translation rate of the Toxin                   | \\(0.033\\)     | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( \delta_A \\) | Decay rate of the Antitoxin mRNA               | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( \delta_T \\) | Decay rate of the Toxin mRNA                   | \\(0.00203\\)   | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( d_A \\) | Decay rate of the Antitoxin                         | \\(2.8881\times 10^{-4}\\) | \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( d_T \\) | Decay rate of the Toxin                             | \\(0.00115524\\)| \\(\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( F \\) | Decay rate of the Antitoxin in the \\( AT \\) complex | \\(0.2\\)       |         -            | [Gelens et. al., 2013](#citation1)|
+            | \\( \alpha_c \\) | Rate of complex formation                      | \\(2\times 10^6\\)      | \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\( \theta_c \\) | Rate of complex decay                          | \\(7.14972\times 10^{-6}\\)| \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
+            | \\(  C_N \\)     | Plasmid copy number                            | 16                                    | -| |
+            | \\( k_D \\)     | Dissociation constant for FNR and \\( O_2 \\)   | \\(800\times10^{-6}\\)         | \\(\text{s}^{-1}\\) | [Sutton, V. R., et al., 2012](#citation2) |
+            [Table 1: Model paramters and their numerical values]
 
     :markdown-it(html)
 
