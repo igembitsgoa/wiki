@@ -87,26 +87,26 @@ var themeClass = $("main")
 $("body").addClass(themeClass);
 
 // a terrible way to fix the github.io /wiki/ problem
-if (window.location.href.includes("github.io")) {
-  $("a").each(function () {
-    var link = $(this).attr("href");
-    if (
-      link != "" &&
-      link != "javascript:;" &&
-      !link.match("/wiki/") &&
-      !link.match("https") &&
-      link[0] != "#"
-    ) {
-      if (link[0] == "/") {
-        link = "/wiki" + link;
-      } else {
-        link = "/wiki/" + link;
-      }
-    }
+// if (window.location.href.includes("github.io")) {
+//   $("a").each(function () {
+//     var link = $(this).attr("href");
+//     if (
+//       link != "" &&
+//       link != "javascript:;" &&
+//       !link.match("/wiki/") &&
+//       !link.match("https") &&
+//       link[0] != "#"
+//     ) {
+//       if (link[0] == "/") {
+//         link = "/wiki" + link;
+//       } else {
+//         link = "/wiki/" + link;
+//       }
+//     }
 
-    $(this).attr("href", link);
-  });
-}
+//     $(this).attr("href", link);
+//   });
+// }
 
 function positionArrows() {
   $(".arrow-container").each(function () {
