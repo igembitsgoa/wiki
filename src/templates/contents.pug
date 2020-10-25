@@ -44,10 +44,11 @@ html(lang="en")
     main(class= theme_class)
       .custom-container
         .row
-          .sidebar
-            .nav#contents
-              ul
-                //- Filled automatically from js
+          unless fullWidth
+            .sidebar
+              .nav#contents
+                ul
+                  //- Filled automatically from js
           .content(class={"fullwidth": fullWidth == true})
             article
               block article

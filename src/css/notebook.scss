@@ -16,6 +16,10 @@ main {
     max-width: 1380px;
     margin: 0 auto;
   }
+
+  .row {
+    margin: 0;
+  }
 }
 
 .tooltip {
@@ -57,5 +61,13 @@ footer {
     a {
       color: $black;
     }
+  }
+}
+
+
+@include respond-below(md) {
+  .tabs {
+    margin: 0;
+    padding: 0;
   }
 }

@@ -22,7 +22,11 @@
     scroll-margin-top: 100px;
     display: none;
     .tabs {
+      margin: 0;
       ul {
+        padding: 0;
+        display: flex;
+        justify-content: center;
         margin: 0;
       }
       li {
@@ -34,6 +38,7 @@
         font-size: 1rem;
         font-weight: 600;
         letter-spacing: 1.1;
+        max-width: 25%;
 
         &:hover {
           cursor: pointer;
@@ -250,5 +255,27 @@
 
   dfn {
     border-bottom: 1px solid black;
+  }
+}
+
+#dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  select {
+    max-width: 200px;
+
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1rem;
+    height: 60px;
+  }
+}
+
+@include respond-below(sm) {
+  .tabs ul li a {
+    font-size: 0.85rem;
   }
 }
