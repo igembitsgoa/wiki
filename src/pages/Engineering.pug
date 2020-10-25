@@ -32,28 +32,90 @@ block article
 
   section#killswitch
 
-    .row.justify-content-center
+    .row.problem
       .col-6
         h2 Problem Statement
         .rounded-rectangle
           p.
             Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
             effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
-    .row.justify-content-between
-      .col-6
+    .row.design
+      .col-12
+        h2 Designing Process
+      .col-5
+        .rounded-rectangle
+          .number 
+            p 1
+          p.
+            First, we ascertained the trigger to be the swift and abrupt change in atmospheric conditions 
+            (anaerobic inside the sugarcane stem and aerobic outside)
+        .rounded-rectangle
+          .number 
+            p 2
+          p.
+            Second, we found a toxin-antitoxin pair that was quite fatal to bacteria but did not affect human cells.
+      .col-5
+        .rounded-rectangle
+          .number 
+            p 3
+          p.
+            After an extensive search of the registry, we found the FNR promoter that was only
+            activated in anaerobic conditions.
+        .rounded-rectangle
+          .number 
+            p 4
+          p.
+            Using these parts, we designed our killswitch genetic circuit.
+    .row.brief
+      .col-5
+        h2 Modelling
+        p.text-center.
+          We focussed on modelling the behaviour of the circuit to the change in concentration of oxygen in the atmosphere. 
+          We further predicted the response time for the same.
+      .col-5
+        h2 Experimental Design
+        p.text-center.
+          Due to the global pandemic, we were unable to complement our modelling with experimental results. 
+          However, we prepared and planned for these experiments to strengthen our project design and help the 
+          next team carry out our project to completion.
+    .row.graph
+      .col-5
         .rounded-rectangle#killswitch-mod1
           p.
-            Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
-            effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
-      .col-6
+            Create a persister cell model in phase 2
+        .rounded-rectangle#killswitch-mod2
+          p.
+            Differential expression of the antitoxin in the presence and absence of oxygen
+        .rounded-rectangle#killswitch-mod3
+          p.
+            Time required for the buildup of toxin concentration sufficient to restrict bacterial growth
+        .rounded-rectangle#killswitch-mod4
+          p.
+            Identify the optimum Kd value for the system to work
+      .col-4
         .oval#killswitch-exp1
           p.
-            Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
-            effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
+            Assay to check if the killswitch functions as intended
+        .oval#killswitch-exp2
+          p.
+            Killswitch response time assay to ascertain the time required after exposure for the cell to succumb
+        .oval#killswitch-exp3
+          p.
+            Gel shift assay to experimentally determine Kd value of the FNR promoter
+        .oval#killswitch-exp4
+          p.
+            Site-directed mutagenesis of the FNR promoter to bring the Kd value to the one established through the model
+        .oval#killswitch-exp5
+          p.
+            pH dependency of the FNR promoter (due to the fluctuation in pH in the sugar extraction process)
 
     .arrows
-      .arrow-container(data-from="#killswitch-mod1" data-to="#killswitch-exp1")
-        +arrow(100, 100, 0, 0, 87, 87, '#000000')
+      +arrow("#killswitch-exp1", "#killswitch-mod1", "#000000")
+      +arrow("#killswitch-mod1", "#killswitch-exp2", "#000000")
+      +arrow("#killswitch-exp2", "#killswitch-mod3", "#000000")
+      +arrow("#killswitch-mod4", "#killswitch-exp3", "#000000")
+      +arrow("#killswitch-mod3", "#killswitch-exp4", "#000000")
+      +arrow("#killswitch-exp3", "#killswitch-exp4", "#000000")
 
 
 

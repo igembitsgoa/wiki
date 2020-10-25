@@ -1,26 +1,89 @@
 .content {
-    article {
-        max-width: 97vw !important;
-        overflow-x: scroll;
-    }
+  article {
+    max-width: 97vw !important;
+    overflow-x: auto;
+  }
 }
 
-section {
+.content section {
   position: relative;
   min-width: 800px;
-  overflow-x: scroll;
+  overflow-x: auto;
   h2 {
     text-align: center;
+    margin-bottom: 1rem;
+    font-family: "Lato", sans-serif;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    line-height: 1.3;
   }
 
   .row {
     margin: 2rem 0;
   }
 
+  .problem {
+    justify-content: center;
+  }
+
+  .design {
+    justify-content: center;
+
+    h2 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .brief {
+    justify-content: center;
+    .col-5 {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .graph {
+    justify-content: space-around;
+  }
+
   .rounded-rectangle {
-    border: 2px solid black;
+    position: relative;
+    border: 1px solid black;
     border-radius: 1.5rem;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    height: 150px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .number {
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      border: 1px solid black;
+      top: -25px;
+      left: calc(50% - 25px);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      background: white;
+      align-items: center;
+      p {
+        font-size: 1.3rem;
+        line-height: 1;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
     p {
       text-align: center;
       margin: 0;
@@ -29,9 +92,19 @@ section {
   }
 
   .oval {
-    border: 2px solid black;
+    position: relative;
+    border: 1px solid black;
     border-radius: 50%;
-    padding: 5rem 3rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    height: 150px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
     p {
       text-align: center;
       margin: 0;
@@ -46,8 +119,13 @@ section {
     top: 0;
     .arrow-container {
       position: absolute;
+      overflow: visible;
+      svg {
+        overflow: visible;
+      }
       .arrow {
         stroke: rgb(0, 0, 0);
+        overflow: visible;
         stroke-width: 2;
         marker-end: url(#markerArrow);
       }
