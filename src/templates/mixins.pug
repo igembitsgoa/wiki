@@ -109,3 +109,10 @@ mixin pdf(url, description)
     a(href=url) here
     | .
   embed(src=url type="application/pdf" title=description)
+
+mixin arrow(height, width, x1, y1, x2, y2, color)
+  svg(height=height width=width)
+    defs
+      marker#markerArrow(markerwidth='13' markerheight='13' refx='2' refy='6' orient='auto')
+        path(d='M2,2 L2,11 L10,6 L2,2' style='fill: ' + color + ';')
+    line.arrow(x1=x1 y1=y1 x2=x2 y2=y2)

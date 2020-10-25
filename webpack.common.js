@@ -25,6 +25,7 @@ module.exports = {
     team: "./src/js/team.js",
     landing: "./src/js/landing.js",
     notebook: "./src/js/notebook.js",  
+    engineering: "./src/js/engineering.js",  
   },
   output: {
     filename: "[name].bundle.js",
@@ -65,6 +66,11 @@ module.exports = {
       filename: "Notebook/index.html",
       template: "./src/pages/Notebook.pug",
       chunks: ["notebook"],
+    }),
+    new HTMLWebpackPlugin({
+      filename: "Engineering/index.html",
+      template: "./src/pages/Engineering.pug",
+      chunks: ["engineering"],
     }),
   ],
   module: {

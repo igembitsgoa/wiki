@@ -1,0 +1,56 @@
+.content {
+    article {
+        max-width: 97vw !important;
+        overflow-x: scroll;
+    }
+}
+
+section {
+  position: relative;
+  min-width: 800px;
+  overflow-x: scroll;
+  h2 {
+    text-align: center;
+  }
+
+  .row {
+    margin: 2rem 0;
+  }
+
+  .rounded-rectangle {
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    p {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .oval {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5rem 3rem;
+    p {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .arrows {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    .arrow-container {
+      position: absolute;
+      .arrow {
+        stroke: rgb(0, 0, 0);
+        stroke-width: 2;
+        marker-end: url(#markerArrow);
+      }
+    }
+  }
+}
