@@ -14,7 +14,7 @@ html(lang="en")
       .container
         .row
           .sidebar.col-lg-3
-            include ./assets/img/Home--Description.svg
+            img(src=require("./assets/img/Home--Description.svg")['default'])
             h3
               | A cold winter day —
               br
@@ -48,7 +48,7 @@ html(lang="en")
                   br
                   | Invertase from acting.
               .col-sm-7
-                include ./assets/img/Home--Description.svg
+                  include ./assets/img/Home--Description.svg
 
             .d-flex.justify-content-center.justify-content-sm-end.my-5
               +buttonRight("Description")
@@ -56,8 +56,7 @@ html(lang="en")
       .container
         .row
           .content.col-lg-9
-            h2
-              span Design guided by engineering principles. 
+            h2 Design caption goes here. 
 
             p.
               We aim to target invertase present in the sugarcane stem - the enzyme responsible for 
