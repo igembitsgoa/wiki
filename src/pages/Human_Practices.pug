@@ -133,8 +133,20 @@ block article
 
 
   .d-flex.justify-content-center.align-items-center.my-4
-    video(controls width=720)
+    video(controls inline width=540)
       source(src= urlPrefix + require("../assets/video/HP--Swaminathan.mp4")['default'].substr(2), type='video/mp4')
+
+  #collapsibleSections.accordion
+    .card
+      #headingOneB.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOneB' aria-expanded='true' aria-controls='collapseOneB')
+            span Transcript
+            i.icon-dropdown
+      #collapseOneB.collapse(aria-labelledby='headingOneB')
+        .card-body
+
+          +pdf(require("../assets/docs/HP--SwaminathanTranscript.pdf")['default'], "iGEM BITS Brochure")
 
   :markdown-it(html)
     Following this, we went through several design iterations of our product. Once we created our chassis, we were interested in determining the economic viability and the scaling-up processes involved with commercialization.
