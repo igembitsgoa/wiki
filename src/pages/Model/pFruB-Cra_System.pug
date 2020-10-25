@@ -76,24 +76,21 @@ block article
 
         $$
         \begin{aligned}
-            \frac{d[A]}{dt} &= \frac{e_A C_N}{\left( 1 + \frac{[R_b]}{k_f} \right)} - \beta_A[A]\\\\
-            \frac{d[M]}{dt} &= \frac{e_M C_N}{\left( 1 + \frac{[R_b]}{k_f} \right)} - \beta_M[M]\\\\
+            \frac{d[A]}{dt} &= \frac{e_A C_N}{\left( 1 + \frac{[C_2]}{k_f} \right)} - \beta_A[A]\\\\
+            \frac{d[M]}{dt} &= \frac{e_M C_N}{\left( 1 + \frac{[C_2]}{k_f} \right)} - \beta_M[M]\\\\
             \frac{d[F]}{dt} &= - k_1[F][C_2] + k_2[C_1]\\\\
             \frac{d[R]}{dt} &= - k_3[R]C_B + k_2[C_1]\\\\
             \frac{d[C_1]}{dt} &= k_1[F][C_2] - k_2[C_1]\\\\
             \frac{d[C_2]}{dt} &= k_3[R]C_B - k_1[F][C_2]\\\\
-            [R_b] &= \frac{C_B \times [R]}{[k_R]}
         \end{aligned}
         $$
 
         Here, 
-        - \\( [P] \\) is the pFruB concentration;
         - \\( [R] \\) is the FruR concentration;
         - \\( [M] \\) is the mCherry concentration;
         - \\( [A] \\) is the anti-invertase concentration;
         - \\( [C_1] \\) is the concentration of the [F1P-FruR] complex;
-        - \\( [C_2] \\) is the concentration of the [pFruB-FruR] complex (in the binding domain);
-        -  \\( [R_b] \\) is the concentration of the domain-bound pFruB and FruR complex [Bisswanger, H., 2008](#citation4); and
+        - \\( [C_2] \\) is the concentration of the [pFruB-FruR] complex (in the binding domain); and
         - \\([C_B] = \frac{C_N}{V}\\) is the approximate concentration of binding domains per cell where \\(C_N\\) is the plasmid copy number and \\(V \\) is the cell volume.
 
         The parameters used in the above set of equations along with their descriptions are tabulated below. 
@@ -217,8 +214,8 @@ block article
          - Peach: Chain B FruR
 
 
-    - var imgpath = "../" + require("../../assets/img/Biosensor--FruR-pFruB.gif")["default"]
-    +image(6, imgpath, "FruR-pFruB docking.", 70)
+    - var imgpath = "../" + require("../../assets/img/Biosensor--FruR_patch.gif")["default"]
+    +image(6, imgpath, "Largest positive patch on FruR", 70)
 
     :markdown-it(html)
 
