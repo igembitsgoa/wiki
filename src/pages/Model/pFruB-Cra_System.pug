@@ -99,23 +99,21 @@ block article
         it would not make any stastical sense to estimate such a large number. The parameter space would be too large for us to derive any significant or meaningful results. Therefore, we chose to limit ourselves to a theroretical description which 
         we hope teams in the future can use and improve upon. 
 
-    .table-wrapper
-        :markdown-it(html plugins=['markdown-it-multimd-table'])
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
 
-            | Parameter      | Description                                      | 
-            | :-------------:| :-----------------------------------------------:| 
-            | \\( e_A  \\) | Expression rate for anti-invertase\\(^\dagger\\)               | 
-            | \\( e_M\\) | Expression rate for mCherry\\(^\dagger\\)                  |
-            | \\( \beta_A \\)| Degradtion rate of anti-invertase                | 
-            | \\( \beta_M \\) | Degradtion rate of mCherry                  | 
-            | \\( k_1 \\) | Binding rate of F1P to FruR              | 
-            | \\( k_2 \\) | Unbinding rate of F1P from FruR                    | 
-            | \\( k_f (=\frac{k_2}{k_1}) \\) | Dissociation constant for F1P and FruR                         | 
-            | \\( k_3 \\) | Binding rate of FruR to pFruB                             | 
-            | \\( k_4 \\) | Unbinding rate of FruR from pFruB | 
-            | \\( k_R (=\frac{k_4}{k_3}) \\) | Dissociation constant for FruR and pFruB                      | 
-            [Table 1: Model paramters and their description]
-    :markdown-it(html)
+        | Parameter      | Description                                      | 
+        | :-------------:| :-----------------------------------------------:| 
+        | \\( e_A  \\) | Expression rate for anti-invertase\\(^\dagger\\)               | 
+        | \\( e_M\\) | Expression rate for mCherry\\(^\dagger\\)                  |
+        | \\( \beta_A \\)| Degradation rate of anti-invertase                | 
+        | \\( \beta_M \\) | Degradation rate of mCherry                  | 
+        | \\( k_1 \\) | Binding rate of F1P to FruR              | 
+        | \\( k_2 \\) | Unbinding rate of F1P from FruR                    | 
+        | \\( k_f (=\frac{k_2}{k_1}) \\) | Dissociation constant for F1P and FruR                         | 
+        | \\( k_3 \\) | Binding rate of FruR to pFruB                             | 
+        | \\( k_4 \\) | Unbinding rate of FruR from pFruB | 
+        | \\( k_R (=\frac{k_4}{k_3}) \\) | Dissociation constant for FruR and pFruB                      | 
+         [Table 1: Model paramters and their description]
 
          \\(^\dagger\\) - Expression rate is a modification made to decrease the number of parameters in the model. Since the degradation and translation 
          rates of mRNA are in the order of seconds while those for proteins are of the order of minutes, we combine the two equations for expression of protein into one compact equation. 
