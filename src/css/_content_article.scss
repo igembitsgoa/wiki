@@ -7,6 +7,11 @@
   max-width: 100%;
 }
 
+main .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .content {
   font-family: "Merriweather", serif;
   flex: 0 0 80%;
@@ -98,7 +103,7 @@
     line-height: 1.75;
     word-spacing: 0.1rem;
     color: #3d3d3d;
-    text-align: justify;
+    text-align: left;
 
     .MathJax_Display {
       overflow: auto;
@@ -242,4 +247,3 @@
     border-bottom: 1px solid black;
   }
 }
-
