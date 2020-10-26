@@ -40,7 +40,7 @@ function playVideo() {
 }
 
 $('video').on('click', function() {
-  playVideo();
+  return playVideo();
 });
 
 $('#tap-icon').on('click', function() {
