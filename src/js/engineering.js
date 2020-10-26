@@ -156,8 +156,8 @@ function positionArrows() {
       var y2 = from_y + from_height / 2;
     }
 
-    var width = Math.abs(x2 - x1);
-    var height = Math.abs(y2 - y1);
+    var width = Math.max(Math.abs(x2 - x1), 1);
+    var height = Math.max(Math.abs(y2 - y1), 1);
 
     $(this).css("left", Math.min(x1, x2));
     $(this).css("top", Math.min(y1, y2));
