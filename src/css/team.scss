@@ -8,9 +8,13 @@ body {
   background-color: $selection-color;
 }
 
+.row {
+  margin: 0;
+}
+
 main {
   padding: 2rem 0 2rem 0;
-  .custom-container {
+  .container {
     max-width: 1380px;
     margin: 0 auto;
   }
@@ -18,6 +22,15 @@ main {
 
 header {
   padding-top: 9rem;
+
+  .container {
+    max-width: 1350px;
+  }
+
+  .row {
+    overflow: auto;
+  }
+
   h1 {
     text-align: center;
     font-size: 5rem;
@@ -27,35 +40,82 @@ header {
   }
 
   .header-image {
-    // border: 10px solid white;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+    display: block;
+    background-image: url(../assets/img/Team--gp1.jpg);
+    width: 1245px;
+    height: 528px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 500px;
   }
 }
 
 main {
+  margin-top: 8rem;
+
   .container {
-    max-width: 1300px;
+    max-width: 1350px;
   }
 
-  margin-top: 8rem;
-  .col-4 {
-    height: max-content;
-    margin: 0;
-    padding: 2rem 4rem;
+  .person-container {
+    margin: 2rem;
+    border-width: 0px;
+    width: 300px;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+      .squiggles {
+        visibility: visible;
+        opacity: 1;
+      }
+      h3 {
+        span.eng {
+          visibility: hidden;
+          opacity: 0;
+        }
+        span.lang {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
   }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 40px;
+
+  .person {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+    margin-bottom: 2rem;
+  }
+
+  .person,
+  .squiggles {
+    display: block;
+    width: 300px;
+    height: 450px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .squiggles {
+    top: 0;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .text {
+    position: relative;
+    bottom: 0;
   }
   h3,
   h4 {
     text-align: center;
     font-family: "Lato", sans-serif;
-    position: relative;
   }
 
   h3 {
@@ -65,17 +125,14 @@ main {
     height: 2rem;
 
     span {
-
       transition: all 0.3s ease;
       position: absolute;
-
 
       &.lang {
         visibility: hidden;
         opacity: 0;
       }
       &.eng {
-        // display: none;
         visibility: visible;
         opacity: 1;
       }
@@ -86,17 +143,111 @@ main {
     font-size: 1.2rem;
   }
 
-  .col-4:hover {
-    h3 {
-      span.eng {
-        // display: none;
-        visibility: hidden;
-        opacity: 0;
-      }
-      span.lang {
-        visibility: visible;
-        opacity: 1;
-      }
+  .shruti {
+    .person {
+      background-image: url("../assets/img/Team--Shruti.jpg");
+    }
+    .squiggles {
+      background-image: url("../assets/img/Team--Shruti_squiggles.png");
+    }
+  }
+
+  .gourav {
+    .person {
+      background-image: url("../assets/img/Team--Gourav.jpg");
+    }
+    .squiggles {
+      background-image: url("../assets/img/Team--Gourav_squiggles.png");
+    }
+  }
+
+  .yogen {
+    .person {
+      background-image: url("../assets/img/Team--Yogen.jpg");
+    }
+    .squiggles {
+      // background-image: url("../assets/img/Team--Yogen_squiggles.png");
+    }
+  }
+
+  .pranav {
+    .person {
+      background-image: url("../assets/img/Team--Pranav.jpg");
+    }
+    .squiggles {
+      // background-image: url("../assets/img/Team--Pranav_squiggles.png");
+    }
+  }
+
+  .ameya {
+    .person {
+      background-image: url("../assets/img/Team--Ameya.jpg");
+    }
+    .squiggles {
+      background-image: url("../assets/img/Team--Ameya_squiggles.png");
+    }
+  }
+
+  .saransh {
+    .person {
+      background-image: url("../assets/img/Team--Saransh.jpg");
+    }
+    .squiggles {
+      // background-image: url("../assets/img/Team--Saransh_squiggles.png");
+    }
+  }
+
+  .sharanya {
+    .person {
+      background-image: url("../assets/img/Team--Sharanya.jpg");
+    }
+    .squiggles {
+      background-image: url("../assets/img/Team--Sharanya_squiggles.png");
+    }
+  }
+
+  .arya {
+    .person {
+      background-image: url("../assets/img/Team--Arya.jpg");
+    }
+    .squiggles {
+      // background-image: url("../assets/img/Team--Arya_squiggles.png");
+    }
+  }
+
+  .suhas {
+    .person {
+      background-image: url("../assets/img/Team--Suhas.jpeg");
+    }
+    .squiggles {
+      // background-image: url("../assets/img/Team--Suhas_squiggles.png");
+    }
+  }
+
+  .ithihas {
+    .person {
+      background-image: url("../assets/img/Team--Ithihas.jpeg");
+    }
+    .squiggles {
+      background-image: url("../assets/img/Team--Ithihas_squiggles.png");
+    }
+  }
+
+  .shrilaxmi {
+    .person {
+      background-image: url("../assets/img/Team--Shrilaxmi.jpg");
+    }
+    .squiggles {
+      // background-image: url("../assets/img/Team--Shrilaxmi_squiggles.png");
+    }
+  }
+
+  .naman {
+    .person {
+      background-image: url("../assets/img/Team--Naman.jpg");
+    }
+    .squiggles {
+      background-image: url("../assets/img/Team--Naman_squiggles.png");
     }
   }
 }
@@ -108,6 +259,152 @@ footer {
     }
     a {
       color: $black;
+    }
+  }
+}
+
+@include respond-below(xxl) {
+  header,
+  main {
+    .container {
+      max-width: 1340px;
+    }
+  }
+
+  header {
+    .header-image {
+      height: 470px;
+    }
+  }
+
+  main {
+    .person-container {
+      width: 300px;
+    }
+
+    .person,
+    .squiggles {
+      width: 300px;
+      height: 450px;
+    }
+  }
+}
+
+@include respond-below(xl) {
+  header,
+  main {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+  header {
+    .header-image {
+      height: 390px;
+    }
+  }
+
+  main {
+    margin-top: 6rem;
+    .person-container {
+      width: 300px;
+    }
+
+    .person,
+    .squiggles {
+      width: 300px;
+      height: 450px;
+    }
+  }
+}
+
+@include respond-below(lg) {
+  header,
+  main {
+    .container {
+      max-width: 950px;
+    }
+  }
+
+  header {
+    .header-image {
+      height: 305px;
+    }
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+  main {
+    margin-top: 4rem;
+  }
+}
+
+@include respond-below(md) {
+  header,
+  main {
+    .container {
+      max-width: 750px;
+    }
+  }
+  main {
+    margin-top: 2rem;
+    .person-container {
+      width: 240px;
+    }
+
+    .person,
+    .squiggles {
+      width: 240px;
+      height: 360px;
+    }
+  }
+}
+
+@include respond-below(sm) {
+  header,
+  main {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  main {
+    margin-top: 0rem;
+    .person-container {
+      width: 300px;
+    }
+
+    .person,
+    .squiggles {
+      width: 300px;
+      height: 450px;
+    }
+  }
+}
+
+@include respond-below(xs) {
+  header {
+    .container {
+      margin: 0;
+    }
+  }
+  main {
+    .container {
+      padding: 0 2rem;
+    }
+    .person-container {
+      width: 300px;
+    }
+
+    .person,
+    .squiggles {
+      width: 300px;
+      height: 450px;
     }
   }
 }

@@ -8,86 +8,122 @@ html(lang="en")
   body
     include ../templates/nav.pug
     header
-      h1 Meet the Team
-      .row.justify-content-center
-        .header-image
-          img(src= "../" + require('../assets/img/Team--gp1.jpg')['default'])
+      .container
+        h1 Meet the Team
+        .row.justify-content-center
+          .header-image
 
     main
       .container
-        .row
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Shruti.jpg')['default'])
-            h3
-              span.eng Shruti Sridhar
-              span.lang ஸ்ருதி ஸ்ரீதர்
-            h4 Team Leader 
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Gourav.jpg')['default'])
-            h3
-              span.eng Gourav Saha
-              span.lang গৌরব সাহা
-            h4 Sequencing and Design
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Ameya.jpg')['default'])
-            h3
-              span.eng Ameya Thete
-              span.lang अमेय थेटे
-            h4 Modelling and Wiki
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Yogen.jpg')['default'])
-            h3
-              span.eng Yogen Borkar
-              span.lang योगेन बोरकर
-            h4 Modelling and Human Practices
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Pranav.jpg')['default'])
-            h3
-              span.eng Pranav Ballaney
-              span.lang प्रणव बलानी
-            h4 Wiki and Human Practices
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Saransh.jpg')['default'])
-            h3
-              span.eng Saransh Gokhale
-              span.lang सारांश गोखले
-            h4 Human Practices and Entrepreneurship
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Sharanya.jpg')['default'])
-            h3
-              span.eng Sharanya Shastri
-              span.lang शरण्या शास्त्री
-            h4 Design and Wiki
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Arya.jpg')['default'])
-            h3
-              span.eng Arya Agarwal
-              span.lang आर्या अग्रवाल
-            h4 Team Lead
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Suhas.jpeg')['default'])
-            h3
-              span.eng Suhas Badadal
-              span.lang ಸುಹಾಸ್ ಬಡದಲ್
-            h4 Sequencing and Human Practices
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Ithihas.jpeg')['default'])
-            h3
-              span.eng Ithihas Madala
-              span.lang ಇತಿಹಾಸ ಮಡಲಾ
-            h4 Modelling
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Shrilaxmi.jpg')['default'])
-            h3
-              span.eng Shrilaxmi Patil
-              span.lang ಶ್ರಿಲಕ್ಷ್ಮಿ ಪಾಟೀಲ್
-            h4 Education and Outreach
-          .col-4
-            img(src= "../" + require('../assets/img/Team--Naman.jpg')['default'])
-            h3
-              span.eng Naman Choudhary
-              span.lang नमन चौधरी
-            h4 Sequencing
+        .row.justify-content-center
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.shruti
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Shruti Sridhar
+                  span.lang ஸ்ருதி ஸ்ரீதர்
+                h4 Team Leader 
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.gourav
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Gourav Saha
+                  span.lang গৌরব সাহা
+                h4 Sequencing and Design
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.ameya
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Ameya Thete
+                  span.lang अमेय थेटे
+                h4 Modelling and Wiki
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.yogen
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Yogen Borkar
+                  span.lang योगेन बोरकर
+                h4 Modelling and Human Practices
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.pranav
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Pranav Ballaney
+                  span.lang प्रणव बलानी
+                h4 Wiki and Human Practices
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.saransh
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Saransh Gokhale
+                  span.lang सारांश गोखले
+                h4 HP and Entrepreneurship
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.sharanya
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Sharanya Shastri
+                  span.lang शरण्या शास्त्री
+                h4 Design and Wiki
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.arya
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Arya Agarwal
+                  span.lang आर्या अग्रवाल
+                h4 Team Lead
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.suhas
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Suhas Badadal
+                  span.lang ಸುಹಾಸ್ ಬಡದಲ್
+                h4 Sequencing and Human Practices
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.ithihas
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Ithihas Madala
+                  span.lang ಇತಿಹಾಸ ಮಡಲಾ
+                h4 Modelling
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.shrilaxmi
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Shrilaxmi Patil
+                  span.lang ಶ್ರಿಲಕ್ಷ್ಮಿ ಪಾಟೀಲ್
+                h4 Education and Outreach
+          .col-xl-4.col-md-6.justify-content-center.d-flex
+            .person-container.naman
+              .person
+              .squiggles
+              .text
+                h3
+                  span.eng Naman Choudhary
+                  span.lang नमन चौधरी
+                h4 Sequencing
 
     footer 
       include ../templates/footer_nav.pug

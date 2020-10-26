@@ -9,8 +9,8 @@
 
 .content {
   font-family: "Merriweather", serif;
-  flex: 0 0 80%;
-  max-width: 80%;
+  flex: 0 0 70%;
+  max-width: 70%;
 
   article {
     padding: calc(1rem + 1.2vw);
@@ -264,6 +264,7 @@
   margin-bottom: 2rem;
 
   select {
+    display: none;
     max-width: 200px;
 
     font-family: "Lato", sans-serif;
@@ -274,8 +275,19 @@
   }
 }
 
+@include respond-below(md) {
+  #dropdown-container {
+    select {
+      display: block;
+    }
+  }
+}
+
 @include respond-below(sm) {
   .tabs ul li a {
     font-size: 0.85rem;
+  }
+  #dropdown-container {
+    margin-top: 3rem;
   }
 }

@@ -36,6 +36,8 @@ main {
   #months {
     top: 100px;
   }
+  flex: 0 0 30%;
+  max-width: 30%;
 }
 
 // background animation for citations
@@ -63,7 +65,6 @@ footer {
     }
   }
 }
-
 
 @include respond-below(md) {
   .tabs {
