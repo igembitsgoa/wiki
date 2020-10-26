@@ -28,93 +28,14 @@ block headVars
 
 block article
 
-  h1 Atmosphere Regulated Killswitch
-  .chart-wrapper
-    section#killswitch
-      .row.problem
-        .col-6
-          h2 Problem Statement
-          .rounded-rectangle
-            p.
-              Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
-              effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
-      .row.design
-        .col-12
-          h2 Designing Process
-        .col-5
-          .rounded-rectangle
-            .number 
-              p 1
-            p.
-              First, we ascertained the trigger to be the swift and abrupt change in atmospheric conditions 
-              (anaerobic inside the sugarcane stem and aerobic outside)
-          .rounded-rectangle
-            .number 
-              p 2
-            p.
-              Second, we found a toxin-antitoxin pair that was quite fatal to bacteria but did not affect human cells.
-        .col-5
-          .rounded-rectangle
-            .number 
-              p 3
-            p.
-              After an extensive search of the registry, we found the FNR promoter that was only
-              activated in anaerobic conditions.
-          .rounded-rectangle
-            .number 
-              p 4
-            p.
-              Using these parts, we designed our killswitch genetic circuit.
-      .row.brief
-        .col-5
-          h2 Modelling
-          p.text-center.
-            We focussed on modelling the behaviour of the circuit to the change in concentration of oxygen in the atmosphere. 
-            We further predicted the response time for the same.
-        .col-5
-          h2 Experimental Design
-          p.text-center.
-            Due to the global pandemic, we were unable to complement our modelling with experimental results. 
-            However, we prepared and planned for these experiments to strengthen our project design and help the 
-            next team carry out our project to completion.
-      .row.graph
-        .col-5
-          .rounded-rectangle#killswitch-mod1
-            p.
-              Create a persister cell model in phase 2
-          .rounded-rectangle#killswitch-mod2
-            p.
-              Differential expression of the antitoxin in the presence and absence of oxygen
-          .rounded-rectangle#killswitch-mod3
-            p.
-              Time required for the buildup of toxin concentration sufficient to restrict bacterial growth
-          .rounded-rectangle#killswitch-mod4
-            p.
-              Identify the optimum Kd value for the system to work
-        .col-4
-          .oval#killswitch-exp1
-            p.
-              Assay to check if the killswitch functions as intended
-          .oval#killswitch-exp2
-            p.
-              Killswitch response time assay to ascertain the time required after exposure for the cell to succumb
-          .oval#killswitch-exp3
-            p.
-              Gel shift assay to experimentally determine Kd value of the FNR promoter
-          .oval#killswitch-exp4
-            p.
-              Site-directed mutagenesis of the FNR promoter to bring the Kd value to the one established through the model
-          .oval#killswitch-exp5
-            p.
-              pH dependency of the FNR promoter (due to the fluctuation in pH in the sugar extraction process)
+  p.intro.
+    While designing SugarGain, we had to keep various considerations in mind. The initial idea was broken down into a set of problem statements and these formed the major pillars of our project. 
+    The following diagrams illustrate the flow of our thought as we tried to solve these problems to the best of our ability. We also illustrate how we modelled our project and its interconnectedness 
+    with the experiments we designed to complement the modelled data. Furthermore, we have taken into consideration the different outcomes that these experiments might lead to and planned accordingly. 
+    Due to unavailability of lab access this year, we plan to finish these experiments in phase 2.
 
-      .arrows
-        +arrow("#killswitch-exp1", "#killswitch-mod1", "#ea526f",    0, 0, 10, 0)
-        +arrow("#killswitch-mod1", "#killswitch-exp2", "#ea526f",    0, 15, 10, -40, "if high cell viability", -30, -30)
-        +bi-arrow("#killswitch-exp2", "#killswitch-mod3", "#ea526f", -10, 15, 10, 0)
-        +arrow("#killswitch-mod4", "#killswitch-exp3", "#ea526f",    0, 0, -10, 0)
-        +arrow("#killswitch-mod3", "#killswitch-exp4", "#ea526f",    0, 10, 10, -40, "if not quick enough", -75, -40)
-        +arrow("#killswitch-exp3", "#killswitch-exp4", "#ea526f",    0, 0, 0, -10, "if inadequate Kd value", 20, -30)
+  br 
+  br
 
   h1 pFruB-Cra System
 
@@ -223,6 +144,94 @@ block article
         +bi-arrow("#biosensor-mod4", "#biosensor-exp4", "#ea526f", 10, 0, -10, 0)
         +arrow("#biosensor-mod4", "#biosensor-exp5", "#ea526f", 0, 30, 0, -40, "if inadequate", 0, 0)
         +arrow("#biosensor-exp4", "#biosensor-mod5", "#ea526f", 5, 20, 13, -30)
+
+  h1 Atmosphere Regulated Killswitch
+  .chart-wrapper
+    section#killswitch
+      .row.problem
+        .col-6
+          h2 Problem Statement
+          .rounded-rectangle
+            p.
+              Given the consumable nature of our product, we had to come up with a robust killswitch that was capable of 
+              effectively terminating the bacteria taking into account the toxicity of killswitch with respect to the humans.
+      .row.design
+        .col-12
+          h2 Designing Process
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 1
+            p.
+              First, we ascertained the trigger to be the swift and abrupt change in atmospheric conditions 
+              (anaerobic inside the sugarcane stem and aerobic outside)
+          .rounded-rectangle
+            .number 
+              p 2
+            p.
+              Second, we found a toxin-antitoxin pair that was quite fatal to bacteria but did not affect human cells.
+        .col-5
+          .rounded-rectangle
+            .number 
+              p 3
+            p.
+              After an extensive search of the registry, we found the FNR promoter that was only
+              activated in anaerobic conditions.
+          .rounded-rectangle
+            .number 
+              p 4
+            p.
+              Using these parts, we designed our killswitch genetic circuit.
+      .row.brief
+        .col-5
+          h2 Modelling
+          p.text-center.
+            We focussed on modelling the behaviour of the circuit to the change in concentration of oxygen in the atmosphere. 
+            We further predicted the response time for the same.
+        .col-5
+          h2 Experimental Design
+          p.text-center.
+            Due to the global pandemic, we were unable to complement our modelling with experimental results. 
+            However, we prepared and planned for these experiments to strengthen our project design and help the 
+            next team carry out our project to completion.
+      .row.graph
+        .col-5
+          .rounded-rectangle#killswitch-mod1
+            p.
+              Create a persister cell model in phase 2
+          .rounded-rectangle#killswitch-mod2
+            p.
+              Differential expression of the antitoxin in the presence and absence of oxygen
+          .rounded-rectangle#killswitch-mod3
+            p.
+              Time required for the buildup of toxin concentration sufficient to restrict bacterial growth
+          .rounded-rectangle#killswitch-mod4
+            p.
+              Identify the optimum Kd value for the system to work
+        .col-4
+          .oval#killswitch-exp1
+            p.
+              Assay to check if the killswitch functions as intended
+          .oval#killswitch-exp2
+            p.
+              Killswitch response time assay to ascertain the time required after exposure for the cell to succumb
+          .oval#killswitch-exp3
+            p.
+              Gel shift assay to experimentally determine Kd value of the FNR promoter
+          .oval#killswitch-exp4
+            p.
+              Site-directed mutagenesis of the FNR promoter to bring the Kd value to the one established through the model
+          .oval#killswitch-exp5
+            p.
+              pH dependency of the FNR promoter (due to the fluctuation in pH in the sugar extraction process)
+
+      .arrows
+        +arrow("#killswitch-exp1", "#killswitch-mod1", "#ea526f",    0, 0, 10, 0)
+        +arrow("#killswitch-mod1", "#killswitch-exp2", "#ea526f",    0, 15, 10, -40, "if high cell viability", -30, -30)
+        +bi-arrow("#killswitch-exp2", "#killswitch-mod3", "#ea526f", -10, 15, 10, 0)
+        +arrow("#killswitch-mod4", "#killswitch-exp3", "#ea526f",    0, 0, -10, 0)
+        +arrow("#killswitch-mod3", "#killswitch-exp4", "#ea526f",    0, 10, 10, -40, "if not quick enough", -75, -40)
+        +arrow("#killswitch-exp3", "#killswitch-exp4", "#ea526f",    0, 0, 0, -10, "if inadequate Kd value", 20, -30)
 
 
   h1 Polymer Inoculant

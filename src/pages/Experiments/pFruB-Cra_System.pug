@@ -64,11 +64,23 @@ prepend article
       #headingFour.card-header
         h2.mb-0
           button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour')
-            span Site Directed Mutagenesis
+            span Electrophoretic Mobility Shift Assay
             i.icon-dropdown
       #collapseFour.collapse(aria-labelledby='headingFour')
         .card-body
-          p To tune the Kd value of pFruB, we propose to use the following protocol. 
+          p To find the K<sub>d</sub> value of pFruB, we propose to use the following protocol. 
+
+          +pdf("../" + require("../../assets/docs/Experiments--Protocols--EMSA.pdf")['default'], "Electrophoretic Mobility Shift Assay")
+
+    .card
+      #headingFive.card-header
+        h2.mb-0
+          button.btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFive' aria-expanded='true' aria-controls='collapseFive')
+            span Site Directed Mutagenesis
+            i.icon-dropdown
+      #collapseFive.collapse(aria-labelledby='headingFive')
+        .card-body
+          p To tune the K<sub>d</sub> value of pFruB, we propose to use the following protocol. 
 
           +pdf("../" + require("../../assets/docs/Experiments--Protocols--Site_Directed_Mutagenesis.pdf")['default'], "Site Directed Mutagenesis")
 
