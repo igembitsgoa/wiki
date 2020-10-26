@@ -64,7 +64,10 @@ nav#main-nav
                       ul
                         each item in section['items']
                           li
-                            a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+                            unless item.title == "Judging Form"
+                              a(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+                            else 
+                              a(href= item.link)= item.title
             .row
               #contact-links
                 ul
