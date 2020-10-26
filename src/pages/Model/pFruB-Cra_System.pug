@@ -17,14 +17,12 @@ block article
         # Motivation
 
         A biosensor system is often used in biological systems to detect an analyte of interest. Our intention behind utilising a biosensor system in our project was to have a controlled release of the protein of interest, that is the invertase inhibitor. 
-        Since fructose is a product of hydrolysis of sucrose, its concentration directly proportional to the activity of invertase. Our construct therefore produces an anti-invertase enzyme whose quantity is regulated by the concentration of fructose in the 
+        Since fructose is a product of hydrolysis of sucrose, its concentration is directly proportional to the activity of invertase. Our construct therefore produces an anti-invertase enzyme whose quantity is regulated by the concentration of fructose in the 
         cellular environment.
 
-        We used the pFruB-Cra system to modulate the output protein. The expression of the FruR gene is regulated by an IPTG-induced pTac promoter, which is induced before packaging the bacteria in our polymer inoculant. FruR is a transcription factor with an 
-        affinity for fructose-1-phosphate (F1P) — an important component of most metabolic pathways. It is formed from D-fructose, which itself is produced by the hydrolysis of sucrose. The FruR protein prevents transcription of the regulated promoters. pFruB 
-        is the promoter region following FruR and is repressed by the FruR transcription factor. 
+        We used the pFruB-Cra system to modulate the output protein. The expression of the FruR gene is regulated by an IPTG-induced pLac promoter, which is induced before packaging the bacteria in our polymer inoculant. FruR is a transcription factor with an affinity for fructose-1-phosphate (F1P) — an important component of most metabolic pathways. It is formed from D-fructose to ensure that fructose does not leave the cell. The FruR protein prevents transcription of the regulated promoters. pFruB is the promoter region following FruR and is repressed by the FruR transcription factor. 
 
-        We planned on simiulating the dynamics of the pFruB-Cra system _in silico_ but the lack of lab access due to COVID lockdowns coupled with an unavailability of any literature on the kinetic studies of the FruR system limited us to a theoretical model. We have however 
+        We planned on simulating the dynamics of the pFruB-Cra system _in silico_ but the lack of lab access due to COVID lockdowns coupled with an unavailability of any literature on the kinetic studies of the FruR system limited us to a theoretical model. We have however 
         planned a few experiments that we would have conducted to determine the kinetics of the model. You can find them on our experiments page [here](/Experiments).
 
         Given below is a figure showing the dynamics governing the working of the construct. 
@@ -42,7 +40,7 @@ block article
         the amount of fructose is roughly equal to the amount of fructose-1-phosphate. Subsequently, the metabolic pathway from F1P leading to FBP, F6P, G6P is also ignored [Chavarría et al., 2014](#citation1).
 
         3. The FruR-F1P complex degrades slowly enough such that the FruR in the complex is not recycled back to bind to pFruB again.
-        
+
         4. The binding rate for F1P and FruR is unaffected by pFruB.
 
         5. F1P binds to FruR and helps it unbind from pFruB as a concerted non-reversible displacement reaction.
@@ -113,14 +111,14 @@ block article
         | \\( k_3 \\) | Binding rate of FruR to pFruB                             | 
         | \\( k_4 \\) | Unbinding rate of FruR from pFruB | 
         | \\( k_R (=\frac{k_4}{k_3}) \\) | Dissociation constant for FruR and pFruB                      | 
-         [Table 1: Model paramters and their description]
+            [Table 1: Model paramters and their description]
 
-         \\(^\dagger\\) - Expression rate is a modification made to decrease the number of parameters in the model. Since the degradation and translation 
-         rates of mRNA are in the order of seconds while those for proteins are of the order of minutes, we combine the two equations for expression of protein into one compact equation. 
-         The expression rate for a protein \\(B\\) is given by \\( e_B = \frac{\alpha_B \alpha_{mB}}{\beta_{mB}} \\) where \\( \alpha_B \\) is the translation rate of the protein;
-          \\( \alpha_{mB} \\) is the trancription rate of the protein mRNA; and \\( \beta_{mB} \\) is the degradation rate of the protein mRNA.
+            \\(^\dagger\\) - Expression rate is a modification made to decrease the number of parameters in the model. Since the degradation and translation 
+            rates of mRNA are in the order of seconds while those for proteins are of the order of minutes, we combine the two equations for expression of protein into one compact equation. 
+            The expression rate for a protein \\(B\\) is given by \\( e_B = \frac{\alpha_B \alpha_{mB}}{\beta_{mB}} \\) where \\( \alpha_B \\) is the translation rate of the protein;
+                \\( \alpha_{mB} \\) is the trancription rate of the protein mRNA; and \\( \beta_{mB} \\) is the degradation rate of the protein mRNA.
 
-        
+
         The experimental output (concentration of mCherry) can be corroborated to the model (pFruB activity) using the following equation [Leveau, J.H.J. & Lindow, S.E.,  2001](#citation3).
         $$
             L = \frac{\partial F}{\partial OD}\mu\left( 1 + \frac{\mu}{m}\right)
@@ -153,7 +151,7 @@ block article
 
         ## 1. Homology Modelling
 
-        SWISS-MODEL [9](#citation9)[10](#citation10)[11](#citation11)[12](#citation12)[13](#citation13)[14](#citation14). is a web-based integrated service dedicated to protein structure homology modelling. Homology modelling comprises of (i) identification of structural template(s); (ii) alignment 
+        SWISS-MODEL [9](#citation9)[10](#citation10)[11](#citation11)[12](#citation12)[13](#citation13)[14](#citation14) is a web-based integrated service dedicated to protein structure homology modelling. Homology modelling comprises of (i) identification of structural template(s); (ii) alignment 
         of target sequence and template structure(s); (iii) model-building; and (iv) model quality evaluation.
 
         We have used GMQE and QMEAN as parameters to gauge the reliability of our models. 
@@ -178,7 +176,7 @@ block article
     :markdown-it(html)
         We found that 97.07% of the protein is Ramachandran favoured, however 1.88% are rotamer outliers and 31 out of the 6175 amino acids contain bad angles. 
 
-        We then assessed the quality of our protein by plotting its predicted similarity to the target protein versus the corresponding residue number. 
+        We then assessed the quality of our protein by plotting its predicted similarity to the target protein versus the corresponding residue number. It can be seen that there is a significant overlap between the template and the target, proving the reliability of our homology model.
 
     - var imgpath = "../" + require("../../assets/img/Biosensor--FruRQuality.png")["default"]
     +image(4, imgpath, "Local quality estimate for FruR", 50)
@@ -193,7 +191,7 @@ block article
         a Genetic Algorithm (GA); and a hybrid local search GA, also known as the Lamarckian Genetic Algorithm (LGA). In general, the LGA performs the best out of SA, GA, and LGA, in finding the lowest energy of the system.
 
         We decided to use the Lamarckian GA and we conducted 100 GA runs to obtain the statistically significant docked conformations. The results of the docking are illustrated in the image below along with the interactions.
-    
+
     - var imgpath = "../" + require("../../assets/img/Biosensor--FruR-F1P-pymol.png")["default"]
     +image(5, imgpath, "Visualisation of interactions between FruR and F1P on PyMol", 60)
 
@@ -211,11 +209,11 @@ block article
         electrostatic patches on the protein.
 
         The largest positive patch we found on FruR was ARG60 THR61 ARG62 GLN86 GLN89 ARG90 GLY91 ARG294 LEU301 GLU302 LEU305 LEU308, which is highlighted in the animation below. 
-    
+
         Legend for the animation below: 
-         - Red: Electrostatic patch
-         - Blue: Chain A FruR
-         - Peach: Chain B FruR
+        - Red: Electrostatic patch
+        - Blue: Chain A FruR
+        - Peach: Chain B FruR
 
 
     - var imgpath = "../" + require("../../assets/img/Biosensor--FruR_patch.gif")["default"]
@@ -226,12 +224,14 @@ block article
         We observed that the DNA-binding region of FruR is very close to the F1P ligand-binding pocket. This confirms our hypothesis that F1P binding to FruR precludes FruR binding to pFruB. 
         This observation, therefore, serves as a validation of our assumption that F1P binds to FruR and helps it unbind from pFruB as a concerted non-reversible displacement reaction. 
 
+        In phase 2, we plan to predict the overall efficiency of the pFruB-Cra system and the amount of inoculant required per sugarcane using information from experiments. We would obtain some of the contants from [experiments](/Experiments/pFruB-Cra_System) as well as various parametric estimation methods, thus improving the model.
+
 
 append buttons
     //- mind the quotes and the plus sign
     +buttonLeft("Model")
     +buttonRight("Model/Kill Switch")
-    
+
 
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
 

@@ -11,6 +11,11 @@ block headVars
     - var backgroundAttributionLink = "https://freepik.com"
     - var theme = "project"
 
+    style.
+        header #heading h1 {
+            font-size: calc(3rem + 2vw) !important;
+        }
+
 block article
     :markdown-it(html)
 
@@ -59,7 +64,7 @@ block article
         $$
 
         The parameters used in the above set of equations along with their description and numerical values are tabulated below. In the absence of literature on the \\( FNR/O_2 \\) interactions, we have 
-        made educated guessed about some parameter values.  
+        made educated guesses about some parameter values.  
     
     .table-wrapper
         :markdown-it(html plugins=['markdown-it-multimd-table'])
@@ -79,7 +84,7 @@ block article
             | \\( \theta_c \\) | Rate of complex decay                          | \\(7.14972\times 10^{-6}\\)| \\(\text{M}^{-1}\text{s}^{-1}\\) | [Gelens et. al., 2013](#citation1)|
             | \\(  C_N \\)     | Plasmid copy number                            | 16                                    | -| |
             | \\( k_D \\)     | Dissociation constant for FNR and \\( O_2 \\)   | \\(800\times10^{-6}\\)         | \\(\text{s}^{-1}\\) | [Sutton, V. R., et al., 2012](#citation2) |
-            [Table 1: Model paramters and their numerical values]
+            [Table 1: Model parameters and their numerical values]
 
     :markdown-it(html)
 
@@ -130,16 +135,16 @@ block article
 
     :markdown-it(html)
 
-        This analysis showed us that altering \\(k_D\\) is an effective tool to increase the sensitivity of the kill switch as the graph indicates shorter response times for a perturbed \\(k_D\\). The next question was how could this alteration be acheived? 
+        This analysis showed us that altering \\(k_D\\) is an effective tool to increase the sensitivity of the kill switch as the graph indicates shorter response times for a perturbed \\(k_D\\). The next question was how could this alteration be achieved? 
         Since we did not have access to a lab, we have hypothesised below a few ways that this could be performed.
 
-        The fine-tuning of the kill switch could be achieived by altering the expression rates for the ccdB gene. There are two possible ways to accomplish this:
+        The fine-tuning of the kill switch could be achieved by altering the expression rates for the ccdB gene. There are two possible ways to accomplish this:
         - Inducing mutations in the promoter region of the gene to alter its affinity towards RNA Polymerase — which would affect the transcription and translation rates; or 
         - Using the promoter regions of genes with rates in the desired range.
 
         We can also control the binding of FNR/O2 to its binding site by either:
         - Inducing mutations in the operator region to alter the affinities of FNR to the binding site; or
-        - Inducing mutation in the repressor proteings by altering region that encodes for FNR thereby changing its affinity to the operator site.
+        - Inducing mutation in the repressor proteins by altering region that encodes for FNR thereby changing its affinity to the operator site.
 
 
         # Conclusions

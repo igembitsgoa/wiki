@@ -32,7 +32,7 @@ block article
         4. Potato inhibitor
 
         ClusPro performs three computational steps: first it performs a rigid body docking; next it performs a RMSD based clustering of the 1000 lowest energy structures; and lastly it performs a removal of steric clashes 
-        by energy minimization. ClusPro [2](#citation2) [3](#citation3) [4](#citation4). The [ClusPro](https://cluspro.org) server is a widely used tool for protein–protein docking. Docking with each energy parameter set results 
+        by energy minimization. The [ClusPro server](https://cluspro.org) [2](#citation2) [3](#citation3) [4](#citation4) is a widely used tool for protein–protein docking. Docking with each energy parameter set results 
         in ten models defined by centers of highly populated clusters of low-energy docked structures. 
 
     - var imgpath = "../" + require("../../assets/img/Biosensor--ClusProAlg.png")["default"]
@@ -54,7 +54,7 @@ block article
 
         where \\( E_{rep} \\) and \\( E_{attr} \\) denote the repulsive and attractive contributions to the van der Waals interaction energy, and \\( E_{elec} \\) is an electrostatic energy term. \\( E_{DARS} \\) 
         is the DARS potential that primarily represents desolvation contributions (it is a pairwise structure-based potential constructed by the decoys as the reference state), and the coefficients \\( w_1\\) through \\(w_4\\) denote 
-        the weigths of the corresponding terms. 
+        the weights of the corresponding terms. 
 
         Initially, homology modelling was used to create the structure of sugarcane invertase and sugarcane invertase inhibitor.
 
@@ -79,7 +79,9 @@ block article
     +image(4, imgpath, "Quality comparision of the modelled sugarcane invertase", 50)
 
     :markdown-it(html)
-        Our model obtained a GMQE of 0.83. GMQE is a quality estimation score which combines properties from the target–template alignment and the template structure using a multi-layer perceptron (SWISS-MODEL) [5](#citation5) [6](#citation6) [7](#citation7) [8](#citation8) [9](#citation9) [10](#citation10).
+        GMQE (Global Model Quality Estimation) is a quality estimation procedure which combines properties from the target template alignment and the template structure. They are combined using a multilayer perceptron. The resulting GMQE score is expressed as a number between 0 and 1, reflecting the expected accuracy of a model built with that alignment and template, normalized by the coverage of the target sequence. Higher numbers indicate higher reliability (SWISS-MODEL) [5](#citation5) [6](#citation6) [7](#citation7) [8](#citation8) [9](#citation9) [10](#citation10).
+
+        Our model obtained a GMQE of 0.83. 
 
         # Protein - Protein Docking
 
@@ -104,7 +106,7 @@ block article
 
         The catalytic site of invertases is a conserved RDP domain which gets disrupted by the inhibitor. The RDP domain lies near the Asp-309 residue and contains heavy Asp and Glu residues [Hothorn et al., 2010](#citation1). 
         All the inhibitors above bind to the same region. Apart from the sugarcane inhibitor itself, the Arabidopsis inhibitor shows the most disruption of the protein structure. The energy of interaction is also the most negative of all the 
-        inhibitors screened. Hence, it is feasible for us to use the inhibitor from _Arabidopsis thaliana_ to complex with the sugarcane inhibitor for our downstream experiments as an alternative to sugarcane inhibitor. 
+        inhibitors screened. Hence, it would be feasible for us to use the inhibitor from _Arabidopsis thaliana_ to complex with the sugarcane inhibitor for our downstream experiments as an alternative to sugarcane inhibitor. 
 
 append buttons
     +buttonLeft("Model/Kill Switch")
