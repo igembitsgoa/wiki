@@ -30,6 +30,9 @@ $('video').on('click', function() {
   video.play();
   $(this).prop('muted', false);
   video.volume = 0.6;
+
+  $('#tap-icon').fadeOut();
+
   return false;
 });
 

@@ -4,12 +4,6 @@
 
 header {
   background: #fff;
-    // /* top, transparent black, faked with gradient */ linear-gradient(
-    //   rgba(0, 0, 0, 0.4),
-    //   rgba(0, 0, 0, 0),
-    //   rgba(0, 0, 0, 0.4)
-    // );
-    // /* bottom, image */ url(../assets/img/photo-1513360371669-4adf3dd7dff8.jpeg);
   background-position: center;
   background-size: cover;
   -o-background-size: cover;
@@ -21,6 +15,20 @@ header {
   video {
     max-height: 100%;
     max-width: 100%;
+  }
+  #tap-icon {
+    height: 55px;
+    width: 55px;
+    background: url('../assets/icons/tap.svg');
+    background-position: center;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
   }
 
   h1 {

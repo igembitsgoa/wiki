@@ -199,3 +199,9 @@ $(window).on("scroll", function () {
 
   $("#nav-progress-bar").css("width", scrollPercent.toString().concat("%"));
 });
+
+const uA = navigator.userAgent;
+const vendor = navigator.vendor;
+if (/Safari/i.test(uA) && /Apple Computer/.test(vendor) && !/Mobi|Android/i.test(uA)) {
+  alert("The Safari browser doesn't support some features of this website. Please switch to Firefox, Edge or Chrome for a better experience.");   
+}
