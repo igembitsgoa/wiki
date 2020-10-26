@@ -186,7 +186,7 @@
   }
 }
 
-@include respond-below(sm) {
+@include respond-below(sm) { 
   header #tap-icon {
     height: 30px;
     width: 30px;
