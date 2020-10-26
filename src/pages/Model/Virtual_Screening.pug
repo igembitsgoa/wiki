@@ -73,7 +73,7 @@ block article
     :markdown-it(html)
         From the above Ramachandran plot, it was observed that the Ramachandran outliers include SER169, PRO166, ASP239, SER459 and ARG387.
 
-        Next, we performed a comparision of the structure with a non-redundant set of PDB structures.  The comparison with Non-Redundant Set of PDB Structures helps us derive a quality estimate for our model via QMEAN4.
+        Next, we performed a comparision of the structure with a non-redundant set of PDB structures.  This comparison helps us derive a quality estimate for our model via QMEAN4.
 
     - var imgpath = "../" + require("../../assets/img/VS--QualityComparison.png")["default"]
     +image(4, imgpath, "Quality comparision of the modelled sugarcane invertase", 50)
@@ -83,7 +83,9 @@ block article
 
         # Protein - Protein Docking
 
-        The following images illustrate the docking of sugarcane invertase with various anti-invertases. The final energy of binding is also expressed.
+        Finally we performed a docking of the anti-invertase with various plant invertases. 
+
+        The following images illustrate the results we obtained. The final energy of binding is also expressed.
 
     - var imgpath = "../" + require("../../assets/img/VS--Sugarcane inhibitor.png")["default"]
     +image(5, imgpath, "Sugarcane invertase and sugarcane inhibitor. E = -677.5 J", 40)
@@ -102,7 +104,7 @@ block article
 
         The catalytic site of invertases is a conserved RDP domain which gets disrupted by the inhibitor. The RDP domain lies near the Asp-309 residue and contains heavy Asp and Glu residues [Hothorn et al., 2010](#citation1). 
         All the inhibitors above bind to the same region. Apart from the sugarcane inhibitor itself, the Arabidopsis inhibitor shows the most disruption of the protein structure. The energy of interaction is also the most negative of all the 
-        inhibitors screened. Hence, it is feasible for us to use the inhibitor from Arabidopsis thaliana to complex with the sugarcane inhibitor for our downstream experiments as an alternative to sugarcane inhibitor. 
+        inhibitors screened. Hence, it is feasible for us to use the inhibitor from _Arabidopsis thaliana_ to complex with the sugarcane inhibitor for our downstream experiments as an alternative to sugarcane inhibitor. 
 
 append buttons
     +buttonLeft("Model/Kill Switch")
