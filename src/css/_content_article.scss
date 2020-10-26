@@ -251,3 +251,9 @@ main .row {
     overflow: auto;
   }
 }
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}

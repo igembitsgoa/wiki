@@ -190,6 +190,15 @@
       }
     }
   }
+
+  #buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      margin: 1rem 0;
+    }
+  }
 }
 
 @include respond-below(xxs) {

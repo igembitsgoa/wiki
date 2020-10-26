@@ -56,6 +56,12 @@
       }
     }
 
+    #buttons {
+      .button .circle {
+        background: $color;
+      }
+    }
+
     &.dark {
       $color: nth($content-accents-dark, $id);
       .content {
