@@ -79,6 +79,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/5/57/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Competent_Cell_Prep.pdf
     md5: acf7bc3c16f918f30440ffdaa3035bdc
     upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--Competent_Cell_Prep.pdf
+  assets/docs/Experiments--Protocols--EMSA.pdf:
+    link_URL: https://2020.igem.org/wiki/images/4/4c/T--BITSPilani-Goa_India--docs--Experiments--Protocols--EMSA.pdf
+    md5: 27df9d8003ef94f034443702903293c3
+    upload_filename: T--BITSPilani-Goa_India--docs--Experiments--Protocols--EMSA.pdf
   assets/docs/Experiments--Protocols--Invertase_Assay_Kit.pdf:
     link_URL: https://2020.igem.org/wiki/images/e/e2/T--BITSPilani-Goa_India--docs--Experiments--Protocols--Invertase_Assay_Kit.pdf
     md5: 77bf9f96b736bdd42c810c0c7a834af9
@@ -1461,7 +1465,7 @@ css:
     md5: 6cd6c1c5a39f10a59c71c42df43554e7
   css/engineering.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/engineeringCSS?action=raw&ctype=text/css
-    md5: b5df89e45c7b356955d76c9e24c5b923
+    md5: c7c8d4047ed7473815becc153e5e0189
   css/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/css/indexCSS?action=raw&ctype=text/css
     md5: 50d211ae05205360026fe78cd1118de4
@@ -1510,10 +1514,10 @@ html:
     md5: 8e955908c7b917fecc7fc94951af8434
   Engineering/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Engineering
-    md5: 2de177a850ce55991343310befff00ef
+    md5: 7d9be0e44d2ea2191511f5954f898f6b
   Entrepreneurship/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Entrepreneurship
-    md5: db5a70ce9b9f81ab8d2ce91d43143a59
+    md5: f0fb5598e1c5b4f7775e11efc5ee5aa5
   Excellence/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Excellence
     md5: a5dd766ce864e05e8ae16ec261b23829
@@ -1525,7 +1529,7 @@ html:
     md5: 140879f63d9fc78f63158f0f6eeeb783
   Experiments/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Kill_Switch
-    md5: 96fa02cdf94cfe253d16ba51116645fc
+    md5: c3293e827fa9305f826c6339800fce56
   Experiments/Other/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/Other
     md5: 173b3b7128f7f1bda4842f755f202f10
@@ -1537,7 +1541,7 @@ html:
     md5: 0d80a3b8a031aae11fb4d39b021b7ec8
   Experiments/pFruB-Cra_System/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Experiments/pFruB-Cra_System
-    md5: 5b429513aa0abcd05ac07d5e8fd916f3
+    md5: 68de7ff84061a4754df126316a80ba4d
   Human_Practices/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Human_Practices
     md5: 752f85c1c849977cff8be5221d98f6bd
