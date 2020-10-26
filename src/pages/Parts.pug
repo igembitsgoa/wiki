@@ -41,16 +41,15 @@ block article
   :markdown-it(html)
 
     <br>
-    <br>
 
     # Plasmid Design
 
   .row
-      .col.md-6
+      .col-md-6
           - var imgpath = "" + require("../assets/img/Design--BiosensorPlasmid.png")["default"]
           +image(1, imgpath, "Plasmid for the pFruB-Cra Module")
 
-      .col.md-6
+      .col-md-6
           - var imgpath = "" + require("../assets/img/Design--KSPlasmid.png")["default"]
           +image(2, imgpath, "Plasmid for the Atomsphere-regulated Kill Switch", 90)
 
