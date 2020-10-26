@@ -22,18 +22,29 @@ function resizeHeader() {
   }
 } 
 
-$('video').on('click', function() {
-  if (!$(this)[0].hasAttribute('controls')) {
-    $(this).attr('controls', '');
+function playVideo() {
+
+  var video = $('video');
+
+  if (!video[0].hasAttribute('controls')) {
+    video.attr('controls', '');
   }
   var video = document.querySelector('video');
   video.play();
-  $(this).prop('muted', false);
+  $('video').prop('muted', false);
   video.volume = 0.6;
-
+  
   $('#tap-icon').fadeOut();
-
+  
   return false;
+}
+
+$('video').on('click', function() {
+  playVideo();
+});
+
+$('#tap-icon').on('click', function() {
+  playVideo();
 });
 
 $(window).on("resize", function () {

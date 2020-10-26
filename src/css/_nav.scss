@@ -134,3 +134,25 @@
 @import "_nav_themeswitch.scss";
 @import "_nav_themes.scss";
 @import "_nav_mediaqueries.scss";
+
+#safari-toast {
+  position: absolute;
+  width: 450px;
+  top: 7rem;
+  right: 2rem;
+  position: fixed;
+  padding: 1rem 1.5rem;
+  background-color: #d6feff;
+  border: 2px solid #09d3d9;
+  border-radius: 15px;
+  z-index: 400;
+  cursor: pointer;
+  display: none;
+  
+  p {
+    margin: 0;
+    color: #007679;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+  }
+}
