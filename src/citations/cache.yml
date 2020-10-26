@@ -105,6 +105,14 @@ https://doi.org/10.1038/nprot.2016.169:
   numbers: '12(2), 255-278. '
   title: The ClusPro web server for protein-protein docking.
   type: article
+https://doi.org/10.1038/s42003-020-01127-5:
+  authors: 'Beal, J., Farny, N. G., Haddock-Angelli, T., Selvarajah, V., Baldwin,
+    G. S., ... & Workman, C. T. (2020). '
+  doi: https://doi.org/10.1038/s42003-020-01127-5
+  journal: Communications Biology
+  numbers: '3(1). '
+  title: Robust estimation of bacterial cell count from optical density.
+  type: article
 https://doi.org/10.1046/j.1365-2958.2001.02492.x:
   authors: 'Afif, H., Allali, N., Couturier, M., & Van Melderen, L. (2001). '
   doi: https://doi.org/10.1046/j.1365-2958.2001.02492.x
