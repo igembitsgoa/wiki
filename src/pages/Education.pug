@@ -28,6 +28,15 @@ block headVars
       background-color: #187a7a !important;
     }
 
+    @media only screen and (max-width: 900px) {
+      .inner-wheel img {
+        max-width: 40% !important;
+      }
+    }
+    .col-md-8, .col-md-4 {
+      padding: 0 !important;
+    }
+
 
 block article
   :markdown-it(html)
@@ -377,9 +386,9 @@ block article
       p  
         | The International Inner Wheel organization was started around 50 years ago by Margeret Golding. It is one of the largest women's service voluntary organisations in the world and is active in more than 104 countries. 
       p
-        | We had the opportunity to meet with the President of the Lucknow chapter of the Inner Wheel Club. They have several charitable projects such as food distribution and clothes drive for nursing homes and hospitals during the pandemic. One of their major undertakings is educational aid. 
-        | The Rochester iGEM team is currently working on a cheaper diagnostic method for endometriosis on which they wanted to publicise educational material regarding endometriosis on various platforms. As part of their education initiative, Inner Wheel Club Lucknow circulated posters and infographics.
-    .col-md-4.mt-5
+        | We had the opportunity to meet with the President of the Lucknow chapter of the Inner Wheel Victory Club. They have several charitable projects such as food distribution and clothes drive for nursing homes and hospitals during the pandemic. One of their major undertakings is educational aid. 
+        | The Rochester iGEM team is currently working on a cheaper diagnostic method for endometriosis on which they wanted to publicise educational material regarding endometriosis on various platforms. As part of their education initiative, Inner Wheel Victory Club Lucknow circulated posters and infographics.
+    .col-md-4.mt-5.inner-wheel
       - var imgpath = "" + require("../assets/img/Education--InnerWheel.png")["default"]
       +ximage(imgpath, "Inner Wheel Foundation", 70)
 
