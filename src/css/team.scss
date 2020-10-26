@@ -4,6 +4,12 @@ body {
   transition: background-color 0.3s ease;
 }
 
+// hide dark mode switch
+#themeSwitchWrapper,
+#progress-container-wrapper {
+  display: none !important;
+}
+
 ::selection {
   background-color: $selection-color;
 }
@@ -27,10 +33,6 @@ header {
     max-width: 1350px;
   }
 
-  .row {
-    overflow: auto;
-  }
-
   h1 {
     text-align: center;
     font-size: 5rem;
@@ -39,15 +41,8 @@ header {
     margin-bottom: 4rem;
   }
 
-  .header-image {
-    display: block;
-    background-image: url(../assets/img/Team--gp1.jpg);
-    width: 1245px;
-    height: 528px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 500px;
+  img {
+    object-fit: contain;
   }
 }
 
@@ -141,6 +136,28 @@ main {
 
   h4 {
     font-size: 1.2rem;
+  }
+
+  .person-container.sumit,
+  .person-container.malabika {
+    width: 250px;
+    .person {
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+    }
+  }
+
+  .sumit {
+    .person {
+      background-image: url("../assets/img/Team--Dr-Sumit.jpeg");
+    }
+  }
+
+  .malabika {
+    .person {
+      background-image: url("../assets/img/Team--Dr-Malabika.jpeg");
+    }
   }
 
   .shruti {
@@ -271,12 +288,6 @@ footer {
     }
   }
 
-  header {
-    .header-image {
-      height: 470px;
-    }
-  }
-
   main {
     .person-container {
       width: 300px;
@@ -298,12 +309,6 @@ footer {
     }
   }
 
-  header {
-    .header-image {
-      height: 390px;
-    }
-  }
-
   main {
     margin-top: 6rem;
     .person-container {
@@ -314,6 +319,16 @@ footer {
     .squiggles {
       width: 300px;
       height: 450px;
+    }
+
+    .person-container.sumit,
+    .person-container.malabika {
+      width: 225px;
+      .person {
+        width: 225px;
+        height: 225px;
+        background-size: cover;
+      }
     }
   }
 }
@@ -371,7 +386,7 @@ footer {
 
   header h1 {
     font-size: 2.5rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
   main {
     margin-top: 0rem;
@@ -384,6 +399,20 @@ footer {
       width: 300px;
       height: 450px;
     }
+
+    .person-container.sumit,
+    .person-container.malabika {
+      width: 175px;
+      .person {
+        width: 175px;
+        height: 175px;
+        background-size: cover;
+      }
+
+      h4 {
+        margin-top: 2rem;
+      }
+    }
   }
 }
 
@@ -391,6 +420,8 @@ footer {
   header {
     .container {
       margin: 0;
+      padding: 0;
+      max-width: 100%;
     }
   }
   main {
