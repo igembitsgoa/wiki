@@ -15,6 +15,9 @@ block headVars
         header #heading h1 {
             color: #2b478b !important;
         }
+        .col-md-4, .col-md-8 {
+            margin: 0;
+        }
 
 block article
     :markdown-it(html)
@@ -33,6 +36,9 @@ block article
         continuous integration. iGEM Toronto 2015, Waterloo 2017 and Virginia 2018 did excellent work in this area, with 
         their wiki generators, upload APIs and CI tools. Some of these tools allowed teams to write code locally, in a code 
         editor of their choice, and then upload it to iGEM servers for deployment. 
+
+        However, while employing their software for our wiki, we realized that much of it is outdated and needs improvements.
+        iGEM Virginia 
 
         However, we felt that there was a need for a holistic solution - something that would cover every aspect of the 
         process. This solution had to be comprehensive enough that teams wouldn't need to find other software to build 
@@ -104,7 +110,6 @@ block article
         iGEM WikiSync into their wiki, so that every time changes are made in the codebase, they're automatically sent to 
         iGEM servers. All that is required is a `git push`. 
 
-
         Setting it up is a really simple process. Teams can either write their own CI workflows and include the plugin in 
         just a few lines of code, or they can use our readymade recipes for wikis built with webpack, such as those made 
         with our iGEM Wiki Starter Pack. All they have to do is download and include a file in their wiki repository and 
@@ -144,18 +149,18 @@ block article
         ### Features
 
         * Built-in theme that
-        * Looks great on all devices
-        * Comes with a dark mode
+            * Looks great on all devices
+            * Comes with a dark mode
         * Markdown support
         * Automatic uploads with WikiSync
         * Extract citation information from DOI
         * Automatic table of contents on each page
-        * Endless customization with Webpack
+        * Customization with Webpack
         * Included common web development libraries
-        * Bootstrap
-        * jQuery
-        * MathJax
-        * Font Awesome
+            * Bootstrap
+            * jQuery
+            * MathJax
+            * Font Awesome
         * Extensive templating using Pug
         * Reset styles on iGEM.org
 
@@ -166,6 +171,21 @@ block article
         * [iGEM Judging Release](https://github.com/igembitsgoa/igem-wiki-starter/releases/tag/v1.0)
         * [Github repository](https://github.com/igembitsgoa/igem-wiki-starter)
         * [Documentation](https://igem-wiki-starter.readthedocs.io)
+
+        # Acknowledgements
+
+        The following teams developed their wikis this year using our software and provided feedback towards its improvement. We're
+        grateful for their support in testing and improving the documentation of our software.
+
+        1. iGEM Stockholm
+        1. iGEM MIT MAHE
+        1. iGEM UNSW Australia
+        1. iGEM Virginia
+        1. iGEM UGent Belgium
+        1. iGEM NYU Abu Dhabi
+        1. iGEM IIT Roorkee
+        1. iGEM GZ HFI
+
 
 append buttons
     //- mind the quotes and the plus sign
