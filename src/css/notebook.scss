@@ -55,6 +55,15 @@ main {
 @import "_content_themes.scss";
 @import "_content_mediaqueries.scss";
 
+#buttons {
+  .button .circle {
+    background: nth($page-accents, 4);
+  }
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
 footer {
   #footerNav {
     h1 {
