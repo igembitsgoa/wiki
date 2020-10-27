@@ -10,6 +10,7 @@ nav:not(.menu-open) .nav-transparent:not(.nav-colored) {
   transition: all 0.3s ease;
 }
 
+@import "_index_animations.scss";
 @import "_index_header.scss";
 @import "_index_sections.scss";
 

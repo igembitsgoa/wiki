@@ -19,8 +19,10 @@ $engg-graph-card-border: #ea526f;
   overflow-x: auto;
 }
 
-.intro{
-  line-height: 1.75;
+.intro {
+  p {
+    line-height: 1.75;
+  }
 }
 
 .content section {
