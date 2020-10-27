@@ -11,15 +11,16 @@ header {
   -webkit-background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  position: relative;
   
   video {
     max-height: 100%;
     max-width: 100%;
   }
+
   #tap-icon {
-    height: 55px;
-    width: 55px;
-    background: url('../assets/icons/tap.svg');
+    height: 45px;
+    width: 45px;
     background-position: center;
     background-size: cover;
     -o-background-size: cover;
@@ -29,6 +30,46 @@ header {
     position: absolute;
     top: 2rem;
     right: 2rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    #layer1 {
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-name: tap-hand;
+      animation-duration: 3s;
+    }
+
+    #layer2 {
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-name: tap-click;
+      animation-duration: 3s;
+    }
+
+
+  }
+
+  #scroll-icon {
+    height: 45px;
+    width: 45px;
+    background: url('../assets/icons/scroll.svg');
+    background-position: center;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: scroll-bounce;
+    animation-duration: 2s;
   }
 
   h1 {
