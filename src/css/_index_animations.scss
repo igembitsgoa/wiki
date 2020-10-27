@@ -50,16 +50,16 @@
     transform: translateY(0px);
   }
   25% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   50% {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
   75% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
   }
   100% {
     -webkit-transform: translateY(0px);
