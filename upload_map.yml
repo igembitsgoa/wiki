@@ -1035,6 +1035,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/1/1b/T--BITSPilani-Goa_India--img--HP--Rohan.jpeg
     md5: 1f35337874c722156e63a6d951a1657b
     upload_filename: T--BITSPilani-Goa_India--img--HP--Rohan.jpeg
+  assets/img/HP--Stakeholders.png:
+    link_URL: https://2020.igem.org/wiki/images/3/30/T--BITSPilani-Goa_India--img--HP--Stakeholders.png
+    md5: 9a3a0ddd60eff7bcd7dcfa9879280551
+    upload_filename: T--BITSPilani-Goa_India--img--HP--Stakeholders.png
   assets/img/HP--SugarcaneBelts.png:
     link_URL: https://2020.igem.org/wiki/images/0/08/T--BITSPilani-Goa_India--img--HP--SugarcaneBelts.png
     md5: f93adcdde19f8592ccc2fd6e2daed2bf
@@ -1548,7 +1552,7 @@ html:
     md5: 68de7ff84061a4754df126316a80ba4d
   Human_Practices/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Human_Practices
-    md5: 752f85c1c849977cff8be5221d98f6bd
+    md5: 12fcf6f3ca9be52bdcfd9e99a51543ff
   Humans_of_iGEM/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Humans_of_iGEM
     md5: fa077f111bc10ce4e195e3328e4e9e63
@@ -1563,22 +1567,22 @@ html:
     md5: daf6cbf136e4c612b201d7e9fe26b045
   Model/Auxotroph/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Auxotroph
-    md5: 5168029c42c7c71d23a044328c21edf2
+    md5: b99fa3a0f8299f59d21066fc4b759a90
   Model/Biosensor/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Biosensor
     md5: ca015243cca974646de4412d49ba928f
   Model/Growth_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Growth_Model
-    md5: 0a7c0012139b44a17c18af9c84e265aa
+    md5: f586fe12544ea87c9dd1e6c41f8f9516
   Model/Inoculant/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Inoculant
-    md5: a0b60d20da041b1ab8a1e25c95668c9b
+    md5: 7024fba3e24822355dd18858af994eec
   Model/Kill_Switch/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Kill_Switch
-    md5: 05ff2131dd8b87daee24766fde7c93b8
+    md5: ae4ac97ad9003aef6cb60b8162939006
   Model/Virtual_Screening/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Virtual_Screening
-    md5: e912018e9be7c7e8d72a15ae32f5b5b8
+    md5: 7790e640da8554b777c075d94dea3d70
   Model/Viscosity_Model/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/Viscosity_Model
     md5: fdfc1cbe64d4893df35d5274b4242e38
@@ -1587,7 +1591,7 @@ html:
     md5: 5e2d162a6cd6217dcf6b9cffb4f60075
   Model/pFruB-Cra_System/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Model/pFruB-Cra_System
-    md5: dd2f66ae9edee64df498d0d41d61be75
+    md5: adcb8864e852470aa186f2c7efa9e6d3
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Notebook
     md5: 9cae4a0d5744a0aa8ec02c7051fa8181
