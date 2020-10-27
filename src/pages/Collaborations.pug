@@ -11,7 +11,13 @@ block headVars
   - var backgroundAttributionLink = "https://www.freepik.com/"
   - var theme = "team"
 
+
 block article
+  style.
+    .col-md-8, .col-md-4 {
+      margin: 0;
+      padding: 0;
+    }
   :markdown-it(html)
 
   h1 Technical Collaborations 
