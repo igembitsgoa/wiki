@@ -19,7 +19,21 @@ block article
         fosters. It was amazing to see how helpful everyone was, and over the years, participating teams had developed 
         into a tightly-knit community, working together on shared goals and aspirations, and having lots of fun along the way!
 
-        The Bronze medal criterion for contribution towards future iGEM teams gave us a chance to give back to this community.
+        While working on our wiki, we came across software built by previous iGEM teams that makes it easier to build iGEM wikis. 
+        iGEM Virginia 2018 built iGEM WikiBrick, a Node.js package that simplifies building iGEM wikis and automates their uploads,
+        using a modified version of the igemwiki-api built by iGEM Toronto 2015. iGEM Waterloo 2017 built a continuous integration 
+        server for iGEM wikis. 
+        
+        As we tried to incorporate these tools into our workflow, we realized the scope for several improvements and the potential 
+        for a holistic solution that combines their functionality. So, we started working from scratch, incorporating their features,
+        but also adding new features like markdown support and URL replacement 
+        while uploading to iGEM servers. These proved to be really useful towards fully automating deployment of iGEM wikis. 
+        Besides, integration of our software with Travis or Github Actions will allow teams to directly deploy their wikis from Github 
+        repositories. All these features would simplify the entire process and promote collaboration within iGEM teams.
+        
+        The Bronze medal criterion for contribution towards future iGEM teams gave us a chance to work on such a software and 
+        give back to this community.
+
         We worked on the following projects as part of this endeavour.
 
         1. [iGEM WikiSync](/Software#iGEMWikiSync): A continuous deployment tool for iGEM wikis. It automatically uploads files onto the iGEM server, 
