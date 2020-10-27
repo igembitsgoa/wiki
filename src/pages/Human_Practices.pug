@@ -22,10 +22,15 @@ block article
     and security — issues that are multifaceted and require varied inputs and perspectives. Our approach to human practices consisted of multiple frameworks that involved interviewing experts, 
     users and regulatory agencies. During our ideation phase in January, we identified the various diverse stakeholders relevant to our project.
 
+  - var imgpath = "" + require("../assets/img/HP--Stakeholders.png")["default"]
+  +ximage(imgpath, "Stakeholders we contacted for our Human Practices", 75)
+
+  :markdown-it(htm)
+
     We initially pitched our idea to the professors of the Department of Biological Sciences of our university. The feedback that we received from this session was crucial for us to define our 
     approach towards the problem using a regulatory mechanism. 
 
-    We then approached our primary stakeholders — the farmers. In the schematic given below we can see the prominent sugarcane growing regions in India. For our human practices component, 
+    We then approached our primary stakeholders — **the farmers**. In the schematic given below we can see the prominent sugarcane growing regions in India. For our human practices component, 
     we contacted farmers from the Indian states of Maharashtra, Karnataka and Tamil Nadu. We also visited the Sugar Mill Federation in Uttar Pradesh.
 
   - var imgpath = "" + require("../assets/img/HP--SugarcaneBelts.png")["default"]
@@ -35,9 +40,9 @@ block article
 
     # Belt One: Uttar Pradesh
 
-    We met Mr. Sunil Kumar Ohri of the U.P. Cooperative Sugar Factories Federation Ltd. in Lucknow, Uttar Pradesh, India, to get a better idea of the workings of the sugar industry. Mr. Ohri is the General Manager at the Federation 
-    and a Council Member of the Sugar Technologists Association of India. He gave us valuable insights into the sugar production process, the losses incurred during it, and how post-harvest losses are a major issue for the sugar mill 
-    and farmers alike. He graciously supplied us with real time field data of loss of sucrose in Commercial Cane Sugarcane (CCS) for the state of Uttar Pradesh and was instrumental in validating our idea and giving us theoretical backing across a 
+    We met **Mr. Sunil Kumar Ohri** of the U.P. Cooperative Sugar Factories Federation Ltd. in Lucknow, Uttar Pradesh, India, to get a better idea of the workings of the sugar industry. Mr. Ohri is the General Manager at the Federation 
+    and a Council Member of the Sugar Technologists Association of India. He **gave us valuable insights** into the sugar production process, the losses incurred during it, and how post-harvest losses are a major issue for the sugar mill 
+    and farmers alike. He graciously **supplied us with real-time field data** of loss of sucrose in Commercial Cane Sugarcane (CCS) for the state of Uttar Pradesh and was **instrumental in validating our idea** and giving us theoretical backing across a 
     variety of sugarcane crops. 
 
   - var imgpath = "" + require("../assets/img/HP--Ohri.png")["default"]
@@ -54,9 +59,9 @@ block article
     that post harvest losses bring down sugar recovery rates by anywhere between 1.9% to 2.6%, thereby leading to financial losses worth upto ₹390 million, in just the state of Uttar Pradesh.
 
     Mr. Ohri also mentioned that although there has been significant research in this area, as of yet there is no commercially viable solution. Our interaction with Mr Ohri laid the foundation for SugarGain. It also gave us an idea of the scope 
-    of the project. The real time data that he gave us was used to formulate the basis in our proposed implementation and delivery mechanism. 
+    of the project. The [real-time data](/Appendix#DataProvidedbyMrSunilKumarOhri) that he gave us was used to formulate the basis in our proposed implementation and delivery mechanism. 
 
-    # Belt Two: Mandya and Gulbarga
+    # Belt Two: Karnataka
 
     We had the opportunity of speaking to small-scale sugarcane farmers from the Mandya and Gulbarga region in the state of Karnataka.
 
@@ -74,18 +79,27 @@ block article
     always be the best profitable option. We enquired details about the jaggery manufacturing process and how our product would affect the output of this process, when interviewing farmers from the Maharashtra belt.
 
     -----
+    ### Insights from the Uttar Pradesh and Tamil Nadu Belt
     With the preliminary interactions which we had with Mr Ohri and the farmers from Mandya and Gulbarga we learnt the following : 
     1. Each belt has a unique problem when it comes to post harvest losses and our solution would have to be comprehensive. 
     2. There are innate inefficiencies in the system that can be tackled by our solution. In Uttar Pradesh the inefficiency of mills contributes most to post harvest losses but in Mandya and Gulbarga the improper storage and economic crisis 
     impacts sugar retrieval rates.
 
+   ------
+
     Next, we wanted to find out more about post-harvest losses globally. We met our alumni during the BITSAA Global Meetup (BGM). BGM which was held from 17th to the 19th of January 2020 was attended by over 1100 participants which included alumni of 
     the four different campuses of BITS Pilani namely, Pilani, Goa, Dubai and Hyderabad. During the BGM we pitched our project to a diverse group of distinguished alumni. It was through this interaction that we truly understood the global scope of post-harvest losses.
+
+    ### Insights from our Global Study
 
     We learnt that it is due to a combination of factors unique to each country that contribute to post-harvest losses. We learnt that in South Africa in 2009, 70.0% of the cane supply was harvested 
     from mill controlled fields, with 55.5% being mill owned, giving mill operators significant control over the supply process for the mill. In this situation, the mill does not face the problem of being oversupplied during the peak season. However in Thailand, 
     over-population of mills is a significant issue. In South Africa, the major bottleneck is the issue of integrating the decision-making process and improving relations between growers and harvesters. Furthermore, harvesting in Brazil is done 24 hours a day, and as a result, storage 
     is not an issue as it is Australia, Cuba, and the United States.
+
+    Hence, we could conclude from our global study that our project had a **global scope and ubiquitous applicability** which was not just restricted to India. 
+
+    -----
 
     As a follow up to our global scope study, we met André Hermann, a member of the iGEM Policy Committee. 
 
@@ -101,17 +115,21 @@ block article
     Unlike in India, the mills in Brazil hardly ever stop during the productive period, although there is some time between crops for this, but the general idea is to never stock the sugarcane plant. Some years ago they had 
     some maintenance workers that were hired to fix the mills while they were rolling, but due to the high number of accidents that followed, mills have automated the repair process. This ruled out mill inefficiencies in Brazil. 
 
-    André told us that change in the sugarcane industry can be brought about in two ways: either through policy changes that involve the use of GMO in plants and a policy to separate cane grown for sugar production from cane for 
-    raw consumption (Sugarcane is often consumed raw as a beverage in India and Brazil) **or** by understanding existing agricultural heuristics for the commercial and semi-commercial cultivation of sugarcane.
+    ### Insights from our interaction with André
+
+    André told us that change in the sugarcane industry can be brought about in two ways: either through **policy changes** that involve the use of GMO in plants and **a policy to separate cane** grown for sugar production from cane for 
+    raw consumption (Sugarcane is often consumed raw as a beverage in India and Brazil) **or** by **understanding existing agricultural heuristics** for the commercial and semi-commercial cultivation of sugarcane.
 
     In order to understand the policies surrounding GMOs in various countries we partnered with iGEM OhioState, iGEM Waterloo, UANL and DTU Denmark and gathered and compared our respective countries' regulations on GMOs and biotechnology 
     products in general. More details can be found on our [Education](/Education) page.
+
+    To also understand the agricultural heuristics surrounding the cultivation of sugarcane, we contacted farmers from the Maharashtra belt. 
 
 
     # Belt Three: Maharashtra
 
     Following Andre’s advice we met Mr. Jayant Naik and Mr. Dattaram Chikane from the Maharashtra belt to understand the market heuristics of the sugarcane industry. Mr Jayant highlighted a crucial point that sugarcane is separated in the farm 
-    for eating or juicing (raw consumption). The mature sugarcane is sent to mills for producing jaggery while the softer, tender cane is used for raw consumption. This validated our delivery approach of targeted application of our product right 
+    for eating or juicing (raw consumption). The mature sugarcane is sent to mills for producing jaggery while the softer, tender cane is used for raw consumption. This **validated our delivery approach** of targeted application of our product right 
     before harvest which ensures that no remnant inoculant or bacteria is present in raw consumable cane.
 
     Mr. Naik also told us that farmers who stay far away from the mills are forced to take up jaggery-making instead of selling their cane to the mill. During the production of jaggery the harvesting of cane and its juicing happen almost simultaneously, therefore,
@@ -119,10 +137,17 @@ block article
 
     Mr. Chikane was extremely interested in our solution. He mentioned that since the farmers are paid on the basis of the weight of the cane alone, such a solution might create positive change in the payment policy.
 
+    ### Insights from Belt Three
+
+    1. These interactions validated our approach to the delivery mechanism involving targeted application of our product right before harvest; and
+
+    2. They reinforced our biosafety mechanism by alleviating our concerns involving the use of raw sugarcane and any subsequent contamination, which allowed us to focus on the biosafety of the inoculant by designing [experiments](/Experiments/Inoculant)
+    which would simulate the sugar manufacturing process on a lab scale to show that the incoulant would be removed during the manufacturing process. 
+
     -----
 
-    Our next steps involved fine-tuning our delivery mechanism. We devised a polymer inoculant which would be applied using an injector mechanism. It was crucial for us to understand how viable this would be in real time. We had the opportunity 
-    to interact with farmers from the Tamil Nadu belt and pitch our project and our delivery mechanism to them.
+    Our next steps involved fine-tuning our delivery mechanism. We devised a polymer inoculant which would be applied using an injector mechanism. It was crucial for us to understand how viable this would be in real time. We next 
+    interacted with farmers from the Tamil Nadu belt and pitched our project and our delivery mechanism to them.
 
 
     # Belt Four: Tamil Nadu
@@ -149,12 +174,19 @@ block article
           +pdf(require("../assets/docs/HP--SwaminathanTranscript.pdf")['default'], "iGEM BITS Brochure")
 
   :markdown-it(html)
+
+    ### Insights from the Tamil Nadu Belt 
+
+    From our interactions we learnt that the delivery mechanism had to be something easy to use; needed to have a long shelf life so that the farmer can choose when to use the product; and had to be completely organic.
+
+    ----
+
     Following this, we went through several design iterations of our product. Once we created our chassis, we were interested in determining the economic viability and the scaling-up processes involved with commercialization.
 
     # Scaling-up 
 
     We met Rohan Ranganath, an alumnus of our institute, to decide how to go about scaling up our project to a pilot or a small scale industrial plant. He guided us on how to make process development decisions and also recommended that we to talk to Dr. Vivek Rangarajan, a professor in the department of Chemical Engineering at BITS Goa, for more details on the 
-    modeling of a biochemical industrial process. Dr. Rangarajan guided us on how to take into consideration biosafety regulations present in our country. He also informed us about the importance of sterilization of all the machinery for the biochemical plant. 
+    modeling of a biochemical industrial process. Dr. Rangarajan guided us on how to take into consideration biosafety regulations present in our country. He also informed us about the importance of sterilization of all the machinery in a biochemical plant. 
 
     Our proposed implementation can be found on our [implementation](/Implementation) page. We also drew a preliminary process flow diagram with the help of Dr. Rangarajan. This helped us to gain a better estimation of the equipment costs as well as helped us determine the economic viability of our project (which you can check out on our [entrepreneurship](/Entrepreneurship) page).
 
@@ -169,7 +201,7 @@ block article
     # Economic Viability Analysis
 
     Next, we performed a cost-benefit analysis to study if the product would make for a profitable venture. Dr. Bejoy Thomas from IISER, Pune was instrumental in guiding us with this model. He specialises in Sustainable Development Goals 1, 2, 6 and 13 and tacking multidimensional poverty. We showed him our model to get his opinion on the impact of our product for Sustainable 
-    Development Goals namely SDG 2: Zero Hunger. 
+    Development Goals namely SDG 2: Zero Hunger. You can find our economic viability analysis on our [Entrepreneurship](/Entrepreneurship) page.
 
   - var imgpath = "" + require("../assets/img/HP--Bejoy.jpg")["default"]
   +image(6, imgpath, "Dr. Bejoy K Thomas, IISER Pune", 40)
@@ -178,8 +210,8 @@ block article
 
     ---------
 
-    Unfortunately, we could not get in touch with any mills because of quarantine and the nationwide lockdown. We tried our best to get in touch with a few mills but some problems persisted. The pandemic resulted in several mills in sugarcane producing areas being forced to shut down which resulted in huge layoffs. Despite these extraordinary circumstances, the Chief Chemist of Kiccha Sugar Company Ltd,
-    one of the leading sugar producers in the Uttar Pradesh belt, genially agreed to meet us. We gained knowledge on the Mill and Sugarcane farmer relationships and more importantly the impact of the pandemic on the sugar industry. This interaction solidified our hopes of bringing about grassroot level changes to the backbone of our country - farmers.
+    Unfortunately, we could not get in touch with any mills because of quarantine and the nationwide lockdown. We tried our best to get in touch with a few mills but some problems persisted. The pandemic resulted in several mills in sugarcane producing areas being forced to shut down which resulted in huge layoffs. Despite these extraordinary circumstances, the Chief Chemist of **Kiccha Sugar Company Ltd.**,
+    one of the leading sugar producers in the Uttar Pradesh belt, genially agreed to meet us. We gained knowledge on the **Mill and Sugarcane farmer relationships** and more importantly the **impact of the pandemic** on the sugar industry. This interaction solidified our hopes of bringing about grassroot level changes to the backbone of our country - farmers.
 
     # Summary
 
