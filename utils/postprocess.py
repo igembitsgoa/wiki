@@ -26,4 +26,14 @@ with open("dist/Human_Practices/index.html", 'w') as file:
     file.write(contents)
 
 
+# Software zip files
+with open("dist/Software/index.html", 'r') as file:
+    contents = file.read()
+
+contents = contents.replace('../../assets/', '../assets/')
+
+with open("dist/Software/index.html", 'w') as file:
+    file.write(contents)
+
+
     
