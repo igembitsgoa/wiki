@@ -1,0 +1,52 @@
+extends ../templates/contents.pug
+
+block headVars
+  - var title = "Awards"
+  - var requireMathJax = false
+  - var theme = "other-areas"
+  - var backgroundImage = "" + require("../assets/img/Judging--header.svg")["default"]
+  - var backgroundAttribution = "Photo from Freepik"
+  - var backgroundAttributionLink = "https://freepik.com"
+  - var backgroundType = "vector"
+  - var headerBackgroundColor = "#9bc1f9"
+  - var fullWidth = true
+
+  style.
+    @media only screen and (max-width: 600px) {
+      .award-image img {
+        max-width: 40% !important;
+      }
+    }
+    .col-md-8, .col-md-4 {
+      padding: 0 !important;
+    }
+    h1 {
+      text-align: center;
+    }
+    .content .image img {
+      margin: 0 !important;
+    }
+    .caption {
+      font-family: 'Lato', sans-serif;
+      text-align: center !important;
+      font-weight: bold !important;
+      text-transform: uppercase;
+    }
+
+block article
+
+  br
+
+  .row
+    .col-md-4
+      - var imgpath = "" + require("../assets/img/Judging--bestSoftware.svg")["default"]
+      +ximage(imgpath, "", 45)
+      p.caption Best Software Tool
+    .col-md-4.pt-2
+      - var imgpath = "" + require("../assets/img/Awards--gold.svg")["default"]
+      +ximage(imgpath, "", 70)
+      p.caption.pt-3 Gold Medal
+    .col-md-4
+      - var imgpath = "" + require("../assets/img/Awards--compositePart.svg")["default"]
+      +ximage(imgpath, "", 45)
+      p.caption Best New Composite Part
