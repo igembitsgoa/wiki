@@ -62,17 +62,13 @@ block article
 
     # iGEM WikiSync
 
-  .row
-    .col-md-8 
-      p.
-        Our Python package, iGEM WikiSync allows iGEM teams to set up continuous deployment for their wikis. It lets teams 
-        work on their wiki locally, using whichever web development framework they're familiar with. It then uploads the 
-        code to iGEM servers.  
-    .col-md-4
-      - var imgpath = "" + require("../assets/img/Home--WikiSync.svg")["default"]
-      +ximage(imgpath, "")
+  - var imgpath = "" + require("../assets/img/Software--WikiSync.svg")["default"]
+  +ximage(imgpath, "", 100)
 
   :markdown-it(html)
+    Our Python package, iGEM WikiSync allows iGEM teams to set up continuous deployment for their wikis. It lets teams 
+    work on their wiki locally, using whichever web development framework they're familiar with. It then uploads the 
+    code to iGEM servers.
 
     It does this in the following way: 
 
@@ -142,6 +138,11 @@ block article
   :markdown-it(html)
 
     # iGEM Wiki Starter Pack
+  
+  - var imgpath = "" + require("../assets/img/Software--WikiStarter.svg")["default"]
+  +ximage(imgpath, "", 100)
+
+  :markdown-it(html)
 
     The iGEM Wiki Starter Package is a template that contains everything needed to build an iGEM wiki and then some. 
     Instead of reinventing the wheel and starting from scratch every year, teams can expand on this base to kick-start 
